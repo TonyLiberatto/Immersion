@@ -1,4 +1,4 @@
-﻿namespace Neolithic
+﻿namespace Immersion
 {
     class AnimProps
     {

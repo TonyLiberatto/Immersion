@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using Neolithic.Utility;
+using Immersion.Utility;
 using Vintagestory.API;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
     public class AiTaskSleep : AiTaskBase
     {

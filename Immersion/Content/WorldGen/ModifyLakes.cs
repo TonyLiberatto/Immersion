@@ -15,7 +15,7 @@ using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
 using Vintagestory.ServerMods.NoObf;
 
-namespace Neolithic
+namespace Immersion
 {
     public class ModifyLakes : ModSystem
     {

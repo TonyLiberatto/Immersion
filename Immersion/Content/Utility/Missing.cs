@@ -14,7 +14,7 @@ using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.Server;
 
-namespace Neolithic
+namespace Immersion
 {
     class NLMissing : ModSystem
     {

@@ -9,9 +9,9 @@
 
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
-using Neolithic.Utility;
+using Immersion.Utility;
 
-namespace Neolithic
+namespace Immersion
 {
     // Used for the post, should change shape based on side connections.
     class RotateNinety : BlockBehavior

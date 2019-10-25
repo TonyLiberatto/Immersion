@@ -4,7 +4,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
     class BlockEntityCraftingStation : BlockEntityContainer, IBlockShapeSupplier
     {

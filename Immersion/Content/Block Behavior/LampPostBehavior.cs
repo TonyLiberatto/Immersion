@@ -1,7 +1,7 @@
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace Neolithic
+namespace Immersion
 {
 
     class LampPostBehavior : BlockBehavior {

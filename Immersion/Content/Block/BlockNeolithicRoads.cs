@@ -9,7 +9,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 
-namespace Neolithic
+namespace Immersion
 {
     class BlockNeolithicRoads : Block
     {

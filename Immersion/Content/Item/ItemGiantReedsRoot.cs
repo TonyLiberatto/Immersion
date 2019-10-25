@@ -1,7 +1,7 @@
 ﻿using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 
-namespace Neolithic
+namespace Immersion
 {
     public class ItemGiantReedsRoot : Item
     {

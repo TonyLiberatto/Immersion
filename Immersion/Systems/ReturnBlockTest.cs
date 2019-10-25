@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Vintagestory.API.Common;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
     class BlockToolMoldReturnBlock : BlockToolMold
     {

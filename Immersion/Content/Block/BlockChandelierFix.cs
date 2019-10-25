@@ -8,7 +8,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Client;
 using Vintagestory.API.Util;
 
-namespace Neolithic
+namespace Immersion
 {
     class BlockChandelierFix : Block
     {

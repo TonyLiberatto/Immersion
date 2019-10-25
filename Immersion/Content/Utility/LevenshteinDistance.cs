@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Neolithic
+namespace Immersion
 {
     //https://stackoverflow.com/questions/2344320/comparing-strings-with-tolerance
     static class LevenshteinDistance

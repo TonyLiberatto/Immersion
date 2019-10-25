@@ -14,9 +14,9 @@ using System.Collections.Generic;
     Authors      = new []{ "Tony Liberatto","Novocain","Balduranne","BunnyViking" },
     Contributors = new []{ "Tyron", "Milo", "Stroam", "Elwood", "copygirl", "MarcAFK", "Balduranne", "Demmon1" })]
 
-namespace Neolithic
+namespace Immersion
 {
-    public partial class TheNeolithicMod : ModSystem
+    public partial class ImmersionMod : ModSystem
     {
         ICoreAPI api;
         ICoreClientAPI capi;

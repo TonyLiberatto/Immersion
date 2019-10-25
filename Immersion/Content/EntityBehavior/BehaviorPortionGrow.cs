@@ -13,7 +13,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.Client.NoObf;
 using Vintagestory.ServerMods.NoObf;
 
-namespace Neolithic
+namespace Immersion
 {
     public class BehaviorPortionGrow : EntityBehavior
     {

@@ -16,7 +16,7 @@ using Vintagestory.API.Server;
 using Vintagestory.Client.NoObf;
 using Vintagestory.ServerMods.NoObf;
 
-namespace Neolithic
+namespace Immersion
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     class IWCSPacket

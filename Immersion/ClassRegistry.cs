@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
-    public partial class TheNeolithicMod
+    public partial class ImmersionMod
     {
         public void RegisterClasses()
         {

@@ -14,7 +14,7 @@ using Vintagestory.API.Config;
 using Vintagestory.API.Server;
 using Vintagestory.Server;
 
-namespace Neolithic
+namespace Immersion
 {
     [ProtoContract(ImplicitFields = ImplicitFields.AllPublic)]
     public class Message

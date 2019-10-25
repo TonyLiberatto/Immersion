@@ -2,7 +2,7 @@
 using Vintagestory.GameContent;
 
 
-namespace Neolithic
+namespace Immersion
 {
     public class ItemSickle : ItemShears
     {

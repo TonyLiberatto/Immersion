@@ -11,7 +11,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.Client.NoObf;
 using Vintagestory.ServerMods.NoObf;
 
-namespace Neolithic
+namespace Immersion
 {
     class BlockLogWall : Block
     {

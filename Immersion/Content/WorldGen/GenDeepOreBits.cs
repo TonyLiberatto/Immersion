@@ -14,7 +14,7 @@ using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
 using Vintagestory.ServerMods.NoObf;
 
-namespace Neolithic
+namespace Immersion
 {
     class GenDeepOreBits : ModStdWorldGen
     {

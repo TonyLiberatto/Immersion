@@ -1,6 +1,6 @@
 ﻿using Vintagestory.API.Common;
 
-namespace Neolithic
+namespace Immersion
 {
     class SwapBlocks
     {

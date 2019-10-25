@@ -7,7 +7,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
     class ItemSlaughteringAxe : Item
     {

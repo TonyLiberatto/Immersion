@@ -2,7 +2,7 @@
 using Vintagestory.API.Common.Entities;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
     public class ItemAdze : ItemChiselFix
 	{

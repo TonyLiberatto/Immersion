@@ -161,6 +161,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Immersion\" />
     <Folder Include="Immersion\Content\Entity\" />
   </ItemGroup>
   <ItemGroup>

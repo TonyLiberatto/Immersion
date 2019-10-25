@@ -9,7 +9,7 @@ using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
 
-namespace Neolithic
+namespace Immersion
 {
     public class BEMortarAndPestle : BlockEntityOpenableContainer, IBlockShapeSupplier
     {

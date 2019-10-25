@@ -7,7 +7,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
-namespace Neolithic
+namespace Immersion
 {
     public class PestleRenderer : IRenderer
     {
