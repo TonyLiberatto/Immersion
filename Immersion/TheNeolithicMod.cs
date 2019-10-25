@@ -8,9 +8,9 @@ using System.IO;
 using Vintagestory.API.Server;
 using System.Collections.Generic;
 
-[assembly: ModInfo("The Neolithic Mod",
+[assembly: ModInfo("Immersion Mod",
     Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
-    Website      = "https://github.com/TonyLiberatto/The-Neolithic-Mod",
+    Website      = "https://github.com/TonyLiberatto/Immersion",
     Authors      = new []{ "Tony Liberatto","Novocain","Balduranne","BunnyViking" },
     Contributors = new []{ "Tyron", "Milo", "Stroam", "Elwood", "copygirl", "MarcAFK", "Balduranne", "Demmon1" })]
 
