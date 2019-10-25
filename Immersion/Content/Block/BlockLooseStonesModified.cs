@@ -10,6 +10,7 @@ namespace Immersion
 {
     class BlockLooseStonesModified : BlockLooseStones
     {
+        ICoreAPI Api { get => this.api; }
         public readonly string[] allowedbases = new string[]
         {
             "soil",
@@ -56,7 +57,7 @@ namespace Immersion
 
                         if (!allowedbases.Contains(dBlock.FirstCodePart())) return;
                         AssetLocation location = new AssetLocation("neolithicmod:3droad-" + Variant["rock"] + "-" + "stepping" + world.Rand.Next(1, 4));
-                        Block nextBlock = location.GetBlock(api);
+                        Block nextBlock = location.GetBlock(Api);
                         if (nextBlock == null) return;
 
                         world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 200);

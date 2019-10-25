@@ -17,7 +17,7 @@ namespace Immersion
 
     public class NeolithicTransient : BlockEntityTransient, IAnimalFoodSource
     {
-        public Vec3d Position => pos.ToVec3d().Add(0.5, 0.5, 0.5);
+        public Vec3d Position => Pos.ToVec3d().Add(0.5, 0.5, 0.5);
         public string Type => "food";
         NeolithicContentConfig[] nltConfig;
         Block ownBlock;
@@ -45,12 +45,12 @@ namespace Immersion
             Flies.SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -0.05f);
         }
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
-            ownBlock = api.World.BlockAccessor.GetBlock(pos);
+            base.Initialize(Api);
+            ownBlock = Api.World.BlockAccessor.GetBlock(Pos);
 
-            ownBlock = ownBlock == null ? api.World.BlockAccessor.GetBlock(pos) : ownBlock;
+            ownBlock = ownBlock == null ? Api.World.BlockAccessor.GetBlock(Pos) : ownBlock;
             flies = ownBlock.Attributes["flies"].AsBool(true);
 
 
@@ -62,15 +62,15 @@ namespace Immersion
             if (transitionAtTotalDays <= 0)
             {
                 float hours = ownBlock.Attributes["inGameHours"].AsFloat(24);
-                transitionAtTotalDays = api.World.Calendar.TotalDays + hours / 24;
+                transitionAtTotalDays = Api.World.Calendar.TotalDays + hours / 24;
             }
 
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
                 RegisterGameTickListener(CheckTransition, 2000);
             }
-            if (api.Side == EnumAppSide.Client && flies)
+            if (Api.Side == EnumAppSide.Client && flies)
             {
                 RegisterGameTickListener(FliesTick, 100);
             }
@@ -79,19 +79,19 @@ namespace Immersion
 
         private void FliesTick(float dt)
         {
-            if (api.Side == EnumAppSide.Client && api.World.Calendar.DayLightStrength > 0.5 )
+            if (Api.Side == EnumAppSide.Client && Api.World.Calendar.DayLightStrength > 0.5 )
             {
-                double modx = api.World.Rand.NextDouble();
-                double modz = api.World.Rand.NextDouble();
-                double mody = api.World.Rand.NextDouble();
+                double modx = Api.World.Rand.NextDouble();
+                double modz = Api.World.Rand.NextDouble();
+                double mody = Api.World.Rand.NextDouble();
 
                 int modc = (int)((modx + mody + modz / 3) * 25);
 
-                Flies.minPos.Set(pos.X + modx, pos.Y + mody, pos.Z + modz);
+                Flies.minPos.Set(Pos.X + modx, Pos.Y + mody, Pos.Z + modz);
                 Flies.color = ColorUtil.ToRgba(100, 0, modc, modc);
-                Flies.glowLevel = (byte)(api.World.Calendar.DayLightStrength * 50);
+                Flies.glowLevel = (byte)(Api.World.Calendar.DayLightStrength * 50);
 
-                api.World.SpawnParticles(Flies);
+                Api.World.SpawnParticles(Flies);
             }
         }
 
@@ -99,9 +99,9 @@ namespace Immersion
         {
             base.OnBlockRemoved();
 
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
             }
         }
 
@@ -109,9 +109,9 @@ namespace Immersion
         {
             base.OnBlockUnloaded();
 
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
             }
         }
 
@@ -130,7 +130,7 @@ namespace Immersion
 
         public float ConsumeOnePortion()
         {
-            Block block = api.World.BlockAccessor.GetBlock(pos);
+            Block block = Api.World.BlockAccessor.GetBlock(Pos);
             Block tblock;
 
             if (block.Attributes == null) return 1f;
@@ -145,19 +145,19 @@ namespace Immersion
 
             if (fromCode == null || !toCode.Contains("*"))
             {
-                tblock = api.World.GetBlock(new AssetLocation(toCode));
+                tblock = Api.World.GetBlock(new AssetLocation(toCode));
                 if (tblock == null) return 1f;
 
-                api.World.BlockAccessor.SetBlock(tblock.BlockId, pos);
+                Api.World.BlockAccessor.SetBlock(tblock.BlockId, Pos);
                 return 1f;
             }
 
             AssetLocation blockCode = block.WildCardReplace(new AssetLocation(fromCode), new AssetLocation(toCode));
 
-            tblock = api.World.GetBlock(blockCode);
+            tblock = Api.World.GetBlock(blockCode);
             if (tblock == null) return 1f;
 
-            api.World.BlockAccessor.SetBlock(tblock.BlockId, pos);
+            Api.World.BlockAccessor.SetBlock(tblock.BlockId, Pos);
             MarkDirty(true);
             return 1f;
         }

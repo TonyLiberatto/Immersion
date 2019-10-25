@@ -11,7 +11,7 @@ namespace Immersion
 {
     public class BlockMortarAndPestle : Block
     {
-        public override bool DoParticalSelection(IWorldAccessor world, BlockPos pos)
+        public override bool DoParticalSelection(IWorldAccessor world, BlockPos Pos)
         {
             return true;
         }

@@ -10,7 +10,7 @@ namespace Immersion
     {
         private CreateBlocks[] createBlocks;
         public bool allowPlaceOn = false;
-        ICoreAPI api;
+        ICoreAPI Api;
 
         public BlockCreateBehavior(Block block) : base(block) { }
 
@@ -24,15 +24,15 @@ namespace Immersion
             catch (Exception)
             {
                 createBlocks = null;
-                api.World.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
+                Api.World.Logger.Notification("CreateBlocks error in " + block.Code.ToString());
             }
             
         }
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
-            this.api = api;
+            base.OnLoaded(Api);
+            this.Api = Api;
             PostOLInit(properties);
         }
 
@@ -51,7 +51,7 @@ namespace Immersion
                         {
                             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                             float animstep = (secondsUsed / val.MakeTime) * 1.0f;
-                            api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
+                            Api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
                         }
 
                         return secondsUsed < val.MakeTime;
@@ -72,18 +72,18 @@ namespace Immersion
                 return;
             }
             var active = byPlayer?.InventoryManager;
-            BlockPos pos = blockSel?.Position;
-            if (active?.ActiveHotbarSlot?.Itemstack?.Collectible?.Code != null && pos != null)
+            BlockPos Pos = blockSel?.Position;
+            if (active?.ActiveHotbarSlot?.Itemstack?.Collectible?.Code != null && Pos != null)
             {
                 foreach (var val in createBlocks)
                 {
-                    if (api.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+                    if (Api.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
 
                     if (secondsUsed > val.MakeTime && active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
                     {
                         if (world.Side.IsServer())
                         {
-                            world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                            world.PlaySoundAt(block.Sounds.Place, Pos.X, Pos.Y, Pos.Z);
                             if (active?.ActiveHotbarSlot?.Itemstack?.Item?.Tool != null)
                             {
                                 active.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, active.ActiveHotbarSlot);
@@ -94,18 +94,18 @@ namespace Immersion
                         {
                             if (!active.TryGiveItemstack(val.Makes))
                             {
-                                world.SpawnItemEntity(val.Makes, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                                world.SpawnItemEntity(val.Makes, Pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                             }
                         }
                         else
                         {
-                            world.SpawnItemEntity(val.Makes, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                            world.SpawnItemEntity(val.Makes, Pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                         }
                         active.ActiveHotbarSlot.TakeOut(val.Takes.StackSize);
 
                         try
                         {
-                            if (world.Side.IsClient()) world.SpawnCubeParticles(pos.MidPoint(), active.ActiveHotbarSlot.Itemstack, 2, 16);
+                            if (world.Side.IsClient()) world.SpawnCubeParticles(Pos.MidPoint(), active.ActiveHotbarSlot.Itemstack, 2, 16);
                         }
                         catch (Exception)
                         {
@@ -114,7 +114,7 @@ namespace Immersion
 
                         active.ActiveHotbarSlot.MarkDirty();
 
-                        if (val.RemoveOnFinish) world.BlockAccessor.SetBlock(0, pos);
+                        if (val.RemoveOnFinish) world.BlockAccessor.SetBlock(0, Pos);
                         handled = EnumHandling.PreventDefault;
                         return;
                     }
@@ -139,7 +139,7 @@ namespace Immersion
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
-            if (world.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+            if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
             return false;
         }
 

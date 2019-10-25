@@ -35,22 +35,22 @@ namespace Immersion
         public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
         public override double ExecuteOrder() => 1;
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            this.sapi = api;
-            sChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
+            this.sapi = Api;
+            sChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
             {
                 if (b.DataType == EnumDataType.Action)
                 {
                     if (a?.CurrentBlockSelection?.Position == null) return;
-                    if (api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
+                    if (Api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
                     {
                         OnPlayerInteract(a, a.CurrentBlockSelection);
                     }
                 }
             });
-            api.Event.SaveGameLoaded += OnSaveGameLoaded;
-            api.Event.PlayerJoin += SendCraftingRecipes;
+            Api.Event.SaveGameLoaded += OnSaveGameLoaded;
+            Api.Event.PlayerJoin += SendCraftingRecipes;
         }
 
         private void SendCraftingRecipes(IServerPlayer byPlayer)
@@ -62,11 +62,11 @@ namespace Immersion
             }
         }
 
-        public override void StartClientSide(ICoreClientAPI api)
+        public override void StartClientSide(ICoreClientAPI Api)
         {
-            this.capi = api;
-            api.Event.MouseDown += SendBlockAction;
-            cChannel = api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>(h =>
+            this.capi = Api;
+            Api.Event.MouseDown += SendBlockAction;
+            cChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>(h =>
             {
                 if (h.DataType == EnumDataType.Recipes)
                 {
@@ -77,7 +77,7 @@ namespace Immersion
                     }
                     catch (Exception ex)
                     {
-                        api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h?.SerializedData ?? "");
+                        Api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h?.SerializedData ?? "");
                         throw ex;
                     }
                 }
@@ -116,8 +116,8 @@ namespace Immersion
 
         public bool OnPlayerInteract(IPlayer byPlayer, BlockSelection blockSel)
         {
-            BlockPos pos = blockSel?.Position;
-            Block block = pos?.GetBlock(byPlayer.Entity.World);
+            BlockPos Pos = blockSel?.Position;
+            Block block = Pos?.GetBlock(byPlayer.Entity.World);
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
             if (block == null || slot?.Itemstack == null) return false;
             bool shouldbreak = false;
@@ -138,10 +138,10 @@ namespace Immersion
                                 make.Resolve(byPlayer.Entity.World, null);
                                 if (make.IsBlock())
                                 {
-                                    if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
+                                    if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, Pos);
                                     Block resolvedBlock = make.ResolvedItemstack.Block;
-                                    byPlayer.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, pos);
-                                    resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, pos);
+                                    byPlayer.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, Pos);
+                                    resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, Pos);
                                     TakeOrDamage(recipe, slot, byPlayer);
                                     shouldbreak = true;
                                 }
@@ -152,13 +152,13 @@ namespace Immersion
                                 {
                                     var makeClone = make.Clone();
                                     makeClone.Resolve(byPlayer.Entity.World, null);
-                                    byPlayer.Entity.World.SpawnItemEntity(makeClone.ResolvedItemstack, pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                                    byPlayer.Entity.World.SpawnItemEntity(makeClone.ResolvedItemstack, Pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
                                 }
                                 TakeOrDamage(recipe, slot, byPlayer);
-                                if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, pos);
+                                if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, Pos);
                                 shouldbreak = true;
                             }
-                            if (byPlayer.Entity.World.Side.IsServer()) byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, pos);
+                            if (byPlayer.Entity.World.Side.IsServer()) byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, Pos);
                         }
                         else continue;
 

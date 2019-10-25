@@ -18,19 +18,19 @@ namespace Immersion
 {
     public partial class ImmersionMod : ModSystem
     {
-        ICoreAPI api;
+        ICoreAPI Api;
         ICoreClientAPI capi;
         ICoreServerAPI sapi;
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            sapi = api;
+            sapi = Api;
         }
 
-        public override void StartClientSide(ICoreClientAPI api)
+        public override void StartClientSide(ICoreClientAPI Api)
         {
-            capi = api;
-            api.Event.BlockTexturesLoaded += ReloadTextures;
+            capi = Api;
+            Api.Event.BlockTexturesLoaded += ReloadTextures;
         }
 
         public void ReloadTextures()
@@ -41,9 +41,9 @@ namespace Immersion
             }
         }
 
-        public override void Start(ICoreAPI api)
+        public override void Start(ICoreAPI Api)
         {
-            this.api = api;
+            this.Api = Api;
             RegisterClasses();
         }
     }

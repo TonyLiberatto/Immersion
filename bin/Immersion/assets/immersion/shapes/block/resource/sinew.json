@@ -1,8 +1,8 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "neolithicmod:item/resource/byproducts/sinew-fibers",
-		"particle": "neolithicmod:item/resource/byproducts/sinew-fibers"
+		"0": "immersion:item/resource/byproducts/sinew-fibers",
+		"particle": "immersion:item/resource/byproducts/sinew-fibers"
 	},
 	"elements": [
 		{

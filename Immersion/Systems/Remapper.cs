@@ -40,14 +40,14 @@ namespace Immersion
 
         Dictionary<AssetLocation, AssetLocation> MostLikely { get; set; } = new Dictionary<AssetLocation, AssetLocation>();
 
-        public override void StartClientSide(ICoreClientAPI api)
+        public override void StartClientSide(ICoreClientAPI Api)
         {
-            capi = api;
+            capi = Api;
             cChannel = capi.Network.RegisterChannel("remapperchannel")
                 .RegisterMessageType(typeof(Message))
                 .SetMessageHandler<Message>(a =>
                 {
-                    capi = api;
+                    capi = Api;
                     MostLikely = JsonConvert.DeserializeObject<Dictionary<AssetLocation, AssetLocation>>(a.Assets);
                     foreach (var item in MostLikely)
                     {
@@ -63,15 +63,15 @@ namespace Immersion
                 });
         }
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            sapi = api;
+            sapi = Api;
             sChannel = sapi.Network.RegisterChannel("remapperchannel").RegisterMessageType(typeof(Message));
 
             sapi.RegisterCommand("remapper", "Remapper", "", (p, g, a) =>
             {
                 string arg = a.PopWord();
-                NLMissing nLMissing = api.ModLoader.GetModSystem<NLMissing>();
+                NLMissing nLMissing = Api.ModLoader.GetModSystem<NLMissing>();
                 switch (arg)
                 {
                     case "exportmissing":

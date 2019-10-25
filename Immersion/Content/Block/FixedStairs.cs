@@ -17,33 +17,33 @@ namespace Immersion
         public bool Side { get => Code.ToString().Contains("stair-side"); }
         public bool Corner { get => Code.ToString().Contains("stair-corner"); }
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
 		{
-			base.OnLoaded(api);
+			base.OnLoaded(Api);
 
 			type = FirstCodePart(2);
 			material = FirstCodePart(3);
 			updown = LastCodePart(1);
 			outside = "stair-corner-" + type + "-" + material + "-" + "outside" + "-" + updown;
 			inside = "stair-corner-" + type + "-" + material + "-" + "inside" + "-" + updown;
-			north = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-north").GetBlock(api);
-			south = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-south").GetBlock(api);
-			east = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-east").GetBlock(api);
-			west = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-west").GetBlock(api);
+			north = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-north").GetBlock(Api);
+			south = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-south").GetBlock(Api);
+			east = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-east").GetBlock(Api);
+			west = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-west").GetBlock(Api);
 		}
 
-		public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
+		public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos Pos, BlockPos neibpos)
         {
             Block nBlock = neibpos.GetBlock(world);
             if (!(nBlock is FixedStairs)) return;
 
             if (Side)
             {
-                StairsCheck(world, pos);
+                StairsCheck(world, Pos);
             }
             else if (Corner)
             {
-                CornersCheck(world, pos);
+                CornersCheck(world, Pos);
             }
         }
 
@@ -57,19 +57,19 @@ namespace Immersion
             }
         }
 
-        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
+        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos Pos)
         {
 			return new ItemStack(world.BlockAccessor.GetBlock(new AssetLocation("stair-side-" + FirstCodePart(2) + "-" + FirstCodePart(3) + "-up-north")));
 		}
 
-        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
+        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos Pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
             return new ItemStack[] { new ItemStack(world.BlockAccessor.GetBlock(new AssetLocation("stair-side-" + FirstCodePart(2) + "-" + FirstCodePart(3) + "-up-north"))) };
         }
 
-        public void StairsCheck(IWorldAccessor world, BlockPos pos)
+        public void StairsCheck(IWorldAccessor world, BlockPos Pos)
         {
-            AssetLocation[] cardinal = GetCardinal(world, pos);
+            AssetLocation[] cardinal = GetCardinal(world, Pos);
             var bA = world.BlockAccessor;
 
             if (!cardinal.Any(val => bA.GetBlock(val).WildCardMatch(new AssetLocation("*stair-side*")))) return;
@@ -83,52 +83,52 @@ namespace Immersion
             {
                 if (cardinalN == "north")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-northeast")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-northeast")).BlockId, Pos);
                 }
                 else if (cardinalS == "south")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-southeast")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-southeast")).BlockId, Pos);
                 }
             }
             else if (cardinalW == "west")
             {
                 if (cardinalN == "south")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-southwest")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-southwest")).BlockId, Pos);
                 }
                 else if (cardinalS == "north")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-northwest")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-northwest")).BlockId, Pos);
                 }
             }
             else if (cardinalE == "east")
             {
                 if (cardinalN == "south")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-southeast")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-southeast")).BlockId, Pos);
                 }
                 else if (cardinalS == "north")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-northeast")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-northeast")).BlockId, Pos);
                 }
             }
             else if (cardinalE == "west")
             {
                 if (cardinalN == "north")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-northwest")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(inside + "-northwest")).BlockId, Pos);
                 }
                 else if (cardinalS == "south")
                 {
-                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-southwest")).BlockId, pos);
+                    bA.SetBlock(bA.GetBlock(new AssetLocation(outside + "-southwest")).BlockId, Pos);
                 }
             }
         }
 
-        public void CornersCheck(IWorldAccessor world, BlockPos pos)
+        public void CornersCheck(IWorldAccessor world, BlockPos Pos)
         {
             var bA = world.BlockAccessor;
-            AssetLocation[] cardinal = GetCardinal(world, pos);
+            AssetLocation[] cardinal = GetCardinal(world, Pos);
 
             string cardinalN = bA.GetBlock(cardinal[0]).LastCodePart();
             string cardinalS = bA.GetBlock(cardinal[1]).LastCodePart();
@@ -140,73 +140,73 @@ namespace Immersion
 				case "northeast":
 					if (cardinalN == "north")
 					{
-						bA.SetBlock(north.BlockId, pos);
+						bA.SetBlock(north.BlockId, Pos);
 					}
 					else if (cardinalE == "east")
 					{
-						bA.SetBlock(east.BlockId, pos);
+						bA.SetBlock(east.BlockId, Pos);
 					}
 					else if (cardinalW == "east")
 					{
-						bA.SetBlock(east.BlockId, pos);
+						bA.SetBlock(east.BlockId, Pos);
 					}
 					else if (cardinalS == "north")
 					{
-						bA.SetBlock(north.BlockId, pos);
+						bA.SetBlock(north.BlockId, Pos);
 					}
 					break;
 				case "southwest":
 					if (cardinalS == "south")
 					{
-						bA.SetBlock(south.BlockId, pos);
+						bA.SetBlock(south.BlockId, Pos);
 					}
 					else if (cardinalE == "west")
 					{
-						bA.SetBlock(west.BlockId, pos);
+						bA.SetBlock(west.BlockId, Pos);
 					}
 					else if (cardinalN == "south")
 					{
-						bA.SetBlock(south.BlockId, pos);
+						bA.SetBlock(south.BlockId, Pos);
 					}
 					else if (cardinalW == "west")
 					{
-						bA.SetBlock(west.BlockId, pos);
+						bA.SetBlock(west.BlockId, Pos);
 					}
 					break;
 				case "southeast":
 					if (cardinalN == "south")
 					{
-						bA.SetBlock(south.BlockId, pos);
+						bA.SetBlock(south.BlockId, Pos);
 					}
 					else if (cardinalE == "east")
 					{
-						bA.SetBlock(east.BlockId, pos);
+						bA.SetBlock(east.BlockId, Pos);
 					}
 					else if (cardinalS == "south")
 					{
-						bA.SetBlock(south.BlockId, pos);
+						bA.SetBlock(south.BlockId, Pos);
 					}
 					else if (cardinalW == "east")
 					{
-						bA.SetBlock(east.BlockId, pos);
+						bA.SetBlock(east.BlockId, Pos);
 					}
 					break;
 				case "northwest":
 					if (cardinalW == "west")
 					{
-						bA.SetBlock(west.BlockId, pos);
+						bA.SetBlock(west.BlockId, Pos);
 					}
 					else if (cardinalS == "north")
 					{
-						bA.SetBlock(north.BlockId, pos);
+						bA.SetBlock(north.BlockId, Pos);
 					}
 					else if (cardinalE == "west")
 					{
-						bA.SetBlock(west.BlockId, pos);
+						bA.SetBlock(west.BlockId, Pos);
 					}
 					else if (cardinalN == "north")
 					{
-						bA.SetBlock(north.BlockId, pos);
+						bA.SetBlock(north.BlockId, Pos);
 					}
 					break;
 				default:
@@ -214,14 +214,14 @@ namespace Immersion
 			}
         }
 
-        public AssetLocation[] GetCardinal(IWorldAccessor world, BlockPos pos)
+        public AssetLocation[] GetCardinal(IWorldAccessor world, BlockPos Pos)
         {
             var bA = world.BlockAccessor;
             AssetLocation[] cardinal = {
-                bA.GetBlock(pos.NorthCopy()).Code,
-                bA.GetBlock(pos.SouthCopy()).Code,
-                bA.GetBlock(pos.EastCopy()).Code,
-                bA.GetBlock(pos.WestCopy()).Code,
+                bA.GetBlock(Pos.NorthCopy()).Code,
+                bA.GetBlock(Pos.SouthCopy()).Code,
+                bA.GetBlock(Pos.EastCopy()).Code,
+                bA.GetBlock(Pos.WestCopy()).Code,
             };
             return cardinal;
         }
@@ -229,16 +229,16 @@ namespace Immersion
 
     public class BlockEntityStairs : BlockEntity
     {
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
+            base.Initialize(Api);
             RegisterGameTickListener(dt =>
             {
-                FixedStairs fixedStairs = (pos.GetBlock(api) as FixedStairs);
+                FixedStairs fixedStairs = (Pos.GetBlock(Api) as FixedStairs);
                 if (fixedStairs != null)
                 {
-                    if (fixedStairs.Corner) fixedStairs.CornersCheck(api.World, pos);
-                    else if (fixedStairs.Side) fixedStairs.StairsCheck(api.World, pos);
+                    if (fixedStairs.Corner) fixedStairs.CornersCheck(Api.World, Pos);
+                    else if (fixedStairs.Side) fixedStairs.StairsCheck(Api.World, Pos);
                 }
             }, 30);
         }

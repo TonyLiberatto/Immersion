@@ -19,39 +19,39 @@ namespace Immersion
 {
     public class ModifyLakes : ModSystem
     {
-        ICoreServerAPI api;
+        ICoreServerAPI Api;
         public override double ExecuteOrder() => 0;
         public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
         long[] ids = new long[2];
         public NeolithicGlobalConfig config;
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            this.api = api;
+            this.Api = Api;
             
-            api.Event.ServerRunPhase(EnumServerRunPhase.LoadGamePre, ChangeLakeWater);
+            Api.Event.ServerRunPhase(EnumServerRunPhase.LoadGamePre, ChangeLakeWater);
         }
 
         public void ChangeLakeWater()
         {
-            config = api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
-            config.SetApi(api);
-            ids[0] = api.Event.RegisterGameTickListener(dt => 
+            config = Api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
+            config.SetApi(Api);
+            ids[0] = Api.Event.RegisterGameTickListener(dt => 
             {
-                if (api.ModLoader.GetModSystem<GenLakes>().GlobalConfig != null)
+                if (Api.ModLoader.GetModSystem<GenPonds>().GlobalConfig != null)
                 {
-                    api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
-                    api.ModLoader.GetModSystem<GenLakes>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
-                    api.Event.UnregisterGameTickListener(ids[0]);
+                    Api.ModLoader.GetModSystem<GenPonds>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
+                    Api.ModLoader.GetModSystem<GenPonds>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
+                    Api.Event.UnregisterGameTickListener(ids[0]);
                 }
             }, 30);
-            ids[1] = api.Event.RegisterGameTickListener(dt =>
+            ids[1] = Api.Event.RegisterGameTickListener(dt =>
             {
-                if (api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig != null)
+                if (Api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig != null)
                 {
-                    api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
-                    api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
-                    api.Event.UnregisterGameTickListener(ids[1]);
+                    Api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
+                    Api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
+                    Api.Event.UnregisterGameTickListener(ids[1]);
                 }
             }, 30);
         }
@@ -59,15 +59,15 @@ namespace Immersion
 
     public class BlockSeaweedOverride : BlockSeaweed
     {
-        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos pos, BlockFacing onBlockFace, LCGRandom worldGenRand)
+        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos Pos, BlockFacing onBlockFace, LCGRandom worldGenRand)
         {
             bool gen = false;
-            BlockPos pos1 = pos.DownCopy(1);
-            if (blockAccessor.GetBlock(pos1).LiquidCode == "seawater")
+            BlockPos Pos1 = Pos.DownCopy(1);
+            if (blockAccessor.GetBlock(Pos1).LiquidCode == "seawater")
             {
-                blockAccessor.GetBlock(pos1).LiquidCode = "water";
-                gen = base.TryPlaceBlockForWorldGen(blockAccessor, pos, onBlockFace, worldGenRand);
-                blockAccessor.GetBlock(pos1).LiquidCode = "seawater";
+                blockAccessor.GetBlock(Pos1).LiquidCode = "water";
+                gen = base.TryPlaceBlockForWorldGen(blockAccessor, Pos, onBlockFace, worldGenRand);
+                blockAccessor.GetBlock(Pos1).LiquidCode = "seawater";
             }
             return gen;
         }
@@ -100,20 +100,20 @@ namespace Immersion
         [JsonProperty]
         public AssetLocation defaultRockCode;
 
-        private ICoreAPI api;
+        private ICoreAPI Api;
 
-        public int waterBlockId { get => waterBlockCode.GetID(api); }
-        public int LakeWaterBlockId { get => lakeWaterBlockCode.GetID(api); }
-        public int LakeIceBlockId { get => lakeIceBlockCode.GetID(api); }
-        public int GlacierIceBlockId { get => glacierIceBlockCode.GetID(api); }
-        public int LavaBlockId { get => lavaBlockCode.GetID(api); }
-        public int BasaltBlockId { get => basaltBlockCode.GetID(api); }
-        public int MantleBlockId { get => mantleBlockCode.GetID(api); }
-        public int DefaultRockId { get => defaultRockCode.GetID(api); }
+        public int waterBlockId { get => waterBlockCode.GetID(Api); }
+        public int LakeWaterBlockId { get => lakeWaterBlockCode.GetID(Api); }
+        public int LakeIceBlockId { get => lakeIceBlockCode.GetID(Api); }
+        public int GlacierIceBlockId { get => glacierIceBlockCode.GetID(Api); }
+        public int LavaBlockId { get => lavaBlockCode.GetID(Api); }
+        public int BasaltBlockId { get => basaltBlockCode.GetID(Api); }
+        public int MantleBlockId { get => mantleBlockCode.GetID(Api); }
+        public int DefaultRockId { get => defaultRockCode.GetID(Api); }
 
-        public void SetApi(ICoreAPI api)
+        public void SetApi(ICoreAPI Api)
         {
-            this.api = api;
+            this.Api = Api;
         }
     }
 }

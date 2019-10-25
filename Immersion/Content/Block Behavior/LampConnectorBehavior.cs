@@ -42,7 +42,7 @@ namespace Immersion
         }
 
         private static Regex dirRe = new Regex(@".*-(?<dir>north|south|east|west)(?:-.*)?");
-        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos, ref EnumHandling handling)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos Pos, BlockPos neibpos, ref EnumHandling handling)
         {
             if (!flipable)
             {
@@ -52,29 +52,29 @@ namespace Immersion
                 if (m.Success)
                 {
                     dir = m.Result("${dir}");
-                    len = getCode(world, pos, dir);
+                    len = getCode(world, Pos, dir);
                 }
 
-                world.BlockAccessor.ExchangeBlock(world.BlockAccessor.GetBlock(block.CodeWithParts(dir, len)).BlockId, pos);
+                world.BlockAccessor.ExchangeBlock(world.BlockAccessor.GetBlock(block.CodeWithParts(dir, len)).BlockId, Pos);
             }
         }
 
-        private string getCode(IWorldAccessor world, BlockPos pos, string dir)
+        private string getCode(IWorldAccessor world, BlockPos Pos, string dir)
         {
             bool solid;
             switch (dir)
             {
                 case "north":
-                    solid = world.BlockAccessor.GetBlock(pos.EastCopy()).Id != 0;
+                    solid = world.BlockAccessor.GetBlock(Pos.EastCopy()).Id != 0;
                     break;
                 case "south":
-                    solid = world.BlockAccessor.GetBlock(pos.WestCopy()).Id != 0;
+                    solid = world.BlockAccessor.GetBlock(Pos.WestCopy()).Id != 0;
                     break;
                 case "east":
-                    solid = world.BlockAccessor.GetBlock(pos.SouthCopy()).Id != 0;
+                    solid = world.BlockAccessor.GetBlock(Pos.SouthCopy()).Id != 0;
                     break;
                 case "west":
-                    solid = world.BlockAccessor.GetBlock(pos.NorthCopy()).Id != 0;
+                    solid = world.BlockAccessor.GetBlock(Pos.NorthCopy()).Id != 0;
                     break;
                 default:
                     // Should be impossible.
@@ -95,7 +95,7 @@ namespace Immersion
             flipable = properties["type"].AsString("flippable") == "flippable";
         }
 
-        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos, ref EnumHandling handling)
+        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos Pos, ref EnumHandling handling)
         {
             handling = EnumHandling.PreventDefault;
             if (flipable)
@@ -105,7 +105,7 @@ namespace Immersion
             return new ItemStack(world.BlockAccessor.GetBlock(block.CodeWithParts("north", "short")));
         }
 
-        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropChanceMultiplier, ref EnumHandling handling)
+        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos Pos, IPlayer byPlayer, float dropChanceMultiplier, ref EnumHandling handling)
         {
             handling = EnumHandling.PreventDefault;
             if (flipable)

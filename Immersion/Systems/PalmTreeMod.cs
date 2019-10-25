@@ -19,6 +19,7 @@ namespace Immersion
         public static BlockPos[] bottomOffsets;
         public static BlockPos[] offsets;
         public static BlockPos[] cardinaloffsets;
+        ICoreAPI Api { get => this.api; }
 
         LCGRandom rand;
 
@@ -39,9 +40,9 @@ namespace Immersion
         Block tip;
         ItemAxe axe;
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
+            base.OnLoaded(Api);
             axe = new ItemAxe();
             //if (LastCodePart(1) != "bottom") return;
 
@@ -49,7 +50,7 @@ namespace Immersion
             offsets = AreaMethods.AreaAroundOffsetList().ToArray();
             cardinaloffsets = AreaMethods.CardinalOffsetList().ToArray();
 
-            rand = new LCGRandom(api.World.Seed);
+            rand = new LCGRandom(Api.World.Seed);
 
             List<Block> trunkblocks = new List<Block>();
             List<Block> frondblocks = new List<Block>();
@@ -59,25 +60,25 @@ namespace Immersion
 
             for (int i = 0; i < parts.Length; i++)
             {
-                trunkblocks.Add(api.World.BlockAccessor.GetBlock(CodeWithPart(parts[i], 1)));
+                trunkblocks.Add(Api.World.BlockAccessor.GetBlock(CodeWithPart(parts[i], 1)));
             }
             trunk = trunkblocks.ToArray();
 
             for (int i = 0; i < directions.Length; i++)
             {
-                frondblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfrond-1-grown-" + directions[i])));
-                nannerblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-bananna-" + directions[i])));
-                cocoblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-coconut-" + directions[i])));
+                frondblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfrond-1-grown-" + directions[i])));
+                nannerblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-bananna-" + directions[i])));
+                cocoblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-coconut-" + directions[i])));
             }
             frond = frondblocks.ToArray();
             fruits = new Block[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
 
-            tip = api.World.BlockAccessor.GetBlock(CodeWithPart("tip", 1));
+            tip = Api.World.BlockAccessor.GetBlock(CodeWithPart("tip", 1));
         }
 
-        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
+        public override void OnBlockBroken(IWorldAccessor world, BlockPos Pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
         {
-            base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
+            base.OnBlockBroken(world, Pos, byPlayer, dropQuantityMultiplier);
             ItemSlot itemslot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (FirstCodePart() == "palmlog")
             {
@@ -90,8 +91,8 @@ namespace Immersion
                         {
                             for (int y = 0; y <= 16; y++)
                             {
-                                BlockPos bPos = new BlockPos(pos.X + x, pos.Y + y, pos.Z + z);
-                                Block bBlock = api.World.BlockAccessor.GetBlock(bPos);
+                                BlockPos bPos = new BlockPos(Pos.X + x, Pos.Y + y, Pos.Z + z);
+                                Block bBlock = Api.World.BlockAccessor.GetBlock(bPos);
                                 if (bBlock is BlockPalmTree)
                                 {
                                     if (itemslot.Itemstack == null) return;
@@ -110,35 +111,35 @@ namespace Immersion
             }
         }
 
-        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos pos, BlockFacing onBlockFace, LCGRandom worldgenRandom)
+        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos Pos, BlockFacing onBlockFace, LCGRandom worldgenRandom)
         {
             int fruit = (int)Math.Round(worldgenRandom.NextDouble() * 2.0);            
-            GenPalmTree(blockAccessor, pos, fruit);
+            GenPalmTree(blockAccessor, Pos, fruit);
             return true;
         }
 
-        public void GenPalmTree(IBlockAccessor blockAccessor, BlockPos pos, int fruit)
+        public void GenPalmTree(IBlockAccessor blockAccessor, BlockPos Pos, int fruit)
         {
-            Block block = blockAccessor.GetBlock(pos.DownCopy());
+            Block block = blockAccessor.GetBlock(Pos.DownCopy());
             if (block.FirstCodePart() == "sand")
             {
                 for (int i = 0; i < bottomOffsets.Length; i++)
                 {
-                    Block d = blockAccessor.GetBlock(pos.X + bottomOffsets[i].X, pos.Y + bottomOffsets[i].Y, pos.Z + bottomOffsets[i].Z);
+                    Block d = blockAccessor.GetBlock(Pos.X + bottomOffsets[i].X, Pos.Y + bottomOffsets[i].Y, Pos.Z + bottomOffsets[i].Z);
                     if (d.LiquidCode == "water")
                     {
                         for (int k = 0; k < offsets.Length; k++)
                         {
-                            Block c = blockAccessor.GetBlock(pos.X + offsets[i].X, pos.Y + offsets[i].Y, pos.Z + offsets[i].Z);
+                            Block c = blockAccessor.GetBlock(Pos.X + offsets[i].X, Pos.Y + offsets[i].Y, Pos.Z + offsets[i].Z);
                             if (c.Class == Class) return;
                         }
-                        rand.InitPositionSeed(pos.X, pos.Y);
+                        rand.InitPositionSeed(Pos.X, Pos.Y);
                         Block[] stretchedTrunk = trunk.Stretch((int)(rand.NextDouble() * (maxTreeSize)));
 
-                        BlockPos top = new BlockPos(pos.X, pos.Y + stretchedTrunk.Length, pos.Z);
+                        BlockPos top = new BlockPos(Pos.X, Pos.Y + stretchedTrunk.Length, Pos.Z);
                         for (int j = 0; j < stretchedTrunk.Length; j++)
                         {
-                            blockAccessor.SetBlock(stretchedTrunk[j].BlockId, new BlockPos(pos.X, pos.Y + j, pos.Z));
+                            blockAccessor.SetBlock(stretchedTrunk[j].BlockId, new BlockPos(Pos.X, Pos.Y + j, Pos.Z));
                         }
                         blockAccessor.SetBlock(tip.BlockId, top);
                         blockAccessor.SpawnBlockEntity("PalmTree", top);
@@ -151,15 +152,15 @@ namespace Immersion
             return;
         }
 
-        public void GenFrondAndFruits(BlockPos pos, IBlockAccessor blockAccessor, double treesize, int f)
+        public void GenFrondAndFruits(BlockPos Pos, IBlockAccessor blockAccessor, double treesize, int f)
         {
             double scalar = (treesize - parts.Length) / maxTreeSize;
             int palmnum = (int)Math.Round((scalar * 3.0));
 
             for (int i = 0; i < cardinaloffsets.Length; i++)
             {
-                BlockPos vPos = new BlockPos(pos.X + cardinaloffsets[i].X, pos.Y + cardinaloffsets[i].Y, pos.Z + cardinaloffsets[i].Z);
-                BlockPos dPos = new BlockPos(pos.X + cardinaloffsets[i].X, pos.Y + cardinaloffsets[i].Y - 1, pos.Z + cardinaloffsets[i].Z);
+                BlockPos vPos = new BlockPos(Pos.X + cardinaloffsets[i].X, Pos.Y + cardinaloffsets[i].Y, Pos.Z + cardinaloffsets[i].Z);
+                BlockPos dPos = new BlockPos(Pos.X + cardinaloffsets[i].X, Pos.Y + cardinaloffsets[i].Y - 1, Pos.Z + cardinaloffsets[i].Z);
                 Block block = blockAccessor.GetBlock(vPos);
                 Block dblock = blockAccessor.GetBlock(dPos);
 
@@ -189,19 +190,19 @@ namespace Immersion
 
         public double nextGrowTime;
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
+            base.Initialize(Api);
             UpdateTreeSize();
             UpdateFruitsFronds();
 
-            palmtree = api.World.BlockAccessor.GetBlock(pos) as BlockPalmTree;
-            if (api.World.Side.IsServer()) RegisterGameTickListener(CheckTree, 1000);
-            if (api.World.Calendar.TotalHours > nextGrowTime) UpdateGrowTime();
+            palmtree = Api.World.BlockAccessor.GetBlock(Pos) as BlockPalmTree;
+            if (Api.World.Side.IsServer()) RegisterGameTickListener(CheckTree, 1000);
+            if (Api.World.Calendar.TotalHours > nextGrowTime) UpdateGrowTime();
 
             if (myFruits == null || myFruits[0] == null) return;
 
-            myFruit = api.World.BlockAccessor.GetBlock(myFruits[0]);
+            myFruit = Api.World.BlockAccessor.GetBlock(myFruits[0]);
             for (int i = 0; i < palmtree.fruits.Length; i++)
             {
                 if (palmtree.fruits[i] == null) return;
@@ -218,7 +219,7 @@ namespace Immersion
         {
             if (myTree == null || myTree.Length == 0)
             {
-                api.World.BlockAccessor.RemoveBlockEntity(pos);
+                Api.World.BlockAccessor.RemoveBlockEntity(Pos);
                 return;
             }
 
@@ -226,7 +227,7 @@ namespace Immersion
             {
                 if (myTree[i] == null) continue;
 
-                Block checkedBlock = api.World.BlockAccessor.GetBlock(myTree[i]);
+                Block checkedBlock = Api.World.BlockAccessor.GetBlock(myTree[i]);
                 if (!(checkedBlock is BlockPalmTree))
                 {
                     UpdateTreeSize();
@@ -234,18 +235,18 @@ namespace Immersion
                 }
             }
 
-            if (nextGrowTime < api.World.Calendar.TotalHours)
+            if (nextGrowTime < Api.World.Calendar.TotalHours)
             {
                 for (int i = 0; i < BlockPalmTree.cardinaloffsets.Length; i++)
                 {
                     BlockPos v = BlockPalmTree.cardinaloffsets[i];
-                    BlockPos palmPos = new BlockPos(pos.X + v.X, pos.Y + v.Y, pos.Z + v.Z);
-                    BlockPos fruitPos = new BlockPos(pos.X + v.X, pos.Y + v.Y - 1, pos.Z + v.Z);
-                    Block fruitspace = api.World.BlockAccessor.GetBlock(fruitPos);
-                    Block palmspace = api.World.BlockAccessor.GetBlock(palmPos);
+                    BlockPos palmPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y, Pos.Z + v.Z);
+                    BlockPos fruitPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y - 1, Pos.Z + v.Z);
+                    Block fruitspace = Api.World.BlockAccessor.GetBlock(fruitPos);
+                    Block palmspace = Api.World.BlockAccessor.GetBlock(palmPos);
 
-                    if (fruitspace.Id == 0) api.World.BlockAccessor.SetBlock(palmtree.fruits[fruitnum][i].BlockId, fruitPos);
-                    if (palmspace.Id == 0) api.World.BlockAccessor.SetBlock(palmtree.frond[i].BlockId, palmPos);
+                    if (fruitspace.Id == 0) Api.World.BlockAccessor.SetBlock(palmtree.fruits[fruitnum][i].BlockId, fruitPos);
+                    if (palmspace.Id == 0) Api.World.BlockAccessor.SetBlock(palmtree.frond[i].BlockId, palmPos);
                 }
                 UpdateGrowTime();
             }
@@ -253,7 +254,7 @@ namespace Immersion
 
         public void UpdateGrowTime()
         {
-            nextGrowTime = api.World.Calendar.TotalHours + 48;
+            nextGrowTime = Api.World.Calendar.TotalHours + 48;
         }
 
         public void UpdateTreeSize()
@@ -266,8 +267,8 @@ namespace Immersion
                 {
                     for (int z = -2; z <= 2; z++)
                     {
-                        BlockPos bPos = new BlockPos(pos.X + x, pos.Y - y, pos.Z + z);
-                        Block bBlock = api.World.BlockAccessor.GetBlock(bPos);
+                        BlockPos bPos = new BlockPos(Pos.X + x, Pos.Y - y, Pos.Z + z);
+                        Block bBlock = Api.World.BlockAccessor.GetBlock(bPos);
 
                         if (bBlock is BlockPalmTree)
                         {
@@ -286,11 +287,11 @@ namespace Immersion
                 for (int i = 0; i < BlockPalmTree.cardinaloffsets.Length; i++)
                 {
                     BlockPos v = BlockPalmTree.cardinaloffsets[i];
-                    BlockPos frondPos = new BlockPos(pos.X + v.X, pos.Y + v.Y, pos.Z + v.Z);
-                    BlockPos fruitPos = new BlockPos(pos.X + v.X, pos.Y + v.Y - 1, pos.Z + v.Z);
+                    BlockPos frondPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y, Pos.Z + v.Z);
+                    BlockPos fruitPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y - 1, Pos.Z + v.Z);
 
-                    Block frondBlock = api.World.BlockAccessor.GetBlock(frondPos);
-                    Block fruitBlock = api.World.BlockAccessor.GetBlock(fruitPos);
+                    Block frondBlock = Api.World.BlockAccessor.GetBlock(frondPos);
+                    Block fruitBlock = Api.World.BlockAccessor.GetBlock(fruitPos);
 
                     if (frondBlock.FirstCodePart() == "palmfrond")
                     {

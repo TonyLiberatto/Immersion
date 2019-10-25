@@ -3,7 +3,7 @@
 	
         {
 			comment: "Palm Trees",
-			blockCodes: [ "neolithicmod:palmlog-bottom-grown" ],
+			blockCodes: [ "immersion:palmlog-bottom-grown" ],
 			minTemp: 10,
 			maxTemp: 40,
 			minRain: 0,

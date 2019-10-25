@@ -112,7 +112,6 @@
     <Compile Include="Immersion\Content\Block Behavior\LampPostBehavior.cs" />
     <Compile Include="Immersion\Content\Block Behavior\RotateNinety.cs" />
     <Compile Include="Immersion\Content\BlockEntityRenderer\PestleRenderer.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\BEBucketOverride.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BECraftingStation.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BEMortarAndPestle.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BEScary.cs" />

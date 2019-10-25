@@ -7,5 +7,5 @@
 	width: 2,
 	height: 1,
 	shapeless: true,
-	output: { type: "block", code: "neolithicmod:crackedrockpolished-{stone}", }
+	output: { type: "block", code: "immersion:crackedrockpolished-{stone}", }
 }

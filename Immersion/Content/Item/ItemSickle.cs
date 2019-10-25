@@ -10,9 +10,9 @@ namespace Immersion
 
         public override int MultiBreakQuantity { get { return 2; } }
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
+            base.OnLoaded(Api);
             allowedPrefixes = Attributes["codePrefixes"].AsArray<string>();
         }
 

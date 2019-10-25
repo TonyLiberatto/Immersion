@@ -19,9 +19,9 @@ namespace Immersion
         public CraftingProp[] craftingProps;
         public AnimProps animProps;
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
+            base.OnLoaded(Api);
             craftingProps = Attributes["craftingprops"].AsObject<CraftingProp[]>();
             animProps = Attributes["animprops"].AsObject<AnimProps>();
         }
@@ -33,10 +33,10 @@ namespace Immersion
             return true;
         }
 
-        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
+        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos Pos, IPlayer forPlayer)
         {
-            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
-            BlockEntityCraftingStation craftingStation = (pos.BlockEntity(world) as BlockEntityCraftingStation);
+            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, Pos, forPlayer));
+            BlockEntityCraftingStation craftingStation = (Pos.BlockEntity(world) as BlockEntityCraftingStation);
             builder = craftingStation?.inventory?[0]?.Itemstack != null ? builder.AppendLine().AppendLine(craftingStation.inventory[0].StackSize + "x " + Lang.Get(craftingStation.inventory[0].Itemstack.Collectible.Code.ToString())) : builder;
             return builder.ToString();
         }

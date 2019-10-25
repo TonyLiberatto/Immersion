@@ -11,31 +11,31 @@ namespace Immersion.Utility
 {
     class AreaMethods
     {
-        public static BlockPos[] FullAreaAround(BlockPos pos)
+        public static BlockPos[] FullAreaAround(BlockPos Pos)
         {
-            BlockPos[] positions = AreaBelow(pos).Concat(AreaAbove(pos)).ToArray();
-            return positions.Concat(AreaAround(pos)).ToArray();
+            BlockPos[] Positions = AreaBelow(Pos).Concat(AreaAbove(Pos)).ToArray();
+            return Positions.Concat(AreaAround(Pos)).ToArray();
         }
 
-        public static BlockPos[] AreaAround(BlockPos pos)
+        public static BlockPos[] AreaAround(BlockPos Pos)
         {
             return new BlockPos[]
             {
-               pos,
-               pos.NorthCopy(),
-               pos.SouthCopy(),
-               pos.EastCopy(),
-               pos.WestCopy(),
-               pos.NorthCopy().EastCopy(),
-               pos.SouthCopy().WestCopy(),
-               pos.EastCopy().SouthCopy(),
-               pos.WestCopy().NorthCopy(),
+               Pos,
+               Pos.NorthCopy(),
+               Pos.SouthCopy(),
+               Pos.EastCopy(),
+               Pos.WestCopy(),
+               Pos.NorthCopy().EastCopy(),
+               Pos.SouthCopy().WestCopy(),
+               Pos.EastCopy().SouthCopy(),
+               Pos.WestCopy().NorthCopy(),
             };
         }
 
-        public static BlockPos[] AreaBelow(BlockPos pos)
+        public static BlockPos[] AreaBelow(BlockPos Pos)
         {
-            BlockPos aPos = pos.DownCopy();
+            BlockPos aPos = Pos.DownCopy();
             return new BlockPos[]
             {
                aPos,
@@ -52,73 +52,73 @@ namespace Immersion.Utility
 
         public static List<BlockPos> AreaBelowOffsetList()
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -1; x <= 1; x++)
             {
                 for (int z = -1; z <= 1; z++)
                 {
-                    positions.Add(new BlockPos(x, -1, z));
+                    Positions.Add(new BlockPos(x, -1, z));
                 }
             }
-            return positions;
+            return Positions;
         }
 
         public static List<BlockPos> AreaBelowCardinalOffsetList()
         {
-            List<BlockPos> positions = new List<BlockPos> {
+            List<BlockPos> Positions = new List<BlockPos> {
                 new BlockPos(-1,-1,0),
                 new BlockPos(1,-1,0),
                 new BlockPos(0,-1,-1),
                 new BlockPos(0,-1,1),
             };
-            return positions;
+            return Positions;
         }
 
-        public static BlockPos[] LargeAreaBelow(BlockPos pos)
+        public static BlockPos[] LargeAreaBelow(BlockPos Pos)
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -3; x <= 3; x++)
             {
                 for (int z = -3; z <= 3; z++)
                 {
-                    positions.Add(pos.AddCopy(x, -1, z));
+                    Positions.Add(Pos.AddCopy(x, -1, z));
                 }
             }
-            return positions.ToArray();
+            return Positions.ToArray();
         }
 
         public static List<BlockPos> LargeAreaBelowOffsetList()
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -3; x <= 3; x++)
             {
                 for (int z = -3; z <= 3; z++)
                 {
-                    positions.Add(new BlockPos(x, -1, z));
+                    Positions.Add(new BlockPos(x, -1, z));
                 }
             }
-            return positions;
+            return Positions;
         }
 
         public static List<BlockPos> AreaAroundOffsetList()
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -1; x <= 1; x++)
             {
                 for (int y = -1; y <= 1; y++)
                 {
                     for (int z = -1; z <= 1; z++)
                     {
-                        positions.Add(new BlockPos(x, y, z));
+                        Positions.Add(new BlockPos(x, y, z));
                     }
                 }
             }
-            return positions;
+            return Positions;
         }
 
         public static List<BlockPos> SphericalOffsetList(int radius)
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -radius; x <= radius; x++)
             {
                 for (int y = -radius; y <= radius; y++)
@@ -127,43 +127,43 @@ namespace Immersion.Utility
                     {
                         if ((x*x+y*y+z*z) <= (radius*radius))
                         {
-                            positions.Add(new BlockPos(x, y, z));
+                            Positions.Add(new BlockPos(x, y, z));
                         }
                     }
                 }
             }
-            return positions;
+            return Positions;
         }
 
         public static List<BlockPos> CircularOffsetList(int radius)
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -radius; x <= radius; x++)
             {
                 for (int z = -radius; z <= radius; z++)
                 {
                     if ((x * x + z * z) <= (radius * radius))
                     {
-                        positions.Add(new BlockPos(x, 0, z));
+                        Positions.Add(new BlockPos(x, 0, z));
                     }
                 }
 
             }
-            return positions;
+            return Positions;
         }
 
         public static List<BlockPos> PlanarAreaAroundOffsetList()
         {
-            List<BlockPos> positions = new List<BlockPos>();
+            List<BlockPos> Positions = new List<BlockPos>();
             for (int x = -1; x <= 1; x++)
             {
                 for (int z = -1; z <= 1; z++)
                 {
-                    positions.Add(new BlockPos(x, 0, z));
+                    Positions.Add(new BlockPos(x, 0, z));
                 }
 
             }
-            return positions;
+            return Positions;
         }
 
         public static List<BlockPos> CardinalOffsetList()
@@ -177,9 +177,9 @@ namespace Immersion.Utility
             };
         }
 
-        public static BlockPos[] AreaAbove(BlockPos pos)
+        public static BlockPos[] AreaAbove(BlockPos Pos)
         {
-            BlockPos aPos = pos.UpCopy();
+            BlockPos aPos = Pos.UpCopy();
             return new BlockPos[]
             {
                aPos,
@@ -194,57 +194,57 @@ namespace Immersion.Utility
             };
         }
 
-        public static BlockPos[] Cardinal(BlockPos pos)
+        public static BlockPos[] Cardinal(BlockPos Pos)
         {
             return new BlockPos[]
             {
-               pos.NorthCopy(),
-               pos.SouthCopy(),
-               pos.EastCopy(),
-               pos.WestCopy(),
+               Pos.NorthCopy(),
+               Pos.SouthCopy(),
+               Pos.EastCopy(),
+               Pos.WestCopy(),
             };
         }
 
 
-        public static BlockPos[] FullCardinal(BlockPos pos)
+        public static BlockPos[] FullCardinal(BlockPos Pos)
         {
             return new BlockPos[]
             {
-               pos.UpCopy(),
-               pos.DownCopy(),
-               pos.NorthCopy(),
-               pos.SouthCopy(),
-               pos.EastCopy(),
-               pos.WestCopy(),
+               Pos.UpCopy(),
+               Pos.DownCopy(),
+               Pos.NorthCopy(),
+               Pos.SouthCopy(),
+               Pos.EastCopy(),
+               Pos.WestCopy(),
             };
         }
 
-        public static Block[] BlockCardinal(IWorldAccessor world, BlockPos pos)
+        public static Block[] BlockCardinal(IWorldAccessor world, BlockPos Pos)
         {
             List<Block> blocks = new List<Block>();
-            foreach (var val in Cardinal(pos))
+            foreach (var val in Cardinal(Pos))
             {
                 blocks.Add(world.BulkBlockAccessor.GetBlock(val));
             }
             return blocks.ToArray();
         }
 
-        public static Block[] BlockFullCardinal(IWorldAccessor world, BlockPos pos)
+        public static Block[] BlockFullCardinal(IWorldAccessor world, BlockPos Pos)
         {
             List<Block> blocks = new List<Block>();
-            foreach (var val in FullCardinal(pos))
+            foreach (var val in FullCardinal(Pos))
             {
                 blocks.Add(world.BulkBlockAccessor.GetBlock(val));
             }
             return blocks.ToArray();
         }
 
-        public static int CardinalCount(IWorldAccessor world, BlockPos pos)
+        public static int CardinalCount(IWorldAccessor world, BlockPos Pos)
         {
             List<Block> blocks = new List<Block>();
             int count = 0;
-            Block block = world.BulkBlockAccessor.GetBlock(pos);
-            foreach (var val in BlockCardinal(world, pos))
+            Block block = world.BulkBlockAccessor.GetBlock(Pos);
+            foreach (var val in BlockCardinal(world, Pos))
             {
                 if (!val.IsReplacableBy(block))
                 {
@@ -254,25 +254,25 @@ namespace Immersion.Utility
             return count;
         }
 
-        public static Dictionary<BlockPos, string> CardinalDict(BlockPos pos)
+        public static Dictionary<BlockPos, string> CardinalDict(BlockPos Pos)
         {
             return new Dictionary<BlockPos, string>
             {
-                {   pos.NorthCopy(), "north" },
-                {   pos.SouthCopy(), "south" },
-                {   pos.EastCopy(), "east" },
-                {   pos.WestCopy(), "west" }
+                {   Pos.NorthCopy(), "north" },
+                {   Pos.SouthCopy(), "south" },
+                {   Pos.EastCopy(), "east" },
+                {   Pos.WestCopy(), "west" }
             };
         }
 
-        public static Dictionary<string, BlockPos> DirectionDict(BlockPos pos)
+        public static Dictionary<string, BlockPos> DirectionDict(BlockPos Pos)
         {
             return new Dictionary<string, BlockPos>
             {
-                {   "north", pos.NorthCopy() },
-                {   "south", pos.SouthCopy() },
-                {   "east", pos.EastCopy() },
-                {   "west", pos.WestCopy() }
+                {   "north", Pos.NorthCopy() },
+                {   "south", Pos.SouthCopy() },
+                {   "east", Pos.EastCopy() },
+                {   "west", Pos.WestCopy() }
             };
         }
 

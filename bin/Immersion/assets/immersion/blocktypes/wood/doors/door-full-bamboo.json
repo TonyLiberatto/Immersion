@@ -1,8 +1,8 @@
 {
 	code: "door-full-bamboo",
 	behaviorsByType: { 
-		"*-brown-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:browndoor-east-down-closed-left"}}}],
-		"*-green-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:greendoor-east-down-closed-left"}}}],
+		"*-brown-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"immersion:browndoor-east-down-closed-left"}}}],
+		"*-green-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"immersion:greendoor-east-down-closed-left"}}}],
 	},	
 	variantgroups: [		
 		{ code: "color", states: ["brown", "green"] },

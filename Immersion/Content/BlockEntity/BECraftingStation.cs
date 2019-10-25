@@ -6,7 +6,7 @@ using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    class BlockEntityCraftingStation : BlockEntityContainer, IBlockShapeSupplier
+    class BlockEntityCraftingStation : BlockEntityContainer
     {
         private bool action = true;
         internal InventoryGeneric inventory;
@@ -17,7 +17,7 @@ namespace Immersion
         public override InventoryBase Inventory { get => inventory; }
         public override string InventoryClassName { get => "choppingblock"; }
         
-        public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator) => true;
+        public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator) => true;
 
         public BlockEntityCraftingStation()
         {
@@ -27,13 +27,13 @@ namespace Immersion
             });
         }
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
-            block = pos.GetBlock(api) as BlockCraftingStation;
+            base.Initialize(Api);
+            block = Pos.GetBlock(Api) as BlockCraftingStation;
             props = block?.craftingProps;
-            util = new BlockEntityAnimationUtil(api, this);
-            if (api.Side.IsClient())
+            util = new BlockEntityAnimationUtil(Api, this);
+            if (Api.Side.IsClient())
             {
                 util.InitializeAnimators(new Vec3f(block.Shape.rotateX, block.Shape.rotateY, block.Shape.rotateZ), block.animProps.allAnims);
 
@@ -68,15 +68,15 @@ namespace Immersion
                     {
                         action = false;
                         inventory[0].TakeOut(val.input.StackSize);
-                        api.World.RegisterCallback(dt => action = true, val.craftTime);
+                        Api.World.RegisterCallback(dt => action = true, val.craftTime);
 
-                        world.SpawnItemEntity(val.output, pos.MidPoint());
+                        world.SpawnItemEntity(val.output, Pos.MidPoint());
 
-                        slot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
+                        slot.Itemstack.Collectible.DamageItem(Api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
 
                         (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemAttack);
                         (world as IServerWorldAccessor)?.PlaySoundAt(new AssetLocation(val.craftSound), blockSel.Position);
-                        (world as IServerWorldAccessor)?.SpawnCubeParticles(pos, pos.MidPoint(), 1, 32, 0.5f);
+                        (world as IServerWorldAccessor)?.SpawnCubeParticles(Pos, Pos.MidPoint(), 1, 32, 0.5f);
                         MarkDirty();
                         break;
                     }

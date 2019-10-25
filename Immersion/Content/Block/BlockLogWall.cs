@@ -16,6 +16,7 @@ namespace Immersion
     class BlockLogWall : Block
     {
         ICoreClientAPI capi;
+        ICoreAPI Api { get => this.api; }
         public string Wood { get => Variant["wood"]; }
         public string Key { get => FirstCodePart() + Wood; }
 
@@ -26,15 +27,15 @@ namespace Immersion
 
         WallSystem wallSystem;
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            capi = api as ICoreClientAPI;
-            base.OnLoaded(api);
-            wallSystem = api.ModLoader.GetModSystem<WallSystem>();
+            capi = Api as ICoreClientAPI;
+            base.OnLoaded(Api);
+            wallSystem = Api.ModLoader.GetModSystem<WallSystem>();
             if (!wallSystem.styles.ContainsKey(Key))
             {
                 WallStyle style = new WallStyle();
-                foreach (var val in api.World.Blocks)
+                foreach (var val in Api.World.Blocks)
                 {
                     BlockLogWall tmp = (val as BlockLogWall);
                     if (tmp?.Key == Key)
@@ -51,15 +52,15 @@ namespace Immersion
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            BlockEntityLogwall be = (blockSel.BlockEntity(api) as BlockEntityLogwall);
+            BlockEntityLogwall be = (blockSel.BlockEntity(Api) as BlockEntityLogwall);
             be?.OnInteract(world, byPlayer, blockSel);
             base.OnBlockInteractStart(world, byPlayer, blockSel);
             return true;
         }
 
-        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
+        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos Pos, IPlayer forPlayer)
         {
-            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer)).AppendLine();
+            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, Pos, forPlayer)).AppendLine();
             builder = capi.Settings.Bool["extendedDebugInfo"] ? builder.AppendLine("Code: " + Code.ToString()) : builder;
             return builder.ToString();
         }
@@ -93,10 +94,10 @@ namespace Immersion
 
     class WallSystem : ModSystem
     {
-        public override void Start(ICoreAPI api)
+        public override void Start(ICoreAPI Api)
         {
-            api.RegisterBlockClass("BlockLogWall", typeof(BlockLogWall));
-            api.RegisterBlockEntityClass("LogWall", typeof(BlockEntityLogwall));
+            Api.RegisterBlockClass("BlockLogWall", typeof(BlockLogWall));
+            Api.RegisterBlockEntityClass("LogWall", typeof(BlockEntityLogwall));
         }
 
         public Dictionary<string, WallStyle> styles = new Dictionary<string, WallStyle>();
@@ -104,13 +105,13 @@ namespace Immersion
 
     class BlockEntityLogwall : BlockEntity
     {
-        BlockLogWall OwnBlock { get => api.World.BlockAccessor.GetBlock(pos) as BlockLogWall; }
+        BlockLogWall OwnBlock { get => Api.World.BlockAccessor.GetBlock(Pos) as BlockLogWall; }
         WallIndexing indexing;
         bool interact = true;
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
+            base.Initialize(Api);
         }
 
         public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
@@ -131,7 +132,7 @@ namespace Immersion
             if (interact)
             {
                 interact = false;
-                WallSystem wallSystem = api.ModLoader.GetModSystem<WallSystem>();
+                WallSystem wallSystem = Api.ModLoader.GetModSystem<WallSystem>();
 
                 if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack?.Item?.Tool == EnumTool.Hammer)
                 {
@@ -150,10 +151,10 @@ namespace Immersion
                             if (vert != null) code = code.Apd(vert);
                             if (hor != null) code = code.Apd(hor);
 
-                            world.BlockAccessor.ExchangeBlock(code.ToBlock(api).Id, pos);
-                            world.PlaySoundAt(OwnBlock.Sounds.Place, pos);
-                            world.SpawnCubeParticles(pos, pos.MidPoint(), 2, 32);
-                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot);
+                            world.BlockAccessor.ExchangeBlock(code.ToBlock(Api).Id, Pos);
+                            world.PlaySoundAt(OwnBlock.Sounds.Place, Pos);
+                            world.SpawnCubeParticles(Pos, Pos.MidPoint(), 2, 32);
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(Api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot);
                         }
                     }
                     (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
@@ -165,13 +166,13 @@ namespace Immersion
                         while (true)
                         {
                             AssetLocation asset = OwnBlock.CodeWithPart(style.firstcodeparts.Next(ref indexing.rampIndex));
-                            Block nextBlock = asset.GetBlock(api);
+                            Block nextBlock = asset.GetBlock(Api);
                             if (nextBlock != null)
                             {
-                                world.BlockAccessor.ExchangeBlock(nextBlock.Id, pos);
-                                world.PlaySoundAt(OwnBlock.Sounds.Place, pos);
-                                world.SpawnCubeParticles(pos, pos.MidPoint(), 2, 32);
-                                byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot);
+                                world.BlockAccessor.ExchangeBlock(nextBlock.Id, Pos);
+                                world.PlaySoundAt(OwnBlock.Sounds.Place, Pos);
+                                world.SpawnCubeParticles(Pos, Pos.MidPoint(), 2, 32);
+                                byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(Api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot);
                                 break;
                             }
                         }

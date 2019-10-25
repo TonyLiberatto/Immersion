@@ -14,9 +14,9 @@ namespace Immersion
         public bool notslaughtering = true;
         DamageSource source = new DamageSource();
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
+            base.OnLoaded(Api);
             source.Source = EnumDamageSource.Player;
         }
 

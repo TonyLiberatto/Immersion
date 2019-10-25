@@ -14,9 +14,9 @@ namespace Immersion
         internal bool ShouldRender;
         internal bool ShouldRotate;
 
-        private ICoreClientAPI api;
-        private BlockPos pos;
+        private ICoreClientAPI Api;
 
+        public BlockPos Pos { get; private set; }
 
         MeshRef meshref;
         public Matrixf ModelMat = new Matrixf();
@@ -28,10 +28,10 @@ namespace Immersion
             get { return 0.5f; }
         }
 
-        public PestleRenderer(ICoreClientAPI coreClientAPI, BlockPos pos, MeshData mesh)
+        public PestleRenderer(ICoreClientAPI coreClientAPI, BlockPos Pos, MeshData mesh)
         {
-            api = coreClientAPI;
-            this.pos = pos;
+            Api = coreClientAPI;
+            this.Pos = Pos;
             MeshRef test = new MeshRef();
 
             meshref = coreClientAPI.Render.UploadMesh(mesh);
@@ -56,19 +56,19 @@ namespace Immersion
             if (meshref == null || !ShouldRender) return;
 
             
-            IRenderAPI rpi = api.Render;
-            Vec3d camPos = api.World.Player.Entity.CameraPos;
+            IRenderAPI rpi = Api.Render;
+            Vec3d camPos = Api.World.Player.Entity.CameraPos;
 
             rpi.GlDisableCullFace();
             rpi.GlToggleBlend(true);
 
-            IStandardShaderProgram prog = rpi.PreparedStandardShader(pos.X, pos.Y, pos.Z);
-            prog.Tex2D = api.BlockTextureAtlas.AtlasTextureIds[0];
+            IStandardShaderProgram prog = rpi.PreparedStandardShader(Pos.X, Pos.Y, Pos.Z);
+            prog.Tex2D = Api.BlockTextureAtlas.AtlasTextureIds[0];
 
 
             prog.ModelMatrix = ModelMat
                 .Identity()
-                .Translate(pos.X - camPos.X, pos.Y - camPos.Y, pos.Z - camPos.Z)
+                .Translate(Pos.X - camPos.X, Pos.Y - camPos.Y, Pos.Z - camPos.Z)
                 .Translate(0.5f, 11f / 16f, 0.5f)
                 .RotateY(Angle)
                 .Translate(-0.5f, 0, -0.5f)
@@ -87,7 +87,7 @@ namespace Immersion
             {
                 if (yb && yf <= 0.5f)
                 {
-                    float jl = Convert.ToSingle(api.World.Rand.NextDouble());
+                    float jl = Convert.ToSingle(Api.World.Rand.NextDouble());
                     xf += deltaTime * 0.02f;
                     yf += deltaTime * jl * 5.0f;
                     zf += deltaTime * 0.02f;
@@ -95,14 +95,14 @@ namespace Immersion
                 else
                 {
                     yb = false;
-                    if (dO && api.Side == EnumAppSide.Client) {
-                        api.World.PlaySoundAt(api.World.BlockAccessor.GetBlock(new AssetLocation("game:gravel-andesite")).Sounds.Break, pos.X, pos.Y, pos.Z);
+                    if (dO && Api.Side == EnumAppSide.Client) {
+                        Api.World.PlaySoundAt(Api.World.BlockAccessor.GetBlock(new AssetLocation("game:gravel-andesite")).Sounds.Break, Pos.X, Pos.Y, Pos.Z);
                         dO = false;
                     }
                 }
                 if (!yb && yf >= -0.2f)
                 {
-                    float jl = Convert.ToSingle(api.World.Rand.NextDouble());
+                    float jl = Convert.ToSingle(Api.World.Rand.NextDouble());
                     xf -= deltaTime * 0.04f;
                     yf -= deltaTime * jl * 10.0f;
                     zf -= deltaTime * 0.04f;
@@ -123,7 +123,7 @@ namespace Immersion
 
         internal void Unregister()
         {
-            api.Event.UnregisterRenderer(this, EnumRenderStage.Opaque);
+            Api.Event.UnregisterRenderer(this, EnumRenderStage.Opaque);
         }
 
         public void Dispose()

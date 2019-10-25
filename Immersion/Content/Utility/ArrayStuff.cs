@@ -30,31 +30,31 @@ namespace Immersion
             return array[index];
         }
 
-        public static Block GetBlock(this BlockPos pos, IWorldAccessor world) { return world.BlockAccessor.GetBlock(pos); }
-        public static Block GetBlock(this BlockPos pos, ICoreAPI api) { return pos.GetBlock(api.World); }
+        public static Block GetBlock(this BlockPos Pos, IWorldAccessor world) { return world.BlockAccessor.GetBlock(Pos); }
+        public static Block GetBlock(this BlockPos Pos, ICoreAPI Api) { return Pos.GetBlock(Api.World); }
 
-        public static Block GetBlock(this AssetLocation asset, ICoreAPI api)
+        public static Block GetBlock(this AssetLocation asset, ICoreAPI Api)
         {
-            if (api.World.BlockAccessor.GetBlock(asset) != null)
+            if (Api.World.BlockAccessor.GetBlock(asset) != null)
             {
-                return api.World.BlockAccessor.GetBlock(asset);
+                return Api.World.BlockAccessor.GetBlock(asset);
             }
             return null;
         }
 
-        public static Item GetItem(this AssetLocation asset, ICoreAPI api)
+        public static Item GetItem(this AssetLocation asset, ICoreAPI Api)
         {
-            if (api.World.GetItem(asset) != null)
+            if (Api.World.GetItem(asset) != null)
             {
-                return api.World.GetItem(asset);
+                return Api.World.GetItem(asset);
             }
             return null;
         }
 
         public static AssetLocation ToAsset(this string asset) { return new AssetLocation(asset); }
-        public static Block ToBlock(this string block, ICoreAPI api) => block.WithDomain().ToAsset().GetBlock(api);
-        public static Block Block(this BlockSelection sel, ICoreAPI api) => api.World.BlockAccessor.GetBlock(sel.Position);
-        public static BlockEntity BlockEntity(this BlockSelection sel, ICoreAPI api) => api.World.BlockAccessor.GetBlockEntity(sel.Position);
+        public static Block ToBlock(this string block, ICoreAPI Api) => block.WithDomain().ToAsset().GetBlock(Api);
+        public static Block Block(this BlockSelection sel, ICoreAPI Api) => Api.World.BlockAccessor.GetBlock(sel.Position);
+        public static BlockEntity BlockEntity(this BlockSelection sel, ICoreAPI Api) => Api.World.BlockAccessor.GetBlockEntity(sel.Position);
 
         public static AssetLocation[] ToAssets(this string[] strings)
         {
@@ -67,9 +67,9 @@ namespace Immersion
         }
         public static AssetLocation[] ToAssets(this List<string> strings) => strings.ToArray().ToAssets();
 
-        public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos pos, int delay)
+        public static void PlaySoundAtWithDelay(this IWorldAccessor world, AssetLocation location, BlockPos Pos, int delay)
         {
-            world.RegisterCallback(dt => world.PlaySoundAt(location, pos.X, pos.Y, pos.Z), delay);
+            world.RegisterCallback(dt => world.PlaySoundAt(location, Pos.X, Pos.Y, Pos.Z), delay);
         }
 
         public static T[] Stretch<T>(this T[] array, int amount)
@@ -118,8 +118,8 @@ namespace Immersion
         public static bool IsCreative(this EnumGameMode gamemode) => gamemode == EnumGameMode.Creative;
         public static bool IsSpectator(this EnumGameMode gamemode) => gamemode == EnumGameMode.Spectator;
         public static bool IsGuest(this EnumGameMode gamemode) => gamemode == EnumGameMode.Guest;
-        public static void PlaySoundAt(this IWorldAccessor world, AssetLocation loc, BlockPos pos) => world.PlaySoundAt(loc, pos.X, pos.Y, pos.Z);
-        public static int GetID(this AssetLocation loc, ICoreAPI api) => loc.GetBlock(api).BlockId;
+        public static void PlaySoundAt(this IWorldAccessor world, AssetLocation loc, BlockPos Pos) => world.PlaySoundAt(loc, Pos.X, Pos.Y, Pos.Z);
+        public static int GetID(this AssetLocation loc, ICoreAPI Api) => loc.GetBlock(Api).BlockId;
 
         public static string WithDomain(this string a) => a.IndexOf(":") == -1 ? "game:" + a : a;
 
@@ -132,7 +132,7 @@ namespace Immersion
             return a;
         }
 
-        public static Vec3d MidPoint(this BlockPos pos) => pos.ToVec3d().AddCopy(0.5, 0.5, 0.5);
+        public static Vec3d MidPoint(this BlockPos Pos) => Pos.ToVec3d().AddCopy(0.5, 0.5, 0.5);
 
         public static string Apd(this string a, string appended)
         {
@@ -144,30 +144,30 @@ namespace Immersion
             return a + "-" + appended;
         }
 
-        public static void SpawnItemEntity(this IWorldAccessor world, ItemStack[] stacks, Vec3d pos, Vec3d velocity = null)
+        public static void SpawnItemEntity(this IWorldAccessor world, ItemStack[] stacks, Vec3d Pos, Vec3d velocity = null)
         {
             foreach (ItemStack stack in stacks)
             {
-                world.SpawnItemEntity(stack, pos, velocity);
+                world.SpawnItemEntity(stack, Pos, velocity);
             }
         }
 
-        public static void SpawnItemEntity(this IWorldAccessor world, JsonItemStack[] stacks, Vec3d pos, Vec3d velocity = null)
+        public static void SpawnItemEntity(this IWorldAccessor world, JsonItemStack[] stacks, Vec3d Pos, Vec3d velocity = null)
         {
             foreach (JsonItemStack stack in stacks)
             {
                 string err = "";
                 stack.Resolve(world, err);
-                if (stack.ResolvedItemstack != null) world.SpawnItemEntity(stack.ResolvedItemstack, pos, velocity);
+                if (stack.ResolvedItemstack != null) world.SpawnItemEntity(stack.ResolvedItemstack, Pos, velocity);
             }
         }
 
-        public static BlockEntity BlockEntity(this BlockPos pos, IWorldAccessor world)
+        public static BlockEntity BlockEntity(this BlockPos Pos, IWorldAccessor world)
         {
-            return world.BlockAccessor.GetBlockEntity(pos);
+            return world.BlockAccessor.GetBlockEntity(Pos);
         }
 
-        public static BlockEntity BlockEntity(this BlockPos pos, ICoreAPI api) => pos.BlockEntity(api.World);
+        public static BlockEntity BlockEntity(this BlockPos Pos, ICoreAPI Api) => Pos.BlockEntity(Api.World);
 
         public static BlockEntity BlockEntity(this BlockSelection sel, IWorldAccessor world)
         {
@@ -204,9 +204,9 @@ namespace Immersion
             return manager.TryGiveItemstack(stacks.ResolvedStacks(manager.ActiveHotbarSlot.Inventory.Api.World));
         }
 
-        public static double DistanceTo(this SyncedEntityPos pos, Vec3d vec)
+        public static double DistanceTo(this SyncedEntityPos Pos, Vec3d vec)
         {
-            return Math.Sqrt(pos.SquareDistanceTo(vec));
+            return Math.Sqrt(Pos.SquareDistanceTo(vec));
         }
 
         public static bool WildCardMatch(this RegistryObject obj, string a) => obj.WildCardMatch(new AssetLocation(a));
@@ -229,15 +229,15 @@ namespace Immersion
             return field?.GetValue(instance);
         }
 
-        public static List<AssetLocation> GetMatches(this AssetLocation code, ICoreAPI api)
+        public static List<AssetLocation> GetMatches(this AssetLocation code, ICoreAPI Api)
         {
             List<AssetLocation> assets = new List<AssetLocation>();
-            foreach (var block in api.World.Blocks)
+            foreach (var block in Api.World.Blocks)
             {
                 if (block?.Code == null) continue;
                 if (block.WildCardMatch(code)) assets.Add(block.Code);
             }
-            foreach (var item in api.World.Items)
+            foreach (var item in Api.World.Items)
             {
                 if (item?.Code == null) continue;
                 if (item.WildCardMatch(code)) assets.Add(item.Code);
@@ -246,17 +246,17 @@ namespace Immersion
             return assets;
         }
 
-        public static bool WildCardMatch(this AssetLocation asset, AssetLocation match, EnumItemClass itemClass, ICoreAPI api)
+        public static bool WildCardMatch(this AssetLocation asset, AssetLocation match, EnumItemClass itemClass, ICoreAPI Api)
         {
             if (asset == null || match == null) return false;
 
             if (itemClass == EnumItemClass.Item)
             {
-                return asset.GetItem(api).WildCardMatch(match);
+                return asset.GetItem(Api).WildCardMatch(match);
             }
             else if(itemClass == EnumItemClass.Block)
             {
-                return asset.GetBlock(api).WildCardMatch(match);
+                return asset.GetBlock(Api).WildCardMatch(match);
             }
             return false;
         }

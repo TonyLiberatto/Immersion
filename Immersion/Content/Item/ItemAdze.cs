@@ -18,9 +18,9 @@ namespace Immersion
     }
     public class ItemChiselFix : ItemChisel
     {
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
+            base.OnLoaded(Api);
             canMicroChisel = true;
         }
     }

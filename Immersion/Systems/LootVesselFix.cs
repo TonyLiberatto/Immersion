@@ -10,10 +10,10 @@ namespace Immersion
 {
     class LootVesselFix : ModSystem
     {
-        public override void Start(ICoreAPI api)
+        public override void Start(ICoreAPI Api)
         {
             BlockLootVessel.lootLists.Clear();
-            VesselDrops drops = api.Assets.TryGet("config/vesseldrops.json").ToObject<VesselDrops>();
+            VesselDrops drops = Api.Assets.TryGet("config/vesseldrops.json").ToObject<VesselDrops>();
             foreach (var val in drops.vessels)
             {
                 BlockLootVessel.lootLists[val.name] = LootList.Create(val.tries, val.drops.ToArray());

@@ -11,7 +11,7 @@ using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    public class BEMortarAndPestle : BlockEntityOpenableContainer, IBlockShapeSupplier
+    public class BEMortarAndPestle : BlockEntityOpenableContainer
     {
         //static SimpleParticleProperties FlourParticles;
 
@@ -108,9 +108,9 @@ namespace Immersion
                     renderer.ShouldRotate = nowGrinding;
                 }
 
-                api.World.BlockAccessor.MarkBlockDirty(pos, OnRetesselated);
+                Api.World.BlockAccessor.MarkBlockDirty(Pos, OnRetesselated);
 
-                if (api.Side == EnumAppSide.Server)
+                if (Api.Side == EnumAppSide.Server)
                 {
                     MarkDirty();
                 }
@@ -124,10 +124,10 @@ namespace Immersion
             get
             {
                 object value = null;
-                api.ObjectCache.TryGetValue("quernbasemesh-" + Material, out value);
+                Api.ObjectCache.TryGetValue("quernbasemesh-" + Material, out value);
                 return (MeshData)value;
             }
-            set { api.ObjectCache["quernbasemesh-" + Material] = value; }
+            set { Api.ObjectCache["quernbasemesh-" + Material] = value; }
         }
 
         MeshData quernTopMesh
@@ -135,10 +135,10 @@ namespace Immersion
             get
             {
                 object value = null;
-                api.ObjectCache.TryGetValue("querntopmesh-" + Material, out value);
+                Api.ObjectCache.TryGetValue("querntopmesh-" + Material, out value);
                 return (MeshData)value;
             }
-            set { api.ObjectCache["querntopmesh-" + Material] = value; }
+            set { Api.ObjectCache["querntopmesh-" + Material] = value; }
         }
 
 
@@ -192,23 +192,23 @@ namespace Immersion
 
 
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
+            base.Initialize(Api);
 
-            ownBlock = api.World.BlockAccessor.GetBlock(pos);
+            ownBlock = Api.World.BlockAccessor.GetBlock(Pos);
 
-            inventory.LateInitialize("quern-1", api);
+            inventory.LateInitialize("quern-1", Api);
 
 
             RegisterGameTickListener(Every100ms, 100);
             RegisterGameTickListener(Every500ms, 500);
 
-            if (api is ICoreClientAPI)
+            if (Api is ICoreClientAPI)
             {
-                renderer = new PestleRenderer(api as ICoreClientAPI, pos, GenMesh("top"));
+                renderer = new PestleRenderer(Api as ICoreClientAPI, Pos, GenMesh("top"));
 
-                (api as ICoreClientAPI).Event.RegisterRenderer(renderer, EnumRenderStage.Opaque);
+                (Api as ICoreClientAPI).Event.RegisterRenderer(renderer, EnumRenderStage.Opaque);
 
                 if (quernBaseMesh == null)
                 {
@@ -225,7 +225,7 @@ namespace Immersion
 
         private void OnSlotModifid(int slotid)
         {
-            if (api is ICoreClientAPI && clientDialog != null)
+            if (Api is ICoreClientAPI && clientDialog != null)
             {
                 SetDialogValues(clientDialog.Attributes);
             }
@@ -245,14 +245,14 @@ namespace Immersion
 
         internal MeshData GenMesh(string type = "base")
         {
-            Block block = api.World.BlockAccessor.GetBlock(pos);
+            Block block = Api.World.BlockAccessor.GetBlock(Pos);
             if (block.BlockId == 0) return null;
 
 
             MeshData mesh;
-            ITesselatorAPI mesher = ((ICoreClientAPI)api).Tesselator;
+            ITesselatorAPI mesher = ((ICoreClientAPI)Api).Tesselator;
 
-            mesher.TesselateShape(block, api.Assets.TryGet("neolithicmod:shapes/block/wood/mortarandpestle/" + type + ".json").ToObject<Shape>(), out mesh);
+            mesher.TesselateShape(block, Api.Assets.TryGet("neolithicmod:shapes/block/wood/mortarandpestle/" + type + ".json").ToObject<Shape>(), out mesh);
 
             return mesh;
         }
@@ -260,23 +260,23 @@ namespace Immersion
 
         private void Every100ms(float dt)
         {
-            if (api.Side == EnumAppSide.Client)
+            if (Api.Side == EnumAppSide.Client)
             {
                 if (!IsGrinding || InputStack == null) return;
 
-                FlourDustParticles.color /*= FlourParticles.color*/ = InputStack.Collectible.GetRandomColor(api as ICoreClientAPI, InputStack);
+                FlourDustParticles.color /*= FlourParticles.color*/ = InputStack.Collectible.GetRandomColor(Api as ICoreClientAPI, InputStack);
                 FlourDustParticles.color &= 0xffffff;
                 FlourDustParticles.color |= (200 << 24);
 
-                //FlourParticles.minPos.Set(pos.X+0.5, pos.Y + 0.5, pos.Z+0.5);
-                FlourDustParticles.minPos.Set(pos.X + 0.5, pos.Y + 0.5, pos.Z + 0.5);
+                //FlourParticles.minPos.Set(Pos.X+0.5, Pos.Y + 0.5, Pos.Z+0.5);
+                FlourDustParticles.minPos.Set(Pos.X + 0.5, Pos.Y + 0.5, Pos.Z + 0.5);
 
 
                 FlourDustParticles.minVelocity.Set(-0.1f, 0, -0.1f);
                 FlourDustParticles.addVelocity.Set(0.2f, 0.2f, 0.2f);
 
-                //api.World.SpawnParticles(FlourParticles);
-                api.World.SpawnParticles(FlourDustParticles);
+                //Api.World.SpawnParticles(FlourParticles);
+                Api.World.SpawnParticles(FlourDustParticles);
 
                 return;
             }
@@ -321,7 +321,7 @@ namespace Immersion
         // Sync to client every 500ms
         private void Every500ms(float dt)
         {
-            if (api is ICoreServerAPI && (IsGrinding || prevInputGrindTime != inputGrindTime))
+            if (Api is ICoreServerAPI && (IsGrinding || prevInputGrindTime != inputGrindTime))
             {
                 MarkDirty();
             }
@@ -351,7 +351,7 @@ namespace Immersion
         {
             if (blockSel.SelectionBoxIndex == 1) return false;
 
-            if (api.World is IServerWorldAccessor)
+            if (Api.World is IServerWorldAccessor)
             {
                 byte[] data;
 
@@ -366,9 +366,9 @@ namespace Immersion
                     data = ms.ToArray();
                 }
 
-                ((ICoreServerAPI)api).Network.SendBlockEntityPacket(
+                ((ICoreServerAPI)Api).Network.SendBlockEntityPacket(
                     (IServerPlayer)byPlayer,
-                    pos.X, pos.Y, pos.Z,
+                    Pos.X, Pos.Y, Pos.Z,
                     (int)EnumBlockStovePacket.OpenGUI,
                     data
                 );
@@ -385,9 +385,9 @@ namespace Immersion
             base.FromTreeAtributes(tree, worldForResolving);
             Inventory.FromTreeAttributes(tree.GetTreeAttribute("inventory"));
 
-            if (api != null)
+            if (Api != null)
             {
-                Inventory.AfterBlocksLoaded(api.World);
+                Inventory.AfterBlocksLoaded(Api.World);
             }
 
 
@@ -423,7 +423,7 @@ namespace Immersion
                 updateGrindingState(wasGrinding);
             }
 
-            if (api?.Side == EnumAppSide.Client && clientDialog != null)
+            if (Api?.Side == EnumAppSide.Client && clientDialog != null)
             {
                 SetDialogValues(clientDialog.Attributes);
             }
@@ -476,7 +476,7 @@ namespace Immersion
                 Inventory.InvNetworkUtil.HandleClientPacket(player, packetid, data);
 
                 // Tell server to save this chunk to disk again
-                api.World.BlockAccessor.GetChunkAtBlockPos(pos.X, pos.Y, pos.Z).MarkModified();
+                Api.World.BlockAccessor.GetChunkAtBlockPos(Pos.X, Pos.Y, Pos.Z).MarkModified();
 
                 return;
             }
@@ -503,10 +503,10 @@ namespace Immersion
                     treeAttribute.FromBytes(stream);
                     Inventory.FromTreeAttributes(treeAttribute);
                     Inventory.ResolveBlocksOrItems();
-                    IClientWorldAccessor world = (IClientWorldAccessor)api.World;
+                    IClientWorldAccessor world = (IClientWorldAccessor)Api.World;
                     SyncedTreeAttribute tree = new SyncedTreeAttribute();
                     SetDialogValues(tree);
-                    clientDialog = new GuiDialogBlockEntityQuern(DialogTitle, Inventory, pos, tree, api as ICoreClientAPI);
+                    clientDialog = new GuiDialogBlockEntityQuern(DialogTitle, Inventory, Pos, tree, Api as ICoreClientAPI);
                     clientDialog.TryOpen();
                     clientDialog.OnClosed += (Vintagestory.API.Common.Action)(() => clientDialog = null);
                 }
@@ -514,7 +514,7 @@ namespace Immersion
 
             if (packetid == (int)EnumBlockContainerPacketId.CloseInventory)
             {
-                IClientWorldAccessor clientWorld = (IClientWorldAccessor)api.World;
+                IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
                 clientWorld.Player.InventoryManager.CloseInventory(Inventory);
             }
         }
@@ -595,7 +595,7 @@ namespace Immersion
 
 
 
-        public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tesselator)
+        public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tesselator)
         {
             if (ownBlock == null) return false;
             string direc = ownBlock.Variant["side"];

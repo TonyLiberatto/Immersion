@@ -31,11 +31,11 @@ namespace Immersion
         double totalHoursTillGrowth;
         long growListenerId;
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
+            base.Initialize(Api);
 
-            if (api is ICoreServerAPI)
+            if (Api is ICoreServerAPI)
             {
                 growListenerId = RegisterGameTickListener(OurCheckGrow, 2000);
             }
@@ -44,41 +44,41 @@ namespace Immersion
 
         public override void OnBlockPlaced(ItemStack byItemStack = null)
         {
-            totalHoursTillGrowth = api.World.Calendar.TotalHours + (5 + 3 * rand.NextDouble()) * 24;
+            totalHoursTillGrowth = Api.World.Calendar.TotalHours + (5 + 3 * rand.NextDouble()) * 24;
 
         }
 
 
         private void OurCheckGrow(float dt)
         {
-            if (api.World.Calendar.TotalHours < totalHoursTillGrowth) return;
+            if (Api.World.Calendar.TotalHours < totalHoursTillGrowth) return;
 
 
-            string treeCode = api.World.BlockAccessor.GetBlock(pos).Variant["wood"];
+            string treeCode = Api.World.BlockAccessor.GetBlock(Pos).Variant["wood"];
 
             string treeGenCode = null;
             if (!FixedTreeGenMapping.TryGetValue(treeCode, out treeGenCode))
             {
-                api.Event.UnregisterGameTickListener(growListenerId);
+                Api.Event.UnregisterGameTickListener(growListenerId);
                 return;
             }
 
             AssetLocation code = new AssetLocation(treeGenCode);
-            ICoreServerAPI sapi = api as ICoreServerAPI;
+            ICoreServerAPI sapi = Api as ICoreServerAPI;
 
             ITreeGenerator gen = null;
             if (!sapi.World.TreeGenerators.TryGetValue(code, out gen))
             {
-                api.Event.UnregisterGameTickListener(growListenerId);
+                Api.Event.UnregisterGameTickListener(growListenerId);
                 return;
             }
 
-            api.World.BlockAccessor.SetBlock(0, pos);
-            api.World.BulkBlockAccessor.ReadFromStagedByDefault = true;
-            float size = 0.6f + (float)api.World.Rand.NextDouble() * 0.5f;
-            sapi.World.TreeGenerators[code].GrowTree(api.World.BulkBlockAccessor, pos.DownCopy(), size);
+            Api.World.BlockAccessor.SetBlock(0, Pos);
+            Api.World.BulkBlockAccessor.ReadFromStagedByDefault = true;
+            float size = 0.6f + (float)Api.World.Rand.NextDouble() * 0.5f;
+            sapi.World.TreeGenerators[code].GrowTree(Api.World.BulkBlockAccessor, Pos.DownCopy(), size);
 
-            api.World.BulkBlockAccessor.Commit();
+            Api.World.BulkBlockAccessor.Commit();
         }
 
 

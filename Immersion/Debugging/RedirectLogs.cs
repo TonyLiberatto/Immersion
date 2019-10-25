@@ -16,9 +16,9 @@ namespace VSModLauncher
             return true;
         }
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            api.Server.Logger.EntryAdded += OnServerLogEntry;
+            Api.Server.Logger.EntryAdded += OnServerLogEntry;
         }
 
         private void OnServerLogEntry(EnumLogType logType, string message, params object[] args)
@@ -27,9 +27,9 @@ namespace VSModLauncher
             System.Diagnostics.Debug.WriteLine("[Server " + logType + "] " + message, args);
         }
 
-        public override void StartClientSide(ICoreClientAPI api)
+        public override void StartClientSide(ICoreClientAPI Api)
         {
-            api.World.Logger.EntryAdded += OnClientLogEntry;
+            Api.World.Logger.EntryAdded += OnClientLogEntry;
         }
 
         private void OnClientLogEntry(EnumLogType logType, string message, params object[] args)

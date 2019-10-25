@@ -11,32 +11,32 @@ namespace Immersion
     public class BEScary : BlockEntityTransient, IPointOfInterest
     {
 
-        public Vec3d Position => pos.ToVec3d().Add(0.5,0.5,0.5);
+        public Vec3d Position => Pos.ToVec3d().Add(0.5,0.5,0.5);
         public string Type => "scary";
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
-            if (api.Side == EnumAppSide.Server)
+            base.Initialize(Api);
+            if (Api.Side == EnumAppSide.Server)
             {
-                //api.World.Logger.Notification("AddedPOI");
-                api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
+                //Api.World.Logger.Notification("AddedPOI");
+                Api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
             }
         }
 
         public override void OnBlockRemoved()
         {
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
             }
         }
 
         public override void OnBlockUnloaded()
         {
             base.OnBlockUnloaded();
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
             }
         }
     }

@@ -13,7 +13,8 @@ namespace Immersion
 {
     class BlockNeolithicRoads : Block
     {
-		public string[] types = new string[] { "circle", "fish", "cobble", "bricks", "tightbricks", "squares", "tightsquares", "largesquare", "flat" };
+        ICoreAPI Api { get => this.api; }
+        public string[] types = new string[] { "circle", "fish", "cobble", "bricks", "tightbricks", "squares", "tightsquares", "largesquare", "flat" };
 
 		public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
@@ -54,8 +55,8 @@ namespace Immersion
                         uint index = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BENeolithicRoads).index;
                         Block nextBlock;
 
-                        if (byPlayer.Entity.Controls.Sneak) nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Prev(ref index)).GetBlock(api);
-                        else nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock(api);
+                        if (byPlayer.Entity.Controls.Sneak) nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Prev(ref index)).GetBlock(Api);
+                        else nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock(Api);
 
                         if (nextBlock == null) return;
                         (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BENeolithicRoads).index = index;

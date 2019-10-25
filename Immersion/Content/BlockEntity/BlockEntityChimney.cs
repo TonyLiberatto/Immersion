@@ -14,9 +14,9 @@ namespace Immersion
         Block ownBlock;
         int searchRadius;
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            ownBlock = api.World.BlockAccessor.GetBlock(pos) as Block;
+            ownBlock = Api.World.BlockAccessor.GetBlock(Pos) as Block;
             if (lookFor == null)
             {
                 lookFor = ownBlock.Attributes["lookFor"].AsObject<AssetLocation[][]>();
@@ -24,37 +24,37 @@ namespace Immersion
 
             searchRadius = ownBlock.Attributes["searchRadius"].AsInt();
 
-            if (api.World is IClientWorldAccessor)
+            if (Api.World is IClientWorldAccessor)
             {
-                listenerId = api.World.RegisterGameTickListener(ticker, 5000);
+                listenerId = Api.World.RegisterGameTickListener(ticker, 5000);
             }
-            base.Initialize(api);
+            base.Initialize(Api);
         }
 
         public override void OnBlockRemoved()
         {
-            api.World.UnregisterGameTickListener(listenerId);
+            Api.World.UnregisterGameTickListener(listenerId);
             base.OnBlockRemoved();
         }
 
         public void ticker(float dt)
         {
-            checkBelow(pos, api);
+            checkBelow(Pos, Api);
         }
 
-        public void checkBelow(BlockPos pos, ICoreAPI api)
+        public void checkBelow(BlockPos Pos, ICoreAPI Api)
         {
             bool exists = false;
             Block check;
             foreach (var val in lookFor)
             {
-                for (int y = 1; y < pos.Y; y++)
+                for (int y = 1; y < Pos.Y; y++)
                 {
                     for (int x = -searchRadius; x <= searchRadius; x++)
                     {
                         for (int z = -searchRadius; z <= searchRadius; z++)
                         {
-                            check = api.World.BlockAccessor.GetBlock(pos + new BlockPos(x, -y, z));
+                            check = Api.World.BlockAccessor.GetBlock(Pos + new BlockPos(x, -y, z));
                             if (new ItemStack(check).Collectible.WildCardMatch(val[0]))
                             {
                                 exists = true;
@@ -63,15 +63,15 @@ namespace Immersion
                         }
                     }
                 }
-                check = api.World.BlockAccessor.GetBlock(pos);
+                check = Api.World.BlockAccessor.GetBlock(Pos);
                 if (exists && new ItemStack(check).Collectible.WildCardMatch(val[1]))
                 {
-                    api.World.BlockAccessor.SetBlock(api.World.GetBlock(val[2]).BlockId, pos);
+                    Api.World.BlockAccessor.SetBlock(Api.World.GetBlock(val[2]).BlockId, Pos);
                     break;
                 }
                 if (!exists && new ItemStack(check).Collectible.WildCardMatch(val[2]))
                 {
-                    api.World.BlockAccessor.SetBlock(api.World.GetBlock(val[1]).BlockId, pos);
+                    Api.World.BlockAccessor.SetBlock(Api.World.GetBlock(val[1]).BlockId, Pos);
                     break;
                 }
             }

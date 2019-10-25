@@ -18,32 +18,32 @@ namespace Immersion
 {
     class GenDeepOreBits : ModStdWorldGen
     {
-        ICoreServerAPI api;
+        ICoreServerAPI Api;
         public override bool ShouldLoad(EnumAppSide side) => side == EnumAppSide.Server;
         public override double ExecuteOrder() => 0.9;
         LCGRandom rnd;
         IWorldGenBlockAccessor bA;
         Dictionary<int, int> surfaceBlocks = new Dictionary<int, int>();
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            this.api = api;
+            this.Api = Api;
             if (DoDecorationPass)
             {
-                foreach (var block in api.World.Blocks)
+                foreach (var block in Api.World.Blocks)
                 {
                     if (block is BlockOre)
                     {
-                        int? id = api.World.BlockAccessor.GetBlock(new AssetLocation("looseores".Apd(block.Variant["type"]).Apd(block.Variant["rock"])))?.Id;
+                        int? id = Api.World.BlockAccessor.GetBlock(new AssetLocation("looseores".Apd(block.Variant["type"]).Apd(block.Variant["rock"])))?.Id;
                         if (id != null)
                         {
                             surfaceBlocks.Add(block.Id, (int)id);
                         }
                     }
                 }
-                api.Event.InitWorldGenerator(InitWorldGen, "standard");
-                api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
-                api.Event.GetWorldgenBlockAccessor(c => bA = c.GetBlockAccessor(true));
+                Api.Event.InitWorldGenerator(InitWorldGen, "standard");
+                Api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
+                Api.Event.GetWorldgenBlockAccessor(c => bA = c.GetBlockAccessor(true));
             }
         }
 
@@ -95,8 +95,8 @@ namespace Immersion
 
         public void InitWorldGen()
         {
-            LoadGlobalConfig(api);
-            rnd = new LCGRandom(api.WorldManager.Seed);
+            LoadGlobalConfig(Api);
+            rnd = new LCGRandom(Api.WorldManager.Seed);
         }
     }
 }

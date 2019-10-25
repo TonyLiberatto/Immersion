@@ -5,5 +5,5 @@
 	},
 	width: 1,
 	height: 1,
-	output: { type: "block", code: "neolithicmod:attachment-industrial-east-up", quantity: 1 } 
+	output: { type: "block", code: "immersion:attachment-industrial-east-up", quantity: 1 } 
 }

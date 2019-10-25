@@ -1,10 +1,10 @@
 {
 	ingredientPattern: "P,B",
 	ingredients: {
-		"P": { type: "block", code: "neolithicmod:post-*" },
+		"P": { type: "block", code: "immersion:post-*" },
 		"B": { type: "item", code: "game:burnedbrick-*", quantity: 4 }
 	},
 	width: 1,
 	height: 2,
-	output: { type: "block", code: "neolithicmod:base", quantity: 1 } 
+	output: { type: "block", code: "immersion:base", quantity: 1 } 
 }

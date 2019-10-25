@@ -2,7 +2,7 @@
 	ingredientPattern: "K	P",
 	ingredients: {
 		"K": { type: "item", code: "game:knife-*", isTool: true  },
-		"P": { type: "block", code: "neolithicmod:boarrug-*" , quantity:1, isTool: false}
+		"P": { type: "block", code: "immersion:boarrug-*" , quantity:1, isTool: false}
 	},
 	width: 1,
 	height: 2,

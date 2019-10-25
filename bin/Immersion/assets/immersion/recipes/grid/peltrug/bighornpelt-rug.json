@@ -2,11 +2,11 @@
 	ingredientPattern: "K	P",
 	ingredients: {
 		"K": { type: "item", code: "game:knife-*", isTool: true  },
-		"P": { type: "block", code: "neolithicmod:bighornpelt-*" , quantity:1,
-		returnedStack: { type: "block", code: "neolithicmod:bighornrug-ground-east", quantity: 1 }}
+		"P": { type: "block", code: "immersion:bighornpelt-*" , quantity:1,
+		returnedStack: { type: "block", code: "immersion:bighornrug-ground-east", quantity: 1 }}
 	},
 	width: 1,
 	height: 2,
 	shapeless: false,
-	output: { type: "item", code: "neolithicmod:animal-leatherstrips", quantity: 4 }
+	output: { type: "item", code: "immersion:animal-leatherstrips", quantity: 4 }
 }

@@ -19,9 +19,9 @@ namespace Immersion
     {
         public DryingProp[] props;
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
+            base.OnLoaded(Api);
             props = Attributes["dryingprops"].AsObject<DryingProp[]>();
         }
 
@@ -32,10 +32,10 @@ namespace Immersion
             return true;
         }
 
-        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos pos, IPlayer forPlayer)
+        public override string GetPlacedBlockInfo(IWorldAccessor world, BlockPos Pos, IPlayer forPlayer)
         {
-            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, pos, forPlayer));
-            BlockEntityDryingStation craftingStation = (pos.BlockEntity(world) as BlockEntityDryingStation);
+            StringBuilder builder = new StringBuilder(base.GetPlacedBlockInfo(world, Pos, forPlayer));
+            BlockEntityDryingStation craftingStation = (Pos.BlockEntity(world) as BlockEntityDryingStation);
             ItemStack stack = craftingStation?.inventory?[0]?.Itemstack;
             builder = stack != null ? builder.AppendLine().AppendLine(stack.StackSize + "x " +
                 Lang.Get("incontainer-" + stack.Class.ToString().ToLowerInvariant() + "-" + stack.Collectible.Code.Path)) : builder;
@@ -43,9 +43,9 @@ namespace Immersion
         }
     }
 
-    class BlockEntityDryingStation : BlockEntityContainer, IBlockShapeSupplier
+    class BlockEntityDryingStation : BlockEntityContainer
     {
-        public Block block { get => api.World.BlockAccessor.GetBlock(pos); }
+        public Block block { get => Api.World.BlockAccessor.GetBlock(Pos); }
 
         internal InventoryGeneric inventory;
         public override InventoryBase Inventory { get => inventory; }
@@ -62,16 +62,16 @@ namespace Immersion
             });
         }
 
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
-            props = (pos.GetBlock(api) as BlockDryingStation)?.props;
+            base.Initialize(Api);
+            props = (Pos.GetBlock(Api) as BlockDryingStation)?.props;
 
             RegisterGameTickListener(dt =>
             {
-                if (api?.World?.Side.IsClient() ?? false)
+                if (Api?.World?.Side.IsClient() ?? false)
                 {
-                    ICoreClientAPI capi = api as ICoreClientAPI;
+                    ICoreClientAPI capi = Api as ICoreClientAPI;
                     float? translateY = (((float?)inventory[0].Itemstack?.StackSize / inventory[0].Itemstack?.Collectible?.MaxStackSize) * 0.35f) + 0.01f;
                     float y = translateY ?? 0;
 
@@ -86,9 +86,9 @@ namespace Immersion
                             fillPlane.Rotate(new Vec3f(0, 0, 0), GameMath.DEG2RAD * -90, 0, 0).Translate(0.05f, y, 0.95f);
                             TextureAtlasPosition texPos = new TextureAtlasPosition();
 
-                            texPos = val.TextureSource.Type == EnumItemClass.Block ? capi.BlockTextureAtlas.GetPosition(val.TextureSource.Code.GetBlock(api), "up")
-                            : capi.ItemTextureAtlas.GetPosition(val.TextureSource.Code.GetItem(api));
-                            if ((bool)val.TextureSource.Code.GetBlock(api).ShapeHasWaterTint) fillPlane.AddTintIndex(2);
+                            texPos = val.TextureSource.Type == EnumItemClass.Block ? capi.BlockTextureAtlas.GetPosition(val.TextureSource.Code.GetBlock(Api), "up")
+                            : capi.ItemTextureAtlas.GetPosition(val.TextureSource.Code.GetItem(Api));
+                            if ((bool)val.TextureSource.Code.GetBlock(Api).ShapeHasWaterTint) fillPlane.AddTintIndex(2);
                             fillPlane.SetUv(texPos);
                             mesh.AddMeshData(fillPlane);
                             break;
@@ -97,17 +97,17 @@ namespace Immersion
                     MarkDirty(true);
 
                 }
-                else if (api?.World?.Side.IsServer() ?? false)
+                else if (Api?.World?.Side.IsServer() ?? false)
                 {
                     foreach (var val in props)
                     {
                         if (val?.Input?.Code == null) continue;
                         if (inventory[0]?.Itemstack?.Collectible?.Code?.ToString() == val.Input.Code.ToString() && val.Output != null)
                         {
-                            if (api.World.Calendar.TotalHours > timeWhenDone && timeWhenDone != 0)
+                            if (Api.World.Calendar.TotalHours > timeWhenDone && timeWhenDone != 0)
                             {
                                 timeWhenDone = 0;
-                                ItemStack tmpStack = val.Output.Type == EnumItemClass.Block ? new ItemStack(val.Output.Code.GetBlock(api)) : new ItemStack(val.Output.Code.GetItem(api));
+                                ItemStack tmpStack = val.Output.Type == EnumItemClass.Block ? new ItemStack(val.Output.Code.GetBlock(Api)) : new ItemStack(val.Output.Code.GetItem(Api));
                                 tmpStack.StackSize = inventory[0].Itemstack.StackSize * val.Output.StackSize;
                                 inventory[0].Itemstack = tmpStack;
                                 inventory.MarkSlotDirty(0);
@@ -115,7 +115,7 @@ namespace Immersion
                             }
                             else
                             {
-                                timeWhenDone = api.World.Calendar.TotalHours + (double)val.DryingTime;
+                                timeWhenDone = Api.World.Calendar.TotalHours + (double)val.DryingTime;
                             }
                             break;
                         }
@@ -136,7 +136,7 @@ namespace Immersion
             base.ToTreeAttributes(tree);
         }
 
-        public bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
+        public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
             mesher.AddMeshData(mesh);
             return true;

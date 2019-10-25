@@ -26,16 +26,16 @@ namespace Immersion
 
         public string[] orthoShaderKeys;
 
-        public override void StartClientSide(ICoreClientAPI api)
+        public override void StartClientSide(ICoreClientAPI Api)
         {
-            capi = api;
+            capi = Api;
 
-            id = api.Event.RegisterGameTickListener(dt =>
+            id = Api.Event.RegisterGameTickListener(dt =>
             {
                 if (capi.World.Player?.Entity != null)
                 {
                     StartShade(capi.World.Player);
-                    api.Event.UnregisterGameTickListener(id);
+                    Api.Event.UnregisterGameTickListener(id);
                 }
             }, 500);
         }
@@ -118,27 +118,27 @@ namespace Immersion
         public float[] GetFloats()
         {
             IPlayer player = capi.World.Player;
-            BlockPos pos = capi.World.Player.Entity.Pos.AsBlockPos;
+            BlockPos Pos = capi.World.Player.Entity.Pos.AsBlockPos;
             BlockPos lPos = player.CurrentBlockSelection != null ? player.CurrentBlockSelection.Position : new BlockPos(0, -1, 0);
             return new float[]
             {
                 (float)capi.World.Calendar.MoonPhaseExact,
-                capi.World.BlockAccessor.GetClimateAt(pos).Temperature,
-                capi.World.BlockAccessor.GetClimateAt(pos).Rainfall,
+                capi.World.BlockAccessor.GetClimateAt(Pos).Temperature,
+                capi.World.BlockAccessor.GetClimateAt(Pos).Rainfall,
                 (float)healthTree.TryGetFloat("currenthealth"),
                 (float)healthTree.TryGetFloat("maxhealth"),
                 player.InventoryManager.ActiveHotbarSlot.Itemstack != null ? player.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Id : -1,
                 capi.World.BlockAccessor.GetBlock(lPos).Id,
                 player.CurrentEntitySelection != null ? player.CurrentEntitySelection.Entity.EntityId : -1,
                 player.InventoryManager.ActiveTool != null ? (float)player.InventoryManager.ActiveTool : -1,
-                (capi.World.BlockAccessor.GetClimateAt(pos).Temperature + 50.0f) * 0.01f,
+                (capi.World.BlockAccessor.GetClimateAt(Pos).Temperature + 50.0f) * 0.01f,
             };
         }
 
         public Vec3f[] GetVec3s()
         {
             IPlayer player = capi.World.Player;
-            BlockPos pos = capi.World.Player.Entity.Pos.AsBlockPos;
+            BlockPos Pos = capi.World.Player.Entity.Pos.AsBlockPos;
             BlockPos lPos = player.CurrentBlockSelection != null ? player.CurrentBlockSelection.Position : new BlockPos(0, -1, 0);
             return new Vec3f[]
             {
@@ -164,10 +164,10 @@ namespace Immersion
 
         public int RenderRange => 1;
 
-        public OrthoRenderer(ICoreClientAPI api, IShaderProgram prog)
+        public OrthoRenderer(ICoreClientAPI Api, IShaderProgram prog)
         {
             this.prog = prog;
-            capi = api;
+            capi = Api;
 
             MeshData quadMesh = QuadMeshUtil.GetCustomQuadModelData(-1, -1, 0, 2, 2);
             quadMesh.Rgba = null;
@@ -180,7 +180,7 @@ namespace Immersion
         {
             if (prog.Disposed) return;
 
-            BlockPos pos = capi.World.Player.Entity.Pos.AsBlockPos;
+            BlockPos Pos = capi.World.Player.Entity.Pos.AsBlockPos;
             IShaderProgram curShader = capi.Render.CurrentActiveShader;
             curShader.Stop();
 

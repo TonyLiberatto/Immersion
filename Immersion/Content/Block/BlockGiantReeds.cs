@@ -8,13 +8,13 @@ namespace Immersion
 {
     public class BlockGiantReeds : BlockReeds
     {
-        public bool CanPlantStay(IBlockAccessor blockAccessor, BlockPos pos)
+        public bool CanPlantStay(IBlockAccessor blockAccessor, BlockPos Pos)
         {
-            Block block = blockAccessor.GetBlock(pos.DownCopy());
+            Block block = blockAccessor.GetBlock(Pos.DownCopy());
             return block.Fertility > 0 || (Attributes?["stackable"]?.AsBool() == true && block.Attributes?["stackable"]?.AsBool() == true && block is BlockGiantReeds);
         }
 
-        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
+        public override void OnBlockBroken(IWorldAccessor world, BlockPos Pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
         {
             if (world.Side == EnumAppSide.Server && (byPlayer == null || byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative))
             {
@@ -29,22 +29,22 @@ namespace Immersion
                 }
                 if (drop != null)
                 {
-                    world.SpawnItemEntity(drop, new Vec3d(pos.X + 0.5, pos.Y + 0.5, pos.Z + 0.5), null);
+                    world.SpawnItemEntity(drop, new Vec3d(Pos.X + 0.5, Pos.Y + 0.5, Pos.Z + 0.5), null);
                 }
             }
             if (byPlayer != null && Variant["state"] == "normal" && byPlayer.InventoryManager.ActiveTool == EnumTool.Knife)
             {
-                world.BlockAccessor.SetBlock(world.GetBlock(CodeWithParts("harvested")).BlockId, pos);
+                world.BlockAccessor.SetBlock(world.GetBlock(CodeWithParts("harvested")).BlockId, Pos);
                 return;
             }
 
             if (Variant["habitat"] != "free")
             {
-                world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("water-still-7")).BlockId, pos);
+                world.BlockAccessor.SetBlock(world.GetBlock(new AssetLocation("water-still-7")).BlockId, Pos);
             }
             else
             {
-                world.BlockAccessor.SetBlock(0, pos);
+                world.BlockAccessor.SetBlock(0, Pos);
             }
         }
     }

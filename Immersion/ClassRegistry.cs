@@ -21,11 +21,11 @@ namespace Immersion
 
         public void RegisterEntityBehaviors()
         {
-            api.RegisterEntityBehaviorClass("milkable", typeof(BehaviorMilkable));
-            api.RegisterEntityBehaviorClass("slaughterable", typeof(BehaviorSlaughterable));
-            api.RegisterEntityBehaviorClass("featherpluck", typeof(BehaviorFeatherPluck));
-            api.RegisterEntityBehaviorClass("damagenotify", typeof(BehaviorNotifyHerdOfDamage));
-            api.RegisterEntityBehaviorClass("portiongrow", typeof(BehaviorPortionGrow));
+            Api.RegisterEntityBehaviorClass("milkable", typeof(BehaviorMilkable));
+            Api.RegisterEntityBehaviorClass("slaughterable", typeof(BehaviorSlaughterable));
+            Api.RegisterEntityBehaviorClass("featherpluck", typeof(BehaviorFeatherPluck));
+            Api.RegisterEntityBehaviorClass("damagenotify", typeof(BehaviorNotifyHerdOfDamage));
+            Api.RegisterEntityBehaviorClass("portiongrow", typeof(BehaviorPortionGrow));
         }
 
         public void RegisterAiTasks()
@@ -36,52 +36,51 @@ namespace Immersion
 
         public void RegisterBlockEntities()
         {
-            api.RegisterBlockEntityClass("NeolithicTransient", typeof(NeolithicTransient));
-            api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
-            api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
-            api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
-            api.RegisterBlockEntityClass("BucketB", typeof(BEBucketOverride));
-            api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
-            api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));
-            api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
-            api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
-            api.RegisterBlockEntityClass("Stairs", typeof(BlockEntityStairs));
+            Api.RegisterBlockEntityClass("NeolithicTransient", typeof(NeolithicTransient));
+            Api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
+            Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
+            Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
+            Api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
+            Api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));
+            Api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
+            Api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
+            Api.RegisterBlockEntityClass("Stairs", typeof(BlockEntityStairs));
         }
 
         public void RegisterItems()
         {
-            api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
-            api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
-            api.RegisterItemClass("ItemAdze", typeof(ItemAdze));            
-            api.RegisterItemClass("ItemChisel", typeof(ItemChiselFix));
-            api.RegisterItemClass("ItemSwapBlocks", typeof(ItemSwapBlocks));
-            api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
+            Api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
+            Api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
+            Api.RegisterItemClass("ItemAdze", typeof(ItemAdze));            
+            Api.RegisterItemClass("ItemChisel", typeof(ItemChiselFix));
+            Api.RegisterItemClass("ItemSwapBlocks", typeof(ItemSwapBlocks));
+            Api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
         }
 
         public void RegisterBlocks()
         {
-            api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
-            api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
-            api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
-            api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockNeolithicRoads));
-            api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified)); //
-            api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
-            api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));
-            api.RegisterBlockClass("BlockToolMold", typeof(BlockToolMoldReturnBlock)); //
-            api.RegisterBlockClass("BlockCraftingStation", typeof(BlockCraftingStation));
-            api.RegisterBlockClass("BlockDryingStation", typeof(BlockDryingStation));
-            api.RegisterBlockClass("BlockSeaweed", typeof(BlockSeaweedOverride)); //
-            api.RegisterBlockClass("BlockPalmTree", typeof(BlockPalmTree));
+            Api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
+            Api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
+            Api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
+            Api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockNeolithicRoads));
+            Api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified)); //
+            Api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
+            Api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));
+            Api.RegisterBlockClass("BlockToolMold", typeof(BlockToolMoldReturnBlock)); //
+            Api.RegisterBlockClass("BlockCraftingStation", typeof(BlockCraftingStation));
+            Api.RegisterBlockClass("BlockDryingStation", typeof(BlockDryingStation));
+            Api.RegisterBlockClass("BlockSeaweed", typeof(BlockSeaweedOverride)); //
+            Api.RegisterBlockClass("BlockPalmTree", typeof(BlockPalmTree));
         }
 
         public void RegisterBlockBehaviors()
         {
-            api.RegisterBlockBehaviorClass("BlockCreateBehavior", typeof(BlockCreateBehavior));
-            api.RegisterBlockBehaviorClass("BlockSwapBehavior", typeof(BlockSwapBehavior));
-            api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
-            api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
-            api.RegisterBlockBehaviorClass("RotateNinety", typeof(RotateNinety));
-            api.RegisterBlockBehaviorClass("ChimneyBehavior", typeof(ChimneyBehavior));
+            Api.RegisterBlockBehaviorClass("BlockCreateBehavior", typeof(BlockCreateBehavior));
+            Api.RegisterBlockBehaviorClass("BlockSwapBehavior", typeof(BlockSwapBehavior));
+            Api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
+            Api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
+            Api.RegisterBlockBehaviorClass("RotateNinety", typeof(RotateNinety));
+            Api.RegisterBlockBehaviorClass("ChimneyBehavior", typeof(ChimneyBehavior));
         }
     }
 }

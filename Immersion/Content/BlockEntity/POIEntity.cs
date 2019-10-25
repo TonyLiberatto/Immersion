@@ -10,30 +10,30 @@ namespace Immersion
 
     public class POIEntity : BlockEntity, IPointOfInterest
     {
-        public Vec3d Position => pos.ToVec3d().Add(0.5, 0.5, 0.5);
+        public Vec3d Position => Pos.ToVec3d().Add(0.5, 0.5, 0.5);
         public string Type => "genericpoi";
-        public override void Initialize(ICoreAPI api)
+        public override void Initialize(ICoreAPI Api)
         {
-            base.Initialize(api);
-            if (api.Side == EnumAppSide.Server)
+            base.Initialize(Api);
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
             }
         }
 
         public override void OnBlockRemoved()
         {
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
             }
         }
 
         public override void OnBlockUnloaded()
         {
-            if (api.Side == EnumAppSide.Server)
+            if (Api.Side == EnumAppSide.Server)
             {
-                api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
             }
         }
     }

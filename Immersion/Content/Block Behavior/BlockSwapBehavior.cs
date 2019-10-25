@@ -25,9 +25,9 @@ namespace Immersion
     {
         IServerNetworkChannel sChannel;
 
-        public override void StartClientSide(ICoreClientAPI api)
+        public override void StartClientSide(ICoreClientAPI Api)
         {
-            api.Network.RegisterChannel("swapPairs")
+            Api.Network.RegisterChannel("swapPairs")
                 .RegisterMessageType<SwapMessage>()
                 .SetMessageHandler<SwapMessage>(a =>
                 {
@@ -35,10 +35,10 @@ namespace Immersion
                 });
         }
 
-        public override void StartServerSide(ICoreServerAPI api)
+        public override void StartServerSide(ICoreServerAPI Api)
         {
-            sChannel = api.Network.RegisterChannel("swapPairs").RegisterMessageType<SwapMessage>();
-            api.Event.PlayerJoin += PlayerJoin;
+            sChannel = Api.Network.RegisterChannel("swapPairs").RegisterMessageType<SwapMessage>();
+            Api.Event.PlayerJoin += PlayerJoin;
         }
 
         private void PlayerJoin(IServerPlayer byPlayer)
@@ -51,7 +51,7 @@ namespace Immersion
 
     class BlockSwapBehavior : BlockBehavior
     {
-        ICoreAPI api;
+        ICoreAPI Api;
         Vec3d particleOrigin = new Vec3d(0.5, 0.5, 0.5);
         bool requireSneak = false;
         bool disabled = false;
@@ -62,16 +62,16 @@ namespace Immersion
 
         public BlockSwapBehavior(Block block) : base(block) { }
 
-        public override void OnLoaded(ICoreAPI api)
+        public override void OnLoaded(ICoreAPI Api)
         {
-            base.OnLoaded(api);
-            this.api = api;
+            base.OnLoaded(Api);
+            this.Api = Api;
             PostOLInit();
         }
 
         public void PostOLInit()
         {
-            SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
+            SwapSystem swapSystem = Api.ModLoader.GetModSystem<SwapSystem>();
             requireSneak = properties["requireSneak"].AsBool(requireSneak);
             particleOrigin = properties["particleOrigin"].Exists ? properties["particleOrigin"].AsObject<Vec3d>() : particleOrigin;
             pRadius = properties["particleRadius"].AsInt(pRadius);
@@ -92,7 +92,7 @@ namespace Immersion
             }
             if (properties["swapBlocks"].Exists)
             {
-                if (api.World.Side.IsServer())
+                if (Api.World.Side.IsServer())
                 {
                     try
                     {
@@ -105,7 +105,7 @@ namespace Immersion
                             {
                                 SwapBlocks tmp = val.Copy();
 
-                                foreach (var block in api.World.Blocks)
+                                foreach (var block in Api.World.Blocks)
                                 {
                                     if (block.WildCardMatch(val.Tool))
                                     {
@@ -116,7 +116,7 @@ namespace Immersion
                                         swapSystem.SwapPairs.Add(key, tmp.Copy());
                                     }
                                 }
-                                foreach (var item in api.World.Items)
+                                foreach (var item in Api.World.Items)
                                 {
                                     if (item.WildCardMatch(val.Tool))
                                     {
@@ -137,7 +137,7 @@ namespace Immersion
                     catch (Exception)
                     {
                         disabled = true;
-                        api.World.Logger.Notification("Deprecated or unsupported use of swapblocks in " + block.Code.ToString());
+                        Api.World.Logger.Notification("Deprecated or unsupported use of swapblocks in " + block.Code.ToString());
                     }
                 }
             }
@@ -159,7 +159,7 @@ namespace Immersion
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
             handled = EnumHandling.PreventDefault;
-            SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
+            SwapSystem swapSystem = Api.ModLoader.GetModSystem<SwapSystem>();
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
             if (slot?.Itemstack?.Collectible?.Code == null) return false;
             string key = GetKey(slot?.Itemstack?.Collectible?.Code?.ToString()) ?? "";
@@ -171,7 +171,7 @@ namespace Immersion
                 {
                     ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     float animstep = (secondsUsed / swap.MakeTime) * 1.0f;
-                    api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
+                    Api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
                 }
                 return secondsUsed < swap.MakeTime;
             }
@@ -180,13 +180,13 @@ namespace Immersion
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handling)
         {
-            BlockPos pos = blockSel?.Position;
-            if (pos == null) return;
+            BlockPos Pos = blockSel?.Position;
+            if (Pos == null) return;
 
-            ModSystemBlockReinforcement bR = api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
-            if (disabled || bR.IsReinforced(pos) || bR.IsLocked(pos, byPlayer)) return;
+            ModSystemBlockReinforcement bR = Api.ModLoader.GetModSystem<ModSystemBlockReinforcement>();
+            if (disabled || bR.IsReinforced(Pos) || bR.IsLockedForInteract(Pos, byPlayer)) return;
 
-            SwapSystem swapSystem = api.ModLoader.GetModSystem<SwapSystem>();
+            SwapSystem swapSystem = Api.ModLoader.GetModSystem<SwapSystem>();
             handling = EnumHandling.PreventDefault;
             ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
 
@@ -197,7 +197,7 @@ namespace Immersion
 
                 if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
                 {
-                    if (world.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+                    if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
 
                     if (swap.Takes != null && swap.Takes != block.Code.ToString() || secondsUsed < swap.MakeTime)
                     {
@@ -220,7 +220,7 @@ namespace Immersion
                                 withCount.StackSize = Math.Abs(count);
                                 if (!byPlayer.InventoryManager.TryGiveItemstack(withCount))
                                 {
-                                    world.SpawnItemEntity(withCount, pos.ToVec3d().Add(0.5, 0.5, 0.5));
+                                    world.SpawnItemEntity(withCount, Pos.ToVec3d().Add(0.5, 0.5, 0.5));
                                 }
                             }
                             else if (slot.Itemstack.StackSize >= count)
@@ -232,14 +232,14 @@ namespace Immersion
 
                         if ((block.EntityClass != null && toBlock.EntityClass != null) && (toBlock.EntityClass == block.EntityClass))
                         {
-                            world.BlockAccessor.ExchangeBlock(toBlock.BlockId, pos);
+                            world.BlockAccessor.ExchangeBlock(toBlock.BlockId, Pos);
                         }
                         else
                         {
-                            world.BlockAccessor.SetBlock(toBlock.BlockId, pos);
+                            world.BlockAccessor.SetBlock(toBlock.BlockId, Pos);
                         }
                         slot.MarkDirty();
-                        PlaySoundDispenseParticles(world, pos, slot);
+                        PlaySoundDispenseParticles(world, Pos, slot);
                         return;
                     }
                 }
@@ -263,21 +263,21 @@ namespace Immersion
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
-            if (world.Side.IsClient()) api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+            if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
             return false;
         }
 
-        public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos pos, ItemSlot slot)
+        public void PlaySoundDispenseParticles(IWorldAccessor world, BlockPos Pos, ItemSlot slot)
         {
             try
             {
                 if (world.Side.IsServer())
                 {
-                    world.SpawnCubeParticles(pos, pos.ToVec3d().Add(particleOrigin), pRadius, pQuantity);
-                    world.SpawnCubeParticles(pos.ToVec3d().Add(particleOrigin), slot.Itemstack, pRadius, pQuantity);
+                    world.SpawnCubeParticles(Pos, Pos.ToVec3d().Add(particleOrigin), pRadius, pQuantity);
+                    world.SpawnCubeParticles(Pos.ToVec3d().Add(particleOrigin), slot.Itemstack, pRadius, pQuantity);
                     if (playSound)
                     {
-                        world.PlaySoundAt(block.Sounds.Place, pos.X, pos.Y, pos.Z);
+                        world.PlaySoundAt(block.Sounds.Place, Pos.X, Pos.Y, Pos.Z);
                     }
                 }
             }

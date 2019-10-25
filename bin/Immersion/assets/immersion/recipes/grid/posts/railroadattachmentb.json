@@ -1,9 +1,9 @@
 {
 	ingredientPattern: "P,P",
 	ingredients: {
-		"P": { type: "block", code: "neolithicmod:attachment-railroad-east-up" }
+		"P": { type: "block", code: "immersion:attachment-railroad-east-up" }
 	},
 	width: 1,
 	height: 2,
-	output: { type: "block", code: "neolithicmod:attachment-railroad-east-long", quantity: 1 } 
+	output: { type: "block", code: "immersion:attachment-railroad-east-long", quantity: 1 } 
 }

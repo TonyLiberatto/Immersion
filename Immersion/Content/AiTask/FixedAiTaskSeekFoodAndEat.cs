@@ -132,19 +132,19 @@ namespace Immersion
             nowStuck = false;
             soundPlayed = false;
             eatTimeNow = 0;
-            pathTraverser.GoTo(target.Position, moveSpeed, MinDistanceToTarget(), OnGoalReached, OnStuck);
+            pathTraverser.NavigateTo(target.Position, moveSpeed, MinDistanceToTarget(), OnGoalReached, OnStuck);
         }
 
         public override bool ContinueExecute(float dt)
         {
-            Vec3d pos = target.Position;
+            Vec3d Pos = target.Position;
 
-            pathTraverser.CurrentTarget.X = pos.X;
-            pathTraverser.CurrentTarget.Y = pos.Y;
-            pathTraverser.CurrentTarget.Z = pos.Z;
+            pathTraverser.CurrentTarget.X = Pos.X;
+            pathTraverser.CurrentTarget.Y = Pos.Y;
+            pathTraverser.CurrentTarget.Z = Pos.Z;
 
             Cuboidd targetBox = entity.CollisionBox.ToDouble().Translate(entity.ServerPos.X, entity.ServerPos.Y, entity.ServerPos.Z);
-            double distance = targetBox.ShortestDistanceFrom(pos);
+            double distance = targetBox.ShortestDistanceFrom(Pos);
 
             float minDist = MinDistanceToTarget();
 
