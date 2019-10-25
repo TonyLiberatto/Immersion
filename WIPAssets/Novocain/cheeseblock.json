@@ -1,0 +1,56 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"cheeseblock": "E:/Games/VintageStory/ModDev/TheNeolithicMod/WIPAssets/Novocain/cheeseblock"
+	},
+	"elements": [
+		{
+			"name": "Root1",
+			"from": [ 0.5, 0.0, 0.0 ], 
+			"to": [ 0.5, 0.0, 0.0 ], 
+			"rotationOrigin": [ 0.5, 0.0, 0.0 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false }
+			},
+			"children": [
+				{
+					"name": "voxel",
+					"from": [ 1.5, 0.0, 8.0 ], 
+					"to": [ 13.5, 4.5, 14.0 ], 
+					"rotationOrigin": [ 0.0, 0.0, 3.0 ],
+					"faces": {
+						"north": { "texture": "#cheeseblock", "uv": [ 0.0, 0.0, 12.0, 4.5 ], "enabled": false },
+						"east": { "texture": "#cheeseblock", "uv": [ 0.0, 5.0, 6.0, 9.5 ] },
+						"south": { "texture": "#cheeseblock", "uv": [ 0.0, 0.0, 12.0, 4.5 ] },
+						"west": { "texture": "#cheeseblock", "uv": [ 6.0, 5.0, 12.0, 9.5 ] },
+						"up": { "texture": "#cheeseblock", "uv": [ 0.0, 10.0, 12.0, 16.0 ] },
+						"down": { "texture": "#cheeseblock", "uv": [ 0.0, 10.0, 12.0, 16.0 ] }
+					}
+				},
+				{
+					"name": "voxel2",
+					"from": [ 1.5, 0.0, 2.0 ], 
+					"to": [ 13.5, 4.5, 8.0 ], 
+					"rotationOrigin": [ 0.0, 0.0, -3.0 ],
+					"faces": {
+						"north": { "texture": "#cheeseblock", "uv": [ 0.0, 0.0, 12.0, 4.5 ] },
+						"east": { "texture": "#cheeseblock", "uv": [ 6.0, 5.0, 12.0, 9.5 ] },
+						"south": { "texture": "#cheeseblock", "uv": [ 0.0, 0.0, 12.0, 4.5 ], "enabled": false },
+						"west": { "texture": "#cheeseblock", "uv": [ 0.0, 5.0, 6.0, 9.5 ] },
+						"up": { "texture": "#cheeseblock", "uv": [ 0.0, 10.0, 12.0, 16.0 ] },
+						"down": { "texture": "#cheeseblock", "uv": [ 0.0, 10.0, 12.0, 16.0 ] }
+					}
+				}
+			]
+		}
+	]}

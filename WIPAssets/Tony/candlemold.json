@@ -1,0 +1,118 @@
+{
+	code: "candlemold",
+	classByType: {
+		"*-raw": "Block",
+		"*-burned": "BlockToolMold",
+	},
+	behaviors: [{name: "UnstableFalling"}],
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"materialtype", states: ["raw", "burned"] },
+	],
+	attributesByType: {
+		"*-blue-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+			],	
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9, }
+		},
+		"*-brown-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+			],
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
+		},
+		"*-fire-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+			],
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
+		},
+		"*-red-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+				{ x1: 4, z1: 4, x2: 13, z2: 13 },
+			],
+			"drop": { type:"item", code: "candle-{metal}" , stacksize: 9,}
+		},
+	},
+	entityClassByType: {
+		"*-burned": "ToolMold",
+	},
+	combustiblePropsByType: {
+		"*-blue-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "candlemold-blue-burned" },
+			requiresContainer: false
+		},
+		"*-fire-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "candlemold-fire-burned" },
+			requiresContainer: false
+		},
+		"*-red-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "candlemold-red-burned" },
+			requiresContainer: false
+		},
+		"*-brown-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "candlemold-brown-burned" },
+			requiresContainer: false
+		},
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 700,
+	resistance: 1.5,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": {  ceramic: { base: "block/clay/{color}-raw" } },
+		"*-burned": {  ceramic: { base: "block/clay/{color}-burned" }  }
+	},
+	shape: { base: "block/clay/mold/candlemold", rotateY: 90 },
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionbox: { x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.25, z2: 0.8125 },
+	selectionbox: { x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.25, z2: 0.8125 },
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	guiTransformByType: {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.33
+		}
+}

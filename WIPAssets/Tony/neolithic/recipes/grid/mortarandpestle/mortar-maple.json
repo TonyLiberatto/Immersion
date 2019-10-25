@@ -1,0 +1,10 @@
+{
+    ingredientPattern: "M",
+    ingredients: {
+        "M": {type: "Block", code: "game:chiseledblock", attributes: { materials: ["game:log-placed-maple-ud"], cuboids: [4190208, 16249856, 16725120, 16776324, 12579980] } }
+    },
+    width: 1,
+    height: 1,
+    shapeless: true,
+    output: { type: "block", code: "game:mortar-maple", quantity: 1  }
+}

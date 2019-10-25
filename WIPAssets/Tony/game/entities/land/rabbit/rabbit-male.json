@@ -1,0 +1,236 @@
+{
+	code: "rabbit-male",
+	class: "EntityAgent",
+	hitboxSize: { x: 0.5, y: 0.6 },
+	eyeHeight: 0.5,
+	variantgroups: [
+		{ code: "color", states: [ "black", "brown", "darkgrey", "grey", "lightgrey", "tan", "white"] }],
+	drops: [
+		{
+				type: "block",
+				code: "neolithicmod:dead-rabbit-{color}",
+			},
+	],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/land/rabbit/male" },
+		texture: { base: "entity/rabbit/{color}" },
+		behaviors: [{ code: "repulseagents" }, { code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
+		]
+	},
+	server: {
+		attributes: {
+			pathfinder: {
+				minTurnAnglePerSec: 720,
+				maxTurnAnglePerSec: 1440
+			}
+		},
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "health", currenthealth: 3, maxhealth: 3 },
+			{ code: "breathe" },
+			{ 
+				code: "emotionstates",
+				states: [
+					{ code: "aggressiveondamage", duration: 20, chance: 0.4, slot: 0, prority: 2, accumType: "noaccum" },
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" }
+				],
+			},
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "meleeattack",
+						entityCodes: ["player", "wolf-*", "fox-*"],
+						priority: 2,
+						damage: 0.25,
+						mincooldown: 2500, 
+						maxcooldown: 3500, 
+						attackDurationMs: 2000,
+						damagePlayerAtMs: 600,
+						animation: "Attack",
+						animationSpeed: 1.5,
+						whenInEmotionState: "aggressiveondamage",
+						sound: "creature/rabbit/male-alarm2"
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player", "wolf-*", "fox-*"],
+						priority: 1.9,
+						movespeed: 0.02,
+						seekingRange: 5,
+						animation: "Run",
+						animationSpeed: 2,
+						sound: "creature/rabbit/hurt",
+						whenInEmotionState: "fleeondamage"
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player", "wolf-*", "fox-*"],
+						priority: 1.7,
+						movespeed: 0.02,
+						seekingRange: 7,
+						animation: "Run",
+						animationSpeed: 2,
+						sound: "creature/rabbit/hurt",
+						whenInEmotionState: "fleeondamage"
+					},
+					{
+						code: "seekentity",
+						priority: 1.7,
+						mincooldown: 1000, 
+						maxcooldown: 1500, 
+						seekingRange: 25,
+						movespeed: 0.025,
+						animation: "Run2",
+						animationSpeed: 2,
+						whenInEmotionState: "aggressiveondamage",
+						sound: "creature/rabbit/male-alarm"
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player", "wolf-*", "fox-*"],
+						priority: 1.5,
+						movespeed: 0.02,
+						seekingRange: 7,
+						animation: "Run",
+						animationSpeed: 2.5,
+						sound: "creature/rabbit/hurt",
+					},
+					{
+						code: "getoutofwater",
+						priority: 1.4,
+						movespeed: 0.015,
+						animation: "Run",
+						sound: "creature/rabbit/hen-flee"
+					},
+					{
+						code: "seekfoodandeat",
+						priority: 1.3,
+						eatSound: "player/eat",
+						eatTime: 1.5,
+						movespeed: 0.0025,
+						animation: "Walk",
+						mincooldownHours: 1,
+						maxcooldownHours: 4,
+						doConsumePortion: false
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 2000,
+						maxcooldown: 10000,
+						animation: "Eat"
+					},
+					{
+						code: "idle",
+						priority: 1.1,
+						minduration: 1000,
+						maxduration: 3000,
+						mincooldown: 2000,
+						maxcooldown: 30000,
+						animation: "Idle"
+					},
+					{
+						code: "idle",
+						priority: 1.3,
+						minduration: 4680,
+						maxduration: 4680,
+						mincooldown: 80000,
+						maxcooldown: 500000,
+						animation: "maleCall",
+						animationSpeed: 1,
+						sound: "creature/rabbit/male-call",
+						soundRange: 48
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						movespeed: 0.0035,
+						animation: "Walk",
+						wanderChance: 0.02,
+						preferredLightLevel: 19
+					},
+					{ 
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			}
+		],
+		spawnconditions: {
+			worldgen: {
+				TriesPerChunk: { avg: 0.03, var: 0 },
+				tryOnlySurface: true,
+				minLightLevel: 12,
+				groupSize: { dist: "verynarrowgaussian", avg: 4, var: 5 },
+				insideBlockCodes: ["air", "tallgrass-*"],
+				minTemp: -20,
+				maxTemp: 20,
+				minRain: 0.32,
+				minShrubs: 0.5,
+				companionsByType: {
+					"rabbit-male-black":
+						["rabbit-female-black", "rabbit-baby-black"],
+					"rabbit-male-brown":
+						["rabbit-female-brown", "rabbit-baby-brown"],
+					"rabbit-male-darkgrey":
+						["rabbit-female-darkgrey", "rabbit-baby-darkgrey"],
+					"rabbit-male-grey":
+						["rabbit-female-grey", "rabbit-baby-grey"],
+					"rabbit-male-lightgrey":
+						["rabbit-female-lightgrey", "rabbit-baby-lightgrey"],
+					"rabbit-male-tan":
+						["rabbit-female-tan", "rabbit-baby-tan"],
+					"rabbit-male-white":
+						["rabbit-female-white", "rabbit-baby-white"],
+				}
+			},
+			runtime: {
+				group: "passive",
+				tryOnlySurface: true,
+				chance: 0.003,
+				maxQuantity: 4,
+				minLightLevel: 12,
+				groupSize: { dist: "verynarrowgaussian", avg: 4, var: 5 },
+				insideBlockCodes: ["air", "tallgrass-*"],
+				minTemp: -20,
+				maxTemp: 20,
+				minRain: 0.32,
+				minShrubs: 0.5,
+				companionsByType: {
+					"rabbit-male-black":
+						["rabbit-female-black", "rabbit-baby-black"],
+					"rabbit-male-brown":
+						["rabbit-female-brown", "rabbit-baby-brown"],
+					"rabbit-male-darkgrey":
+						["rabbit-female-darkgrey", "rabbit-baby-darkgrey"],
+					"rabbit-male-grey":
+						["rabbit-female-grey", "rabbit-baby-grey"],
+					"rabbit-male-lightgrey":
+						["rabbit-female-lightgrey", "rabbit-baby-lightgrey"],
+					"rabbit-male-tan":
+						["rabbit-female-tan", "rabbit-baby-tan"],
+					"rabbit-male-white":
+						["rabbit-female-white", "rabbit-baby-white"],
+				}
+			}
+		}
+	},
+	sounds: {
+		hurt: "creature/rabbit/hurt",
+		death: "creature/rabbit/hurt"
+	},
+}

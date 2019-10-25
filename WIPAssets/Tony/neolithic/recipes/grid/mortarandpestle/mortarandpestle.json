@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "PM",
+	ingredients: {
+		"P": { type: "block", code: "game:pestle-*"},
+		"M": { type: "block", code: "game:mortar-*", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood", },
+    },
+    width: 1,
+    height: 2,
+    shapeless: true,
+    output: { type: "block", code: "game:mortarandpestle-{wood}-east", quantity: 1  }
+}

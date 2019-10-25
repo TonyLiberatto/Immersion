@@ -1,0 +1,98 @@
+{
+	code: "clayplanterfire",
+	classByType: {
+		"*-raw": "Block",
+		"*": "BlockFlowerPot"
+	},
+	attributes: {
+		sitHeight: 0.75,
+		butterflyFeedByType: {
+			"*-catmint": true,
+			"*-forgetmenot": true,
+			"*-edelweiss": true,
+			"*-heather": true,
+			"*-orangemallow": true,
+			"*-wilddaisy": true,
+			"*-westerngorse": true,
+			"*-cowparsley": true,
+			"*-californiapoppy": true,
+			"*-horsetail": true,
+			"*-lupine-blue": true,
+			"*-lupine-orange": true,
+			"*-lupine-purple": true,
+			"*-lupine-red": true,
+			"*-lupine-white": true,
+		},
+		beeFeedByType: {
+			"*-catmint": true,
+			"*-forgetmenot": true,
+			"*-edelweiss": true,
+			"*-heather": true,
+			"*-orangemallow": true,
+			"*-wilddaisy": true,
+			"*-westerngorse": true,
+			"*-cowparsley": true,
+			"*-californiapoppy": true,
+			"*-horsetail": true,
+			"*-lupine-blue": true,
+			"*-lupine-orange": true,
+			"*-lupine-purple": true,
+			"*-lupine-red": true,
+			"*-lupine-white": true,
+		}
+	},
+	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"],  "neolithicdeco": ["*-empty", "*-raw"]},
+	behaviors: [{name: "UnstableFalling"}],
+	variantgroups: [
+		{ code: "type", states: ["raw"] },
+		{ code: "empty", states: ["empty"], combine: "add" },
+		{ code: "flower", states:["lupine-blue", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
+		{ code: "mushroom", loadFromProperties: "block/mushroom", combine: "add" },
+		{ code: "sapling", loadFromProperties: "block/wood", combine: "add" },
+	],
+	shapeByType: {
+		"*-raw": { base: "block/clay/planter/planter-raw" },
+		"*-empty": { base: "block/clay/planter/planter-empty" },
+		"clayplanterfire-*": { base: "block/clay/planter/planter-full" }
+	},
+	blockmaterial: "Ceramic",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	texturesByType: {
+		"*-raw": { all: {  base: "block/clay/fire-raw" }  },
+		"*-empty": { 
+			"0": {  base: "block/clay/fire-burned" },
+			"soil": {  base: "block/clay/planter/soil" } 	
+		},
+		"clayplanterfire-*": { 
+			"0": {  base: "block/clay/fire-burned" },
+			"1": {  base: "block/clay/planter/soil" }, 	
+			"flower": { base: "block/plant/potted/{contents}" }
+		},
+	},
+	sidesolid: {
+		all: false
+	},	
+	sideopaque: {
+		all: false
+	},
+	combustiblePropsByType: {
+		"*-raw": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "clayplanterfire-empty" },
+			requiresContainer: false
+		}
+	},
+	collisionbox: {
+		x1: 0.125, y1: 0, z1: 0.125,
+		x2: 0.875, y2: 0.5625, z2: 0.875
+	},
+	selectionbox: {
+		x1: 0.125, y1: 0, z1: 0.125,
+		x2: 0.875, y2: 0.5625, z2: 0.875
+	}
+}

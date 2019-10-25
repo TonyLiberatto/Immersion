@@ -1,0 +1,57 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"moss": "E:/Games/VintageStory/Neolithic/NeolithicMod/WIPAssets/Novocain/textures/moss",
+		"circle-granite": "E:/Games/VintageStory/Neolithic/NeolithicMod/bin/TheNeolithicMod/assets/game/textures/block/stone/roads/roman/circle-granite",
+		"granite": "E:/Games/VintageStory/assets/survival/textures/block/stone/gravel/granite",
+		"moss-roman": "E:/Games/VintageStory/assets/survival/textures/block/stone/rock/granite",
+		"circlereferencemoss": "E:/Games/VintageStory/Neolithic/NeolithicMod/WIPAssets/Novocain/textures/circlereferencemoss"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 16.0, 15.0, 16.0 ], 
+			"faces": {
+				"north": { "texture": "#granite", "uv": [ 0.0, 1.0, 16.0, 16.0 ], "autoUv": false },
+				"east": { "texture": "#granite", "uv": [ 0.0, 1.0, 16.0, 16.0 ] },
+				"south": { "texture": "#granite", "uv": [ 0.0, 1.0, 16.0, 16.0 ] },
+				"west": { "texture": "#granite", "uv": [ 0.0, 1.0, 16.0, 16.0 ] },
+				"up": { "texture": "#moss", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"down": { "texture": "#granite", "uv": [ 0.0, 0.0, 16.0, 16.0 ] }
+			},
+			"children": [
+				{
+					"name": "Cube2",
+					"from": [ 0.0, 15.0, 0.0 ], 
+					"to": [ 16.0, 16.0, 16.0 ], 
+					"faces": {
+						"north": { "texture": "#circlereferencemoss", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+						"east": { "texture": "#circlereferencemoss", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+						"south": { "texture": "#circlereferencemoss", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+						"west": { "texture": "#circlereferencemoss", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+						"up": { "texture": "#circlereferencemoss", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+					}
+				},
+				{
+					"name": "Cube3",
+					"from": [ 0.5, 15.0, 0.5 ], 
+					"to": [ 15.5, 15.9, 15.5 ], 
+					"faces": {
+						"north": { "texture": "#circle-granite", "uv": [ 0.0, 0.0, 15.0, 0.5 ] },
+						"east": { "texture": "#moss-roman", "uv": [ 0.0, 0.0, 15.0, 0.5 ] },
+						"south": { "texture": "#moss-roman", "uv": [ 0.0, 0.0, 15.0, 0.5 ] },
+						"west": { "texture": "#moss-roman", "uv": [ 0.0, 0.0, 15.0, 0.5 ] },
+						"up": { "texture": "#circle-granite", "uv": [ 0.5, 0.5, 15.5, 15.5 ] },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 15.0, 15.0 ], "enabled": false }
+					}
+				}
+			]
+		}
+	]}

@@ -1,0 +1,72 @@
+{
+	code: "pantherpelt",
+	class: "BlockSign",
+	enabled: true,
+	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	variantgroups: [
+		{ code:"color", states: [ "black" ] },
+		{ code:"attachment", states: ["ground", "wall"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	drawtype: "json",
+	shapeByType: {
+		"*-ground-north": { base: "block/floormats/pelt", rotateY: 0 },
+		"*-ground-east": { base: "block/floormats/pelt", rotateY: 270 },
+		"*-ground-south": { base: "block/floormats/pelt", rotateY: 180 },
+		"*-ground-west": { base: "block/floormats/pelt", rotateY: 90 },
+		"*-wall-north": { base: "block/wallmats/pelt", rotateY: 0 },
+		"*-wall-east": { base: "block/wallmats/pelt", rotateY: 270 },
+		"*-wall-south": { base: "block/wallmats/pelt", rotateY: 180 },
+		"*-wall-west": { base: "block/wallmats/pelt", rotateY: 90 }
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Cloth",
+	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "neolithicdeco": ["*-ground-east"] },
+	replaceable: 4000,
+	resistance: 0.5,
+	lightAbsorption: 0,
+	textures: {
+		all: { 
+			base: "block/pelt/panther/{color}"
+		}
+			},
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0, 
+		x2: 2, y2: 0.0625, z2: 2,
+		rotateYByType: {
+			"*-ground-east": 0,
+			"*-ground-south": 270,
+			"*-ground-west": 180,
+			"*-ground-north": 90,
+		},
+		rotateZByType: {
+			"*-wall-east": 90,
+			"*-wall-south": 180,
+			"*-wall-west": 270,
+			"*-wall-north": 0
+		},
+		rotateXByType: {
+			"*-wall-east": 90,
+			"*-wall-south": 90,
+			"*-wall-west": 90,
+			"*-wall-north": 90
+		}
+		},
+	sideao: { all: false },
+	collisionbox: null,
+	combustibleProps: {
+		burnTemperature: 200,
+		burnDuration: 5,
+	},
+	sounds: {
+		place: "game:block/cloth",
+		walk: "game:walk/cloth"
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 1, y: 0.0625, z: 0.5 },
+		scale: 0.9
+},
+	materialDensity: 200
+}

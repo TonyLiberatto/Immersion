@@ -1,0 +1,123 @@
+{
+	code: "rabbit-baby",
+	class: "EntityAgent",
+	hitboxSize: { x: 0.4, y: 0.2 },
+	eyeHeight: 0.15,
+	variantgroups: [
+		{ code: "color", states: [ "black", "brown", "darkgrey", "grey", "lightgrey", "tan", "white"] }],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/land/rabbit/baby" },
+		texture: { base: "entity/rabbit/baby/{color}" },
+		behaviors: [{ code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
+		]
+	},
+	server: {
+		attributes: {
+			pathfinder: {
+				minTurnAnglePerSec: 1440,
+				maxTurnAnglePerSec: 2880
+			}
+		},
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "health", currenthealth: 1.5, maxhealth: 1.5, },
+			{ 
+				code: "grow",
+				hoursToGrow: 168,
+				adultEntityCodesByType: {
+					"rabbit-baby-black": ["rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-female-black", "rabbit-male-black"],
+					"rabbit-baby-brown": ["rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-female-brown", "rabbit-male-brown"],
+					"rabbit-baby-darkgrey": ["rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-female-darkgrey", "rabbit-male-darkgrey"],
+					"rabbit-baby-grey": ["rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-female-grey", "rabbit-male-grey"],
+					"rabbit-baby-lightgrey": ["rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-female-lightgrey", "rabbit-male-lightgrey"],
+					"rabbit-baby-tan": ["rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-female-tan", "rabbit-male-tan"],
+					"rabbit-baby-white": ["rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-female-white", "rabbit-male-white"],
+				},
+			},
+			{ code: "breathe" },
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "fleeentity",
+						entityCodes: ["player", "wolf-*", "fox-*"],
+						priority: 1.9,
+						movespeed: 0.02,
+						seekingRange: 5,
+						animation: "Run"
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player", "wolf-*", "fox-*"],
+						priority: 1.5,
+						movespeed: 0.02,
+						seekingRange: 7,
+						animation: "Run"
+					},
+					{
+						code: "getoutofwater",
+						priority: 1.4,
+						movespeed: 0.015,
+						animation: "Run"
+					},
+					{
+						code: "stayclosetoentity",
+						priority: 1.3,
+						entityCode: "rabbit-female",
+						movespeed: 0.01,
+						maxDistance: 2,
+						searchRange: 12,
+						animation: "Run"
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 2000,
+						maxcooldown: 10000,
+						animation: "Eat"
+					},
+					{
+						code: "idle",
+						priority: 1.1,
+						minduration: 1000,
+						maxduration: 3000,
+						mincooldown: 2000,
+						maxcooldown: 30000,
+						animation: "Idle"
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						movespeed: 0.0025,
+						animation: "Walk",
+						wanderChance: 0.02,
+						preferredLightLevel: 19
+					},
+					{ 
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			}
+		]
+	},
+	sounds: {
+		hurt: "creature/rabbit/chick*",
+		death: "creature/rabbit/chick*",
+		idle: "creature/rabbit/chick*"
+	},
+	idleSoundChance: 1
+}

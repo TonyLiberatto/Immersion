@@ -1,0 +1,12 @@
+{
+	ingredientPattern: "K	P",
+	ingredients: {
+		"K": { type: "item", code: "game:knife-*", isTool: true  },
+		"P": { type: "block", code: "pantherpelt-black-ground-east", quantity:1, 
+		returnedStack: { type: "block", code: "pantherrug-black-ground-east", quantity: 1 }}
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "animal-leatherstrips", quantity: 4 }
+}

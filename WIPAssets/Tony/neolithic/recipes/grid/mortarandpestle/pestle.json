@@ -1,0 +1,11 @@
+{
+    ingredientPattern: "BA",
+    ingredients: {
+		"A": { type: "item", code: "game:adze-*", isTool: true  },
+        "B": { type: "block", code: "branch-thin-*-bark-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
+    },
+    width: 1,
+    height: 2,
+    shapeless: true,
+    output: { type: "block", code: "game:pestle-{wood}", quantity: 1  }
+}

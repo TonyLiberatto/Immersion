@@ -1,0 +1,97 @@
+{
+	code: "flowerpot-fire",
+	classByType: {
+		"*-raw": "Block",
+		"*": "BlockFlowerPot"
+	},
+	behaviors: [{name: "UnstableFalling"}],
+	attributes: {
+		sitHeight: 0.75,
+		beeFeedByType: {
+			"*-catmint": true,
+			"*-forgetmenot": true,
+			"*-edelweiss": true,
+			"*-heather": true,
+			"*-orangemallow": true,
+			"*-wilddaisy": true,
+			"*-westerngorse": true,
+			"*-cowparsley": true,
+			"*-californiapoppy": true,
+			"*-horsetail": true
+		},
+		butterflyFeedByType: {
+			"*-catmint": true,
+			"*-forgetmenot": true,
+			"*-edelweiss": true,
+			"*-heather": true,
+			"*-orangemallow": true,
+			"*-wilddaisy": true,
+			"*-westerngorse": true,
+			"*-cowparsley": true,
+			"*-californiapoppy": true,
+			"*-horsetail": true
+		}
+	},
+	variantgroups: [
+		{ code: "type", states: ["raw"] },
+		{ code: "empty", states: ["empty"], combine: "add" },
+		{ code: "flower", states:["lupine-blue", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], loadFromProperties: "block/flower", combine: "add" },
+		{ code: "mushroom", loadFromProperties: "block/mushroom", combine: "add" },
+		{ code: "sapling", loadFromProperties: "block/wood", combine: "add" },
+	],
+	shapeByType: {
+		"*-raw": { base: "block/clay/flowerpot/empty" },
+		"*-empty": { base: "block/clay/flowerpot/empty" },
+		"flowerpot-fire-*": { base: "block/clay/flowerpot/full" }
+	},
+	creativeinventory: { "general": ["*-raw", "*-empty"], "decorative": ["*-raw", "*-empty"], "neolithicdeco": ["*-raw", "*-empty"] },
+	blockmaterial: "Ceramic",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	texturesByType: {
+		"*-raw": { all: {  base: "block/clay/fire-raw", }  },
+		"*-empty": { 
+			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
+			"1": {  base: "block/clay/flowerpot/fire-sides" },
+			},
+		"flowerpot-fire-*": {
+			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
+			"1": {  base: "block/clay/flowerpot/fire-sides" },
+			"flower": { base: "block/plant/potted/{contents}" }
+		},
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	combustiblePropsByType: {
+		"*-raw": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "flowerpot-fire-empty" },
+			requiresContainer: false
+		}
+	},
+	collisionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.4375, z2: 0.6875
+	},
+	selectionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.4375, z2: 0.6875
+	},
+	tpHandTransform: {
+		translation: { x: -1.5, y: -0.9, z: -1 },
+		rotation: { x: -78, y: 32, z: -95 },
+		scale: 0.45
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 1.5
+	}
+}
