@@ -6,6 +6,7 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.zip
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
@@ -18,7 +19,6 @@
 x64/
 x86/
 bld/
-[Bb]in/
 [Oo]bj/
 [Ll]og/
 
@@ -52,7 +52,6 @@ artifacts/
 *.meta
 *.obj
 *.pch
-*.pdb
 *.pgc
 *.pgd
 *.rsp
@@ -65,10 +64,13 @@ artifacts/
 *.log
 *.vspscc
 *.vssscc
-.builds
+*.builds
 *.pidb
 *.svclog
 *.scc
+*.psd
+*.csproj
+*.sln
 
 # Chutzpah Test files
 _Chutzpah*
@@ -259,3 +261,7 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/bin/TheNeolithicMod/assets/neolithicmod/textures/block/clay/adobe/newadobe.png
+/bin/CarryCapacity
+/bin/TheNeolithicMod/Newtonsoft.Json.dll
+*.aseprite
