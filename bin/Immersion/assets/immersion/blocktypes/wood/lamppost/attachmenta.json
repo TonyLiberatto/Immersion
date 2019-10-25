@@ -1,0 +1,58 @@
+{
+	code: "attachment",
+	behaviors: [{
+		name: "LampConnectorBehavior",
+		properties: {
+			type: "flippable",
+		}
+	}],
+	variantgroups: [
+		{ code: "style", states: ["industrial", "railroad"] },
+		{ code: "dir", states: ["north", "south", "east", "west"] },
+		{ code: "type", states: ["up", "down"] }
+	],
+	creativeinventory: { "general": ["*-east-up"], "construction": ["*-east-up"], "neolithicdeco": ["*-east-up"] },
+	shapeByType: {
+		"*-north-up": { base: "block/post/{style}/attachment-d", rotateY: 0, rotateZ: 180},
+		"*-north-down": { base: "block/post/{style}/attachment-d", rotateY: 0 },
+		"*-south-up": { base: "block/post/{style}/attachment-d", rotateY: 180, rotateZ: 180 },
+		"*-south-down": { base: "block/post/{style}/attachment-d", rotateY: 180 },
+		"*-east-up": { base: "block/post/{style}/attachment-d", rotateY: 270, rotateX: 180 },
+		"*-east-down": { base: "block/post/{style}/attachment-d", rotateY: 270 },
+		"*-west-up": { base: "block/post/{style}/attachment-d", rotateY: 90, rotateX: 180 },
+		"*-west-down": { base: "block/post/{style}/attachment-d", rotateY: 90 },
+	},
+	sidesolidByType: {
+		"*-north-up": { all: false, up: true },
+		"*-north-down": { all: false, down: true },
+		"*-south-up": { all: false, up: true },
+		"*-south-down": { all: false, down: true },
+		"*-east-up": { all: false, up: true },
+		"*-east-down": { all: false, down: true },
+		"*-west-up": { all: false, up: true },
+		"*-west-down": { all: false, down: true },
+	},
+	sideopaque: {all: false},
+	sideAo: {all: false},
+	blockmaterial: "Wood",
+	textures: {
+		all: { base: "block/wood/lamppost/middle" },
+	},
+	lightAbsorption: 99,
+	resistance: 3,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 10,
+	},
+	materialDensity: 600,
+	collisionSelectionBoxbytype: {
+		"*-north-*": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75, rotateY: 270},
+		"*-east-*": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75, rotateY: 180},
+		"*-south-*": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75, rotateY: 90},
+		"*-west-*": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75},
+	},
+}

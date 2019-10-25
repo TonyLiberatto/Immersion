@@ -1,0 +1,10 @@
+{
+	ingredientPattern: " F 	W_W	WWW",
+	ingredients: {
+		"F": { type: "item", code: "sisal-rope" },
+		"W": { type: "block", code: "game:planks-*" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "game:woodbucket"  }
+}

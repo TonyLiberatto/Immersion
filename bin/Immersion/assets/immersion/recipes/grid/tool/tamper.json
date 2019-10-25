@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C	S",
+	ingredients: {
+		"C": { type: "item", code: "tamperhead-*", name: "material"  },
+		"S": { type: "item", code: "game:stick" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "tamper-{material}", quantity: 1  }
+}

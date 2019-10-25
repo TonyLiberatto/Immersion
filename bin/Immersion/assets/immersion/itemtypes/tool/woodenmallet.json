@@ -1,0 +1,60 @@
+{
+  code: "woodenmallet",
+  heldTpHitAnimation: "breaktool",
+  maxstacksize: 1,
+  durability: 150,
+  textures: {
+    "wood": { base: "game:item/tool/material/woodenclub" },
+    "leather": { base: "game:block/cloth/leather/normal" }
+  },
+  shape: { base: "item/tool/woodenmallet" },
+  creativeinventory: {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "neolithicitems": [ "*" ]
+  },
+  fpHandTransform: {
+    translation: {
+      x: 0.1,
+      y: 0.2,
+      z: 0
+    },
+    rotation: {
+      x: 0,
+      y: 0,
+      z: -90
+    },
+    scale: 3
+  },
+  tpHandTransform: {
+    translation: {
+      x: -0.84,
+      y: -0.64,
+      z: -0.66
+    },
+    rotation: {
+      x: 0,
+      y: 180,
+      z: -10
+    },
+    scale: 0.75
+  },
+  guiTransform: {
+    translation: {
+      x: 0,
+      y: 5,
+      z: 0
+    },
+    rotation: {
+      x: -157,
+      y: 180,
+      z: -46
+    },
+    origin: {
+      x: 0.59,
+      y: 0.535,
+      z: 0.5
+    },
+    scale: 2
+  },
+}

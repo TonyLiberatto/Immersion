@@ -1,0 +1,43 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"pine": "block/wood/bark/pine",
+		"pine2": "block/wood/leaves/pine2"
+	},
+	"elements": [
+		{
+			"name": "trunk",
+			"from": [ 7.0, 0.0, 7.0 ], 
+			"to": [ 9.0, 10.0, 9.0 ], 
+			"faces": {
+				"north": { "texture": "#pine", "uv": [ 10.0, 5.0, 12.0, 15.0 ] },
+				"east": { "texture": "#pine", "uv": [ 7.0, 3.0, 9.0, 13.0 ] },
+				"south": { "texture": "#pine", "uv": [ 2.0, 6.0, 4.0, 16.0 ] },
+				"west": { "texture": "#pine", "uv": [ 3.0, 4.0, 5.0, 14.0 ] },
+				"up": { "texture": "#pine", "uv": [ 14.0, 13.0, 16.0, 15.0 ] },
+				"down": { "texture": "#pine", "uv": [ 14.0, 13.0, 16.0, 15.0 ] }
+			},
+			"children": [
+				{
+					"name": "leaves",
+					"from": [ -3.0, 6.0, -3.0 ], 
+					"to": [ 5.0, 14.0, 5.0 ], 
+					"tintIndex": 1,
+					"renderPass": 1,
+					"faces": {
+						"north": { "texture": "#pine2", "uv": [ 8.0, 4.0, 16.0, 12.0 ] },
+						"east": { "texture": "#pine2", "uv": [ 5.0, 5.0, 13.0, 13.0 ] },
+						"south": { "texture": "#pine2", "uv": [ 1.0, 4.5, 9.0, 12.5 ] },
+						"west": { "texture": "#pine2", "uv": [ 4.0, 8.0, 12.0, 16.0 ] },
+						"up": { "texture": "#pine2", "uv": [ 6.0, 7.0, 14.0, 15.0 ] },
+						"down": { "texture": "#pine2", "uv": [ 3.0, 1.0, 11.0, 9.0 ] }
+					}
+				}
+			]
+		}
+	]}

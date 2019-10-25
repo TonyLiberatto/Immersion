@@ -1,0 +1,123 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-basalt-acacia-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-basalt-acacia-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-basalt-birch-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-basalt-birch-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-basalt-kapok-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-basalt-kapok-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-basalt-maple-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-basalt-maple-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-basalt-oak-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-basalt-oak-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-basalt-pine-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-basalt-pine-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ 
+]

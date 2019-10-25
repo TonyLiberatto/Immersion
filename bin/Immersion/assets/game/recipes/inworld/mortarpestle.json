@@ -1,0 +1,128 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-acacia-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-acacia-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-birch-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-birch-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-birch-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-kapok-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-kapok-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-kapok-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-maple-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-maple-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-maple-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-oak-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-oak-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-oak-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:log-placed-pine-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-pine-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:mortarandpestle-pine-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

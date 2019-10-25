@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "K	H",
+	ingredients: {
+		"K": { type: "item", code: "game:knife*", isTool: true  },
+		"H": { type: "item", code: "animal-horn" , quantity:1}
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "byproducts-hornslab", quantity: 4  }
+}

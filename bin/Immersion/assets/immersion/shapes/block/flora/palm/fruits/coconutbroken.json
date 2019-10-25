@@ -1,0 +1,123 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"coconut": "block/flora/palm/fruits"
+	},
+	"elements": [
+		{
+			"name": "coconut_root",
+			"from": [ 8.0, 0.0, 8.0 ], 
+			"to": [ 9.0, 1.0, 9.0 ], 
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false }
+			},
+			"children": [
+				{
+					"name": "coconutslice_a",
+					"from": [ -4.0, 2.5, -0.5 ], 
+					"to": [ -3.5, 5.5, 2.5 ], 
+					"rotationOrigin": [ -2.0, 2.0, 1.0 ],
+					"rotationY": 22.5,
+					"rotationZ": 90.0,
+					"faces": {
+						"north": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ] },
+						"east": { "texture": "#fruits", "uv": [ 3.0, 0.0, 6.0, 3.0 ] },
+						"south": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"west": { "texture": "#fruits", "uv": [ 0.0, 0.0, 3.0, 3.0 ] },
+						"up": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"down": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] }
+					}
+				},
+				{
+					"name": "coconutslice_b",
+					"from": [ -1.5, 0.0, -1.5 ], 
+					"to": [ 1.5, 0.5, 1.5 ], 
+					"faces": {
+						"north": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ], "rotation": 90 },
+						"east": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ], "rotation": 90 },
+						"south": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 },
+						"west": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 },
+						"up": { "texture": "#fruits", "uv": [ 3.0, 0.0, 6.0, 3.0 ] },
+						"down": { "texture": "#fruits", "uv": [ 0.0, 6.0, 3.0, 9.0 ] }
+					}
+				},
+				{
+					"name": "coconutslice_c",
+					"from": [ 2.5, -1.0, -3.5 ], 
+					"to": [ 5.5, 2.0, -3.0 ], 
+					"rotationOrigin": [ 4.0, -1.5, -1.5 ],
+					"rotationX": -90.0,
+					"rotationY": -180.0,
+					"rotationZ": -45.0,
+					"faces": {
+						"north": { "texture": "#fruits", "uv": [ 0.0, 0.0, 3.0, 3.0 ], "rotation": 180 },
+						"east": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"south": { "texture": "#fruits", "uv": [ 3.0, 0.0, 6.0, 3.0 ] },
+						"west": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"up": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 },
+						"down": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ], "rotation": 90 }
+					}
+				},
+				{
+					"name": "coconutslice_d",
+					"from": [ -2.0, -1.0, 3.5 ], 
+					"to": [ 1.0, 2.0, 4.0 ], 
+					"rotationOrigin": [ -0.5, -1.5, 2.0 ],
+					"rotationX": 90.0,
+					"rotationY": 180.0,
+					"rotationZ": 22.5,
+					"faces": {
+						"north": { "texture": "#fruits", "uv": [ 3.0, 0.0, 6.0, 3.0 ] },
+						"east": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"south": { "texture": "#fruits", "uv": [ 0.0, 0.0, 3.0, 3.0 ], "rotation": 180 },
+						"west": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"up": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 },
+						"down": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 }
+					}
+				},
+				{
+					"name": "coconutslice_e",
+					"from": [ 2.5, 7.5, 1.5 ], 
+					"to": [ 5.5, 8.0, 4.5 ], 
+					"rotationOrigin": [ 4.0, 4.0, 3.0 ],
+					"rotationX": -180.0,
+					"rotationY": -157.5,
+					"faces": {
+						"north": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 },
+						"east": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ], "rotation": 90 },
+						"south": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ], "rotation": 90 },
+						"west": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ], "rotation": 90 },
+						"up": { "texture": "#fruits", "uv": [ 0.0, 3.0, 3.0, 6.0 ] },
+						"down": { "texture": "#fruits", "uv": [ 3.0, 0.0, 6.0, 3.0 ] }
+					}
+				},
+				{
+					"name": "coconutslice_f",
+					"from": [ -2.5, 2.5, -4.5 ], 
+					"to": [ -2.0, 5.5, -1.5 ], 
+					"rotationOrigin": [ -4.0, 2.0, -3.0 ],
+					"rotationY": 45.0,
+					"rotationZ": -90.0,
+					"faces": {
+						"north": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] },
+						"east": { "texture": "#fruits", "uv": [ 0.0, 0.0, 3.0, 3.0 ] },
+						"south": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ] },
+						"west": { "texture": "#fruits", "uv": [ 3.0, 0.0, 6.0, 3.0 ] },
+						"up": { "texture": "#fruits", "uv": [ 0.0, 6.0, 0.5, 9.0 ] },
+						"down": { "texture": "#fruits", "uv": [ 2.5, 6.0, 3.0, 9.0 ] }
+					}
+				}
+			]
+		}
+	]}

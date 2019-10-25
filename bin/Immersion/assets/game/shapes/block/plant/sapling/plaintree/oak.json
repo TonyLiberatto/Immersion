@@ -1,0 +1,43 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"oak": "block/wood/bark/oak",
+		"oak1": "block/wood/leaves/oak1"
+	},
+	"elements": [
+		{
+			"name": "trunk",
+			"from": [ 7.0, 0.0, 7.0 ], 
+			"to": [ 9.0, 10.0, 9.0 ], 
+			"faces": {
+				"north": { "texture": "#oak", "uv": [ 10.0, 2.0, 12.0, 12.0 ] },
+				"east": { "texture": "#oak", "uv": [ 12.0, 6.0, 14.0, 16.0 ] },
+				"south": { "texture": "#oak", "uv": [ 9.0, 6.0, 11.0, 16.0 ] },
+				"west": { "texture": "#oak", "uv": [ 3.0, 6.0, 5.0, 16.0 ] },
+				"up": { "texture": "#oak", "uv": [ 14.0, 10.0, 16.0, 12.0 ] },
+				"down": { "texture": "#oak", "uv": [ 14.0, 9.0, 16.0, 11.0 ] }
+			},
+			"children": [
+				{
+					"name": "leaves",
+					"from": [ -3.0, 6.0, -3.0 ], 
+					"to": [ 5.0, 14.0, 5.0 ], 
+					"tintIndex": 1,
+					"renderPass": 1,
+					"faces": {
+						"north": { "texture": "#oak1", "uv": [ 4.0, 4.0, 12.0, 12.0 ] },
+						"east": { "texture": "#oak1", "uv": [ 5.0, 4.0, 13.0, 12.0 ] },
+						"south": { "texture": "#oak1", "uv": [ 1.0, 3.0, 9.0, 11.0 ] },
+						"west": { "texture": "#oak1", "uv": [ 3.0, 4.0, 11.0, 12.0 ] },
+						"up": { "texture": "#oak1", "uv": [ 3.0, 4.0, 11.0, 12.0 ] },
+						"down": { "texture": "#oak1", "uv": [ 7.0, 1.0, 15.0, 9.0 ] }
+					}
+				}
+			]
+		}
+	]}

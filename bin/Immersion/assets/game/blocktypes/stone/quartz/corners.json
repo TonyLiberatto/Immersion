@@ -1,0 +1,172 @@
+﻿{
+  code: "stair-corner-quartz-a",
+  class: "FixedStairs",
+  variantgroups: [
+    {
+      code: "type",
+      states: [
+        "outside",
+        "inside"
+      ],
+    },
+    {
+      code: "orientation",
+      states: [
+        "down-northeast",
+        "down-northwest",
+        "down-southeast",
+        "down-southwest",
+        "up-northeast",
+        "up-northwest",
+        "up-southeast",
+        "up-southwest"
+      ],
+    },
+  ],
+  drawtype: "json",
+  shapeByType: {
+    "*outside-down-northeast": { base: "game:block/staircorners/staircorner", rotateY: 0, rotateZ: 180,
+    },
+    "*outside-down-northwest": { base: "game:block/staircorners/staircorner", rotateY: 90, rotateZ: 180,
+    },
+    "*outside-down-southeast": { base: "game:block/staircorners/staircorner", rotateY: 270, rotateZ: 180,
+    },
+    "*outside-down-southwest": { base: "game:block/staircorners/staircorner", rotateY: 180, rotateZ: 180,
+    },
+    "*outside-up-northeast": { base: "game:block/staircorners/staircorner", rotateY: 270, rotateX: 0,
+    },
+    "*outside-up-northwest": { base: "game:block/staircorners/staircorner", rotateY: 0, rotateX: 0,
+    },
+    "*outside-up-southeast": { base: "game:block/staircorners/staircorner", rotateY: 180, rotateX: 0,
+    },
+    "*outside-up-southwest": { base: "game:block/staircorners/staircorner", rotateY: 90, rotateX: 0,
+    },
+    "*inside-down-northeast": { base: "game:block/staircorners/staircornerinside", rotateY: 0, rotateZ: 180,
+    },
+    "*inside-down-northwest": { base: "game:block/staircorners/staircornerinside", rotateY: 90, rotateZ: 180,
+    },
+    "*inside-down-southeast": { base: "game:block/staircorners/staircornerinside", rotateY: 270, rotateZ: 180,
+    },
+    "*inside-down-southwest": { base: "game:block/staircorners/staircornerinside", rotateY: 180, rotateZ: 180,
+    },
+    "*inside-up-northeast": { base: "game:block/staircorners/staircornerinside", rotateY: 270, rotateX: 0,
+    },
+    "*inside-up-northwest": { base: "game:block/staircorners/staircornerinside", rotateY: 0, rotateX: 0,
+    },
+    "*inside-up-southeast": { base: "game:block/staircorners/staircornerinside", rotateY: 180, rotateX: 0,
+    },
+    "*inside-up-southwest": { base: "game:block/staircorners/staircornerinside", rotateY: 90, rotateX: 0,
+    },
+  },
+  blockmaterial: "Stone",
+  drops: [
+    { code: "stair-side-quartz-a-up-north"
+    }
+  ],
+  replaceable: 900,
+  lightAbsorption: 99,
+	sounds: {
+    "walk": "walk/stone",
+		byTool: {
+      "Pickaxe": { hit: "block/rock-hit-pickaxe", break: "block/rock-break-pickaxe"
+      }
+    }
+  },
+	textures: {
+		horizontals: {base: "block/stone/quartz/stairs/side" },
+		up: {base: "block/stone/quartz/stairs/top" },
+		down: {base: "block/stone/quartz/stairs/bottom" },
+	},
+  resistance: 3,
+  walkspeedmultiplier: 1.25,
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: true
+  },
+	collisionSelectionBoxesByType: {
+    "*outside-up-northwest": [
+      { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1
+      },
+      { x1: 0, y1: 0.5, z1: 0, x2: 0.5, y2: 1, z2: 0.5
+      },
+    ],
+    "*outside-down-northwest": [
+      { x1: 0, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1
+      },
+      { x1: 0, y1: 0, z1: 0, x2: 0.5, y2: 0.5, z2: 0.5
+      },
+    ],
+    "*outside-down-*": [
+      { x1: 0, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1
+      },
+      { 
+				x1: 0, y1: 0, z1: 0.5, x2: 0.5, y2: 0.5, z2: 1, 
+				rotateYByType: {
+          "*outside-*-north*": 180,
+          "*outside-*-*east": 90,
+          "*outside-*-south*": 0,
+          "*outside-*-*west": 270,
+        }
+      }
+    ],
+    "*outside-up-*": [
+      { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1
+      },
+      { 
+				x1: 0, y1: 0.5, z1: 0.5, x2: 0.5, y2: 1, z2: 1, 
+				rotateYByType: {
+          "*outside-*-north*": 180,
+          "*outside-*-*east": 90,
+          "*outside-*-south*": 0,
+          "*outside-*-*west": 270,
+        }
+      }
+    ],
+    "*inside-down-*": [
+      { x1: 0, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1
+      },
+      { 
+				x1: 0.5, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1, 
+				rotateYByType: {
+          "*inside-*-northwest": 90,
+          "*inside-*-northeast": 0,
+          "*inside-*-southeast": 270,
+          "*inside-*-southwest": 180,
+        }
+      },
+      { 
+				x1: 0.5, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1, 
+				rotateYByType: {
+          "*inside-*-northwest": 90,
+          "*inside-*-northeast": 0,
+          "*inside-*-southeast": 270,
+          "*inside-*-southwest": 180,
+        }
+      },      
+    ],
+    "*inside-up-*": [
+      { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1
+      },
+      { 
+				x1: 0.5, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1, 
+				rotateYByType: {
+          "*inside-*-northwest": 90,
+          "*inside-*-northeast": 0,
+          "*inside-*-southeast": 270,
+          "*inside-*-southwest": 180,
+        }
+      },
+      { 
+				x1: 0, y1: 0.5, z1: 0, x2: 0.5, y2: 1, z2: 0.5, 
+				rotateYByType: {
+          "*inside-*-northwest": 90,
+          "*inside-*-northeast": 0,
+          "*inside-*-southeast": 270,
+          "*inside-*-southwest": 180,
+        }
+      },      
+    ],    
+  }
+}

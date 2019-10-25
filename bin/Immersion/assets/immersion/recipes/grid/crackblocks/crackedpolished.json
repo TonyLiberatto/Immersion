@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "HP",
+	ingredients: {
+		"H": { type: "item", code: "game:hammer-*", isTool: true  },
+		"P": { type: "block", code: "game:rockpolished-*", name: "stone" }
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "block", code: "neolithicmod:crackedrockpolished-{stone}", }
+}

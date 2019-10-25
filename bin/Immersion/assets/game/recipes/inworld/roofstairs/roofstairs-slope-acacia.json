@@ -1,0 +1,86 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-acacia-bark-*-we",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-acacia-bark-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-acacia-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-acacia-bark-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-acacia-debarked-*-we",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-acacia-debarked-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-debarked-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-acacia-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-acacia-debarked-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-debarked-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+]

@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "_LL	LCL	LLL",
+	ingredients: {
+		"C": { type: "item", code: "clay-*" },
+		"L": { type: "item", code: "stone-*", name: "rock", allowedVariants: ["andesite", "chalk", "chert", "conglomerate", "limestone", "claystone", "granite", "sandstone", "shale", "basalt", "peridotite", "phyllite", "slate"] }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "stair-side-cobble-{rock}-up-north", quantity: 2 }
+}

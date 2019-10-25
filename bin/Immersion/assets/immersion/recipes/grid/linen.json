@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "FF	FF",
+	ingredients: {
+		"F": { type: "item", code: "sisal-twine" }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "game:linen-normal-down"  }
+}

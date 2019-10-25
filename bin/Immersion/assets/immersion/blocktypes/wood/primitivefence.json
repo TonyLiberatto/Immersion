@@ -1,0 +1,78 @@
+{
+	code: "primitivefence",
+	behaviors: [{name: "NWOrientable"}],
+	attributes: {
+		handbook: {
+			groupBy: ["primitivefence-*"],
+			extraSectionsByType: {
+				"primitivefence-support-*":[
+					{ title: "handbook-item-sources", text: "Place a Barked Thin Branch vertically down on the ground, right click with any cordage, then right click again with 3 more Bark Thin Branches." }
+					],
+				"primitivefence-midsection-*": [
+					{ title: "handbook-item-sources", text: "Place a Barked Very Thin Branch horizontally , right click with any cordage, then right click again with 3 more Barked Very Thin Branches." }
+					],
+				}
+		},
+	},
+	variantgroups: [
+		{ code: "type", states: ["support", "midsection"]},
+		{ loadFromProperties: "block/wood" },
+		{ code:"orientation", states: ["ns", "we"] },
+	],
+	creativeinventory: { "general": ["primitivefence-*-we"], "decorative": ["primitivefence-*-we"], "neolithicblocks": ["primitivefence-*-we"] },	
+	shapebytype: {
+		"*-support-*-ns": { base: "block/wood/fence/primitivefence-support" },
+		"*-support-*-we": { base: "block/wood/fence/primitivefence-support", rotateY: 90 },
+		"*-midsection-*-ns": { base: "block/wood/fence/primitivefence-midsection" },
+		"*-midsection-*-we": { base: "block/wood/fence/primitivefence-midsection", rotateY: 90 },
+	},
+	blockmaterial: "Wood",
+	texturesbytype: {
+		"*-midsection-*-*": { 
+		"acacia-h": { base: "block/wood/bark/{wood}-h" },
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" }
+		},
+		"*-support-*-*": {
+		"acacia-h": { base: "block/wood/bark/{wood}-h"},
+		"acacia": {base: "block/wood/bark/{wood}" },
+		"rope": { base: "block/rope"},
+		"acaciatop": { base: "block/wood/treetrunk/{wood}"},
+		} 
+		},
+		collisionboxbytype: {
+		"*-midsection-*-*": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1.5, z2: 1 },
+		"*-support-*-*": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1.75, z2: 1 },
+		},
+		selectionboxbytype: {
+		"*-midsection-*-*": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1.5, z2: 1 },
+		"*-support-*-*": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1.75, z2: 1 },
+		},
+	sidesolid: {
+		all: true,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	resistance: 3,
+	lightAbsorption: 0,
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+
+	
+	
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	materialDensity: 600,
+	guiTransform: {
+		translation: { x: 1, y: 0, z: 0 },
+		rotation: { x: -21, y: 16, z: 180 },
+		origin: { x: 0.52, y: 0.75, z: 0.5 },
+		scale: 0.8,
+		rotate: true
+	},
+}

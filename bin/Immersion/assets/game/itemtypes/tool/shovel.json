@@ -1,0 +1,103 @@
+{
+	code: "shovel",
+	attributes: {
+		handbook: {
+			groupBy: ["shovel-*"]
+		}
+	},
+	variantgroups: [
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+	],
+	tool: "shovel",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "game:item/tool/shovel" },
+	heldTpHitAnimation: "shoveldig",
+	textures: {
+		"metal": { base: "game:item/tool/material/{metal}" },
+		"wood": { base: "game:item/tool/material/wood" }
+	},
+	miningspeedbytype: {
+		"shovel-copper": {
+			"soil": 4,
+			"sand": 4,
+			"gravel": 2.6
+		},
+		"shovel-bismuthbronze": {
+			"soil": 5,
+			"sand": 5,
+			"gravel": 3.2
+		},
+		"shovel-tinbronze": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6
+		},
+		"shovel-gold": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6
+		},
+		"shovel-silver": {
+			"soil": 5.4,
+			"sand": 5.4,
+			"gravel": 3.6
+		},
+		"shovel-blackbronze": {
+			"soil": 5.5,
+			"sand": 5.5,
+			"gravel": 3.7
+		},
+		"shovel-iron": {
+			"soil": 6,
+			"sand": 6,
+			"gravel": 4
+		},
+		"shovel-steel": {
+			"soil": 7,
+			"sand": 7,
+			"gravel": 4.4
+		},
+	},
+	attackpowerbytype: {
+		"shovel-copper": 1.25,
+		"shovel-gold": 1.5,
+		"shovel-silver": 1.5,
+		"shovel-bismuthbronze": 1.5,
+		"shovel-tinbronze": 1.75,
+		"shovel-blackbronze": 2,
+		"shovel-iron": 2.25,
+		"shovel-steel": 2.5,
+	},
+	durabilitybytype: {
+		"shovel-gold": 125,
+		"shovel-silver": 125,
+		"shovel-copper": 600,
+		"shovel-blackbronze": 1460,
+		"shovel-bismuthbronze": 1200,
+		"shovel-tinbronze": 1300,
+		"shovel-iron": 2200,
+		"shovel-steel": 3300,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 6, y: -3, z: 0 },
+		rotation: { x: -112, y: -131, z: -180 },
+		scale: 1.74,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.796875, y: -0.53125, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

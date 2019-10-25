@@ -1,0 +1,22 @@
+{
+	code: "clay",
+	class: "ItemClay",
+	maxstacksize: 64,
+	variantgroups: [
+		{ code: "color", states: ["blue", "fire", "red", "brown" ] },
+	],
+	texture: { base: "item/resource/clay/raw-{color}clay" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	combustibleProps: {
+		meltingPoint: 300,
+		meltingDuration: 10,
+		smeltedRatio: 8,
+		smeltingType: "bake",
+		smeltedStack: { type: "block", code: "hardenedclay-{color}" },
+		requiresContainer: false
+	},
+	fpHandTransform: {
+		translation: { x: 0.046875, y: -0.2, z: 0 },
+		rotation: { x: 180, y: 90, z: 15 }
+	}
+}

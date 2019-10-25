@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "H,C,Q",
+	ingredients: {
+        "H": { type: "item", code: "game:hammer-*", isTool: true },
+        "C": { type: "item", code: "game:chisel-*", isTool: true },
+		"Q": { type: "block", code: "game:quartz-plain" }
+	},
+	width: 1,
+	height: 3,
+	output: { type: "block", code: "game:quartzpillar-ud" }
+}

@@ -1,0 +1,65 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:knife-headshaft-flint-oak-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:knife-flint-oak-leatherstrips-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:knife-headshaft-flint-oak-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:knife-flint-oak-sinew-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:knife-headshaft-flint-oak-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:knife-flint-oak-sinew-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

@@ -1,0 +1,79 @@
+{
+	code: "butterfly",
+	variantgroups:  [ { code: "type", states: ["bloodredglider","commonbrimstone", "comma", "largewhite", "peacock", "smallheath", "bluepansy"] } ] ,
+	class: "EntityButterfly",
+	habitat: "Air",
+	hitboxSize: { x: 0.2, y: 0.2 },
+	attributes: {
+		physics: {
+			airMovingStrength: 0.85
+		}
+	},
+	client: {
+		renderer: "Shape",
+		size: 0.2,
+		shape: { base: "entity/air/butterfly" },
+		texture: { base: "entity/butterfly/{type}" },
+		behaviors: [{ code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }],
+		animations: [
+			{
+				code: "feed",
+				animation: "feed",
+				animationSpeed: 1,
+				weight: 1,
+				blendMode: "Average",
+			}
+		]
+	},
+	server: {
+		attributes: {
+			pathfinder: {
+				minTurnAnglePerSec: 18000,
+				maxTurnAnglePerSec: 36000
+			}
+		},
+		behaviors: [
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "despawn", minPlayerDistance: 32, minSeconds: 120 },
+			{
+				code: "taskai",
+				aitasks: [
+					{
+						code: "butterflyfeedonflowers", 
+						priority: 1.2, 
+						movespeed: 0.012,
+						maxHeight: 10,
+						targetDistance: 0.3
+					},
+					{
+						code: "butterflywander", 
+						priority: 1.0, 
+						movespeed: 0.012,
+						maxHeight: 10,
+						targetDistance: 0.3
+					}
+				]
+			}
+		],
+		spawnconditions: {
+			runtime: {
+				group: "passive",
+				maxQuantity: 15,
+				minLightLevel: 18,
+				chance: 0.03,
+				lightLevelType: "MaxTimeOfDayLight",
+				groupSize: { dist: "invexp", avg: 1, var: 3 },
+				minTemp: 5,
+				minRain: 0.35,
+				tryOnlySurface: true,
+				insideBlockCodes: ["flower-*", "tallgrass-*"],
+			}
+		}
+	},
+	sounds: {
+		
+	},
+	attributes: {
+		
+	},
+}

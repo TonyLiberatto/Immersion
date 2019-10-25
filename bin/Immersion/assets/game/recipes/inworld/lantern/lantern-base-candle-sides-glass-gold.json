@@ -1,0 +1,182 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-copper",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-copper-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-brass",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-brass-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-blackbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",	
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-blackbronze-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-bismuth",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-bismuth-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-tinbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-tinbronze-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-bismuthbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",	
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-bismuthbronze-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-molybdochalkos",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-molybdochalkos-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-silver",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-silver-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:metalplate-gold",
+        "Type": "Block",	
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-layer-gold-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

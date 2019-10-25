@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-new-pine-unlit-north",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-fruit",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-bowl-pine-lit-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-new-pine-unlit-south",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-fruit",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-bowl-pine-lit-south",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-new-pine-unlit-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-fruit",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-bowl-pine-lit-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-new-pine-unlit-west",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-fruit",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-bowl-pine-lit-west",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

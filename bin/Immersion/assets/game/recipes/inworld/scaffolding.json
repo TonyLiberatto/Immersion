@@ -1,0 +1,24 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-very-thin-*-debarked-leatherstrips-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:scaffolding",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+     
+]

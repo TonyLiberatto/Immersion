@@ -1,0 +1,14 @@
+{
+	ingredient: { type: "item", code: "flint" },
+	pattern: [
+			"____##____",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"____##____",
+
+		],
+	name: "Flint Hand Hammer",
+	output: { type: "item", code: "hammer-hand-flint"  }
+}

@@ -1,0 +1,87 @@
+{
+	code: "halflog",	
+	attributes: {
+		handbook: {
+			groupBy: ["halflog-*"]
+		},
+	},
+	variantgroups: [		
+		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },		
+		{ code: "rotation", states: ["ud", "ns", "we"] },
+	],
+	creativeinventory: { "general": ["*-ud"], "flora": ["*-ud"], "construction": ["*-ud"], "neolithicflora": ["*-ud"] },
+	drawtype: "json",
+	lightabsorption: 0,
+	sidesolid: {
+		all: false,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	shapeByType: {
+	"halflog-*-ud": {base: "block/wood/halflog"},	
+	"halflog-*-ns": {base: "block/wood/halflog", rotateY: 0, rotateX: 90 },	
+	"halflog-*-we": {base: "block/wood/halflog", rotateZ: 90, rotateX: 90},	
+	 },
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	texturesByType: {
+		"*-ud": {
+			"all": { base: "game:block/wood/bark/{wood}" },
+			"inside-north": { base: "game:block/wood/debarked/{wood}" },
+			"inside-east": { base: "game:block/wood/debarked/{wood}" },
+			"inside-south": { base: "game:block/wood/debarked/{wood}" },
+			"inside-west": { base: "game:block/wood/debarked/{wood}" },
+
+			"up": { base: "game:block/wood/treetrunk/{wood}" },
+			"down": { base: "game:block/wood/treetrunk/{wood}" }
+		},
+		"*-ns": {
+			"all": { base: "game:block/wood/bark/{wood}-h" },
+			"up": { base: "game:block/wood/bark/{wood}" },
+			"down": { base: "game:block/wood/bark/{wood}" },
+
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}" },
+			"inside-down": { base: "game:block/wood/debarked/{wood}" },
+			"inside-west": { base: "game:block/wood/debarked/{wood}" },
+			"inside-east": { base: "game:block/wood/debarked/{wood}" },
+
+
+			"north": { base: "game:block/wood/treetrunk/{wood}" },
+			"south": { base: "game:block/wood/treetrunk/{wood}" }
+		},
+		"*-we": {
+			"all": { base: "game:block/wood/bark/{wood}-h" },
+			"up": { base: "game:block/wood/bark/{wood}-h" },
+
+			"inside-up": { base: "game:block/wood/debarked/{wood}" },
+			"inside-down": { base: "game:block/wood/debarked/{wood}" },
+			"inside-north": { base: "game:block/wood/debarked/{wood}" },
+			"inside-south": { base: "game:block/wood/debarked/{wood}" },
+
+
+			"west": { base: "game:block/wood/treetrunk/{wood}" },
+			"east": { base: "game:block/wood/treetrunk/{wood}" }
+		},
+	},
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	
+	collisionselectionboxbytype: {
+		"halflog-*-ud": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1 },		
+		"halflog-*-ns": { x1: 0, y1: 0, z1: 0, x2: 0.5, y2: 1, z2: 1 },		
+		"halflog-*-we": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 1, z2: 0.5 },		
+		},		
+	combustibleProps: {		
+			burnTemperature: 800,
+			burnDuration: 17,		
+	},
+	maxStackSize: 64,
+	materialDensity: 700
+}

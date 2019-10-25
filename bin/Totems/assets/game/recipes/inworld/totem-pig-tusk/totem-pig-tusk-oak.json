@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-eyes-oak-unlit-north",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-meat",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-tusk-oak-lit-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-eyes-oak-unlit-south",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-meat",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-tusk-oak-lit-south",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-eyes-oak-unlit-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-meat",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-tusk-oak-lit-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-eyes-oak-unlit-west",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-meat",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-tusk-oak-lit-west",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

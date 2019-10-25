@@ -1,0 +1,43 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"maple1": "block/wood/leaves/maple1",
+		"maple": "block/wood/bark/maple"
+	},
+	"elements": [
+		{
+			"name": "trunk",
+			"from": [ 7.0, 0.0, 7.0 ], 
+			"to": [ 9.0, 10.0, 9.0 ], 
+			"faces": {
+				"north": { "texture": "#maple", "uv": [ 10.0, 6.0, 12.0, 16.0 ] },
+				"east": { "texture": "#maple", "uv": [ 3.0, 6.0, 5.0, 16.0 ] },
+				"south": { "texture": "#maple", "uv": [ 12.0, 0.0, 14.0, 10.0 ] },
+				"west": { "texture": "#maple", "uv": [ 12.0, 6.0, 14.0, 16.0 ] },
+				"up": { "texture": "#maple", "uv": [ 1.0, 0.0, 3.0, 2.0 ] },
+				"down": { "texture": "#maple", "uv": [ 1.0, 3.0, 3.0, 5.0 ] }
+			},
+			"children": [
+				{
+					"name": "leaves",
+					"from": [ -3.0, 6.0, -3.0 ], 
+					"to": [ 5.0, 14.0, 5.0 ], 
+					"tintIndex": 1,
+					"renderPass": 1,
+					"faces": {
+						"north": { "texture": "#maple1", "uv": [ 7.0, 8.0, 15.0, 16.0 ] },
+						"east": { "texture": "#maple1", "uv": [ 7.0, 1.0, 15.0, 9.0 ] },
+						"south": { "texture": "#maple1", "uv": [ 7.0, 4.0, 15.0, 12.0 ] },
+						"west": { "texture": "#maple1", "uv": [ 2.0, 5.0, 10.0, 13.0 ] },
+						"up": { "texture": "#maple1", "uv": [ 3.0, 4.0, 11.0, 12.0 ] },
+						"down": { "texture": "#maple1", "uv": [ 8.0, 0.0, 16.0, 8.0 ] }
+					}
+				}
+			]
+		}
+	]}

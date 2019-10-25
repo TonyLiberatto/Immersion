@@ -1,0 +1,67 @@
+{
+	code: "javelin-headshaft",
+	behaviors: [
+		{ name: "HorizontalOrientable" },		
+	],
+
+	variantgroups: [
+		{
+			code: "shaft",
+			states: [ "bamboo-green", "bamboo-brown" ]
+		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		},
+	],
+	shapeByType: {
+		"*-north": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 0
+		},
+		"*-east": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "block/placedtool/javelin-placed",
+			rotateY: 90
+		},
+	},
+	textures: {
+		"bone": { base: "block/bone" },
+		"shaft": { base: "block/wood/planks/{shaft}-side" },
+		"cordage": { base: "block/transparent" },
+
+	},
+	creativeinventory: { "general": [ "" ] },
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

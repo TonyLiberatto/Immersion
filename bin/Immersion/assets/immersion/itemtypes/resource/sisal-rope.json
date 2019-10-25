@@ -1,0 +1,11 @@
+{
+  code: "sisal-rope",
+  texture: { base: "item/resource/sisal-rope" },
+  creativeinventory: {
+    "general": [ "*" ],
+    "items": [ "*" ],
+    "neolithicitems": [ "*" ]
+  },
+  maxstacksize: 64,
+  materialDensity: 200
+}

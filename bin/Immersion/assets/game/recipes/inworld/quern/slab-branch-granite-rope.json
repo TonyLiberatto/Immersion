@@ -1,0 +1,123 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-granite-acacia-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-granite-acacia-debarked-rope",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-granite-birch-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-granite-birch-debarked-rope",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-granite-kapok-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-granite-kapok-debarked-rope",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-granite-maple-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-granite-maple-debarked-rope",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-granite-oak-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-granite-oak-debarked-rope",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-granite-pine-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-granite-pine-debarked-rope",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ 
+]

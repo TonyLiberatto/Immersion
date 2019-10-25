@@ -1,0 +1,54 @@
+{
+	code: "chisel",
+	class: "ItemChisel",
+	attributes: {
+		microBlockChiseling: true,
+		handbook: {
+			groupBy: ["chisel-*"]
+		}
+	},
+	variantgroups: [
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron" ] },
+	],
+	shape: { base: "item/tool/chisel" },
+	tool: "Chisel",
+	enabled: true,
+	heldTpHitAnimation: "breaktool",
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	textures: {
+		metal: { base: "block/metal/ingot/{material}" },
+		"wood": { base: "item/tool/material/wood" } 
+	},
+	fpHandTransform: {
+		translation: { x: -0.1, y: -0.1, z: 0 },
+		rotation: { x: 67, y: 94, z: -30 },
+		origin: { x: 0.5, y: 0.2, z: 0.5 },
+		scale: 1.36
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -42, z: -54 },
+		origin: { x: 0.56, y: 0.5, z: 0.6 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: -0.6, z: -0.55 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 0.76
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.45, z: 0.5 },
+		scale: 3.6
+	},
+	durabilitybytype: {
+		"chisel-copper": 600,
+		"chisel-blackbronze": 1460,
+		"chisel-bismuthbronze": 1200,
+		"chisel-tinbronze": 1300,
+		"chisel-iron": 2200,
+		"chisel-steel": 3300,
+	}
+}

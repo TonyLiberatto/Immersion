@@ -1,0 +1,18 @@
+{
+	code: "giantreedsroot",
+	class: "ItemGiantReedsRoot",
+	texture: { base: "item/resource/giantreedsroot" },
+  creativeinventory: {"general": [ "*" ],"items": [ "*" ],"neolithicitems": [ "*" ],"neolithicflora": ["*"] },
+  combustibleProps: {
+		meltingPoint: 150,
+		maxTemperature: 300,
+		meltingDuration: 30,
+		smeltingType: "cook",
+		smeltedRatio: 1,
+		smeltedStack: { type: "item", code: "cookedgiantreedsroot" },
+		requiresContainer: false
+	},
+	maxstacksize: 64,
+	materialDensity: 100,
+
+}

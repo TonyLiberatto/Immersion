@@ -1,0 +1,187 @@
+﻿{
+  code: "tropicalfruits",
+  behaviorsByType: {
+    "*": [
+      { name: "HorizontalOrientable" },
+      { name: "Unstable" }
+    ],
+  },
+  variantgroups: [
+    {
+      code: "type",
+      states: [ "bananna", "coconut", "coconutbroken", "coconutshell", "coconutslice" ]
+    },
+    { loadFromProperties: "abstract/horizontalorientation" }
+  ],
+  creativeinventory: {
+    "general": [ "*-north" ],
+    "flora": [ "*-north" ]
+  },
+  randomDrawOffset: false,
+  shapeByType: {
+    "*-north": {
+      base: "block/flora/palm/fruits/{type}",
+      rotateY: 180
+    },
+    "*-east": {
+      base: "block/flora/palm/fruits/{type}",
+      rotateY: 90
+    },
+    "*-south": {
+      base: "block/flora/palm/fruits/{type}",
+      rotateY: 0
+    },
+    "*-west": {
+      base: "block/flora/palm/fruits/{type}",
+      rotateY: 270
+    },
+  },
+  textures: {
+    fruits: { base: "block/flora/palm/fruits" },
+  },
+  blockmaterial: "Wood",
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  replaceable: 500,
+  resistance: 4.5,
+  sounds: {
+    "place": "game:block/planks",
+    "walk": "game:walk/wood",
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    byTool: {
+      "Axe": {
+        hit: "game:block/chop",
+        break: "game:block/planks"
+      }
+    }
+  },
+  combustiblePropsByType: {
+    "*": {
+      burnTemperature: 800,
+      burnDuration: 78,
+    },
+  },
+  maxStackSize: 64,
+  materialDensity: 700,
+  rainPermeable: true,
+  materialDensity: 200,
+  lightAbsorption: 0,
+  collisionSelectionBoxByType: {
+    "*-coconut-*": {
+      x1: 0.375,
+      y1: 0,
+      z1: 0.375,
+      x2: 0.625,
+      y2: 0.275,
+      z2: 0.625
+    },
+    "*-coconutshell-*": {
+      x1: 0.3375,
+      y1: 0,
+      z1: 0.3572,
+      x2: 0.65,
+      y2: 0.4375,
+      z2: 0.6767
+    },
+    "*-bananna-*": {
+      x1: 0.4625,
+      y1: 0,
+      z1: 0.4,
+      x2: 0.5375,
+      y2: 0.1375,
+      z2: 0.65
+    },
+    "*-coconutslice-*": {
+      x1: 0.4,
+      y1: 0,
+      z1: 0.4077,
+      x2: 0.5875,
+      y2: 0.0375,
+      z2: 0.6012
+    },
+    "*-coconutbroken-*": {
+      x1: 0.1399,
+      y1: 0,
+      z1: 0.0875,
+      x2: 0.8875,
+      y2: 0.0375,
+      z2: 0.8625
+    }
+  },
+  guiTransformByType: {
+    "*-bananna*": {
+      translation: {
+        x: 16.1,
+        y: -51.1,
+        z: 0
+      },
+      rotation: {
+        x: -40,
+        y: -28,
+        z: -15
+      },
+      scale: 6
+    },
+    "*-coconut*": {
+      translation: {
+        x: 6.1,
+        y: -18.1,
+        z: 5
+      },
+      rotation: {
+        x: -40,
+        y: -28,
+        z: -15
+      },
+      scale: 3.04
+    },
+    "*-coconutbroken*": {
+      translation: {
+        x: 6.1,
+        y: -18.1,
+        z: 5
+      },
+      rotation: {
+        x: -40,
+        y: -28,
+        z: -15
+      },
+      scale: 2.22
+    }
+  },
+  tpHandTransformByType: {
+    "*": {
+      translation: {
+        x: -0.39,
+        y: -0.01,
+        z: -0.56
+      },
+      rotation: {
+        x: 4,
+        y: -95,
+        z: -25
+      },
+      scale: 1.3
+    }
+  },
+  fpHandTransformByType: {
+    "*": {
+      translation: {
+        x: -0.7,
+        y: 0.7,
+        z: 0.9
+      },
+      rotation: {
+        x: -66,
+        y: -20,
+        z: 0
+      },
+      scale: 1.65
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+	code: "sword-flakes",
+	behaviors: [ 
+		{name: "HorizontalOrientable" },		
+	],
+	variantgroups: [
+		{ code: "stone", states: ["flint", "obsidian" ] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	maxstacksize: 64,
+	textures: {
+		"stone": { base: "item/tool/material/{stone}"},		
+		"shaft": { base: "block/transparent" },
+		"cordage": { base: "block/transparent" },
+	},
+	shapeByType: { 
+		"*-north": { base: "block/placedtool/primitive-sword-placed", rotateY: 0 },
+		"*-east": { base: "block/placedtool/primitive-sword-placed", rotateY: 270 },
+		"*-south": { base: "block/placedtool/primitive-sword-placed", rotateY: 180 },
+		"*-west": { base: "block/placedtool/primitive-sword-placed", rotateY: 90 },
+		},
+	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "neolithicitems": ["*-north"]  },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 0.5,
+	lightAbsorption: 0,
+	guiTransform: {
+		rotation: { x: -82, y: -30, z: 0 },
+		origin: { x: 0.4, y: 0, z: 0.4 },
+		scale: 2.09
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

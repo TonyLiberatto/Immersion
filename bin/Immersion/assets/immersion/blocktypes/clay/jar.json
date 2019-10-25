@@ -1,0 +1,54 @@
+{
+	code: "jar",
+	variantgroups: [
+		{ code:"size", states: ["smallest", "small", "medium", "large", "largest"] },
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["raw", "burned" ] }
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["jar-*"]
+		},
+	},
+	creativeinventory: { "general": ["jar-*"], "neolithicdeco": ["jar-*"] },
+	shape: { base: "block/clay/jar/{size}" },
+  texturesByType: {
+    "*-burned" : {
+      sides: { base : "block/clay/jars/{size}/{color}" },
+      vertical: { base : "block/clay/{color}-burned" },
+    },
+    "*-raw" : {
+      sides: { base : "block/clay/{color}-raw" },
+      vertical: { base : "block/clay/{color}-raw" },
+    },
+  },
+	drawtype: "json",
+	sidesolid: { all: true },
+	sideopaque: { all: false },
+	
+	blockmaterial: "Ceramic",
+	replaceable: 600,
+	resistance: 2.5,
+	lightAbsorption: 0,
+	combustiblePropsByType: {
+		"jar-*-raw": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "jar-{size}-{color}-burned" },
+			requiresContainer: false
+		}
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionSelectionboxbytype: {
+		"jar-largest-*": { x1: 0.2024, y1: 0, z1: 0.15, x2: 0.825, y2: 1, z2: 0.8125 },
+	  "jar-large-*": { x1: 0.2661, y1: 0, z1: 0.2832, x2: 0.7654, y2: 0.7863, z2: 0.7846 },
+    "jar-medium-*": { x1: 0.2649, y1: 0, z1: 0.2649, x2: 0.7676, y2: 0.6899, z2: 0.7651 },
+    "jar-small-*": { x1: 0.3125, y1: 0, z1: 0.2988, x2: 0.6875, y2: 0.6935, z2: 0.6779 },
+    "jar-smallest-*": { x1: 0.2988, y1: 0, z1: 0.3, x2: 0.675, y2: 0.6375, z2: 0.675 },
+	},
+
+}

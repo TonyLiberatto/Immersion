@@ -1,0 +1,65 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slaughteringaxe-headshaft-basalt-maple-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:slaughteringaxe-basalt-maple-leatherstrips-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slaughteringaxe-headshaft-basalt-maple-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:slaughteringaxe-basalt-maple-sinew-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slaughteringaxe-headshaft-basalt-maple-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:slaughteringaxe-basalt-maple-sinew-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

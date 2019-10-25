@@ -1,0 +1,37 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 0.0, 0.0, 6.5 ], 
+			"to": [ 2.0, 16.0, 9.5 ], 
+			"faces": {
+				"north": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+				"east": { "texture": "#wood", "uv": [ 2.0, 0.0, 5.0, 16.0 ] },
+				"south": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+				"west": { "texture": "#wood", "uv": [ 2.0, 0.0, 5.0, 16.0 ] },
+				"up": { "texture": "#wood", "uv": [ 5.0, 0.0, 7.0, 3.0 ] },
+				"down": { "texture": "#wood", "uv": [ 6.0, 2.0, 8.0, 5.0 ] }
+			}
+		},
+		{
+			"name": "Cube5",
+			"from": [ 14.0, 0.0, 6.5 ], 
+			"to": [ 16.0, 16.0, 9.5 ], 
+			"faces": {
+				"north": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+				"east": { "texture": "#wood", "uv": [ 2.0, 0.0, 5.0, 16.0 ] },
+				"south": { "texture": "#wood", "uv": [ 0.0, 0.0, 2.0, 16.0 ] },
+				"west": { "texture": "#wood", "uv": [ 2.0, 0.0, 5.0, 16.0 ] },
+				"up": { "texture": "#wood", "uv": [ 5.0, 0.0, 7.0, 3.0 ] },
+				"down": { "texture": "#wood", "uv": [ 6.0, 2.0, 8.0, 5.0 ] }
+			}
+		}
+	]}

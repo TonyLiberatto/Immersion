@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-bowl-birch-unlit-north",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-vegetable",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-eyes-birch-lit-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-bowl-birch-unlit-south",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-vegetable",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-eyes-birch-lit-south",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-bowl-birch-unlit-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-vegetable",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-eyes-birch-lit-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:totem-pig-bowl-birch-unlit-west",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "totems:offering-bowl-vegetable",
+        "Type": "Item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-eyes-birch-lit-west",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

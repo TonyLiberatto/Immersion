@@ -1,0 +1,10 @@
+{
+	code: "offering-bowl",
+	creativeinventory: { "general": ["*"], "totems": ["*"] },
+	maxstacksize: 16,
+	materialDensity: 2,
+	variantgroups: [
+		{ code: "type", states: ["bread", "fruit", "vegetable", "meat", "empty" ] },
+	],
+	texture: { base: "item/offering-bowl/{type}" },
+}

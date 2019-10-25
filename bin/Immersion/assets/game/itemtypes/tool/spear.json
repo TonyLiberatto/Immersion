@@ -1,0 +1,75 @@
+{
+	code: "spear",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	variantgroups: [
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron"] },
+	],
+	shape: { base: "item/tool/spear" },
+	heldTpHitAnimation: "spearhit",
+	textures: {
+		"metal": { base: "item/tool/material/{metal}" },
+		"wood": { base: "item/tool/material/wood" }
+	},
+	attackRange: 3.5,
+	attackpowerbytype: {
+		"spear-copper": 2.5,
+		"spear-gold": 3,
+		"spear-silver": 3,
+		"spear-bismuthbronze": 3.5,
+		"spear-tinbronze": 3.5,
+		"spear-blackbronze": 4,
+		"spear-iron": 5,
+		"spear-steel": 6,
+	},
+	"__comment": "Thrown damage",
+	attributes: {
+		damageByType: {
+			"*-copper": 5.75,
+			"*-gold": 6,
+			"*-silver": 6,
+			"*-bismuthbronze": 6.5,
+			"*-tinbronze": 7.5,
+			"*-blackbronze": 8,
+			"*-iron": 9,
+			"*-steel": 10,
+		},
+		spearEntityCode: "spear-metal",
+		handbook: {
+			groupBy: ["spear-*"]
+		}
+	},
+	durabilitybytype: {
+		"spear-gold": 125,
+		"spear-silver": 125,
+		"spear-copper": 600,
+		"spear-blackbronze": 1460,
+		"spear-bismuthbronze": 1200,
+		"spear-tinbronze": 1300,
+		"spear-iron": 2200,
+		"spear-steel": 3300,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.3, z: 0 },
+		rotation: { x: -85, y: 0, z: 75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		rotation: { x: 90, y: -45, z: -35 },
+		origin: { x: 0.6, y: -0.8, z: 0.55 },
+		scale: 1.4299
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.7, y: -0.7, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

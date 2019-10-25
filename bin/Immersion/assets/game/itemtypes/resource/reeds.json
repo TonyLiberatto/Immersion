@@ -1,0 +1,16 @@
+{
+	code: "reeds",
+	texture: { base: "item/resource/reeds" },
+  creativeinventory: {
+    "general": ["*"],
+    "items": ["*"],
+    "neolithicitems": ["*"],
+    "neolithicflora": ["*"]
+  },
+	maxstacksize: 64,
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 4,
+	},
+	materialDensity: 100,
+}

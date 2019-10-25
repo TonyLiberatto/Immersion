@@ -1,0 +1,182 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-copper-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-copper-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-copper-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-brass-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-brass-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-brass-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-blackbronze-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-blackbronze-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-blackbronze-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-bismuth-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-bismuth-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-bismuth-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-tinbronze-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-tinbronze-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-tinbronze-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-bismuthbronze-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-bismuthbronze-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-bismuthbronze-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-molybdochalkos-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-molybdochalkos-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-molybdochalkos-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-silver-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-silver-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-silver-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:sheet-lantern-glass-gold-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glasslanternframe-gold-down",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:glasslantern-gold-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

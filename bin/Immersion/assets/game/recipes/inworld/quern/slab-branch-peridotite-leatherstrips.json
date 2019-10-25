@@ -1,0 +1,123 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-peridotite-acacia-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-peridotite-acacia-debarked-leatherstrips",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-peridotite-birch-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-peridotite-birch-debarked-leatherstrips",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-peridotite-kapok-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-peridotite-kapok-debarked-leatherstrips",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-peridotite-maple-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-peridotite-maple-debarked-leatherstrips",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-peridotite-oak-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-peridotite-oak-debarked-leatherstrips",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-peridotite-pine-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-peridotite-pine-debarked-leatherstrips",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ 
+]

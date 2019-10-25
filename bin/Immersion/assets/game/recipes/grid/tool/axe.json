@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "T	S",
+	ingredients: {
+		"T": { type: "item", code: "axehead-*", allowedVariants: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ],  name: "metal" },
+		"S": {type: "block", code: "immersion:branch-very-thin-*-debarked-ud" },
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "axe-{metal}", quantity: 1  }
+}

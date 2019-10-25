@@ -1,0 +1,149 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-large-bone",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-bone-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-acacia-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-acacia-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-birch-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-birch-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-kapok-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-kapok-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-maple-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-maple-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-oak-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-oak-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:axe-head-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-pine-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:axe-headshaft-granite-pine-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

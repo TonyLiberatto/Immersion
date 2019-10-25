@@ -1,0 +1,300 @@
+{
+  code: "chicken-rooster",
+  class: "EntityAgent",
+  hitboxSize: {
+    x: 0.5,
+    y: 0.6
+  },
+  deadHitboxSize: {
+    x: 0.5,
+    y: 0.25
+  },
+  eyeHeight: 0.5,
+  variantgroups: [
+		{ code: "color", states: ["ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland"] } ],
+  drops: [
+		{
+			type: "block",
+			code: "immersion:dead-chicken-rooster-{color}",
+		},
+		{
+			type: "item", 
+			code: "feather", 
+			quantity: { avg: 6, var: 1 } 
+		},
+	],
+  client: {
+    renderer: "Shape",
+    shape: { base: "entity/land/chicken/rooster" },
+    textures: {all: { base: "entity/chicken/rooster/{color}" } },
+    behaviors: [
+      { code: "repulseagents" },
+      { code: "featherpluck" },
+      {
+        code: "controlledphysics",
+        stepHeight: 1.0001
+      },
+      { code: "interpolateposition" },
+     
+    ],
+    animations: [
+      {
+        code: "hurt",
+        animation: "hurt",
+        animationSpeed: 2.2,
+        weight: 10,
+        blendMode: "AddAverage"
+      },
+    ]
+  },
+  server: {
+    attributes: {
+      pathfinder: {
+        minTurnAnglePerSec: 720,
+        maxTurnAnglePerSec: 1440
+      }
+    },
+    behaviors: [
+      { 
+        code: "damagenotify",
+        notifyRange: 10.00
+      },
+      { code: "repulseagents" },
+      { code: "featherpluck" },
+      {
+        code: "controlledphysics",
+        stepHeight: 1.0001
+      },
+      {
+        code: "despawn",
+        minPlayerDistance: 8,
+        belowLightLevel: 8,
+        minSeconds: 300
+      },
+      {
+        code: "health",
+        currenthealth: 3,
+        maxhealth: 3
+      },
+      
+      { code: "breathe" },
+      {
+        code: "emotionstates",
+        states: [
+          {
+            code: "aggressiveondamage",
+            duration: 20,
+            chance: 0.4,
+            slot: 0,
+            prority: 2,
+            accumType: "noaccum"
+          },
+          {
+            code: "fleeondamage",
+            duration: 10,
+            chance: 1,
+            slot: 0,
+            prority: 1,
+            accumType: "max"
+          }
+        ],
+      },
+      {
+        code: "taskai",
+        aitasks: [
+          {
+            code: "meleeattack",
+            entityCodes: [ "player", "wolf-*", "fox-*", "hyena-*", "panther-*" ],
+            priority: 2,
+            damage: 0.25,
+            mincooldown: 2500,
+            maxcooldown: 3500,
+            attackDurationMs: 2000,
+            damagePlayerAtMs: 600,
+            animation: "Attack",
+            animationSpeed: 1.5,
+            whenInEmotionState: "aggressiveondamage",
+            sound: "creature/chicken/rooster-alarm2"
+          },
+					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: false,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+          {
+            code: "fleeentity",
+            entityCodes: [ "player", "wolf-*", "fox-*", "hyena-*", "panther-*" ],
+            priority: 1.8,
+            movespeed: 0.02,
+            seekingRange: 7,
+            animation: "Run",
+            animationSpeed: 2,
+            sound: "creature/chicken/hurt",
+            whenInEmotionState: "fleeondamage"
+          },
+          {
+            code: "seekentity",
+            priority: 1.7,
+            mincooldown: 1000,
+            maxcooldown: 1500,
+            seekingRange: 25,
+            movespeed: 0.025,
+            animation: "Run2",
+            animationSpeed: 2,
+            whenInEmotionState: "aggressiveondamage",
+            sound: "creature/chicken/rooster-alarm"
+          },
+          {
+            code: "fleeentity",
+            entityCodes: [ "player", "wolf-*", "fox-*" ],
+            priority: 1.5,
+            movespeed: 0.02,
+            seekingRange: 7,
+            animation: "Run",
+            animationSpeed: 2.5,
+            sound: "creature/chicken/hurt",
+          },
+          {
+            code: "getoutofwater",
+            priority: 1.4,
+            movespeed: 0.015,
+            animation: "Run",
+            sound: "creature/chicken/hen-flee"
+          },
+          {
+            code: "seekfoodandeat",
+            priority: 1.3,
+            eatSound: "player/eat",
+            eatTime: 1.5,
+            movespeed: 0.0025,
+            animation: "Walk",
+            mincooldownHours: 1,
+            maxcooldownHours: 4,
+            doConsumePortion: false
+          },
+          {
+            code: "idle",
+            priority: 1.2,
+            minduration: 2500,
+            maxduration: 2500,
+            mincooldown: 2000,
+            maxcooldown: 10000,
+            animation: "Eat"
+          },
+          {
+            code: "idle",
+            priority: 1.1,
+            minduration: 1000,
+            maxduration: 3000,
+            mincooldown: 2000,
+            maxcooldown: 30000,
+            animation: "Idle"
+          },
+          {
+            code: "idle",
+            priority: 1.3,
+            minduration: 4680,
+            maxduration: 4680,
+            mincooldown: 80000,
+            maxcooldown: 500000,
+            animation: "RoosterCall",
+            animationSpeed: 1,
+            sound: "creature/chicken/rooster-call",
+            soundRange: 48
+          },
+          {
+            code: "wander",
+            priority: 1.0,
+            movespeed: 0.0035,
+            animation: "Walk",
+            wanderChance: 0.02,
+            preferredLightLevel: 19
+          },
+          {
+            code: "lookaround",
+            priority: 0.5
+          }
+        ]
+      }
+    ],
+    spawnconditions: {
+      worldgen: {
+        TriesPerChunk: {
+          avg: 0.015,
+          var: 0
+        },
+        tryOnlySurface: true,
+        minLightLevel: 12,
+        groupSize: {
+          dist: "verynarrowgaussian",
+          avg: 4,
+          var: 5
+        },
+        insideBlockCodes: [ "air", "tallgrass-*" ],
+        minTemp: -2,
+        minRain: 0.32,
+        minShrubs: 0.5,
+        companionsByType: {
+					"chicken-rooster-ashgrey":
+						["chicken-hen-ashgrey", "chicken-chick-ashgrey"],
+					"chicken-rooster-black":
+						["chicken-hen-black", "chicken-chick-black"],
+					"chicken-rooster-brown":
+						["chicken-hen-brown", "chicken-chick-brown"],
+					"chicken-rooster-cream":
+						["chicken-hen-cream", "chicken-chick-cream"],
+					"chicken-rooster-golden":
+						["chicken-hen-golden", "chicken-chick-golden"],
+					"chicken-rooster-savanna":
+						["chicken-hen-savanna", "chicken-chick-savanna"],
+					"chicken-rooster-white":
+						["chicken-hen-white", "chicken-chick-white"],
+					"chicken-rooster-woodland":
+						["chicken-hen-woodland", "chicken-chick-woodland"],
+				}
+      },
+      runtime: {
+        group: "passive",
+        tryOnlySurface: true,
+        chance: 0.003,
+        maxQuantity: 4,
+        minLightLevel: 12,
+        groupSize: {
+          dist: "verynarrowgaussian",
+          avg: 4,
+          var: 5
+        },
+        insideBlockCodes: [ "air", "tallgrass-*" ],
+        minTemp: -2,
+        minRain: 0.32,
+        minShrubs: 0.5,
+        companionsByType: {
+					"chicken-rooster-ashgrey":
+						["chicken-hen-ashgrey", "chicken-chick-ashgrey"],
+					"chicken-rooster-black":
+						["chicken-hen-black", "chicken-chick-black"],
+					"chicken-rooster-brown":
+						["chicken-hen-brown", "chicken-chick-brown"],
+					"chicken-rooster-cream":
+						["chicken-hen-cream", "chicken-chick-cream"],
+					"chicken-rooster-golden":
+						["chicken-hen-golden", "chicken-chick-golden"],
+					"chicken-rooster-savanna":
+						["chicken-hen-savanna", "chicken-chick-savanna"],
+					"chicken-rooster-white":
+						["chicken-hen-white", "chicken-chick-white"],
+					"chicken-rooster-woodland":
+						["chicken-hen-woodland", "chicken-chick-woodland"],
+				}
+      }
+    }
+  },
+  sounds: {
+    hurt: "creature/chicken/hurt",
+    death: "creature/chicken/hurt"
+  },
+}

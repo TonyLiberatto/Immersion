@@ -1,0 +1,82 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:bowl-fat-blue",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:torch-up",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:oillampblue-up",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:bowl-fat-brown",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:torch-up",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:oillampbrown-up",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:bowl-fat-red",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:torch-up",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:oillampred-up",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:bowl-fat-fire",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:torch-up",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:oillampfire-up",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

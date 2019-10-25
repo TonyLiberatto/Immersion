@@ -1,0 +1,142 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-aged-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-aged-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-acacia-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-acacia-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-birch-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-birch-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-kapok-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-kapok-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-maple-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-maple-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-oak-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-oak-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:halflog-pine-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "game:choppingblock-pine-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+]

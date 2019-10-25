@@ -1,0 +1,12 @@
+{
+	code: "animal",
+	maxstacksize: 64,
+	attributesByType: {
+		"animal-large-bone":{ knappable: true }
+	},
+	variantgroups: [
+		{ code: "type", states: ["large-bone", "tendon", "horn", "leatherstrips", "small-bones"] },
+	],
+	texture: { base: "item/resource/animal/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+}

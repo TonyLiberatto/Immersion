@@ -1,0 +1,42 @@
+{
+	code: "gate-gap",
+	behaviors: [{name: "RotateNinety"}],
+    variantgroups: [
+		{ code: "type", states: ["n", "w"] }
+    ],
+    creativeinventory: { "general": ["gate-gap-n"], "construction": ["gate-gap-n"], "neolithicdeco": ["gate-gap-n"] },
+	sidesolidByType: {	
+		"*-n": { all:false, east: true , west: true },
+		"*-w": { all:false, north:true, south: true }
+	},
+	sideopaque: {all: false},
+	shapebytype: { 
+		"*-n": { base: "block/wickerfence/gate", rotateY: 0 },
+		"*-w": { base: "block/wickerfence/gate", rotateY: 90 }
+	},
+	blockmaterial: "Wood",
+	drawtype: "json",
+	textures: {
+		all: { base: "block/plant/wicker/wood" },
+	},
+	lightAbsorption: 1,
+    resistance: 1.5,
+    replaceable: 900,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+    materialDensity: 600,
+    collisionboxbytype: {
+		"*-n": null,
+		"*-w": null
+    },
+	selectionboxbytype: {
+		"*-n": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1, z2: 0.6 },
+		"*-w": { x1: 0.4, y1: 0, z1: 0, x2: 0.6, y2: 1, z2: 1 }
+	},
+}

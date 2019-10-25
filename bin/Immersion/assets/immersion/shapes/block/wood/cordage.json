@@ -1,0 +1,28 @@
+{
+	"editor": {
+		"allAngles": true,
+		"singleTexture": true
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		
+	},
+	"elements": [
+		{
+			"name": "Cube3",
+			"from": [ 6.5, 0.0, 6.5 ], 
+			"to": [ 9.5, 2.5, 9.5 ], 
+			"autoUnwrap": false,
+			"uv": [ 1.0, 1.0 ],
+			"rotationOrigin": [ 4.5, 0.0, -3.5 ],
+			"faces": {
+				"north": { "texture": "#cordage", "uv": [ 8.0, 8.0, 0.0, 0.0 ], "autoUv": false },
+				"east": { "texture": "#cordage", "uv": [ 8.0, 8.0, 0.0, 0.0 ], "autoUv": false },
+				"south": { "texture": "#cordage", "uv": [ 8.0,8.0, 0.0, 0.0 ], "autoUv": false },
+				"west": { "texture": "#cordage", "uv": [ 8.0, 8.0, 0.0, 0.0 ], "autoUv": false },
+				"up": { "texture": "#cordage", "uv": [ 8.0, 8.0, 0.0, 0.0 ], "autoUv": false },
+				"down": { "texture": "#cordage", "uv": [ 8.0, 8.0, 0.0, 0.0 ], "autoUv": false }
+			}
+		}
+	]}

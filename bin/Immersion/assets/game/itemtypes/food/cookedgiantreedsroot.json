@@ -1,0 +1,20 @@
+{
+	code: "cookedgiantreedsroot",
+	maxstacksize: 64,
+	texture: { base: "item/food/cookedgiantreedsroot" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	nutritionPropsByType: {
+		"*": { satiety: 100, health: 1.5, foodcategory: "Vegetable" },
+	},
+	materialDensity: 600,
+
+	transitionablePropsByType: {
+		"*": [{
+			type: "Perish",
+			freshHours: { avg: 672 },
+			transitionHours: { avg: 120 },
+			transitionedStack: { type: "item", code: "rot" },
+			transitionRatio: 0.5
+		}],
+	},
+}

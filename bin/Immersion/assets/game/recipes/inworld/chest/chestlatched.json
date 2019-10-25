@@ -1,0 +1,191 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-bamboo-brown-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-bamboo-brown-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-bamboo-green-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-bamboo-green-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-aged-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-aged-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-acacia-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-birch-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-birch-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-kapok-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-kapok-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-maple-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-maple-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-oaks-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "block",
+		"StackSize": 2
+    },
+    "Makes": [{
+       "Code": "immersion:chestlatched-oaks-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestsides-pine-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Block",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:chestlatched-pine-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

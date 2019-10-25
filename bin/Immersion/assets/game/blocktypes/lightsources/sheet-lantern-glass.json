@@ -1,0 +1,54 @@
+{
+	code: "sheet-lantern-glass",
+	variantgroups: [		
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"layer", states: ["plain", "gold", "silver" ] },		
+	],
+	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	blockmaterial: "Glass",
+	faceCullMode: "MergeMaterial",
+	lightAbsorption: 0,	
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	drawtype: "json",
+	shape: { base: "block/lightsources/glass-lantern" },
+	texturesByType: {
+		"sheet-lantern-glass-*-plain": {
+			"base": { base: "block/metal/lantern/{metal}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/{metal}" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/glass/frame" },
+		},
+		"sheet-lantern-glass-*-gold": {
+			"base": { base: "block/metal/lantern/{metal}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/glass/frame" },
+		},
+		"sheet-lantern-glass-*-silver": {
+			"base": { base: "block/metal/lantern/{metal}" },
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" },
+			"Glasscase": { base: "block/glass/frame" },
+		},
+	},
+	replaceable: 1000,
+	resistance: 1,
+	sounds: {
+		"place": "player/buildhigh",
+		"break": "block/glass"
+	}
+}

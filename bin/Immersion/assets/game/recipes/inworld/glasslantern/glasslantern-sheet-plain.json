@@ -1,0 +1,182 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-copper-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-copper-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-copper-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-brass-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-brass-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-brass-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-blackbronze-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-blackbronze-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-blackbronze-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-bismuth-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-bismuth-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-bismuth-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-tinbronze-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-tinbronze-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-tinbronze-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-bismuthbronze-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-bismuthbronze-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-bismuthbronze-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-molybdochalkos-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-molybdochalkos-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-molybdochalkos-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-silver-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-silver-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-silver-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:metalsheet-gold-down",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-gold-plain-up",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:sheet-lantern-gold-plain",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

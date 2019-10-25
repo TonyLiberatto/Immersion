@@ -1,0 +1,77 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "FaceUntinted",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 22.6, 64.0, 0.0 ], 
+			"shade": false,
+			"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+			"rotationY": -45.0,
+			"faces": {
+				"north": { "texture": "#untinted", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"east": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"south": { "texture": "#untinted", "uv": [ 16.0, 0.0, 0.0, 16.0 ] },
+				"west": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+			}
+		},
+		{
+			"name": "Face2Untinted",
+			"from": [ -3.3, 0.0, 8.0 ], 
+			"to": [ 19.3, 64.0, 8.0 ], 
+			"shade": false,
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"rotationY": 45.0,
+			"faces": {
+				"north": { "texture": "#untinted", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"east": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"south": { "texture": "#untinted", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"west": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+			}
+		},
+		{
+			"name": "FaceTinted",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 22.6, 64.0, 1.0 ], 
+			"shade": false,
+			"tintIndex": 1,
+			"rotationOrigin": [ 0.0, 0.0, 0.0 ],
+			"rotationY": -45.0,
+			"faces": {
+				"north": { "texture": "#tinted", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"east": { "texture": "#-1", "uv": [ 0.0, 0.0, 1.0, 64.0 ], "enabled": false },
+				"south": { "texture": "#-1", "uv": [ 0.0, 0.0, 22.5, 64.0 ], "enabled": false },
+				"west": { "texture": "#-1", "uv": [ 0.0, 0.0, 1.0, 64.0 ], "enabled": false },
+				"up": { "texture": "#-1", "uv": [ 0.0, 0.0, 22.5, 1.0 ], "enabled": false },
+				"down": { "texture": "#-1", "uv": [ 0.0, 0.0, 22.5, 1.0 ], "enabled": false }
+			}
+		},
+		{
+			"name": "Face2Tinted",
+			"from": [ -3.3, 0.0, 8.0 ], 
+			"to": [ 19.3, 64.0, 8.0 ], 
+			"shade": false,
+			"tintIndex": 1,
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"rotationY": 45.0,
+			"faces": {
+				"north": { "texture": "#tinted", "uv": [ 16.0, 0.0, 0.0, 16.0 ] },
+				"east": { "texture": "#tinted", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"south": { "texture": "#tinted", "uv": [ 0.0, 0.0, 16.0, 16.0 ] },
+				"west": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"up": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false },
+				"down": { "texture": "#-1", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false }
+			}
+		}
+	]}

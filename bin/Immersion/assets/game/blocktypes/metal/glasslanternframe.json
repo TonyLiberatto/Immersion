@@ -1,0 +1,67 @@
+{
+	code: "glasslanternframe",
+	class: "BlockSimpleCoating",
+	storageFlags: 5,	
+	attributes: {
+		handbook: {
+			groupBy: ["glasslanternframe-*"]
+		}
+	},
+	variantgroups: [
+		{  code:"metal", states: ["copper", "brass", "tinbronze", "bismuthbronze", "blackbronze", "gold", "lead", "tin", "zinc", "silver", "bismuth", "molybdochalkos" ] },
+		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
+	],
+	shapebytype: {
+		"*-down": { base: "block/metal/glasslanternframe" },
+		"*-up": { base: "block/metal/glasslanternframe", rotateX: 180 },
+		"*-north": { base: "block/metal/glasslanternframe", rotateX: 90 },
+		"*-east": { base: "block/metal/glasslanternframe", rotateX: 90, rotateY: 180, rotateZ: 270 },
+		"*-west": { base: "block/metal/glasslanternframe", rotateX: 90, rotateY: 0, rotateZ: 270 },
+		"*-south": { base: "block/metal/glasslanternframe", rotateX: 270 },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	drawtype: "json",
+	blockmaterial: "Metal",
+	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },
+	replaceable: 300,
+	resistance: 2,
+	lightAbsorption: 1,
+	textures: {
+		all: { 
+			base: "block/metal/sheet/{metal}1", 
+			alternates: [{ base: "block/metal/sheet/{metal}2"}, { base: "block/metal/sheet/{metal}3" }, { base: "block/metal/sheet/{metal}4" }, { base: "block/metal/sheet/{metal}5" }],
+		}
+	},
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
+		},
+		rotateYByType: {
+			"*-east": 180, "*-west": 0,
+		},
+		rotateZByType: {
+			"*-east": 270, "*-west": 270
+		}
+	},
+	collisionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
+		},
+		rotateYByType: {
+			"*-east": 180, "*-west": 0,
+		},
+		rotateZByType: {
+			"*-east": 270, "*-west": 270
+		}
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.0625, z: 0.5 }
+	}
+}

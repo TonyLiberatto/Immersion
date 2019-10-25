@@ -1,0 +1,65 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "support",
+			"from": [ 0.0, 15.0, 6.0 ], 
+			"to": [ 16.0, 16.0, 10.0 ], 
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 1.0 ] },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 4.0, 1.0 ] },
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 4.0 ] },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 4.0 ] }
+			},
+			"children": [
+				{
+					"name": "sign",
+					"from": [ 0.0, -2.0, 1.0 ], 
+					"to": [ 16.0, -13.0, 3.0 ], 
+					"faces": {
+						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, -11.0 ] },
+						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, -11.0 ] },
+						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, -11.0 ] },
+						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, -11.0 ] },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 2.0 ] },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 16.0, 2.0 ] }
+					}
+				},
+				{
+					"name": "rope1",
+					"from": [ 3.0, 0.0, 1.7 ], 
+					"to": [ 3.6, -2.0, 2.3 ], 
+					"faces": {
+						"north": { "texture": "#rope_PNG18094", "uv": [ 9.0, 7.9, 7.0, 8.4625 ], "rotation": 90 },
+						"east": { "texture": "#rope_PNG18094", "uv": [ 7.0, 7.9, 5.0, 8.4625 ], "rotation": 90 },
+						"south": { "texture": "#rope_PNG18094", "uv": [ 6.0, 7.8, 4.0, 8.3625 ], "rotation": 90 },
+						"west": { "texture": "#rope_PNG18094", "uv": [ 8.0, 7.9, 6.0, 8.4625 ], "rotation": 90 },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false }
+					}
+				},
+				{
+					"name": "rope4",
+					"from": [ 12.0, 0.0, 1.7 ], 
+					"to": [ 12.6, -2.0, 2.3 ], 
+					"faces": {
+						"north": { "texture": "#rope_PNG18094", "uv": [ 9.0, 7.9, 7.0, 8.4625 ], "rotation": 90 },
+						"east": { "texture": "#rope_PNG18094", "uv": [ 7.0, 7.9, 5.0, 8.4625 ], "rotation": 90 },
+						"south": { "texture": "#rope_PNG18094", "uv": [ 6.0, 7.8, 4.0, 8.3625 ], "rotation": 90 },
+						"west": { "texture": "#rope_PNG18094", "uv": [ 8.0, 7.9, 6.0, 8.4625 ], "rotation": 90 },
+						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false },
+						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 0.5, 0.5 ], "enabled": false }
+					}
+				}
+			]
+		}
+	]}

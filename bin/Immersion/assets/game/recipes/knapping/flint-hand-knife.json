@@ -1,0 +1,17 @@
+{
+	ingredient: { type: "item", code: "flint" },
+	pattern: [
+			"______##__",
+			"______##__",
+			"_____###__",
+			"_____###__",
+			"____####__",
+			"___#####__",
+			"__######__",
+			"__######__",
+			"__######__",
+			"__######__"
+	],
+	name: "Flint Hand Knife",
+	output: { type: "item", code: "knife-hand-flint"  }
+}

@@ -1,0 +1,140 @@
+{
+	code: "pig-domestic-piglet",
+	class: "EntityAgent",
+	hitboxSize: { x: 0.6, y: 0.5 },
+	eyeHeight: 0.4,
+	drops: [
+		{
+			type: "item", 
+			code: "immersion:porkchops-raw", 
+			quantity: { avg: 0.5, var: 0.5 } 
+		}
+	],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/land/pig-domestic/piglet" },
+		texture: { base: "entity/pig-domestic/piglet" },
+		behaviors: [
+			{ code: "repulseagents" },
+			{ code: "slaughterable" },
+			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "interpolateposition" },
+		],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "health", currenthealth: 10, maxhealth: 10, },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "breathe" }, 
+			{ 
+				code: "portiongrow",
+				hoursToGrow: 168,
+				portionsEatenForGrow: 30.0,
+				adultEntityCodes: [ "pig-domestic-sow", "pig-domestic-boar" ],
+			},
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						movespeed: 0.015,
+						seekingRange: 9,
+						animationSpeed: 7,
+						animation: "Run",
+						sound: "creature/pig/piglet-hurt"
+					},
+ 					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: false,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
+						code: "getoutofwater",
+						priority: 1.4,
+						movespeed: 0.005,
+						animation: "Walk",
+						animationSpeed: 2.2
+					},
+					{
+						code: "stayclosetoentity",
+						priority: 1.4,
+						entityCode: "pig-domestic-sow",
+						movespeed: 0.015,
+						maxDistance: 5,
+						searchRange: 25,
+						animation: "Run",
+						animationSpeed: 7
+					},
+					{
+						code: "seekfoodandeat",
+						movespeed: 0.004,
+						priority: 1.2,
+						animationSpeed: 2,
+						animation: "Walk",
+						eatSound: "player/eat",
+						eatTime: 1.5,
+						mincooldownHours: 1,
+						maxcooldownHours: 4,
+					},
+					{
+						code: "idle",
+						priority: 1.1,
+						priorityForCancel: 1.35,
+						minduration: 4166,
+						maxduration: 4166,
+						mincooldown: 80000,
+						maxcooldown: 220000,
+						animation: "Sit"
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						priorityForCancel: 1.35,
+						movespeed: 0.004,
+						animationSpeed: 3.5,
+						animation: "Walk",
+						preferredLightLevel: 20
+					},
+					{
+						code: "idle",
+						priority: 0.5,
+						priorityForCancel: 0.5,
+						minduration: 2100,
+						maxduration: 2100,
+						mincooldown: 30000,
+						maxcooldown: 60000,
+						animation: "Sit",
+						animationSpeed: 1.0
+					},
+					{ 
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			} 
+		]
+	},
+	sounds: {
+		hurt: "creature/pig/piglet-hurt",
+		death: "creature/pig/piglet-hurt",
+		idle: "creature/pig/piglet-idle"
+	},
+	idleSoundChance: 0.01
+}

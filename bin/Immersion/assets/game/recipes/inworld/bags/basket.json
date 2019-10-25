@@ -1,0 +1,23 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:basket-frame-*",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:reeds",
+        "Type": "Block",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:basket",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

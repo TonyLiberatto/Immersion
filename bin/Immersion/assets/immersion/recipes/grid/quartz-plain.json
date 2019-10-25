@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "SSS,SLS,SSS",
+	ingredients: {
+		"L": { type: "item", code: "game:quicklime" },
+		"S": { type: "item", code: "game:ore-quartz" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "game:quartz-plain" }
+}

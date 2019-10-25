@@ -1,0 +1,66 @@
+[
+{
+	ingredientPattern: "_L_	LBL	CLC",
+	ingredients: {
+		"L": { type: "item", code: "cattailtops" },
+		"C": { type: "item", code: "clay-*" },
+		"B": {
+			type: "block", 
+			code:  "bowl-blue-honey", 
+			returnedStack: { type: "block", code: "bowl-blue-burned" }
+		}
+	},
+	name: "skep",
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "game:beenade-opened"  }
+},
+{
+	ingredientPattern: "_L_	LBL	CLC",
+	ingredients: {
+		"L": { type: "item", code: "cattailtops" },
+		"C": { type: "item", code: "clay-*" },
+		"B": {
+			type: "block", 
+			code:  "bowl-fire-honey", 
+			returnedStack: { type: "block", code: "bowl-fire-burned" }
+		}
+	},
+	name: "skep",
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "game:beenade-opened"  }
+},
+{
+	ingredientPattern: "_L_	LBL	CLC",
+	ingredients: {
+		"L": { type: "item", code: "cattailtops" },
+		"C": { type: "item", code: "clay-*" },
+		"B": {
+			type: "block", 
+			code:  "bowl-red-honey", 
+			returnedStack: { type: "block", code: "bowl-red-burned" }
+		}
+	},
+	name: "skep",
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "game:beenade-opened"  }
+},
+{
+	ingredientPattern: "_L_	LBL	CLC",
+	ingredients: {
+		"L": { type: "item", code: "cattailtops" },
+		"C": { type: "item", code: "clay-*" },
+		"B": {
+			type: "block", 
+			code:  "bowl-brown-honey", 
+			returnedStack: { type: "block", code: "bowl-brown-burned" }
+		}
+	},
+	name: "skep",
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "game:beenade-opened"  }
+},
+]

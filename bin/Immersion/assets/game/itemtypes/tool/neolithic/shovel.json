@@ -1,0 +1,113 @@
+{
+	code: "shovel",
+	attributes: {
+		handbook: {
+			groupBy: ["shovel-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
+	],
+	tool: "shovel",
+	damagedby: ["blockbreaking", "attacking"],
+	heldTpHitAnimation: "shoveldig",
+	shapeByType: {
+		"*-bone-*": {base: "item/tool/bone-shovel"},
+		"*": {base: "item/tool/branch-shovel" },
+	},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},		
+	},
+	miningspeedbytype: {
+		"shovel-granite-*": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-andesite-*": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-peridotite-*": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-basalt-*": {
+			"soil": 2.2,
+			"sand": 2.2,
+			"gravel": 1.9
+		},
+		"shovel-obsidian-*": {
+			"soil": 3,
+			"sand": 3,
+			"gravel": 2.2
+		},
+
+		"shovel-flint-*": {
+			"soil": 2.5,
+			"sand": 2.5,
+			"gravel": 2.1
+		},
+	},
+	attackpowerbytype: {
+		"shovel-granite-*": 0.75,
+		"shovel-andesite-*": 0.75,
+		"shovel-peridotite-*": 0.75,
+		"shovel-basalt-*": 0.75,
+		"shovel-obsidian-*": 1.25,
+		"shovel-flint-*": 1,
+	},
+	durabilitybytype: {
+		"shovel-granite-bone-*": 200,
+		"shovel-andesite-bone-*": 200,
+		"shovel-peridotite-bone-*": 200,
+		"shovel-basalt-bone-*": 200,
+		"shovel-obsidian-bone-*": 300,
+		"shovel-flint-bone- *": 250,
+		"shovel-granite-*": 150,
+		"shovel-andesite-*": 150,
+		"shovel-peridotite-*": 150,
+		"shovel-basalt-*": 150,
+		"shovel-obsidian-*": 250,
+		"shovel-flint-*": 200,
+
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 6, y: -3, z: 0 },
+		rotation: { x: -112, y: -131, z: -180 },
+		scale: 1.74,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.796875, y: -0.53125, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

@@ -1,0 +1,296 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-aged-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-aged-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-aged",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-acacia-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-acacia-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-acacia",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-birch-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-birch-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-birch",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-kapok-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-kapok-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-kapok",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-maple-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-maple-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-maple",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-oak-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-oak-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-oak",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "immersion:panel-pine-planks-*",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:halfpanel-pine-planks-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtraysides-pine",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-aged",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-aged",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+{
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-acacia",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-acacia",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+{
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-birch",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-birch",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+{
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-kapok",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-kapok",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+{
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-maple",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-maple",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+{
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-oak",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-oak",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+{
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:dryingtraysides-pine",
+        "Type": "Block",
+        "StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*",
+        "Type": "Block",
+		"StackSize": 4        
+    },
+    "Makes": [{
+        "Code": "game:dryingtray-pine",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+},
+]

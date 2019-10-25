@@ -1,0 +1,10 @@
+{
+	ingredient: { type: "item", code: "game:ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron"] },
+	pattern: [
+		"_____##########",
+		"__#############",
+		"#####_____#####"
+	],
+	name: "Setting Hammer Head",
+	output: { type: "item", code: "settinghammerhead-{metal}", stacksize: 1  }
+}

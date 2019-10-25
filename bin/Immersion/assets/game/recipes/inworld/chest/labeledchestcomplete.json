@@ -1,0 +1,191 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-bamboo-brown-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-bamboo-brown-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-bamboo-green-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-bamboo-green-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-aged-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-aged-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-acacia-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-acacia-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-birch-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-birch-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-kapok-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-kapok-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-maple-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-maple-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-oaks-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "block",
+		"StackSize": 1
+    },
+    "Makes": [{
+       "Code": "immersion:labeledchestcomplete-oaks-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:chestcomplete-pine-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-small-ground-east",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:labeledchestcomplete-pine-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

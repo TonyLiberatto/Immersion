@@ -1,0 +1,7 @@
+{
+	code: "sisal-leaves",
+	texture: { base: "item/resource/leaves/sisal" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicflora": ["*"], "neolithicitems": ["*"] },
+	maxstacksize: 64,
+	materialDensity: 10
+}

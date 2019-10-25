@@ -1,0 +1,123 @@
+{
+	code: "storagevessel",
+	classByType: {
+		"*-raw-*": "Block",
+		"*": "BlockGenericTypedContainer",
+	},
+	entityclassByType: {
+		"*-raw-*": null,
+		"*": "GenericTypedContainer",
+	},
+	behaviors: [{name: "Lockable" }, {name: "Container"}, {name: "UnstableFalling"}],
+	attributes: {
+		partialAttachable: true,
+		inventoryClassName: "chest",
+		defaultType: "normal",
+		types: ["normal"],
+		drop: {
+			"normal": true
+		},
+		quantitySlots: {
+			"normal": 12
+		},
+		dialogTitleLangCode: {
+			"normal": "vesselcontents"
+		},
+		storageType: {
+			"normal": 32
+		},
+		retrieveOnly: {
+			"normal": false
+		},
+		spoilSpeedMulByFoodCat: {
+			"normal": {
+				"vegetable": 0.75,
+				"grain": 0.5
+			}
+		},
+		shape: {
+			"normal": "block/clay/storagevessel"
+		},
+		variantByGroup: "variant",
+		variantByGroupInventory: "variant",
+		openSound: "sounds/block/vesselopen",
+		closeSound: "sounds/block/vesselclose",
+	},
+	variantgroups: [
+		{ code: "variant", states: ["ashforest", "chthonic", "copper", "earthen", "rain", "blue-raw", "fire-raw", "red-raw", "brown-raw", "blue-burned", "fire-burned", "red-burned", "brown-burned" ] },
+	],
+	shape: { base: "block/clay/lootvessel" },
+	textures: {			 
+		"normal-ceramic": { base: "block/clay/{variant}" },
+		"normal-top": { base: "block/clay/vessel/top/{variant}" },
+		"normal-sides": { base: "block/clay/vessel/sides/{variant}" },
+		"normal-inside": { base: "block/clay/vessel/inside/{variant}" }		
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: {  },
+	creativeinventoryStacks: [
+		{
+			tabs: [ "general", "decorative" ],
+			stacks: [
+				{ type: "block", code: "storagevessel-{variant}", attributes: { type: "normal" } },
+			]
+		}
+	],
+	replaceable: 1000,
+	resistance: 0.8,
+	maxStackSize: 4,
+	lightAbsorption: 0,
+	sounds: {
+		walk: "walk/stone",
+		break: "block/ceramicplace",
+		hit: "block/ceramichit",
+		place: "block/ceramicplace"
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionSelectionBox: { x1: 0.125, y1: 0, z1: 0.125, x2: 0.875, y2: 1, z2: 0.875 },
+	heldTpIdleAnimation: "holdunderarm",
+	combustiblePropsByType: {
+		"*-blue-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "storagevessel-blue-burned", attributes: { type: "normal" } },
+			requiresContainer: false
+		},
+		"*-fire-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "storagevessel-fire-burned", attributes: { type: "normal" } },
+			requiresContainer: false
+		},
+		"*-red-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "storagevessel-red-burned", attributes: { type: "normal" } },
+			requiresContainer: false
+		},
+		"*-brown-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "storagevessel-brown-burned", attributes: { type: "normal" } },
+			requiresContainer: false
+		},
+	},	
+	tpHandTransform: {
+		translation: { x: -1, y: -0.5, z: -0.5 },
+		rotation: { x: 25, y: -20, z: -99 },
+		scale: 0.56
+	}
+}

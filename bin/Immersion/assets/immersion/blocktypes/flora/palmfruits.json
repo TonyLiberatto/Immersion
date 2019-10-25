@@ -1,0 +1,100 @@
+﻿{
+  code: "palmfruits",
+  behaviorsByType: {
+    "*": [ { name: "HorizontalOrientable" }, ],
+  },
+  variantgroups: [
+    {
+      code: "type",
+      states: [ "bananna", "coconut" ]
+    },
+    { loadFromProperties: "abstract/horizontalorientation" }
+  ],
+  creativeinventory: { "general": [ "*-north" ], "flora": [ "*-north" ], "neolithicflora": [ "*-north" ]  },
+  randomDrawOffset: false,
+  shapeByType: {
+    "*-north": {  base: "block/flora/palm/bunches/{type}", rotateY: 180  },
+    "*-east": {   base: "block/flora/palm/bunches/{type}", rotateY: 90   },
+    "*-south": {  base: "block/flora/palm/bunches/{type}", rotateY: 0    },
+    "*-west": {   base: "block/flora/palm/bunches/{type}", rotateY: 270  },
+  },
+  textures: { fruits: { base: "block/flora/palm/fruits" },  },
+  blockmaterial: "Wood",
+  sideopaque: {  all: false  },
+  sidesolid: {   all: false  },
+  replaceable: 500,
+  resistance: 4.5,
+  sounds: {
+    "place": "game:block/planks",
+    "walk": "game:walk/wood",
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    byTool: {
+      "Axe": {
+        hit: "game:block/chop",
+        break: "game:block/planks"
+      }
+    }
+  },
+  dropsByType: {
+    "*-bananna-*": [
+      {
+        type: "block",
+        code: "tropicalfruits-bananna-north",
+        quantity: { avg: 11 }
+      }
+    ],
+    "*-coconut-*": [
+      {
+        type: "block",
+        code: "tropicalfruits-coconutshell-north",
+        quantity: { avg: 4 }
+      }
+    ],
+  },
+  combustiblePropsByType: {
+    "*": {
+      burnTemperature: 800,
+      burnDuration: 78,
+    },
+  },
+  maxStackSize: 16,
+  materialDensity: 700,
+  rainPermeable: true,
+  materialDensity: 200,
+  lightAbsorption: 0,
+  collisionSelectionBoxByType: {
+    "*-west": {
+      x1: 0,
+      y1: 0,
+      z1: 0,
+      x2: 0.3125,
+      y2: 1,
+      z2: 1
+    },
+    "*-east": {
+      x1: 0.6875,
+      y1: 0,
+      z1: 0,
+      x2: 1,
+      y2: 1,
+      z2: 1
+    },
+    "*-north": {
+      x1: 0,
+      y1: 0,
+      z1: 0,
+      x2: 1,
+      y2: 1,
+      z2: 0.3125
+    },
+    "*-south": {
+      x1: 0,
+      y1: 0,
+      z1: 0.6875,
+      x2: 1,
+      y2: 1,
+      z2: 1
+    },
+  }
+}

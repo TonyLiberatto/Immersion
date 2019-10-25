@@ -1,0 +1,39 @@
+{
+    "code": "choppingblock",
+    "class": "BlockCraftingStation",
+    "entityClass": "CraftingStation",
+    "behaviors": [ { "name": "HorizontalOrientable"} ],
+    "attributes": {
+		handbook:{ 
+				groupBy: ["choppingblock-*"],
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Place a log down, hold right click with an Axe, to make 2 half Logs. Place the Half Log down and hold right click with an Axe again."}
+					]
+
+		},
+        "animprops": { "actionAnim": "chop", "hasContentAnim": "chopidle", "idleAnim": "idle" },
+        "__comment": "craftTime is time before next action in milliseconds, ideal time is the same as how long the actionAnim takes to play",
+        "craftingprops": [ 
+            { "craftTime": 500, "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
+            { "craftTime": 500, "craftSound": "sounds/block/wood-tool", "tool": "axe", "input": { "Type": "block", "Code": "immersion:branch-*", "StackSize": 1 }, "output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
+        ]
+    },
+    "shapeByType": {
+         "*-west":  {"base": "block/wood/choppingblock", "rotateY": 0 },
+         "*-south":  {"base": "block/wood/choppingblock", "rotateY": 90 },
+         "*-east":  {"base": "block/wood/choppingblock", "rotateY": 180 },
+         "*-north":  {"base": "block/wood/choppingblock", "rotateY": 270 }
+    },
+    "variantgroups": [
+        { code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
+        { "code": "rotation", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "textures": {
+        "all": { "base": "block/wood/choppingblock/{wood}" }
+    },
+    "creativeinventory": { "general": ["*-north"] },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "lightAbsorption": 1,
+    "collisionSelectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 }
+}

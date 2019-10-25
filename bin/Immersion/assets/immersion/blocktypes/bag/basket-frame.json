@@ -1,0 +1,42 @@
+{
+	code: "basket-frame",
+	variantgroups: [		
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "cordage", states: [ "reeds"]},
+	],	
+	maxstacksize: 1,
+	shape: { base: "block/bag/basket-frame" },
+	textures: {		
+		"acacia": { base: "block/wood/{style}/{wood}" },
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+		"rope": { base: "block/{cordage}" },
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	lightAbsorption: 0,
+	creativeinventory: { "general": [""], "items": [""] },
+	guiTransform: {
+		translation: { x: 1, y: 0, z: 0 },
+		rotation: { x: -21, y: 16, z: 180 },
+		origin: { x: 0.52, y: 0.26, z: 0.5 },
+		scale: 1,
+		rotate: true
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0.3 },
+		rotation: { x: 20, y: -73, z: 10 },
+		scale: 1.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.7, y: -0.7, z: -0.8 },
+		rotation: { x: -19, y: 81, z: -27 },
+		scale: 0.68
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 33, z: -180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.75
+	},
+}

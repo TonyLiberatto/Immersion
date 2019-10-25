@@ -1,0 +1,182 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-copper",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-copper",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-brass",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-brass",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-blackbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-blackbronze",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-bismuth",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-bismuth",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-tinbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-tinbronze",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-bismuthbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-bismuthbronze",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-molybdochalkos",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-molybdochalkos",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-silver",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-silver",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:glass-plain",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-base-candle-sides-glass-gold",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

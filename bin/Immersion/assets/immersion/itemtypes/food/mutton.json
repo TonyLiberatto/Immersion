@@ -1,0 +1,87 @@
+{
+	code: "mutton",
+	maxstacksize: 64,
+	attributes: {
+		inFirePitProps: {
+			transform: {
+				scale: 0.85,
+				origin: { x: 0.5, y: 0.0625, z: 0.5 },
+				translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
+				rotation: { x: 0, y: 0, z: 90 }
+			},
+			useFirepitModel: "Cooking"
+		}
+	},
+	variantgroups: [
+		{ code: "type", states: ["raw", "cooked", "cured" ] },
+	],
+	textures: {
+		"meat": {base: "item/food/meat/mutton-{type}" },
+	},
+	shape: { base: "item/food/meat/mutton" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	nutritionPropsByType: {
+		"mutton-cooked": { saturation: 2400, health: 0, foodcategory: "Protein" },
+		"mutton-cured": { saturation: 2400, health: 0, foodcategory: "Protein" }
+	},
+	materialDensity: 600,
+	guiTransform: {
+		translation: { x: 2, y: 0, z: 0 },
+		rotation: { x: 79, y: 26, z: 23 },
+		origin: { x: 0.49, y: 0, z: 0.5 },
+		scale: 2
+	},
+	fpHandTransform: {
+		translation: { x: -0.06, y: 0.36, z: 0.23 },
+		rotation: { x: 86, y: -83, z: 24 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 1.5
+	},
+	tpHandTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 5, y: 41, z: -31 },
+		origin: { x: 0.23, y: 0, z: 0.13 },
+		scale: 0.75
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 33, z: -180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2
+	},
+	combustiblePropsByType: {
+		"mutton-raw": {
+			meltingPoint: 150,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "item", code: "mutton-cooked" },
+			requiresContainer: false
+		}
+	},
+	transitionablePropsByType: {
+		"*-raw": [
+			{
+				type: "Perish",
+				freshHours: { avg: 36 },
+				transitionHours: { avg: 24 },
+				transitionedStack: { type: "item", code: "game:rot" },
+				transitionRatio: 1
+			}
+		],
+		"*-cooked": [{
+			type: "Perish",
+			freshHours: { avg: 120 },
+			spoilHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}],
+		"*-cured": [{
+			type: "Perish",
+			freshHours: { avg: 8760 },
+			spoilHours: { avg: 4380 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}]
+	},
+}

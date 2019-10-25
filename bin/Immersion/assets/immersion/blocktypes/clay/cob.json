@@ -1,0 +1,20 @@
+{
+	code: "cob",
+	shape: { base: "game:block/basic/cube" },
+	drawtype: "Cube",
+	blockmaterial: "Soil",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicdeco": ["*"] },
+	replaceable: 400,
+	resistance: 1.5,
+	textures: {
+        all: { 
+            base: "block/clay/cob/cob1",
+            alternates: [{base: "block/clay/cob/cob1" },{base: "block/clay/cob/cob2" },{base: "block/clay/cob/cob3" }, {base: "block/clay/cob/cob4" },{base: "block/clay/cob/cob5" }, {base: "block/clay/cob/cob6" },{base: "block/clay/cob/cob7" }, {base: "block/clay/cob/cob8" }, {base: "block/clay/cob/cob9" }, {base: "block/clay/cob/cob10" }, {base: "block/clay/cob/cob11" }, {base: "block/clay/cob/cob12" }, {base: "block/clay/cob/cob13" }, {base: "block/clay/cob/cob14" }, {base: "block/clay/cob/cob15" }], 
+        },
+	},
+	sounds: {
+		place: "game:block/dirt",
+		break: "game:block/dirt",
+		walk: "game:walk/grass"
+	}
+}

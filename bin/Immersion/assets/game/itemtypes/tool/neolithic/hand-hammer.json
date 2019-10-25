@@ -1,0 +1,51 @@
+{
+	code: "hammer",
+	class: "ItemHammer",
+	ttributes: {
+		handbook: {
+			groupBy: ["hammer-hand-*"]
+		}
+	},
+	variantgroups: [
+		{code: "type", states: ["hand"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
+	],
+	tool: "hammer",
+	heldTpHitAnimation: "breaktool",
+	shape: { base: "item/tool/hand-hammer" },
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+	},
+	durabilitybytype: {
+		"hammer-hand-granite": 70,
+		"hammer-hand-andesite": 70,
+		"hammer-hand-peridotite": 70,
+		"hammer-hand-basalt": 70,
+		"hammer-hand-obsidian": 120,
+		"hammer-hand-flint": 100,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		origin: { x: 0.7, y: 0.5, z: 0.5},
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 5, z: 0 },
+		rotation: { x: -77, y: -135, z: 160 },
+		origin: { x: 0.54, y: 0.5, z: 0.48 },
+		scale: 2.6
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.75, y: -0.48, z: -0.52 },
+		rotation: { x: 90, y: 1, z: 0 },
+		origin: { x: 0.6, y: 0.5, z: 0.5},
+		scale: 1
+	}
+}

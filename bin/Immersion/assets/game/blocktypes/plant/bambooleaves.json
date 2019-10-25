@@ -1,0 +1,51 @@
+{
+	code: "bambooleaves",
+	variantgroups: [
+		{ code: "type", states: ["grown", "placed"] }
+	],
+	behaviorsByType: {
+		"bambooleaves-grown": [{name: "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}}]
+	},
+	creativeinventory: { "general": ["bambooleaves-placed"], "flora": ["bambooleaves-placed"], "neolithicflora": ["bambooleaves-placed"] },
+	shape: { base: "block/basic/cube" },
+	drawtype: "cube",
+	renderpass: "OpaqueNoCull",
+	faceCullMode: "CollapseMaterial",
+	blockmaterial: "Leaves",
+  drops: [],
+	tintIndex: 1,
+	vertexFlags: {
+		zOffset: 3
+	},
+	attributesByType: {
+		"bambooleaves-grown": {
+			canDecay: true
+		}
+	},
+	textures: {
+		all: { base: "block/plant/bamboo/leaves" },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	snowCoverage: true,
+	replaceable: 4000,
+	lightAbsorption: 1,
+	resistance: 0.5,
+	collisionbox: null,
+	sounds: {
+		break: "block/plant",
+		hit: "block/plant",
+		place: "block/plant",
+		walk: "walk/grass"
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	materialDensity: 300,
+	drops: []
+}

@@ -1,0 +1,56 @@
+{
+	code: "slaughteringaxe",
+	class: "ItemSlaughteringAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["slaughteringaxe-*"]
+		}
+	},
+	variantgroups: [
+		{ code: "metal", states: [ "bismuthbronze", "blackbronze", "brass", "copper", "gold", "iron", "lead", "silver", "tinbronze" ] },
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+	],
+	tool: "axe",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/slaughteringaxe" },
+	heldTpHitAnimation: "axechop",
+	textures: {
+		"metal": { base: "item/tool/material/{metal}" },
+		"shaft": { base: "block/wood/debarked/{shaft}" },
+		"cordage": { base: "block/leatherstraps"},
+		"ribbon": { base: "block/ribbon"},
+	},
+  durabilitybytype: {
+		"*-gold-*": 125,
+		"*-silver-*": 125,
+		"*-copper-*": 250,
+		"*-blackbronze-*": 600,
+		"*-bismuthbronze-*": 500,
+		"*-tinbronze-*": 400,
+		"*-iron-*": 900,
+	},
+	attackRange: 2,
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.1268, y: 0, z: 0 },
+		rotation: { x: 16, y: -1, z: 92 },
+		scale: 2.3599
+	},
+	guiTransform: {
+		translation: { x: 5, y: 0, z: 0 },
+		rotation: { x: -99, y: -138, z: -180 },
+		origin: { x: 0.6, y: 0.45, z: 0.5 },
+		scale: 1.77
+	},
+	groundTransform: {
+		translation: { x: 0.0468, y: 0, z: 0 },
+		rotation: { x: 1, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 4
+	},
+	tpHandTransform: {
+		translation: { x: -0.85, y: -0.2, z: -0.523 },
+		rotation: { x: 82, y: -40, z: 1 },
+		scale: 1.02
+	}
+}

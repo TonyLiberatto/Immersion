@@ -1,0 +1,28 @@
+{
+	code: "mortar",
+	variantgroups: [
+		{ loadFromProperties: "block/wood" }
+	],
+	creativeinventory: { "general": ["*"], "neolithicblocks": ["*"] },
+	shape: { base: "immersion:block/wood/mortarandpestle/base" },
+	blockmaterial: "Wood",
+	drawtype: "json",
+	textures: {
+		"bark": { base: "block/wood/bark/{wood}" },
+		all: { base: "block/wood/debarked/{wood}" },
+		"trunk": { base: "block/wood/treetrunk/{wood}" }
+	},
+	resistance: 3.5,
+	sounds: {
+		"hit": "block/planks",
+		"break": "block/planks",
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 20,
+	},
+	maxStackSize: 32,
+	materialDensity: 600
+}

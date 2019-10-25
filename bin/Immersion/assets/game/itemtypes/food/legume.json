@@ -1,0 +1,21 @@
+{
+	code: "legume",
+	maxstacksize: 32,
+	variantgroups: [
+		{ code: "type", states: ["soybean" ] },
+	],
+	attributes: {
+		inContainerTexture: { base: "block/wood/barrel/raw-soybean" },
+		nutritionPropsWhenInMeal: { satiety: 480, foodcategory: "Protein" }
+	},
+	texture: { base: "item/food/legume/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 8760 },
+		transitionHours: { avg: 876 },
+		transitionedStack: { type: "item", code: "rot" },
+		transitionRatio: 0.33
+	}],
+	materialDensity: 600
+}

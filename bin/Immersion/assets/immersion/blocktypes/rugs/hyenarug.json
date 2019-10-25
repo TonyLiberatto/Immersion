@@ -1,0 +1,75 @@
+{
+	code: "hyenarug",
+	class: "BlockSign",
+	enabled: true,
+	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	variantgroups: [
+		{ code:"attachment", states: ["ground", "wall"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	drawtype: "json",
+	shapeByType: {
+		"*-ground-north": { base: "block/floormats/rug", rotateY: 0 },
+		"*-ground-east": { base: "block/floormats/rug", rotateY: 270 },
+		"*-ground-south": { base: "block/floormats/rug", rotateY: 180 },
+		"*-ground-west": { base: "block/floormats/rug", rotateY: 90 },
+		"*-wall-north": { base: "block/wallmats/rug", rotateY: 0 },
+		"*-wall-east": { base: "block/wallmats/rug", rotateY: 270 },
+		"*-wall-south": { base: "block/wallmats/rug", rotateY: 180 },
+		"*-wall-west": { base: "block/wallmats/rug", rotateY: 90 }
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Cloth",
+	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "neolithicdeco": ["*-ground-east"] },
+	replaceable: 4000,
+	resistance: 0.5,
+	lightAbsorption: 0,
+	textures: {
+		all: { 
+			base: "block/rug/hyenarug"
+		}
+			},
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0, 
+		x2: 2, y2: 0.0625, z2: 1,
+		rotateYByType: {
+			"*-ground-east": 0,
+			"*-ground-south": 270,
+			"*-ground-west": 180,
+			"*-ground-north": 90,
+			"*-wall-east": 180,
+			"*-wall-south": 90,
+			"*-wall-west": 0,
+			"*-wall-north": 270
+		},
+		rotateZByType: {
+			"*-wall-east": 270,
+			"*-wall-south": 180,
+			"*-wall-west": 270,
+			"*-wall-north": 0
+		},
+		rotateXByType: {
+			"*-wall-east": 0,
+			"*-wall-south": 90,
+			"*-wall-west": 0,
+			"*-wall-north": 90
+		}
+		},
+	sideao: { all: false },
+	collisionbox: null,
+	combustibleProps: {
+		burnTemperature: 200,
+		burnDuration: 5,
+	},
+	sounds: {
+		place: "game:block/cloth",
+		walk: "game:walk/cloth"
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 1, y: 0.0625, z: 0.5 },
+		scale: 0.9
+},
+	materialDensity: 200
+}

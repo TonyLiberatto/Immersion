@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "FF	FF",
+	ingredients: {
+		"F": { type: "item", code: "sisal-thread", name: "Sinew"  }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "item", code: "sisal-twine", quantity: 1  }
+}

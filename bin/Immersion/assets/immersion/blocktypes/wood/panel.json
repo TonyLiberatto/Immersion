@@ -1,0 +1,90 @@
+{
+	code: "panel",
+	class: "BlockSimpleCoating",	
+	attributes: {
+		handbook: {
+			groupBy: ["panel-*"],
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Use a saw to break a log, it will drop 4 barked panels and 4 debarked panels."}
+					]
+		}
+	},
+	variantgroups: [
+		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked", "planks"]},
+		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
+	],
+	shapebytype: {
+		"*-down": { base: "game:block/basic/layered_0" },
+		"*-up": { base: "game:block/basic/layered_0", rotateX: 180 },
+		"*-north": { base: "game:block/basic/layered_0", rotateX: 90 },
+		"*-east": { base: "game:block/basic/layered_0", rotateX: 90, rotateY: 180, rotateZ: 270 },
+		"*-west": { base: "game:block/basic/layered_0", rotateX: 90, rotateY: 0, rotateZ: 270 },
+		"*-south": { base: "game:block/basic/layered_0", rotateX: 270 },
+	},
+	sidesolidByType: {
+		"*-down": { all: false, down: true },
+		"*-up": { all: false, up: true },
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-west": { all: false, west: true },
+		"*-south": { all: false, south: true },
+	},
+	sideopaqueByType: {
+		"*-down": { all: false, down: true },
+		"*-up": { all: false, down: true },
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-west": { all: false, west: true },
+		"*-south": { all: false, south: true },
+	},
+	blockmaterial: "Wood",
+	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },	
+	replaceable: 4000,
+	resistance: 1,
+	lightAbsorption: 1,
+	textures: {
+		all: { 
+			base: "game:block/wood/{style}/{wood}*"
+		}
+	},	
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
+		},
+		rotateYByType: {
+			"*-east": 180, "*-west": 0,
+		},
+		rotateZByType: {
+			"*-east": 270, "*-west": 270
+		}
+	},
+	collisionbox: {
+		x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1,
+		rotateXByType: {
+			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
+		},
+		rotateYByType: {
+			"*-east": 180, "*-west": 0,
+		},
+		rotateZByType: {
+			"*-east": 270, "*-west": 270
+		}
+	},
+	combustibleProps: {
+		burnTemperature: 400,
+		burnDuration: 15,
+	},
+	sounds: {
+		place: "game:block/planks",
+		break: "game:block/planks",
+		hit: "game:block/planks",
+		walk: "game:block/planks"
+	},
+	materialDensity: 200,
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 }
+	}
+}

@@ -1,0 +1,128 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-acacia-bark-*-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-acacia-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:primitivefence-support-acacia-we",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-birch-bark-*-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-birch-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:primitivefence-support-birch-we",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-kapok-bark-*-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-kapok-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:primitivefence-support-kapok-we",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-maple-bark-*-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-maple-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:primitivefence-support-maple-we",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-oak-bark-*-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-oak-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:primitivefence-support-oak-we",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-pine-bark-*-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-pine-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:primitivefence-support-pine-we",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+]

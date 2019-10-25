@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "_S	P_",
+	ingredients: {
+		"S": { type: "item", code: "saw-*", isTool: true  },
+		"P": { type: "block", code: "planks-*", name: "wood", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "aged"] }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "stair-side-planks-{wood}-up-north", quantity: 1  }
+}

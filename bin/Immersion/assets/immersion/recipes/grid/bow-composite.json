@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "BS",
+	ingredients: {
+		"B": { type: "item", code: "neolithicmod:bowlimb-composite"},
+		"S": { type: "item", code: "neolithicmod:byproducts-bowstring"}
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "item", code: "game:bow-composite", quantity: 1  }
+}

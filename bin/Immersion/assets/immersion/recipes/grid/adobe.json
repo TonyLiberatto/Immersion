@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "CS",
+	ingredients: {
+		"C": { type: "item", code: "game:clay-*" },
+        	"S": { type: "block", code: "game:sand-*", quantity: 2 }
+	},
+	width: 2,
+	height: 1,
+	output: { type: "block", code: "neolithicmod:adobe", quantity: 2  }
+}

@@ -1,0 +1,28 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"acacia": "block/wood/bark/acacia",
+		"acaciatop": "block/wood/treetrunk/acaciatop"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 4.0, 0.0, 4.0 ], 
+			"to": [ 12.0, 16.0, 12.0 ], 
+			"renderPass": 0,
+			"rotationOrigin": [ 4.0, 0.0, 4.0 ],
+			"faces": {
+				"north": { "texture": "#acacia", "uv": [ 4.0, 0.0, 12.0, 16.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 2.0, 0.0, 10.0, 16.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 3.0, 0.0, 11.0, 16.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 2.0, 0.0, 10.0, 16.0 ] },
+				"up": { "texture": "#acaciatop", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false },
+				"down": { "texture": "#acaciatop", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false }
+			}
+		}
+	]}

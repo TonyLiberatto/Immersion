@@ -1,0 +1,28 @@
+{
+	code: "spear-javelin",
+	class: "EntityProjectile",
+	hitboxSize: { x: 0.125, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		drawtype: "json",
+		textures: 
+		{
+			"bamboo-side": { base: "block/wood/planks/bamboo-brown-side" },
+			"bone": { base: "block/bone" },
+			"sinew": { base: "block/sinew" },
+		},
+		shape: { base: "entity/primitive-javelin" },
+		behaviors: [{ code: "passivephysics" }, { code: "interpolateposition" }],
+	},
+	server: {
+		behaviors: [{ code: "passivephysics" }, { code: "despawn", minSeconds: 300 }]
+	},
+	sounds: {
+	},
+	attributes: {
+		physics: {
+			groundDragFactor: 1,
+			airDragFallingFactor: 0.25
+		}
+	}
+}

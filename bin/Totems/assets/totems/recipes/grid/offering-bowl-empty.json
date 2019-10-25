@@ -1,0 +1,11 @@
+ {
+	ingredientPattern: "AL",
+	ingredients: {
+		"A": {type: "item", code: "game:adze-*", isTool: true },
+		"L": { type: "block", code: "game:log-placed-*-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "item", code: "offering-bowl-empty", quantity: 1  }
+} 

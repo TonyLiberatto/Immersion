@@ -1,0 +1,20 @@
+[
+	{
+		ingredientPattern: "P_P,_P_",
+		ingredients: {
+			"P": { type: "block", code: "immersion:planks-*" }
+		},
+		width: 3,
+			height: 2,
+		output: { type: "block", code: "trough-genericwood-small-ns"  }
+	},
+	{
+		ingredientPattern: "P_P,_P_",
+		ingredients: {
+			"P": { type: "block", code: "planks-*" }
+		},
+		width: 3,
+		height: 2,
+		output: { type: "block", code: "trough-genericwood-small-ns"  }
+	}
+]

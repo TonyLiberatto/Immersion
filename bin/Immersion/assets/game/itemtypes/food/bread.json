@@ -1,0 +1,56 @@
+{
+	code: "bread",
+	maxstacksize: 32,
+	variantgroups: [
+		{ code: "type", states: ["spelt", "rye", "flax", "rice" ] },
+	],
+	shapebytype: { 
+		"bread-flax": { base: "item/food/bread/flaxbread" },
+		"bread-rice": { base: "item/food/bread/ricebread" },
+		"bread-spelt": { base: "item/food/bread/speltbread" },
+		"bread-rye": { base: "item/food/bread/ryebread" },
+	},
+	textures: {
+		"flaxbread": {base: "item/food/grain/flaxbread" },
+		"ricebread": {base: "item/food/grain/ricebread" },
+		"speltbread": {base: "item/food/grain/speltbread" },
+		"ryebread": {base: "item/food/grain/ryebread" },
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	nutritionPropsByType: {
+		"*-flax": { saturation: 320, foodcategory: "Grain" },
+		"*": { saturation: 600, foodcategory: "Grain" }
+	},
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 432 },
+		transitionHours: { avg: 36 },
+		transitionedStack: { type: "item", code: "rot" },
+		transitionRatio: 1
+	}],
+	materialDensity: 200,
+	guiTransform: {
+		translation: { x: 3, y: 0, z: 0 },
+		rotation: { x: -28, y: 23, z: 180 },
+		origin: { x: 0.5, y: 0.07, z: 0.5 },
+		scale: 5
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 1 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.54, y: -0.16, z: -0.4 },
+		rotation: { x: 44, y: -69, z: 2 },
+		origin: { x: 0.5, y: 0.13, z: 0.5 },
+		scale: 1
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.24, z: 0.3 },
+		rotation: { x: 104, y: 0, z: 71 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 2.5
+	}
+}

@@ -1,0 +1,100 @@
+{
+	code: "crucibleblue",
+	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
+	classByType: {
+		"crucibleblue-burned": "BlockSmeltingContainer",
+		"crucibleblue-smelted": "BlockSmeltedContainer"
+	},
+	heldTpIdleAnimation: "holdbothhands",
+	attributesByType: {
+		"crucibleblue-burned": {
+			cookingContainerSlots: 4,
+			storageType: 4,
+			maxHeatableTemp: 1200,
+			inFirePitProps: {
+				transform: { },
+				useFirepitModel: "Wide"
+			}
+		},
+		"crucibleblue-smelted": {
+			inFirePitProps: {
+				transform: { },
+				useFirepitModel: "Wide"
+			},
+			emptiedBlockCode: "crucibleblue-burned"
+		}
+	},
+	variantgroups: [
+		{ code:"type", states: ["raw", "burned", "smelted"] },
+	],
+	entityclassByType: {
+		"*-raw": null,
+		"*-smelted": "SmeltedContainer",
+		"*-burned": null
+	},
+	combustiblePropsByType: {
+		"crucibleblue-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucibleblue-burned" },
+			requiresContainer: false
+		},
+		"crucibleblue-smelted": {
+			meltingPoint: 2400,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crucibleblue-burned" },
+			requiresContainer: false
+		}
+	},
+	shape: { base: "block/clay/crucible" },
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*-raw", "*-burned"], "decorative": ["*-raw", "*-burned"], "neolithicblocks": ["*-raw", "*-burned"], "neolithicdeco": ["*-raw", "*-burned"] },
+	replaceable: 300,
+	resistance: 2,
+	maxStackSize: 1,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": { 
+			all: { base: "block/clay/blue-raw" },
+		},
+		"*": {
+			all: { base: "block/clay/blue-burned" },
+			ceramic: { base: "block/clay/blue-burned" }
+			}
+	}, 
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.4375, z2: 0.6875 },
+	selectionbox: { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.4375, z2: 0.6875 },
+	guiTransform: {
+		origin: { x: 0.5, y: 0.2, z: 0.5 },
+		scale: 2.4
+	},
+	groundTransform: {
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.4, z: 0.5 },
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.5, y: 0.05, z: -0.6 },
+		rotation: { x: 0, y: 22, z: -100 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.76
+	}
+	
+	
+}

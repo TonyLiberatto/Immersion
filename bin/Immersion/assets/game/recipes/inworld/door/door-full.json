@@ -1,0 +1,182 @@
+[ 
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-bamboo-brown-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-bamboo-brown-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-bamboo-brown-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-bamboo-green-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-bamboo-green-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-bamboo-green-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-aged-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-aged-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-aged-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-acacia-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-acacia-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-acacia-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-birch-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-birch-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-birch-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-kapok-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-kapok-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-kapok-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-maple-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-maple-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-maple-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-oak-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-oak-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-oak-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:door-assemble-pine-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:panel-pine-debarked-down",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:door-full-pine-east",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

@@ -1,0 +1,10 @@
+{
+	code: "lore",
+	class: "ItemLore",
+	maxstacksize: 1,
+	variantgroups: [
+		{ code: "type", states: ["unidentified", "paper", "scroll", "book" ] },
+	],
+	texture: { base: "item/lore/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+}

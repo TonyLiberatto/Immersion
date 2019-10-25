@@ -1,0 +1,66 @@
+{
+	code: "sword",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	attributes: {
+		handbook: {
+			groupBy: ["sword-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	variantgroups: [
+		{ code: "stone", states: ["obsidian", "flint",] },
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips" ] },
+	],
+	shape: { base: "item/tool/primitive-sword" },
+	heldTpHitAnimation: "swordhit",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"shaft": { base: "block/wood/debarked/{shaft}" },
+		"cordage": { base: "block/cordage/{cordage}" },
+	},
+	attackRange: 2.5,
+	miningspeedbytype: {
+		"sword-flint-*": {
+			"wood": 1.5,
+			"leaves": 1
+		},
+		"sword-obsidian-*": {
+			"wood": 2,
+			"leaves": 1.2
+		},
+	},
+	attackpowerbytype: {
+		"sword-flint-*": 1.5,
+		"sword-obsidian-*": 2,
+	},
+	durabilitybytype: {
+		"sword-flint-*": 100,
+		"sword-obsidian-*": 150,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"],"neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0.1, z: 0 },
+		rotation: { x: 170, y: -25, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 5, y: 1, z: 0 },
+		rotation: { x: -55, y: 42, z: 180 },
+		scale: 2.16,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.95, y: -0.4312, z: -0.56 },
+		rotation: { x: -90, y: 180, z: -7 },
+		scale: 1
+	}
+}

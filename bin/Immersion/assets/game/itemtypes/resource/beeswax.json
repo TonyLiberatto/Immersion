@@ -1,0 +1,13 @@
+{
+	code: "beeswax",
+	storageFlags: 5,
+	texture: { base: "item/resource/beeswax" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	maxstacksize: 32,
+	combustibleProps: {
+		meltingPoint: 45,
+		meltingDuration: 30,
+		smeltedRatio: 20,
+		smeltedStack: { type: "item", code: "ingot-wax" }
+	},
+}

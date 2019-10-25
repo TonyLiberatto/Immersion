@@ -1,0 +1,175 @@
+{
+	code: "hyena-wild-female-tan",
+	class: "EntityAgent",
+	hitboxSize: { x: 1.2, y: 1 },
+	deadHitboxSize: { x: 1.2, y: 0.5 },
+	eyeHeight: 0.9,
+	drops: [
+		{
+			type: "block", 
+			code: "immersion:dead-hyena-wild-female-tan", 
+			quantity: { avg: 1, var: 0 } 
+		},
+	],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/land/hyena/female" },
+		texture: { base: "immersion:entity/hyena/wild-female-tan" },
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "interpolateposition" },
+		],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+			{
+				code: "die",
+				animation: "death", 
+				animationSpeed: 1.25,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "health", currenthealth: 12, maxhealth: 12, },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "breathe" },
+			{ 
+				code: "multiply",
+				quantityPerDay: 0,
+				spawnEntityCode: "hyena-wild-pup",
+				growthCapQuantity: 10,
+				growthCapRange: 15,
+				growthCapEntityCodes: ["hyena-wild--pup", "hyena-wild-female-brown", "hyena-wild-female-tan", "hyena-wild-male"],
+				requiresNearbyEntityCode: "hyena-wild-male",
+				requiresNearbyEntityRange: 10
+			},
+			{ 
+				code: "emotionstates",
+				states: [ { code: "fleeondamage", duration: 15, chance: 0.8, slot: 0, prority: 1, accumType: "max" } ]
+			},
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
+						priority: 2.5,
+						movespeed: 0.022,
+						seekingRange: 12,
+						animation: "Run",
+						animationSpeed: 1.5,
+						whenInEmotionState: "fleeondamage",
+						animation: "Run",
+						sound: "creature/hyena/laugh"
+					},
+					{
+						code: "meleeattack",
+						entityCodes: ["player"],
+						priority: 2,
+						damage: 6,
+						slot: 1,
+						mincooldown: 1500, 
+						maxcooldown: 1500, 
+						attackDurationMs: 800,
+						damagePlayerAtMs: 500,
+						animation: "Attack",
+						animationSpeed: 2.5,
+						sound: "creature/hyena/attack"
+					},
+					{
+                        code: "neolithicseekfoodandeat",
+                        priority: 1.85,
+                        eatSound: "player/eat",
+                        eatTime: 7,
+                        movespeed: 0.02,
+                        animation: "Walk",
+                        animationSpeed: 1.0,
+                        eatanimation: "Eat",
+                        eatanimationspeed: 1.0,
+                        mincooldownHours: 1,
+                        maxcooldownHours: 4,
+                        doConsumePortion: true
+                    },
+					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: true,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
+						code: "seekentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						movespeed: 0.022,
+						seekingRange: 10,
+						animation: "Run",
+						animationSpeed: 1.5,
+						sound: "creature/hyena/growl"
+					},
+					{
+						code: "getoutofwater",
+						priority: 1.4,
+						movespeed: 0.015,
+						animation: "Walk",
+						animationSpeed: 2.2
+					},
+					{
+						code: "stayclosetoentity",
+						priority: 1.35,
+						entityCode: "hyena-wild-male",
+						movespeed: 0.02,
+						maxDistance: 10,
+						searchRange: 25,
+						animationSpeed: 1.5,
+						animation: "Run"
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						priorityForCancel: 1.35,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 6000,
+						maxcooldown: 20000,
+						animation: "Sniff",
+						animationSpeed: 1.25
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						priorityForCancel: 1.3,
+						movespeed: 0.006,
+						animation: "Walk",
+						preferredLightLevel: 24
+					},
+					{ 
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			}
+		]
+	},
+	sounds: {
+		hurt: "creature/hyena/hurt",
+		death: "creature/hyena/death",
+		idle: "creature/hyena/laugh"
+	},
+	idleSoundChance: 0.02
+}

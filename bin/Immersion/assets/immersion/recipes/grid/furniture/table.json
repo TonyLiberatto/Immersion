@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "WWW	W_W	W_W",
+	ingredients: {
+		"W": { type: "block", code: "game:planks-*", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok" ], name: "wood" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "neolithicmod:table-{wood}" }
+}

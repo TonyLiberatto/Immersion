@@ -1,0 +1,23 @@
+{
+	code: "mudwall",
+	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" } }],
+	creativeinventory: { "general": ["*-east"], "construction": ["*-east"], "neolithicblocks": ["*-east"] },
+		variantgroups: [
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shape: { base: "game:block/basic/cube" },
+	blockmaterial: "Stone",
+	drawtype: "cube",
+	replaceable: 100,
+	resistance: 2,
+	lightAbsorption: 99,
+	texturesByType: {
+		"*-north": { all: { base: "block/mudblock/MudBrickOUT*" }, "south": { base: "block/mudblock/MudBrickIN" } },
+		"*-east": { all: { base: "block/mudblock/MudBrickOUT*" }, "west": { base: "block/mudblock/MudBrickIN" } },
+		"*-south": { all: { base: "block/mudblock/MudBrickOUT*" }, "north": { base: "block/mudblock/MudBrickIN" } },
+		"*-west": { all: { base: "block/mudblock/MudBrickOUT*" }, "east": { base: "block/mudblock/MudBrickIN" } },
+	},
+	sounds: {
+		place: "game:block/stone",
+		walk: "game:walk/stone"
+		}

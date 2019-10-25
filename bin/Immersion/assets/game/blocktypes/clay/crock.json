@@ -1,0 +1,91 @@
+{
+	code: "crock",
+	behaviors: [{name: "RightClickPickup" }, {name: "UnstableFalling"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" } }],
+	classByType: {
+		"*-burned-*": "BlockCrock"
+	},
+	entityClassByType: {
+		"*-burned-*": "Crock",
+	},
+	heldTpIdleAnimation: "holdbothhands",
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["raw", "burned"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	attributesByType: {
+		"*-burned-*": {
+			mealContainer: true,
+			mealBlockCode: "crock-{color}-burned-east",
+			servingCapacity: 4,
+			bowlContents: null,
+			handleLiquidContainerInteract: true,
+			handleCookingContainerInteract: true
+		},	
+	},
+	combustiblePropsByType: {
+		"*-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "crock-{color}-burned-east" },
+			requiresContainer: false
+		}
+	},	
+	shapeByType: {
+		"*-north": { base: "block/clay/crock/base", rotateY: 0 },
+		"*-east": { base: "block/clay/crock/base", rotateY: 270 },
+		"*-west": { base: "block/clay/crock/base", rotateY: 90 },
+		"*-south": { base: "block/clay/crock/base", rotateY: 180 },
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*-raw-east", "*-burned-east"], "decorative": ["*-raw-east", "*-burned-east"] },
+	replaceable: 400,
+	resistance: 1.5,
+	maxStackSize: 1,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw-*": { 
+			ceramic: { base: "block/clay/{color}-raw" },
+			label: { base: "block/transparent" },
+		},
+		"*-burned-*": {
+			ceramic: { base: "block/clay/{color}-burned" },
+			label: { base: "block/clay/crock/label" }
+		},
+		"*": {
+			label: { base: "block/clay/crock/label" }
+		}
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.3125, z2: 0.75 },
+	selectionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.3125, z2: 0.75 },
+	guiTransform: {
+		rotation: { x: -22.6, y: -125, z: 0 },
+		origin: { x: 0.5, y: 0.18, z: 0.5 },
+		scale: 3.09
+	},
+	groundTransform: {
+		scale: 3
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0.5 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.57, y: 0.03, z: -0.6 },
+		rotation: { x: 45, y: 16, z: -72 },
+		origin: { x: 0.5, y: 0.01, z: 0.5 },
+		scale: 0.76
+	}
+}

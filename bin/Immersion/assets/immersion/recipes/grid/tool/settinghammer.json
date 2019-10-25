@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C	S",
+	ingredients: {
+		"C": { type: "item", code: "settinghammerhead-*", name: "material"  },
+		"S": { type: "item", code: "game:stick" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "settinghammer-{material}", quantity: 1  }
+}

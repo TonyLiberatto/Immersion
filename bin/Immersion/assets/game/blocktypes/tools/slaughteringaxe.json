@@ -1,0 +1,55 @@
+{
+	code: "slaughteringaxe",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
+		{ code: "side", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	shapeByType: { 
+		"*-bone-*-north": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 0 },
+		"*-bone-*-east": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 270 },
+		"*-bone-*-south": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 180 },
+		"*-bone-*-west": { base: "block/placedtool/bone-slaughteringaxe", rotateY: 90 },
+		"*-north": { base: "block/placedtool/branch-slaughteringaxe", rotateY: 0 },
+		"*-east": { base: "block/placedtool/branch-slaughteringaxe", rotateY: 270 },
+		"*-south": { base: "block/placedtool/branch-slaughteringaxe", rotateY: 180 },
+		"*-west": { base: "block/placedtool/branch-slaughteringaxe", rotateY: 90 },		
+		},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material32/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+			"ribbon": { base: "block/ribbon"},
+		},
+		"*": {
+			"stone": { base: "item/tool/material32/{stone}" },
+			"shaft": { base: "block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+			"ribbon": { base: "block/ribbon"},
+		},		
+	},		
+	creativeinventory: { "general": [""]  },
+	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
+	drops: [
+	{ type: "item", code: "game:slaughteringaxe-{stone}-{shaft}-{cordage}", quantity: { avg: 1 }}
+	],
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 0.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

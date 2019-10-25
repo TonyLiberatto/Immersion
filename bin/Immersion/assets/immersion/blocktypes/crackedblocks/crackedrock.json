@@ -1,0 +1,18 @@
+{
+	code: "crackedrock",
+	variantgroups: [
+		{ code: "rock", loadFromProperties: "block/rockwithdeposit" }
+	],
+	drawtype: "Cube",
+	blockmaterial: "Stone",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 400,
+	resistance: 1.5,
+	lightAbsorption: 99,
+	textures: {
+		all: { base: "crackedblock/stone/rock/{rock}*" },
+	},
+	sounds: {
+		walk: "game:walk/stone",
+	}
+}

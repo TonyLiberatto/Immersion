@@ -1,0 +1,22 @@
+{
+	code: "rammedearth",
+	shape: { base: "game:block/basic/cube" },
+	drawtype: "Cube",
+	blockmaterial: "Stone",
+    creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicdeco": ["*"] },
+    variantgroups: [
+		{ code: "type", states: ["light", "medium", "mixed"] }
+	],
+	replaceable: 400,
+	resistance: 1.5,
+	textures: {
+		verticals: {base: "block/clay/rammedearth/rammedearth-{type}top"},
+        horizontals: { 
+            base: "block/clay/rammedearth/rammedearth-{type}1",
+            alternates: [{base: "block/clay/rammedearth/rammedearth-{type}2" }, {base: "block/clay/rammedearth/rammedearth-{type}3" }, {base: "block/clay/rammedearth/rammedearth-{type}4" }, {base: "block/clay/rammedearth/rammedearth-{type}5" }], 
+        },
+	},
+	sounds: {
+		walk: "game:walk/stone"
+	}
+}

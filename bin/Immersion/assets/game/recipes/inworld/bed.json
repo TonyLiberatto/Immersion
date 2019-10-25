@@ -1,0 +1,46 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:linen-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:linen-*" ],
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:planks-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:planks-acacia", "game:planks-birch", "game:planks-kapok", "game:planks-maple", "game:planks-oak", "game:planks-pine" ],
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "game:bed-wood-head-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:hay-*",
+        "Type": "Block",
+        "AllowedVariants": [ "game:hay-normal" ]        
+    },
+    "Tool": {
+        "Code": "game:reeds",
+        "Type": "Item",        
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:bed-hay-head-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

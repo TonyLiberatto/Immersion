@@ -1,0 +1,61 @@
+{
+  code: "bamboo",
+  class: "BlockBamboo",
+  variantgroups: [
+		{ code: "type", states: [ "grown", "placed" ] },
+		{ code: "color", states: [ "brown", "green" ] },
+		{ code: "part", states: [ "segment1", "segment2", "segment3" ] },
+	],
+  creativeinventory: { "general": [ "bamboo-placed-*" ], "flora": [ "bamboo-placed-*" ], "neolithicflora": [ "bamboo-placed-*" ] },
+  attributesByType: {
+    "bamboo-*-grown-*": { preventsDecay: true }
+	},
+  behaviorsByType: {
+    "bamboo-*-grown-*": [{name: "PushEventOnBlockBroken", properties: { eventName: "testForDecay" }}]
+  },
+  randomDrawOffset: true,
+  shape: { base: "block/plant/bamboo/{color}/{part}-*" },
+  blockmaterial: "Wood",
+  requiredMiningTier: 1,
+  randomizeAxes: "xz",
+  sideopaque: { all: false  },
+  sidesolid: { all: false  },
+  combustibleProps: {
+    burnTemperature: 700,
+    burnDuration: 10,
+  },
+  replaceable: 600,
+  lightAbsorption: 0,
+  resistance: 2,
+  collisionbox: {
+    x1: 0.125,
+    z1: 0.125,
+    x2: 0.875,
+    y2: 1,
+    z2: 0.875
+  },
+  selectionbox: {
+    x1: 0.125,
+    y1: 0,
+    z1: 0.125,
+    x2: 0.875,
+    y2: 1,
+    z2: 0.875
+  },
+  rainPermeable: true,
+  materialDensity: 200,
+  dropsByType: {
+    "bamboo-brown-grown-segment1": [ { type: "block", code: "bamboostakes-brown", quantity: { avg: 1 } } ],
+    "bamboo-*-brown-*": [ 
+		{ type: "block", code: "bamboostakes-brown", quantity: { avg: 1 } },
+		{ "type": "block", "code": "sapling-bamboobrown", "quantity": { "avg": 0.25 } }
+    ],
+    "bamboo-green-grown-segment1": [
+      { type: "block", code: "bamboostakes-green", quantity: { avg: 1 } }
+    ],
+    "bamboo-*-green-*": [
+      { type: "block", code: "bamboostakes-green", quantity: { avg: 1 } },
+      { type: "block", code: "sapling-bamboogreen", quantity: { avg: 0.25 } }
+    ],
+  }
+}

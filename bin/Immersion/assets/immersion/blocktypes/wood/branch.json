@@ -1,0 +1,222 @@
+{
+	code: "branch",	
+	attributes: {
+		handbook: {
+			groupBy: ["branch-*"]
+		},
+	},
+	variantgroups: [
+		{ code: "size", states: ["very-thin", "thin", "medium", "thick"] },
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "rotation", states: ["ud", "ns", "we"] },
+	],
+	creativeinventory: { "general": ["*-ud"], "flora": ["*-ud"], "construction": ["*-ud"], "neolithicflora": ["*-ud"] },
+	drawtype: "json",
+	lightabsorption: 0,
+	sidesolid: {
+		all: false,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	shapeByType: {
+	"branch-very-thin-*-ud": {base: "block/wood/branch-2"},
+	"branch-thin-*-ud": {base: "block/wood/branch-4"},
+	"branch-very-thin-*-ns": {base: "block/wood/branch-2", rotateY: 0, rotateX: 90 },
+	"branch-thin-*-ns": {base: "block/wood/branch-4", rotateY: 0, rotateX: 90},
+	"branch-very-thin-*-we": {base: "block/wood/branch-2", rotateZ: 90, rotateX: 90},
+	"branch-thin-*-we": {base: "block/wood/branch-4", rotateZ: 90, rotateX: 90},
+	
+	"branch-medium-*-ud": {base: "block/wood/branch-8"},
+	"branch-thick-*-ud": {base: "block/wood/branch-12"},
+	"branch-medium-*-ns": {base: "block/wood/branch-8", rotateY: 0, rotateX: 90 },
+	"branch-thick-*-ns": {base: "block/wood/branch-12", rotateY: 0, rotateX: 90},
+	"branch-medium-*-we": {base: "block/wood/branch-8", rotateZ: 90, rotateX: 90},
+	"branch-thick-*-we": {base: "block/wood/branch-12", rotateZ: 90, rotateX: 90},
+	 },
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	texturesByType: {
+		"branch-*": {
+			"all": { base: "block/wood/{style}/{wood}" },
+			"acaciatop": { base: "block/wood/treetrunk/{wood}" }
+		},
+	},
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	dropsBYType: 
+	{
+		"branch-very-thin-{style}-{wood}-*":
+		[ 
+			{
+				type: "block",
+				code: "branch-very-thin-{style}-{wood}-ud",
+				quantity: { avg: 1 }  
+			},
+		],
+		"branch-thin-{style}-{wood}-*":
+		[ 
+			{
+				type: "block",
+				code: "branch-thin-{style}-{wood}-ud",
+				quantity: { avg: 1 }  
+			},
+		],
+		
+		"branch-medium-{style}-{wood}-*":
+		[ 
+			{
+				type: "block",
+				code: "branch-medium-{style}-{wood}-ud",
+				quantity: { avg: 1 }  
+			},
+		],
+		"branch-thick-{style}-{wood}-*":
+		[ 
+			{
+				type: "block",
+				code: "branch-thick-{style}-{wood}-ud",
+				quantity: { avg: 1 }  
+			},
+		],
+	},
+	collisionboxbytype: {
+		"branch-very-thin-*-ud": { x1: 0.45, y1: 0, z1: 0.45, x2: 0.55, y2: 1, z2: 0.55 },
+		"branch-thin-*-ud": { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 1, z2: 0.65 },
+		"branch-medium-*-ud": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+		"branch-thick-*-ud": { x1: 0.15, y1: 0, z1: 0.15, x2: 0.85, y2: 1, z2: 0.85 },
+		
+		"branch-very-thin-*-ns": { x1: 0.45, y1: 0.45, z1: 0, x2: 0.55, y2: 0.55, z2: 1 },
+		"branch-thin-*-ns": { x1: 0.35, y1: 0.35, z1: 0, x2: 0.65, y2: 0.65, z2: 1 },
+		"branch-medium-*-ns": { x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.75, z2: 1 },
+		"branch-thick-*-ns": { x1: 0.15, y1: 0.15, z1: 0, x2: 0.85, y2: 0.85, z2: 1 },
+		
+		"branch-very-thin-*-we": { x1: 0, y1: 0.45, z1: 0.45, x2: 1, y2: 0.55, z2: 0.55 },
+		"branch-thin-*-we": { x1: 0, y1: 0.35, z1: 0.35, x2: 1, y2: 0.65, z2: 0.65 },
+		"branch-medium-*-we": { x1: 0, y1: 0.25, z1: 0.25, x2: 1, y2: 0.75, z2: 0.75 },
+		"branch-thick-*-we": { x1: 0, y1: 0.15, z1: 0.15, x2: 1, y2: 0.85, z2: 0.85 },
+		},
+		selectionboxbytype: {
+		"branch-very-thin-*-ud": { x1: 0.45, y1: 0, z1: 0.45, x2: 0.55, y2: 1, z2: 0.55 },
+		"branch-thin-*-ud": { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 1, z2: 0.65 },
+		"branch-medium-*-ud": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+		"branch-thick-*-ud": { x1: 0.15, y1: 0, z1: 0.15, x2: 0.85, y2: 1, z2: 0.85 },
+		
+		"branch-very-thin-*-ns": { x1: 0.45, y1: 0.45, z1: 0, x2: 0.55, y2: 0.55, z2: 1 },
+		"branch-thin-*-ns": { x1: 0.35, y1: 0.35, z1: 0, x2: 0.65, y2: 0.65, z2: 1 },
+		"branch-medium-*-ns": { x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.75, z2: 1 },
+		"branch-thick-*-ns": { x1: 0.15, y1: 0.15, z1: 0, x2: 0.85, y2: 0.85, z2: 1 },
+		
+		"branch-very-thin-*-we": { x1: 0, y1: 0.45, z1: 0.45, x2: 1, y2: 0.55, z2: 0.55 },
+		"branch-thin-*-we": { x1: 0, y1: 0.35, z1: 0.35, x2: 1, y2: 0.65, z2: 0.65 },
+		"branch-medium-*-we": { x1: 0, y1: 0.25, z1: 0.25, x2: 1, y2: 0.75, z2: 0.75 },
+		"branch-thick-*-we": { x1: 0, y1: 0.15, z1: 0.15, x2: 1, y2: 0.85, z2: 0.85 },
+		},
+	combustiblePropsByType: {
+		"branch-very-thin-birch-*": {
+			burnTemperature: 800,
+			burnDuration: 17,
+		},
+		"branch-thin-birch-*": {
+			burnTemperature: 800,
+			burnDuration: 35,
+		},
+		"branch-medium-birch-*": {
+			burnTemperature: 800,
+			burnDuration: 52,
+		},
+		"branch-thick-birch-*": {
+			burnTemperature: 800,
+			burnDuration: 70,
+		},
+		"branch-very-thin-oak-*": {
+			burnTemperature: 800,
+			burnDuration: 22,
+		},
+		"branch-thin-oak-*": {
+			burnTemperature: 800,
+			burnDuration: 45,
+		},
+		"branch-medium-oak-*": {
+			burnTemperature: 800,
+			burnDuration: 67,
+		},
+		"branch-thick-oak-*": {
+			burnTemperature: 800,
+			burnDuration: 90,
+		},
+		"branch-very-thin-pine-*": {
+			burnTemperature: 800,
+			burnDuration: 12,
+		},
+		"branch-thin-pine-*": {
+			burnTemperature: 800,
+			burnDuration: 25,
+		},
+		"branch-medium-pine-*": {
+			burnTemperature: 800,
+			burnDuration: 37,
+		},
+		"branch-thick-pine-*": {
+			burnTemperature: 800,
+			burnDuration: 50,
+		},
+		"branch-very-thin-acacia-*": {
+			burnTemperature: 800,
+			burnDuration: 20
+		},
+		"branch-thin-acacia-*": {
+			burnTemperature: 800,
+			burnDuration: 40,
+		},
+		"branch-medium-acacia-*": {
+			burnTemperature: 800,
+			burnDuration: 60,
+		},
+		"branch-thick-acacia-*": {
+			burnTemperature: 800,
+			burnDuration: 80,
+		},
+		"branch-very-thin-kapok-*": {
+			burnTemperature: 800,
+			burnDuration: 10
+		},
+		"branch-thin-kapok-*": {
+			burnTemperature: 800,
+			burnDuration: 20,
+		},
+		"branch-medium-kapok-*": {
+			burnTemperature: 800,
+			burnDuration: 30,
+		},
+		"branch-thick-kapok-*": {
+			burnTemperature: 800,
+			burnDuration: 40,
+		},
+		"branch-very-thin-maple-*": {
+			burnTemperature: 800,
+			burnDuration: 17
+		},
+		"branch-thin-maple-*": {
+			burnTemperature: 800,
+			burnDuration: 35,
+		},
+		"branch-medium-maple-*": {
+			burnTemperature: 800,
+			burnDuration: 52,
+		},
+		"branch-thick-maple-*": {
+			burnTemperature: 800,
+			burnDuration: 70,
+		}
+		
+	},
+	maxStackSize: 64,
+	materialDensity: 700
+}

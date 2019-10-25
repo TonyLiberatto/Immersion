@@ -1,0 +1,121 @@
+{
+    "code": "bowlstamp",
+    "variantgroups": [
+        {
+            "code": "metal",
+            "states": [
+                "tinbronze",
+                "bismuthbronze",
+                "blackbronze",
+                "copper"
+            ]
+        }
+    ],
+    "blockmaterial": "Metal",
+    "behaviors": [  {  "name": "UnstableFalling"  },  ],
+    "replaceable": 300,
+    "resistance": 0.75,
+    "creativeinventory": {
+        "general": [
+            "*"
+        ],
+        "items": [
+            "*"
+        ]
+    },
+    "maxStackSize": 8,
+    "drawtype": "json",
+    "shape": {
+        "base": "block/bowlstamp"
+    },
+    "textures": {
+        "all": {
+            "base": "game:block/metal/ingot/{metal}"
+        }
+    },
+    "lightAbsorption": 0,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "sounds": {
+        "walk": "walk/stone",
+        "place": "block/anvil1",
+        "break": "block/anvil2"
+    },
+    "collisionbox": {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 0.6875,
+        "y2": 0.125,
+        "z2": 0.6875
+    },
+    "selectionbox": {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 0.6875,
+        "y2": 0.125,
+        "z2": 0.6875
+    },
+    "fpHandTransform": {
+        "translation": {
+            "x": 0.3,
+            "y": -0.4,
+            "z": 0
+        },
+        "rotation": {
+            "x": 15,
+            "y": 15,
+            "z": 270
+        },
+        "scale": 2.5
+    },
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 3,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.0625,
+            "z": 0.5
+        },
+        "scale": 2.5
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0.046875,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "scale": 2.5
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -0.9,
+            "y": -0.1,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": 0,
+            "y": -56,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.1,
+            "z": 0.5
+        },
+        "scale": 0.66
+    }
+}

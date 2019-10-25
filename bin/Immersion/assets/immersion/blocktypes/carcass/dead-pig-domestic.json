@@ -1,0 +1,131 @@
+{
+	code: "dead-pig-domestic",
+	class: "BlockPlaceOnDrop",
+	maxStackSize: 1,
+	resistance: 13,
+	entityClass: "NeolithicTransient",
+	attributes: {
+		convertFrom: "dead-pig-*",
+		convertTo: "dead-rotten-large", 
+		eatenTo: "dead-rotten-large",
+		inGameHours: "24",
+		contentConfig: [
+			{
+				foodFor: ["game:wolf-*", "game:fox-*", "game: hyena-*"],
+			}
+		],
+	},
+	behaviors:
+	[
+		{
+			name: "Carryable",
+			properties:
+			{
+				translation: [ 0, 0.3, 0.4 ],
+				rotation: [ 90, 0, -20 ],
+				scale: 0.8,
+				slots: { "Shoulder": {  } }
+			}
+		}
+	],
+	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	variantgroups: [
+		{ code: "type", states: ["boar", "sow"] },		
+	],
+	textures: 
+	{
+		all: { base: "game:entity/pig-domestic/{type}" },
+	},
+	shapeByType: 
+	{
+		"*": 
+		{
+			base: "block/dead/pig/{type}",
+			alternates: 
+			[
+				{ base: "block/dead/pig/{type}", rotateY: 45 },
+				{ base: "block/dead/pig/{type}", rotateY: 90 },
+				{ base: "block/dead/pig/{type}", rotateY: 135 },
+				{ base: "block/dead/pig/{type}", rotateY: 180 },
+				{ base: "block/dead/pig/{type}", rotateY: 225 },
+				{ base: "block/dead/pig/{type}", rotateY: 270 },
+				{ base: "block/dead/pig/{type}", rotateY: 45 },
+				{ base: "block/dead/pig/{type}", rotateY: 90 },
+				{ base: "block/dead/pig/{type}", rotateY: 135 },
+				{ base: "block/dead/pig/{type}", rotateY: 180 },
+				{ base: "block/dead/pig/{type}", rotateY: 225 },
+				{ base: "block/dead/pig/{type}", rotateY: 270 },
+			],
+		}
+	},
+	randomDrawOffset: true,
+	lightAbsorption: 0,
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.4, z2: 1 },	
+	collisionbox: null,
+	materialDensity: 3000,
+	guiTransform:
+	{
+		rotation: { x: -22.5937, y: 190, z: 0 },
+		origin: { x: 0.5, y: 0.22, z: 0.5 },
+		scale: 1.22
+	},
+	fpHandTransform: 
+	{
+		rotation: { x: 0, y: -24, z: 0 }
+	},
+	tpHandTransform: 
+	{
+		translation: { x: -1.3, y: -0.7, z: -0.8 },
+		rotation: { x: 2, y: 31, z: -25 },
+		scale: 0.6
+	},
+  groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 4
+	},
+	dropsByType:
+	{
+		"dead-pig-domestic-boar": 
+		[	
+			{
+				type: "block", 
+				code: "skinned-domestic-boar", 
+				quantity: { avg: 1, var: 0 } ,
+				tool:"knife"
+			},
+			
+			{
+				type: "item", 
+				code: "game:hide-raw", 
+				quantity: { avg: 10, var: 1 } ,
+				tool:"knife",
+				lastDrop: true
+			},
+		],
+		"dead-pig-domestic-sow": 
+		[			
+			{
+				type: "block", 
+				code: "skinned-domestic-sow", 
+				quantity: { avg: 1, var: 0 } ,
+				tool:"knife"
+			},
+			
+			{
+				type: "item", 
+				code: "game:hide-raw", 
+				quantity: { avg: 10, var: 1 } ,
+				tool:"knife",
+				lastDrop: true
+			},
+		],
+	},
+	sounds: {
+		"place": "game:effect/squish1",
+		"break": "game:effect/squish2"
+	},
+}

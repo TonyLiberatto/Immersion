@@ -1,0 +1,64 @@
+{
+	code: "door-full",
+	behaviorsByType: { 
+		"*-acacia-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:dooracacia-east-down-closed-left"}}}],
+		"*-aged-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:dooraged-east-down-closed-left"}}}],
+		"*-birch-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doorbirch-east-down-closed-left"}}}],
+		"*-kapok-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doorkapok-east-down-closed-left"}}}],
+		"*-maple-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doormaple-east-down-closed-left"}}}],
+		"*-oak-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:dooroak-east-down-closed-left"}}}],
+		"*-pine-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:doorpine-east-down-closed-left"}}}],
+	},
+	variantgroups: [
+		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["door-assemble-*"]
+		},
+	},
+	shapeByType: {
+		"*-north": { base: "block/wood/door/inventory", rotateY: 0 },
+		"*-east": { base: "block/wood/door/inventory", rotateY: 270 },
+		"*-south": { base: "block/wood/door/inventory", rotateY: 180 },
+		"*-west": { base: "block/wood/door/inventory", rotateY: 90 },		
+	},
+	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	sidesolid: {
+		all: false
+	},	
+	sideopaque: {
+		all: false
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 30,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	textures: {
+		bottom_left: { base: "block/wood/doors/{wood}/bottom_left" },
+		bottom_right: { base: "block/wood/doors/{wood}/bottom_right" },
+		top_left: { base: "block/wood/doors/{wood}/top_left" },
+		top_right: { base: "block/wood/doors/{wood}/top_right" },		
+	},
+	materialDensity: 400,
+	collisionSelectionBoxByType: { 
+		"*-north": { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 2, z2: 0.5625 },
+		"*-east": { x1: 0.4375, y1: 0, z1: 0, x2: 0.5625, y2: 2, z2: 1 },
+		"*-south": { x1: 0, y1: 0, z1: 0.4375, x2: 1, y2: 2, z2: 0.5625 },
+		"*-west": { x1: 0.4375, y1: 0, z1: 0, x2: 0.5625, y2: 2, z2: 1 },		
+	},
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 },
+		scale: 0.6
+	}
+}

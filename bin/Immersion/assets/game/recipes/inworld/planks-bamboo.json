@@ -1,0 +1,44 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-bamboo-brown-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",
+		"StackSize": 3		
+    },
+    "Makes": [{
+        "Code": "immersion:planks-bamboo-brown",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-bamboo-green-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",
+		"StackSize": 3		
+    },
+    "Makes": [{
+        "Code": "immersion:planks-bamboo-green",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },   
+]

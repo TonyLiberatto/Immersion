@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C	S",
+	ingredients: {
+		"C": { type: "item", code: "chiselhead-*", name: "material"  },
+		"S": { type: "item", code: "game:stick" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "game:chisel-{material}", quantity: 1  }
+}

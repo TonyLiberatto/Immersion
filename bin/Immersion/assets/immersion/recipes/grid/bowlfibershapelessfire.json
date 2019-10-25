@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "FB",
+	ingredients: {
+		"F": { type: "item", code: "neolithicmod:byproducts-sinew-fibers", quantity:6 },
+		"B": { type: "block", code: "game:bowl-fire-burned" },
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "block", code: "game:bowl-fire-sinewfibers", quantity: 1  }
+}

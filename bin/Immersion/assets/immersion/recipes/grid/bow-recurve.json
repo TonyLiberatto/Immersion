@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "BS",
+	ingredients: {
+		"B": { type: "item", code: "neolithicmod:bowlimb-recurve"},
+		"S": { type: "item", code: "neolithicmod:byproducts-bowstring"}
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "item", code: "game:bow-recurve", quantity: 1  }
+}

@@ -1,0 +1,80 @@
+{
+	code: "stair-side-brick",
+	class: "FixedStairs",
+	entityClass: "Stairs",
+	variantgroups: [
+		{ loadFromProperties: "block/rock" },
+		{ loadFromProperties: "abstract/verticalorientation" },
+		{ loadFromProperties: "abstract/horizontalorientation" }
+	],
+	creativeinventory: { "general": ["stair-side-brick-{rock}-up-north"], "construction": ["stair-side-brick-{rock}-up-north"] },
+	sidesolidByType: {	
+		"*-up-north": { all:false, down:true, north: true },
+		"*-up-west": { all:false, down:true, west: true },
+		"*-up-south": { all:false, down:true, south: true },
+		"*-up-east": { all:false, down:true, east: true },
+		"*-down-north": { all:false, up:true, north: true },
+		"*-down-south": { all:false, up:true, south: true },
+		"*-down-west": { all:false, up:true, west: true },
+		"*-down-east": { all:false, up:true, east: true },
+	},
+	sideopaqueByType	: {
+		"*-up-north": { all:false, down:true, north: true },
+		"*-up-west": { all:false, down:true, west: true },
+		"*-up-south": { all:false, down:true, south: true },
+		"*-up-east": { all:false, down:true, east: true },
+		"*-down-north": { all:false, up:true, north: true },
+		"*-down-south": { all:false, up:true, south: true },
+		"*-down-west": { all:false, up:true, west: true },
+		"*-down-east": { all:false, up:true, east: true },
+	},
+	shapebytype: { 
+		"*-up-north": { base: "block/basic/stairs", rotateY: 0 },
+		"*-up-west": { base: "block/basic/stairs", rotateY: 90 },
+		"*-up-south": { base: "block/basic/stairs", rotateY: 180 },
+		"*-up-east": { base: "block/basic/stairs", rotateY: 270 },
+		"*-down-north": { base: "block/basic/stairs", rotateY: 0, rotateZ: 180 },
+		"*-down-west": { base: "block/basic/stairs", rotateY: 90, rotateX: 180 },
+		"*-down-south": { base: "block/basic/stairs", rotateY: 180, rotateZ: 180 },
+		"*-down-east": { base: "block/basic/stairs", rotateY: 270, rotateX: 180 }
+	},
+	blockmaterial: "Stone",
+	textures: {
+		all: {base: "block/stone/brick/{rock}*" },
+	},
+	replaceable: 160,
+	resistance: 4,
+	neighbourSideAo: { all: true },
+	sounds: {
+		"walk": "walk/stone",
+		byTool: {
+			"Pickaxe": { hit: "block/rock-hit-pickaxe", break: "block/rock-break-pickaxe" }
+		}
+	},
+	collisionSelectionBoxesByType: {
+		"*-down-*": [
+			{ x1: 0, y1: 0.5, z1: 0, x2: 1, y2: 1, z2: 1 },
+			{ 
+				x1: 0, y1: 0, z1: 0.5, x2: 1, y2: 0.5, z2: 1, 
+				rotateYByType: {
+					"*-north": 180,
+					"*-east": 90,
+					"*-south": 0,
+					"*-west": 270,
+				}
+			}			
+		],
+		"*-up-*": [
+			{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.5, z2: 1 },
+			{ 
+				x1: 0, y1: 0.5, z1: 0.5, x2: 1, y2: 1, z2: 1, 
+				rotateYByType: {
+					"*-north": 180,
+					"*-east": 90,
+					"*-south": 0,
+					"*-west": 270,
+				}
+			}
+		],	
+	}
+}

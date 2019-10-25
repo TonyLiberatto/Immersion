@@ -1,0 +1,155 @@
+{
+	code: "trough",
+	class: "BlockTroughDoubleBlock",
+	entityClassByType: {
+		"*-head-*": "Trough",
+	},
+	attributes: {
+		handbook: {
+			groupBy: ["trough-*-large-*"]
+		},
+		contentConfig: [
+			{
+				code: "flax",
+				content: { type: "item", code: "game:grain-flax" }, 
+				foodFor: ["pig-*", "sheep-*", "wild-sheep-*"],
+				quantityPerFillLevel: 2,
+				maxFillLevels: 8,
+				shapesPerFillLevel: ["block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill4", "block/wood/trough/large/grainfill4"],
+				textureCode: "contents-flax"
+			},
+			{
+				code: "rice",
+				content: { type: "item", code: "game:grain-rice" }, 
+				quantityPerFillLevel: 2,
+				maxFillLevels: 8,
+				shapesPerFillLevel: ["block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill4", "block/wood/trough/large/grainfill4"],
+				foodFor: ["pig-*", "sheep-*", "wild-sheep-*" ],
+				textureCode: "contents-rice"
+			},
+			{
+				code: "rye",
+				content: { type: "item", code: "game:grain-rye" }, 
+				quantityPerFillLevel: 2,
+				maxFillLevels: 8,
+				shapesPerFillLevel: ["block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill4", "block/wood/trough/large/grainfill4"],
+				foodFor: ["pig-*", "sheep-*", "wild-sheep-*" ],
+				textureCode: "contents-rye"
+			},
+			{
+				code: "spelt",
+				content: { type: "item", code: "game:grain-spelt" }, 
+				quantityPerFillLevel: 2,
+				maxFillLevels: 8,
+				shapesPerFillLevel: ["block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill1", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill2", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill3", "block/wood/trough/large/grainfill4", "block/wood/trough/large/grainfill4"],
+				foodFor: ["pig-*", "sheep-*", "wild-sheep-*" ],
+				textureCode: "contents-spelt"
+			},
+			{
+				code: "drygrass",
+				content: { type: "item", code: "game:drygrass" }, 
+				quantityPerFillLevel: 8,
+				maxFillLevels: 8,
+				shapesPerFillLevel: ["block/wood/trough/large/hayfill1", "block/wood/trough/large/hayfill1", "block/wood/trough/large/hayfill2", "block/wood/trough/large/hayfill2", "block/wood/trough/large/hayfill3", "block/wood/trough/large/hayfill3", "block/wood/trough/large/hayfill4", "block/wood/trough/large/hayfill4"],
+				foodFor: [ "sheep-*", "wild-sheep-*"]
+			}
+		]
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	heldTpIdleAnimation: "holdunderarm",
+	variantgroups: [
+		{ code: "material", states: ["genericwood"] },
+		{ code: "part", states: ["large-head", "large-feet"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	creativeinventory: { "general": ["*-head-north"], "decorative": ["*-head-north"], "neolithicblocks": ["*-head-north"] },
+	shapeinventory: { base: "game:block/wood/trough/large/inventory" },
+	shapebytype: {
+		"*-head-north": { base: "game:block/wood/trough/large/empty", rotateY: 90 },
+		"*-head-east": { base: "game:block/wood/trough/large/empty", rotateY: 0 },
+		"*-head-south": { base: "game:block/wood/trough/large/empty", rotateY: 270 },
+		"*-head-west": { base: "game:block/wood/trough/large/empty", rotateY: 180 },
+		
+		"*-feet-north": { base: "game:block/wood/trough/large/empty", rotateY: 270 },
+		"*-feet-east": { base: "game:block/wood/trough/large/empty", rotateY: 180 },
+		"*-feet-south": { base: "game:block/wood/trough/large/empty", rotateY: 90 },
+		"*-feet-west": { base: "game:block/wood/trough/large/empty", rotateY: 0 },
+	},
+	textures: {
+		"contents-flax": { base: "game:block/wood/trough/large/flax" },
+		"contents-rice": { base: "game:block/wood/trough/large/rice" },
+		"contents-rye": { base: "game:block/wood/trough/large/rye" },
+		"contents-spelt": { base: "game:block/wood/trough/large/spelt" },
+		"singlehay": { base: "game:block/wood/trough/large/singlehay" },
+		"singlehay2": { base: "game:block/wood/trough/large/singlehay2" },
+		"normal-side": { base: "game:block/hay/normal-side" },
+		"normal-top": { base: "game:block/hay/normal-top" },
+	},
+	blockmaterial: "Wood",
+	replaceable: 550,
+	resistance: 2,
+	lightAbsorption: 0,
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 40,
+	},
+	guiTransform: {
+		translation: { x: -1, y: 2, z: 0 },
+		origin: { x: 1, y: 0.3, z: 0.5 },
+		scale: 1.04
+	},
+	fpHandTransform: {
+		translation: { x: 0.8, y: -0.6, z: 0 },
+		rotation: { x: 127, y: -50, z: -93 },
+		scale: 1.17
+	},
+	tpHandTransform: {
+		translation: { x: -0.3, y: -0.6, z: -0.47 },
+		rotation: { x: 85, y: 0, z: 0 },
+		scale: 0.56
+	},
+	groundTransform: {
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2
+	},
+	selectionbox: { 
+		x1: 0.125, y1: 0, z1: 0, x2: 0.875, y2: 0.5625, z2: 0.8125, rotateYByType: 
+		{
+			"*-feet-north": 180,
+			"*-feet-east": 90,
+			"*-feet-south": 0,
+			"*-feet-west": 270,
+			
+			"*-head-north": 0,
+			"*-head-east": 270,
+			"*-head-south": 180,
+			"*-head-west": 90,
+		}
+	},
+	collisionbox: { 
+		x1: 0.125, y1: 0, z1: 0, x2: 0.875, y2: 1.1, z2: 0.8125, rotateYByType: 
+		{
+			"*-feet-north": 180,
+			"*-feet-east": 90,
+			"*-feet-south": 0,
+			"*-feet-west": 270,
+			
+			"*-head-north": 0,
+			"*-head-east": 270,
+			"*-head-south": 180,
+			"*-head-west": 90,
+		}
+	},	
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600
+}

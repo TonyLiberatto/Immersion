@@ -1,0 +1,213 @@
+{
+  code: "chicken-hen",
+  class: "EntityAgent",
+  hitboxSize: {
+    x: 0.5,
+    y: 0.6
+  },
+  deadHitboxSize: {
+    x: 0.5,
+    y: 0.25
+  },
+  variantgroups: [
+    {
+      code: "color",
+      states: [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ]
+    }
+  ],
+  eyeHeight: 0.5,
+  drops: [
+		{
+			type: "block",
+			code: "immersion:dead-chicken-hen-{color}",
+		},
+		{
+			type: "item", 
+			code: "feather", 
+			quantity: { avg: 6, var: 1 } 
+		},
+	],
+  client: {
+    renderer: "Shape",
+    shape: { base: "entity/land/chicken/hen" },
+    textures: {all: { base: "entity/chicken/hen/{color}" } },
+    behaviors: [
+      { code: "repulseagents" },
+      { code: "featherpluck" },
+      {
+        code: "controlledphysics",
+        stepHeight: 1.0001
+      },
+      { code: "interpolateposition" },
+      { code: "multiply" },
+
+    ],
+    animations: [
+      {
+        code: "hurt",
+        animation: "hurt",
+        animationSpeed: 2.2,
+        weight: 10,
+        blendMode: "AddAverage"
+      },
+      {
+        code: "eat",
+        animation: "eat",
+        animationSpeed: 1,
+        weight: 1,
+        blendMode: "Add"
+      },
+      {
+        code: "idle",
+        animation: "idle",
+        animationSpeed: 1,
+        weight: 1,
+        blendMode: "Add"
+      },
+    ]
+  },
+  server: {
+    attributes: {
+      pathfinder: {
+        minTurnAnglePerSec: 720,
+        maxTurnAnglePerSec: 1440
+      }
+    },
+    behaviors: [
+      { 
+        code: "damagenotify",
+        notifyRange: 10.00
+      },
+      { code: "repulseagents" },
+      { code: "featherpluck" },
+      {
+        code: "controlledphysics",
+        stepHeight: 1.0001
+      },
+      {
+        code: "despawn",
+        minPlayerDistance: 8,
+        belowLightLevel: 8,
+        minSeconds: 300
+      },
+      {
+        code: "health",
+        currenthealth: 3,
+        maxhealth: 3
+      },
+
+      { 
+				code: "multiply",
+				spawnEntityCodeByType: {
+					"*-ashgrey": "chicken-chick-ashgrey",
+					"*-black": "chicken-chick-black",
+					"*-brown": "chicken-chick-brown",
+					"*-cream": "chicken-chick-cream",
+					"*-golden": "chicken-chick-golden",
+					"*-white": "chicken-chick-white"
+				},
+				spawnQuantityMin: 1,
+				spawnQuantityMax: 2,
+				growthCapEntityCodes: ["chicken-chick-*", "chicken-hen-*", "chicken-rooster-*"],
+				requiresNearbyEntityCode: "chicken-rooster-*",
+				requiresNearbyEntityRange: 5,
+				pregnancyDays: 6,
+				multiplyCooldownDaysMin: 12,
+				multiplyCooldownDaysMax: 21,
+				portionsEatenForMultiply: 6
+			},
+      { code: "breathe" },
+      {
+        code: "placeblock",
+        minHourDelay: 192,
+        maxHour: 360,
+        blockCodes: [ "egg-chicken-1", "egg-chicken-1", "egg-chicken-1", "egg-chicken-2", "egg-chicken-2", "egg-chicken-3" ]
+      },
+      {
+        code: "taskai",
+        aitasks: [
+          {
+            code: "fleeentity",
+            entityCodes: [ "player", "wolf-*", "fox-*", "hyena-*", "panther-*" ],
+            priority: 1.5,
+            movespeed: 0.02,
+            seekingRange: 7,
+            animation: "Run",
+            sound: "creature/chicken/hen-flee"
+          },
+					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: false,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},          
+          {
+            code: "getoutofwater",
+            priority: 1.4,
+            movespeed: 0.015,
+            animation: "Run",
+            sound: "creature/chicken/hen-flee"
+          },
+          {
+            code: "seekfoodandeat",
+            priority: 1.35,
+            eatSound: "player/eat",
+            eatTime: 1.5,
+            movespeed: 0.0025,
+            animation: "Walk",
+            mincooldownHours: 1,
+            maxcooldownHours: 4,
+          },
+          {
+            code: "stayclosetoentity",
+            priority: 1.3,
+            entityCode: "chicken-rooster-*",
+            movespeed: 0.01,
+            maxDistance: 5,
+            searchRange: 12,
+            animation: "Run"
+          },
+          {
+            code: "idle",
+            priority: 1.2,
+            minduration: 2500,
+            maxduration: 2500,
+            mincooldown: 2000,
+            maxcooldown: 10000,
+            animation: "Eat"
+          },
+          {
+            code: "idle",
+            priority: 1.1,
+            minduration: 1000,
+            maxduration: 3000,
+            mincooldown: 2000,
+            maxcooldown: 30000,
+            animation: "Idle"
+          },
+          {
+            code: "wander",
+            priority: 1.0,
+            movespeed: 0.0025,
+            animation: "Walk",
+            wanderChance: 0.02,
+            preferredLightLevel: 19
+          },
+          {
+            code: "lookaround",
+            priority: 0.5
+          }
+        ]
+      }
+    ]
+  },
+  sounds: {
+    hurt: "creature/chicken/hurt",
+    death: "creature/chicken/hurt",
+    idle: "creature/chicken/hen-idle*"
+  },
+  idleSoundChance: 0.03
+}

@@ -1,0 +1,9 @@
+{
+	code: "bowlimb",
+	maxstacksize: 4,
+	variantgroups: [
+		{ code: "type", states: ["carved", "composite", "recurve"] }
+	],
+	texture: { base: "game:item/tool/bow/{type}/limb" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+}

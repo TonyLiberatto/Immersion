@@ -1,0 +1,83 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-cordage-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:rock-andesite",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:quern-andesite",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-cordage-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:rock-basalt",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:quern-basalt",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-cordage-granite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:rock-granite",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:quern-granite",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-cordage-peridotite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:rock-peridotite",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:quern-peridotite",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ 
+]

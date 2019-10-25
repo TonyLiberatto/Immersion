@@ -1,0 +1,122 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-acacia-debarked-ud",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-basalt-acacia-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-birch-debarked-ud",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-basalt-birch-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-kapok-debarked-ud",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-basalt-kapok-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-maple-debarked-ud",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-basalt-maple-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-oak-debarked-ud",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-basalt-oak-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-basalt-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-pine-debarked-ud",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-basalt-pine-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

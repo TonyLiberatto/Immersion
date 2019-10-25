@@ -1,0 +1,40 @@
+{
+	code: "ingotpile",
+	class: "BlockIngotPile",
+	entityClass: "IngotPile",
+	shape: {
+		base: "block/basic/invisible"
+	},
+	"__comment": "Defining these so that they are inserted into the texture atlas and can be referenced later by the IngotPile Blockentity",
+	textures: {
+		"wax": { base: "game:block/metal/ingot/wax" },
+		"tallow": { base: "game:block/metal/ingot/tallow" },
+		"bismuth": { base: "block/metal/ingot/bismuth" },
+		"bismuthbronze": { base: "block/metal/ingot/bismuthbronze" },
+		"blackbronze": { base: "block/metal/ingot/blackbronze" },
+		"brass": { base: "block/metal/ingot/brass" },
+		"chromium": { base: "block/metal/ingot/chromium" },
+		"copper": { base: "block/metal/ingot/copper" },
+		"gold": { base: "block/metal/ingot/gold" },
+		"iron": { base: "block/metal/ingot/iron" },
+		"lead": { base: "block/metal/ingot/lead" },
+		"platinum": { base: "block/metal/ingot/platinum" },
+		"rhodium": { base: "block/metal/ingot/rhodium" },
+		"silver": { base: "block/metal/ingot/silver" },
+		"stainlesssteel": { base: "block/metal/ingot/stainlesssteel" },
+		"steel": { base: "block/metal/ingot/steel" },
+		"tin": { base: "block/metal/ingot/tin" },
+		"tinbronze": { base: "block/metal/ingot/tinbronze" },
+		"titanium": { base: "block/metal/ingot/titanium" },
+		"uranium": { base: "block/metal/ingot/uranium" },
+		"zinc": { base: "block/metal/ingot/zinc" },
+		"molybdochalkos": { base: "block/metal/ingot/molybdochalkos" }
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Metal",
+	creativeinventory: { "general": [""] },
+	replaceable: 400,
+	resistance: 3,
+	lightAbsorption: 0
+}

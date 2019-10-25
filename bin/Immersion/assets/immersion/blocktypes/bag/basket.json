@@ -1,0 +1,48 @@
+{
+	code: "basket",
+	maxstacksize: 1,
+	shape: { base: "block/bag/basket" },
+	shapeinventory: { base: "game:item/bag/basket" },
+	textures: {
+		"basket": { base: "game:item/bag/basket/basket" }
+	},
+	attributes: {
+		handbook: {
+			extraSections: [
+				{ title: "handbook-block-sources", text: "Place a Very-thin barked branch down, right click with reeds, right click again with 4 of the same very thin bark branch to make the structure. Now right click with 4 reeds to make the Basket." }
+			]
+		},
+		backpack: {
+			quantitySlots: 2 
+		}
+	},
+	storageFlags: 2,
+	creativeinventory: { "general": ["*"], "neolithicblocks": ["*"] },
+	drawtype: "json",
+	lightAbsorption: 0,
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	guiTransform: {
+		translation: { x: 1, y: 0, z: 0 },
+		rotation: { x: -21, y: 16, z: 0 },
+		origin: { x: 0.52, y: 0.26, z: 0.5 },
+		scale: 2.3,
+		rotate: true
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0.3 },
+		rotation: { x: 20, y: -73, z: 10 },
+		scale: 1.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.7, y: -0.7, z: -0.8 },
+		rotation: { x: -19, y: 81, z: -27 },
+		scale: 0.68
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 33, z: -180 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.75
+	}
+}

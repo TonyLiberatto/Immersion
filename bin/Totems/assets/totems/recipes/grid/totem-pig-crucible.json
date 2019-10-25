@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "TO",
+	ingredients: {
+		"T": { type: "block", code: "totem-pig-eyes-*-unlit-north", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
+		"O": { type: "item", code: "offering-bowl-bread" },
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "block", code: "totem-pig-crucible-{wood}-north", quantity: 1  }
+} 

@@ -1,0 +1,25 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 32,
+	"textureHeight": 32,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 0.0, 0.1, -16.0 ], 
+			"to": [ 32.0, 0.1, 16.0 ], 
+			"renderPass": 1,
+			"faces": {
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 32.0, 0.0 ], "enabled": false },
+				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 32.0, 0.0 ], "enabled": false },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 32.0, 0.0 ], "enabled": false },
+				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 32.0, 0.0 ], "enabled": false },
+				"up": { "texture": "#black", "uv": [ 0.0, 0.0, 32.0, 32.0 ] },
+				"down": { "texture": "#black", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "enabled": false }
+			}
+		}
+	]}

@@ -1,0 +1,147 @@
+{
+	code: "bowl",
+	behaviors: [
+		{name: "UnstableFalling"}, 
+		{ name: "RightClickPickup"}, 
+		{ name: "SneakPlacing"},		
+	],
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["raw", "burned", "honey", "glue", "sinewfibers", "milk"] },
+	],
+	attributesByType: {
+		"*-burned": {
+			contentItem2BlockCodes: {
+				"honeyportion": "bowl-{color}-honey",
+				"milkportion": "bowl-{color}-milk"
+			},
+			mealContainer: true,
+			mealBlockCode: "bowl-meal-{color}",
+			servingCapacity: 1,
+			bowlContents: null,
+		},
+		"*-honey": {
+			contentItemCode: "honeyportion",
+			emptiedBlockCode: "bowl-{color}-burned",
+		},
+		"*-milk": {
+			bowlContents: "milkportion",
+			emptiedBlockCode: "bowl-{color}-burned",
+		},
+		"*": {
+			bowlContents: null
+		}
+	},
+	combustiblePropsByType: {
+		"*-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "bowl-{color}-burned" },
+			requiresContainer: false
+		},
+		"*-sinewfibers": {
+			meltingPoint: 110,
+			meltingDuration: 20,
+			smeltedRatio: 1,
+			smeltingType: "cook",
+			smeltedStack: { type: "block", code: "bowl-{color}-glue" },
+			requiresContainer: false
+		}
+	},
+	"__comment": "BlockBowl handles emptying/filling of honey over the bucket.",
+	class: "BlockBowl",
+	shapeByType: {
+		"*-raw": { base: "block/clay/bowl-empty-ground" },
+		"*-burned": { base: "block/clay/bowl-empty-ground" },
+		"*": { base: "block/clay/bowl-ground-liquid" },
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 300,
+	resistance: 0.75,
+	maxStackSizeByType: {
+		"*-honey": 8,
+		"*": 64,
+	},
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": { 
+			floor: { base: "block/clay/{color}-burned" },
+			mat: { base: "block/clay/{color}-raw" }
+		},
+		"*-burned": { 
+			floor: { base: "block/clay/{color}-raw" },
+			mat: { base: "block/clay/{color}-burned" }
+		},
+		"*-honey": {
+			all: { base: "block/clay/{color}-burned" },
+			content: { base: "block/liquid/honey" },
+		},
+		"*-glue": {
+			all: { base: "block/clay/{color}-burned" },
+			content: { base: "block/liquid/glue"}
+		},
+		"*-sinewfibers": {
+			all: { base: "block/clay/{color}-burned" },
+			content: { base: "block/liquid/fibers"}
+		},
+		"*-milk": {
+			all: { base: "block/clay/{color}-burned" },
+			content: { base: "block/liquid/milk"}
+		}
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875 },
+	selectionbox: { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875 },
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 },
+		scale: 3
+	},
+	groundTransform: {
+		scale: 3.5
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.4, z: 0 },
+		rotation: { x: 0, y: -14, z: 0 },
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: -0.1, z: -0.8 },
+		rotation: { x: 0, y: -56, z: 0 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 0.66
+	},
+	nutritionPropsByType: {
+		"bowl-blue-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-blue-burned" }
+		},
+		"bowl-fire-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-fire-burned" }
+		},
+		"bowl-red-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-red-burned" }
+		},
+		"bowl-brown-honey": { 
+			saturation: 60, 
+			health: 0.5,
+			eatenStack: { type: "block", code: "bowl-brown-burned" }
+		},
+	}
+}

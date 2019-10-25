@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "H",
+	ingredients: {
+		"H": { type: "block", code: "neolithicmod:haybale-normal-ud" }
+	},
+	width: 1,
+	height: 1,
+	output: { type: "block", code: "game:hay-normal", quantity: 1  }
+}

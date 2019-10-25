@@ -1,0 +1,142 @@
+[ 
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-aged-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-aged-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-acacia-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-acacia-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-birch-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-birch-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-kapok-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-kapok-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-maple-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-maple-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-oak-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-oak-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:log-placed-pine-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halflog-pine-ud",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

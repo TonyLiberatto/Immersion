@@ -1,0 +1,86 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-pine-bark-*-we",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-pine-bark-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-pine-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-pine-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-pine-bark-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-pine-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-pine-debarked-*-we",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-pine-debarked-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-pine-debarked-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-pine-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-pine-debarked-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-pine-debarked-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+]

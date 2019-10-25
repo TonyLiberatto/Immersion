@@ -1,0 +1,15 @@
+{
+	ingredientPattern: "EC_,OTP",
+	ingredients: {
+		"E": { type: "item", code: "offering-bowl-empty" },
+		"C": { type: "item", code: "game:vegetable-carrot", quantity: 64 },
+		
+		"O": { type: "item", code: "game:vegetable-onion", quantity: 64 },
+		"T": { type: "item", code: "game:vegetable-turnip", quantity: 64 },
+		"P": { type: "item", code: "game:vegetable-parsnip", quantity: 64 },
+	},
+	width: 3,
+	height: 2,
+	shapeless: true,
+	output: { type: "item", code: "offering-bowl-vegetable", quantity: 1  }
+} 

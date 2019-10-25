@@ -1,0 +1,40 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Branch",
+			"from": [ 4.0, 0.0, 4.0 ], 
+			"to": [ 12.0, 16.0, 12.0 ], 
+			"renderPass": 0,
+			"rotationOrigin": [ 4.0, 0.0, 4.0 ],
+			"faces": {
+				"north": { "texture": "#acacia", "uv": [ 4.0, 0.0, 12.0, 16.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 2.0, 0.0, 10.0, 16.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 3.0, 0.0, 11.0, 16.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 2.0, 0.0, 10.0, 16.0 ] },
+				"up": { "texture": "#acaciatop", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false },
+				"down": { "texture": "#acaciatop", "uv": [ 0.0, 0.0, 8.0, 8.0 ], "autoUv": false }
+			}
+		},
+		{
+			"name": "Cordage",
+			"from": [ 3.5, 6.0, 3.5 ], 
+			"to": [ 12.5, 10.0, 12.5 ], 
+			"rotationOrigin": [ 4.0, 6.0, 0.0 ],
+			"faces": {
+				"north": { "texture": "#cordage", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"east": { "texture": "#cordage", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"south": { "texture": "#cordage", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"west": { "texture": "#cordage", "uv": [ 0.0, 0.0, 9.0, 4.0 ] },
+				"up": { "texture": "#cordage", "uv": [ 0.0, 0.0, 9.0, 9.0 ] },
+				"down": { "texture": "#cordage", "uv": [ 0.0, 0.0, 9.0, 9.0 ] }
+			}
+		}
+	]}

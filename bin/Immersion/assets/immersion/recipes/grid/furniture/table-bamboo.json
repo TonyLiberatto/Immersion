@@ -1,0 +1,10 @@
+
+{
+	ingredientPattern: "WWW	W_W	W_W",
+	ingredients: {
+		"W": { type: "block", code: "planks-*", allowedVariants: [ "bamboo-green", "bamboo-brown"], name: "wood" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "neolithicmod:table-{wood}" }
+}

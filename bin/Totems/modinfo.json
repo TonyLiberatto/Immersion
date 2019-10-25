@@ -1,0 +1,14 @@
+{
+	"type": "content",
+	"name": "Totems",
+	"modid": "totems",
+	"description" : "A Challenge Mod ",
+	"website": "https://github.com/TonyLiberatto/The-Neolithic-Mod",
+	"authors": [ "Tony Liberatto","Balduranne", "Novocain"],
+	"contributors": [],
+	"version": "1.3.0",
+	"dependencies": {
+	"game": "1.10.8",
+	"theneolithicmod": "2.1.0"
+	}
+}

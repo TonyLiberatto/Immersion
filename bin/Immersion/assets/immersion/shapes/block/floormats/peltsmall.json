@@ -1,0 +1,24 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 0.0, 0.0, 0.0 ], 
+			"to": [ 16.0, 0.2, 16.0 ], 
+			"faces": {
+				"north": { "texture": "#north" },
+				"east": { "texture": "#east" },
+				"south": { "texture": "#south" },
+				"west": { "texture": "#west" },
+				"up": { "texture": "#up" },
+				"down": { "texture": "#down" }
+			}
+		}
+	]}

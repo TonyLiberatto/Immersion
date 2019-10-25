@@ -1,0 +1,15 @@
+{
+	code: "fat",
+	storageFlags: 5,
+	texture: { base: "item/resource/fat" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	maxstacksize: 64,
+	materialDensity: 620,
+	combustibleProps: {
+		meltingPoint: 45,
+		meltingDuration: 30,
+		smeltedRatio: 20,
+		smeltedStack: { type: "item", code: "ingot-tallow" }
+	},
+	nutritionProps: { saturation: 400, foodcategory: "Protein" },
+}

@@ -1,0 +1,142 @@
+[ 
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-aged-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-aged-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-acacia-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-acacia-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-birch-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-birch-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-kapok-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-kapok-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-maple-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-maple-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-oaks-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-oaks-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "immersion:panel-pine-bark-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:saw-*",
+        "Type": "Item",				
+    },
+    "Makes": [{
+        "Code": "immersion:halfpanel-pine-bark-down",
+        "Type": "Block",		
+        "StackSize": 2
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

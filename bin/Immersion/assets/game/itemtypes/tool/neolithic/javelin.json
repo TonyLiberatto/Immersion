@@ -1,0 +1,58 @@
+{
+	code: "spear",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	attributes: {
+		handbook: {
+			groupBy: ["spear-javelin-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	variantgroups: [
+		{code: "type", states: ["javelin"]},
+		{ code: "shaft", states: ["bamboo-green", "bamboo-brown"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },		
+		],
+	drawtype: "json",
+	shape: { base: "item/tool/primitive-javelin" },
+	heldTpHitAnimation: "spearhit",
+	MaxStackSize: 32,
+	textures: {
+		"bone": { base: "block/bone" },
+		"shaft": { base: "block/wood/planks/{shaft}-side" },		
+		"cordage": { base: "block/cordage/{cordage}" },
+	},
+	attackRange: 2.5,
+	attackpower: 1,
+	"__comment": "Thrown damage",
+	attributes: {
+	damage: 2.5,
+	spearEntityCode: "spear-javelin"
+	},
+	durability: 8,
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.3, z: 0 },
+		rotation: { x: -85, y: 0, z: 75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		rotation: { x: 90, y: -45, z: -35 },
+		origin: { x: 0.6, y: -0.8, z: 0.55 },
+		scale: 1.4299
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.7, y: -0.7, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

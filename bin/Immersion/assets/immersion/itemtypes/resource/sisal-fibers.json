@@ -1,0 +1,7 @@
+{
+	code: "sisal-fibers",
+	texture: { base: "item/resource/sisal-fibers" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	maxstacksize: 64,
+	materialDensity: 10
+}

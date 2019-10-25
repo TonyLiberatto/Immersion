@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "B",
+	ingredients: {
+		"B": { type: "item", code: "game:bow-recurve", isTool: false  },
+	},
+	width: 1,
+	height: 1,
+	shapeless: true,
+	output: { type: "item", code: "neolithicmod:bowlimb-recurve", quantity: 1  }
+}

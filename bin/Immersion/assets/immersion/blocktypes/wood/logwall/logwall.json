@@ -1,0 +1,143 @@
+{
+	code: "logwall",
+  class: "BlockLogWall",
+	entityClass: "LogWall",
+	behaviors: [
+		{
+			name: "OmniRotatable",
+			properties: {
+				"rotateH": true,
+				"rotateV": true,
+				"rotateV4": true,
+				"facing": "block",
+			}
+		},
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["logwall-*-up-north"],
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place a medium branch upwards on the ground, right click with leather strips, sinew, sisal twine or reeds, then right click again with another medium branch." }
+					]
+		},
+	},
+	creativeinventory: { "general": ["*-up-north"], "construction": ["*-up-north"], "neolithicblocks": ["*-up-north"] },
+		variantgroups: [
+		{ code: "type", states: ["wall", "corner", "jut"]},
+		{ code: "wood", loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "vertical", states: ["up", "left", "down", "right"] },
+		{ code: "horizontal", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapebytype: {
+		"*-up-north": { base: "block/wood/logwall/{type}", rotateY: 0, rotateZ: 0 },
+		"*-up-west": { base: "block/wood/logwall/{type}", rotateY: 90, rotateX: 0 },		
+		"*-up-south": { base: "block/wood/logwall/{type}", rotateY: 180, rotateZ: 0 },
+		"*-up-east": { base: "block/wood/logwall/{type}", rotateY: 270, rotateX: 0 },
+		
+		"*-left-north": { base: "block/wood/logwall/{type}", rotateY: 0, rotateZ: 270 },
+		"*-left-west": { base: "block/wood/logwall/{type}", rotateY: 90, rotateX: 270 },
+		"*-left-south": { base: "block/wood/logwall/{type}", rotateY: 180, rotateZ: 270 },		
+		"*-left-east": { base: "block/wood/logwall/{type}", rotateY: 270, rotateX: 90 },
+		
+		"*-down-north": { base: "block/wood/logwall/{type}", rotateY: 0, rotateZ: 180 },
+		"*-down-west": { base: "block/wood/logwall/{type}", rotateY: 90, rotateX: 180 },		
+		"*-down-south": { base: "block/wood/logwall/{type}", rotateY: 180, rotateZ: 180 },
+		"*-down-east": { base: "block/wood/logwall/{type}", rotateY: 270, rotateX: 180 },
+
+		"*-right-north": { base: "block/wood/logwall/{type}", rotateY: 0, rotateZ: 90 },
+		"*-right-west": { base: "block/wood/logwall/{type}", rotateY: 90, rotateX: 90 },
+		"*-right-south": { base: "block/wood/logwall/{type}", rotateY: 180, rotateZ: 90 },		
+		"*-right-east": { base: "block/wood/logwall/{type}", rotateY: 270, rotateX: 270 },		
+	},
+	blockmaterial: "wood",
+	drawtype: "json",
+	lightabsorption: 0,
+	sideopaque: {
+		all: false
+	},
+	sidesolidByType: {
+		"logwall-wall-*-north": { all: false, north: true },
+		"logwall-wall-*-east": { all: false, east: true },
+		"logwall-wall-*-south": { all: false, south: true },
+		"logwall-wall-*-west": { all: false, west: true },
+		"logwall-wall-*-up*": { all: false, up: true },
+		"logwall-wall-*-down*": { all: false, down: true },
+		"logwall-corner-*": { all: true},
+		"logwall-jut-*": { all: true},
+		},
+  drops: [
+    { code: "logwall-{type}-{wood}-{style}-up-north" }
+  ],
+  collisionselectionboxesbytype: {
+		"*-wall-*": [
+			{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 1, z2: 0.5625,
+        "rotateX": 0,
+        "rotateYByType": {
+          "*-north": 0,
+          "*-west": 90,
+          "*-south": 180,
+          "*-east": 270
+        }
+      }
+		],
+		"*-jut-*": [
+			{ x1: 0, y1: 0, z1: 0.45, x2: 1, y2: 1, z2: 1,
+			rotateYByType: {
+					"*-north": 180,
+					"*-east": 90,
+					"*-south": 0,
+					"*-west": 270,
+				}
+			},
+			{ x1: 0.219, y1: 0.25, z1: 0, x2: 0.781, y2: 0.75, z2: 0.45,
+			rotateYByType: {
+					"*-north": 180,
+					"*-east": 90,
+					"*-south": 0,
+					"*-west": 270,
+				}
+			},
+		],
+		"*-corner-*": [
+			{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 1, z2: 0.5625,
+			rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ x1: 0.4375, y1: 0, z1: 0.5625, x2: 1, y2: 1, z2: 1,
+			rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				},
+       rotateZByType: {
+          "*-up-*": 0,
+          "*-right-north": 90,
+          "*-right-east": 90,
+          "*-right-*": 270,
+          "*-down-*": 180,
+          "*-left-south*": 90,
+          "*-left-west": 90,
+          "*-left-*": 270
+       }
+      }
+		]
+	},
+	replaceable: 100,
+	resistance: 2,
+	texturesByType: {
+		"logwall-*": {
+			"all": { base: "game:block/wood/{style}/{wood}" },
+			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+			"acacia-shade": { base: "block/wood/logwall/{style}/{wood}-shade" }
+			}
+	},
+	sounds: {
+		place: "game:block/planks",
+		walk: "game:walk/wood"
+		}

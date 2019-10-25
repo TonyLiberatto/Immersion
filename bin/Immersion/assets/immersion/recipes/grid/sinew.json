@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "K	T",
+	ingredients: {
+		"K": { type: "item", code: "game:knife-*", isTool: true  },
+		"T": { type: "item", code: "animal-tendon" }
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "byproducts-sinew", quantity: 3  }
+}

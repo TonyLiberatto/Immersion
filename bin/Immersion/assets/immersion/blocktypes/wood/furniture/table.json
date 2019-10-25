@@ -1,0 +1,40 @@
+{
+	code: "table",
+	attributes: {
+		handbook: {
+			groupBy: ["table-*"]
+		},
+	},
+	variantgroups: [
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bamboo-brown", "bamboo-green"] },
+	],
+	shape: { base: "block/wood/furniture/table" },
+	creativeinventory: { "general": ["table-{wood}"], "decorative": ["table-{wood}"], "neolithicdeco": ["table-{wood}"] },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	sidesolid: {
+		up: true,
+		all: false
+	},	
+	sideopaque: {
+		up: true,
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 35,
+	},
+	textures: {
+		"sides": { base: "block/wood/furniture/table/{wood}/sides" },
+		"top": { base: "block/wood/furniture/table/{wood}/top" },
+		"bottom": { base: "block/wood/furniture/table/{wood}/bottom" },
+		"legs": { base: "block/wood/furniture/table/{wood}/legs" }
+	},
+	materialDensity: 400
+}

@@ -1,0 +1,26 @@
+{
+	code: "fruit",
+	maxstacksize: 64,
+	variantgroups: [
+		{ code: "type", states: ["blueberry", "cranberry", "redcurrant", "whitecurrant", "blackcurrant", "saguaro" ] },
+	],
+	attributes: {
+		nutritionPropsWhenInMeal: { 
+			satietyByType: { "*-saguaro": 180, "*":  240 },
+			foodcategory: "Fruit" 
+		},
+	},
+	texture: { base: "item/food/fruit/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	nutritionPropsByType: {
+		"*-saguaro": { satiety: 120, health: 1, foodcategory: "Fruit" },
+		"*": { satiety: 160, foodcategory: "Fruit" }
+	},
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 48 },
+		transitionHours: { avg: 12 },
+		transitionedStack: { type: "item", code: "rot" },
+		transitionRatio: 0.25
+	}]
+}

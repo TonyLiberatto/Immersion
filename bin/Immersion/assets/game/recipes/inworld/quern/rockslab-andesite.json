@@ -1,0 +1,128 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-acacia-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-andesite-acacia-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-birch-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-andesite-birch-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-kapok-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-andesite-kapok-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-maple-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-andesite-maple-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-oak-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-andesite-oak-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:rockslab-andesite-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-pine-debarked-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-andesite-pine-debarked",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

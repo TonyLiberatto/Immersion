@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "FFF	FFF	_B_",
+	ingredients: {
+		"F": { type: "item", code: "neolithicmod:byproducts-sinew-fibers" },
+		"B": { type: "block", code: "game:bowl-red-burned" },
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "game:bowl-red-sinewfibers", quantity: 1  }
+}

@@ -1,0 +1,43 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+		"palm_top": "block/flora/palm/top",
+		"palm_trunk": "block/flora/palm/trunk"
+	},
+	"elements": [
+		{
+			"name": "palm_midA",
+			"from": [ 2.0, 0.0, 2.0 ], 
+			"to": [ 14.0, 8.0, 14.0 ], 
+			"rotationOrigin": [ 8.0, 0.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
+				"east": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
+				"south": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
+				"west": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
+				"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+				"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+			},
+			"children": [
+				{
+					"name": "palm_midB",
+					"from": [ -1.0, 8.0, -1.0 ], 
+					"to": [ 13.0, 16.0, 13.0 ], 
+					"rotationOrigin": [ -1.0, 8.0, -1.0 ],
+					"faces": {
+						"north": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
+						"east": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
+						"south": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
+						"west": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
+						"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
+						"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+					}
+				}
+			]
+		}
+	]}

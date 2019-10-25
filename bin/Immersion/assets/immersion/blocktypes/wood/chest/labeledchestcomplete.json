@@ -1,0 +1,65 @@
+{
+	code: "labeledchestcomplete",
+	behaviorsByType: { 
+		"*-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-bamboo-brown" }}}}],
+		"*-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-bamboo-green" }}}}],
+		"*-acacia-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-acacia" }}}}],
+		"*-aged-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-aged" }}}}],
+		"*-birch-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-birch" }}}}],
+		"*-kapok-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-kapok" }}}}],
+		"*-maple-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-maple" }}}}],
+		"*-oak-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-oak" }}}}],
+		"*-pine-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "neolithicmod:labeledchest-east", attributes: { type: "normal-labeled-pine" }}}}],
+	},
+	variantgroups: [		
+		{ code: "color", states: ["bamboo-brown", "bamboo-green", "acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
+		
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["chest-complete-*"]
+		},
+	},
+	shapeByType: {
+		"*-north": { base: "game:block/wood/chest/normal-labeled", rotateY: 0 },
+		"*-east": { base: "game:block/wood/chest/normal-labeled", rotateY: 270 },
+		"*-south": { base: "game:block/wood/chest/normal-labeled", rotateY: 180 },
+		"*-west": { base: "game:block/wood/chest/normal-labeled", rotateY: 90 },		
+	},
+	drops: [{ code: "neolithicmod:chest-east", attributes: { type: "normal-labeled-{color}" } }],
+	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 1,
+	sidesolid: {
+		all: false
+	},	
+	sideopaque: {
+		all: false
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 30,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	textures: {
+			"corners": { base: "block/wood/chest/{color}/corners" },
+			"lid": { base: "block/wood/chest/{color}/lid" },
+			"sides": { base: "block/wood/chest/{color}/sides" },
+			"floor": { base: "block/wood/chest/{color}/floor" },
+			"label": { base: "block/wood/chest/{color}/label"},
+	},
+	materialDensity: 400,
+	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },
+	collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 },
+		scale: 0.6
+	}
+}

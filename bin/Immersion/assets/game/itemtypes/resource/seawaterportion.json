@@ -1,0 +1,24 @@
+{
+	code: "seawaterportion",
+	class: "ItemLiquidPortion",
+	matterState: "liquid",
+	attributes: {
+		waterTightContainerProps: {
+			containable: true,
+			itemsPerLitre: 1,
+			texture: { base: "block/liquid/waterportion" },
+			tintIndex: 2,
+			whenSpilled: { 
+				action: "PlaceBlock",
+				stack: { type: "block", code: "seawater-still-3" },
+				stackByFillLevel: {
+					"10": { type: "block", code: "seawater-still-7" } 
+				}
+			}
+		}
+	},
+	texture: { base: "item/liquid/waterportion" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	maxstacksize: 16,
+	materialDensity: 200
+}

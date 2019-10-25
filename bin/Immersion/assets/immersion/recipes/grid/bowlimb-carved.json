@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "K	W",
+	ingredients: {
+		"K": { type: "item", code: "game:knife*", isTool: true  },
+		"W": { type: "item", code: "game:stick" , quantity:1, isTool: false}
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "neolithicmod:bowlimb-carved", quantity: 1  }
+}

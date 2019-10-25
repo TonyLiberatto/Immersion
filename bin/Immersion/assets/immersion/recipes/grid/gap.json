@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "S_S",
+	ingredients: {
+		"S": { type: "item", code: "game:stick" }
+	},
+	width: 3,
+	height: 1,
+	output: { type: "block", code: "neolithicmod:gate-gap-n", quantity: 1  }
+}

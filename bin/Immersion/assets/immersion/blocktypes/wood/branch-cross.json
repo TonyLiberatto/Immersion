@@ -1,0 +1,35 @@
+{
+	code: "branch-cross",
+	variantgroups: [
+		{ code: "size", states: ["very-thin"] },
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+	],
+	creativeinventory: { "general": [""],  "construction": [""], "neolithicdeco": [""] },
+	drawtype: "json",
+	lightabsorption: 0,
+	sidesolid: {
+		all: false,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	shape: { base: "block/wood/branch-cross"},	
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	textures: {	
+		"all": { base: "block/wood/{style}/{wood}" },
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+		},
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.15, z2: 1 },
+	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.15, z2: 1 },
+	maxStackSize: 64,
+	materialDensity: 700
+}

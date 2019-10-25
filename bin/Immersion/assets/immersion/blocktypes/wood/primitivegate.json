@@ -1,0 +1,91 @@
+{
+	code: "primitivegate",
+	class: "BlockFenceGate",	
+	attributes: {
+		handbook: {
+			groupBy: ["primitivegate-*"],
+			handbook: {
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place a Barked Thin Branch vertically on the ground, right click with any cordage, next right click again with Barked Very Thin Branch to make the Primitive Gate." },
+					]
+		},
+		},
+	},
+	variantgroups: [
+		{ loadFromProperties: "block/wood" },
+		{ code: "type", states: ["n", "w"] },
+		{ code: "state", states: ["opened", "closed"]},
+		{ code: "knobOrientation", states: ["left", "right"] },
+	],
+	creativeinventory: { "general": ["*-n-closed-left"], "decorative": ["*-n-closed-left"], "neolithicblocks": ["*-n-closed-left"] },	
+	shapebytype: {
+		"*-n-opened-left": { base: "block/wood/fence/primitivegate-opened-left" },
+		"*-n-opened-right": { base: "block/wood/fence/primitivegate-opened-right" },
+		"*-w-opened-left": { base: "block/wood/fence/primitivegate-opened-left", rotateY: 90 },
+		"*-w-opened-right": { base: "block/wood/fence/primitivegate-opened-right", rotateY: 90 },
+		"*-n-closed-left": { base: "block/wood/fence/primitivegate-closed-left" },
+		"*-n-closed-right": { base: "block/wood/fence/primitivegate-closed-right" },
+		"*-w-closed-left": { base: "block/wood/fence/primitivegate-closed-left", rotateY: 90 },
+		"*-w-closed-right": { base: "block/wood/fence/primitivegate-closed-right", rotateY: 90 },
+	},
+	blockmaterial: "Wood",
+	texturesbytype: {
+		"*-*-opened-*": { 
+		"acacia-h": { base: "block/wood/bark/{wood}-h"},
+		"acacia": {base: "block/wood/bark/{wood}" },
+		"rope": { base: "block/rope"},
+		"acaciatop": { base: "block/wood/treetrunk/{wood}"},
+		},
+		"*-*-closed-*": {
+		"acacia-h": { base: "block/wood/bark/{wood}-h"},
+		"acacia": {base: "block/wood/bark/{wood}" },
+		"rope": { base: "block/rope"},
+		"acaciatop": { base: "block/wood/treetrunk/{wood}"},
+		} 
+		},
+		collisionboxbytype:{
+		"*-n-closed-left": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6 },
+		"*-n-closed-right": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6 },
+		"*-w-closed-left": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6, rotateY: 90 },
+		"*-w-closed-right": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6, rotateY: 90},
+		"*-*-opened-*": { x1: 0, y1: 0, z1: 0, x2: 0, y2: 0, z2: 0 }
+		},
+		selectionboxbytype: { 
+		"*-n-opened-left": { x1: 0, y1: 0, z1: 0.55, x2: 0.2, y2: 1.5, z2: -0.55, },
+		"*-n-opened-right": { x1: 0.8, y1: 0, z1: 0.55, x2: 1, y2: 1.5, z2: -0.55, },
+		"*-w-opened-left": { x1: 0, y1: 0, z1: 0.55, x2: 0.2, y2: 1.5, z2: -0.55, rotateY: 90},
+		"*-w-opened-right": { x1: 0.8, y1: 0, z1: 0.55, x2: 1, y2: 1.5, z2: -0.55, rotateY: 90},
+		"*-n-closed-left": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6 },
+		"*-n-closed-right": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6 },
+		"*-w-closed-left": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6, rotateY: 90 },
+		"*-w-closed-right": { x1: 0, y1: 0, z1: 0.4, x2: 1, y2: 1.5, z2: 0.6, rotateY: 90}
+		},
+	sidesolid: {
+		all: true,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	resistance: 3,
+	lightAbsorption: 0,
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+
+	
+	
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	materialDensity: 600,
+	guiTransform: {
+		translation: { x: 1, y: 0, z: 0 },
+		rotation: { x: -21, y: 16, z: 180 },
+		origin: { x: 0.52, y: 0.75, z: 0.5 },
+		scale: 0.8,
+		rotate: true
+	},
+}

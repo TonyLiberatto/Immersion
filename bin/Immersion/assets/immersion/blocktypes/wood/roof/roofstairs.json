@@ -1,0 +1,387 @@
+{
+	code: "roofstairs",
+	class: "BlockLogWall",
+	entityClass: "LogWall",
+	behaviors: [{name: "HorizontalOrientable"}],
+	attributes: {
+		handbook: {
+			groupBy: ["roofstairs-*"]
+		},
+	},
+	creativeinventory: { "general": ["roofstairs-slope-*-*-north"], "construction": ["roofstairs-slope-*-*-north"], "neolithicblocks": ["roofstairs-slope-*-*-north"] },
+		variantgroups: [
+		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},
+		{ code: "wood", loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "horizontal", loadFromProperties: "abstract/horizontalorientation" },
+	],
+	shapebytype: {
+		"*-north":  {base: "block/wood/roof/stairs/{type}", rotateY: 0 },
+		"*-west":  {base: "block/wood/roof/stairs/{type}", rotateY: 90 },
+		"*-south":  {base: "block/wood/roof/stairs/{type}", rotateY: 180 },
+		"*-east":  {base: "block/wood/roof/stairs/{type}", rotateY: 270 },
+	},
+	blockmaterial: "wood",
+	drops: [ { code: "roofstairs-slope-{wood}-{style}-north" }],
+	drawtype: "json",
+	lightabsorption: 0,
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	resistance: 2,
+		collisionSelectionBoxesByType: {
+		"*-slope-*": [
+			{ x1: 0, y1: 0, z1: 1, x2: 1, y2: 0.25, z2: 0.75, 
+			rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0, y1: 0.25, z1: 0.75, x2: 1, y2: 0.5, z2: 0.5, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+			x1: 0, y1: 0.5, z1: 0.5, x2: 1, y2: 0.75, z2: 0.25, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+			x1: 0, y1: 0.75, z1: 0.25, x2: 1, y2: 1, z2: 0, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+		"*-slopewall-*": [
+			{ x1: 0, y1: 0, z1: 1, x2: 1, y2: 0.25, z2: 0.75, 
+			rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0, y1: 0.25, z1: 0.75, x2: 1, y2: 0.5, z2: 0.5, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+			x1: 0, y1: 0.5, z1: 0.5, x2: 1, y2: 0.75, z2: 0.25, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+			x1: 0, y1: 0.75, z1: 0.25, x2: 1, y2: 1, z2: 0, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0, z1: 0.5, x2: 0.75, y2: 0.25, z2: 0.25, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+			x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.5, z2: 0.5, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+			x1: 0.25, y1: 0, z1: 0, x2: 0.75, y2: 0.75, z2: 0.25, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+		"*-corner-*": [
+			{
+				x1: 0, y1: 0, z1: 0, x2: 0.25, y2: 0.25, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0, z1: 0.75, x2: 1, y2: 0.25, z2: 1, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0.25, z1: 0, x2: 0.5, y2: 0.5, z2: 0.5, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0.25, z1: 0.5, x2: 1, y2: 0.5, z2: 0.75, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.5, y1: 0.5, z1: 0, x2: 0.75, y2: 0.75, z2: 0.5, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.75, y1: 0.5, z1: 0.25, x2: 1, y2: 0.75, z2: 0.5, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.75, y1: 0.75, z1: 0, x2: 1, y2: 1, z2: 0.25, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+		"*-cornertop-*": [
+			{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 1, },
+			{ x1: 0.25, y1: 0.25, z1: 0.25, x2: 0.75, y2: 0.5, z2: 0.75, },
+			{ x1: 0.375, y1: 0.5, z1: 0.375, x2: 0.625, y2: 0.75, z2: 0.625, },
+		],
+		"*-top-*":[
+			{
+				x1: 0, y1: 0, z1: 0, x2: 0.25, y2: 0.25, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.75, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 1, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.5, z2: 1, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+		"*-topwall-*":[
+			{
+				x1: 0, y1: 0, z1: 0, x2: 0.25, y2: 0.25, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.75, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 1, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.5, z2: 1, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.25, z2: 0.75, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+		"*-topend-*":[
+			{
+				x1: 0, y1: 0, z1: 0, x2: 0.25, y2: 0.25, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.75, y1: 0, z1: 0, x2: 1, y2: 0.25, z2: 0.75, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0, z1: 0.75, x2: 1, y2: 0.25, z2: 1, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{ 
+				x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.5, z2: 0.75, 
+				rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+		"*-cornerin-*": [
+			{
+				x1: 0, y1: 0, z1: 0.75, x2: 0.25, y2: 0.25, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{
+				x1: 0, y1: 0.25, z1: 0.5, x2: 0.5, y2: 0.5, z2: 0.75, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{
+				x1: 0.25, y1: 0.25, z1: 0.75, x2: 0.5, y2: 0.5, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{
+				x1: 0, y1: 0.5, z1: 0.25, x2: 0.5, y2: 0.75, z2: 0.5, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{
+				x1: 0.5, y1: 0.5, z1: 0.25, x2: 0.75, y2: 0.75, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{
+				x1: 0, y1: 0.75, z1: 0, x2: 1, y2: 1, z2: 0.25, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+			{
+				x1: 0.75, y1: 0.75, z1: 0.25, x2: 1, y2: 1, z2: 1, 
+				 rotateYByType: {
+					"*-north": 0,
+					"*-west": 90,
+					"*-south": 180,
+					"*-east": 270,
+				}
+			},
+		],
+	},
+	texturesByType: {
+		"roofstairs-*": {
+			"all": { base: "block/wood/roof/{style}/{wood}" },
+			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+			}
+	},
+	sounds: {
+		place: "game:block/planks",
+		walk: "game:walk/wood"
+		}

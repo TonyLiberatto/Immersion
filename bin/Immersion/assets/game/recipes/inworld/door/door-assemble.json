@@ -1,0 +1,191 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-bamboo-brown-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-bamboo-brown-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-bamboo-green-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-bamboo-green-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-aged-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-aged-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-acacia-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-acacia-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-birch-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",
+		 "StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-birch-east",
+        "Type": "Block",		
+       
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+{
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-kapok-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",	
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-kapok-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-maple-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-maple-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-oaks-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+       "Code": "immersion:door-assemble-oaks-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:panel-pine-debarked-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hinges-*",
+        "Type": "Item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "immersion:door-assemble-pine-east",
+        "Type": "Block",		
+        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

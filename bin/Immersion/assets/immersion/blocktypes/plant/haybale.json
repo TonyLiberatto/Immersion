@@ -1,0 +1,46 @@
+{
+    code: "haybale",
+    behaviors: [{name: "Pillar"}],
+	shape: { base: "game:block/basic/cube" },
+	drawtype: "cube",
+	variantgroups: [
+        { code: "type", states: ["normal", "bamboo"] },
+        { code: "rotation", states: ["ud", "ns", "we"] },
+	],
+	creativeinventory: { "general": ["*-ud"], "construction": ["*-ud"], "flora": ["*-ud"], "decorative": ["*-ud"], "neolithicdeco": ["*-ud"] },
+	blockmaterial: "Plant",
+	replaceable: 900,
+	lightAbsorption: 99,
+    texturesByType: {
+        "*-ud": {
+			"all": { base: "game:block/hay/{type}-side" },
+			"up": { base: "game:block/hay/{type}-top" },
+			"down": { base: "game:block/hay/{type}-top" }
+		},
+		"*-ns": {
+			"all": { base: "game:block/hay/{type}-side" },
+			"west": { base: "block/plant/{type}-side-h" },
+			"east": { base: "block/plant/{type}-side-h" },
+			"north": { base: "game:block/hay/{type}-top" },
+			"south": { base: "game:block/hay/{type}-top" }
+		},
+		"*-we": {
+			"all": { base: "block/plant/{type}-side-h" },
+			"west": { base: "game:block/hay/{type}-top" },
+			"east": { base: "game:block/hay/{type}-top" }
+		},
+	},
+	resistance: 0.25,
+	sideopaque: {
+		all: true
+	},
+	sounds: {
+		place: "block/plant",
+		break: "block/plant",
+	},
+	materialDensity: 200,
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 5,
+	}
+}

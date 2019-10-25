@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "_ST	_KT	_ST",
+	ingredients: {
+		"S": { type: "item", code: "neolithicmod:byproducts-sinew" },
+		"K": { type: "item", code: "game:knife*", isTool: true  },
+		"T": { type: "item", code: "neolithicmod:byproducts-sinew-thread"  }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "item", code: "neolithicmod:byproducts-bowstring", quantity: 1  }
+}

@@ -1,0 +1,68 @@
+{
+	code: "giantreed",
+	class: "BlockGiantReeds",
+	entityClassByType: {
+		"*-harvested": "Transient"
+	},
+	attributes: {
+		convertFrom: "*-harvested", 
+		convertTo: "*-normal", 
+		inGameHours: "168",
+	},
+	variantgroups: [
+		{ code: "flower", states: ["arundo"] },
+		{ code: "habitat", states: ["water"] },
+		{ code: "state", states: ["normal", "harvested"] }
+	],
+	creativeinventory: { "general": [""] },
+	shape: { base: "block/plant/giantreeds-water" },
+	drawtype: "JSONAndWater",
+	renderpass: "liquid",
+	matterstate: "liquid",
+	blockmaterial: "liquid",
+	faceCullMode: "liquid",
+	randomDrawOffset: true,
+	blockmaterial: "liquid",
+	textures: {
+		tinted: { base: "block/plant/flower/stem/{flower}-{state}*"  },
+		untinted: { base: "block/plant/flower/petal/{flower}-{state}*" },
+		north: { base: "game:block/liquid/water" },
+		east: { base: "game:block/liquid/water" },
+		south: { base: "game:block/liquid/water" },
+		west: { base: "game:block/liquid/water" },
+		up: { base: "game:block/liquid/water" },
+		down: { base: "game:block/liquid/water" },
+		specialSecondTexture: { base: "game:block/liquid/water2" }
+	},
+	liquidLevel: 7,
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	sideao: { all: false },
+	replaceable: 3000,
+	lightAbsorption: 0,
+	resistance: 1,
+	collisionbox: null,
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0,
+		x2: 1, y2: 1, z2: 1
+	},
+	guiTransform: {
+		translation: { x: 0, y: -5, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 1, z: 0.5 }
+	},
+	sounds: {
+		place: "game:block/plant",
+		break: "game:block/plant",
+		inside: "game:walk/water"
+	},
+	rainPermeable: true,
+	materialDensity: 200,
+	vertexFlags: {
+		windwave: true
+	}
+}

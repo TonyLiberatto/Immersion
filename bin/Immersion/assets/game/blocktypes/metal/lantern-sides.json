@@ -1,0 +1,25 @@
+{
+	code: "lantern-sides",
+	variantgroups: [
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+	],
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	shape: { base: "block/metal/lantern/lantern-sides" },
+	blockmaterial: "metal",
+	drawtype: "json",
+	textures: {
+		all: { base: "block/metal/lantern/{metal}" },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.3, y1: 0, z1: 0.3, x2: 0.7, y2: 0.1, z2: 0.7 },
+	selectionbox: { x1: 0.3, y1: 0, z1: 0.3, x2: 0.7, y2: 0.1, z2: 0.7 },
+	resistance: 3.5,
+	maxStackSize: 32,
+	materialDensity: 600,
+
+}

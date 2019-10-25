@@ -1,0 +1,34 @@
+{
+	code: "grain",
+	maxstacksize: 64,
+	attributesByType: {
+		"*-flax": { "nutritionPropsWhenInMeal": { satiety: 135, foodcategory: "Grain" } }, 
+		"*": { "nutritionPropsWhenInMeal": { satiety: 270, foodcategory: "Grain" } }
+	},
+	variantgroups: [
+		{ code: "type", states: ["spelt", "rice", "flax", "rye" ] },
+	],
+	texture: { base: "item/food/grain/{type}-grain" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	nutritionPropsByType: {
+		"*-flax": { 
+			satiety: 60, 
+			foodcategory: "Grain"
+		},
+		"*": {
+			satiety: 120, 
+			foodcategory: "Grain"
+		}
+	},
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 2160 },
+		transitionHours: { avg: 224 },
+		transitionedStack: { type: "item", code: "rot" },
+		transitionRatio: 0.25
+	}],
+	grindingProps: {
+		grindedStack: { type: "item", code: "flour-{type}" }
+	},
+	materialDensity: 600
+}

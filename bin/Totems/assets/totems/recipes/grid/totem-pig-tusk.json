@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "TO",
+	ingredients: {
+		"T": { type: "block", code: "totem-pig-bowl-*-unlit-north", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
+		"O": { type: "item", code: "offering-bowl-vegetable" },
+	},
+	width: 2,
+	height: 1,
+	shapeless: true,
+	output: { type: "block", code: "totem-pig-tusk-{wood}-lit-north", quantity: 1  }
+} 

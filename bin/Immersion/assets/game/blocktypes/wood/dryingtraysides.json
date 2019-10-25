@@ -1,0 +1,16 @@
+{
+    "code": "dryingtraysides",    
+    "shapeByType": {
+         "*":  {"base": "block/wood/dryingtray"}
+    },
+    "variantgroups": [ { "code": "wood", "states": [ "aged" ], "loadFromProperties": "block/wood" } ],
+    "textures": {
+        "material": { "base": "block/wood/planks/{wood}*" },
+		"border": { base: "game:block/transparent" },
+    },
+    "creativeinventory": { "general": [""] },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "lightAbsorption": 1,
+    "collisionSelectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.4, "z2": 1 }
+}

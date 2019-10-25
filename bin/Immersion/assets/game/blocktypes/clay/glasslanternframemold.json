@@ -1,0 +1,102 @@
+{
+	code: "glasslanternframemold",
+	classByType: {
+		"glasslanternframemold-*-raw": "Block",
+		"glasslanternframemold-*-burned": "BlockToolMold",
+	},
+	behaviors: [{name: "UnstableFalling"}],
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"materialtype", states: ["raw", "burned"] },
+	],
+	attributesByType: {
+		"*-blue-burned": {
+			"requiredUnits": 40,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
+		},
+		"*-brown-burned": {
+			"requiredUnits": 40,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
+		},
+		"*-fire-burned": {
+			"requiredUnits": 40,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
+		},
+		"*-red-burned": {
+			"requiredUnits": 40,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
+			"drop": { class:"Block", code: "glasslanternframe-{metal}-down" }
+		},
+	},
+	entityClassByType: {
+		"*-burned": "ToolMold",
+	},
+	combustiblePropsByType: {
+		"*-blue-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "glasslanternframemold-blue-burned" },
+			requiresContainer: false
+		},
+		"*-fire-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "glasslanternframemold-fire-burned" },
+			requiresContainer: false
+		},
+		"*-red-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "glasslanternframemold-red-burned" },
+			requiresContainer: false
+		},
+		"*-brown-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "glasslanternframemold-brown-burned" },
+			requiresContainer: false
+		},
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 700,
+	resistance: 1.5,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": {  ceramic: { base: "block/clay/{color}-raw" } },
+		"*-burned": {  ceramic: { base: "block/clay/{color}-burned" }  }
+	},
+	shape: { base: "block/clay/mold/glasslanternmold", rotateY: 90 },
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	guiTransformByType: {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.33
+		}
+}

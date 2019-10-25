@@ -1,0 +1,27 @@
+{
+	code: "base",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicdeco": ["*"] },
+	shape: { base: "block/post/base2" },
+	sidesolid: {all: false},
+	sideopaque: {all: false},
+	sideAo: {all: false},
+	blockmaterial: "Wood",
+	textures: {
+		"middle": { base: "block/wood/lamppost/middle"},
+		"sides": { base: "block/wood/lamppost/sides"},
+		"top1": { base: "block/wood/lamppost/top1"},
+		"top2": { base: "block/wood/lamppost/top2"}
+	},
+	lightAbsorption: 99,
+	resistance: 3,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 10,
+	},
+	materialDensity: 600,
+	collisionSelectionBox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+}

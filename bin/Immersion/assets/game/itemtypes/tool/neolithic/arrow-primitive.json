@@ -1,0 +1,24 @@
+{
+	code: "arrow",
+	class: "ItemArrow",
+	variantgroups: [
+		{ code: "type", states: ["primitive" ] },
+	],
+	maxstacksize: 64,
+	guiTransform: {
+		rotation: { x: -16, y: -14, z: -47 },
+		origin: { x: 0, y: 0, z: 0.4 },
+		scale: 1.92
+	},
+	drawtype: "json",
+	shape: { base: "entity/primitive-arrow" },
+	creativeinventory: { "general": ["arrow-primitive"], "items": ["arrow-primitive"], "neolithicitems": ["arrow-primitive"] },
+	attributes: {
+		damageByType: {
+			"primitive": 0,
+		},
+		handbook: {
+			groupBy: ["arrow-*"]
+		}
+	},
+}

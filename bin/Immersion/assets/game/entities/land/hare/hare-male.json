@@ -1,0 +1,187 @@
+{
+	code: "hare-male",
+	class: "EntityAgent",
+	variantgroups:  [ { code: "color", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] } ] ,
+	hitboxSize: { x: 0.75, y: 0.75 },
+	eyeHeight: 0.7,
+	drops: [
+		{
+				type: "block",
+				code: "immersion:dead-hare-male-{color}",
+			},
+	],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/land/hare-male" },
+		texture: { base: "entity/hare/male-{color}" },
+		behaviors: [{ code: "repulseagents" }, { code: "controlledphysics", stepHeight: 1.0001 }, { code: "interpolateposition" }],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			}
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "health", currenthealth: 6, maxhealth: 6, },
+			{ code: "breathe" },
+			{ 
+				code: "emotionstates",
+				states: [
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" },
+					{ code: "saturated", duration: 1200, chance: 1, slot: 0, prority: 1, accumType: "sum" }
+				],
+			},
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "fleeentity",
+						entityCodes: ["player", "wolf-*", "fox-*", "hyena-*", ],
+						priority: 2,
+						movespeed: 0.02,
+						seekingRange: 12,
+						animation: "Run",
+						animationSpeed: 1.8
+					},
+					{
+						code: "getoutofwater",
+						priority: 1.4,
+						movespeed: 0.015,
+						animation: "Walk",
+						animationSpeed: 2.2
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						priorityForCancel: 1.35,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 6000,
+						maxcooldown: 20000,
+						animation: "Sniff",
+						animationSpeed: 1
+					},
+					{
+						code: "idle",
+						priority: 1.1,
+						priorityForCancel: 1.35,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 6000,
+						maxcooldown: 20000,
+						animation: "Dig",
+						animationSpeed: 1
+					},
+					{
+						code: "idle",
+						priority: 1.1,
+						minduration: 1000,
+						maxduration: 3000,
+						mincooldown: 2000,
+						maxcooldown: 30000,
+						animation: "Idle"
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						priorityForCancel: 1.35,
+						movespeed: 0.006,
+						animation: "Walk",
+						preferredLightLevel: 20
+					},
+					{ 
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			}
+		],
+		spawnconditions: {
+      worldgen: {
+        TriesPerChunk: {
+          avg: 0.015,
+          var: 0
+        },
+        tryOnlySurface: true,
+        minLightLevel: 12,
+        groupSize: {
+          dist: "verynarrowgaussian",
+          avg: 4,
+          var: 5
+        },
+        insideBlockCodes: [ "air", "tallgrass-*" ],
+        minTemp: -2,
+        minRain: 0.32,
+        minShrubs: 0.5,
+        companionsByType: {
+					"hare-male-artic":
+						["hare-female-artic", "hare-baby"],
+					"hare-male-ashgrey":
+						["hare-female-ashgrey", "hare-baby"],
+					"hare-male-darkbrown":
+						["hare-female-darkbrown", "hare-baby"],
+					"hare-male-desert":
+						["hare-female-desert", "hare-baby"],
+					"hare-male-gold":
+						["hare-female-gold", "hare-baby"],
+					"hare-male-lightbrown":
+						["hare-female-lightbrown", "hare-baby"],
+					"hare-male-lightgrey":
+						["hare-female-lightgrey", "hare-baby"],
+					"hare-male-silver":
+						["hare-female-silver", "hare-baby"],
+					"hare-male-smokegrey":
+						["hare-female-smokegrey", "hare-baby"],
+				}
+      },
+      runtime: {
+        group: "passive",
+        tryOnlySurface: true,
+        chance: 0.003,
+        maxQuantity: 4,
+        minLightLevel: 12,
+        groupSize: {
+          dist: "verynarrowgaussian",
+          avg: 4,
+          var: 5
+        },
+        insideBlockCodes: [ "air", "tallgrass-*" ],
+        minTemp: -2,
+        minRain: 0.32,
+        minShrubs: 0.5,
+        companionsByType: {
+					"hare-male-artic":
+						["hare-female-artic", "hare-baby"],
+					"hare-male-ashgrey":
+						["hare-female-ashgrey", "hare-baby"],
+					"hare-male-darkbrown":
+						["hare-female-darkbrown", "hare-baby"],
+					"hare-male-desert":
+						["hare-female-desert", "hare-baby"],
+					"hare-male-gold":
+						["hare-female-gold", "hare-baby"],
+					"hare-male-lightbrown":
+						["hare-female-lightbrown", "hare-baby"],
+					"hare-male-lightgrey":
+						["hare-female-lightgrey", "hare-baby"],
+					"hare-male-silver":
+						["hare-female-silver", "hare-baby"],
+					"hare-male-smokegrey":
+						["hare-female-smokegrey", "hare-baby"],
+				}
+      }
+    }
+	},
+	sounds: {
+		hurt: "creature/raccoon/raccoon-hurt",
+		death: "creature/raccoon/raccoon-death"
+	},
+}

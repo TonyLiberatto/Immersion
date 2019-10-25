@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "FS",
+	ingredients: {
+		"F": { type: "block", code: "game:woodenfence-*" },
+		"S": { type: "item", code: "game:stick" }
+	},
+	width: 2,
+	height: 1,
+	output: { type: "block", code: "neolithicmod:post-industrial-e", quantity: 1 } 
+}

@@ -1,0 +1,60 @@
+{
+	code: "mortarandpestle",
+	class: "BlockMortarAndPestle",
+	entityClass: "BEMortarAndPestle",
+	attributes: {
+		handbook: {
+			groupBy: ["mortarandpestle-*"],
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Place a log down on the ground, right click with a thin debarked branch."}
+					]
+			
+		}
+	},
+	behaviors: [{name: "Container"}, {name: "UnstableFalling"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}	],
+	variantgroups: [
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	creativeinventory: { "general": ["mortarandpestle-{wood}-east"], "neolithicblocks": ["mortarandpestle-{wood}-east"] },
+	shapeByType: {
+		"*-north": { base: "immersion:block/wood/mortarandpestle/complete", rotateY: 90 },
+		"*-east": { base: "immersion:block/wood/mortarandpestle/complete", rotateY: 0 },
+		"*-south": { base: "immersion:block/wood/mortarandpestle/complete", rotateY: 270 },
+		"*-west": { base: "immersion:block/wood/mortarandpestle/complete", rotateY: 180 }
+		
+		},
+	blockmaterial: "wood",
+	textures: {
+		bark: {base: "game:block/wood/bark/{wood}"},
+		debarked: {base: "block/wood/debarked/{wood}"},
+		trunk: {base: "game:block/wood/treetrunk/{wood}"}
+	},
+	sidesolid: {
+		all: false,
+	},
+	sideopaque: {
+		all: false,
+	},
+	lightAbsorption: 1,
+	replaceable: 600,
+	resistance: 1.5,
+	collisionSelectionBoxes: [
+		{ 
+			x1: 0.0, 
+			y1: 0.0, 
+			z1: 0.0, 
+			x2: 1.0, 
+			y2: 1.0, 
+			z2: 1.0 
+		},
+    { 
+			x1: 0.25, 
+			y1: 0.25, 
+			z1: 0.25, 
+			x2: 0.75, 
+			y2: 1.05, 
+			z2: 0.75 
+		},
+	]
+}

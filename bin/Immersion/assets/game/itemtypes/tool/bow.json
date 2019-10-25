@@ -1,0 +1,55 @@
+{
+	code: "bow",
+	variantgroups: [
+		{ code: "type", states: ["simple", "carved", "composite", "recurve" ] },
+	],
+	class: "ItemBow",
+	maxstacksize: 1,
+	textures: {
+		"item/empty": { base: "item/tool/bow/{type}/bow" },
+		"item/draw1": { base: "item/tool/bow/{type}/bowcharge1" },
+		"item/draw2": { base: "item/tool/bow/{type}/bowcharge2" },
+		"item/draw3": { base: "item/tool/bow/{type}/bowcharge3" } 
+	},
+	shape: {
+		base: "item/empty",
+		voxelizeTexture: true,
+		alternates: [
+			{ base: "item/draw1", voxelizeTexture: true },
+			{ base: "item/draw2", voxelizeTexture: true },
+			{ base: "item/draw3", voxelizeTexture: true }
+		]
+	},
+	tool: "bow",
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	attributesByType: {
+		"bow-simple": {
+			damage: 3
+		},
+		"bow-carved": {
+			damage: 4
+		},
+		"bow-composite": {
+			damage: 5
+		},
+		"bow-recurve": {
+			damage: 6
+		}
+	},
+	durabilitybytype: {
+		"bow-simple": 150,
+		"bow-carved": 200,
+		"bow-composite": 250,
+		"bow-recurve": 300,
+		},
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0.1, z: 0 },
+		rotation: { x: 171, y: 98, z: -27 },
+		scale: 1.1
+	},
+	tpHandTransform: {
+		translation: { x: -0.8, y: -0.45, z: -0.67 },
+		rotation: { x: 27, y: 7, z: 25 },
+		scale: 0.65
+	}
+}

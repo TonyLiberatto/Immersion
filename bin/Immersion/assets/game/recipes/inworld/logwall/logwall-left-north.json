@@ -1,0 +1,254 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-acacia-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-acacia-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-acacia-bark-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-acacia-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-acacia-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-acacia-debarked-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-birch-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-birch-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-birch-bark-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-birch-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-birch-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-birch-debarked-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-kapok-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-kapok-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-kapok-bark-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-kapok-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-kapok-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-kapok-debarked-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-maple-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-maple-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-maple-bark-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-maple-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-maple-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-maple-debarked-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-oak-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-oak-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-oak-bark-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-oak-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-oak-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-oak-debarked-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-pine-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-pine-bark-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-pine-bark-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-medium-pine-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-medium-pine-debarked-ud",
+        "Type": "Item",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:logwall-wall-pine-debarked-left-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

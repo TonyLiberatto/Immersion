@@ -1,0 +1,123 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-andesite-acacia-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-andesite-acacia-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-andesite-birch-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-andesite-birch-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-andesite-kapok-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-andesite-kapok-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-andesite-maple-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-andesite-maple-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-andesite-oak-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-andesite-oak-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:slab-branch-andesite-pine-debarked",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:slab-branch-cordage-andesite-pine-debarked-sinew",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ 
+]

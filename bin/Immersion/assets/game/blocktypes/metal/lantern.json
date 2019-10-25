@@ -1,0 +1,104 @@
+{
+	code: "lantern",
+	storageFlags: 257,
+	attributes: {
+		handbook: {
+			groupBy: ["lantern-*"],
+			extraSections: [
+					{ title: "handbook-item-sources", text:"To make a Lantern place a <a href=\"handbook://block-lantern-base-copper\">Lantern base</a>  on the ground and right click with a wax candle, next right click with 4 <a href=\"handbook://block-lantern-sides-copper\">Lantern sides</a>, then right click with a Glass Block. If you want to make a lining, right click with a Silver or Gold plate. To finish the block, right click with a <a href=\"handbook://block-lantern-top-copper\">Lantern Top</a>. All parts need to be of the same metal. <a href=\"handbook://block-glasslanternframe-copper-down\">Glasslantern Frames</a>" }
+					]
+		},
+	},
+	behaviors: [{name: "OmniAttachable", properties: { facingPos: 3 }}],
+	
+	heldRightTpIdleAnimation: "holdinglanternrighthand",
+	heldLeftTpIdleAnimation: "holdinglanternlefthand",
+	
+	variantgroups: [
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+		{ code:"layer", states: ["plain", "gold", "silver" ] },
+		{ code:"position", states: ["up", "down"], loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapebytype: {
+		"*-up": { base: "block/metal/lantern/ground" },
+		"*-down": { base: "block/metal/lantern/ceiling" },
+		"*-north": { base: "block/metal/lantern/wall", rotateY: 180 },
+		"*-east": { base: "block/metal/lantern/wall", rotateY: 90 },
+		"*-south": { base: "block/metal/lantern/wall", rotateY: 0 },
+		"*-west": { base: "block/metal/lantern/wall", rotateY: 270 }
+	},
+	"_comment": "Must declare textures so they get added to the block texture atlas",
+	texturesByType: {
+		"lantern-*-plain-*": {
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/{metal}" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
+		},
+		"lantern-*-gold-*": {
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/gold" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
+		},
+		"lantern-*-silver-*": {
+			"material": { base: "block/metal/lantern/{metal}" },
+			"candle":  { base: "block/candle" },
+			"lining":  { base: "block/metal/lantern/silver" },
+			"quartz":  { base: "block/glass/quartz" },
+			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
+		},
+	},
+	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "neolithicdeco": ["*-up"] },
+	blockmaterial: "Metal",
+	lightAbsorption: 0,
+	lightHsvByType: {
+		"lantern-*-plain-*": [7, 4, 18],
+		"lantern-*": [7, 4, 20],
+		
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	replaceable: 500,
+	resistance: 1,
+	fpHandTransform: {
+		translation: { x: 0.3, y: -0.1, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		scale: 1.18
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 1.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.59, y: -0.89, z: -0.83 },
+		rotation: { x: 0, y: -8, z: -96 },
+		scale: 0.55
+	},
+	groundTransform: {
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2
+	},
+	selectionboxbytype: {
+		"*-up": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.75, z2: 0.75 },
+		"*-down": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+		"*-east": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 270 },
+		"*-south": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 180 },
+		"*-west": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 90 },
+		"*-north": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 0 }
+	},
+	collisionboxbytype: {
+		"*-up": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.6875, y2: 0.75, z2: 0.75 },
+		"*-down": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+		"*-east": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 270 },
+		"*-south": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 180 },
+		"*-west": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 90 },
+		"*-north": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.875, z2: 1, rotateY: 0 }
+	}
+}

@@ -1,0 +1,65 @@
+{
+	code: "giantreed",
+	class: "BlockGiantReeds",
+	entityClassByType: {
+		"*-harvested": "Transient"
+	},
+	attributes: {
+		convertFrom: "*-harvested", 
+		convertTo: "*-normal", 
+		inGameHours: "168",
+	},
+	variantgroups: [
+		{ code: "flower", states: ["arundo"] },
+		{ code: "habitat", states: ["free"] },
+		{ code: "state", states: ["normal", "harvested"] }
+	],
+	creativeinventory: { "general": [""], "neolithicflora": [""] },
+	shape: { base: "block/basic/giantreeds-free" },
+	drawtype: "json",
+	renderpass: "OpaqueNoCull",
+	blockmaterial: "plant",
+	randomDrawOffset: true,
+	textures: {
+		northCross: { base: "block/plant/flower/petal/{flower}-{state}*" },
+		southCross: { base: "block/plant/flower/petal/{flower}-{state}*" },
+		northTintedCross: { base: "block/plant/flower/stem/{flower}-{state}*" },
+		southTintedCross: { base: "block/plant/flower/stem/{flower}-{state}*" },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	sideao: { all: false },
+	replaceable: 3000,
+	lightAbsorption: 0,
+	resistance: 1,
+	collisionbox: null,
+	selectionbox: {
+		x1: 0, y1: 0, z1: 0,
+		x2: 1, y2: 1, z2: 1
+	},
+	guitransform: {
+		rotation: { x: 0, y: 0, z: 0 }
+	},
+	sounds: {
+		place: "block/plant",
+		break: "block/plant"
+	},
+	rainPermeable: true,
+	materialDensity: 200,
+	vertexFlags: {
+		windwave: true
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	guiTransform: {
+		translation: { x: 0, y: -5, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 1, z: 0.5 }
+	}
+}

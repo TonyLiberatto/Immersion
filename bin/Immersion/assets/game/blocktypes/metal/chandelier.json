@@ -1,0 +1,55 @@
+{
+	code: "chandelier",
+	"__comment": "BlockChandelier handles the placing of candles on the chandelier",
+	class: "BlockChandelier",
+	behaviors: [{name: "Unstable", properties: { attachedToFaces: ["up", "down"]}}],
+	variantgroups: 
+	[
+		{ code: "type", states: ["candle0", "candle1", "candle2", "candle3", "candle4", "candle5", "candle6", "candle7", "candle8"] }
+	],
+	creativeinventory: { "general": ["*-candle0", "*-candle8"], "decorative": ["*-candle0", "*-candle8"] },
+	textures: {
+		"blackbronze": { base: "block/metal/chandelier/blackbronze" },
+		"candle": { base:"block/candle-unlit" }
+	},
+	shape: { base: "block/metal/chandelier/{type}" },
+	drawtype: "json",
+	blockmaterial: "Metal",
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	resistance: 3,
+	lightHsvByType: {
+		"chandelier-candle0": [9, 4, 0],
+		"chandelier-candle1": [9, 4, 8],
+		"chandelier-candle1": [9, 4, 10],
+		"chandelier-candle2": [9, 4, 12],
+		"chandelier-candle3": [9, 4, 14],
+		"chandelier-candle4": [9, 4, 16],
+		"chandelier-candle5": [9, 4, 18],
+		"chandelier-candle6": [9, 4, 20],
+		"chandelier-candle7": [9, 4, 22],
+		"chandelier-candle8": [9, 4, 24]
+	},
+	drops: [
+		{
+			type: "item", 
+			code: "candle-wax", 
+			quantityByType:  {
+				"*0": { avg: 0 },
+				"*1": { avg: 1 },
+				"*2": { avg: 2 },
+				"*3": { avg: 3 },
+				"*4": { avg: 4 },
+				"*5": { avg: 5 },
+				"*6": { avg: 6 },
+				"*7": { avg: 7 },
+				"*8": { avg: 8 }
+			}
+		},
+		{
+			type: "block",
+			code: "chandelier-candle0"
+		}
+	],
+	lightAbsorption: 0
+}

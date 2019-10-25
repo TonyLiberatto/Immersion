@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "DDD	SSS	DDD",
+	ingredients: {
+		"D": { type: "block", code: "game:soil-*" },
+		"S": { type: "item", code: "game:stick" }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "mudwall-east", quantity: 5  }
+}

@@ -1,0 +1,125 @@
+{
+	code: "toolmold",
+	classByType: {
+		"toolmold-*-raw-*": "Block",
+		"toolmold-*-burned-*": "BlockToolMold",
+	},
+	behaviorsByType: {
+		"*-raw-*": [{name: "UnstableFalling"}, {name: "RightClickPickup" }],
+		"*": [{name: "UnstableFalling"}],
+	},
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"materialtype", states: ["raw", "burned"] },
+		{ code:"tooltype", states: ["axe", "pickaxe", "shovel", "sword", "hammer", "anvil", "hoe", "prospectingpick"] }
+	],
+	attributesByType: {
+		"toolmold-*-burned-anvil": {
+			"requiredUnits": 900,
+			"fillHeight": 10,
+			"fillQuadsByLevel": [
+				{ x1: 2, z1: 3, x2: 13, z2: 13 },
+				{ x1: 2, z1: 3, x2: 13, z2: 13 },
+				{ x1: 2, z1: 3, x2: 13, z2: 13 },
+				
+				{ x1: 4, z1: 6, x2: 11, z2: 10 },
+				{ x1: 4, z1: 6, x2: 11, z2: 10 },
+				{ x1: 4, z1: 6, x2: 11, z2: 10 },
+				{ x1: 4, z1: 6, x2: 11, z2: 10 },
+				
+				{ x1: 4, z1: 5, x2: 14, z2: 11 },
+				{ x1: 1, z1: 5, x2: 15, z2: 11 },
+				{ x1: 1, z1: 5, x2: 15, z2: 11 },
+			],
+			"drop": { type:"Block", code: "anvil-{metal}" }
+		},
+		"toolmold-*-burned-sword": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"drop": { type:"Item", code: "{tooltype}blade-{metal}" }
+		},
+		"toolmold-*-burned-*": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"drop": { type:"Item", code: "{tooltype}head-{metal}" }
+		},
+	},
+	entityClassByType: {
+		"toolmold-*-burned-*": "ToolMold",
+	},
+	combustiblePropsByType: {
+		"toolmold-blue-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-blue-burned-{tooltype}" },
+			requiresContainer: false
+		},
+		"toolmold-fire-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-fire-burned-{tooltype}" },
+			requiresContainer: false
+		},
+		"toolmold-red-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-red-burned-{tooltype}" },
+			requiresContainer: false
+		},
+		"toolmold-brown-raw-*": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "toolmold-brown-burned-{tooltype}" },
+			requiresContainer: false
+		},
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 700,
+	resistance: 1.5,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	texturesByType: {
+		"toolmold-*-raw-*": {  all: { base: "block/clay/{color}-raw" } },
+		"toolmold-*-burned-*": {  floor: { base: "block/clay/{color}-burned" }, other: { base: "block/clay/{color}-burned" }, ceramic: { base: "block/clay/{color}-burned" }  }
+	},
+	shape: { base: "block/clay/mold/{tooltype}", rotateY: 90 },
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionboxByType: {
+		"*-anvil": { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.6875, z2: 0.9375 },
+		"*": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	},
+	selectionboxByType: {
+		"*-anvil": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.6875, z2: 1 },
+		"*": { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	guiTransformByType: {
+		"*-anvil": {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 1.33
+		},
+		"*": {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.33
+		}
+		
+	}
+}

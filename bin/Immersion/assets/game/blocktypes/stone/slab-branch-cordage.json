@@ -1,0 +1,38 @@
+{
+	code: "slab-branch-cordage",	
+	behaviors: [ {name: "UnstableFalling"},
+	],
+	attributes: {
+		handbook: {
+			groupBy: ["slabbranchcross-*"]
+		}
+	},
+	variantgroups: [
+		{ code:"rock", states: ["granite", "andesite", "basalt", "peridotite"] },
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["debarked"]},
+		{ code: "cordage", states: ["leatherstrips", "sinew", "rope"] },
+	],
+	creativeinventory: { "general": [""], "terrain": [""], "neolithicblocks": ["*"] },
+	shape: { base: "block/slab-branch-cross" },
+	blockmaterial: "Stone",
+	textures: {
+		"rock": { base: "block/stone/rock/{rock}*"},
+		"acacia": { base: "block/wood/{style}/{wood}" },			
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" },		
+		"cordage": {  base: "game:block/cordage/{cordage}" },
+	},
+	drops: [],
+	sidesolid: {
+		all: false, down: true
+	},
+	sideopaque: {
+		all: false, down: true
+	},
+	lightAbsorption: 1,
+	replaceable: 600,
+	resistance: 1.5,
+	collisionSelectionBoxes: [
+		{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.6875, z1: 1 },
+	]
+}

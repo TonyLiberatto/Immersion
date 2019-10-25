@@ -1,0 +1,118 @@
+{
+	code: "hoe-head",
+	behaviors: [
+		{ name: "HorizontalOrientable" },	
+	],
+	variantgroups: [
+		{
+			code: "stone",
+			states: [ "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		}
+	],
+	shapeinventory: { base: "item/tool/bone-hoe" },
+	shapeByType: {
+		"*-north": {
+			base: "block/placedtool/hoe-bone",
+			rotateY: 0
+		},
+		"*-east": {
+			base: "block/placedtool/hoe-bone",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "block/placedtool/hoe-bone",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "block/placedtool/hoe-bone",
+			rotateY: 90
+		},
+	},
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"shaft": { base: "block/transparent" },
+		"cordage": { base: "block/transparent" },
+	},
+	creativeinventory: {
+		"general": [ "*-north" ],
+		"items": [ "*-north" ],
+		"tools": [ "*" ],
+		"neolithicitems": [ "*-north" ]
+	},
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+	fpHandTransform: {
+		translation: {
+			x: 0.4,
+			y: -0.4,
+			z: 0
+		},
+		rotation: {
+			x: 25,
+			y: 0,
+			z: 86
+		},
+		scale: 2.5
+	},
+	
+	guiTransform: {
+	rotate: false,
+		translation: { x: 3, y: 0, z: 120 },
+		rotation: { x: -52, y: -131, z: -180 },
+		origin: { x: 0.55, y: 0.85, z: 0.15 },
+		scale: 3.99
+	},
+	groundTransform: {
+		translation: {
+			x: 0.046875,
+			y: 0,
+			z: 0
+		},
+		rotation: {
+			x: 0,
+			y: 0,
+			z: 0
+		},
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: {
+			x: -0.3,
+			y: -0.8,
+			z: -0.5
+		},
+		rotation: {
+			x: 90,
+			y: -49,
+			z: 0
+		},
+		scale: 1
+	}
+}

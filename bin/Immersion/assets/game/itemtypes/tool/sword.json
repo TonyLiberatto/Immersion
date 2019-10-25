@@ -1,0 +1,103 @@
+{
+	code: "sword",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "sword",
+	attributes: {
+		handbook: {
+			groupBy: ["sword-*"]
+		}
+	},
+	variantgroups: [
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+	],
+	shape: { base: "item/tool/sword" },
+	heldTpHitAnimation: "swordhit",
+	textures: {
+		"metal": { base: "block/metal/ingot/{metal}" },
+		"wood": { base: "item/tool/material/wood" } 
+	},
+	attackRange: 2.5,
+	miningspeedbytype: {
+		"sword-stone": {
+			"wood": 2,
+			"leaves": 1.4
+		},
+		"sword-copper": {
+			"wood": 2.2,
+			"leaves": 1.6
+		},
+		"sword-bismuthbronze": {
+			"wood": 2.3,
+			"leaves": 2
+		},
+		"sword-tinbronze": {
+			"wood": 2.4,
+			"leaves": 2.2
+		},
+		"sword-gold": {
+			"wood": 2.4,
+			"leaves": 2.2
+		},
+		"sword-silver": {
+			"wood": 2.4,
+			"leaves": 2.2
+		},
+		"sword-blackbronze": {
+			"wood": 2.5,
+			"leaves": 2.3
+		},
+		"sword-iron": {
+			"wood": 3,
+			"leaves": 3
+		},
+		"sword-steel": {
+			"wood": 3.5,
+			"leaves": 4
+		},
+	},
+	attackpowerbytype: {
+		"sword-stone": 1.5,
+		"sword-copper": 2.5,
+		"sword-gold": 2.75,
+		"sword-silver": 2.75,
+		"sword-bismuthbronze": 3,
+		"sword-tinbronze": 3.5,
+		"sword-blackbronze": 4,
+		"sword-iron": 4.5,
+		"sword-steel": 5,
+	},
+	durabilitybytype: {
+		"sword-gold": 175,
+		"sword-silver": 175,
+		"sword-copper": 600,
+		"sword-blackbronze": 1460,
+		"sword-bismuthbronze": 1200,
+		"sword-tinbronze": 1300,
+		"sword-iron": 2200,
+		"sword-steel": 3300,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0.1, z: 0 },
+		rotation: { x: 170, y: -25, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 4, y: 0, z: 0 },
+		rotation: { x: -88, y: 42, z: 180 },
+		origin: { x: 0.53, y: 0.5, z: 0.53 },
+		scale: 2.16
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.45, z: 0.5 },
+		scale: 3.6
+	},
+	tpHandTransform: {
+		translation: { x: -0.95, y: -0.4312, z: -0.56 },
+		rotation: { x: -90, y: 180, z: -7 },
+		scale: 1
+	}
+}

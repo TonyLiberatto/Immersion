@@ -1,0 +1,20 @@
+[
+{
+	ingredientPattern: "P_P,PPP",
+	ingredients: {
+		"P": { type: "block", code: "immersion:planks-bamboo-*" }
+	},
+	width: 3,
+	height: 2,
+	output: { type: "block", code: "trough-genericwood-large-head-north"  }
+},
+{
+	ingredientPattern: "P_P,PPP",
+	ingredients: {
+		"P": { type: "block", code: "planks-*" }
+	},
+	width: 3,
+	height: 2,
+	output: { type: "block", code: "trough-genericwood-large-head-north"  }
+}
+]

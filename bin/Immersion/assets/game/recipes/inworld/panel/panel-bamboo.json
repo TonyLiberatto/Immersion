@@ -1,0 +1,128 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:panel-bamboo-brown-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:panel-bamboo-green-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:panel-bamboo-brown-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:panel-bamboo-green-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:panel-bamboo-brown-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",        
+		"StackSize": 1
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:panel-bamboo-green-down",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

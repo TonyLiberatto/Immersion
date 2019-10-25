@@ -1,0 +1,97 @@
+{
+	code: "sickle-headshaft",
+	behaviors: [
+		{ name: "HorizontalOrientable" },		
+	],
+
+	variantgroups: [
+		{
+			code: "stone",
+			states: [ "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+		},
+		{
+			code: "shaft",
+			states: [ "acacia", "birch", "kapok", "maple", "oak", "pine", "bone" ]
+		},
+		{
+			code: "side",
+			loadFromProperties: "abstract/horizontalorientation"
+		},
+	],
+	shapeinventoryByType: {
+		"*-bone-north": { base: "item/tool/bone-sickle" },
+		"*-north": { base: "item/tool/branch-sickle" },
+	},
+	shapeByType: {
+		"*-bone-north": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 0
+		},
+		"*-bone-east": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 270
+		},
+		"*-bone-south": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 180
+		},
+		"*-bone-west": {
+			base: "block/placedtool/sickle-bone",
+			rotateY: 90
+		},
+		"*-north": {
+			base: "block/placedtool/sickle-wood",
+			rotateY: 0
+		},
+		"*-east": {
+			base: "block/placedtool/sickle-wood",
+			rotateY: 270
+		},
+		"*-south": {
+			base: "block/placedtool/sickle-wood",
+			rotateY: 180
+		},
+		"*-west": {
+			base: "block/placedtool/sickle-wood",
+			rotateY: 90
+		},
+	},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/transparent" },
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/transparent" },
+		},
+	},
+	creativeinventory: { "general": [ "" ] },
+	collisionselectionbox: {
+		x1: 0,
+		y1: 0,
+		z1: 0,
+		x2: 1,
+		y2: 0.1,
+		z2: 1
+	},
+	blockmaterial: "Wood",
+	replaceable: 900,
+	resistance: 1.5,
+	lightAbsorption: 0,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

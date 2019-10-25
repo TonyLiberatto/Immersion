@@ -1,0 +1,95 @@
+{
+	code: "rockslab",
+	behaviors: [
+		{
+			name: "OmniRotatable",
+			properties: {
+				"rotateSides": true,
+				"facing": "block"
+			}
+		},		
+	],
+	variantgroups: [
+		{ code: "rock", loadFromProperties: "block/rockwithdeposit" },
+		{ code: "rot", states: ["north", "east", "south", "west", "up", "down"] }
+	],
+	attributes: {
+		partialAttachableByType: {
+			"*-down": true,
+			"*-up": true,
+		}
+	},
+	replaceable: 150,
+	creativeinventory: { "general": ["*-down"], "construction": ["*-down"], "neolithicblocks": ["*-down"] },
+	drops: [{ code: "rockslab-{rock}-down" }],
+	shape: { base: "block/basic/slab-{rot}"},
+	sidesolidByType: {
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-south": { all: false, south: true },
+		"*-west": { all: false, west: true },
+		"*-up": { all: false, up: true },
+		"*-down": { all: false, down: true },
+	},
+	sideopaqueByType: {
+		"*-north": { all: false, north: true },
+		"*-east": { all: false, east: true },
+		"*-south": { all: false, south: true },
+		"*-west": { all: false, west: true },
+		"*-up": { all: false, up: true },
+		"*-down": { all: false, down: true },
+	},
+	sideAoByType: {
+		"*-up": { all: false, up: true },
+		"*-down": { all: false, down: true },
+		"*": { all: false }
+	},
+	texturesByType: {
+		"*-up": {
+			horizontals: { base: "block/stone/rock/{rock}*" },
+			verticals: { base: "block/stone/rock/{rock}*" }
+		},
+		"*-down": {
+			horizontals: { base: "block/stone/rock/{rock}*" },
+			verticals: { base: "block/stone/rock/{rock}*" }
+		},
+		"*": {
+			verticals: { base: "block/stone/rock/{rock}*"  },
+			horizontals: { base: "block/stone/rock/{rock}*" }
+		}
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1,
+		rotateXByType: {
+			"*-north": 90,
+			"*-south": 270,
+			"*-up": 180,
+			"*-down": 0,
+		},
+		rotateZByType: {
+			"*-east": 90,
+			"*-west": 270,
+		},
+	},
+	selectionbox: { x1: 0, y1: 0, z1: 0,   x2: 1, y2: 0.5, z2: 1,
+		rotateXByType: {
+			"*-north": 90,
+			"*-south": 270,
+			"*-up": 180,
+			"*-down": 0,
+		},
+		rotateZByType: {
+			"*-east": 90,
+			"*-west": 270,
+		},
+	},
+	sounds: {
+		"walk": "walk/stone",
+		byTool: {
+			"Pickaxe": { hit: "block/rock-hit-pickaxe", break: "block/rock-break-pickaxe" }
+		}
+	},
+	guiTransform: {
+		translation: { x: 0, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.25, z: 0.5 }
+	}
+}

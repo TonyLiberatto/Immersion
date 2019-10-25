@@ -1,0 +1,103 @@
+{
+	code: "hingesmold",
+	classByType: {
+		"hingesmold-*-raw": "Block",
+		"hingesmold-*-burned": "BlockToolMold",
+	},
+	behaviors: [{name: "UnstableFalling"}],
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"materialtype", states: ["raw", "burned"] },
+	],
+	attributesByType: {
+		"*-blue-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 2, x2: 15, z2: 14 } ],
+			"drop": { type:"item", code: "hinges-{metal}",	stacksize: 9, },				
+				
+		},
+		"*-brown-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 2, x2: 15, z2: 14 } ],
+			"drop": { type:"item", code: "hinges-{metal}",	stacksize: 9, },
+		},
+		"*-fire-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 2, x2: 15, z2: 14 } ],
+			"drop": { type:"item", code: "hinges-{metal}",	stacksize: 9, },
+		},
+		"*-red-burned": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"fillQuadsByLevel": [ { x1: 1, z1: 2, x2: 15, z2: 14 } ],
+			"drop": { type:"item", code: "hinges-{metal}",	stacksize: 9, },
+		},
+	},
+	entityClassByType: {
+		"*-burned": "ToolMold",
+	},
+	combustiblePropsByType: {
+		"*-blue-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "hingesmold-blue-burned" },
+			requiresContainer: false
+		},
+		"*-fire-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "hingesmold-fire-burned" },
+			requiresContainer: false
+		},
+		"*-red-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "hingesmold-red-burned" },
+			requiresContainer: false
+		},
+		"*-brown-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "hingesmold-brown-burned" },
+			requiresContainer: false
+		},
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	replaceable: 700,
+	resistance: 1.5,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": {  ceramic: { base: "block/clay/{color}-raw" } },
+		"*-burned": {  ceramic: { base: "block/clay/{color}-burned" }  }
+	},
+	shape: { base: "block/clay/mold/hingesmold" },
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0.125, x2: 1, y2: 0.125, z2: 0.9375 },
+	selectionbox: { x1: 0, y1: 0, z1: 0.125, x2: 1, y2: 0.125, z2: 0.9375 },
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	guiTransformByType: {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.33
+		}
+}

@@ -1,0 +1,45 @@
+{
+	code: "spear-metal",
+	class: "EntityProjectile",
+	hitboxSize: { x: 0.125, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		textures: {
+				"spearhead": { base: "block/stone/flint", alternates: [ { base: "block/metal/plate/copper" }, { base: "block/metal/plate/tinbronze" }, { base: "block/metal/plate/bismuthbronze" }, { base: "block/metal/plate/blackbronze" }, { base: "block/metal/plate/gold" }, { base: "block/metal/plate/silver" }, { base: "block/metal/plate/iron" }, { base: "block/metal/plate/steel" } ] },
+		},
+		shape: { base: "entity/spear" },
+		behaviors: [
+			{ 
+				code: "passivephysics", 
+				groundDragFactor: 1,
+				airDragFallingFactor: 0.25
+			}, 
+			{ code: "interpolateposition" }
+		],
+	},
+	server: {
+		behaviors: [
+			{ 
+				code: "passivephysics", 
+				groundDragFactor: 1,
+				airDragFallingFactor: 0.25
+			}, 
+			{ code: "despawn", minSeconds: 300 }
+		]
+	},
+	sounds: {
+	},
+	attributes: {
+		texturealternateByType: {
+			"stone": 0,
+			"copper": 1,
+			"tinbronze": 2,
+			"bismuthbronze": 3,
+			"blackbronze": 4,
+			"gold": 5,
+			"silver": 6,
+			"iron": 7,
+			"steel": 8,
+		}
+	}
+}

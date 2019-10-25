@@ -1,0 +1,58 @@
+{
+	code: "ingotmold",
+	class: "BlockIngotMold",
+	behaviors: [{name: "UnstableFalling"}],
+	variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+		{ code:"type", states: ["raw", "burned"] }
+	],
+	shapeByType: {
+		"*-raw": { base: "block/clay/mold/ingot-1middle" },
+		"*-burned": { base: "block/clay/mold/ingot-1middle" },
+	},
+	entityClass: "IngotMold",
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicitems": ["*"] },
+	replaceable: 700,
+	resistance: 2,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": {  all: { base: "block/clay/{color}-raw" } },
+		"*-burned": {  floor: { base: "block/clay/{color}-burned" }, other: { base: "block/clay/{color}-burned" } }
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1875, z2: 1 },
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	combustiblePropsByType: {
+		"ingotmold-*-raw": {
+			meltingPoint: 600,
+			meltingDuration: 30,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "ingotmold-{color}-burned" },
+			requiresContainer: false
+		}
+	},
+	guiTransform: {
+		rotation: { x: -22.5937, y: -45.2968, z: 0 },
+		origin: { x: 0.52, y: 0.15, z: 0.5299 },
+		scale: 2
+	},
+	fpHandTransform: {
+		translation: { x: 0.2, y: 0.3, z: 0 }
+	},
+	tpHandTransform: {
+		translation: { x: -1.1, y: -0.9, z: -1.3 },
+		rotation: { x: -80, y: -81, z: -1 },
+		scale: 0.5
+	}
+}

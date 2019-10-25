@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "P,P",
+	ingredients: {
+		"P": { type: "block", code: "neolithicmod:attachment-industrial-east-up" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "block", code: "neolithicmod:attachment-industrial-east-long", quantity: 1 } 
+}

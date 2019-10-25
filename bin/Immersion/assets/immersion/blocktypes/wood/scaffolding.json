@@ -1,0 +1,34 @@
+{
+	code: "scaffolding",
+	attributes: {
+		handbook: {
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place a Debarked Very Thin Branch vertically on the ground, right click with any cordage, next right click again with Debarked Very Thin Branch to make the scafolding." },
+					]
+		},
+	},
+	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	shape: { base: "block/wood/scaffolding" },
+	blockmaterial: "Wood",
+	drawtype: "json",
+	textures: {
+		"kapok": {base: "block/wood/debarked/kapok"},
+		"ropeblock": { base: "block/rope"}
+	},
+	resistance: 0.1,
+	lightabsorption: 0,
+	climbable: true,
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 24,
+	},
+	maxStackSize: 64,
+	materialDensity: 400
+}

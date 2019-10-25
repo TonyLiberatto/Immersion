@@ -1,0 +1,45 @@
+{
+	code: "bag-assembly",
+	variantgroups: [		
+		{ loadFromProperties: "block/wood" },
+		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "cordage", states: ["leatherstrips", "reeds", "sinew", "sisal", ]},
+	],	
+	maxstacksize: 1,
+	drawtype: "json",
+	shape: { base: "block/bag/bag-assembly" },
+	textures: {
+		"burdenbasket": { base: "block/bag/burdenbasket" },
+		"acacia": { base: "block/wood/{style}/{wood}" },
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+		"rope": { base: "block/{cordage}" },
+	},
+	storageFlags: 2,
+	creativeinventory: { "general": [""], "items": [""], "neolithicitems": [""] },
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	lightAbsorption: 0,
+	collisionbox: { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 0.5, z2: 0.65 },
+	selectionbox: { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 0.5, z2: 0.65 },
+	guiTransform: {
+		translation: { x: -1, y: 3, z: 0 },
+		rotation: { x: -14, y: 145, z: 1 },
+		origin: { x: 0.5299, y: 0.22, z: 0.5 },
+		scale: 1
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: 0.5, z: 0.2 },
+		rotation: { x: 20, y: -73, z: 10 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.6, y: -0.3, z: -0.5 },
+		rotation: { x: -14, y: 51, z: -21 },
+		scale: 1.07
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 33, z: -180 },
+		scale: 8
+	},
+}

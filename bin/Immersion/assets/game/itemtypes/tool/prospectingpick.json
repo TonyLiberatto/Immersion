@@ -1,0 +1,110 @@
+{
+	code: "prospectingpick",
+	class: "ItemProspectingPick",
+	attributes: {
+		handbook: {
+			groupBy: ["prospectingpick-*"]
+		}
+	},
+	variantgroups: [
+		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+	],
+	tool: "pickaxe",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/prospectingpick" },
+	heldTpHitAnimation: "breaktool",
+	textures: {
+		"metal": { base: "block/metal/ingot/{metal}" },
+		"wood": { base: "item/tool/material/wood" } 
+	},
+	miningtierbytype: {
+		"*-stone": 1,
+		"*-copper": 2,
+		"*-gold": 2,
+		"*-silver": 2,
+		"*-bismuthbronze": 3,
+		"*-tinbronze": 3,
+		"*-blackbronze": 3,
+		"*-iron": 4,
+		"*-steel": 5,
+	},
+	miningspeedbytype: {
+		"prospectingpick-copper": {
+			"stone": 2.5,
+			"ore": 2.5
+		},
+		"prospectingpick-bismuthbronze": {
+			"stone": 3,
+			"ore": 3
+		},
+		"prospectingpick-tinbronze": {
+			"stone": 3.3,
+			"ore": 3.3
+		},
+		"prospectingpick-gold": {
+			"stone": 2.7,
+			"ore": 2.7
+		},
+		"prospectingpick-silver": {
+			"stone": 2.7,
+			"ore": 2.7
+		},
+		"prospectingpick-blackbronze": {
+			"stone": 3.5,
+			"ore": 3.5
+		},
+		"prospectingpick-iron": {
+			"stone": 4.5,
+			"ore": 4.5,
+			"metal": 4.5
+		},
+		"prospectingpick-steel": {
+			"stone": 5.5,
+			"ore": 5.5
+		},
+	},
+	attackpowerbytype: {
+		"prospectingpick-copper": 1.25,
+		"prospectingpick-bismuthbronze": 1.5,
+		"prospectingpick-tinbronze": 1.75,
+		"prospectingpick-gold": 1.75,
+		"prospectingpick-silver": 1.75,
+		"prospectingpick-blackbronze": 2,
+		"prospectingpick-iron": 2.25,
+		"prospectingpick-steel": 2.5,
+	},
+	durabilitybytype: {
+		"prospectingpick-gold": 60,
+		"prospectingpick-silver": 80,
+		"prospectingpick-copper": 600,
+		"prospectingpick-blackbronze": 1460,
+		"prospectingpick-bismuthbronze": 1200,
+		"prospectingpick-tinbronze": 1300,
+		"prospectingpick-iron": 2200,
+		"prospectingpick-steel": 3300,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 0, y: 1, z: 0 },
+		rotation: { x: 107, y: -50, z: 0 },
+		scale: 2.16,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.45, z: 0.5 },
+		scale: 3.6
+	},
+	tpHandTransform: {
+		translation: { x: -0.77, y: -0.5, z: -0.55 },
+		rotation: { x: 90, y: 0, z: -10 },
+		scale: 1
+	}
+}

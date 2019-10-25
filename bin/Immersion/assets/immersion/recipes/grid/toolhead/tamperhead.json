@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "C	S",
+	ingredients: {
+		"C": { type: "item", code: "game:knife*", isTool: true  },
+		"S": { type: "block", code: "branch-medium-*-debarked-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" },
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "tamperhead-wood", quantity: 1  }
+}

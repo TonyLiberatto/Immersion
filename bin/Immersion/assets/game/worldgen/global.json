@@ -1,0 +1,10 @@
+{
+	"waterBlockCode": "seawater-still-7",
+	"lakeIceBlockCode": "lakeice",
+	"basaltBlockCode": "rock-basalt",
+	"lavaBlockCode": "lava-still-7",
+	"mantleBlockCode": "mantle",
+    "defaultRockCode": "rock-granite",
+    "lakeWaterBlockCode": "water-still-7",
+    "glacierIceBlockCode": "glacierice"
+}

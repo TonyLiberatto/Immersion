@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "KB",
+	ingredients: {
+		"K": { type: "item", code: "game:knife*", isTool: true  },
+		"B": { type: "block", code: "branch-very-thin-*-bark-ud", allowedVariants: ["acacia", "birch", "kapok", "maple", "oak", "pine"], name: "wood" }
+	},
+	width: 2,
+	height: 1,
+	shapeless: false,
+	output: { type: "item", code: "game:stick", quantity: 1  }
+}

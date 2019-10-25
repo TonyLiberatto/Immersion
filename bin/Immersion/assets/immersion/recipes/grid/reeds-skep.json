@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "LLL	LLL	LCL",
+	ingredients: {
+		"L": { type: "item", code: "game:reeds", quantity: 2 },
+		"C": { type: "item", code: "game:clay-*", quantity: 2 }
+	},
+	name: "skep",
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "game:skep-empty-east"  }
+}

@@ -1,0 +1,82 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:candlemold-copper-plain",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:candlemold-copper-burned",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:candlemold-tinbronze-plain",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:candlemold-tinbronze-burned",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:candlemold-bismuthbronze-plain",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:candlemold-bismuthbronze-burned",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:candlemold-blackbronze-plain",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:candlemold-blackbronze-burned",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

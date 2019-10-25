@@ -1,0 +1,69 @@
+{
+	code: "soup",
+	perishableProps: {
+		freshHours: { avg: 144 },
+		transitionHours: { avg: 36 },
+		transitionRatio: 1,
+		transitionedStack: { type: "block", code: "rot" }
+	},
+	shape: { base: "block/meal/soup" },
+	ingredients: [
+		{ 
+			code: "water", 
+			validStacks: [ 
+				{ 
+					type: "item", 
+					code: "waterportion", 
+					shapeElement: "bowl/water"
+				}
+			],
+			minQuantity: 1,
+			maxQuantity: 1
+		},
+		{
+			code: "vegetable-base-1", 
+			validStacks: [ 
+				{ type: "item",  code: "vegetable-*",  shapeElement: "bowl/vegetable base 1/*" },
+				{ type: "item", code: "mushroom-*", shapeElement: "bowl/vegetable base 1/*" },
+				{ type: "block", code: "pumpkin-fruit-4",  shapeElement: "bowl/vegetable 1/*" }
+			],
+			minQuantity: 1,
+			maxQuantity: 1,
+		},
+		{
+			code: "vegetable-base-2", 
+			validStacks: [ 
+				{ type: "item",  code: "vegetable-*",  shapeElement: "bowl/vegetable base 2/*" },
+				{ type: "item", code: "mushroom-*", shapeElement: "bowl/vegetable base 2/*" },
+				{ type: "block", code: "pumpkin-fruit-4",  shapeElement: "bowl/vegetable 2/*" }
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+		},
+		{
+			code: "vegetable-base-3", 
+			validStacks: [ 
+				{ type: "item",  code: "vegetable-*",  shapeElement: "bowl/vegetable base 3/*" },
+				{ type: "item", code: "mushroom-*", shapeElement: "bowl/vegetable base 3/*" },
+				{ type: "block", code: "pumpkin-fruit-4",  shapeElement: "bowl/vegetable 1/*" }
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+		},
+		{
+			code: "protein-extra", 
+			validStacks: [ 
+				{ type: "item", code: "redmeat-raw", shapeElement: "bowl/meat/*" },
+				{ type: "item", code: "poultry-raw", shapeElement: "bowl/meat/*" },
+				{ type: "item", code: "egg-chicken-raw", shapeElement: "bowl/meat/*" },
+				{ type: "item", code: "fish-bass-raw", shapeElement: "bowl/meat/*" },
+				{ type: "item", code: "immersion:chicken-raw",  shapeElement: "bowl/poultry/*" },
+				{ type: "item", code: "immersion:mutton-raw",  shapeElement: "bowl/red meat/*" },
+				{ type: "item", code: "immersion:porkchops-raw",  shapeElement: "bowl/red meat/*" },
+				{ type: "item", code: "immersion:hare-raw",  shapeElement: "bowl/poultry/*" },
+			],
+			minQuantity: 0,
+			maxQuantity: 1,
+		}
+	]
+}

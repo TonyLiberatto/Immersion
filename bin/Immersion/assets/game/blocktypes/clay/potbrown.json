@@ -1,0 +1,145 @@
+{
+	code: "potbrown",
+	behaviorsByType: {
+		"*-raw": [{name: "UnstableFalling"}, {name: "RightClickPickup" }],
+		"*": [{name: "UnstableFalling"}],
+	},
+	classByType: {
+		"potbrown-burned": "BlockCookingContainer",
+		"potbrown-cooked": "BlockCookedContainer"
+	},
+	heldTpIdleAnimation: "holdbothhands",
+	attributesByType: {
+		"potbrown-raw": { },
+		
+		"potbrown-burned": {
+			cookingContainerSlots: 4,
+			maxContainerSlotStackSize: 6,
+			storageType: 1,
+			maxTemperature: 200,
+			inFirePitProps: {
+				transform: { 
+					translation: { x: 0, y: 0.125, z: 0 } 
+				},
+				useFirepitModel: "Wide"
+			}
+		},
+		
+		"potbrown-cooked": {
+			emptiedBlockCode: "potbrown-burned",
+			allowHeating: true,
+			maxTemperature: 200,
+			
+			textureMapping: {
+				"grain-flax": ["grain", "group1" ],
+				"vegetable-carrot": ["vegetable", "group1"],
+				"fruit-blueberry": ["fruit", "group1"],
+				
+				"mushroom-flyagaric-normal": ["vegetable", "group2"],
+				"fruit-saguaro": ["fruit", "group2"],
+				
+				"grain-millet": ["grain", "group3"],
+				"mushroom-bolete-normal": ["vegetable", "group3"],
+				"fruit-cranberry": ["fruit", "group3"],
+
+				"grain-rice": ["grain", "group4"],
+				"vegetable-parsnip": ["vegetable", "group4"],
+				"fruit-whitecurrant": ["fruit", "group4"],
+				"legume-soybean": ["vegetable", "group9"],
+				
+				"grain-rye": ["grain", "group5"],
+				"vegetable-turnip": ["vegetable", "group5"],
+				"fruit-blackcurrant": ["fruit", "group5"],
+				"cheese": ["dairyoregg", "group5"],
+
+				"grain-spelt": ["grain", "group6"],
+				"vegetable-onion": ["vegetable", "group6"],
+				"fruit-redcurrant": ["fruit", "group6"],
+				
+				"redmeat-raw": ["meat", "group6"],
+				"egg-chicken-raw": ["egg", "group6"],
+				"poultry-raw": ["meat", "group5"],
+
+				
+				"mushroom-fieldmushroom-normal": ["vegetable", "group7"],
+				
+				"pumpkin-fruit-4": ["vegetable", "group8"],
+				"vegetable-cabbage": ["vegetable", "group10"],
+				"waterportion": ["water", "group2"],
+				"honeyportion": ["topping", "honey"]
+			}
+		}
+	},
+	variantgroups: [
+		{ code:"type", states: ["raw", "burned", "cooked"] },
+	],
+	entityclassByType: {
+		"*-raw": null,
+		"*-cooked": "CookedContainer",
+	},
+	combustiblePropsByType: {
+		"potbrown-raw": {
+			meltingPoint: 600,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "bake",
+			smeltedStack: { type: "block", code: "potbrown-burned" },
+			requiresContainer: false
+		}
+	},
+	shape: { base: "block/clay/pot-opened-empty" },
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["potbrown-raw", "potbrown-burned"], "decorative": ["potbrown-raw", "potbrown-burned"] },
+	replaceable: 400,
+	resistance: 1.5,
+	maxStackSize: 1,
+	lightAbsorption: 0,
+	texturesByType: {
+		"*-raw": { 
+			all: { base: "block/clay/brownclay" }
+		},
+		"*": {
+			"transparent": { base: "block/transparent" },
+			"ceramic": { base: "block/clay/pot/brown/side" },
+			"lid": { base: "block/clay/pot/brown/lid" },
+			"group1": { base: "block/meal/group1-flax-carrot-blueberry" },
+			"group2": { base: "block/meal/group2-soup-flyagaric-cactifruit-redmeat" },
+			"group3": { base: "block/meal/group3-millet-bolete-cranberry-poultry" },
+			"group4": { base: "block/meal/group4-rice-parsnip-whitecurrant" },
+			"group5": { base: "block/meal/group5-rye-turnip-blackcurrant-cheese-poultrystew" },
+			"group6": { base: "block/meal/group6-spelt-onion-redcurrant-egg-redmeatstew" },
+			"group7": { base: "block/meal/group7-honey-fieldmushroom" },
+			"group8": { base: "block/meal/group8-pumpkin" },
+			"group9": { base: "block/meal/group9-soya" },
+			"group10": { base: "block/meal/group10-cabbage" },
+			"honey": { base: "block/liquid/honey" }
+		}
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.3125, z2: 0.75 },
+	selectionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.3125, z2: 0.75 },
+	guiTransform: {
+		origin: { x: 0.5, y: 0.2, z: 0.5 },
+		scale: 2
+	},
+	groundTransform: {
+		scale: 3
+	},
+	fpHandTransform: {
+		scale: 2
+	},
+	tpHandTransform: {
+		translation: { x: -0.57, y: 0.03, z: -0.6 },
+		rotation: { x: 45, y: 16, z: -72 },
+		origin: { x: 0.5, y: 0.01, z: 0.5 },
+		scale: 0.76
+	}
+}

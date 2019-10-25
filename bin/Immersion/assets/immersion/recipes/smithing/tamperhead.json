@@ -1,0 +1,17 @@
+{
+	ingredient: { type: "item", code: "game:ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "iron"] },
+	pattern: [
+		"__________",
+		"_########_",
+		"_########_",
+		"_########_",
+		"_###__###_",
+		"_###__###_",
+		"_########_",
+		"_########_",
+		"_########_",
+		"__________",
+	],
+	name: "Tamper Head",
+	output: { type: "item", code: "tamperhead-{metal}", stacksize: 1  }
+}

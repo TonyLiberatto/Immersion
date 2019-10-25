@@ -1,0 +1,30 @@
+{
+	code: "arrow",
+	class: "EntityProjectile",
+	variantgroups: [
+		{ code: "type", states: ["primitive" ] },
+	],
+	hitboxSize: { x: 0.125, y: 0.125 },
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/primitive-arrow" },
+		behaviors: [
+			{ code: "passivephysics" }, 
+			{ code: "interpolateposition" }
+		],
+	},
+	server: {
+		behaviors: [
+			{ code: "passivephysics" }, 
+			{ code: "despawn", minSeconds: 300 }
+		],
+	},
+	sounds: {
+	},
+	attributes: {
+		physics: {
+			groundDragFactor: 1,
+			airDragFallingFactor: 0.25
+		}
+	},
+}

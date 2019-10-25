@@ -1,0 +1,90 @@
+{
+	code: "knife",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "knife",
+	attributes: {
+		handbook: {
+			groupBy: ["knife-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
+	],
+	heldTpHitAnimation: "breaktool",
+	shapeByType: {
+		"*-bone-*": {base: "item/tool/bone-knife"},
+		"*": {base: "item/tool/branch-knife" },
+	},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},		
+	},
+
+	durabilitybytype: 
+	{
+		"*-granite-bone-*": 200,
+		"*-andesite-bone-*": 200,
+		"*-peridotite-bone-*": 200,
+		"*-basalt-bone-*": 200,
+		"*-obsidian-bone-*": 300,
+		"*-flint-bone-*": 250,
+		"*-granite-*": 150,
+		"*-andesite-*": 150,
+		"*-peridotite-*": 150,
+		"*-basalt-*": 150,
+		"*-obsidian-*": 250,
+		"*-flint-*": 200,
+	},
+	miningspeedbytype: {
+		"*-granite-*": { "plant": 1, },
+		"*-andesite-*": { "plant": 1, },
+		"*-peridotite-*": { "plant": 1, },
+		"*-basalt-*": { "plant": 1.1, },
+		"*-obsidian-*": { "plant": 1.2, },
+		"*-flint-*": { "plant": 1.2, },
+	},
+	attackpowerbytype: 
+	{
+		"*-granite-*": 0.75,
+		"*-andesite-*": 0.75,
+		"*-peridotite-*": 0.75,
+		"*-basalt-*": 0.75,
+		"*-obsidian-*": 1.5,
+		"*-flint-*": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.2, z: 0.4 },
+		rotation: { x: -20, y: -93, z: -75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: -1, z: 0 },
+		rotation: { x: -157, y: 180, z: -46 },
+		origin: { x: 0.59, y: 0.535, z: 0.5 },
+		scale: 2.7
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.44, z: -0.5 },
+		rotation: { x: 0, y: 180, z: -10 },
+		scale: 1
+	}
+}

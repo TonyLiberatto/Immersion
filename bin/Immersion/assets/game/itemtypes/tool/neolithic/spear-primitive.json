@@ -1,0 +1,75 @@
+{
+	code: "spear-primitive",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips" ] },
+	],
+	shape: { base: "item/tool/primitive-spear" },
+	heldTpHitAnimation: "spearhit",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+		"shaft": { base: "block/wood/debarked/{shaft}" },
+		"cordage": { base: "block/cordage/{cordage}" },
+	},
+	attackRange: 3.5,
+	attackpowerbytype: {
+		"spear-primitive-granite-*": 2,
+		"spear-primitive-andesite-*": 2,
+		"spear-primitive-peridotite-*": 2,
+		"spear-primitive-basalt-*": 2,
+		"spear-primitive-flint-*": 2.25,
+		"spear-primitive-obsidian-*": 2.5,
+	},
+	"__comment": "Thrown damage",
+	attributes: {
+		damageByType: {
+			"*-granite-*": 4,
+			"*-andesite-*": 4,
+			"*-peridotite-*": 4,
+			"*-basalt-*": 4,
+			"*-flint-*": 5,
+			"*-obsidian-*": 5.25,
+		},
+		spearEntityCode: "spear-primitive-{stone}-{shaft}-{cordage}",
+		handbook: {
+			groupBy: ["spear-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	durabilitybytype: {
+		"*-granite-*": 50,
+		"*-andesite-*": 50,
+		"*-peridotite-*": 50,
+		"*-basalt-*": 50,
+		"*-obsidian-*": 90,
+		"*-flint-*": 70,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"]  },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.3, z: 0 },
+		rotation: { x: -85, y: 0, z: 75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		rotation: { x: 90, y: -45, z: -35 },
+		origin: { x: 0.6, y: -0.8, z: 0.55 },
+		scale: 1.4299
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -1.7, y: -0.7, z: -0.5 },
+		rotation: { x: 0, y: 0, z: -10 },
+		scale: 1
+	}
+}

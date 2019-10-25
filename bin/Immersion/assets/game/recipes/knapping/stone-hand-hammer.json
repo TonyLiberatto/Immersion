@@ -1,0 +1,14 @@
+{
+		ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "peridotite"] },
+		pattern: [
+			"____##____",
+			"___####___",
+			"___####___",
+			"___####___",
+			"___####___",
+			"____##____",
+
+		],
+		name: "Stone Hand Hammer",
+		output: { type: "item", code: "hammer-hand-{rock}"  }
+}

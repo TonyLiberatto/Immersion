@@ -1,0 +1,4 @@
+[
+	{ file: "game:recipes/clayforming/crucible", op: "add", path: "/enabled",  value: false },
+	{ file: "game:recipes/clayforming/fourcrucible", op: "add", path: "/enabled",  value: false },
+]

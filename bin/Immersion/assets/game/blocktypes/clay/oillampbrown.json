@@ -1,0 +1,113 @@
+{
+	code: "oillampbrown",
+	class: "BlockTorch",
+	storageFlags: 257,
+	behaviors: [ 
+		{ name: "RightClickPickup"}, 
+	],
+	attributes: {
+		handbook: {			
+			extraSections: [
+				{ title: "handbook-item-sources", text: "To make a Brown Oil Lamp,  place an empty brown bowl down on any surface and right click the bowl with a lump of fat. Once the bowl is filled with fat, right clicking with a torch in your active hand will light the fat in the bowl, and complete the lamp. Right click to pick up and place the oil lamp where you desire." }
+			]
+		}
+	},
+	variantgroups: [
+		{ code:"position", states: ["up"], combine: "add" },
+		{ code:"wall", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	shapebytype: {
+		"*-up": { base: "block/clay/bowl-ground-glowing" },
+		"*-north": { base: "block/clay/bowl-wall", rotateY: 0 },
+		"*-east": { base: "block/clay/bowl-wall", rotateY: 270 },
+		"*-south": { base: "block/clay/bowl-wall", rotateY: 180 },
+		"*-west": { base: "block/clay/bowl-wall", rotateY: 90 }
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "neolithicdeco": [] },
+	replaceable: 5001,
+	resistance: 0,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	lightHsv: [4, 2, 11],
+	texturesByType: {
+		"*-up": {
+			"mat": { base: "block/clay/brown-burned" },
+			"content": { base: "block/fire"  }
+		},
+		"*-north": {
+			"mat": { base: "block/clay/brown-burned" },
+			"content": { base: "block/fire"  }
+		},
+		"*-east": {
+			"mat": { base: "block/clay/brown-burned" },
+			"content": { base: "block/fire"  }
+		},
+		"*-south": {
+			"mat": { base: "block/clay/brown-burned" },
+			"content": { base: "block/fire"  }
+		},
+		"*-west": {
+			"mat": { base: "block/clay/brown-burned" },
+			"content": { base: "block/fire"  }
+		},
+	},
+	particleProperties: [
+		{
+			hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: 0, var: 0 }, { avg: 0, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.1, var: 0.1 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.015 },
+			size: { avg: 0.5, var: 0 },
+			sizeEvolve: { transform: "quadratic", factor: -0.7 },
+			lifeLength: { avg: 1.5 },
+			glowLevel: 128
+		},
+		{
+			hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 40, var: 30 },  { avg: 220, var: 50 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			posOffset: [ { avg: 0, var: 0.1 }, { avg: 0, var: 0 }, { avg: 0, var: 0.1 }],
+			velocity: [ { avg: 0, var: 0.025 }, { avg: 0.05, var: 0.1 }, { avg: 0, var: 0.025 }],
+			quantity: { avg: 0.05 },
+			size: { avg: 0.3125, var: 0.05 },
+			sizeEvolve: { transform: "linear", factor: 0.5 },
+			particleModel: "Quad"
+		}
+	],
+	collisionbox: null,
+	selectionboxbytype: {
+		"*-up": { x1: 0.3125, y1: 0, z1: 0.3125, x2: 0.6875, y2: 0.125, z2: 0.6875 },
+		"*-east": { x1: 0.3125, y1: 0.3125, z1: 0.5625, x2: 0.6875, y2: 0.5, z2: 1, rotateY: 270 },
+		"*-south": { x1: 0.3125, y1: 0.3125, z1: 0.5625, x2: 0.6875, y2: 0.5, z2: 1, rotateY: 180 },
+		"*-west": { x1: 0.3125, y1: 0.3125, z1: 0.5625, x2: 0.6875, y2: 0.5, z2: 1, rotateY: 90 },
+		"*-north": { x1: 0.3125, y1: 0.3125, z1: 0.5625, x2: 0.6875, y2: 0.5, z2: 1, rotateY: 0 }
+	},
+	blockmaterial: "Other",
+	fpHandTransform: {
+		translation: { x: 0.29, y: -0.1, z: 0 },
+		scale: 2
+	},
+	guiTransform: {
+		translation: { x: 0, y: 4, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 },
+		scale: 3
+	},
+	groundTransform: {
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.9, y: -0.1, z: -0.8 },
+		rotation: { x: 0, y: -56, z: 0 },
+		origin: { x: 0.5, y: 0.1, z: 0.5 },
+		scale: 0.66
+	},
+	rainPermeable: true,
+	materialDensity: 600
+}

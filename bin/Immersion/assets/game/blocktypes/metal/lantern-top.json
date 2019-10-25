@@ -1,0 +1,25 @@
+{
+	code: "lantern-top",	
+	variantgroups: [
+		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
+	],
+	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	shape: { base: "block/metal/lantern/lantern-top" },
+	blockmaterial: "metal",
+	drawtype: "json",
+	textures: {
+		all: { base: "block/metal/lantern/{metal}" },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.0625, z2: 0.75 },
+	selectionbox: { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 0.0625, z2: 0.75 },
+	resistance: 3.5,
+	maxStackSize: 32,
+	materialDensity: 600,
+
+}

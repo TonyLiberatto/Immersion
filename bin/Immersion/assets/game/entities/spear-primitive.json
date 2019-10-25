@@ -1,0 +1,54 @@
+{
+	code: "spear-primitive",
+	class: "EntityProjectile",
+	hitboxSize: {
+		x: 0.125,
+		y: 0.125
+	},
+	variantgroups: [
+		{
+			code: "stone",
+			states: [ "granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ]
+		},
+		{
+			code: "shaft",
+			states: [ "acacia", "birch", "kapok", "maple", "oak", "pine" ]
+		},
+		{
+			code: "cordage",
+			states: [ "rope", "sinew", "leatherstrips" ]
+		},
+	],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/primitive-spear" },
+		textures: {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},
+		behaviors: [
+			{
+				code: "passivephysics",
+				groundDragFactor: 1,
+				airDragFallingFactor: 4
+			},
+			{ code: "interpolateposition" }
+		],
+	},
+	server: {
+		behaviors: [
+			{
+				code: "passivephysics",
+				groundDragFactor: 1,
+				airDragFallingFactor: 4
+			},
+			{
+				code: "despawn",
+				minSeconds: 300
+			}
+		]
+	},
+	sounds: {
+	},
+}

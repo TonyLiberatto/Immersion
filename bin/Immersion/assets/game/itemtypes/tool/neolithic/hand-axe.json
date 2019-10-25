@@ -1,0 +1,102 @@
+{
+	code: "axe",
+	class: "ItemAxe",
+	attributes: {
+		handbook: {
+			groupBy: ["axe-hand-*"]
+		}
+	},
+	variantgroups: [
+		{code: "type", states: ["hand"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite" ] },
+	],
+	tool: "axe",
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/hand-axe" },
+	heldTpHitAnimation: "axechop",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+	},
+	attackRange: 2,
+	miningtierbytype: {
+		"axe-hand-granite": 1,
+		"axe-hand-andesite": 1,
+		"axe-hand-peridotite": 1,
+		"axe-hand-basalt": 1,
+		"axe-hand-obsidian": 1,
+		"axe-hand-flint": 1,
+	},
+	miningspeedbytype: {
+		"axe-hand-granite": {
+			"wood": 6.6,
+			"plant": 4.4,
+			"leaves": 3.4
+		},
+		"axe-hand-andesite": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-hand-peridotite": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-hand-basalt": {
+			"wood": 6.6,
+			"plant": 4.4,
+			"leaves": 3.4
+		},
+		"axe-hand-obsidian": {
+			"wood": 8,
+			"plant": 5.2,
+			"leaves": 4.8
+		},
+		"axe-hand-flint": {
+			"wood": 6,
+			"plant": 4.4,
+			"leaves": 3.2
+		},
+	},
+	durabilitybytype: {
+		"axe-hand-granite": 60,
+		"axe-hand-andesite": 60,
+		"axe-hand-peridotite": 60,
+		"axe-hand-basalt": 60,
+		"axe-hand-obsidian": 100,
+		"axe-hand-flint": 80,
+	},
+	attackpowerbytype: {
+		"axe-hand-granite": 0.36,
+		"axe-hand-andesite": 0.36,
+		"axe-hand-peridotite": 0.36,
+		"axe-hand-basalt": 0.36,
+		"axe-hand-obsidian": 0.75,
+		"axe-hand-flint": 0.62,
+
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		origin: { x: 0.7, y: 0.5, z: 0.5},
+		scale: 2.5
+	},
+		guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -56, y: -127, z: -180 },
+		origin: { x: 0.5, y: 0.4, z: 0.5 },
+		scale: 4
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.75, y: -0.5, z: -0.55 },
+		rotation: { x: 90, y: 0, z: -10 },
+		origin: { x: 0.6, y: 0.5, z: 0.5},
+		scale: 1
+	}
+}

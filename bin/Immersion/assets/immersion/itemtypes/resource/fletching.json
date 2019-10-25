@@ -1,0 +1,9 @@
+{
+	code: "fletching",
+	maxstacksize: 64,
+	variantgroups: [
+		{ code: "type", states: ["feather", "vine","bamboo" ] },
+	],
+	texture: { base: "item/resource/fletching/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+}

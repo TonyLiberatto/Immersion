@@ -1,0 +1,175 @@
+{
+	code: "pig-domestic-sow",
+	class: "EntityAgent",
+	hitboxSize: { x: 0.99, y: 0.8 },
+	eyeHeight: 0.7,
+	drops: [
+		{
+			type: "block",
+			code: "immersion:dead-pig-domestic-sow",
+		},
+	],
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/land/pig-domestic/sow" },
+		texture: { base: "entity/pig-domestic/sow" },
+		behaviors: [
+			{ code: "repulseagents" },
+			{ code: "slaughterable" },
+			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "interpolateposition" }, { code: "multiply" },
+		],
+		animations: [
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2.2,
+				weight: 10,
+				blendMode: "AddAverage" 
+			},
+		]
+	},
+	server: {
+		behaviors: [
+			{ code: "repulseagents" },
+			{ code: "slaughterable" },
+			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{
+				code: "health",
+				currenthealth: 20,
+				maxhealth: 20
+			},			
+			{ code: "breathe" },
+			{
+				code: "multiply",
+				spawnEntityCode: "pig-domestic-piglet",
+				spawnQuantityMin: 2,
+				spawnQuantityMax: 6,
+				growthCapEntityCodes: ["pig-domestic-piglet", "pig-domestic-sow", "pig-domestic-boar"],
+				requiresNearbyEntityCode: "pig-domestic-boar",
+				requiresNearbyEntityRange: 10,
+				pregnancyDays: 5,
+				multiplyCooldownDaysMin: 6,
+				multiplyCooldownDaysMax: 11,
+				portionsEatenForMultiply: 10	
+			},
+			{
+				code: "emotionstates",
+				states: [
+					{ code: "aggressiveondamage", duration: 15, chance: 0.6, slot: 0, prority: 2, accumType: "noaccum" },
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" }
+				],
+			},
+			{
+				code: "taskai",
+				aitasks: [
+					{
+						code: "meleeattack",
+						entityCodes: ["player"],
+						priority: 2,
+						damage: 4,
+						mincooldown: 1500, 
+						maxcooldown: 1500, 
+						attackDurationMs: 900,
+						damagePlayerAtMs: 300,
+						animation: "Attack",
+						animationSpeed: 2,
+						sound: "creature/pig/pig-attack",
+						whenInEmotionState: "aggressiveondamage"
+					},
+ 					{
+						code: "sleep",
+						priority: 1.8,
+						priorityForCancel: 1.35,
+						animation: "sleep",
+						isnocturnal: false,
+						cancelOnHurt: true,
+						animationSpeed: 0.20,
+					},
+					{
+						code: "seekentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						mincooldown: 1000, 
+						maxcooldown: 1500, 
+						movespeed: 0.025,
+						seekingRange: 6,
+						animation: "Run",
+						animationSpeed: 4,
+						whenInEmotionState: "aggressiveondamage"
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						movespeed: 0.02,
+						seekingRange: 12,
+						animation: "Run",
+						animationSpeed: 4,
+						sound: "creature/pig/hurt",
+						whenInEmotionState: "fleeondamage"
+					},
+					{
+						code: "stayclosetoentity",
+						priority: 1.3,
+						entityCode: "pig-domestic-boar",
+						maxDistance: 10,
+						searchRange: 25,
+						movespeed: 0.025,
+						animation: "Run",
+						animationSpeed: 4,
+					},
+					{
+						code: "getoutofwater",
+						priority: 1.4,
+						movespeed: 0.015,
+						animation: "Walk",
+						animationSpeed: 2.2
+					},
+					{
+						code: "seekfoodandeat",
+						movespeed: 0.004,
+						priority: 1.1,
+						animationSpeed: 2,
+						animation: "Walk",
+						eatAnimation: "Dig",
+						eatSound: "player/eat",
+						eatTime: 1.5,
+						mincooldownHours: 1,
+						maxcooldownHours: 4,
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						movespeed: 0.004,
+						animationSpeed: 2,
+						animation: "Walk",
+						preferredLightLevel: 20
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						priorityForCancel: 1.35,
+						minduration: 3200,
+						maxduration: 3200,
+						mincooldown: 6000,
+						maxcooldown: 20000,
+						animation: "Dig",
+						animationSpeed: 1.5
+					},
+					{
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			}, 
+		]
+	},
+	sounds: {
+		hurt: "creature/pig/hurt",
+		death: "creature/pig/hurt",
+		idle: "creature/pig/idle"
+	},
+	idleSoundChance: 0.01
+}

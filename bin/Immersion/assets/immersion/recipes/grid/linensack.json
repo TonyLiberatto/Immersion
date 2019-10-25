@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "T	L",
+	ingredients: {
+		"T": { type: "item", code: "sisal-twine" },
+		"L": { type: "block", code: "game:linen-normal-down" }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "item", code: "game:linensack"  }
+}

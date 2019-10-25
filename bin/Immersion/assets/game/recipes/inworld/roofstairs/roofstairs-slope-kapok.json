@@ -1,0 +1,86 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-kapok-bark-*-we",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-kapok-bark-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-kapok-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-kapok-bark-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-kapok-bark-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-kapok-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-kapok-debarked-*-we",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-kapok-debarked-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-kapok-debarked-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-cordage-thin-kapok-debarked-*-ns",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-kapok-debarked-ud",
+        "Type": "Item",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-kapok-debarked-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+]

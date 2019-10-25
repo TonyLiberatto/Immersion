@@ -1,0 +1,26 @@
+{
+    "code": "toolpin",
+    "variantgroups": [{"code": "metal", "states": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ]}],
+    "shape": { "base": "item/tool/toolpin" },
+    "texture": { "base": "item/tool/material/{metal}" },
+    "creativeinventory": { "general": ["*"], "items": ["*"], "neolithicitems": ["*"]},
+    "maxstacksize": 98,
+    "materialDensity": 100,
+    guiTransform: {
+		translation: { x: 2, y: 6, z: 0 },
+		rotation: { x: 153, y: 1, z: -32 },
+		origin: { x: 0.6, y: 0.1, z: 0.5 },
+		scale: 6
+	},
+    "fpHandTransform": {
+        "translation": { "x": 0.05, "y": 0.31, "z": 0 },
+        "rotation": { "x": 23,   "y": 90,   "z": 41 },
+        "origin": { "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 6
+    },
+    "tpHandTransform": {
+		"translation": { "x": -0.7, "y": -0.1, "z": -0.7 },
+        "origin": {  "x": 0.5, "y": 0, "z": 0.5 },
+        "scale": 0.73
+    }		
+}

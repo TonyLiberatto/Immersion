@@ -1,0 +1,14 @@
+ {
+	ingredientPattern: "ESR	FIS	RFI",
+	ingredients: {
+		"E": { type: "item", code: "offering-bowl-empty" },
+		"S": { type: "item", code: "game:bread-spelt", quantity: 32 },
+		"R": { type: "item", code: "game:bread-rye", quantity: 32 },
+		"F": { type: "item", code: "game:bread-flax", quantity: 32 },
+		"I": { type: "item", code: "game:bread-rice", quantity: 32 },
+	},
+	width: 3,
+	height: 3,
+	shapeless: true,
+	output: { type: "item", code: "offering-bowl-bread", quantity: 1  }
+} 

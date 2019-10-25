@@ -1,0 +1,65 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:spear-headshaft-andesite-kapok-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:spear-andesite-kapok-leatherstrips-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:spear-headshaft-andesite-kapok-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:byproducts-sinew",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:spear-andesite-kapok-sinew-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:spear-headshaft-andesite-kapok-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisal-twine",
+        "Type": "Item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:spear-andesite-kapok-sinew-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

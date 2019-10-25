@@ -1,0 +1,92 @@
+{
+	code: "totem-pig",
+	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "totems": ["*-north"] },
+	blockmaterial: "Wood",
+	variantgroups: [
+		{ code: "type", states: ["new", "bowl", "eyes", "tusk", ] },
+		{ loadFromProperties: "block/wood" },
+		{ code: "light", states: ["lit", "unlit" ] },
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
+	],
+	entityClass: "Transient",
+	attributes: {
+		convertFrom: "*-lit-*", 
+		convertTo: "*-unlit-*", 
+		inGameHours: "4.0",
+		handbook: {
+			groupBy: ["totem-pig-*"]
+		},
+	},
+	drawtype: "json",
+	behaviors: [
+		{name: "HorizontalOrientable"},		
+	],
+	shapebytype: {
+		"*-north": { base: "block/wood/totem/pig/{type}", rotateY: 0 },
+		"*-east": { base: "block/wood/totem/pig/{type}", rotateY: 270 },
+		"*-south": { base: "block/wood/totem/pig/{type}", rotateY: 180 },
+		"*-west": { base: "block/wood/totem/pig/{type}", rotateY: 90 }
+	},
+	textures: {
+		"wood": {base: "game:block/wood/debarked/{wood}"},
+		"bone": {base: "game:block/bone"},
+		"ceramic": {base: "game:block/clay/ceramic"},
+		"pig-eyes": {base: "block/pig-eyes"}
+		
+	},
+	particlePropertiesByType: { 
+		"*-lit-*": [
+					{
+				hsvaColor: [{ avg: 60, var: 30 }, { avg: 300, var: 0 }, { avg: 300, var: 0 },  { avg: 300, var: 0 }],
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.5 }, { avg: 0.5, var: 0.5 }, { avg: 0, var: 0.5 }],
+				velocity: [ { avg: 0.0, var: 0.02 }, { avg: 0.2, var: 0.1 }, { avg: 0, var: 0.1 }],
+				quantity: { avg: 0.07 },
+				size: { avg: 1, var: 0.5 },
+				glowLevel: 32,
+				sizeEvolve: { transform: "quadratic", factor: 1 },
+				selfPropelled: true,
+				lifeLength: { avg: 2 } 
+			},
+			{
+				hsvaColor: [{ avg: 160, var: 30 }, { avg: 300, var: 0 }, { avg: 300, var: 0 },  { avg: 300, var: 0 }],
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.5 }, { avg: 0.5, var: 0.5 }, { avg: 0, var: 0.5 }],
+				velocity: [ { avg: 0.0, var: 0.02 }, { avg: 0.2, var: 0.1 }, { avg: 0, var: 0.1 }],
+				quantity: { avg: 0.04 },
+				size: { avg: 1, var: 0.5 },
+				glowLevel: 32,
+				sizeEvolve: { transform: "quadratic", factor: 1 },
+				selfPropelled: true,
+				lifeLength: { avg: 2 } 
+			},
+			{
+				hsvaColor: [{ avg: 0, var: 30 }, { avg: 300, var: 0 }, { avg: 300, var: 0 },  { avg: 300, var: 0 }],
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.5 }, { avg: 0.5, var: 0.5 }, { avg: 0, var: 0.5 }],
+				velocity: [ { avg: 0.0, var: 0.02 }, { avg: 0.2, var: 0.1 }, { avg: 0, var: 0.1 }],
+				quantity: { avg: 0.04 },
+				size: { avg: 1, var: 0.5 },
+				glowLevel: 32,
+				sizeEvolve: { transform: "quadratic", factor: 1 },
+				selfPropelled: true,
+				lifeLength: { avg: 2 } 
+			},
+	] 
+	},
+	resistance: 0.1,
+	lightabsorption: 0,
+	sideopaque: {
+		all: false
+	},
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 24,
+	},
+	maxStackSize: 64,
+	materialDensity: 400
+}

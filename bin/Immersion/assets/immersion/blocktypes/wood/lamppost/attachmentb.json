@@ -1,0 +1,54 @@
+{
+	code: "attachment",
+	behaviors: [{
+		name: "LampConnectorBehavior",
+		properties: {
+			type: "extendable",
+		}
+	}],
+	variantgroups: [
+		{ code: "style", states: ["industrial", "railroad"] },
+		{ code: "dir", states: ["north", "south", "east", "west"] },
+		{ code: "type", states: ["short", "long"] }
+	],
+	creativeinventory: { "general": ["*-east-long"], "construction": ["*-east-long"], "neolithicdeco": ["*-east-long"] },
+	shapeByType: {
+		"*-north-*": { base: "block/post/{style}/attachment-{type}", rotateY: 0 },
+		"*-south-*": { base: "block/post/{style}/attachment-{type}", rotateY: 180 },
+		"*-east-*": { base: "block/post/{style}/attachment-{type}", rotateY: 270 },
+		"*-west-*": { base: "block/post/{style}/attachment-{type}", rotateY: 90 },
+	},
+	sidesolidByType: {
+		"*-north-*": { all: true, east: false, west: false },
+		"*-south-*": { all: true, east: false, west: false },
+		"*-east-*": { all: true, north: false, south: false },
+		"*-west-*": { all: true, north: false, south: false },
+	},
+	sideopaque: {all: false},
+	sideAo: {all: false},
+	blockmaterial: "Wood",
+	textures: {
+		all: { base: "block/wood/lamppost/middle" },
+	},
+	lightAbsorption: 99,
+	resistance: 3,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},
+	combustibleProps: {
+		burnTemperature: 800,
+		burnDuration: 10,
+	},
+	materialDensity: 600,
+	collisionSelectionBoxbytype: {
+		"*-north-short": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75, rotateY: 270},
+		"*-north-long": { x1: 0, y1: 0, z1: 0.25, x2: 1, y2: 1, z2:  0.75, rotateY: 270},
+		"*-east-short": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75, rotateY: 180},
+		"*-east-long": { x1: 0, y1: 0, z1: 0.25, x2: 1, y2: 1, z2:  0.75, rotateY: 180},
+		"*-south-short": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75, rotateY: 90},
+		"*-south-long": { x1: 0, y1: 0, z1: 0.25, x2: 1, y2: 1, z2:  0.75, rotateY: 90},
+		"*-west-short": { x1: 0, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2:  0.75},
+		"*-west-long": { x1: 0, y1: 0, z1: 0.25, x2: 1, y2: 1, z2:  0.75},
+	},
+}

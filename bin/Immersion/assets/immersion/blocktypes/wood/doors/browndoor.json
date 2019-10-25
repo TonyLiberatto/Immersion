@@ -1,0 +1,152 @@
+{
+	code: "browndoor",
+	class: "BlockDoor",
+	renderpass: "OpaqueNoCull",
+	heldTpIdleAnimation: "holdunderarm",
+	attributes: {
+		handbook: {
+			extraSections: [
+					{ title: "handbook-item-sources", text: "Place a Bamboo panel down on the ground, right click with 2 leatherstrips to create the bamboo door assemble, right click with another brown bamboo panel to complete the door, pick it up to have the door." }
+					]
+			
+		}
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	variantgroups: [
+		{ loadFromProperties: "abstract/horizontalorientation" },
+		{ code: "part", states: ["down", "up"] },
+		{ code: "state", states: ["closed", "opened"] },
+		{ code: "knobOrientation", states: ["left", "right"] }		
+	],
+	creativeinventory: { "general": ["browndoor-east-down-closed-left"], "decorative": ["browndoor-east-down-closed-left"] },
+	shapeinventory: { base: "block/wood/door/inventory" },
+	textures: {
+		bottom_left: { base: "block/wood/doors/bamboo-brown/bottom_left" },
+		bottom_right: { base: "block/wood/doors/bamboo-brown/bottom_right" },
+		top_left: { base: "block/wood/doors/bamboo-brown/top_left" },
+		top_right: { base: "block/wood/doors/bamboo-brown/top_right" },
+	},
+	shapebytype: {
+		"*-north-down-closed-left": { base: "block/wood/door/down_closed_left", rotateY: 90 },
+		"*-north-up-closed-left": { base: "block/wood/door/up_closed_left", rotateY: 90 },
+		"*-north-down-opened-left": { base: "block/wood/door/down_opened_left", rotateY: 90 },
+		"*-north-up-opened-left": { base: "block/wood/door/up_opened_left", rotateY: 90 },
+		
+		"*-east-down-closed-left": { base: "block/wood/door/down_closed_left", rotateY: 0 },
+		"*-east-up-closed-left": { base: "block/wood/door/up_closed_left", rotateY: 0 },
+		"*-east-down-opened-left": { base: "block/wood/door/down_opened_left", rotateY: 0 },
+		"*-east-up-opened-left": { base: "block/wood/door/up_opened_left", rotateY: 0 },
+		
+		"*-south-down-closed-left": { base: "block/wood/door/down_closed_left", rotateY: 270 },
+		"*-south-up-closed-left": { base: "block/wood/door/up_closed_left", rotateY:270 },
+		"*-south-down-opened-left": { base: "block/wood/door/down_opened_left", rotateY: 270 },
+		"*-south-up-opened-left": { base: "block/wood/door/up_opened_left", rotateY: 270 },
+		
+		"*-west-down-closed-left": { base: "block/wood/door/down_closed_left", rotateY: 180 },
+		"*-west-up-closed-left": { base: "block/wood/door/up_closed_left", rotateY: 180 },
+		"*-west-down-opened-left": { base: "block/wood/door/down_opened_left", rotateY: 180 },
+		"*-west-up-opened-left": { base: "block/wood/door/up_opened_left", rotateY: 180 },
+		
+		"*-north-down-closed-right": { base: "block/wood/door/down_closed_right", rotateY: 90 },
+		"*-north-up-closed-right": { base: "block/wood/door/up_closed_right", rotateY: 90 },
+		"*-north-down-opened-right": { base: "block/wood/door/down_opened_right", rotateY: 90 },
+		"*-north-up-opened-right": { base: "block/wood/door/up_opened_right", rotateY: 90 },
+		
+		"*-east-down-closed-right": { base: "block/wood/door/down_closed_right", rotateY: 0 },
+		"*-east-up-closed-right": { base: "block/wood/door/up_closed_right", rotateY: 0 },
+		"*-east-down-opened-right": { base: "block/wood/door/down_opened_right", rotateY: 0 },
+		"*-east-up-opened-right": { base: "block/wood/door/up_opened_right", rotateY: 0 },
+		
+		"*-south-down-closed-right": { base: "block/wood/door/down_closed_right", rotateY: 270 },
+		"*-south-up-closed-right": { base: "block/wood/door/up_closed_right", rotateY:270 },
+		"*-south-down-opened-right": { base: "block/wood/door/down_opened_right", rotateY: 270 },
+		"*-south-up-opened-right": { base: "block/wood/door/up_opened_right", rotateY: 270 },
+		
+		"*-west-down-closed-right": { base: "block/wood/door/down_closed_right", rotateY: 180 },
+		"*-west-up-closed-right": { base: "block/wood/door/up_closed_right", rotateY: 180 },
+		"*-west-down-opened-right": { base: "block/wood/door/down_opened_right", rotateY: 180 },
+		"*-west-up-opened-right": { base: "block/wood/door/up_opened_right", rotateY: 180 }
+		
+	},
+	blockmaterial: "Wood",
+	replaceable: 500,
+	resistance: 2.5,
+	lightAbsorption: 0,
+	guiTransform: {
+		origin: { x: 0.5, y: 1, z: 0.5 },
+		scale: 0.6
+	},
+	fphandtransform: {
+		scale: 0.6,
+		translation: { x: 1.5, y: -0.4, z: 0 },
+		rotation: {  x:0, y:45, z: 0}
+	},
+	tphandtransform: {
+		scale: 0.6,
+		translation: { x: 0, y: 0.2, z: 0 }
+	},
+	groundtransform: {
+		scale: 2,
+	},
+	selectionbox: { 
+		x1: 0, y1: 0, z1: 0.875, x2: 1, y2: 1, z2: 1,
+		rotateYByType: {
+			"*-north-*-opened-left": 90,
+			"*-north-*-closed-left": 0,
+			"*-west-*-opened-left": 180,
+			"*-west-*-closed-left": 90,
+
+			"*-east-*-opened-left": 0,
+			"*-east-*-closed-left": 270,
+			"*-south-*-opened-left": 270,
+			"*-south-*-closed-left": 180,
+
+			"*-north-*-opened-right": 270,
+			"*-north-*-closed-right": 0,
+			"*-west-*-opened-right": 0,
+			"*-west-*-closed-right": 90,
+
+			"*-east-*-opened-right": 180,
+			"*-east-*-closed-right": 270,
+			"*-south-*-opened-right": 90,
+			"*-south-*-closed-right": 180
+		}
+	},
+	collisionbox: { x1: 0, y1: 0, z1: 0.875, x2: 1, y2: 1, z2: 1,
+		rotateYByType: {
+			"*-north-*-opened-left": 90,
+			"*-north-*-closed-left": 0,
+			"*-west-*-opened-left": 180,
+			"*-west-*-closed-left": 90,
+
+			"*-east-*-opened-left": 0,
+			"*-east-*-closed-left": 270,
+			"*-south-*-opened-left": 270,
+			"*-south-*-closed-left": 180,
+
+			"*-north-*-opened-right": 270,
+			"*-north-*-closed-right": 0,
+			"*-west-*-opened-right": 0,
+			"*-west-*-closed-right": 90,
+
+			"*-east-*-opened-right": 180,
+			"*-east-*-closed-right": 270,
+			"*-south-*-opened-right": 90,
+			"*-south-*-closed-right": 180
+		}
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 25,
+	},
+	sounds: {
+		"place": "block/planks",
+		"walk": "walk/wood"
+	},
+	materialDensity: 600,
+}

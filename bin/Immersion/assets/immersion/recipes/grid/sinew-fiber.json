@@ -1,0 +1,11 @@
+{
+	ingredientPattern: "H	S",
+	ingredients: {
+		"H": { type: "item", code: "game:hammer-*", isTool: true  },
+		"S": { type: "item", code: "byproducts-sinew" , quantity:1, isTool: false}
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "byproducts-sinew-fibers", quantity: 2 }
+}

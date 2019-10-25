@@ -1,0 +1,182 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-copper",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-copper",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-copper-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-brass",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-brass",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-brass-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-blackbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-blackbronze",
+        "Type": "Block",	
+    },
+    "Makes": [{
+        "Code": "game:lantern-blackbronze-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-bismuth",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-bismuth",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-bismuth-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-tinbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-tinbronze",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-tinbronze-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-bismuthbronze",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-bismuthbronze",
+        "Type": "Block",	
+    },
+    "Makes": [{
+        "Code": "game:lantern-bismuthbronze-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-molybdochalkos",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-molybdochalkos",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-molybdochalkos-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-silver",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-silver",
+        "Type": "Block",		
+    },
+    "Makes": [{
+        "Code": "game:lantern-silver-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:lantern-base-candle-sides-glass-gold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:lantern-top-gold",
+        "Type": "Block",	
+    },
+    "Makes": [{
+        "Code": "game:lantern-gold-plain-up",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

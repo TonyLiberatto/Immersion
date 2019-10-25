@@ -1,0 +1,79 @@
+{
+	code: "adze",
+	class: "ItemAdze",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
+	],
+	tool: "chisel",
+	attributes: {
+		handbook: {
+			groupBy: ["adze-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	heldTpHitAnimation: "breaktool",
+	shapeByType: {
+		"*-bone-*": {base: "item/tool/bone-adze"},
+		"*": {base: "item/tool/branch-adze" },
+		
+	},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},
+		"*": {
+			"stone": { base: "game:item/tool/material/{stone}" },
+			"shaft": { base: "game:block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},		
+	},
+	durabilitybytype: 
+	{
+		"adze-granite-bone-*": 1000,
+		"adze-andesite-bone-*": 1000,
+		"adze-basalt-bone-*": 1000,
+		"adze-obsidian-bone-*": 1200,
+		"adze-flint-bone-*": 1100,
+		"adze-granite-*": 800,
+		"adze-andesite-*": 800,
+		"adze-basalt-*": 800,
+		"adze-obsidian-*": 1000,
+		"adze-flint-*": 900,
+	},
+	attackpowerbytype: 
+	{
+		"adze-granite-*": 0.75,
+		"adze-andesite*": 0.75,
+		"adze-basalt-*": 0.75,
+		"adze-obsidian-*": 1.5,
+		"adze-flint-*": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 5, z: 0 },
+		rotation: { x: -77, y: -135, z: 160 },
+		origin: { x: 0.54, y: 0.5, z: 0.48 },
+		scale: 2.6
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.75, y: -0.48, z: -0.52 },
+		rotation: { x: 90, y: 1, z: 0 },
+		scale: 1
+	}
+}

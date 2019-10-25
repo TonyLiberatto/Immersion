@@ -1,0 +1,162 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:roofstairs-slope-acacia-bark-north",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:rooframp-slope-acacia-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:rooframp-slope-acacia-bark-north",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-bark-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:roofstairs-slope-acacia-bark-south",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:rooframp-slope-acacia-bark-south",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:rooframp-slope-acacia-bark-south",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-bark-south",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:roofstairs-slope-acacia-bark-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:rooframp-slope-acacia-bark-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:rooframp-slope-acacia-bark-east",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-bark-east",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:roofstairs-slope-acacia-bark-west",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:rooframp-slope-acacia-bark-west",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:rooframp-slope-acacia-bark-west",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:roofstairs-slope-acacia-bark-west",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

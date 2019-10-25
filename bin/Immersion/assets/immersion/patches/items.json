@@ -1,0 +1,4 @@
+[
+	{ file: "game:itemtypes/resource/bamboostakes", op: "add", path: "/enabled",  value: false },
+	
+]

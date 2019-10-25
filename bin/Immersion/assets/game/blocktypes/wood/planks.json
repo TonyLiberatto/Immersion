@@ -1,0 +1,47 @@
+{
+    "code": "planks",
+    "variantgroups": [ { "code": "wood", "states": [ "aged" ], "loadFromProperties": "block/wood" } ],
+    "creativeinventory": { "general": [  "*" ], "construction": ["*"] },
+    "shape": {
+        "base": "block/basic/cube"
+    },
+    "blockmaterial": "Wood",
+    "drawtype": "cube",
+    "textures": {
+        "all": {
+            "base": "block/wood/planks/{wood}*"
+        }
+    },
+	"drops": [
+		{ type: "block", code: "planks-{wood}", quantity: { avg: 1 }, tool:"axe"  },
+		{ type: "block", code: "immersion:panel-{wood}-planks-down", quantity: { avg: 8 }, tool:"saw"  },		
+	],
+    "resistance": 3.5,
+    "sounds": {
+        "hit": "block/planks",
+        "break": "block/planks",
+        "place": "block/planks",
+        "walk": "walk/wood"
+    },
+    "combustibleProps": {
+        "burnTemperature": 800,
+        "burnDuration": 20
+    },
+    "maxStackSize": 32,
+    "materialDensity": 600,
+    "heldTpIdleAnimation": "holdbothhandslarge",
+    "heldTpUseAnimation": "twohandplaceblock",
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.2,
+            "y": -1.1,
+            "z": -0.8
+        },
+        "rotation": {
+            "x": -2,
+            "y": 25,
+            "z": -78
+        },
+        "scale": 0.37
+    }
+}

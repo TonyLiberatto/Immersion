@@ -1,0 +1,14 @@
+{
+	"type": "code",
+	"name": "Immersion",
+	"modid": "immersion",
+	"description" : " This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
+	"website": "https://github.com/TonyLiberatto/The-Neolithic-Mod",
+	"authors": [ "Tony Liberatto","Novocain","Balduranne","BunnyViking" ],
+	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl", "MarcAFK", "Demmon1"],
+	"version": "1.0.0",
+	"dependencies": {
+	"carrycapacity": "0.4.5",
+		"game": "1.10.8"
+	}
+}

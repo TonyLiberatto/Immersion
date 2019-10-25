@@ -1,0 +1,9 @@
+{
+	ingredientPattern: "S_,SS",
+	ingredients: {
+		"S": { type: "item", code: "shingle-burned-*", name: "color", allowedVariants: ["blue", "fire", "red", "brown"] }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "stair-side-shingle-{color}-up-north", quantity: 2  }
+}

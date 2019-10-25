@@ -1,0 +1,145 @@
+[
+	{
+		ingredientPattern: "SBS	_L_",
+		ingredients: {
+			"L": { type: "block", code: "linen-normal-down" },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-blue-honey",
+				returnedStack: { type: "block", code: "bowl-blue-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-linen-honey-sulfur", quantity: 4  }
+	},
+	{
+		ingredientPattern: "SBS	_L_",
+		ingredients: {
+			"L": { type: "block", code: "linen-normal-down" },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-fire-honey",
+				returnedStack: { type: "block", code: "bowl-fire-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-linen-honey-sulfur", quantity: 4  }
+	},
+	{
+		ingredientPattern: "SBS	_L_",
+		ingredients: {
+			"L": { type: "block", code: "linen-normal-down" },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-red-honey",
+				returnedStack: { type: "block", code: "bowl-red-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-linen-honey-sulfur", quantity: 4  }
+	},
+	{
+		ingredientPattern: "SBS	_L_",
+		ingredients: {
+			"L": { type: "block", code: "linen-normal-down" },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-brown-honey",
+				returnedStack: { type: "block", code: "bowl-brown-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-linen-honey-sulfur", quantity: 4  }
+	},
+	
+	{
+		ingredientPattern: "H	L",
+		ingredients: {
+			"L": { type: "block", code: "linen-normal-down" },
+			"H": { type: "block", code: "flower-horsetail", quantity: 4 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "poultice-linen-horsetail", quantity: 4  }
+	},
+	
+	{
+		ingredientPattern: "H	C",
+		ingredients: {
+			"C": { type: "item", code: "cattailtops", quantity: 2 },
+			"H": { type: "block", code: "flower-horsetail", quantity: 4 }
+		},
+		width: 1,
+		height: 2,
+		output: { type: "item", code: "poultice-reed-horsetail", quantity: 4  }
+	},
+	
+	{
+		ingredientPattern: "SBS	_C_",
+		ingredients: {
+			"C": { type: "item", code: "cattailtops", quantity: 2 },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-blue-honey", 
+				returnedStack: { type: "block", code: "bowl-blue-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-reed-honey-sulfur", quantity: 4  }
+	},
+{
+		ingredientPattern: "SBS	_C_",
+		ingredients: {
+			"C": { type: "item", code: "cattailtops", quantity: 2 },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-fire-honey", 
+				returnedStack: { type: "block", code: "bowl-fire-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-reed-honey-sulfur", quantity: 4  }
+	},	
+{
+		ingredientPattern: "SBS	_C_",
+		ingredients: {
+			"C": { type: "item", code: "cattailtops", quantity: 2 },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-red-honey", 
+				returnedStack: { type: "block", code: "bowl-red-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-reed-honey-sulfur", quantity: 4  }
+	},	
+{
+		ingredientPattern: "SBS	_C_",
+		ingredients: {
+			"C": { type: "item", code: "cattailtops", quantity: 2 },
+			"S": { type: "item", code: "ore-sulfur" },
+			"B": {
+				type: "block", 
+				code:  "bowl-brown-honey", 
+				returnedStack: { type: "block", code: "bowl-brown-burned" }
+			}
+		},
+		width: 3,
+		height: 2,
+		output: { type: "item", code: "poultice-reed-honey-sulfur", quantity: 4  }
+	},		
+]

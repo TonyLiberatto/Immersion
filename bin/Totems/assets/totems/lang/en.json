@@ -1,0 +1,100 @@
+﻿{
+	"game:tabname-totems": "Totems",
+	
+	
+	"block-totem-pig-crucible-birch-*": "Totem Pig Crucible Birch",
+	"block-totem-pig-crucible-oak-*": "Totem Pig Crucible Oak",
+	"block-totem-pig-crucible-maple-*": "Totem Pig Crucible Maple",
+	"block-totem-pig-crucible-pine-*": "Totem Pig Crucible Pine",
+	"block-totem-pig-crucible-acacia-*": "Totem Pig Crucible Acacia",
+	"block-totem-pig-crucible-kapok-*": "Totem Pig Crucible Kapok",
+	
+	"block-totem-pig-new-acacia-lit-*": "Lit New Acacia Pig Totem",
+	"block-totem-pig-bowl-acacia-lit-*": "Lit Acacia Pig Totem with bowl",
+	"block-totem-pig-tusk-acacia-lit-*": "Lit Acacia Pig Totem with Tusks",
+	"block-totem-pig-eyes-acacia-lit-*": "Lit Acacia Pig Totem with Eyes",
+	
+	"block-totem-pig-new-acacia-unlit-*": "Unlit New Acacia Pig Totem",
+	"block-totem-pig-bowl-acacia-unlit-*": "Unlit Acacia Pig Totem with bowl",
+	"block-totem-pig-tusk-acacia-unlit-*": "Unlit Acacia Pig Totem with Tusks",
+	"block-totem-pig-eyes-acacia-unlit-*": "Unlit Acacia Pig Totem with Eyes",
+	"block-totem-pig-crucible-acacia-*": "Finished Acacia Pig Totem with Crucible",
+	
+	"block-totem-pig-new-birch-lit-*": "New Lit Birch Pig Totem",
+	"block-totem-pig-bowl-birch-lit-*": "Lit Birch Pig Totem with bowl",
+	"block-totem-pig-tusk-birch-lit-*": "Lit Birch Pig Totem with Tusks",
+	"block-totem-pig-eyes-birch-lit-*": "Lit Birch Pig Totem with Eyes",
+	
+	"block-totem-pig-new-birch-unlit-*": "New Unlit Birch Pig Totem",
+	"block-totem-pig-bowl-birch-unlit-*": "Unlit Birch Pig Totem with bowl",
+	"block-totem-pig-tusk-birch-unlit-*": "Unlit Birch Pig Totem with Tusks",
+	"block-totem-pig-eyes-birch-unlit-*": "Unlit Birch Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-birch-*": "Finished Birch Pig Totem with Crucible",
+	
+	"block-totem-pig-new-kapok-lit-*": "New Lit Kapok Pig Totem",
+	"block-totem-pig-bowl-kapok-lit-*": "Lit Kapok Pig Totem with bowl",
+	"block-totem-pig-tusk-kapok-lit-*": "Lit Kapok Pig Totem with Tusks",
+	"block-totem-pig-eyes-kapok-lit-*": "Lit Kapok Pig Totem with Eyes",
+	
+	"block-totem-pig-new-kapok-unlit-*": "New Unlit Kapok Pig Totem",
+	"block-totem-pig-bowl-kapok-unlit-*": "Unlit Kapok Pig Totem with bowl",
+	"block-totem-pig-tusk-kapok-unlit-*": "Unlit Kapok Pig Totem with Tusks",
+	"block-totem-pig-eyes-kapok-unlit-*": "Unlit Kapok Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-kapok-*": "Finished Kapok Pig Totem with Crucible",
+	
+	"block-totem-pig-new-maple-lit-*": "New Lit Maple Pig Totem",
+	"block-totem-pig-bowl-maple-lit-*": "Lit Maple Pig Totem with bowl",
+	"block-totem-pig-tusk-maple-lit-*": "Lit Maple Pig Totem with Tusks",
+	"block-totem-pig-eyes-maple-lit-*": "Lit Maple Pig Totem with Eyes",
+	
+	"block-totem-pig-new-maple-unlit-*": "New Unlit Maple Pig Totem",
+	"block-totem-pig-bowl-maple-unlit-*": "Unlit Maple Pig Totem with bowl",
+	"block-totem-pig-tusk-maple-unlit-*": "Unlit Maple Pig Totem with Tusks",
+	"block-totem-pig-eyes-maple-unlit-*": "Unlit Maple Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-maple-*": "Finished Maple Pig Totem with Crucible",
+	
+	"block-totem-pig-new-oak-lit-*": "New Lit Oak Pig Totem",
+	"block-totem-pig-bowl-oak-lit-*": "lit Oak Pig Totem with bowl",
+	"block-totem-pig-tusk-oak-lit-*": "Lit Oak Pig Totem with Tusks",
+	"block-totem-pig-eyes-oak-lit-*": "Lit Oak Pig Totem with Eyes",
+	
+	"block-totem-pig-new-oak-unlit-*": "New Unlit Oak Pig Totem",
+	"block-totem-pig-bowl-oak-unlit-*": "Unlit Oak Pig Totem with bowl",
+	"block-totem-pig-tusk-oak-unlit-*": "Unlit Oak Pig Totem with Tusks",
+	"block-totem-pig-eyes-oak-unlit-*": "Unlit Oak Pig Totem with Eyes",
+	
+	"block-totem-pig-crucible-oak-*": "Finished Oak Pig Totem with Crucible",
+	
+	"block-totem-pig-new-pine-lit-*": "New Lit Pine Pig Totem",
+	"block-totem-pig-bowl-pine-lit-*": "lit Acacia Pine Totem with bowl",
+	"block-totem-pig-tusk-pine-lit-*": "Lit Acacia Pine Totem with Tusks",
+	"block-totem-pig-eyes-pine-lit-*": "Lit Acacia Pine Totem with Eyes",
+	
+	"block-totem-pig-new-pine-unlit-*": "New Unlit Pine Pig Totem",
+	"block-totem-pig-bowl-pine-unlit-*": "Unlit Acacia Pine Totem with bowl",
+	"block-totem-pig-tusk-pine-unlit-*": "Unlit Acacia Pine Totem with Tusks",
+	"block-totem-pig-eyes-pine-unlit-*": "Unlit Acacia Pine Totem with Eyes",
+	
+	"block-totem-pig-crucible-pine-*": "Finished Pine Pig Totem with Crucible",
+	
+	"blockdesc-totem-pig-new-*": "Right click with a fruit offering bowl for next step - Totems Cannot be moved",
+	"blockdesc-totem-pig-bowl-*": "Right click with a vegetable offering bowl for next step- Totems Cannot be moved",
+	"blockdesc-totem-pig-tusk-*": "Right click with a meat offering bowl for next step- Totems Cannot be moved",
+	"blockdesc-totem-pig-eyes-*": "Right click with a bread offering bowl for next step- Totems Cannot be moved",
+	"blockdesc-totem-pig-crucible-*": "Right click with clay in your hand to make crucibles- Totems Cannot be moved",
+	
+	"item-offering-bowl-bread": "Bread Offering Bowl ",
+	"item-offering-bowl-fruit": "Fruit Offering Bowl",
+	"item-offering-bowl-vegetable": "Vegetable Offering Bowl ",
+	"item-offering-bowl-meat": "Meat Offering Bowl",
+	"item-offering-bowl-empty": "Empty Offering Bowl",
+	
+	"itemdesc-offering-bowl-empty": "Fill with Food",
+	"itemdesc-offering-bowl-bread": "use with Pig Totem Eyes ",
+	"itemdesc-offering-bowl-fruit": "use with New Pig Totem  ",
+	"itemdesc-offering-bowl-vegetable": "use with Pig Totem Bowl ",
+	"itemdesc-offering-bowl-meat": "use with Pig Totem Tusk ",
+	}

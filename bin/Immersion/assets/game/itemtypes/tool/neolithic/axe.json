@@ -1,0 +1,115 @@
+{
+	code: "axe",
+	class: "ItemAxe",
+	variantgroups: [
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint", "peridotite"] },		
+		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },
+		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
+	],
+	tool: "axe",
+	attributes: {
+		handbook: {
+			groupBy: ["axe-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+			]
+		}
+	},
+	heldTpHitAnimation: "axechop",	
+	damagedby: ["blockbreaking", "attacking"],
+	shapeByType: {
+		"*-bone-*": {base: "item/tool/bone-axe"},
+		"*": {base: "item/tool/branch-axe" },
+	},
+	texturesByType: {
+		"*-bone-*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/bone" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},
+		"*": {
+			"stone": { base: "item/tool/material/{stone}" },
+			"shaft": { base: "block/wood/debarked/{shaft}" },
+			"cordage": { base: "block/cordage/{cordage}" },
+		},		
+	},
+	attackRange: 2,
+	miningtier: 1,
+	miningspeedbytype: {
+		"axe-granite-*": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-andesite-*": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-peridotite-*": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-basalt-*": {
+			"wood": 3.3,
+			"plant": 2.2,
+			"leaves": 1.7
+		},
+		"axe-obsidian-*": {
+			"wood": 4,
+			"plant": 2.7,
+			"leaves": 2.4
+		},
+		"axe-flint-*": {
+			"wood": 3,
+			"plant": 2.2,
+			"leaves": 1.6
+		},
+	},
+	durabilitybytype: {
+		"axe-granite-bone-*": 200,
+		"axe-andesite-bone-*": 200,
+		"axe-peridotite-bone-*": 200,
+		"axe-basalt-bone-*": 200,
+		"axe-obsidian-bone-*": 250,
+		"axe-flint-bone-*": 220,
+		"axe-granite-*": 150,
+		"axe-andesite-*": 150,
+		"axe-basalt-*": 150,
+		"axe-obsidian-*": 200,
+		"axe-flint-*": 180,
+	},
+	attackpowerbytype: {
+		"axe-granite-*": 0.75,
+		"axe-andesite-*": 0.75,
+		"axe-peridotite-*": 0.75,
+		"axe-basalt-*": 0.75,
+		"axe-obsidian-*": 1.5,
+		"axe-flint-*": 1.25,
+
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -56, y: -127, z: -180 },
+		origin: { x: 0.6, y: 0.45, z: 0.5 },
+		scale: 2.1
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.45, z: 0.5 },
+		scale: 3.6
+	},
+	tpHandTransform: {
+		translation: { x: -0.75, y: -0.5, z: -0.55 },
+		rotation: { x: 90, y: 0, z: -10 },
+		scale: 1
+	}
+}

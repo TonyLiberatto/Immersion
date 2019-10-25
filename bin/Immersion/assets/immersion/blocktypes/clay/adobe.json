@@ -1,0 +1,25 @@
+{
+  code: "adobe",
+  shape: { base: "game:block/basic/cube" },
+  drawtype: "Cube",
+  blockmaterial: "Soil",
+  creativeinventory: {
+    "general": [ "*" ],
+    "construction": [ "*" ],
+    "neolithicdeco": [ "*" ]
+  },
+  replaceable: 400,
+  resistance: 1.5,
+  textures: {
+    verticals: { base: "block/clay/adobe/adobe*" },
+    horizontals: {
+      base: "block/clay/adobe/adobe*",
+    },
+
+  },
+  sounds: {
+    place: "game:block/dirt",
+    break: "game:block/dirt",
+    walk: "game:walk/grass"
+  }
+}

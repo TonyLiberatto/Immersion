@@ -1,0 +1,17 @@
+	{
+		ingredient: { type: "item", code: "stone-obsidian" },
+		pattern: [
+			"#_#___#_#_",
+			"#_#___#_#_",
+			"#_#___#_#_",
+			"___#_#____",
+			"___#_#____",
+			"___#_#____",
+			"#_#___#_#_",
+			"#_#___#_#_",
+			"#_#___#_#_",
+			"__________"
+		],
+		name: "Obsidian flakes",
+		output: { type: "block", code: "sword-flakes-obsidian-north" }
+	}	

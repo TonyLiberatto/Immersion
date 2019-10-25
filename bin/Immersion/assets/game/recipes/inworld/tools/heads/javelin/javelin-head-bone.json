@@ -1,0 +1,44 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:javelin-head-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:bamboostakes-brown",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:javelin-headshaft-bamboo-brown-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:javelin-head-*",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:bamboostakes-green",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "game:javelin-headshaft-bamboo-green-north",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

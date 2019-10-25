@@ -1,0 +1,29 @@
+[
+{
+	ingredientPattern: "SSS,SSS,SSS",
+	ingredients: {
+		"S": { type: "item", code: "sisal-twine", name: "Sisal Twine"   }
+	},
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "sisalrug-small-ground-east", quantity: 1  }
+},
+{
+	ingredientPattern: "R,R",
+	ingredients: {
+		"R": { type: "block", code: "sisalrug-small-ground-east"  }
+	},
+	width: 1,
+	height: 2,
+	output: { type: "block", code: "sisalrug-medium-ground-east", quantity: 1  }
+},
+{
+	ingredientPattern: "RR,RR",
+	ingredients: {
+		"R": { type: "block", code: "sisalrug-small-ground-east"  }
+	},
+	width: 2,
+	height: 2,
+	output: { type: "block", code: "sisalrug-large-ground-east", quantity: 1  }
+},
+]

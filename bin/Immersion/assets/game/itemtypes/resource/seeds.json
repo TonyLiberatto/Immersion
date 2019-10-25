@@ -1,0 +1,25 @@
+{
+	code: "seeds",
+	class: "ItemPlantableSeed",
+	maxstacksize: 64,
+	attributesByType: {		
+		"*-pumpkin": {			
+			handbook:{ 				
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Place a pumpkin down on the ground, break with a knife to get 4 slices of pumpkin and 2 seeds." }
+					]
+
+		},
+		},		
+	},
+	variantgroups: [
+		{ code: "type", states: [ "carrot", "flax", "onion", "spelt", "turnip", "parsnip", "rice", "rye", "soybean", "cabbage", "pumpkin" ] },
+	],
+	texture: { base: "item/resource/seeds/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 180, y: 90, z: 13 }
+	},
+	materialDensity: 450,
+}

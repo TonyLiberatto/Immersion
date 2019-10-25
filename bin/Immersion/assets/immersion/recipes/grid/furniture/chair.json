@@ -1,0 +1,10 @@
+{
+	ingredientPattern: "WLW	W_W",
+	ingredients: {
+		"W": { type: "block", code: "game:planks-*", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok" ], name: "wood" },
+		"L": { type: "block", code: "game:linen-*-down" }
+	},
+	width: 3,
+	height: 2,
+	output: { type: "block", code: "neolithicmod:chair-{wood}"}
+}

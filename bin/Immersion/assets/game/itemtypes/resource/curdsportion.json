@@ -1,0 +1,21 @@
+{
+	code: "curdsportion",
+	class: "ItemLiquidPortion",
+	matterState: "liquid",
+	attributes: {
+		waterTightContainerProps: {
+			containable: true,
+			itemsPerLitre: 4,
+			blockTextureSource: "woodbucket",
+			allowSpill: false,
+			whenSpilled: { 
+				action: "DropContents",
+				stack: { type: "item", code: "curdsportion" } 
+			}
+		}
+	},
+	texture: { base: "item/resource/curdsportion" },
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	maxstacksize: 16,
+	materialDensity: 200
+}

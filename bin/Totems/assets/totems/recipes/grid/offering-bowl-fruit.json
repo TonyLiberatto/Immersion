@@ -1,0 +1,15 @@
+{
+	ingredientPattern: "EBC,RWD",
+	ingredients: {
+		"E": { type: "item", code: "offering-bowl-empty" },
+		"B": { type: "item", code: "game:fruit-blueberry", quantity: 64 },
+		"C": { type: "item", code: "game:fruit-cranberry", quantity: 64 },
+		"R": { type: "item", code: "game:fruit-redcurrant", quantity: 64 },
+		"W": { type: "item", code: "game:fruit-whitecurrant", quantity: 64 },
+		"D": { type: "item", code: "game:fruit-blackcurrant", quantity: 64 },
+	},
+	width: 3,
+	height: 2,
+	shapeless: true,
+	output: { type: "item", code: "offering-bowl-fruit", quantity: 1  }
+} 

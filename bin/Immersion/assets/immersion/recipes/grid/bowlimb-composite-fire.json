@@ -1,0 +1,16 @@
+{
+	ingredientPattern: "G__	HWS",
+	ingredients: {
+		"G": {
+			type: "block",
+			code: "game:bowl-fire-glue",quantity:1,
+			returnedStack: { type: "block", code: "game:bowl-fire-burned" }
+			},
+		"H": { type: "item", code: "neolithicmod:byproducts-hornslab",quantity:1 },
+		"W": { type: "item", code: "neolithicmod:bowlimb-carved",quantity:1 },
+		"S": { type: "item", code: "neolithicmod:byproducts-sinew",quantity:1 },
+	},
+	width: 3,
+	height: 2,
+	output: { type: "item", code: "neolithicmod:bowlimb-composite", quantity: 1  }
+}

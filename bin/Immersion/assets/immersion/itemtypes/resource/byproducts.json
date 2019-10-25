@@ -1,0 +1,9 @@
+{
+	code: "byproducts",
+	maxstacksize: 64,
+	variantgroups: [
+		{ code: "type", states: [ "sinew", "sinew-fibers", "sinew-thread", "bowstring", "hornslab" ] },
+	],
+	texture: { base: "item/resource/byproducts/{type}" },
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+}

@@ -1,0 +1,60 @@
+{
+	code: "knife",
+	damagedby: ["blockbreaking", "attacking"],
+	tool: "knife",
+	attributes: {
+		handbook: {
+			groupBy: ["knife-hand-*"]
+		}
+	},
+	variantgroups: [
+		{code: "type", states: ["hand"]},
+		{ code: "stone", states: ["granite", "andesite", "basalt", "obsidian", "flint","peridotite" ] },
+	],
+	shape: { base: "item/tool/hand-knife" },
+	heldTpHitAnimation: "breaktool",
+	textures: {
+		"stone": { base: "item/tool/material/{stone}" },
+	},
+
+	durabilitybytype: 
+	{
+		"knife-hand-granite": 60,
+		"knife-hand-andesite": 60,
+		"knife-hand-peridotite": 60,
+		"knife-hand-basalt": 60,
+		"knife-hand-obsidian": 100,
+		"knife-hand-flint": 80,
+	},
+	attackpowerbytype: 
+	{
+		"knife-hand-granite": 0.75,
+		"knife-hand-andesite": 0.75,
+		"knife-hand-peridotite": 0.75,
+		"knife-hand-basalt": 0.75,
+		"knife-hand-obsidian": 1.50,
+		"knife-hand-flint": 1,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	fpHandTransform: {
+		translation: { x: -0.1, y: 0.2, z: 0.4 },
+		rotation: { x: -20, y: -93, z: -75 },
+		scale: 2.5
+	},
+	guiTransform: {
+		translation: { x: 0, y: -1, z: 0 },
+		rotation: { x: -157, y: 180, z: -46 },
+		origin: { x: 0.59, y: 0.535, z: 0.5 },
+		scale: 2.7
+	},
+	groundTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		scale: 2.5
+	},
+	tpHandTransform: {
+		translation: { x: -0.78, y: -0.44, z: -0.5 },
+		rotation: { x: 0, y: 180, z: -10 },
+		scale: 1
+	}
+}

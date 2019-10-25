@@ -1,0 +1,102 @@
+{
+	code: "leavesbranchy",
+	class: "BlockLeaves",
+	behaviorsByType: {
+		"*-grown-*": [{name: "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}}]
+	},
+	attributes: {
+		handbook: {
+			groupBy: ["leavesbranchy-*"]
+		},
+	},
+	variantgroups: [
+		{ code: "type", states: ["grown", "placed"] },
+		{ loadFromProperties: "block/wood" }
+	],
+	creativeinventory: { "general": ["leavesbranchy-placed-*"], "flora": ["leavesbranchy-placed-*"] },
+	shape: { base: "block/basic/leavesbranchy" },
+	renderpass: "OpaqueNoCull",
+	faceCullMode: "CollapseMaterial",
+	blockmaterial: "Leaves",
+	requiredMiningTier: 1,
+	vertexFlags: {
+		zOffset: 3
+	},
+	attributesByType: {
+		"leavesbranchy-grown-*": {
+			canDecay: true
+		}
+	},
+	textures: {
+		leaves: { base: "block/wood/leaves/{wood}*" },
+		branch: { base: "block/wood/leaves/branch" }
+	},
+	sideopaque: {
+		all: false
+	},
+	replaceable: 3000,
+	lightAbsorption: 1,
+	resistance: 0.9,
+	snowCoverage: true,
+	drops: [
+		{
+			type: "block",
+			code: "sapling-{wood}",
+			quantityByType: {
+				"*-acacia": { avg: 0.1, var: 0 },
+				"*": { avg: 0.05, var: 0 }
+			}
+		},
+		{
+			type: "item",
+			code: "stick",
+			quantity: { avg: 1, var: 0 },
+		},
+		{ 
+			type: "block", 
+			code: "immersion:branch-very-thin-{wood}-bark-ud",
+			quantityByType: {
+				"*-acacia": { avg:2, var: 1 },
+				"*": { avg: 2, var: 1 },
+			}
+		},
+		{ 
+			type: "block", 
+			code: "immersion:branch-thin-{wood}-bark-ud",
+			quantityByType: {
+				"*-acacia": { avg: 4, var: 2 },
+				"*": { avg: 4, var: 2 },
+			}
+		},{ 
+			type: "block", 
+			code: "immersion:branch-medium-{wood}-bark-ud",
+			quantityByType: {
+				"*-acacia": { avg: 3, var:1 },
+				"*": { avg: 3, var: 1 },
+			}
+		},{ 
+			type: "block", 
+			code: "immersion:branch-thick-{wood}-bark-ud",
+			quantityByType: {
+				"*-acacia": { avg: 1, var: 0.5},
+				"*": { avg: 1, var: 0.5 },
+			}
+		},
+	],
+	sounds: {
+		break: "block/plant",
+		place: "block/plant",
+		walk: "walk/grass"
+	},
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
+	materialDensity: 400,
+	heldTpIdleAnimation: "holdbothhandslarge",
+	tpHandTransform: {
+		translation: { x: -1.2, y: -1.1, z: -0.8 },
+		rotation: { x: -2, y: 25, z: -78 },
+		scale: 0.37
+	}
+}

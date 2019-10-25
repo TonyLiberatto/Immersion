@@ -1,0 +1,13 @@
+{
+	ingredientPattern: "BCF",
+	ingredients: {
+		"B": { type: "item", code: "game:blastingpowder", quantity: 4 },
+		"C": { type: "item", code: "sisal-twine" },
+		"F": { type: "block", code: "game:linen-normal-down" },
+	},
+	name: "oreblastingbomb",
+	width: 3,
+	height: 1,
+	shapeless: true,
+	output: { type: "block", code: "game:oreblastingbomb", quantity: 10  }
+}

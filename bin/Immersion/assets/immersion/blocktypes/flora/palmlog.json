@@ -1,0 +1,78 @@
+﻿{
+  code: "palmlog",
+  class: "BlockPalmTree",
+  entityClassByType: {
+    "*": null,
+    "*-tip": "PalmTree",
+  },
+  behaviorsByType: {
+    "*-grown": [
+      {
+        name: "PushEventOnBlockBroken",
+        properties: { eventName: "testForDecay" }
+      }
+    ],
+  },
+  attributesByType: {
+    "*-grown": {
+      preventsDecay: true
+    }
+  },
+  variantgroups: [
+    {
+      code: "segment",
+      states: [ "bottom", "middle", "top", "tip" ]
+    },
+    {
+      code: "type",
+      states: [ "grown", "placed" ]
+    },
+  ],
+  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "neolithicflora": [ "" ]  },
+  randomDrawOffset: false,
+  shape: { base: "block/flora/palm/{segment}" },
+  textures: {
+    palm_top: { base: "block/flora/palm/top" },
+    palm_trunk: { base: "block/flora/palm/trunk" },
+    palm_tip: { base: "block/flora/palm/tip" },
+  },
+  blockmaterial: "Wood",
+  sideopaque: {
+    all: false
+  },
+  sidesolid: {
+    all: false
+  },
+  replaceable: 500,
+  resistance: 4.5,
+  sounds: {
+    "place": "game:block/planks",
+    "walk": "game:walk/wood",
+    "hit": "game:block/planks",
+    "break": "game:block/planks",
+    byTool: {
+      "Axe": {
+        hit: "game:block/chop",
+        break: "game:block/planks"
+      }
+    }
+  },
+  drops: [
+    {
+      type: "block",
+      code: "palmlog-bottom-placed",
+      quantity: { avg: 1 }
+    }
+  ],
+  combustiblePropsByType: {
+    "*": {
+      burnTemperature: 800,
+      burnDuration: 78,
+    },
+  },
+  lightAbsorption: 0,
+  maxStackSize: 16,
+  materialDensity: 700,
+  rainPermeable: true,
+  materialDensity: 200
+}
