@@ -71,7 +71,9 @@ namespace Immersion
             {
                 if (Api?.World?.Side.IsClient() ?? false)
                 {
-                    ICoreClientAPI capi = Api as ICoreClientAPI;
+                    ICoreClientAPI capi = (ICoreClientAPI)Api;
+                    if (inventory == null || inventory[0]?.Itemstack?.StackSize == null || inventory[0]?.Itemstack?.Collectible?.MaxStackSize == null) return;
+
                     float? translateY = (((float?)inventory[0].Itemstack?.StackSize / inventory[0].Itemstack?.Collectible?.MaxStackSize) * 0.35f) + 0.01f;
                     float y = translateY ?? 0;
 
