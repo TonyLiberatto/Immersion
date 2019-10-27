@@ -15,6 +15,17 @@
   "craftinginfo-toolmaking-title": "Neolithic Tool Making",
   "craftinginfo-toolmaking-text": "<strong>toolmaking</strong><br><br>Neolithic Tool Making 101. Only here on The Neolithic Mod.<br><br>In the neolithic mod, hafted <a href=\"handbook://item-flint0\">flint</a> or stone (e.g. <a href=\"handbook://item-stone-granite0\">granite</a>) tools are fully created outside your crafting grid. You will create them step by step on a workspace block in front of you. You will need a flint tool/weapon head, a shaft, and binding material to attach the tool or weapon head to the shaft. The first step is to create the tool head using the <a href=\"handbook://craftinginfo-knapping\">knapping interface</a>.  If you wish to make a tool or weapon using a head that you prepared ahead of time, or you found by panning, Shift (Sneak) + Right click will allow you to place the flint head and create a workspace. Once the head is made or placed, it will remain on the block where you knapped or placed it, which will become your workspace. Next, you will need to add a shaft, either debarked very thin branch or large bone. Right click the workspace to add the shaft to your knapped flint or stone head.  The last step is to secure the shaft to the tool/weapon head using <a href=\"handbook://immersion:item-sisal-twine\">sisal twine</a>, sinew or leather strips. Right click the workspace to add the binding and complete your tool. The completed tool will stay on the workspace block until you Left click (break) and pick it up.<br><br>Congratulations! You are now a master Tool Maker \\o/<br>",
   
+  "block-ingotstampmold-blue-raw": "Blue Raw Ingot Stamp Mold",
+  "block-ingotstampmold-brown-raw": "Brown Raw Ingot Stamp Mold",
+  "block-ingotstampmold-fire-raw": "Fire Raw Ingot Stamp Mold",
+  "block-ingotstampmold-red-raw": "Red Raw Ingot Stamp Mold",
+  
+  "block-ingotstampmold-blue-burned": "Blue Ingot Stamp Mold",
+  "block-ingotstampmold-brown-burned": "Brown Ingot Stamp Mold",
+  "block-ingotstampmold-fire-burned": "Fire Ingot Stamp Mold",
+  "block-ingotstampmold-red-burned": "red Ingot Stamp Mold",
+  "blockdesc-ingotstampmold-*-burned": "Pour melted copper or bronze to make a ingot stamper",
+  
   "block-pumpkin-fruit-*": "Growing pumpkin",
   "blockdesc-pumpkin-fruit-*": "Not ready for harvesting",
   "block-pumpkin-fruit-4": "Mature pumpkin",
@@ -2256,6 +2267,8 @@
 	"block-ingotstamp-bismuthbronze": "Ingotstamp (Bismuthbronze)",
 	"block-ingotstamp-blackbronze": "Ingotstamp (Blackbronze)",
 	"block-ingotstamp-copper": "Ingotstamp (Copper)",
+	"blockdesc-ingotstamp-*": "Sneak Right Click with clay in hand to make ingot molds",
+	
 	"block-stair-side-cobble-andesite-up-north": "Cobblestone Stairs (Andesite)",
 	"block-stair-side-cobble-chalk-up-north": "Cobblestone Stairs (Chalk)",
 	"block-stair-side-cobble-chert-up-north": "Cobblestone Stairs (Chert)",

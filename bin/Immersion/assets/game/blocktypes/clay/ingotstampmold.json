@@ -1,0 +1,95 @@
+{
+    code: "ingotstampmold",
+    classByType: {
+        "ingotstampmold-*-raw": "Block",
+        "ingotstampmold-*-burned": "BlockToolMold",
+    },
+    behaviors: [{name: "UnstableFalling"}],
+    variantgroups: [
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },
+        { code:"materialtype", states: ["raw", "burned"] },
+    ],
+    attributesByType: {
+        "*-blue-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "ingotstamp-{metal}" }
+			},
+		"*-brown-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "ingotstamp-{metal}" }
+			},
+		"*-fire-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "ingotstamp-{metal}" }
+			},
+		"*-red-burned": {
+            "requiredUnits": 400,
+            "fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+				{ x1: 5, z1: 4, x2: 12, z2: 11 },
+			],
+            "drop": { class:"Block", code: "ingotstamp-{metal}" }
+			},
+        },
+	entityClassByType: {
+		"*-burned": "ToolMold",
+	},
+    combustiblePropsByType: {
+        "*-raw": {
+            meltingPoint: 600,
+            meltingDuration: 45,
+            smeltedRatio: 1,
+            smeltingType: "bake",
+            smeltedStack: { type: "block", code: "ingotstampmold-{color}-burned" },
+            requiresContainer: false
+        }
+    },
+    blockmaterial: "Ceramic",
+    creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicitems": ["*"] },
+    replaceable: 700,
+    resistance: 1.5,
+    maxStackSize: 8,
+    lightAbsorption: 0,
+    texturesByType: {
+        "*-raw": {  all: { base: "block/clay/{color}-raw" } },
+        "*-burned": {  all: { base: "block/clay/{color}-burned" } },
+    },
+    drawtype: "json",
+    shape: { base: "block/clay/mold/ingotstampmold", rotateY: 90 },
+    sounds: {
+        walk: "game:walk/stone",
+    },
+    collisionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.3875, z2: 0.9375 },
+    selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.3875, z2: 1 },
+    sideopaque: {
+        all: false
+    },
+    sidesolid: {
+        all: false
+    },
+    guiTransform: {
+        translation: { x: 0, y: 3, z: 0 },
+        origin: { x: 0.5, y: 0.3, z: 0.5 },
+        scale: 1.33
+    },
+}

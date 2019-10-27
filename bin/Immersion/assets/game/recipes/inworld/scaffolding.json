@@ -2,13 +2,13 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-*-debarked-leatherstrips-ud",
+		"Code": "immersion:branch-cordage-very-thin-*-bark-*-ud",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:branch-very-thin-*-debarked-ud",
-        "Type": "Item",
+        "Code": "immersion:branch-very-thin-*-bark-ud",
+        "Type": "Block",
 		"StackSize": 4		
     },
     "Makes": [{

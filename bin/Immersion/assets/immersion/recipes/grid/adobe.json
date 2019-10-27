@@ -6,5 +6,5 @@
 	},
 	width: 2,
 	height: 1,
-	output: { type: "block", code: "immersion:adobe", quantity: 2  }
+	output: { type: "block", code: "neolithicmod:adobe", quantity: 2  }
 }

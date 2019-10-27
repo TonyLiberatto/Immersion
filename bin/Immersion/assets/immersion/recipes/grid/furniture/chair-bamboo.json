@@ -6,5 +6,5 @@
 	},
 	width: 3,
 	height: 2,
-	output: { type: "block", code: "immersion:chair-{wood}"}
+	output: { type: "block", code: "neolithicmod:chair-{wood}"}
 }

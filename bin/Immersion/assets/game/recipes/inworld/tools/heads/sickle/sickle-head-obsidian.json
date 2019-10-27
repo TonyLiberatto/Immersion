@@ -7,8 +7,8 @@
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:animal-large-bone",
-        "Type": "Block",
+        "Code": "game:bone",
+        "Type": "Item",
 		"StackSize": 1		
     },
     "Makes": [{
