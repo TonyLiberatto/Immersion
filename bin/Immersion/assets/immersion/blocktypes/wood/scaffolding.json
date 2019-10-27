@@ -3,7 +3,7 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-					{ title: "handbook-item-sources", text: "Place a Debarked Very Thin Branch vertically on the ground, right click with any cordage, next right click again with Debarked Very Thin Branch to make the scafolding." },
+					{ title: "handbook-item-sources", text: "Place a barked Very Thin Branch vertically on the ground, Sneak Right click with any cordage, next Sneak Right click again with any barked Very Thin Branch to make the scafolding." },
 					]
 		},
 	},

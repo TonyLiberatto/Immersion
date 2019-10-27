@@ -9,7 +9,7 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-				{ title: "handbook-collectible-sources", text: "handbook-burdenbasket-obtain" }
+				{ title: "handbook-collectible-sources", text: "Place a Very-thin debarked branch down, shift right click with sisal twine, shift right click again with 4 of the same very thin debarked branch to make the structure. Now shift right click with a large sisal rug to make the Burdenbasket." }
 			]
 		},
 		backpack: {

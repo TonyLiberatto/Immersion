@@ -1,8 +1,8 @@
-[
+[ 
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-acacia-debarked-reeds-ud",
+		"Code": "immersion:branch-cordage-very-thin-acacia-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -12,7 +12,7 @@
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:basket-frame-acacia-debarked-reeds",
+        "Code": "immersion:bag-assembly-acacia-debarked-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -22,7 +22,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-birch-debarked-reeds-ud",
+		"Code": "immersion:branch-cordage-very-thin-birch-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -32,7 +32,7 @@
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:basket-frame-birch-debarked-reeds",
+        "Code": "immersion:bag-assembly-birch-debarked-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -42,7 +42,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-kapok-debarked-reeds-ud",
+		"Code": "immersion:branch-cordage-very-thin-kapok-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -52,7 +52,7 @@
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:basket-frame-kapok-debarked-reeds",
+        "Code": "immersion:bag-assembly-kapok-debarked-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -62,7 +62,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-maple-debarked-reeds-ud",
+		"Code": "immersion:branch-cordage-very-thin-maple-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -72,7 +72,7 @@
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:basket-frame-maple-debarked-reeds",
+        "Code": "immersion:bag-assembly-maple-debarked-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -82,7 +82,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-oak-debarked-reeds-ud",
+		"Code": "immersion:branch-cordage-very-thin-oak-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -92,7 +92,7 @@
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:basket-frame-oak-debarked-reeds",
+        "Code": "immersion:bag-assembly-oak-debarked-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -102,7 +102,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-cordage-very-thin-pine-debarked-reeds-ud",
+		"Code": "immersion:branch-cordage-very-thin-pine-debarked-sisal-ud",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -112,7 +112,7 @@
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:basket-frame-pine-debarked-reeds",
+        "Code": "immersion:bag-assembly-pine-debarked-sisal",
         "Type": "Block",        
     }],
     "IsTool": false,

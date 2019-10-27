@@ -1,7 +1,7 @@
 {
 	ingredientPattern: "FB",
 	ingredients: {
-		"F": { type: "item", code: "immersion:byproducts-sinew-fibers", quantity:6 },
+		"F": { type: "item", code: "neolithicmod:byproducts-sinew-fibers", quantity:6 },
 		"B": { type: "block", code: "game:bowl-fire-burned" },
 	},
 	width: 2,

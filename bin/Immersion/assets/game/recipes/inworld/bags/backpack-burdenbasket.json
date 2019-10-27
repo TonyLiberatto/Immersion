@@ -1,0 +1,44 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:bag-assembly-*-leatherstrips",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hide-raw",
+        "Type": "Block",
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:backpack",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:bag-assembly-*-sisal",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "immersion:burdenbasket",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

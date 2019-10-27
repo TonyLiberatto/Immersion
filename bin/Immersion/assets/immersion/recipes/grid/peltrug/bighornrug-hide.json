@@ -2,7 +2,7 @@
 	ingredientPattern: "K	P",
 	ingredients: {
 		"K": { type: "item", code: "game:knife-*", isTool: true  },
-		"P": { type: "block", code: "immersion:bighornpelt-*" , quantity:1, isTool: false}
+		"P": { type: "block", code: "neolithicmod:bighornpelt-*" , quantity:1, isTool: false}
 	},
 	width: 1,
 	height: 2,

@@ -6,5 +6,5 @@
 	width: 1,
 	height: 1,
 	shapeless: true,
-	output: { type: "item", code: "immersion:bowlimb-carved", quantity: 1  }
+	output: { type: "item", code: "neolithicmod:bowlimb-carved", quantity: 1  }
 }
