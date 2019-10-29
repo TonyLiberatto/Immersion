@@ -31,12 +31,12 @@ namespace Immersion
         public void RegisterAiTasks()
         {
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
-            AiTaskRegistry.Register("neolithicseekfoodandeat", typeof(FixedAiTaskSeekFoodAndEat));
+            AiTaskRegistry.Register("immersionseekfoodandeat", typeof(FixedAiTaskSeekFoodAndEat));
         }
 
         public void RegisterBlockEntities()
         {
-            Api.RegisterBlockEntityClass("NeolithicTransient", typeof(ImmersionTransient));
+            Api.RegisterBlockEntityClass("ImmersionTransient", typeof(ImmersionTransient));
             Api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
@@ -62,7 +62,7 @@ namespace Immersion
             Api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
             Api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
             Api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
-            Api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockImmersionRoads));
+            Api.RegisterBlockClass("BlockImmersionRoads", typeof(BlockImmersionRoads));
             Api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified)); //
             Api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
             Api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));

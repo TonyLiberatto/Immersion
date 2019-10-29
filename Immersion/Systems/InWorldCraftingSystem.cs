@@ -111,7 +111,7 @@ namespace Immersion
         {
             InWorldCraftingRecipes = sapi.Assets.GetMany<InWorldCraftingRecipe[]>(sapi.Server.Logger, "recipes/inworld");
             sapi.World.Logger.Event("{0} in world recipes loaded", InWorldCraftingRecipes.Count);
-            sapi.World.Logger.StoryEvent("Neolithic crafting...");
+            sapi.World.Logger.StoryEvent("Immersion crafting...");
         }
 
         public bool OnPlayerInteract(IPlayer byPlayer, BlockSelection blockSel)

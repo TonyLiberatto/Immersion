@@ -66,9 +66,9 @@ namespace Immersion
 
             for (int i = 0; i < directions.Length; i++)
             {
-                frondblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfrond-1-grown-" + directions[i])));
-                nannerblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-bananna-" + directions[i])));
-                cocoblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("neolithicmod:palmfruits-coconut-" + directions[i])));
+                frondblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfrond-1-grown-" + directions[i])));
+                nannerblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-bananna-" + directions[i])));
+                cocoblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-coconut-" + directions[i])));
             }
             frond = frondblocks.ToArray();
             fruits = new Block[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
@@ -126,7 +126,7 @@ namespace Immersion
                 for (int i = 0; i < bottomOffsets.Length; i++)
                 {
                     Block d = blockAccessor.GetBlock(Pos.X + bottomOffsets[i].X, Pos.Y + bottomOffsets[i].Y, Pos.Z + bottomOffsets[i].Z);
-                    if (d.LiquidCode == "water")
+                    if (d.LiquidCode == "seawater")
                     {
                         for (int k = 0; k < offsets.Length; k++)
                         {

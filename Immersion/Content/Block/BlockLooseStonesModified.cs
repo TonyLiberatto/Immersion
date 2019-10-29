@@ -56,7 +56,7 @@ namespace Immersion
                         Block dBlock = blockSel.Position.DownCopy().GetBlock(world);
 
                         if (!allowedbases.Contains(dBlock.FirstCodePart())) return;
-                        AssetLocation location = new AssetLocation("neolithicmod:3droad-" + Variant["rock"] + "-" + "stepping" + world.Rand.Next(1, 4));
+                        AssetLocation location = new AssetLocation("immersion:3droad-" + Variant["rock"] + "-" + "stepping" + world.Rand.Next(1, 4));
                         Block nextBlock = location.GetBlock(Api);
                         if (nextBlock == null) return;
 

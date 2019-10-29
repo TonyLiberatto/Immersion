@@ -252,7 +252,7 @@ namespace Immersion
             MeshData mesh;
             ITesselatorAPI mesher = ((ICoreClientAPI)Api).Tesselator;
 
-            mesher.TesselateShape(block, Api.Assets.TryGet("neolithicmod:shapes/block/wood/mortarandpestle/" + type + ".json").ToObject<Shape>(), out mesh);
+            mesher.TesselateShape(block, Api.Assets.TryGet("immersion:shapes/block/wood/mortarandpestle/" + type + ".json").ToObject<Shape>(), out mesh);
 
             return mesh;
         }

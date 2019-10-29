@@ -23,7 +23,7 @@ namespace Immersion
         public override double ExecuteOrder() => 0;
         public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
         long[] ids = new long[2];
-        public NeolithicGlobalConfig config;
+        public ImmersionGlobalConfig config;
 
         public override void StartServerSide(ICoreServerAPI Api)
         {
@@ -34,7 +34,7 @@ namespace Immersion
 
         public void ChangeLakeWater()
         {
-            config = Api.Assets.Get("worldgen/global.json").ToObject<NeolithicGlobalConfig>();
+            config = Api.Assets.Get("worldgen/global.json").ToObject<ImmersionGlobalConfig>();
             config.SetApi(Api);
             ids[0] = Api.Event.RegisterGameTickListener(dt => 
             {
@@ -74,7 +74,7 @@ namespace Immersion
     }
 
     [JsonObject(MemberSerialization.OptIn)]
-    public class NeolithicGlobalConfig
+    public class ImmersionGlobalConfig
     {
         [JsonProperty]
         public AssetLocation waterBlockCode;
