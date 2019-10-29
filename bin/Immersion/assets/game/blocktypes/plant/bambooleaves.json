@@ -6,7 +6,7 @@
 	behaviorsByType: {
 		"bambooleaves-grown": [{name: "PushEventOnBlockBroken",	properties: {eventName: "testForDecay"}}]
 	},
-	creativeinventory: { "general": ["bambooleaves-placed"], "flora": ["bambooleaves-placed"], "neolithicflora": ["bambooleaves-placed"] },
+	creativeinventory: { "general": ["bambooleaves-placed"], "flora": ["bambooleaves-placed"], "immersionflora": ["bambooleaves-placed"] },
 	shape: { base: "block/basic/cube" },
 	drawtype: "cube",
 	renderpass: "OpaqueNoCull",

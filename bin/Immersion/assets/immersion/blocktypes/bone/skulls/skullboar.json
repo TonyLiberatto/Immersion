@@ -1,7 +1,7 @@
 {
 	code: "skullboar",
 	class: "BlockSign",
-	creativeinventory: { "general": ["skullboar-ground-north"], "decorative": ["skullboar-ground-north"], "neolithicdeco": ["skullboar-ground-north"] },
+	creativeinventory: { "general": ["skullboar-ground-north"], "decorative": ["skullboar-ground-north"], "immersiondeco": ["skullboar-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

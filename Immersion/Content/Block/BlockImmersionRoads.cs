@@ -11,7 +11,7 @@ using Vintagestory.API.MathTools;
 
 namespace Immersion
 {
-    class BlockNeolithicRoads : Block
+    class BlockImmersionRoads : Block
     {
         ICoreAPI Api { get => this.api; }
         public string[] types = new string[] { "circle", "fish", "cobble", "bricks", "tightbricks", "squares", "tightsquares", "largesquare", "flat" };
@@ -52,14 +52,14 @@ namespace Immersion
                 {
                     if (world.Side.IsServer())
                     {
-                        uint index = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BENeolithicRoads).index;
+                        uint index = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEImmersionRoads).index;
                         Block nextBlock;
 
-                        if (byPlayer.Entity.Controls.Sneak) nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Prev(ref index)).GetBlock(Api);
-                        else nextBlock = new AssetLocation("neolithicmod:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock(Api);
+                        if (byPlayer.Entity.Controls.Sneak) nextBlock = new AssetLocation("immersion:" + CodeWithoutParts(1) + "-" + types.Prev(ref index)).GetBlock(Api);
+                        else nextBlock = new AssetLocation("immersion:" + CodeWithoutParts(1) + "-" + types.Next(ref index)).GetBlock(Api);
 
                         if (nextBlock == null) return;
-                        (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BENeolithicRoads).index = index;
+                        (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEImmersionRoads).index = index;
 
                         world.PlaySoundAtWithDelay(nextBlock.Sounds.Place, blockSel.Position, 100);
                         world.PlaySoundAtWithDelay(new AssetLocation("sounds/effect/anvilhit"), blockSel.Position, 150);
@@ -74,7 +74,7 @@ namespace Immersion
         public bool IsSettingHammer(ItemSlot slot) => slot.Itemstack.Collectible.FirstCodePart() == "settinghammer";
     }
 
-    class BENeolithicRoads : BlockEntity
+    class BEImmersionRoads : BlockEntity
     {
         public uint index = 0;
 

@@ -206,7 +206,7 @@
 		},
 	
 	creativeinventory: 
-		{ "general": ["*"], "items": ["*"], "neolithicfauna": ["*"] },
+		{ "general": ["*"], "items": ["*"], "immersionfauna": ["*"] },
 	materialDensity: 600,
 	guiTransformByType: {
 		"*-armadillo-*": {

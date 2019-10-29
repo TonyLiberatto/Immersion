@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 1000,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "dead-rotten-*",
 		convertTo: "skeleton-{type}", 
@@ -15,7 +15,7 @@
 			}
 		],
 	},
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: [
 		{ code: "type", states: ["large","small"] }
 	],

@@ -1,11 +1,46 @@
+[
 {
 	ingredientPattern: "K	P",
 	ingredients: {
 		"K": { type: "item", code: "game:knife-*", isTool: true  },
-		"P": { type: "item", code: "game:hide-raw" , quantity:1, }
+		"P": { type: "item", code: "game:hide-raw-small" , quantity:1, }
 	},
 	width: 1,
 	height: 2,
 	shapeless: false,
 	output: { type: "item", code: "animal-leatherstrips", quantity: 4  }
-}
+},
+{
+	ingredientPattern: "K	P",
+	ingredients: {
+		"K": { type: "item", code: "game:knife-*", isTool: true  },
+		"P": { type: "item", code: "game:hide-raw-medium" , quantity:1, }
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "animal-leatherstrips", quantity: 8  }
+},
+{
+	ingredientPattern: "K	P",
+	ingredients: {
+		"K": { type: "item", code: "game:knife-*", isTool: true  },
+		"P": { type: "item", code: "game:hide-raw-large" , quantity:1, }
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "animal-leatherstrips", quantity: 12  }
+},
+{
+	ingredientPattern: "K	P",
+	ingredients: {
+		"K": { type: "item", code: "game:knife-*", isTool: true  },
+		"P": { type: "item", code: "game:hide-raw-huge" , quantity:1, }
+	},
+	width: 1,
+	height: 2,
+	shapeless: false,
+	output: { type: "item", code: "animal-leatherstrips", quantity: 16  }
+},
+]

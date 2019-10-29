@@ -2,7 +2,7 @@
 	ingredientPattern: "A	L",
 	ingredients: {
 		"A": { type: "item", code: "game:axe-*", isTool: true  },
-		"L": { type: "block", code: "neolithicmod:branch-medium-*" }
+		"L": { type: "block", code: "immersion:branch-medium-*" }
 	},
 	width: 1,
 	height: 2,

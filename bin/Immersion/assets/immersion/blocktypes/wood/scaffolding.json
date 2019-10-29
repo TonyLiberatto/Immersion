@@ -7,7 +7,7 @@
 					]
 		},
 	},
-	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
 	shape: { base: "block/wood/scaffolding" },
 	blockmaterial: "Wood",
 	drawtype: "json",

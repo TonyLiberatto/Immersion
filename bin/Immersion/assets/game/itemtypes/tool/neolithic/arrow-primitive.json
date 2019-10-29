@@ -12,7 +12,7 @@
 	},
 	drawtype: "json",
 	shape: { base: "entity/primitive-arrow" },
-	creativeinventory: { "general": ["arrow-primitive"], "items": ["arrow-primitive"], "neolithicitems": ["arrow-primitive"] },
+	creativeinventory: { "general": ["arrow-primitive"], "items": ["arrow-primitive"], "immersionitems": ["arrow-primitive"] },
 	attributes: {
 		damageByType: {
 			"primitive": 0,

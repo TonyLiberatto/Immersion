@@ -16,7 +16,7 @@
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["mortarandpestle-{wood}-east"], "neolithicblocks": ["mortarandpestle-{wood}-east"] },
+	creativeinventory: { "general": ["mortarandpestle-{wood}-east"], "immersionblocks": ["mortarandpestle-{wood}-east"] },
 	shapeByType: {
 		"*-north": { base: "immersion:block/wood/mortarandpestle/complete", rotateY: 90 },
 		"*-east": { base: "immersion:block/wood/mortarandpestle/complete", rotateY: 0 },

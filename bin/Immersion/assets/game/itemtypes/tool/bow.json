@@ -21,7 +21,7 @@
 		]
 	},
 	tool: "bow",
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	attributesByType: {
 		"bow-simple": {
 			damage: 3

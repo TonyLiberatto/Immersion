@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 13,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "skinned-*",
 		convertTo: "dead-rotten-large", 
@@ -15,7 +15,7 @@
 			}
 		],
 	},
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: [
 		{ code: "type", states: ["ewe","ram","boar","sow","wolf-male","wolf-female","hyena", "domestic-boar", "domestic-sow" ] }
 	],

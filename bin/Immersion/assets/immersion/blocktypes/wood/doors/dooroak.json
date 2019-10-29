@@ -23,7 +23,7 @@
 		{ code: "state", states: ["closed", "opened"] },
 		{ code: "knobOrientation", states: ["left", "right"] },
 	],
-	creativeinventory: { "general": ["*-east-down-closed-left"], "decorative": ["*-east-down-closed-left"], "neolithicdeco": ["*-east-down-closed-left"] },
+	creativeinventory: { "general": ["*-east-down-closed-left"], "decorative": ["*-east-down-closed-left"], "immersiondeco": ["*-east-down-closed-left"] },
 	shapeinventory: { base: "block/wood/door/inventory" },
 	
 	textures: {

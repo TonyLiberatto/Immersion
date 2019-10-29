@@ -82,7 +82,7 @@
 		},
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
 	replaceable: 700,
 	resistance: 1.5,
 	maxStackSize: 8,

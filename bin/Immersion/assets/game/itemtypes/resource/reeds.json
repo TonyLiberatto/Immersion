@@ -4,8 +4,8 @@
   creativeinventory: {
     "general": ["*"],
     "items": ["*"],
-    "neolithicitems": ["*"],
-    "neolithicflora": ["*"]
+    "immersionitems": ["*"],
+    "immersionflora": ["*"]
   },
 	maxstacksize: 64,
 	combustibleProps: {

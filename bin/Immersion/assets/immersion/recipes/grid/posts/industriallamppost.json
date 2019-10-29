@@ -6,5 +6,5 @@
 	},
 	width: 2,
 	height: 1,
-	output: { type: "block", code: "neolithicmod:post-industrial-e", quantity: 1 } 
+	output: { type: "block", code: "immersion:post-industrial-e", quantity: 1 } 
 }

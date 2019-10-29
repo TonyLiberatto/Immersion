@@ -1,7 +1,7 @@
 {
 	code: "skullwolf",
 	class: "BlockSign",
-	creativeinventory: { "general": ["skullwolf-ground-north"], "decorative": ["skullwolf-ground-north"], "neolithicdeco": ["skullwolf-ground-north"] },
+	creativeinventory: { "general": ["skullwolf-ground-north"], "decorative": ["skullwolf-ground-north"], "immersiondeco": ["skullwolf-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

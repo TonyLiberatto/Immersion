@@ -2,7 +2,7 @@
 	code: "backpack",
 	maxstacksize: 1,
 	shapeinventory: { base: "game:item/bag/backpack" },
-	shape: { base: "neolithicmod:block/bag/backpack" },
+	shape: { base: "immersion:block/bag/backpack" },
 	textures: {
 		"straps": { base: "game:item/bag/backpack/straps" },
 		"leather": { base: "game:item/bag/backpack/leather" } 

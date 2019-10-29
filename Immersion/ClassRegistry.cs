@@ -7,7 +7,7 @@ using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    public partial class ImmersionMod
+    public partial class Immersion
     {
         public void RegisterClasses()
         {
@@ -36,11 +36,11 @@ namespace Immersion
 
         public void RegisterBlockEntities()
         {
-            Api.RegisterBlockEntityClass("NeolithicTransient", typeof(NeolithicTransient));
+            Api.RegisterBlockEntityClass("NeolithicTransient", typeof(ImmersionTransient));
             Api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
-            Api.RegisterBlockEntityClass("NeolithicRoads", typeof(BENeolithicRoads));
+            Api.RegisterBlockEntityClass("ImmersionRoads", typeof(BEImmersionRoads));
             Api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));
             Api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
             Api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
@@ -62,7 +62,7 @@ namespace Immersion
             Api.RegisterBlockClass("BlockGiantReeds", typeof(BlockGiantReeds));
             Api.RegisterBlockClass("BlockMortarAndPestle", typeof(BlockMortarAndPestle));
             Api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
-            Api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockNeolithicRoads));
+            Api.RegisterBlockClass("BlockNeolithicRoads", typeof(BlockImmersionRoads));
             Api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified)); //
             Api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
             Api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));

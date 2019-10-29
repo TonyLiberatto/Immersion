@@ -6,7 +6,7 @@
 		handbook: {
 			groupBy: ["knife-*"],
 			extraSections: [
-				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]
 		}
 	},
@@ -65,7 +65,7 @@
 		"*-obsidian-*": 1.5,
 		"*-flint-*": 1,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.2, z: 0.4 },
 		rotation: { x: -20, y: -93, z: -75 },

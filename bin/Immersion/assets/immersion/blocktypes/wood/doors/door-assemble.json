@@ -17,7 +17,7 @@
 		"*-south": { base: "block/wood/door/door-assemble", rotateY: 180 },
 		"*-west": { base: "block/wood/door/door-assemble", rotateY: 90 },		
 	},
-	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

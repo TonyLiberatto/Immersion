@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 13,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "dead-pig-*",
 		convertTo: "dead-rotten-large", 
@@ -28,7 +28,7 @@
 			}
 		}
 	],
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: [
 		{ code: "type", states: ["boar", "sow"] },		
 	],
@@ -100,7 +100,7 @@
 			
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-medium", 
 				quantity: { avg: 10, var: 1 } ,
 				tool:"knife",
 				lastDrop: true
@@ -117,7 +117,7 @@
 			
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-medium", 
 				quantity: { avg: 10, var: 1 } ,
 				tool:"knife",
 				lastDrop: true

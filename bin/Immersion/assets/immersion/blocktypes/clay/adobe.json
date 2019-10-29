@@ -6,7 +6,7 @@
   creativeinventory: {
     "general": [ "*" ],
     "construction": [ "*" ],
-    "neolithicdeco": [ "*" ]
+    "immersiondeco": [ "*" ]
   },
   replaceable: 400,
   resistance: 1.5,

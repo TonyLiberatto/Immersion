@@ -69,7 +69,7 @@
 			"*-fieldmushroom": "mushroom-fieldmushroom-normal"
 		}
 	},
-	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"], "neolithicdeco": ["*-empty", "*-raw"] },
+	creativeinventory: { "general": ["*-empty", "*-raw"], "decorative": ["*-empty", "*-raw"], "immersiondeco": ["*-empty", "*-raw"] },
 	behaviors: [
 		{
 			name: "Carryable",

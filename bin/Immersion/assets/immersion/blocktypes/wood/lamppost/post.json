@@ -5,7 +5,7 @@
 		{ code: "style", states: ["industrial", "railroad"] },
 		{ code: "type", states: ["empty", "n", "e", "s", "w", "ne", "ns", "nw", "es", "ew", "sw", "nes", "new", "nsw", "esw", "nesw"] }
 	],
-	creativeinventory: { "general": ["post-{style}-e"], "construction": ["post-{style}-e"], "neolithicdeco": ["post-{style}-e"] },
+	creativeinventory: { "general": ["post-{style}-e"], "construction": ["post-{style}-e"], "immersiondeco": ["post-{style}-e"] },
 	shapebytype: {
 		"*-empty": { base: "block/post/connector-empty" },
 		"*-n": { base: "block/post/{style}/connector-w", rotateY: 270 },

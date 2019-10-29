@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 10,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "headless-hyena-*",
 		convertTo: "dead-rotten-large", 
@@ -15,7 +15,7 @@
 			}
 		],
 	},
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: 
 	[
 		{ code: "type", states: ["wild-male","wild-female-tan", "wild-female-brown"] },
@@ -86,7 +86,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-medium", 
 				quantity: { avg: 5, var: 1 } ,
 				tool:"knife",
 				lastDrop: true
@@ -108,7 +108,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-medium", 
 				quantity: { avg: 5, var: 1 } ,
 				tool:"knife",
 				lastDrop: true
@@ -130,7 +130,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-medium", 
 				quantity: { avg: 5, var: 1 } ,
 				tool:"knife",
 				lastDrop: true

@@ -76,7 +76,7 @@
 		"*-empty": { base: "block/clay/flowerpot/empty" },
 		"flowerpotblue-*": { base: "block/clay/flowerpot/full" }
 	},
-	creativeinventory: { "general": ["*-raw", "*-empty"], "decorative": ["*-raw", "*-empty"], "neolithicdeco": ["*-raw", "*-empty"] },
+	creativeinventory: { "general": ["*-raw", "*-empty"], "decorative": ["*-raw", "*-empty"], "immersiondeco": ["*-raw", "*-empty"] },
 	blockmaterial: "Ceramic",
 	replaceable: 900,
 	resistance: 1.5,

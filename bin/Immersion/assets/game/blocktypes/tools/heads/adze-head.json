@@ -41,7 +41,7 @@
 		"general": [ "*-north" ],
 		"items": [ "*-north" ],
 		"tools": [ "*" ],
-		"neolithicitems": [ "*-north" ]
+		"immersionitems": [ "*-north" ]
 	},
 	collisionselectionbox: {
 		x1: 0,

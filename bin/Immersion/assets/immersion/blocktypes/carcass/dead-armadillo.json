@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 13,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "dead-armadillo-*",
 		convertTo: "dead-rotten-small", 
@@ -28,7 +28,7 @@
 			}
 		}
 	],
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: [
 		{ code: "type", states: ["male", "female"] },
 	],

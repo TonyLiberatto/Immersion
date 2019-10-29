@@ -17,7 +17,7 @@
 		}
 	},
 	storageFlags: 2,
-	creativeinventory: { "general": ["*"], "neolithicblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	drawtype: "json",
 	lightAbsorption: 0,
 	sidesolid: { all: false },

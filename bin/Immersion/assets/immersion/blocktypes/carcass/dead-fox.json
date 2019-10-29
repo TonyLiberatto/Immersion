@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 10,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "dead-fox-*",
 		convertTo: "dead-rotten-small", 
@@ -28,7 +28,7 @@
 			}
 		}
 	],
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: [
 		{ code: "type", states: ["red-male","red-female","snow-male", "snow-female" ] }
 	],
@@ -112,7 +112,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-small", 
 				quantity: { avg: 1, var: 0 } ,
 				tool:"knife",
 				lastDrop: true
@@ -142,7 +142,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-small", 
 				quantity: { avg: 1, var: 0 } ,
 				tool:"knife",
 				lastDrop: true
@@ -172,7 +172,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-small", 
 				quantity: { avg: 1, var: 0 } ,
 				tool:"knife",
 				lastDrop: true
@@ -202,7 +202,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-small", 
 				quantity: { avg: 1, var: 0 } ,
 				tool:"knife",
 				lastDrop: true

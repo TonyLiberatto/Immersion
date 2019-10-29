@@ -21,7 +21,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["hyenapelt-ground-east"], "decorative": ["hyenapelt-ground-east"], "neolithicdeco": ["hyenapelt-ground-east"] },
+	creativeinventory: { "general": ["hyenapelt-ground-east"], "decorative": ["hyenapelt-ground-east"], "immersiondeco": ["hyenapelt-ground-east"] },
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,

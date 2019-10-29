@@ -17,7 +17,7 @@
 		{ code: "state", states: ["opened", "closed"]},
 		{ code: "knobOrientation", states: ["left", "right"] },
 	],
-	creativeinventory: { "general": ["*-n-closed-left"], "decorative": ["*-n-closed-left"], "neolithicblocks": ["*-n-closed-left"] },	
+	creativeinventory: { "general": ["*-n-closed-left"], "decorative": ["*-n-closed-left"], "immersionblocks": ["*-n-closed-left"] },	
 	shapebytype: {
 		"*-n-opened-left": { base: "block/wood/fence/primitivegate-opened-left" },
 		"*-n-opened-right": { base: "block/wood/fence/primitivegate-opened-right" },

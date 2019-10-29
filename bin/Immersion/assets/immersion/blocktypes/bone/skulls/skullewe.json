@@ -1,7 +1,7 @@
 {
 	code: "skullewe",
 	class: "BlockSign",
-	creativeinventory: { "general": ["skullewe-ground-north"], "decorative": ["skullewe-ground-north"], "neolithicdeco": ["skullewe-ground-north"] },
+	creativeinventory: { "general": ["skullewe-ground-north"], "decorative": ["skullewe-ground-north"], "immersiondeco": ["skullewe-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

@@ -1,7 +1,7 @@
 {
 	code: "eweheadtrophy",
 	class: "BlockSign",
-	creativeinventory: { "general": ["eweheadtrophy-ground-north"], "decorative": ["eweheadtrophy-ground-north"], "neolithicdeco": ["eweheadtrophy-ground-north"] },
+	creativeinventory: { "general": ["eweheadtrophy-ground-north"], "decorative": ["eweheadtrophy-ground-north"], "immersiondeco": ["eweheadtrophy-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

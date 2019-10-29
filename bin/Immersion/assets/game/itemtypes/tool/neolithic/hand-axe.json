@@ -75,7 +75,7 @@
 		"axe-hand-flint": 0.62,
 
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

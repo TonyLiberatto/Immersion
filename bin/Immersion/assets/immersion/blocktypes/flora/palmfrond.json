@@ -25,7 +25,7 @@
 		zOffset: 4,
 		leavesWindWave: true
 	},
-  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "neolithicflora": [ "" ]  },
+  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "immersionflora": [ "" ]  },
   randomDrawOffset: false,
   shapeByType: {
     "*-north": {

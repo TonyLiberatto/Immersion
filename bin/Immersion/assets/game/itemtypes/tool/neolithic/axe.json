@@ -11,7 +11,7 @@
 		handbook: {
 			groupBy: ["axe-*"],
 			extraSections: [
-				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Neolithic Tool Making</a>" }
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]
 		}
 	},
@@ -89,7 +89,7 @@
 		"axe-flint-*": 1.25,
 
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

@@ -5,5 +5,5 @@
 		{ code: "type", states: ["feather", "vine","bamboo" ] },
 	],
 	texture: { base: "item/resource/fletching/{type}" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 }

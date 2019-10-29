@@ -4,7 +4,7 @@
   creativeinventory: {
     "general": [ "*" ],
     "items": [ "*" ],
-    "neolithicitems": [ "*" ]
+    "immersionitems": [ "*" ]
   },
   maxstacksize: 64,
   materialDensity: 200

@@ -1,0 +1,31 @@
+
+{
+	code: "locust-cage",	
+	attributes: {		
+		handbook:{ 				
+				extraSections: [
+					{ title: "handbook-item-sources", text:"To get a locust-cage" }
+					]
+
+		},
+	},
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "immersiondeco": ["*"] },
+	blockmaterial: "Metal",
+	lightAbsorption: 0,
+	lightHsv: [8, 2, 12],
+	glowLevel: 16,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	drawtype: "json",
+	shape: { base: "block/lightsources/locust-cage" },	
+	replaceable: 1000,
+	resistance: 1,
+	sounds: {
+		"place": "player/buildhigh",
+		"break": "block/glass"
+	}
+}

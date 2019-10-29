@@ -28,7 +28,7 @@
       states: [ "grown", "placed" ]
     },
   ],
-  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "neolithicflora": [ "" ]  },
+  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "immersionflora": [ "" ]  },
   randomDrawOffset: false,
   shape: { base: "block/flora/palm/{segment}" },
   textures: {

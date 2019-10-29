@@ -27,7 +27,7 @@
 	},
 	drawtype: "json",
 	blockmaterial: "Metal",
-	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },
+	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "immersiondeco": ["*-down"] },
 	replaceable: 300,
 	resistance: 2,
 	lightAbsorption: 1,

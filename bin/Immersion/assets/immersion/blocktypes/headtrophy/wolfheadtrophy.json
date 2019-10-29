@@ -1,7 +1,7 @@
 {
 	code: "wolfheadtrophy",
 	class: "BlockSign",
-	creativeinventory: { "general": ["wolfheadtrophy-*-ground-north"], "decorative": ["wolfheadtrophy-*-ground-north"], "neolithicdeco": ["wolfheadtrophy-*-ground-north"] },
+	creativeinventory: { "general": ["wolfheadtrophy-*-ground-north"], "decorative": ["wolfheadtrophy-*-ground-north"], "immersiondeco": ["wolfheadtrophy-*-ground-north"] },
 	variantgroups: [
 		{ code: "color", states: ["ashgrey", "black", "brown", "darkgrey", "gold", "grey", "silver", "smokegrey", "white",]},
 		{ code:"attachment", states: ["ground", "wall"] },

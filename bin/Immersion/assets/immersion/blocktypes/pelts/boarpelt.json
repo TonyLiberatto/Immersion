@@ -22,7 +22,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["boarpelt-ground-north"], "decorative": ["boarpelt-ground-north"], "neolithicdeco": ["boarpelt-ground-north"] },
+	creativeinventory: { "general": ["boarpelt-ground-north"], "decorative": ["boarpelt-ground-north"], "immersiondeco": ["boarpelt-ground-north"] },
 	drops: [ {type: "block",code: "boarpelt-ground-east",quantity: { avg: 1, var: 0 } } ],
 	replaceable: 4000,
 	resistance: 0.5,

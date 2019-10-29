@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 13,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "dead-sheep-domestic-*",
 		convertTo: "dead-rotten-large", 
@@ -28,7 +28,7 @@
 			}
 		}
 	],
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: 
 	[
 		{ code: "type", states: ["ewe","ram", ] }
@@ -107,7 +107,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-large", 
 				quantity: { avg: 5, var: 1 } ,
 				tool:"knife",
 				lastDrop: true
@@ -131,7 +131,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-large", 
 				quantity: { avg: 5, var: 1 } ,
 				tool:"knife",
 				lastDrop: true

@@ -78,7 +78,7 @@
 	creativeinventoryStacksByType: {
 		"*-east": [
 			{
-				tabs: [ "general", "decorative", "neolithicdeco" ],
+				tabs: [ "general", "decorative", "immersiondeco" ],
 				stacks: [
 					{ type: "block", code: "labeledchest-east", attributes: { type: "normal-labeled-acacia" } },
 					{ type: "block", code: "labeledchest-east", attributes: { type: "normal-labeled-aged" } },

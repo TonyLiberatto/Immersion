@@ -1,7 +1,7 @@
 ﻿{
   code: "3droad",
-  class: "BlockNeolithicRoads",
-  entityClass: "NeolithicRoads",
+  class: "BlockImmersionRoads",
+  entityClass: "ImmersionRoads",
   variantgroups: [
     { 
       code: "rock",
@@ -15,7 +15,7 @@
   drawtype: "json",
   creativeinventory: {
     "general": [ "*" ],
-    "neolithicdeco": [ "*" ]
+    "immersiondeco": [ "*" ]
   },
   shapeByType: {
     "*": { base: "block/road/road-{pattern}" },

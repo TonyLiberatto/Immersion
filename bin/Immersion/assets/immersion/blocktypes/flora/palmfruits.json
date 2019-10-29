@@ -10,7 +10,7 @@
     },
     { loadFromProperties: "abstract/horizontalorientation" }
   ],
-  creativeinventory: { "general": [ "*-north" ], "flora": [ "*-north" ], "neolithicflora": [ "*-north" ]  },
+  creativeinventory: { "general": [ "*-north" ], "flora": [ "*-north" ], "immersionflora": [ "*-north" ]  },
   randomDrawOffset: false,
   shapeByType: {
     "*-north": {  base: "block/flora/palm/bunches/{type}", rotateY: 180  },

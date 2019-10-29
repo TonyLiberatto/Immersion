@@ -6,11 +6,11 @@
 			code: "game:bowl-brown-glue",quantity:1,
 			returnedStack: { type: "block", code: "game:bowl-brown-burned" }
 			},
-		"H": { type: "item", code: "neolithicmod:byproducts-hornslab",quantity:1 },
-		"W": { type: "item", code: "neolithicmod:bowlimb-carved",quantity:1 },
-		"S": { type: "item", code: "neolithicmod:byproducts-sinew",quantity:1 },
+		"H": { type: "item", code: "immersion:byproducts-hornslab",quantity:1 },
+		"W": { type: "item", code: "immersion:bowlimb-carved",quantity:1 },
+		"S": { type: "item", code: "immersion:byproducts-sinew",quantity:1 },
 	},
 	width: 3,
 	height: 2,
-	output: { type: "item", code: "neolithicmod:bowlimb-composite", quantity: 1  }
+	output: { type: "item", code: "immersion:bowlimb-composite", quantity: 1  }
 }

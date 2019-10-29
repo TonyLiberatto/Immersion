@@ -1,7 +1,7 @@
 {
 	code: "hogheadtrophy",
 	class: "BlockSign",
-	creativeinventory: { "general": ["hogheadtrophy-*-ground-north"], "decorative": ["hogheadtrophy-*-ground-north"], "neolithicdeco": ["hogheadtrophy-*-ground-north"] },
+	creativeinventory: { "general": ["hogheadtrophy-*-ground-north"], "decorative": ["hogheadtrophy-*-ground-north"], "immersiondeco": ["hogheadtrophy-*-ground-north"] },
 	variantgroups: 
 	[
 		{ code: "color", states: ["ashgrey", "brown", "chocolate", "darkgrey", "smokegrey", "walnut", ] },

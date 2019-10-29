@@ -4,7 +4,7 @@
 	variantgroups: [
 		{ code: "type", states: ["empty", "n", "e", "s", "w", "ne", "ns", "nw", "es", "ew", "sw", "nes", "new", "nsw", "esw", "nesw"] }
 	],
-	creativeinventory: { "general": ["fence-wicker-ew"], "decorative": ["fence-wicker-ew"], "neolithicdeco": ["fence-wicker-ew"] },	
+	creativeinventory: { "general": ["fence-wicker-ew"], "decorative": ["fence-wicker-ew"], "immersiondeco": ["fence-wicker-ew"] },	
 	shapebytype: {
 		"*-empty": { base: "block/wickerfence/empty" },
 		"*-n": { base: "block/wickerfence/w", rotateY: 270 },

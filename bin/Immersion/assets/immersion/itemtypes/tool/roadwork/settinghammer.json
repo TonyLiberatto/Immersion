@@ -21,7 +21,7 @@
   creativeinventory: {
     "general": [ "*" ],
     "items": [ "*" ],
-    "neolithicitems": [ "*" ]
+    "immersionitems": [ "*" ]
   },
 	fpHandTransform: {
 		translation: { x: 0.1, y: 0.2, z: 0 },

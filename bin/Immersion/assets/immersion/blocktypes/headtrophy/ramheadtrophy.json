@@ -1,7 +1,7 @@
 {
 	code: "ramheadtrophy",
 	class: "BlockSign",
-	creativeinventory: { "general": ["ramheadtrophy-ground-north"], "decorative": ["ramheadtrophy-ground-north"], "neolithicdeco": ["ramheadtrophy-ground-north"] },
+	creativeinventory: { "general": ["ramheadtrophy-ground-north"], "decorative": ["ramheadtrophy-ground-north"], "immersiondeco": ["ramheadtrophy-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

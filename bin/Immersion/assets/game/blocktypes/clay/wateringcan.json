@@ -22,7 +22,7 @@
 		}
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionitems": ["*"] },
 	replaceable: 1200,
 	resistance: 1.5,
 	maxStackSize: 1,

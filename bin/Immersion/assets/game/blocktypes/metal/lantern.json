@@ -51,7 +51,7 @@
 			"material-deco": { base: "block/metal/lantern/{metal}-deco" }
 		},
 	},
-	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "neolithicdeco": ["*-up"] },
+	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "immersiondeco": ["*-up"] },
 	blockmaterial: "Metal",
 	lightAbsorption: 0,
 	lightHsvByType: {

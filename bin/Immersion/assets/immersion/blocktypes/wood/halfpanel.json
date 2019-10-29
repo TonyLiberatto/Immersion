@@ -30,7 +30,7 @@
 		all: false
 	},
 	blockmaterial: "Wood",
-	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "neolithicdeco": ["*-down"] },
+	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "immersiondeco": ["*-down"] },
 	replaceable: 4000,
 	resistance: 1,
 	lightAbsorption: 0,

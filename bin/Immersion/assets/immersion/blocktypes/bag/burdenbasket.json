@@ -17,7 +17,7 @@
 		}
 	},
 	storageFlags: 2,
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	lightAbsorption: 0,

@@ -90,7 +90,7 @@
 						sound: "creature/hyena/attack"
 					},
 					{
-                        code: "neolithicseekfoodandeat",
+                        code: "immersionseekfoodandeat",
                         priority: 1.85,
                         eatSound: "player/eat",
                         eatTime: 7,

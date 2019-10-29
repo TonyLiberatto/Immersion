@@ -2,7 +2,7 @@
 	code: "skeleton-large",
 	maxStackSize: 16,
 	resistance: 3,
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	texturesByType: { base: "block/skeleton/large"},
 	shapeByType: {
 		"*": {

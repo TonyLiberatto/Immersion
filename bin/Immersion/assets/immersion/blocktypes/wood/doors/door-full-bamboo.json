@@ -1,8 +1,8 @@
 {
 	code: "door-full-bamboo",
 	behaviorsByType: { 
-		"*-brown-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:browndoor-east-down-closed-left"}}}],
-		"*-green-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"neolithicmod:greendoor-east-down-closed-left"}}}],
+		"*-brown-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"immersion:browndoor-east-down-closed-left"}}}],
+		"*-green-*": [{name: "HorizontalOrientable", properties:{ drop:{ type:"block", code:"immersion:greendoor-east-down-closed-left"}}}],
 	},	
 	variantgroups: [		
 		{ code: "color", states: ["brown", "green"] },
@@ -20,7 +20,7 @@
 		"*-south": { base: "block/wood/door/inventory", rotateY: 180 },
 		"*-west": { base: "block/wood/door/inventory", rotateY: 90 },		
 	},	
-	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
 	resistance: 1.5,
 	lightAbsorption: 1,

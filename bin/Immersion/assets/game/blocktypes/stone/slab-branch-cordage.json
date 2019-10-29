@@ -13,7 +13,7 @@
 		{ code: "style", states: ["debarked"]},
 		{ code: "cordage", states: ["leatherstrips", "sinew", "rope"] },
 	],
-	creativeinventory: { "general": [""], "terrain": [""], "neolithicblocks": ["*"] },
+	creativeinventory: { "general": [""], "terrain": [""], "immersionblocks": ["*"] },
 	shape: { base: "block/slab-branch-cross" },
 	blockmaterial: "Stone",
 	textures: {

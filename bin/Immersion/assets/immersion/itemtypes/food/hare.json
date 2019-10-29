@@ -19,7 +19,7 @@
 		"meat": {base: "item/food/meat/hare-{type}" },
 	},
 	shape: { base: "item/food/meat/hare" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"hare-cooked": { saturation: 1800, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } },
 		"hare-cured": { saturation: 1800, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } }

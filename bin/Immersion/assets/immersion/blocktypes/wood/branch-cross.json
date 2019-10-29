@@ -5,7 +5,7 @@
 		{ loadFromProperties: "block/wood" },
 		{ code: "style", states: ["bark", "debarked"]},
 	],
-	creativeinventory: { "general": [""],  "construction": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": [""],  "construction": [""], "immersiondeco": [""] },
 	drawtype: "json",
 	lightabsorption: 0,
 	sidesolid: {

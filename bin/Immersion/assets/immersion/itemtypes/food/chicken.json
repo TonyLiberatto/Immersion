@@ -19,7 +19,7 @@
 		"meat": {base: "item/food/meat/chicken-{type}" },
 	},
 	shape: { base: "item/food/meat/chicken" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"chicken-cooked": { saturation: 2000, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } },
 		"chicken-cured": { saturation: 2000, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } }

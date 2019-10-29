@@ -3,7 +3,7 @@
     "variantgroups": [{"code": "metal", "states": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ]}],
     "shape": { "base": "item/tool/toolpin" },
     "texture": { "base": "item/tool/material/{metal}" },
-    "creativeinventory": { "general": ["*"], "items": ["*"], "neolithicitems": ["*"]},
+    "creativeinventory": { "general": ["*"], "items": ["*"], "immersionitems": ["*"]},
     "maxstacksize": 98,
     "materialDensity": 100,
     guiTransform: {

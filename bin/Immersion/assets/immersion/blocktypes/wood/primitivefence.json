@@ -19,7 +19,7 @@
 		{ loadFromProperties: "block/wood" },
 		{ code:"orientation", states: ["ns", "we"] },
 	],
-	creativeinventory: { "general": ["primitivefence-*-we"], "decorative": ["primitivefence-*-we"], "neolithicblocks": ["primitivefence-*-we"] },	
+	creativeinventory: { "general": ["primitivefence-*-we"], "decorative": ["primitivefence-*-we"], "immersionblocks": ["primitivefence-*-we"] },	
 	shapebytype: {
 		"*-support-*-ns": { base: "block/wood/fence/primitivefence-support" },
 		"*-support-*-we": { base: "block/wood/fence/primitivefence-support", rotateY: 90 },

@@ -2,7 +2,7 @@
 	code: "giantreedsroot",
 	class: "ItemGiantReedsRoot",
 	texture: { base: "item/resource/giantreedsroot" },
-  creativeinventory: {"general": [ "*" ],"items": [ "*" ],"neolithicitems": [ "*" ],"neolithicflora": ["*"] },
+  creativeinventory: {"general": [ "*" ],"items": [ "*" ],"immersionitems": [ "*" ],"immersionflora": ["*"] },
   combustibleProps: {
 		meltingPoint: 150,
 		maxTemperature: 300,

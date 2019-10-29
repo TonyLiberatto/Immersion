@@ -11,7 +11,7 @@
 		{ code: "dir", states: ["north", "south", "east", "west"] },
 		{ code: "type", states: ["short", "long"] }
 	],
-	creativeinventory: { "general": ["*-east-long"], "construction": ["*-east-long"], "neolithicdeco": ["*-east-long"] },
+	creativeinventory: { "general": ["*-east-long"], "construction": ["*-east-long"], "immersiondeco": ["*-east-long"] },
 	shapeByType: {
 		"*-north-*": { base: "block/post/{style}/attachment-{type}", rotateY: 0 },
 		"*-south-*": { base: "block/post/{style}/attachment-{type}", rotateY: 180 },

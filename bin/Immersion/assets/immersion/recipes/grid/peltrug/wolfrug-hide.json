@@ -7,5 +7,5 @@
 	width: 1,
 	height: 2,
 	shapeless: false,
-	output: { type: "item", code: "game:hide-raw", quantity: 3  }
+	output: { type: "item", code: "game:hide-raw-medium", quantity: 3  }
 }

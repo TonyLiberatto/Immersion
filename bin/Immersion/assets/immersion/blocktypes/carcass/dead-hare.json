@@ -3,7 +3,7 @@
 	class: "BlockPlaceOnDrop",
 	maxStackSize: 1,
 	resistance: 10,
-	entityClass: "NeolithicTransient",
+	entityClass: "ImmersionTransient",
 	attributes: {
 		convertFrom: "dead-hare-*",
 		convertTo: "dead-rotten-small", 
@@ -31,7 +31,7 @@
 			}
 		}
 	],
-	creativeinventory: { "general": ["*"], "neolithicfauna": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
 	variantgroups: [
 		{ code: "gender", states: ["male", "female" ] },
 		{ code: "color", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] }
@@ -110,7 +110,7 @@
 			},
 			{
 				type: "item", 
-				code: "game:hide-raw", 
+				code: "game:hide-raw-small", 
 				quantity: { avg: 1, var: 0 } ,
 				tool:"knife",
 				lastDrop: true

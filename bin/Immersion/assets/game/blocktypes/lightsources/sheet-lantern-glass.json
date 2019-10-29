@@ -4,7 +4,7 @@
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
 		{ code:"layer", states: ["plain", "gold", "silver" ] },		
 	],
-	creativeinventory: { "general": [""], "decorative": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Glass",
 	faceCullMode: "MergeMaterial",
 	lightAbsorption: 0,	

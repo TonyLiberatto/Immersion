@@ -30,7 +30,7 @@
 		"*-iron-*": 900,
 	},
 	attackRange: 2,
-	creativeinventory: { "general": ["*"], "items": ["*"], "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.1268, y: 0, z: 0 },
 		rotation: { x: 16, y: -1, z: 92 },

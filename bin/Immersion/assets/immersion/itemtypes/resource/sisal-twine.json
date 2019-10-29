@@ -1,7 +1,7 @@
 {
 	code: "sisal-twine",
 	texture: { base: "item/resource/sisal-twine" },
-	creativeinventory: { "general": ["*"], "items": ["*"],  "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"],  "immersionitems": ["*"] },
 	maxstacksize: 64,
 	materialDensity: 200
 }

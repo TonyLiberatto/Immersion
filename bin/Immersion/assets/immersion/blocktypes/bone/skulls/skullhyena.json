@@ -1,7 +1,7 @@
 {
 	code: "skullhyena",
 	class: "BlockSign",
-	creativeinventory: { "general": ["skullhyena-ground-north"], "decorative": ["skullhyena-ground-north"], "neolithicdeco": ["skullhyena-ground-north"] },
+	creativeinventory: { "general": ["skullhyena-ground-north"], "decorative": ["skullhyena-ground-north"], "immersiondeco": ["skullhyena-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

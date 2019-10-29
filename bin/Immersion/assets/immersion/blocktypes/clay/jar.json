@@ -10,7 +10,7 @@
 			groupBy: ["jar-*"]
 		},
 	},
-	creativeinventory: { "general": ["jar-*"], "neolithicdeco": ["jar-*"] },
+	creativeinventory: { "general": ["jar-*"], "immersiondeco": ["jar-*"] },
 	shape: { base: "block/clay/jar/{size}" },
   texturesByType: {
     "*-burned" : {

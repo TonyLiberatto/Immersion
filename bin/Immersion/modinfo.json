@@ -8,7 +8,7 @@
 	"contributors": ["Tyron", "Milo", "Stroam","Elwood","copygirl", "MarcAFK", "Demmon1"],
 	"version": "1.0.0",
 	"dependencies": {
-		"carrycapacity": "0.4.6",
+		"carrycapacity": "0.4.5",
 		"game": "1.11.0-pre.3"
 	}
 }

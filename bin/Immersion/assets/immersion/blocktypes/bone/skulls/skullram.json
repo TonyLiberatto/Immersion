@@ -1,7 +1,7 @@
 {
 	code: "skullram",
 	class: "BlockSign",
-	creativeinventory: { "general": ["skullram-ground-north"], "decorative": ["skullram-ground-north"], "neolithicdeco": ["skullram-ground-north"] },
+	creativeinventory: { "general": ["skullram-ground-north"], "decorative": ["skullram-ground-north"], "immersiondeco": ["skullram-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }

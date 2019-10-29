@@ -7,7 +7,7 @@
 		{ code: "cordage", states: [ "leatherstrips", "reeds","sinew", "sisal"]},
 		{ code: "rotation", states: ["ud", "ns", "we"] },
 	],	
-	creativeinventory: { "general": [""],  "construction": [""], "neolithicdeco": [""] },
+	creativeinventory: { "general": [""],  "construction": [""], "immersiondeco": [""] },
 	drawtype: "json",
 	lightabsorption: 0,
 	sidesolid: {

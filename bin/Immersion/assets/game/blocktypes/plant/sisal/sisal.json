@@ -6,7 +6,7 @@
 		{ code: "type", states: ["sisal"] },
 		{ code: "stage", states: ["1", "2", "3", "4", "5", "6",] },
 	],
-	creativeinventory: { "general": [""], "plants": [""], "neolithicflora": [""] },
+	creativeinventory: { "general": [""], "plants": [""], "immersionflora": [""] },
 	renderpass: "OpaqueNoCull",
 	shape: { base: "block/plant/{type}/sisal{stage}" },
 	blockmaterial: "Plant",

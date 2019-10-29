@@ -8,7 +8,7 @@ using System.IO;
 using Vintagestory.API.Server;
 using System.Collections.Generic;
 
-[assembly: ModInfo("Immersion Mod",
+[assembly: ModInfo("Immersion",
     Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
     Website      = "https://github.com/TonyLiberatto/Immersion",
     Authors      = new []{ "Tony Liberatto","Novocain","Balduranne","BunnyViking" },
@@ -16,7 +16,7 @@ using System.Collections.Generic;
 
 namespace Immersion
 {
-    public partial class ImmersionMod : ModSystem
+    public partial class Immersion : ModSystem
     {
         ICoreAPI Api;
         ICoreClientAPI capi;

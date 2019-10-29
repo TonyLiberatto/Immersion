@@ -33,7 +33,7 @@
         "material": { "base": "block/wood/planks/{wood}*" },
 		"border": { "base": "block/wood/planks/{wood}*" },
     },
-    "creativeinventory": { "general": ["*"], "neolithicblocks": ["*"] },
+    "creativeinventory": { "general": ["*"], "immersionblocks": ["*"] },
     "sideopaque": { "all": false },
     "sidesolid": { "all": false },
     "lightAbsorption": 1,

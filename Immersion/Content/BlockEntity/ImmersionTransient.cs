@@ -11,22 +11,22 @@ using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    public class NeolithicContentConfig : ContentConfig
+    public class ImmersionContentConfig : ContentConfig
     {
     }
 
-    public class NeolithicTransient : BlockEntityTransient, IAnimalFoodSource
+    public class ImmersionTransient : BlockEntityTransient, IAnimalFoodSource
     {
         public Vec3d Position => Pos.ToVec3d().Add(0.5, 0.5, 0.5);
         public string Type => "food";
-        NeolithicContentConfig[] nltConfig;
+        ImmersionContentConfig[] nltConfig;
         Block ownBlock;
         public string contentCode = "";
         double transitionAtTotalDays = -1;
         public static SimpleParticleProperties Flies;
         public bool flies = true;
 
-        static NeolithicTransient()
+        static ImmersionTransient()
         {
 
             Flies = new SimpleParticleProperties(
@@ -56,7 +56,7 @@ namespace Immersion
 
             if (nltConfig == null)
             {
-                nltConfig = ownBlock.Attributes["contentConfig"].AsObject<NeolithicContentConfig[]>();
+                nltConfig = ownBlock.Attributes["contentConfig"].AsObject<ImmersionContentConfig[]>();
             }
 
             if (transitionAtTotalDays <= 0)

@@ -74,7 +74,7 @@
 	creativeinventoryStacksByType: {
 		"*-east": [
 			{
-				tabs: [ "general", "decorative", "neolithicdeco" ],
+				tabs: [ "general", "decorative", "immersiondeco" ],
 				stacks: [
 					{ type: "block", code: "chest-east", attributes: { type: "normal-generic-acacia" } },
 					{ type: "block", code: "chest-east", attributes: { type: "normal-generic-aged" } },

@@ -1,7 +1,7 @@
 {
 	code: "sisal-thread",
 	texture: { base: "item/resource/sisal-thread" },
-	creativeinventory: { "general": ["*"], "items": ["*"],  "neolithicitems": ["*"] },
+	creativeinventory: { "general": ["*"], "items": ["*"],  "immersionitems": ["*"] },
 	maxstacksize: 64,
 	materialDensity: 200
 }
