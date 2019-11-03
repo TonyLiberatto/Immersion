@@ -36,7 +36,6 @@ namespace Immersion
 
         public void RegisterBlockEntities()
         {
-            Api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
             Api.RegisterBlockEntityClass("ImmersionRoads", typeof(BEImmersionRoads));

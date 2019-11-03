@@ -116,7 +116,6 @@
     <Compile Include="Immersion\Content\BlockEntity\BEMortarAndPestle.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BEScary.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityChimney.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\FixedBESapling.cs" />
     <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorTransient.cs" />
     <Compile Include="Immersion\Content\BlockEntity\POIEntity.cs" />
     <Compile Include="Immersion\Content\Block\BlockChandelierFix.cs" />
