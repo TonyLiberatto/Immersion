@@ -3,6 +3,7 @@
     "class": "BlockPlaceOnDrop",
     "maxStackSize": 1,
     "resistance": 13,
+    "entityClass": "Generic",
 	"entityBehaviors": [
 		{
 			"name": "Transient",
