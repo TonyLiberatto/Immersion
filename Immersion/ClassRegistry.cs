@@ -15,6 +15,7 @@ namespace Immersion
             RegisterBlocks();
             RegisterItems();
             RegisterBlockEntities();
+            RegisterBlockEntityBehaviors();
             RegisterAiTasks();
             RegisterEntityBehaviors();
         }
@@ -31,12 +32,10 @@ namespace Immersion
         public void RegisterAiTasks()
         {
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
-            AiTaskRegistry.Register("immersionseekfoodandeat", typeof(FixedAiTaskSeekFoodAndEat));
         }
 
         public void RegisterBlockEntities()
         {
-            Api.RegisterBlockEntityClass("ImmersionTransient", typeof(ImmersionTransient));
             Api.RegisterBlockEntityClass("FixedBESapling", typeof(FixedBESapling));
             Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
             Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
@@ -45,6 +44,12 @@ namespace Immersion
             Api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
             Api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
             Api.RegisterBlockEntityClass("Stairs", typeof(BlockEntityStairs));
+        }
+
+        public void RegisterBlockEntityBehaviors()
+        {
+            Api.RegisterBlockEntityBehaviorClass("Consumable", typeof(BEBehaviorConsumable));
+            Api.RegisterBlockEntityBehaviorClass("Transient", typeof(BEBehaviorTransient));
         }
 
         public void RegisterItems()

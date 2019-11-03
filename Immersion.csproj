@@ -32,35 +32,36 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.11-X\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\..\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.11-X\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\..\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.11-X\Lib\csogg.dll</HintPath>
+      <HintPath>..\..\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.11-X\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\..\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.11-X\Lib\ENet.dll</HintPath>
+      <HintPath>..\..\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\VS-1.11-X\Lib\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.11-X\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\..\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.11-X\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\..\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -72,7 +73,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.11-X\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\..\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
@@ -84,26 +85,26 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.11-X\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.11-X\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\..\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.11-X\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\..\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>..\..\VS-1.11-X\Lib\websocket-sharp.dll</HintPath>
+      <HintPath>..\..\Lib\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorConsumable.cs" />
     <Compile Include="Immersion\ClassRegistry.cs" />
     <Compile Include="Immersion\Content\AiTask\AiTaskSleep.cs" />
-    <Compile Include="Immersion\Content\AiTask\FixedAiTaskSeekFoodAndEat.cs" />
     <Compile Include="Immersion\Content\Block Behavior\BlockCreateBehavior.cs" />
     <Compile Include="Immersion\Content\Block Behavior\BlockSwapBehavior.cs" />
     <Compile Include="Immersion\Content\Block Behavior\ChimneyBehavior.cs" />
@@ -116,7 +117,7 @@
     <Compile Include="Immersion\Content\BlockEntity\BEScary.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Immersion\Content\BlockEntity\FixedBESapling.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\ImmersionTransient.cs" />
+    <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorTransient.cs" />
     <Compile Include="Immersion\Content\BlockEntity\POIEntity.cs" />
     <Compile Include="Immersion\Content\Block\BlockChandelierFix.cs" />
     <Compile Include="Immersion\Content\Block\BlockCheeseCloth.cs" />

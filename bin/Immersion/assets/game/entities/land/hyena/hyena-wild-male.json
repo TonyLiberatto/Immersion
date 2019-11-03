@@ -80,7 +80,7 @@
 						sound: "creature/hyena/attack"
 					},
 					{
-                        code: "immersionseekfoodandeat",
+                        code: "seekfoodandeat",
                         priority: 1.85,
                         eatSound: "player/eat",
                         eatTime: 7,

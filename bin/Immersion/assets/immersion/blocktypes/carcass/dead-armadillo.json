@@ -1,77 +1,102 @@
 {
-	code: "dead-armadillo",
-	class: "BlockPlaceOnDrop",
-	maxStackSize: 1,
-	resistance: 13,
-	entityClass: "ImmersionTransient",
-	attributes: {
-		convertFrom: "dead-armadillo-*",
-		convertTo: "dead-rotten-small", 
-		eatenTo: "dead-rotten-small",
-		inGameHours: "24",
-		contentConfig: [
-			{
-				foodFor: ["game:wolf-*", "game:fox-*", "game: hyena-*"],
-			}
-		],
-	},
-	behaviors:
-	[
+    "code": "dead-armadillo",
+    "class": "BlockPlaceOnDrop",
+    "maxStackSize": 1,
+    "resistance": 13,
+	"entityBehaviors": [
 		{
-			name: "Carryable",
-			properties:
+			"name": "Transient",
+			"properties":
 			{
-				translation: [ 0, -0.1, 0 ],
-				rotation: [ 0, 270, 0 ],
-				scale: 0.85,
-				slots: { "Shoulder": {  } }
+				"convertFrom": "dead-armadillo-*",
+				"convertTo": "dead-rotten-small",
+				"inGameHours": "24"
+			}
+		},
+		{
+			"name": "Consumable",
+			"properties": {
+				"eatenTo": "dead-rotten-small",
+				"contentConfig":{
+					"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+				}
 			}
 		}
 	],
-	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
-	variantgroups: [
-		{ code: "type", states: ["male", "female"] },
-	],
-	textures: {
-		"armadillo": { base: "game:entity/armadillo/armadillo" },
-		"armadillo_tail": { base: "game:entity/armadillo/armadillo_tail" }
-	},
-	shape: { base: "block/dead/armadillo/armadillo_dead" },
-	randomDrawOffset: true,
-	lightAbsorption: 0,
-	sidesolid: { all: false },
-	sideopaque: { all: false },
-	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.4, z2: 1 },	
-	collisionbox: null,
-	materialDensity: 3000,
-	guiTransform:
-	{
-		rotation: { x: -22.5937, y: 190, z: 0 },
-		origin: { x: 0.5, y: 0.22, z: 0.5 },
-		scale: 1.22
-	},
-	fpHandTransform: 
-	{
-		rotation: { x: 0, y: -24, z: 0 }
-	},
-	tpHandTransform: 
-	{
-		translation: { x: -1.3, y: -0.7, z: -0.8 },
-		rotation: { x: 2, y: 31, z: -25 },
-		scale: 0.6
-	},
-  groundTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 0, y: -45, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 4
-	},
-	drops: [
-		{type: "item", code: "game:redmeat-raw", quantity: { avg: 2.5, var: 0.5 }, tool:"knife" }	
-	],
-
-	sounds: {
-		"place": "game:effect/squish1",
-		"break": "game:effect/squish2"
-	},
+    "behaviors": [
+        {
+            "name": "Carryable",
+            "properties": {
+                "translation": [0,-0.1,0],
+                "rotation": [0,270,0],
+                "scale": 0.85,
+                "slots": {
+                    "Shoulder": {}
+                }
+            }
+        }
+    ],
+    "creativeinventory": {
+        "general": ["*"],
+        "immersionfauna": ["*"]
+    },
+    "variantgroups": [
+        {
+            "code": "type",
+            "states": ["male","female"]
+        }
+    ],
+    "textures": {
+        "armadillo": {
+            "base": "game:entity/armadillo/armadillo"
+        },
+        "armadillo_tail": {
+            "base": "game:entity/armadillo/armadillo_tail"
+        }
+    },
+    "shape": {
+        "base": "block/dead/armadillo/armadillo_dead"
+    },
+    "randomDrawOffset": true,
+    "lightAbsorption": 0,
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "selectionbox": {"x1":0,"y1":0,"z1":0,"x2":1,"y2":0.4,"z2":1},
+    "collisionbox": null,
+    "materialDensity": 3000,
+    "guiTransform": {
+        "rotation": {"x":-22.5937,"y":190,"z":0},
+        "origin": {"x":0.5,"y":0.22,"z":0.5},
+        "scale": 1.22
+    },
+    "fpHandTransform": {
+        "rotation": {"x":0,"y":-24,"z":0}
+    },
+    "tpHandTransform": {
+        "translation": {"x":-1.3,"y":-0.7,"z":-0.8},
+        "rotation": {"x":2,"y":31,"z":-25},
+        "scale": 0.6
+    },
+    "groundTransform": {
+        "translation": {"x":0,"y":0,"z":0},
+        "rotation": {"x":0,"y":-45,"z":0},
+        "origin": {"x":0.5,"y":0,"z":0.5},
+        "scale": 4
+    },
+    "drops": [
+        {
+            "type": "item",
+            "code": "game:redmeat-raw",
+            "quantity": {"avg":2.5,"var":0.5},
+            "tool": "knife"
+        }
+    ],
+    "sounds": {
+        "place": "game:effect/squish1",
+        "break": "game:effect/squish2"
+    }
 }

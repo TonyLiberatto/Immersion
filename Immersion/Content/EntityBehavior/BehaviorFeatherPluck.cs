@@ -37,7 +37,7 @@ namespace Immersion
                 ItemStack feather = new ItemStack(entity.World.GetItem(new AssetLocation("game:feather")), 1);
                 feather.StackSize = entity.World.Rand.Next(1, 2);
 
-                source.sourcePos = hitPosition;
+                source.SourcePos = hitPosition;
                 source.SourceEntity = byEntity;
 
                 entity.ReceiveDamage(source, (float)((entity.World.Rand.NextDouble() * 0.25) / 2));
