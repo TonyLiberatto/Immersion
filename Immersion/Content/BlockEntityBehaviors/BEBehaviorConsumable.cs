@@ -49,5 +49,14 @@ namespace Immersion
             }
             return false;
         }
+
+        public override void OnBlockRemoved()
+        {
+            base.OnBlockRemoved();
+            if (Api.Side.IsServer())
+            {
+                Api.ModLoader.GetModSystem<POIRegistry>().RemovePOI(this);
+            }
+        }
     }
 }
