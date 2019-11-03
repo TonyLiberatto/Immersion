@@ -12,7 +12,7 @@
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "game:bowl-blue-raw",
+        "Code": "game:ingot-blue-raw",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -33,7 +33,7 @@
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "game:bowl-fire-raw",
+        "Code": "game:ingot-fire-raw",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -54,7 +54,7 @@
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "game:bowl-red-raw",
+        "Code": "game:ingot-red-raw",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -75,7 +75,7 @@
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "game:bowl-brown-raw",
+        "Code": "game:ingot-brown-raw",
         "Type": "Block",
         "StackSize": 1
     }],

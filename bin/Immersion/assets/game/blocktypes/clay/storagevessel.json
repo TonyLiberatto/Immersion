@@ -1,11 +1,11 @@
 {
 	code: "storagevessel",
 	classByType: {
-		"*-raw-*": "Block",
+		"*-raw": "Block",
 		"*": "BlockGenericTypedContainer",
 	},
 	entityclassByType: {
-		"*-raw-*": null,
+		"*-raw": null,
 		"*": "GenericTypedContainer",
 	},
 	behaviors: [{name: "Lockable" }, {name: "Container"}, {name: "UnstableFalling"}],
@@ -47,11 +47,25 @@
 		{ code: "variant", states: ["ashforest", "chthonic", "copper", "earthen", "rain", "blue-raw", "fire-raw", "red-raw", "brown-raw", "blue-burned", "fire-burned", "red-burned", "brown-burned" ] },
 	],
 	shape: { base: "block/clay/lootvessel" },
-	textures: {			 
-		"normal-ceramic": { base: "block/clay/{variant}" },
-		"normal-top": { base: "block/clay/vessel/top/{variant}" },
-		"normal-sides": { base: "block/clay/vessel/sides/{variant}" },
-		"normal-inside": { base: "block/clay/vessel/inside/{variant}" }		
+	texturesByType: {
+		"*-blue-raw": {
+			all: { base: "block/clay/blue-raw" },
+		},
+		"*-fire-raw": {
+			all: { base: "block/clay/fire-raw" },
+		},
+		"*-brown-raw": {
+			all: { base: "block/clay/brown-raw" },
+		},
+		"*-red-raw": {
+			all: { base: "block/clay/red-raw" },
+		},
+		"*": {
+			"normal-ceramic": { base: "block/clay/ceramic" },
+			"normal-top": { base: "block/clay/vessel/top/{variant}" },
+			"normal-sides": { base: "block/clay/vessel/sides/{variant}" },
+			"normal-inside": { base: "block/clay/vessel/inside/{variant}" }
+		},
 	},
 	blockmaterial: "Ceramic",
 	creativeinventory: {  },

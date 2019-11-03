@@ -50,12 +50,7 @@
 				{ base: "block/dead/sheep/{type}", rotateY: 180 },
 				{ base: "block/dead/sheep/{type}", rotateY: 225 },		
 				{ base: "block/dead/sheep/{type}", rotateY: 270 },
-				{ base: "block/dead/sheep/{type}", rotateY: 45 },
-				{ base: "block/dead/sheep/{type}", rotateY: 90 },
-				{ base: "block/dead/sheep/{type}", rotateY: 135 },
-				{ base: "block/dead/sheep/{type}", rotateY: 180 },
-				{ base: "block/dead/sheep/{type}", rotateY: 225 },		
-				{ base: "block/dead/sheep/{type}", rotateY: 270 }
+				
 			]
 		}
 	},
