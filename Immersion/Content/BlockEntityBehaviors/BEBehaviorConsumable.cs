@@ -24,6 +24,10 @@ namespace Immersion
             base.Initialize(api, properties);
             config = properties["contentConfig"].AsObject<ContentConfig>();
             eatenTo = properties["eatenTo"].AsString()?.WithDomain(OwnBlock.Code.Domain)?.ToAsset();
+            if (api.Side.IsServer())
+            {
+                api.ModLoader.GetModSystem<POIRegistry>().AddPOI(this);
+            }
         }
 
         public string Type => "food";

@@ -6,6 +6,7 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.GameContent;
 
 namespace Immersion
 {
@@ -24,7 +25,6 @@ namespace Immersion
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {
             base.Initialize(api, properties);
-
             if (transitionAtTotalDays <= 0)
             {
                 float hours = properties["inGameHours"].AsFloat(24);
