@@ -142,7 +142,7 @@
     <Compile Include="Immersion\Content\Properties\CraftingProp.cs" />
     <Compile Include="Immersion\Content\Properties\SwapBlocks.cs" />
     <Compile Include="Immersion\Content\Utility\AreaMethods.cs" />
-    <Compile Include="Immersion\Content\Utility\ArrayStuff.cs" />
+    <Compile Include="Immersion\Content\Utility\Extensions.cs" />
     <Compile Include="Immersion\Content\Utility\HandAnimations.cs" />
     <Compile Include="Immersion\Content\Utility\LevenshteinDistance.cs" />
     <Compile Include="Immersion\Content\Utility\Missing.cs" />

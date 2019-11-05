@@ -1,75 +1,175 @@
 {
-	code: "dead-rotten",
-	class: "BlockPlaceOnDrop",
-	maxStackSize: 1,
-	resistance: 1000,
-	entityClass: "ImmersionTransient",
-	attributes: {
-		convertFrom: "dead-rotten-*",
-		convertTo: "skeleton-{type}", 
-		eatenTo: "skeleton-{type}", 
-		inGameHours: "72",
-		contentConfig: [
-			{
-				foodFor: ["game:wolf-*", "game:fox-*", "game: hyena-*"],
-			}
+	"code": "dead-rotten",
+	"class": "BlockPlaceOnDrop",
+	"maxStackSize": 1,
+	"resistance": 1000,
+	"entityClass": "Generic",
+    "entityBehaviors": [{
+            "name": "Transient",
+            "properties": {
+                "convertFrom": "dead-rotten-*",
+                "convertTo": "skeleton-{type}",
+                "inGameHours": 72
+            }
+        },
+        {
+            "name": "Consumable",
+            "properties": {
+                "eatenTo": "skeleton-{type}",
+                "contentConfig": {
+                    "foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+                }
+            }
+        }
+    ],
+	"creativeinventory": {
+		"general": [
+			"*"
 		],
+		"immersionfauna": [
+			"*"
+		]
 	},
-	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
-	variantgroups: [
-		{ code: "type", states: ["large","small"] }
-	],
-	textures: {
-		"carrion": { base: "block/rotten/{type}"},
-		"fly": { base: "block/rotten/fly"}
+	"variantgroups": [{
+		"code": "type",
+		"states": [
+			"large",
+			"small"
+		]
+	}],
+	"textures": {
+		"carrion": {
+			"base": "block/rotten/{type}"
 		},
-	shapeByType: {
+		"fly": {
+			"base": "block/rotten/fly"
+		}
+	},
+	"shapeByType": {
 		"*": {
-			base: "block/rotten/{type}",
-			alternates: [
-				{ base: "block/rotten/{type}", rotateY: 45 },
-				{ base: "block/rotten/{type}", rotateY: 90 },
-				{ base: "block/rotten/{type}", rotateY: 135 },
-				{ base: "block/rotten/{type}", rotateY: 180 },
-				{ base: "block/rotten/{type}", rotateY: 225 },
-				{ base: "block/rotten/{type}", rotateY: 270 },
-				{ base: "block/rotten/{type}", rotateY: 45 },
-				{ base: "block/rotten/{type}", rotateY: 90 },
-				{ base: "block/rotten/{type}", rotateY: 135 },
-				{ base: "block/rotten/{type}", rotateY: 180 },
-				{ base: "block/rotten/{type}", rotateY: 225 },
-				{ base: "block/rotten/{type}", rotateY: 270 }
+			"base": "block/rotten/{type}",
+			"alternates": [{
+					"base": "block/rotten/{type}",
+					"rotateY": 45
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 90
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 135
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 180
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 225
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 270
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 45
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 90
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 135
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 180
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 225
+				},
+				{
+					"base": "block/rotten/{type}",
+					"rotateY": 270
+				}
 			]
 		}
 	},
-	randomDrawOffset: true,
-	lightAbsorption: 0,
-	sidesolid: { all: false },
-	sideopaque: { all: false },
-	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.4, z2: 1 },	
-	collisionbox: null,
-	materialDensity: 3000,
-	guiTransform: {
-		rotation: { x: -22.5937, y: 190, z: 0 },
-		origin: { x: 0.5, y: 0.22, z: 0.5 },
-		scale: 1.22
+	"randomDrawOffset": true,
+	"lightAbsorption": 0,
+	"sidesolid": {
+		"all": false
 	},
-	fpHandTransform: {
-		rotation: { x: 0, y: -24, z: 0 }
+	"sideopaque": {
+		"all": false
 	},
-	tpHandTransform: {
-		translation: { x: -1.3, y: -0.7, z: -0.8 },
-		rotation: { x: 2, y: 31, z: -25 },
-		scale: 0.6
+	"selectionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.4,
+		"z2": 1
 	},
-  groundTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 0, y: -45, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 4
+	"collisionbox": null,
+	"materialDensity": 3000,
+	"guiTransform": {
+		"rotation": {
+			"x": -22.5937,
+			"y": 190,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.22,
+			"z": 0.5
+		},
+		"scale": 1.22
 	},
-	sounds: {
+	"fpHandTransform": {
+		"rotation": {
+			"x": 0,
+			"y": -24,
+			"z": 0
+		}
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.3,
+			"y": -0.7,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": 2,
+			"y": 31,
+			"z": -25
+		},
+		"scale": 0.6
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 4
+	},
+	"sounds": {
 		"place": "game:effect/squish1",
 		"break": "game:effect/squish2"
-	},
+	}
 }

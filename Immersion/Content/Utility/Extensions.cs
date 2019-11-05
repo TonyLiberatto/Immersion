@@ -9,11 +9,12 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    public static class ArrayStuff
+    public static class Extensions
     {
         public static T Next<T>(this T[] array, ref uint index)
         {

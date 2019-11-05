@@ -20,10 +20,38 @@ namespace Immersion
         public string Wood { get => Variant["wood"]; }
         public string Key { get => FirstCodePart() + Wood; }
 
-        public string WallType { get => Variant.TryGetValue("type"); }
-        public string Bark { get => Variant.TryGetValue("style"); }
-        public string Hor { get => Variant.TryGetValue("horizontal"); }
-        public string Vert { get => Variant.TryGetValue("vertical"); }
+        public string WallType
+        {
+            get
+            {
+                Variant.TryGetValue("type", out string val);
+                return val;
+            }
+        }
+        public string Bark
+        {
+            get
+            {
+                Variant.TryGetValue("style", out string val);
+                return val;
+            }
+        }
+        public string Hor
+        {
+            get
+            {
+                Variant.TryGetValue("horizontal", out string val);
+                return val;
+            }
+        }
+        public string Vert
+        {
+            get
+            {
+                Variant.TryGetValue("vertical", out string val);
+                return val;
+            }
+        }
 
         WallSystem wallSystem;
 

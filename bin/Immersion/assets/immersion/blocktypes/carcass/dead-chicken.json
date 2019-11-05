@@ -1,144 +1,266 @@
 {
-	code: "dead-chicken",
-	class: "BlockPlaceOnDrop",
-	maxStackSize: 1,
-	resistance: 10,
-	entityClass: "ImmersionTransient",
-	attributes: {
-		convertFrom: "dead-chicken-*",
-		convertTo: "dead-rotten-small",
-		eatenTo: "skeleton-small",
-		inGameHours: "24",
-		contentConfig: [
-			{
-				foodFor: ["game:wolf-*", "game:fox-*", "game: hyena-*"],
-			}
-		],
-	},
-	behaviors:
-	[
-		{
-			name: "Carryable",
-			properties:
-			{
-				translation: [ -0.06, 0.60, 0.20 ],
-				rotation: [ -10, -90, 65 ],
-				scale: 1,
-				slots: { "Hands": {
-					animation: "carrycapacity:holdlight",
-					walkSpeedModifier: 0.9,
-				} }
+	"code": "dead-chicken",
+	"class": "BlockPlaceOnDrop",
+	"maxStackSize": 1,
+	"resistance": 10,
+	"entityClass": "Generic",
+    "entityBehaviors": [{
+            "name": "Transient",
+            "properties": {
+                "convertFrom": "dead-chicken-*",
+                "convertTo": "dead-rotten-small",
+                "inGameHours": 24
+            }
+        },
+        {
+            "name": "Consumable",
+            "properties": {
+                "eatenTo": "dead-rotten-small",
+                "contentConfig": {
+                    "foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+                }
+            }
+        }
+    ],
+	"behaviors": [{
+		"name": "Carryable",
+		"properties": {
+			"translation": [
+				-0.06,
+				0.6,
+				0.2
+			],
+			"rotation": [
+				-10,
+				-90,
+				65
+			],
+			"scale": 1,
+			"slots": {
+				"Hands": {
+					"animation": "carrycapacity:holdlight",
+					"walkSpeedModifier": 0.9
+				}
 			}
 		}
-	],
-	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
-	variantgroups: 
-	[
-		{ code: "type", states: ["rooster", "hen", ] },
-		{ code: "color", states: ["ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland"] }
-	],
-	textures: 
-	{
-		all: { base: "entity/chicken/{type}/{color}" },
+	}],
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"immersionfauna": [
+			"*"
+		]
 	},
-	shapeByType: 
-	{
-		"*":
+	"variantgroups": [{
+			"code": "type",
+			"states": [
+				"rooster",
+				"hen"
+			]
+		},
 		{
-			base: "block/dead/chicken/{type}",
-			alternates: 
-			[
-				{ base: "block/dead/chicken/{type}", rotateY: 45 },
-				{ base: "block/dead/chicken/{type}", rotateY: 90 },
-				{ base: "block/dead/chicken/{type}", rotateY: 135 },
-				{ base: "block/dead/chicken/{type}", rotateY: 180 },
-				{ base: "block/dead/chicken/{type}", rotateY: 225 },
-				{ base: "block/dead/chicken/{type}", rotateY: 270 },
-				{ base: "block/dead/chicken/{type}", rotateY: 45 },
-				{ base: "block/dead/chicken/{type}", rotateY: 90 },
-				{ base: "block/dead/chicken/{type}", rotateY: 135 },
-				{ base: "block/dead/chicken/{type}", rotateY: 180 },
-				{ base: "block/dead/chicken/{type}", rotateY: 225 },
-				{ base: "block/dead/chicken/{type}", rotateY: 270 }
+			"code": "color",
+			"states": [
+				"ashgrey",
+				"black",
+				"brown",
+				"cream",
+				"golden",
+				"savanna",
+				"white",
+				"woodland"
+			]
+		}
+	],
+	"textures": {
+		"all": {
+			"base": "entity/chicken/{type}/{color}"
+		}
+	},
+	"shapeByType": {
+		"*": {
+			"base": "block/dead/chicken/{type}",
+			"alternates": [{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 45
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 90
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 135
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 180
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 225
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 270
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 45
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 90
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 135
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 180
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 225
+				},
+				{
+					"base": "block/dead/chicken/{type}",
+					"rotateY": 270
+				}
 			]
 		}
 	},
-	randomDrawOffset: true,
-	lightAbsorption: 0,
-	sidesolid: { all: false },
-	sideopaque: { all: false },
-	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.4, z2: 1 },	
-	collisionbox: null,
-	materialDensity: 3000,
-	guiTransform: 
-	{
-		rotation: { x: -22.5937, y: 190, z: 0 },
-		origin: { x: 0.5, y: 0.22, z: 0.5 },
-		scale: 2
+	"randomDrawOffset": true,
+	"lightAbsorption": 0,
+	"sidesolid": {
+		"all": false
 	},
-	fpHandTransform: 
-	{
-		rotation: { x: 0, y: -24, z: 0 }
+	"sideopaque": {
+		"all": false
 	},
-	tpHandTransform: 
-	{
-		translation: { x: -1.3, y: -0.7, z: -0.8 },
-		rotation: { x: 2, y: 31, z: -25 },
-		scale: 0.6
+	"selectionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.4,
+		"z2": 1
 	},
-  groundTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 0, y: -45, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 4
+	"collisionbox": null,
+	"materialDensity": 3000,
+	"guiTransform": {
+		"rotation": {
+			"x": -22.5937,
+			"y": 190,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.22,
+			"z": 0.5
+		},
+		"scale": 2
 	},
-	dropsByType: 
-	{
-		"*-rooster-*":
-		[
-			{
-				type: "item",
-				code: "chicken-raw",
-				quantity: { avg: 1.25, var: 0.25 },
-				tool: "knife"
+	"fpHandTransform": {
+		"rotation": {
+			"x": 0,
+			"y": -24,
+			"z": 0
+		}
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.3,
+			"y": -0.7,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": 2,
+			"y": 31,
+			"z": -25
+		},
+		"scale": 0.6
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 4
+	},
+	"dropsByType": {
+		"*-rooster-*": [{
+				"type": "item",
+				"code": "chicken-raw",
+				"quantity": {
+					"avg": 1.25,
+					"var": 0.25
+				},
+				"tool": "knife"
 			},
 			{
-				type: "item",
-				code: "game:fat",
-				quantity: { avg: 0.25, var: 0 },
-				tool: "knife"
+				"type": "item",
+				"code": "game:fat",
+				"quantity": {
+					"avg": 0.25,
+					"var": 0
+				},
+				"tool": "knife"
 			},
 			{
-				type: "item",
-				code: "game:feather",
-				quantity: { avg: 5, var: 1 },
-				tool: "knife"
-			}	  
-		],
-		"*-hen-*":
-		[
-			{
-				type: "item",
-				code: "chicken-raw",
-				quantity: { avg: 1.25, var: 0.25 },
-				tool: "knife"
-			},
-			{
-				type: "item",
-				code: "game:fat",
-				quantity: { avg: 0.5, var: 0 },
-				tool: "knife"
-			},
-			{
-				type: "item",
-				code: "game:feather",
-				quantity: { avg: 3, var: 1 },
-				tool: "knife"
+				"type": "item",
+				"code": "game:feather",
+				"quantity": {
+					"avg": 5,
+					"var": 1
+				},
+				"tool": "knife"
 			}
 		],
+		"*-hen-*": [{
+				"type": "item",
+				"code": "chicken-raw",
+				"quantity": {
+					"avg": 1.25,
+					"var": 0.25
+				},
+				"tool": "knife"
+			},
+			{
+				"type": "item",
+				"code": "game:fat",
+				"quantity": {
+					"avg": 0.5,
+					"var": 0
+				},
+				"tool": "knife"
+			},
+			{
+				"type": "item",
+				"code": "game:feather",
+				"quantity": {
+					"avg": 3,
+					"var": 1
+				},
+				"tool": "knife"
+			}
+		]
 	},
-	sounds: {
+	"sounds": {
 		"place": "game:effect/squish1",
 		"break": "game:effect/squish2"
-	},
+	}
 }

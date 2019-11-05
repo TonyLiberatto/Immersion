@@ -1,145 +1,268 @@
 {
-	code: "headless-hyena",
-	class: "BlockPlaceOnDrop",
-	maxStackSize: 1,
-	resistance: 10,
-	entityClass: "ImmersionTransient",
-	attributes: {
-		convertFrom: "headless-hyena-*",
-		convertTo: "dead-rotten-large", 
-		eatenTo: "dead-rotten-large", 
-		inGameHours: "24",
-		contentConfig: [
-			{
-				foodFor: ["game:wolf-*", "game:fox-*"],
+	"code": "headless-hyena",
+	"class": "BlockPlaceOnDrop",
+	"maxStackSize": 1,
+	"resistance": 10,
+	"entityClass": "Generic",
+	"entityBehaviors": [{
+			"name": "Transient",
+			"properties": {
+				"convertFrom": "headless-hyena-*",
+				"convertTo": "dead-rotten-large",
+				"inGameHours": 24
 			}
-		],
-	},
-	creativeinventory: { "general": ["*"], "immersionfauna": ["*"] },
-	variantgroups: 
-	[
-		{ code: "type", states: ["wild-male","wild-female-tan", "wild-female-brown"] },
+		},
+		{
+			"name": "Consumable",
+			"properties": {
+				"eatenTo": "dead-rotten-large",
+				"contentConfig": {
+					"foodFor": [
+						"game:fox-*",
+						"game:wolf-*"
+					]
+				}
+			}
+		}
 	],
-	textures: 
-	{
-	all: { base: "block/headless/hyena/{type}"},
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"immersionfauna": [
+			"*"
+		]
 	},
-	shapeByType: {
+	"variantgroups": [{
+		"code": "type",
+		"states": [
+			"wild-male",
+			"wild-female-tan",
+			"wild-female-brown"
+		]
+	}],
+	"textures": {
+		"all": {
+			"base": "block/headless/hyena/{type}"
+		}
+	},
+	"shapeByType": {
 		"*": {
-			base: "block/dead/hyena",
-			alternates: [
-				{ base: "block/dead/hyena", rotateY: 45 },
-				{ base: "block/dead/hyena", rotateY: 90 },
-				{ base: "block/dead/hyena", rotateY: 135 },
-				{ base: "block/dead/hyena", rotateY: 180 },
-				{ base: "block/dead/hyena", rotateY: 225 },		
-				{ base: "block/dead/hyena", rotateY: 270 },
-				{ base: "block/dead/hyena", rotateY: 45 },
-				{ base: "block/dead/hyena", rotateY: 90 },
-				{ base: "block/dead/hyena", rotateY: 135 },
-				{ base: "block/dead/hyena", rotateY: 180 },
-				{ base: "block/dead/hyena", rotateY: 225 },		
-				{ base: "block/dead/hyena", rotateY: 270 }
+			"base": "block/dead/hyena",
+			"alternates": [{
+					"base": "block/dead/hyena",
+					"rotateY": 45
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 90
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 135
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 180
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 225
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 270
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 45
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 90
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 135
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 180
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 225
+				},
+				{
+					"base": "block/dead/hyena",
+					"rotateY": 270
+				}
 			]
 		}
 	},
-	randomDrawOffset: true,
-	lightAbsorption: 0,
-	sidesolid: { all: false },
-	sideopaque: { all: false },
-	selectionbox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.4, z2: 1 },	
-	collisionbox: null,
-	materialDensity: 3000,
-	guiTransform: {
-		rotation: { x: -22.5937, y: 190, z: 0 },
-		origin: { x: 0.5, y: 0.22, z: 0.5 },
-		scale: 1.22
+	"randomDrawOffset": true,
+	"lightAbsorption": 0,
+	"sidesolid": {
+		"all": false
 	},
-	fpHandTransform: {
-		rotation: { x: 0, y: -24, z: 0 }
+	"sideopaque": {
+		"all": false
 	},
-	tpHandTransform: {
-		translation: { x: -1.3, y: -0.7, z: -0.8 },
-		rotation: { x: 2, y: 31, z: -25 },
-		scale: 0.6
+	"selectionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.4,
+		"z2": 1
 	},
-  groundTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: 0, y: -45, z: 0 },
-		origin: { x: 0.5, y: 0, z: 0.5 },
-		scale: 4
+	"collisionbox": null,
+	"materialDensity": 3000,
+	"guiTransform": {
+		"rotation": {
+			"x": -22.5937,
+			"y": 190,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0.22,
+			"z": 0.5
+		},
+		"scale": 1.22
 	},
-	dropsByType: {
-		"headless-hyena-wild-female-tan": [
-			{
-				type: "block", 
-				code: "skinnedheadless-hyena", 
-				quantity: { avg: 1, var: 0 } ,
-				tool:"knife"
+	"fpHandTransform": {
+		"rotation": {
+			"x": 0,
+			"y": -24,
+			"z": 0
+		}
+	},
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.3,
+			"y": -0.7,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": 2,
+			"y": 31,
+			"z": -25
+		},
+		"scale": 0.6
+	},
+	"groundTransform": {
+		"translation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"rotation": {
+			"x": 0,
+			"y": -45,
+			"z": 0
+		},
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 4
+	},
+	"dropsByType": {
+		"headless-hyena-wild-female-tan": [{
+				"type": "block",
+				"code": "skinnedheadless-hyena",
+				"quantity": {
+					"avg": 1,
+					"var": 0
+				},
+				"tool": "knife"
 			},
 			{
-				type: "block", 
-				code: "hyenapelt-ground-east", 
-				quantity: { avg: 0.1, var: 0 } ,
-				tool:"knife",
-				lastDrop: true
+				"type": "block",
+				"code": "hyenapelt-ground-east",
+				"quantity": {
+					"avg": 0.1,
+					"var": 0
+				},
+				"tool": "knife",
+				"lastDrop": true
 			},
 			{
-				type: "item", 
-				code: "game:hide-raw-medium", 
-				quantity: { avg: 5, var: 1 } ,
-				tool:"knife",
-				lastDrop: true
-			},
-			],
-		"headless-hyena-wild-female-brown": [
-			{
-				type: "block", 
-				code: "skinnedheadless-hyena", 
-				quantity: { avg: 1, var: 0 } ,
-				tool:"knife"
-			},
-			{
-				type: "block", 
-				code: "hyenapelt-ground-east", 
-				quantity: { avg: 0.1, var: 0 } ,
-				tool:"knife",
-				lastDrop: true
-			},
-			{
-				type: "item", 
-				code: "game:hide-raw-medium", 
-				quantity: { avg: 5, var: 1 } ,
-				tool:"knife",
-				lastDrop: true
-			},
-			],
-		"headless-hyena-wild-male": [
-			{
-				type: "block", 
-				code: "skinnedheadless-hyena", 
-				quantity: { avg: 1, var: 0 } ,
-				tool:"knife"
-			},
-			{
-				type: "block", 
-				code: "hyenapelt-ground-east", 
-				quantity: { avg: 0.1, var: 0 } ,
-				tool:"knife",
-				lastDrop: true
-			},
-			{
-				type: "item", 
-				code: "game:hide-raw-medium", 
-				quantity: { avg: 5, var: 1 } ,
-				tool:"knife",
-				lastDrop: true
-				
-			},
+				"type": "item",
+				"code": "game:hide-raw-medium",
+				"quantity": {
+					"avg": 5,
+					"var": 1
+				},
+				"tool": "knife",
+				"lastDrop": true
+			}
 		],
+		"headless-hyena-wild-female-brown": [{
+				"type": "block",
+				"code": "skinnedheadless-hyena",
+				"quantity": {
+					"avg": 1,
+					"var": 0
+				},
+				"tool": "knife"
+			},
+			{
+				"type": "block",
+				"code": "hyenapelt-ground-east",
+				"quantity": {
+					"avg": 0.1,
+					"var": 0
+				},
+				"tool": "knife",
+				"lastDrop": true
+			},
+			{
+				"type": "item",
+				"code": "game:hide-raw-medium",
+				"quantity": {
+					"avg": 5,
+					"var": 1
+				},
+				"tool": "knife",
+				"lastDrop": true
+			}
+		],
+		"headless-hyena-wild-male": [{
+				"type": "block",
+				"code": "skinnedheadless-hyena",
+				"quantity": {
+					"avg": 1,
+					"var": 0
+				},
+				"tool": "knife"
+			},
+			{
+				"type": "block",
+				"code": "hyenapelt-ground-east",
+				"quantity": {
+					"avg": 0.1,
+					"var": 0
+				},
+				"tool": "knife",
+				"lastDrop": true
+			},
+			{
+				"type": "item",
+				"code": "game:hide-raw-medium",
+				"quantity": {
+					"avg": 5,
+					"var": 1
+				},
+				"tool": "knife",
+				"lastDrop": true
+			}
+		]
 	},
-	sounds: {
+	"sounds": {
 		"place": "game:effect/squish1",
 		"break": "game:effect/squish2"
-	},
+	}
 }
