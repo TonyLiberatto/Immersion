@@ -377,7 +377,7 @@
 				{ type: "item", code: "blastingpowder", quantity: { avg: 6, var: 5 }, chance: 6 },
 				{ type: "item", code: "quicklime", quantity: { avg: 8, var: 4 }, chance: 5 },
 				{ type: "item", code: "beenade-closed", quantity: { avg: 1.5, var: 0.5 }, chance: 4 },
-				{ type: "item", code: "hide-raw", quantity: { avg: 3, var: 2 }, chance: 2 },
+				{ type: "item", code: "hide-raw-medium", quantity: { avg: 3, var: 2 }, chance: 2 },
 				{ type: "item", code: "candle-wax", quantity: { avg: 3, var: 1 }, chance: 0.5 }
 			]
 		},

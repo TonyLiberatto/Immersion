@@ -7,7 +7,7 @@
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:hide-raw",
+        "Code": "game:hide-raw-medium",
         "Type": "Block",
 		"StackSize": 4		
     },

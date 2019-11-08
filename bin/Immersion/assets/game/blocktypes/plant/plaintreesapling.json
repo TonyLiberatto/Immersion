@@ -13,8 +13,7 @@
 			"*-bamboobrown": "bamboo-grown-brown",
 			"*-bamboogreen": "bamboo-grown-green"
 		},
-		"minGrowthDays": 5,
-		"maxGrowthDays": 8
+		"growthDays": { "avg": 6.5, "var": 1.5 }
 	},
 	"variantgroups": [{
 		"code": "wood",
