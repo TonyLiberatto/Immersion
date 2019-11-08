@@ -122,7 +122,7 @@ namespace Immersion
         public static void PlaySoundAt(this IWorldAccessor world, AssetLocation loc, BlockPos Pos) => world.PlaySoundAt(loc, Pos.X, Pos.Y, Pos.Z);
         public static int GetID(this AssetLocation loc, ICoreAPI Api) => loc.GetBlock(Api).BlockId;
 
-        public static string WithDomain(this string a, string domain = "game:") => a.IndexOf(":") == -1 ? domain + a : a;
+        public static string WithDomain(this string a, string domain = "game") => a.IndexOf(":") == -1 ? domain + ":" + a : a;
 
         public static string[] WithDomain(this string[] a)
         {

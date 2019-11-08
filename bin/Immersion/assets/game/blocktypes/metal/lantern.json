@@ -9,7 +9,7 @@
 					]
 		},
 	},
-	behaviors: [{name: "OmniAttachable", properties: { facingPos: 3 }}],
+	behaviors: [{name: "OmniAttachable", properties: { facingCode: "position" }}],
 	
 	heldRightTpIdleAnimation: "holdinglanternrighthand",
 	heldLeftTpIdleAnimation: "holdinglanternlefthand",

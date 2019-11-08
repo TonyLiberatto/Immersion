@@ -140,6 +140,12 @@ namespace Immersion
 
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
+            if (mesh == null)
+            {
+                ICoreClientAPI capi = Api as ICoreClientAPI;
+                if (capi != null) capi.Tesselator.TesselateBlock(block, out mesh);
+            }
+
             mesher.AddMeshData(mesh);
             return true;
         }
