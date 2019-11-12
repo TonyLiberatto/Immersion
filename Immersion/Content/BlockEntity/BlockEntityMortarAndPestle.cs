@@ -2,48 +2,41 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
+using Vintagestory.GameContent.Mechanics;
 
 namespace Immersion
 {
-    public class BEMortarAndPestle : BlockEntityOpenableContainer
+    public class BlockEntityMortarAndPestle : BlockEntityOpenableContainer
     {
-        //static SimpleParticleProperties FlourParticles;
-
         static SimpleParticleProperties FlourDustParticles;
 
-        static BEMortarAndPestle()
+        static BlockEntityMortarAndPestle()
         {
-            Vec3d CommonPos = new Vec3d(3 / 32f, 0, 3 / 32f);
-            /*
-            FlourParticles = new SimpleParticleProperties(1, 3, ColorUtil.ToRgba(40, 220, 220, 220), new Vec3d(), new Vec3d(), new Vec3f(-0.25f, -0.25f, -0.25f), new Vec3f(0.25f, 0.25f, 0.25f), 1, 1, 0.1f, 0.3f, EnumParticleModel.Quad);
-            FlourParticles.addPos.Set(CommonPos);
-            FlourParticles.addQuantity = 20;
-            FlourParticles.minVelocity.Set(-0.25f, 0, -0.25f);
-            FlourParticles.addVelocity.Set(0.5f, 1, 0.5f);
-            FlourParticles.WithTerrainCollision = true;
-            FlourParticles.model = EnumParticleModel.Cube;
-            FlourParticles.lifeLength = 1.5f;
-            FlourParticles.SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -0.4f);
-            */
-
+            // 1..5 per tick
             FlourDustParticles = new SimpleParticleProperties(1, 3, ColorUtil.ToRgba(40, 220, 220, 220), new Vec3d(), new Vec3d(), new Vec3f(-0.25f, -0.25f, -0.25f), new Vec3f(0.25f, 0.25f, 0.25f), 1, 1, 0.1f, 0.3f, EnumParticleModel.Quad);
-            FlourDustParticles.addPos.Set(CommonPos);
             FlourDustParticles.addQuantity = 5;
             FlourDustParticles.minVelocity.Set(-0.05f, 0, -0.05f);
             FlourDustParticles.addVelocity.Set(0.1f, 0.2f, 0.1f);
             FlourDustParticles.WithTerrainCollision = false;
-            FlourDustParticles.model = EnumParticleModel.Quad;
             FlourDustParticles.lifeLength = 1.5f;
             FlourDustParticles.SelfPropelled = true;
             FlourDustParticles.gravityEffect = 0;
             FlourDustParticles.SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, 0.4f);
             FlourDustParticles.OpacityEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -16f);
+        }
+
+        public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc)
+        {
+            dsc.AppendLine("Right click inside center to access inventory.");
+            base.GetBlockInfo(forPlayer, dsc);
         }
 
         internal InventoryQuern inventory;
@@ -54,69 +47,29 @@ namespace Immersion
 
 
         GuiDialogBlockEntityQuern clientDialog;
-
-        Block ownBlock;
         PestleRenderer renderer;
 
-        public string Material
-        {
-            get { return ownBlock.Variant["wood"]; }
-        }
 
         // Server side only
         List<IPlayer> playersGrinding = new List<IPlayer>();
         // Client and serverside
         int quantityPlayersGrinding;
 
-        public bool IsGrinding
+        #region Getters
+
+        public string Material
         {
-            get { return quantityPlayersGrinding > 0; }
+            get { return Block.LastCodePart(); }
         }
 
-        public void SetPlayerGrinding(IPlayer player, bool playerGrinding)
+        public float GrindSpeed
         {
-            bool beforeGrinding = IsGrinding;
-
-            if (playerGrinding)
+            get
             {
-                if (!playersGrinding.Contains(player))
-                {
-                    playersGrinding.Add(player);
-                }
-                //Console.WriteLine("added player");
-            }
-            else
-            {
-                playersGrinding.Remove(player);
-                //Console.WriteLine("removed player");
-            }
-
-            quantityPlayersGrinding = playersGrinding.Count;
-
-            updateGrindingState(beforeGrinding);
-        }
-
-
-        void updateGrindingState(bool beforeGrinding)
-        {
-            bool nowGrinding = IsGrinding;
-
-            if (nowGrinding != beforeGrinding)
-            {
-                if (renderer != null)
-                {
-                    renderer.ShouldRotate = nowGrinding;
-                }
-
-                Api.World.BlockAccessor.MarkBlockDirty(Pos, OnRetesselated);
-
-                if (Api.Side == EnumAppSide.Server)
-                {
-                    MarkDirty();
-                }
+                if (quantityPlayersGrinding > 0) return 1;
+                return 0;
             }
         }
-
 
 
         MeshData quernBaseMesh
@@ -141,14 +94,9 @@ namespace Immersion
             set { Api.ObjectCache["querntopmesh-" + Material] = value; }
         }
 
-
+        #endregion
 
         #region Config
-
-        public virtual float SoundLevel
-        {
-            get { return 0.5f; }
-        }
 
         // seconds it requires to melt the ore once beyond melting point
         public virtual float maxGrindingTime()
@@ -163,7 +111,7 @@ namespace Immersion
 
         public virtual string DialogTitle
         {
-            get { return "Quern"; }
+            get { return Lang.Get("Quern"); }
         }
 
         public override InventoryBase Inventory
@@ -174,17 +122,7 @@ namespace Immersion
         #endregion
 
 
-        private void OnRetesselated()
-        {
-            if (renderer == null) return; // Maybe already disposed
-
-            //Console.WriteLine("did retesselate now, players using: {0}, grind flag: {1}", playersGrinding.Count, IsGrinding);
-            renderer.ShouldRender = IsGrinding;
-        }
-
-
-
-        public BEMortarAndPestle()
+        public BlockEntityMortarAndPestle()
         {
             inventory = new InventoryQuern(null, null);
             inventory.SlotModified += OnSlotModifid;
@@ -192,23 +130,20 @@ namespace Immersion
 
 
 
-        public override void Initialize(ICoreAPI Api)
+        public override void Initialize(ICoreAPI api)
         {
-            base.Initialize(Api);
+            base.Initialize(api);
 
-            ownBlock = Api.World.BlockAccessor.GetBlock(Pos);
-
-            inventory.LateInitialize("quern-1", Api);
-
+            inventory.LateInitialize("quern-1", api);
 
             RegisterGameTickListener(Every100ms, 100);
             RegisterGameTickListener(Every500ms, 500);
 
-            if (Api is ICoreClientAPI)
+            if (api is ICoreClientAPI)
             {
-                renderer = new PestleRenderer(Api as ICoreClientAPI, Pos, GenMesh("top"));
+                renderer = new PestleRenderer(api as ICoreClientAPI, Pos, GenMesh("top"));
 
-                (Api as ICoreClientAPI).Event.RegisterRenderer(renderer, EnumRenderStage.Opaque);
+                (api as ICoreClientAPI).Event.RegisterRenderer(renderer, EnumRenderStage.Opaque);
 
                 if (quernBaseMesh == null)
                 {
@@ -219,64 +154,32 @@ namespace Immersion
                     quernTopMesh = GenMesh("top");
                 }
             }
-
         }
-
-
-        private void OnSlotModifid(int slotid)
-        {
-            if (Api is ICoreClientAPI && clientDialog != null)
-            {
-                SetDialogValues(clientDialog.Attributes);
-            }
-
-            if (slotid == 0)
-            {
-                inputGrindTime = 0.0f; //reset the progress to 0 if the item is removed.
-                MarkDirty();
-
-                if (clientDialog != null && clientDialog.IsOpened())
-                {
-                    clientDialog.SingleComposer.ReCompose();
-                }
-            }
-
-        }
-
-        internal MeshData GenMesh(string type = "base")
-        {
-            Block block = Api.World.BlockAccessor.GetBlock(Pos);
-            if (block.BlockId == 0) return null;
-
-
-            MeshData mesh;
-            ITesselatorAPI mesher = ((ICoreClientAPI)Api).Tesselator;
-
-            mesher.TesselateShape(block, Api.Assets.TryGet("immersion:shapes/block/wood/mortarandpestle/" + type + ".json").ToObject<Shape>(), out mesh);
-
-            return mesh;
-        }
-
 
         private void Every100ms(float dt)
         {
+            float grindSpeed = GrindSpeed;
+
             if (Api.Side == EnumAppSide.Client)
             {
-                if (!IsGrinding || InputStack == null) return;
+                if (InputStack != null)
+                {
+                    float x = (float)Api.World.Rand.NextDouble(), z = (float)Api.World.Rand.NextDouble();
+                    float dustMinQ = 1 * grindSpeed;
+                    float dustAddQ = 5 * grindSpeed;
+                    float flourPartMinQ = 1 * grindSpeed;
+                    float flourPartAddQ = 20 * grindSpeed;
 
-                FlourDustParticles.color /*= FlourParticles.color*/ = InputStack.Collectible.GetRandomColor(Api as ICoreClientAPI, InputStack);
-                FlourDustParticles.color &= 0xffffff;
-                FlourDustParticles.color |= (200 << 24);
-
-                //FlourParticles.minPos.Set(Pos.X+0.5, Pos.Y + 0.5, Pos.Z+0.5);
-                FlourDustParticles.minPos.Set(Pos.X + 0.5, Pos.Y + 0.5, Pos.Z + 0.5);
-
-
-                FlourDustParticles.minVelocity.Set(-0.1f, 0, -0.1f);
-                FlourDustParticles.addVelocity.Set(0.2f, 0.2f, 0.2f);
-
-                //Api.World.SpawnParticles(FlourParticles);
-                Api.World.SpawnParticles(FlourDustParticles);
+                    FlourDustParticles.color = InputStack.Collectible.GetRandomColor(Api as ICoreClientAPI, InputStack);
+                    FlourDustParticles.color &= 0xffffff;
+                    FlourDustParticles.color |= (200 << 24);
+                    FlourDustParticles.minQuantity = dustMinQ;
+                    FlourDustParticles.addQuantity = dustAddQ;
+                    FlourDustParticles.minPos.Set(Pos.MidPoint().Add(0, 0.1, 0));
+                    FlourDustParticles.minVelocity.Set(-0.1f, 0, -0.1f);
+                    FlourDustParticles.addVelocity.Set(0.2f, 0.2f, 0.2f);
+                    Api.World.SpawnParticles(FlourDustParticles);
+                }
 
                 return;
             }
@@ -285,9 +188,9 @@ namespace Immersion
             // Only tick on the server and merely sync to client
 
             // Use up fuel
-            if (CanGrind() && IsGrinding)
+            if (CanGrind() && grindSpeed > 0)
             {
-                inputGrindTime += dt;
+                inputGrindTime += dt * grindSpeed;
 
                 if (inputGrindTime >= maxGrindingTime())
                 {
@@ -321,13 +224,108 @@ namespace Immersion
         // Sync to client every 500ms
         private void Every500ms(float dt)
         {
-            if (Api is ICoreServerAPI && (IsGrinding || prevInputGrindTime != inputGrindTime))
+            if (Api.Side == EnumAppSide.Server && (GrindSpeed > 0 || prevInputGrindTime != inputGrindTime))
             {
                 MarkDirty();
             }
 
             prevInputGrindTime = inputGrindTime;
         }
+
+
+
+
+
+        public void SetPlayerGrinding(IPlayer player, bool playerGrinding)
+        {
+            if (playerGrinding)
+            {
+                if (!playersGrinding.Contains(player))
+                {
+                    playersGrinding.Add(player);
+                }
+            }
+            else
+            {
+                playersGrinding.Remove(player);
+            }
+
+            quantityPlayersGrinding = playersGrinding.Count;
+
+            updateGrindingState();
+        }
+
+        bool beforeGrinding;
+        void updateGrindingState()
+        {
+            if (Api?.World == null) return;
+
+            bool nowGrinding = quantityPlayersGrinding > 0;
+
+            if (nowGrinding != beforeGrinding)
+            {
+                if (renderer != null)
+                {
+                    renderer.ShouldRotate = quantityPlayersGrinding > 0;
+                }
+
+                Api.World.BlockAccessor.MarkBlockDirty(Pos, OnRetesselated);
+
+                if (Api.Side == EnumAppSide.Server)
+                {
+                    MarkDirty();
+                }
+            }
+
+            beforeGrinding = nowGrinding;
+        }
+
+
+
+
+        private void OnSlotModifid(int slotid)
+        {
+            if (Api is ICoreClientAPI && clientDialog?.Attributes != null)
+            {
+                SetDialogValues(clientDialog.Attributes);
+            }
+
+            if (slotid == 0)
+            {
+                inputGrindTime = 0.0f; //reset the progress to 0 if the item is removed.
+                MarkDirty();
+
+                if (clientDialog != null && clientDialog.IsOpened())
+                {
+                    clientDialog.SingleComposer.ReCompose();
+                }
+            }
+        }
+
+
+        private void OnRetesselated()
+        {
+            if (renderer == null) return; // Maybe already disposed
+
+            renderer.ShouldRender = quantityPlayersGrinding > 0;
+        }
+
+
+
+
+        internal MeshData GenMesh(string type = "base")
+        {
+            Block block = Api.World.BlockAccessor.GetBlock(Pos);
+            if (block.BlockId == 0) return null;
+
+            MeshData mesh;
+            ITesselatorAPI mesher = ((ICoreClientAPI)Api).Tesselator;
+
+            mesher.TesselateShape(block, Api.Assets.TryGet("immersion:shapes/block/wood/mortarandpestle/" + type + ".json").ToObject<Shape>(), out mesh);
+
+            return mesh;
+        }
+
 
 
 
@@ -358,7 +356,7 @@ namespace Immersion
                 using (MemoryStream ms = new MemoryStream())
                 {
                     BinaryWriter writer = new BinaryWriter(ms);
-                    writer.Write("BEMortarAndPestle");
+                    writer.Write("BlockEntityQuern");
                     writer.Write(DialogTitle);
                     TreeAttribute tree = new TreeAttribute();
                     inventory.ToTreeAttributes(tree);
@@ -396,7 +394,6 @@ namespace Immersion
             if (worldForResolving.Side == EnumAppSide.Client)
             {
                 List<int> clientIds = new List<int>((tree["clientIdsGrinding"] as IntArrayAttribute).value);
-                bool wasGrinding = quantityPlayersGrinding > 0;
 
                 quantityPlayersGrinding = clientIds.Count;
 
@@ -420,10 +417,12 @@ namespace Immersion
                     if (plr != null) playersGrinding.Add(plr);
                 }
 
-                updateGrindingState(wasGrinding);
+                updateGrindingState();
             }
 
-            if (Api?.Side == EnumAppSide.Client && clientDialog != null)
+
+
+            if (Api?.Side == EnumAppSide.Client && clientDialog?.Attributes != null && clientDialog.IsOpened())
             {
                 SetDialogValues(clientDialog.Attributes);
             }
@@ -432,12 +431,12 @@ namespace Immersion
 
         void SetDialogValues(ITreeAttribute dialogTree)
         {
-            if (dialogTree != null)
-            {
-                dialogTree.SetFloat("inputGrindTime", inputGrindTime);
-                dialogTree.SetFloat("maxGrindTime", maxGrindingTime());
-            }
+            dialogTree.SetFloat("inputGrindTime", inputGrindTime);
+            dialogTree.SetFloat("maxGrindTime", maxGrindingTime());
         }
+
+
+
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
@@ -494,21 +493,29 @@ namespace Immersion
         {
             if (packetid == (int)EnumBlockStovePacket.OpenGUI)
             {
-                using (MemoryStream memoryStream = new MemoryStream(data))
+                using (MemoryStream ms = new MemoryStream(data))
                 {
-                    BinaryReader stream = new BinaryReader((Stream)memoryStream);
-                    stream.ReadString();
-                    string DialogTitle = stream.ReadString();
-                    TreeAttribute treeAttribute = new TreeAttribute();
-                    treeAttribute.FromBytes(stream);
-                    Inventory.FromTreeAttributes(treeAttribute);
+                    BinaryReader reader = new BinaryReader(ms);
+
+                    string dialogClassName = reader.ReadString();
+                    string dialogTitle = reader.ReadString();
+
+                    TreeAttribute tree = new TreeAttribute();
+                    tree.FromBytes(reader);
+                    Inventory.FromTreeAttributes(tree);
                     Inventory.ResolveBlocksOrItems();
-                    IClientWorldAccessor world = (IClientWorldAccessor)Api.World;
-                    SyncedTreeAttribute tree = new SyncedTreeAttribute();
-                    SetDialogValues(tree);
-                    clientDialog = new GuiDialogBlockEntityQuern(DialogTitle, Inventory, Pos, tree, Api as ICoreClientAPI);
-                    clientDialog.TryOpen();
-                    clientDialog.OnClosed += (Vintagestory.API.Common.Action)(() => clientDialog = null);
+
+                    IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
+
+                    SyncedTreeAttribute dtree = new SyncedTreeAttribute();
+                    SetDialogValues(dtree);
+
+                    if (clientDialog == null || !clientDialog.IsOpened())
+                    {
+                        clientDialog = new GuiDialogBlockEntityQuern(dialogTitle, Inventory, Pos, dtree, Api as ICoreClientAPI);
+                        clientDialog.TryOpen();
+                        clientDialog.OnClosed += () => clientDialog = null;
+                    }
                 }
             }
 
@@ -562,10 +569,8 @@ namespace Immersion
 
         public override void OnStoreCollectibleMappings(Dictionary<int, AssetLocation> blockIdMapping, Dictionary<int, AssetLocation> itemIdMapping)
         {
-            int q = Inventory.Count;
-            for (int i = 0; i < q; i++)
+            foreach (var slot in Inventory)
             {
-                ItemSlot slot = inventory[i];
                 if (slot.Itemstack == null) continue;
 
                 if (slot.Itemstack.Class == EnumItemClass.Item)
@@ -581,10 +586,8 @@ namespace Immersion
 
         public override void OnLoadCollectibleMappings(IWorldAccessor worldForResolve, Dictionary<int, AssetLocation> oldBlockIdMapping, Dictionary<int, AssetLocation> oldItemIdMapping)
         {
-            int q = Inventory.Count;
-            for (int i = 0; i < q; i++)
+            foreach (var slot in Inventory)
             {
-                ItemSlot slot = inventory[i];
                 if (slot.Itemstack == null) continue;
                 if (!slot.Itemstack.FixMapping(oldBlockIdMapping, oldItemIdMapping, worldForResolve))
                 {
@@ -597,27 +600,19 @@ namespace Immersion
 
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tesselator)
         {
-            if (ownBlock == null) return false;
-            string direc = ownBlock.Variant["side"];
-            float yDeg = BlockFacing.FromCode(direc).HorizontalAngleIndex * 90;
+            if (Block == null) return false;
+            float yDeg = BlockFacing.FromCode(Block.Variant["side"]).HorizontalAngleIndex * 90;
+            mesher.AddMeshData(quernBaseMesh);
 
-            mesher.AddMeshData(
-                    quernBaseMesh.Clone()
-                    .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg - 90) * GameMath.DEG2RAD, 0.0f)
-                );
-            if (!IsGrinding)
+            if (quantityPlayersGrinding == 0)
             {
-
                 mesher.AddMeshData(
                     quernTopMesh.Clone()
-                    //.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0, renderer.Angle * GameMath.DEG2RAD, 0)
-                    //.Translate(0 / 16f, 11 / 16f, 0 / 16f)
                     .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, 0.0f, 0.0f)
                     .Translate(0.1f, 0.0f, 0.0f)
                     .Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0.0f, (yDeg - 90) * GameMath.DEG2RAD, -45.0f * GameMath.DEG2RAD)
                     .Translate(0.0f, 0.5f, 0.0f)
                 );
-
             }
 
 
@@ -631,6 +626,5 @@ namespace Immersion
 
             renderer?.Unregister();
         }
-
     }
 }

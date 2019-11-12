@@ -10,7 +10,6 @@ namespace Immersion
     class BlockEntityChimney : BlockEntityParticleEmitter
     {
         private AssetLocation[][] lookFor;
-        long listenerId;
         Block ownBlock;
         int searchRadius;
 
@@ -26,20 +25,9 @@ namespace Immersion
 
             if (Api.World is IClientWorldAccessor)
             {
-                listenerId = Api.World.RegisterGameTickListener(ticker, 5000);
+                RegisterGameTickListener(dt => checkBelow(Pos, Api), 5000);
             }
             base.Initialize(Api);
-        }
-
-        public override void OnBlockRemoved()
-        {
-            Api.World.UnregisterGameTickListener(listenerId);
-            base.OnBlockRemoved();
-        }
-
-        public void ticker(float dt)
-        {
-            checkBelow(Pos, Api);
         }
 
         public void checkBelow(BlockPos Pos, ICoreAPI Api)

@@ -36,7 +36,7 @@ namespace Immersion
 
         public void RegisterBlockEntities()
         {
-            Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BEMortarAndPestle));
+            Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BlockEntityMortarAndPestle));
             Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
             Api.RegisterBlockEntityClass("ImmersionRoads", typeof(BEImmersionRoads));
             Api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));

@@ -20,9 +20,9 @@ namespace Immersion
         {
             if (world.BlockAccessor.GetBlock(blockSel.Position.UpCopy()).Id != 0) return false;
 
-            if (blockSel.SelectionBoxIndex == 1)
+            if (blockSel.SelectionBoxIndex != 4)
             {
-                BEMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEMortarAndPestle;
+                BlockEntityMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityMortarAndPestle;
                 if (beQuern != null && beQuern.CanGrind())
                 {
                     beQuern.SetPlayerGrinding(byPlayer, true);
@@ -35,7 +35,7 @@ namespace Immersion
 
         public override bool OnBlockInteractStep(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            BEMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEMortarAndPestle;
+            BlockEntityMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityMortarAndPestle;
             if (beQuern != null)
             {
                 return beQuern.CanGrind();
@@ -46,7 +46,7 @@ namespace Immersion
 
         public override void OnBlockInteractStop(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            BEMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEMortarAndPestle;
+            BlockEntityMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityMortarAndPestle;
             if (beQuern != null)
             {
                 beQuern.SetPlayerGrinding(byPlayer, false);
@@ -56,7 +56,7 @@ namespace Immersion
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, EnumItemUseCancelReason cancelReason)
         {
-            BEMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEMortarAndPestle;
+            BlockEntityMortarAndPestle beQuern = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityMortarAndPestle;
             if (beQuern != null)
             {
                 beQuern.SetPlayerGrinding(byPlayer, false);
@@ -65,7 +65,6 @@ namespace Immersion
 
             return true;
         }
-
 
     }
 }

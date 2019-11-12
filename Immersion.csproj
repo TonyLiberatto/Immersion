@@ -112,12 +112,11 @@
     <Compile Include="Immersion\Content\Block Behavior\LampPostBehavior.cs" />
     <Compile Include="Immersion\Content\Block Behavior\RotateNinety.cs" />
     <Compile Include="Immersion\Content\BlockEntityRenderer\PestleRenderer.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\BECraftingStation.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\BEMortarAndPestle.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\BEScary.cs" />
+    <Compile Include="Immersion\Content\BlockEntity\BlockEntityCraftingStation.cs" />
+    <Compile Include="Immersion\Content\BlockEntity\BlockEntityMortarAndPestle.cs" />
+    <Compile Include="Immersion\Content\BlockEntity\BlockEntityScary.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorTransient.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\POIEntity.cs" />
     <Compile Include="Immersion\Content\Block\BlockChandelierFix.cs" />
     <Compile Include="Immersion\Content\Block\BlockCheeseCloth.cs" />
     <Compile Include="Immersion\Content\Block\BlockCraftingStation.cs" />
@@ -3135,4 +3134,9 @@
     <Content Include="bin\Totems\assets\totems\textures\item\offering-bowl\vegetable.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties bin_4immersion_4assets_4game_4itemtypes_4creature_1json__JsonSchema="http://json.schemastore.org/ansible-stable-2.7" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

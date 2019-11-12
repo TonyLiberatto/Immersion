@@ -264,5 +264,12 @@ namespace Immersion
 
         public static bool IsBlock(this JsonItemStack stack) => stack.Type == EnumItemClass.Block;
         public static bool IsItem(this JsonItemStack stack) => stack.Type == EnumItemClass.Item;
+
+        public static TextureAtlasPosition GetTexAtlasPosition(this ICoreClientAPI capi, CollectibleObject collectible, string direction = "up")
+        {
+            return collectible.ItemClass == EnumItemClass.Item ?
+                capi.ItemTextureAtlas.GetPosition(collectible.Code.GetItem(capi)) :
+                capi.BlockTextureAtlas.GetPosition(collectible.Code.GetBlock(capi), direction);
+        }
     }
 }
