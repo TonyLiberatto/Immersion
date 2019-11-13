@@ -271,5 +271,6 @@ namespace Immersion
                 capi.ItemTextureAtlas.GetPosition(collectible.Code.GetItem(capi)) :
                 capi.BlockTextureAtlas.GetPosition(collectible.Code.GetBlock(capi), direction);
         }
+        public static double DistanceTo(this Vec3d start, Vec3d end) => Math.Sqrt(start.SquareDistanceTo(end));
     }
 }

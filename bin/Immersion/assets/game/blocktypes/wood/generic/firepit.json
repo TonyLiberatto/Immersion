@@ -1,0 +1,331 @@
+{
+    "code": "firepit",
+    "variantgroups": [
+        {
+            "code": "burnstate",
+            "states": [
+                "construct1",
+                "construct2",
+                "construct3",
+                "construct4",
+                "extinct",
+                "lit"
+            ]
+        }
+    ],
+    "attributes": {
+        "handbook": {
+            "include": true,
+            "extraSections": [
+                {
+                    "title": "Created by",
+                    "text": "Placing <a href=\"handbook://item-drygrass\">dry grass</a> on the ground and then adding 4 <a href=\"handbook://item-firewood\">fire wood</a>."
+                }
+            ]
+        }
+    },
+    "class": "BlockFirepit",
+    "entityClass": "Firepit",
+    "entityBehaviorsByType": {
+        "*": [
+            { "name": "FirepitScary", "properties": { "fearRadius": 48 } }
+        ]
+    },
+    "behaviors": [
+        {
+            "name": "Container"
+        },
+        {
+            "name": "Unstable"
+        },
+        {
+            "name": "Ignitable"
+        }
+    ],
+    "renderpass": "OpaqueNoCull",
+    "shape": {
+        "base": "block/wood/firepit/{burnstate}"
+    },
+    "textures": {
+        "log": {
+            "base": "block/wood/firepit/log"
+        },
+        "ceramic": {
+            "base": "block/clay/ceramic"
+        },
+        "ember": {
+            "base": "block/ember"
+        },
+        "ashes": {
+            "base": "block/wood/firepit/ground"
+        },
+        "fire": {
+            "base": "block/wood/firepit/fire"
+        }
+    },
+    "creativeinventory": {
+        "general": [
+            "firepit-extinct"
+        ],
+        "decorative": [
+            "firepit-extinct"
+        ]
+    },
+    "blockmaterial": "Wood",
+    "lightAbsorption": 0,
+    "lightHsvByType": {
+        "firepit-extinct": [
+            7,
+            7,
+            3
+        ],
+        "firepit-lit": [
+            7,
+            7,
+            16
+        ]
+    },
+    "particlePropertiesByType": {
+        "firepit-extinct": [
+            {
+                "hsvaColor": [
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 70,
+                        "var": 30
+                    },
+                    {
+                        "avg": 220,
+                        "var": 50
+                    }
+                ],
+                "opacityEvolve": {
+                    "transform": "quadratic",
+                    "factor": -16
+                },
+                "gravityEffect": {
+                    "avg": 0,
+                    "var": 0
+                },
+                "posOffset": [
+                    {
+                        "avg": 0,
+                        "var": 0.2
+                    },
+                    {
+                        "avg": -0.4,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.2
+                    }
+                ],
+                "velocity": [
+                    {
+                        "avg": 0,
+                        "var": 0.05
+                    },
+                    {
+                        "avg": 0.1,
+                        "var": 0.05
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.05
+                    }
+                ],
+                "quantity": {
+                    "avg": 0.02
+                },
+                "size": {
+                    "avg": 0.3,
+                    "var": 0.05
+                },
+                "sizeEvolve": {
+                    "transform": "linear",
+                    "factor": 1.5
+                },
+                "particleModel": "Quad"
+            }
+        ],
+        "firepit-lit": [
+            {
+                "hsvaColor": [
+                    {
+                        "avg": 30,
+                        "var": 20
+                    },
+                    {
+                        "avg": 255,
+                        "var": 50
+                    },
+                    {
+                        "avg": 255,
+                        "var": 50
+                    },
+                    {
+                        "avg": 255,
+                        "var": 0
+                    }
+                ],
+                "gravityEffect": {
+                    "avg": 0,
+                    "var": 0
+                },
+                "posOffset": [
+                    {
+                        "avg": 0,
+                        "var": 0.2
+                    },
+                    {
+                        "avg": -0.4,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.2
+                    }
+                ],
+                "velocity": [
+                    {
+                        "avg": 0,
+                        "var": 0.05
+                    },
+                    {
+                        "avg": 0.5,
+                        "var": 0.1
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.05
+                    }
+                ],
+                "quantity": {
+                    "avg": 0.1
+                },
+                "size": {
+                    "avg": 0.25,
+                    "var": 0
+                },
+                "glowLevel": 128,
+                "sizeEvolve": {
+                    "transform": "quadratic",
+                    "factor": -0.5
+                },
+                "selfPropelled": true
+            },
+            {
+                "hsvaColor": [
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0
+                    },
+                    {
+                        "avg": 70,
+                        "var": 30
+                    },
+                    {
+                        "avg": 220,
+                        "var": 50
+                    }
+                ],
+                "opacityEvolve": {
+                    "transform": "linear",
+                    "factor": -255
+                },
+                "gravityEffect": {
+                    "avg": 0,
+                    "var": 0
+                },
+                "posOffset": [
+                    {
+                        "avg": 0,
+                        "var": 0.2
+                    },
+                    {
+                        "avg": -0.4,
+                        "var": 0
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.2
+                    }
+                ],
+                "velocity": [
+                    {
+                        "avg": 0,
+                        "var": 0.025
+                    },
+                    {
+                        "avg": 0.1,
+                        "var": 0.05
+                    },
+                    {
+                        "avg": 0,
+                        "var": 0.025
+                    }
+                ],
+                "quantity": {
+                    "avg": 0.12
+                },
+                "size": {
+                    "avg": 0.3,
+                    "var": 0.05
+                },
+                "sizeEvolve": {
+                    "transform": "linear",
+                    "factor": 1.5
+                },
+                "particleModel": "Quad",
+                "lifeLength": {
+                    "avg": 18
+                },
+                "selfPropelled": true
+            }
+        ]
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "replaceable": 10,
+    "resistance": 2.5,
+    "collisionbox": null,
+    "selectionbox": {
+        "x1": 0.125,
+        "y1": 0,
+        "z1": 0.125,
+        "x2": 0.875,
+        "y2": 0.5,
+        "z2": 0.875
+    },
+    "guiTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": 0.0625,
+            "z": 0.5
+        },
+        "scale": 1.5
+    },
+    "drops": [],
+    "materialDensity": 600,
+    "sounds": {
+        "place": "block/planks",
+        "hit": "block/planks",
+        "break": "block/planks"
+    }
+}

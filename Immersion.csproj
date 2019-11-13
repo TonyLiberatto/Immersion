@@ -102,6 +102,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Immersion\Content\AiTask\AiTaskFear.cs" />
     <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorConsumable.cs" />
     <Compile Include="Immersion\ClassRegistry.cs" />
     <Compile Include="Immersion\Content\AiTask\AiTaskSleep.cs" />
@@ -114,7 +115,7 @@
     <Compile Include="Immersion\Content\BlockEntityRenderer\PestleRenderer.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityCraftingStation.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityMortarAndPestle.cs" />
-    <Compile Include="Immersion\Content\BlockEntity\BlockEntityScary.cs" />
+    <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorScary.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorTransient.cs" />
     <Compile Include="Immersion\Content\Block\BlockChandelierFix.cs" />

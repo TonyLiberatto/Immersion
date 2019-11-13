@@ -32,6 +32,7 @@ namespace Immersion
         public void RegisterAiTasks()
         {
             AiTaskRegistry.Register("sleep", typeof(AiTaskSleep));
+            AiTaskRegistry.Register("fear", typeof(AiTaskFear));
         }
 
         public void RegisterBlockEntities()
@@ -49,6 +50,8 @@ namespace Immersion
         {
             Api.RegisterBlockEntityBehaviorClass("Consumable", typeof(BEBehaviorConsumable));
             Api.RegisterBlockEntityBehaviorClass("Transient", typeof(BEBehaviorTransient));
+            Api.RegisterBlockEntityBehaviorClass("Scary", typeof(BEBehaviorScary));
+            Api.RegisterBlockEntityBehaviorClass("FirepitScary", typeof(BEBehaviorFirepitScary));
         }
 
         public void RegisterItems()
