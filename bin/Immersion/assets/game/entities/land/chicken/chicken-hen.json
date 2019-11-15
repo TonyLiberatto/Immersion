@@ -29,7 +29,7 @@
 	],
   client: {
     renderer: "Shape",
-    shape: { base: "entity/land/chicken/hen" },
+    shape: { base: "entity/land/chicken-hen" },
     textures: {all: { base: "entity/chicken/hen/{color}" } },
     behaviors: [
       { code: "repulseagents" },

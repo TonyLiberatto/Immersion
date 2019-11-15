@@ -1,14 +1,8 @@
 {
   code: "chicken-chick",
   class: "EntityAgent",
-  hitboxSize: {
-    x: 0.4,
-    y: 0.2
-  },
-  deadHitboxSize: {
-    x: 0.4,
-    y: 0.2
-  },
+  hitboxSize: { x: 0.4, y: 0.2  },
+  deadHitboxSize: { x: 0.4, y: 0.2 },
   eyeHeight: 0.15,
   variantgroups: [
     {
@@ -18,28 +12,50 @@
   ],
   client: {
     renderer: "Shape",
-    shape: { base: "entity/land/chicken/chick" },
+    shape: { base: "entity/land/chicken-baby" },
     textures: { all: { base: "entity/chicken/chick/{color}" } },
     behaviors: [
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
-      {
-        code: "floatupwhenstuck",
-        onlyWhenDead: true
-      },
-      { code: "interpolateposition" },
-     
+      { code: "controlledphysics", stepHeight: 1.0001 },
+      { code: "floatupwhenstuck", onlyWhenDead: true  },
+      { code: "interpolateposition" },     
     ],
     animations: [
-      {
-        code: "hurt",
-        animation: "hurt",
-        animationSpeed: 2.2,
-        weight: 10,
-        blendMode: "AddAverage"
-      },
+		{
+			code: "hurt",
+			animation: "hurt",
+			animationSpeed: 2.2,
+			weight: 10,
+			blendMode: "AddAverage"
+		},
+		{
+			code: "die",
+			animation: "death", 
+			animationSpeed: 1.25,
+			weight: 10,
+			blendMode: "Average",
+			triggeredBy: { onControls: ["dead"] }
+		},
+		{ 
+			code: "idle", 
+			animation: "idle",
+			blendMode: "AddAverage",
+			easeOutSpeed: 4,
+			triggeredBy: { defaultAnim: true },
+		},
+		{
+			code: "sleep", 
+			animation: "sleep",
+			easeInSpeed: 4,
+			easeOutSpeed: 4,
+			blendMode: "Average", 
+		},
+		{
+			code: "sit", 
+			animation: "sit",
+			easeInSpeed: 4,
+			easeOutSpeed: 4,
+			blendMode: "Average", 
+		}
     ]
   },
   server: {
@@ -50,29 +66,12 @@
       }
     },
     behaviors: [
-      { 
-        code: "damagenotify",
-        notifyRange: 10.00
-      },
+      { code: "damagenotify",  notifyRange: 10.00 },
       { code: "repulseagents" },      
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
-      {
-        code: "despawn",
-        minPlayerDistance: 8,
-        belowLightLevel: 8,
-        minSeconds: 300
-      },
-      {
-        code: "health",
-        currenthealth: 1.5,
-        maxhealth: 1.5,
-      },
-      
-      {
-        code: "grow",
+      { code: "controlledphysics", stepHeight: 1.0001 },
+      { code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+      { code: "health", currenthealth: 1.5, maxhealth: 1.5, },      
+      { code: "grow",
         hoursToGrow: 168,
         adultEntityCodesByType: {
           "chicken-chick-ashgrey": [ "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-rooster-ashgrey" ],
