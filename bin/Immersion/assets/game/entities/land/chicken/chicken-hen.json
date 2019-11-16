@@ -1,19 +1,9 @@
 {
   code: "chicken-hen",
   class: "EntityAgent",
-  hitboxSize: {
-    x: 0.5,
-    y: 0.6
-  },
-  deadHitboxSize: {
-    x: 0.5,
-    y: 0.25
-  },
-  variantgroups: [
-    {
-      code: "color",
-      states: [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ]
-    }
+  hitboxSize: { x: 0.5, y: 0.6 },
+  deadHitboxSize: {  x: 0.5,  y: 0.25 },
+  variantgroups: [  {  code: "color", states: [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ] }
   ],
   eyeHeight: 0.5,
   drops: [
@@ -34,13 +24,9 @@
     behaviors: [
       { code: "repulseagents" },
       { code: "featherpluck" },
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
+      { code: "controlledphysics", stepHeight: 1.0001  },
       { code: "interpolateposition" },
       { code: "multiply" },
-
     ],
     animations: [
       {
@@ -64,6 +50,28 @@
         weight: 1,
         blendMode: "Add"
       },
+	  {
+		code: "die",
+		animation: "death", 
+		animationSpeed: 1.25,
+		weight: 10,
+		blendMode: "Average",
+		triggeredBy: { onControls: ["dead"] }
+	  },
+	  {
+		code: "sleep", 
+		animation: "sleep",
+		easeInSpeed: 4,
+		easeOutSpeed: 4,
+		blendMode: "Average", 
+	  },
+	  {
+		code: "sit", 
+		animation: "sit",
+		easeInSpeed: 4,
+		easeOutSpeed: 4,
+		blendMode: "Average", 
+	  }
     ]
   },
   server: {
@@ -73,58 +81,40 @@
         maxTurnAnglePerSec: 1440
       }
     },
-    behaviors: [
-      { 
-        code: "damagenotify",
-        notifyRange: 10.00
-      },
+    behaviors: [      
       { code: "repulseagents" },
       { code: "featherpluck" },
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
-      {
-        code: "despawn",
-        minPlayerDistance: 8,
-        belowLightLevel: 8,
-        minSeconds: 300
-      },
-      {
-        code: "health",
-        currenthealth: 3,
-        maxhealth: 3
-      },
-
-      { 
-				code: "multiply",
-				spawnEntityCodeByType: {
-					"*-ashgrey": "chicken-chick-ashgrey",
-					"*-black": "chicken-chick-black",
-					"*-brown": "chicken-chick-brown",
-					"*-cream": "chicken-chick-cream",
-					"*-golden": "chicken-chick-golden",
-					"*-white": "chicken-chick-white"
-				},
-				spawnQuantityMin: 1,
-				spawnQuantityMax: 2,
-				growthCapEntityCodes: ["chicken-chick-*", "chicken-hen-*", "chicken-rooster-*"],
-				requiresNearbyEntityCode: "chicken-rooster-*",
-				requiresNearbyEntityRange: 5,
-				pregnancyDays: 6,
-				multiplyCooldownDaysMin: 12,
-				multiplyCooldownDaysMax: 21,
-				portionsEatenForMultiply: 6
+      { code: "controlledphysics", stepHeight: 1.0001 },
+      { code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+      { code: "health", currenthealth: 3, maxhealth: 3 },
+      { code: "multiply", 
+			spawnEntityCodeByType: {
+				"*-ashgrey": "chicken-chick-ashgrey",
+				"*-black": "chicken-chick-black",
+				"*-brown": "chicken-chick-brown",
+				"*-cream": "chicken-chick-cream",
+				"*-golden": "chicken-chick-golden",
+				"*-white": "chicken-chick-white"
 			},
+		spawnQuantityMin: 1,
+		spawnQuantityMax: 2,
+		growthCapEntityCodes: ["chicken-chick-*", "chicken-hen-*", "chicken-rooster-*"],
+		requiresNearbyEntityCode: "chicken-rooster-*",
+		requiresNearbyEntityRange: 5,
+		pregnancyDays: 5,
+		multiplyCooldownDaysMin: 6,
+		multiplyCooldownDaysMax: 11,
+		portionsEatenForMultiply: 6
+		},
       { code: "breathe" },
-      {
-        code: "placeblock",
-        minHourDelay: 192,
-        maxHour: 360,
-        blockCodes: [ "egg-chicken-1", "egg-chicken-1", "egg-chicken-1", "egg-chicken-2", "egg-chicken-2", "egg-chicken-3" ]
+	  { code: "emotionstates",
+			states: [
+				{ code: "alarmherdondamage", chance: 1, slot: 1, prority: 1, accumType: "max" }
+			],
+	  },
+      { code: "placeblock", minHourDelay: 192, maxHour: 360,  blockCodes: [ "egg-chicken-1", "egg-chicken-1", "egg-chicken-1", "egg-chicken-2", "egg-chicken-2", "egg-chicken-3" ]
       },
-      {
-        code: "taskai",
+      { code: "taskai",
         aitasks: [
           {
             code: "fleeentity",
@@ -134,16 +124,7 @@
             seekingRange: 7,
             animation: "Run",
             sound: "creature/chicken/hen-flee"
-          },
-					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},          
+          },		            
           {
             code: "getoutofwater",
             priority: 1.4,
@@ -170,6 +151,20 @@
             searchRange: 12,
             animation: "Run"
           },
+		  {
+			code: "idle",
+			priority: 1.25,
+			minduration: 5000000,
+			maxduration: 5000000,
+			mincooldown: 5000,
+			maxcooldown: 15000,
+			priorityForCancel: 1.38,
+			animation: "Sleep",
+			whenNotInEmotionState: "aggressiveondamage",
+			duringDayTimeFrames: [ { fromHour: 20, toHour: 24 }, { fromHour: 0, toHour: 6 } ],
+			stopOnNearbyEntityCodes: ["player", "wolf-male", "wolf-female", "fox-*"],
+			stopRange: 8
+		  },	
           {
             code: "idle",
             priority: 1.2,
@@ -196,8 +191,17 @@
             wanderChance: 0.02,
             preferredLightLevel: 19
           },
-          {
-            code: "lookaround",
+		  {
+			code: "idle",
+			priority: 0.9,
+			minduration: 5000,
+			maxduration: 30000,
+			mincooldown: 2000,
+			maxcooldown: 120000,
+			priorityForCancel: 1.29,
+			animation: "Sit"
+		  },
+          { code: "lookaround",
             priority: 0.5
           }
         ]

@@ -11,7 +11,7 @@
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code:"materialtype", states: ["raw", "burned"] },
-		{ code:"tooltype", states: ["axe", "pickaxe", "shovel", "sword", "hammer", "anvil", "hoe", "prospectingpick"] }
+		{ code:"tooltype", states: ["axe", "pickaxe", "shovel", "sword", "hammer", "anvil", "hoe", "prospectingpick", "lamellae"] }
 	],
 	attributesByType: {
 		"toolmold-*-burned-anvil": {
@@ -37,6 +37,11 @@
 			"requiredUnits": 100,
 			"fillHeight": 1,
 			"drop": { type:"Item", code: "{tooltype}blade-{metal}" }
+		},
+		"toolmold-*-burned-lamellae": {
+			"requiredUnits": 100,
+			"fillHeight": 1,
+			"drop": { type: "item", code: "metallamellae-{metal}" }
 		},
 		"toolmold-*-burned-*": {
 			"requiredUnits": 100,

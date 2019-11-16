@@ -1,17 +1,10 @@
 {
   code: "chicken-rooster",
   class: "EntityAgent",
-  hitboxSize: {
-    x: 0.5,
-    y: 0.6
-  },
-  deadHitboxSize: {
-    x: 0.5,
-    y: 0.25
-  },
+  hitboxSize: { x: 0.5, y: 0.6 },
+  deadHitboxSize: { x: 0.5, y: 0.25 },
   eyeHeight: 0.5,
-  variantgroups: [
-		{ code: "color", states: ["ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland"] } ],
+  variantgroups: [ { code: "color", states: ["ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland"] } ],
   drops: [
 		{
 			type: "block",
@@ -30,12 +23,8 @@
     behaviors: [
       { code: "repulseagents" },
       { code: "featherpluck" },
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
-      { code: "interpolateposition" },
-     
+      { code: "controlledphysics", stepHeight: 1.0001  },
+      { code: "interpolateposition" },     
     ],
     animations: [
       {
@@ -45,6 +34,35 @@
         weight: 10,
         blendMode: "AddAverage"
       },
+	  {
+		code: "die",
+		animation: "death", 
+		animationSpeed: 1.25,
+		weight: 10,
+		blendMode: "Average",
+		triggeredBy: { onControls: ["dead"] }
+	  },
+	  { 
+		code: "idle", 
+		animation: "idle",
+		blendMode: "AddAverage",
+		easeOutSpeed: 4,
+		triggeredBy: { defaultAnim: true },
+	  },
+	  {
+		code: "sleep", 
+		animation: "sleep",
+		easeInSpeed: 4,
+		easeOutSpeed: 4,
+		blendMode: "Average", 
+	  },
+	  {
+		code: "sit", 
+		animation: "sit",
+		easeInSpeed: 4,
+		easeOutSpeed: 4,
+		blendMode: "Average", 
+	  }
     ]
   },
   server: {
@@ -54,55 +72,53 @@
         maxTurnAnglePerSec: 1440
       }
     },
-    behaviors: [
-      { 
-        code: "damagenotify",
-        notifyRange: 10.00
-      },
+    behaviors: [      
       { code: "repulseagents" },
       { code: "featherpluck" },
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
-      {
-        code: "despawn",
-        minPlayerDistance: 8,
-        belowLightLevel: 8,
-        minSeconds: 300
-      },
-      {
-        code: "health",
-        currenthealth: 3,
-        maxhealth: 3
-      },
-      
+      { code: "controlledphysics", stepHeight: 1.0001 },
+      { code: "despawn", minPlayerDistance: 8,  belowLightLevel: 8, minSeconds: 300 },
+      { code: "health", currenthealth: 3, maxhealth: 3 },      
       { code: "breathe" },
-      {
-        code: "emotionstates",
-        states: [
-          {
-            code: "aggressiveondamage",
-            duration: 20,
-            chance: 0.4,
-            slot: 0,
-            prority: 2,
-            accumType: "noaccum"
-          },
-          {
-            code: "fleeondamage",
-            duration: 10,
-            chance: 1,
-            slot: 0,
-            prority: 1,
-            accumType: "max"
-          }
+      { code: "emotionstates", states: [
+          { code: "aggressiveondamage", duration: 20, chance: 0.4, slot: 0, priority: 2, accumType: "noaccum"  },
+          { code: "fleeondamage", duration: 10, chance: 1, slot: 0,  priority: 1, accumType: "max" }
         ],
       },
       {
         code: "taskai",
         aitasks: [
           {
+			"_comment": "pecker fight!!!",
+			code: "meleeattack",
+			entityCodes: ["chicken-rooster-*"],
+			priority: 2,
+			damage: 0.05,
+			mincooldown: 2500, 
+			maxcooldown: 35000, 
+			minDist: 1,
+			attackDurationMs: 2000,
+			damagePlayerAtMs: 600,
+			animation: "Attack",
+			animationSpeed: 1.5,
+			sound: "creature/chicken/rooster-alarm2"
+		  },
+		  {
+			"_comment": "pecker fight!!!",
+			code: "meleeattack",
+			entityCodes: ["chicken-rooster-*"],
+			priority: 2,
+			damage: 0.05,
+			mincooldown: 2500, 
+			maxcooldown: 3500, 
+			minDist: 1,
+			attackDurationMs: 2000,
+			damagePlayerAtMs: 600,
+			animation: "Attack",
+			animationSpeed: 1.5,
+			sound: "creature/chicken/rooster-alarm2",
+			whenInEmotionState: "aggressiveondamage",
+		  },
+		  {
             code: "meleeattack",
             entityCodes: [ "player", "wolf-*", "fox-*", "hyena-*", "panther-*" ],
             priority: 2,
@@ -115,16 +131,7 @@
             animationSpeed: 1.5,
             whenInEmotionState: "aggressiveondamage",
             sound: "creature/chicken/rooster-alarm2"
-          },
-					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+          },					
           {
             code: "fleeentity",
             entityCodes: [ "player", "wolf-*", "fox-*", "hyena-*", "panther-*" ],
@@ -176,6 +183,33 @@
             maxcooldownHours: 4,
             doConsumePortion: false
           },
+		  {
+			code: "idle",
+			priority: 1.27,
+			minduration: 5000000,
+			maxduration: 5000000,
+			mincooldown: 5000,
+			maxcooldown: 15000,
+			priorityForCancel: 1.38,
+			animation: "Sleep",
+			whenNotInEmotionState: "aggressiveondamage",
+			duringDayTimeFrames: [ { fromHour: 20, toHour: 24 }, { fromHour: 0, toHour: 6 } ],
+			stopOnNearbyEntityCodes: ["player", "wolf-*", "fox-*", "hyena-*", "panther-*"],
+			stopRange: 8
+		  },					
+		  {
+			code: "idle",
+			priority: 1.25,
+			minduration: 4680,
+			maxduration: 4680,
+			mincooldown: 50000,
+			maxcooldown: 400000,
+			animation: "RoosterCall",
+			animationSpeed: 1,
+			sound: "creature/chicken/rooster-call",
+			soundRange: 48,
+			priorityForCancel: 1.35,
+		  },	
           {
             code: "idle",
             priority: 1.2,
@@ -214,6 +248,16 @@
             wanderChance: 0.02,
             preferredLightLevel: 19
           },
+		  {
+			code: "idle",
+			priority: 0.9,
+			minduration: 5000,
+			maxduration: 30000,
+			mincooldown: 2000,
+			maxcooldown: 120000,
+			priorityForCancel: 1.29,
+			animation: "Sit"
+		  },
           {
             code: "lookaround",
             priority: 0.5
@@ -223,17 +267,10 @@
     ],
     spawnconditions: {
       worldgen: {
-        TriesPerChunk: {
-          avg: 0.015,
-          var: 0
-        },
+        TriesPerChunk: { avg: 0.015, var: 0 },
         tryOnlySurface: true,
         minLightLevel: 12,
-        groupSize: {
-          dist: "verynarrowgaussian",
-          avg: 4,
-          var: 5
-        },
+        groupSize: { dist: "verynarrowgaussian", avg: 4, var: 5 },
         insideBlockCodes: [ "air", "tallgrass-*" ],
         minTemp: -2,
         minRain: 0.32,
@@ -263,11 +300,7 @@
         chance: 0.003,
         maxQuantity: 4,
         minLightLevel: 12,
-        groupSize: {
-          dist: "verynarrowgaussian",
-          avg: 4,
-          var: 5
-        },
+        groupSize: { dist: "verynarrowgaussian", avg: 4, var: 5 },
         insideBlockCodes: [ "air", "tallgrass-*" ],
         minTemp: -2,
         minRain: 0.32,
