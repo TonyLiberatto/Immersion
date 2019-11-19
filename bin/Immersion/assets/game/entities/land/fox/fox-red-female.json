@@ -1,14 +1,8 @@
 {
   code: "fox-red-female",
   class: "EntityAgent",
-  hitboxSize: {
-    x: 0.75,
-    y: 0.75
-  },
-  deadHitboxSize: {
-    x: 0.75,
-    y: 0.5
-  },
+  hitboxSize: { x: 0.75, y: 0.75 },
+  deadHitboxSize: { x: 0.75, y: 0.5 },
   eyeHeight: 0.7,
   drops: [
 		{
@@ -19,16 +13,12 @@
 	],
   client: {
     renderer: "Shape",
-    shape: { base: "entity/land/fox/female" },
-    texture: { base: "entity/fox/red-female" },
+    shape: { base: "entity/land/fox-female" },
+    texture: { base: "entity/fox/female" },
     behaviors: [
       { code: "repulseagents" },
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
+      { code: "controlledphysics", stepHeight: 1.0001 },
       { code: "interpolateposition" },
-
     ],
     animations: [
       {
@@ -38,55 +28,49 @@
         weight: 10,
         blendMode: "AddAverage"
       },
+	  {
+		code: "die",
+		animation: "death", 
+		animationSpeed: 1.25,
+		weight: 10,
+		blendMode: "Average",
+		triggeredBy: { onControls: ["dead"] }
+	  },
+	  { 
+		code: "idle", 
+		animation: "idle",
+		blendMode: "AddAverage",
+		easeOutSpeed: 4,
+		triggeredBy: { defaultAnim: true },
+	  },
+	  {
+		code: "sleep", 
+		animation: "sleep",
+		easeInSpeed: 4,
+		easeOutSpeed: 4,
+		blendMode: "Average", 
+	  },
+	  {
+		code: "sit", 
+		animation: "sit",
+		easeInSpeed: 4,
+		easeOutSpeed: 4,
+		blendMode: "Average", 
+	  }
     ]
   },
   server: {
     behaviors: [
       { code: "repulseagents" },
-      {
-        code: "controlledphysics",
-        stepHeight: 1.0001
-      },
-      {
-        code: "despawn",
-        minPlayerDistance: 8,
-        belowLightLevel: 8,
-        minSeconds: 300
-      },
-      {
-        code: "health",
-        currenthealth: 6,
-        maxhealth: 6,
-      },
-
+      { code: "controlledphysics", stepHeight: 1.0001 },
+      { code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
+      { code: "health", currenthealth: 6, maxhealth: 6, },
       { code: "breathe" },
-      {
-        code: "emotionstates",
+      { code: "emotionstates",
         states: [
-          {
-            code: "aggressiveondamage",
-            duration: 15,
-            chance: 0.6,
-            slot: 0,
-            prority: 2,
-            accumType: "noaccum"
-          },
-          {
-            code: "fleeondamage",
-            duration: 10,
-            chance: 1,
-            slot: 0,
-            prority: 1,
-            accumType: "max"
-          },
-          {
-            code: "saturated",
-            duration: 1200,
-            chance: 1,
-            slot: 0,
-            prority: 1,
-            accumType: "sum"
-          }
+          { code: "aggressiveondamage", duration: 15, chance: 0.6, slot: 0, priority: 2, accumType: "noaccum" },
+          { code: "fleeondamage", duration: 10, chance: 1, slot: 0, priority: 1, accumType: "max" },
+          { code: "saturated", duration: 1200, chance: 1, slot: 0, priority: 1, accumType: "sum" }
         ],
       },
       {
@@ -106,16 +90,7 @@
             animationSpeed: 2.5,
             sound: "creature/fox/attack",
             whenInEmotionState: "aggressiveondamage"
-          },
- 					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: true,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+          }, 					
           {
             code: "seekentity",
             entityCodes: [ "player" ],
@@ -139,7 +114,7 @@
 
           {
             code: "meleeattack",
-            entityCodes: [ "chicken-*", "rabbit-*" ],
+            entityCodes: [ "chicken-*", "hare-*" ],
             priority: 1.6,
             damage: 4,
             slot: 1,
@@ -154,7 +129,7 @@
           },
           {
             code: "seekentity",
-            entityCodes: [ "chicken-*", "rabbit-*" ],
+            entityCodes: [ "chicken-*", "hare-*" ],
             priority: 1.5,
             movespeed: 0.022,
             seekingRange: 20,
@@ -171,55 +146,81 @@
             animationSpeed: 2.2
           },
           {
-            code: "idle",
-            onBlockBelowCode: "snowblock",
-            priority: 1.35,
-            priorityForCancel: 5,
-            minduration: 2400,
-            maxduration: 2400,
-            mincooldown: 8000,
-            maxcooldown: 40000,
-            animation: "Dive",
-            animationSpeed: 1.25,
-            sound: "walk/deepsnow1",
-            soundStartMs: 950
-          },
-          {
-            code: "idle",
-            priority: 1.3,
-            priorityForCancel: 1.35,
-            minduration: 4680,
-            maxduration: 4680,
-            mincooldown: 80000,
-            maxcooldown: 400000,
-            animation: "Yip",
-            animationSpeed: 0.25,
-            sound: "creature/fox/yip",
-            soundRange: 110
-          },
-          {
-            code: "idle",
-            priority: 1.2,
-            priorityForCancel: 1.35,
-            minduration: 2500,
-            maxduration: 2500,
-            mincooldown: 6000,
-            maxcooldown: 20000,
-            animation: "Sniff",
-            animationSpeed: 1.25
-          },
-          {
-            code: "wander",
-            priority: 1.0,
-            priorityForCancel: 1.35,
-            movespeed: 0.006,
-            animation: "Walk",
-            preferredLightLevel: 20
-          },
-          {
-            code: "lookaround",
-            priority: 0.5
-          }
+			code: "idle",
+			priority: 1.38,
+			minduration: 200000,
+			maxduration: 800000,
+			mincooldown: 10000,
+			maxcooldown: 30000,
+			priorityForCancel: 1.38,
+			animation: "Sleep",
+			whenNotInEmotionState: "aggressiveondamage",
+			duringDayTimeFrames: [ { fromHour: 10, toHour: 18 }, { fromHour: 1, toHour: 4 } ],
+			stopOnNearbyEntityCodes: ["player", "wolf-male", "wolf-female"],
+			stopRange: 8
+		  },
+		  {
+			code: "idle",
+			onBlockBelowCode: "snowblock",
+			priority: 1.35,
+			priorityForCancel: 5,
+			minduration: 2400,
+			maxduration: 2400,
+			mincooldown: 8000,
+			maxcooldown: 30000,
+			animation: "Dive",
+			animationSpeed: 1.25,
+			sound: "walk/deepsnow1",
+			soundStartMs: 950
+		  },
+		  {
+			code: "idle",
+			priority: 1.3,
+			priorityForCancel: 1.35,
+			minduration: 4680,
+			maxduration: 4680,
+			mincooldown: 80000,
+			maxcooldown: 400000,
+			animation: "Yip",
+			animationSpeed: 0.25,
+			sound: "creature/fox/yip",
+			soundRange: 110
+		  },
+		  {
+			code: "idle",
+			priority: 1.2,
+			priorityForCancel: 1.35,
+			minduration: 2500,
+			maxduration: 2500,
+			mincooldown: 6000,
+			maxcooldown: 20000,
+			animation: "Sniff",
+			animationSpeed: 1.25
+		  },
+		  {
+			code: "wander", 
+			priority: 1.0, 
+			priorityForCancel: 1.35,
+			movespeed: 0.006,
+			animation: "Walk",
+			preferredLightLevel: 20
+		  },
+		  {
+			code: "idle",
+			priority: 0.9,
+			minduration: 5000,
+			maxduration: 30000,
+			mincooldown: 2000,
+			maxcooldown: 120000,
+			priorityForCancel: 1.38,
+			animation: "Sit",
+			stopOnNearbyEntityCodes: ["player"],
+			stopRange: 5
+		  },
+	  	  {
+			code: "lookaround", 
+			priority: 0.5
+		  }
         ]
       }
     ],
