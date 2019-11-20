@@ -1,0 +1,3 @@
+Fixed Quern not connecting to Windmill.
+Fixed Hares to use game shape and textures. Deleted Mod Shape and textures for hares.
+Working on creature.json file.

@@ -2,6 +2,7 @@
 	code: "quern",
 	class: "BlockQuern",
 	entityClass: "Quern",
+	entityBehaviors: [{ name: "MPConsumer" }],
 	behaviors: [{name: "Container"}, {name: "UnstableFalling"}],
 	attributes: {
 		handbook: {
@@ -14,7 +15,7 @@
 	variantgroups: [
 		{ code:"rock", states: ["granite", "andesite", "basalt", "peridotite"] },
 	],
-	creativeinventory: { "general": ["*"], "terrain": ["*"] },
+	creativeinventory: { "general": ["*"], "terrain": ["*"], "immersionblocks": ["*"] },
 	shape: { base: "block/stone/quern/complete" },
 	blockmaterial: "Stone",
 	textures: {

@@ -5,294 +5,96 @@
 	"variantgroups": [{
 		"code": "type",
 		"states": [
-			"armadillo-male",
-			"armadillo-female",
-			"butterfly-commonbrimstone",
-			"butterfly-comma",
-			"butterfly-largewhite",
-			"butterfly-peacock",
-			"butterfly-smallheath",
-			"butterfly-bluepansy",
-			"butterfly-bloodredglider",
-			"chicken-rooster-ashgrey",
-			"chicken-rooster-black",
-			"chicken-rooster-brown",
-			"chicken-rooster-cream",
-			"chicken-rooster-golden",
-			"chicken-rooster-savanna",
-			"chicken-rooster-white",
-			"chicken-rooster-woodland",
-			"chicken-hen-ashgrey",
-			"chicken-hen-black",
-			"chicken-hen-brown",
-			"chicken-hen-cream",
-			"chicken-hen-golden",
-			"chicken-hen-savanna",
-			"chicken-hen-white",
-			"chicken-hen-woodland",
-			"chicken-chick-ashgrey",
-			"chicken-chick-black",
-			"chicken-chick-brown",
-			"chicken-chick-cream",
-			"chicken-chick-golden",
-			"chicken-chick-savanna",
-			"chicken-chick-white",
-			"chicken-chick-woodland",
-			"drifter-normal",
-			"drifter-deep",
-			"drifter-tainted",
-			"drifter-corrupt",
-			"drifter-nightmare",
-			"locust-bronze",
-			"locust-corrupt",
-			"fox-red-male",
-			"fox-red-female",
-			"fox-snow-male",
-			"fox-snow-female",
-			"hare-male-arctic",
-			"hare-female-arctic",
-			"hare-male-ashgrey",
-			"hare-female-ashgrey",
-			"hare-female-darkbrown",
-			"hare-male-darkbrown",
-			"hare-male-desert",
-			"hare-female-desert",
-			"hare-female-gold",
-			"hare-male-gold",
-			"hare-male-lightbrown",
-			"hare-female-lightbrown",
-			"hare-male-lightgrey",
-			"hare-female-lightgrey",
-			"hare-male-silver",
-			"hare-female-silver",
-			"hare-male-smokegrey",
-			"hare-female-smokegrey",
+			"armadillo-male", "armadillo-female",
+			"butterfly-commonbrimstone", "butterfly-comma",	"butterfly-largewhite",	"butterfly-peacock", "butterfly-smallheath", "butterfly-bluepansy",	"butterfly-bloodredglider",
+			"chicken-rooster-ashgrey", "chicken-rooster-black",	"chicken-rooster-brown", "chicken-rooster-cream", "chicken-rooster-golden", "chicken-rooster-savanna", "chicken-rooster-white",	"chicken-rooster-woodland",
+			"chicken-hen-ashgrey", "chicken-hen-black", "chicken-hen-brown", "chicken-hen-cream", "chicken-hen-golden",	"chicken-hen-savanna", "chicken-hen-white",	"chicken-hen-woodland",	
+			"chicken-chick-ashgrey", "chicken-chick-black",	"chicken-chick-brown", "chicken-chick-cream", "chicken-chick-golden", "chicken-chick-savanna", "chicken-chick-white", "chicken-chick-woodland",
+			"drifter-normal", "drifter-deep", "drifter-tainted", "drifter-corrupt",	"drifter-nightmare",
+			"locust-bronze", "locust-corrupt", 
+			"fox-red-male", "fox-red-female", "fox-snow-male", "fox-snow-female",
+			"hare-male-arctic", "hare-male-ashgrey", "hare-male-darkbrown", "hare-male-desert", "hare-male-gold", "hare-male-lightbrown", "hare-male-lightgrey", "hare-male-silver", "hare-male-smokegrey",  
+			"hare-female-arctic", "hare-female-ashgrey", "hare-female-darkbrown", "hare-female-desert", "hare-female-gold", "hare-female-lightbrown", "hare-female-lightgrey", "hare-female-silver","hare-female-smokegrey",
 			"hare-baby",
-			"humanoid-trader-buildmaterials",
-			"humanoid-trader-commodities",
-			"humanoid-trader-foods",
-			"humanoid-trader-furniture",
-			"humanoid-trader-luxuries",
-			"humanoid-trader-survivalgoods",
-			"humanoid-trader-treasurehunter",
-			"humanoid-trader-clothing",
-			"hyena-wild-male",
-			"hyena-wild-female-tan",
-			"hyena-wild-female-brown",
-			"hyena-wild-pup",
-			"pig-boar-ashgrey",
-			"pig-boar-brown",
-			"pig-boar-chocolate",
-			"pig-boar-darkgrey",
-			"pig-boar-smokegrey",
-			"pig-boar-walnut",
-			"pig-sow-ashgrey",
-			"pig-sow-brown",
-			"pig-sow-chocolate",
-			"pig-sow-darkgrey",
-			"pig-sow-smokegrey",
-			"pig-sow-walnut",
-			"pig-piglet",
-			"pig-domestic-boar",
-			"pig-domestic-sow",
-			"pig-domestic-piglet",
-			"raccoon-male",
-			"raccoon-female",
-			"raccoon-pup",
-			"sheep-ram",
-			"sheep-ewe",
-			"sheep-lamb",
-			"wild-sheep-ram",
-			"wild-sheep-ewe",
-			"wild-sheep-lamb",
-			"wolf-male-ashgrey",
-			"wolf-male-black",
-			"wolf-male-brown",
-			"wolf-male-darkgrey",
-			"wolf-male-gold",
-			"wolf-male-grey",
-			"wolf-male-silver",
-			"wolf-male-smokegrey",
-			"wolf-male-white",
-			"wolf-female-ashgrey",
-			"wolf-female-black",
-			"wolf-female-brown",
-			"wolf-female-darkgrey",
-			"wolf-female-gold",
-			"wolf-female-grey",
-			"wolf-female-silver",
-			"wolf-female-smokegrey",
-			"wolf-female-white",
-			"wolf-pup-ashgrey",
-			"wolf-pup-black",
-			"wolf-pup-brown",
-			"wolf-pup-darkgrey",
-			"wolf-pup-gold",
-			"wolf-pup-grey",
-			"wolf-pup-silver",
-			"wolf-pup-smokegrey",
-			"wolf-pup-white"
+			"humanoid-trader-buildmaterials", "humanoid-trader-commodities", "humanoid-trader-foods", "humanoid-trader-furniture", 
+			"humanoid-trader-luxuries", "humanoid-trader-survivalgoods", "humanoid-trader-treasurehunter", "humanoid-trader-clothing", 
+			"hyena-wild-male", "hyena-wild-female-tan", "hyena-wild-female-brown", "hyena-wild-pup", 
+			"pig-boar-ashgrey", "pig-boar-brown", "pig-boar-chocolate", "pig-boar-darkgrey", "pig-boar-smokegrey", "pig-boar-walnut", 
+			"pig-sow-ashgrey", "pig-sow-brown", "pig-sow-chocolate", "pig-sow-darkgrey", "pig-sow-smokegrey", "pig-sow-walnut", 
+			"pig-piglet", "pig-domestic-boar", "pig-domestic-sow", "pig-domestic-piglet", 
+			"raccoon-male", "raccoon-female", "raccoon-pup", 
+			"sheep-ram", "sheep-ewe", "sheep-lamb", 
+			"wild-sheep-ram", "wild-sheep-ewe", "wild-sheep-lamb", 
+			"wolf-male-ashgrey", "wolf-male-black", "wolf-male-brown", "wolf-male-darkgrey", "wolf-male-gold", "wolf-male-grey", "wolf-male-silver", "wolf-male-smokegrey", "wolf-male-white", 
+			"wolf-female-ashgrey", "wolf-female-black", "wolf-female-brown", "wolf-female-darkgrey", "wolf-female-gold", "wolf-female-grey", "wolf-female-silver", "wolf-female-smokegrey", "wolf-female-white", 
+			"wolf-pup-ashgrey", "wolf-pup-black", "wolf-pup-brown", "wolf-pup-darkgrey", "wolf-pup-gold", "wolf-pup-grey", "wolf-pup-silver", "wolf-pup-smokegrey", "wolf-pup-white"
 		]
 	}],
 	"shapeByType": {
-		"*-armadillo-*": {
-			"base": "entity/land/armadillo/armadillo"
-		},
-		"*-butterfly-*": {
-			"base": "entity/air/butterfly"
-		},
-		"*-chicken-rooster-*": {
-			"base": "entity/land/chicken/rooster"
-		},
-		"*-chicken-hen-*": {
-			"base": "entity/land/chicken/hen"
-		},
-		"*-chicken-chick-*": {
-			"base": "entity/land/chicken/chick"
-		},
-		"*-drifter-*": {
-			"base": "entity/land/drifter"
-		},
-		"*-fox-red-male": {
-			"base": "entity/land/fox/male"
-		},
-		"*-fox-red-female": {
-			"base": "entity/land/fox/female"
-		},
-		"*-fox-snow-male": {
-			"base": "entity/land/fox/male"
-		},
-		"*-fox-snow-female": {
-			"base": "entity/land/fox/female"
-		},
-		"*-hare-female-*": {
-			"base": "entity/land/hare/hare-female"
-		},
-		"*-hare-baby": {
-			"base": "entity/land/hare/hare-baby"
-		},
-		"*-hare-male-*": {
-			"base": "entity/land/hare/hare-male"
-		},
-		"*-humanoid-*": {
-			"base": "entity/humanoid/trader"
-		},
-		"*-hyena-wild-male": {
-			"base": "entity/land/hyena/male"
-		},
-		"*-hyena-wild-female-tan": {
-			"base": "entity/land/hyena/female"
-		},
-		"*-hyena-wild-female-brown": {
-			"base": "entity/land/hyena/female"
-		},
-		"*-hyena-wild-pup": {
-			"base": "entity/land/hyena/pup"
-		},
-		"*-locust-*": {
-			"base": "entity/land/{type}"
-		},
-		"*-pig-boar-*": {
-			"base": "entity/land/pig/boar"
-		},
-		"*-pig-sow-*": {
-			"base": "entity/land/pig/sow"
-		},
-		"*-pig-piglet": {
-			"base": "entity/land/pig-wild-piglet"
-		},
-		"*-pig-domestic-boar": {
-			"base": "entity/land/pig-domestic/boar"
-		},
-		"*-pig-domestic-sow": {
-			"base": "entity/land/pig-domestic/sow"
-		},
-		"*-pig-domestic-piglet": {
-			"base": "entity/land/pig-domestic/piglet"
-		},
-		"*-raccoon-male*": {
-			"base": "entity/land/raccoon-male"
-		},
-		"*-raccoon-female*": {
-			"base": "entity/land/raccoon-female"
-		},
-		"*-raccoon-pup*": {
-			"base": "entity/land/raccoon-pup"
-		},
-		"*-wild-sheep-ram": {
-			"base": "entity/land/wild-sheep/ram"
-		},
-		"*-wild-sheep-ewe": {
-			"base": "entity/land/wild-sheep/ewe"
-		},
-		"*-wild-sheep-lamb": {
-			"base": "entity/land/wild-sheep/lamb"
-		},
-		"*-sheep-ram": {
-			"base": "entity/land/sheep/ram"
-		},
-		"*-sheep-ewe": {
-			"base": "entity/land/sheep/ewe"
-		},
-		"*-sheep-lamb": {
-			"base": "entity/land/sheep/lamb"
-		},
-		"*-wolf-male-*": {
-			"base": "entity/land/wolf/male"
-		},
-		"*-wolf-female-*": {
-			"base": "entity/land/wolf/female"
-		},
-		"*-wolf-pup-*": {
-			"base": "entity/land/wolf/pup"
-		},
-		"*": {
-			"base": "entity/land/{type}"
-		}
+		"*-armadillo-*": { "base": "entity/land/armadillo/armadillo" },
+		"*-butterfly-*": { "base": "entity/air/butterfly" },
+		"*-chicken-rooster-*": { "base": "entity/land/chicken-rooster" },
+		"*-chicken-hen-*": { "base": "entity/land/chicken-hen" },
+		"*-chicken-chick-*": { "base": "entity/land/chicken-baby" },
+		"*-drifter-*": { "base": "entity/land/drifter" },
+		"*-fox-red-male": {	"base": "entity/land/fox-male" },
+		"*-fox-red-female": { "base": "entity/land/fox-female"	},
+		"*-fox-snow-male": { "base": "entity/land/fox-male"	},
+		"*-fox-snow-female": { "base": "entity/land/fox-female"	},
+		"*-hare-female-*": { "base": "entity/land/hare-female" },
+		"*-hare-baby": { "base": "entity/land/hare-baby" },
+		"*-hare-male-*": { "base": "entity/land/hare-male" },
+		"*-humanoid-*": { "base": "entity/humanoid/trader" },
+		"*-hyena-wild-male": { "base": "entity/land/hyena-male"	},
+		"*-hyena-wild-female-tan": { "base": "entity/land/hyena-female"	},
+		"*-hyena-wild-female-brown": { "base": "entity/land/hyena-female" },
+		"*-hyena-wild-pup": { "base": "entity/land/hyena-pup" },
+		"*-locust-*": {	"base": "entity/land/{type}" },
+		"*-pig-boar-*": { "base": "entity/land/pig/boar" },
+		"*-pig-sow-*": { "base": "entity/land/pig/sow" },
+		"*-pig-piglet": { "base": "entity/land/pig-wild-piglet" },
+		"*-pig-domestic-boar": { "base": "entity/land/pig-domestic/boar" },
+		"*-pig-domestic-sow": { "base": "entity/land/pig-domestic/sow" },
+		"*-pig-domestic-piglet": { "base": "entity/land/pig-domestic/piglet" },
+		"*-raccoon-male*": { "base": "entity/land/raccoon-male"	},
+		"*-raccoon-female*": { "base": "entity/land/raccoon-female"	},
+		"*-raccoon-pup*": {	"base": "entity/land/raccoon-pup" },
+		"*-wild-sheep-ram": { "base": "entity/land/sheep-bighorn-male" },
+		"*-wild-sheep-ewe": { "base": "entity/land/sheep-bighorn-female" },
+		"*-wild-sheep-lamb": { "base": "entity/land/sheep-bighorn-lamb" },
+		"*-sheep-ram": { "base": "entity/land/sheep/ram" },
+		"*-sheep-ewe": { "base": "entity/land/sheep/ewe" },
+		"*-sheep-lamb": { "base": "entity/land/sheep/lamb" },
+		"*-wolf-male-*": { "base": "entity/land/wolf-male" },
+		"*-wolf-female-*": { "base": "entity/land/wolf-female" },
+		"*-wolf-pup-*": { "base": "entity/land/wolf-pup" },
+		"*": { "base": "entity/land/{type}"	}
 	},
 	"texturesByType": {
 		"*-armadillo-*": {
-			"armadillo": {
-				"base": "entity/armadillo/armadillo"
-			},
-			"armadillo_tail": {
-				"base": "entity/armadillo/armadillo_tail"
-			}
+			"armadillo": { "base": "entity/armadillo/armadillo"	},
+			"armadillo_tail": {	"base": "entity/armadillo/armadillo_tail" }
 		},
 		"*-butterfly-bloodredglider": {
-			"all": {
-				"base": "entity/butterfly/blood-red-glider"
-			}
+			"all": { "base": "entity/butterfly/blood-red-glider" }
 		},
 		"*-butterfly-commonbrimstone": {
-			"all": {
-				"base": "entity/butterfly/commonbrimstone"
-			}
+			"all": { "base": "entity/butterfly/commonbrimstone"	}
 		},
 		"*-butterfly-comma": {
-			"all": {
-				"base": "entity/butterfly/comma"
-			}
+			"all": { "base": "entity/butterfly/comma" }
 		},
 		"*-butterfly-largewhite": {
-			"all": {
-				"base": "entity/butterfly/largewhite"
-			}
+			"all": { "base": "entity/butterfly/largewhite" }
 		},
 		"*-butterfly-peacock": {
-			"all": {
-				"base": "entity/butterfly/peacock"
-			}
+			"all": { "base": "entity/butterfly/peacock"	}
 		},
 		"*-butterfly-smallheath": {
-			"all": {
-				"base": "entity/butterfly/smallheath"
-			}
+			"all": { "base": "entity/butterfly/smallheath" }
 		},
 		"*-butterfly-bluepansy": {
-			"all": {
-				"base": "entity/butterfly/bluepansy"
-			}
+			"all": { "base": "entity/butterfly/bluepansy" }
 		},
 		"*-drifter-normal": {
 			"skin": { "base": "entity/drifter/normal" }
@@ -310,631 +112,353 @@
 			"skin": { "base": "entity/drifter/nightmare" }
 		},
 		"*-chicken-rooster-ashgrey": {
-			"all": {
-				"base": "entity/chicken/rooster/ashgrey"
-			}
+			"all": { "base": "entity/chicken/rooster/ashgrey" }
 		},
 		"*-chicken-rooster-black": {
-			"all": {
-				"base": "entity/chicken/rooster/black"
-			}
+			"all": { "base": "entity/chicken/rooster/black"	}
 		},
 		"*-chicken-rooster-brown": {
-			"all": {
-				"base": "entity/chicken/rooster/brown"
-			}
+			"all": { "base": "entity/chicken/rooster/brown"	}
 		},
 		"*-chicken-rooster-cream": {
-			"all": {
-				"base": "entity/chicken/rooster/cream"
-			}
+			"all": { "base": "entity/chicken/rooster/cream"	}
 		},
 		"*-chicken-rooster-golden": {
-			"all": {
-				"base": "entity/chicken/rooster/golden"
-			}
+			"all": { "base": "entity/chicken/rooster/golden" }
 		},
 		"*-chicken-rooster-savanna": {
-			"all": {
-				"base": "entity/chicken/rooster/savanna"
-			}
+			"all": { "base": "entity/chicken/rooster/savanna" }
 		},
 		"*-chicken-rooster-white": {
-			"all": {
-				"base": "entity/chicken/rooster/white"
-			}
+			"all": { "base": "entity/chicken/rooster/white"	}
 		},
 		"*-chicken-rooster-woodland": {
-			"all": {
-				"base": "entity/chicken/rooster/woodland"
-			}
+			"all": { "base": "entity/chicken/rooster/woodland" }
 		},
 		"*-chicken-hen-ashgrey": {
-			"all": {
-				"base": "entity/chicken/hen/ashgrey"
-			}
+			"all": { "base": "entity/chicken/hen/ashgrey" }
 		},
 		"*-chicken-hen-black": {
-			"all": {
-				"base": "entity/chicken/hen/black"
-			}
+			"all": { "base": "entity/chicken/hen/black"	}
 		},
 		"*-chicken-hen-brown": {
-			"all": {
-				"base": "entity/chicken/hen/brown"
-			}
+			"all": { "base": "entity/chicken/hen/brown"	}
 		},
 		"*-chicken-hen-cream": {
-			"all": {
-				"base": "entity/chicken/hen/cream"
-			}
+			"all": { "base": "entity/chicken/hen/cream"	}
 		},
 		"*-chicken-hen-golden": {
-			"all": {
-				"base": "entity/chicken/hen/golden"
-			}
+			"all": { "base": "entity/chicken/hen/golden" }
 		},
 		"*-chicken-hen-savanna": {
-			"all": {
-				"base": "entity/chicken/hen/savanna"
-			}
+			"all": { "base": "entity/chicken/hen/savanna" }
 		},
 		"*-chicken-hen-white": {
-			"all": {
-				"base": "entity/chicken/hen/white"
-			}
+			"all": { "base": "entity/chicken/hen/white"	}
 		},
 		"*-chicken-hen-woodland": {
-			"all": {
-				"base": "entity/chicken/hen/woodland"
-			}
+			"all": { "base": "entity/chicken/hen/woodland" }
 		},
 		"*-chicken-chick-ashgrey": {
-			"all": {
-				"base": "entity/chicken/chick/ashgrey"
-			}
+			"all": { "base": "entity/chicken/chick/ashgrey"	}
 		},
 		"*-chicken-chick-black": {
-			"all": {
-				"base": "entity/chicken/chick/black"
-			}
+			"all": { "base": "entity/chicken/chick/black" }
 		},
 		"*-chicken-chick-brown": {
-			"all": {
-				"base": "entity/chicken/chick/brown"
-			}
+			"all": { "base": "entity/chicken/chick/brown" }
 		},
 		"*-chicken-chick-cream": {
-			"all": {
-				"base": "entity/chicken/chick/cream"
-			}
+			"all": { "base": "entity/chicken/chick/cream"}
 		},
 		"*-chicken-chick-golden": {
-			"all": {
-				"base": "entity/chicken/chick/golden"
-			}
+			"all": { "base": "entity/chicken/chick/golden" }
 		},
 		"*-chicken-chick-savanna": {
-			"all": {
-				"base": "entity/chicken/chick/savanna"
-			}
+			"all": { "base": "entity/chicken/chick/savanna"	}
 		},
 		"*-chicken-chick-white": {
-			"all": {
-				"base": "entity/chicken/chick/white"
-			}
+			"all": { "base": "entity/chicken/chick/white" }
 		},
 		"*-chicken-chick-woodland": {
-			"all": {
-				"base": "entity/chicken/chick/woodland"
-			}
+			"all": { "base": "entity/chicken/chick/woodland" }
 		},
 		"*-fox-red-male": {
-			"all": {
-				"base": "entity/fox/red-male"
-			}
+			"all": { "base": "entity/fox/red-male" }
 		},
 		"*-fox-red-female": {
-			"all": {
-				"base": "entity/fox/red-female"
-			}
+			"all": { "base": "entity/fox/red-female" }
 		},
 		"*-fox-snow-male": {
-			"all": {
-				"base": "entity/fox/snow-male"
-			}
+			"all": { "base": "entity/fox/snow-male" }
 		},
 		"*-fox-snow-female": {
-			"all": {
-				"base": "entity/fox/snow-female"
-			}
+			"all": { "base": "entity/fox/snow-female" }
 		},
 		"*-hare-baby": {
-			"skin": {
-				"base": "entity/hare/baby-brown"
-			}
+			"skin": { "base": "entity/hare/baby-brown" }
 		},
 		"*-hare-male-arctic": {
-			"skin": {
-				"base": "entity/hare/male-arctic"
-			}
+			"skin": { "base": "entity/hare/male-arctic"	}
 		},
 		"*-hare-male-ashgrey": {
-			"skin": {
-				"base": "entity/hare/male-ashgrey"
-			}
+			"skin": { "base": "entity/hare/male-ashgrey" }
 		},
 		"*-hare-male-darkbrown": {
-			"skin": {
-				"base": "entity/hare/male-darkbrown"
-			}
+			"skin": { "base": "entity/hare/male-darkbrown" }
 		},
 		"*-hare-male-desert": {
-			"skin": {
-				"base": "entity/hare/male-desert"
-			}
+			"skin": { "base": "entity/hare/male-desert"	}
 		},
 		"*-hare-male-gold": {
-			"skin": {
-				"base": "entity/hare/male-gold"
-			}
+			"skin": { "base": "entity/hare/male-gold" }
 		},
 		"*-hare-male-lightbrown": {
-			"skin": {
-				"base": "entity/hare/male-lightbrown"
-			}
+			"skin": { "base": "entity/hare/male-lightbrown" }
 		},
 		"*-hare-male-lightgrey": {
-			"skin": {
-				"base": "entity/hare/male-lightgrey"
-			}
+			"skin": { "base": "entity/hare/male-lightgrey" }
 		},
 		"*-hare-male-silver": {
-			"skin": {
-				"base": "entity/hare/male-silver"
-			}
+			"skin": { "base": "entity/hare/male-silver" }
 		},
 		"*-hare-male-smokegrey": {
-			"skin": {
-				"base": "entity/hare/male-smokegrey"
-			}
+			"skin": { "base": "entity/hare/male-smokegrey" }
 		},
 		"*-hare-female-arctic": {
-			"skin": {
-				"base": "entity/hare/female-arctic"
-			}
+			"skin": { "base": "entity/hare/female-arctic" }
 		},
 		"*-hare-female-ashgrey": {
-			"skin": {
-				"base": "entity/hare/female-ashgrey"
-			}
+			"skin": { "base": "entity/hare/female-ashgrey" }
 		},
 		"*-hare-female-darkbrown": {
-			"skin": {
-				"base": "entity/hare/female-darkbrown"
-			}
+			"skin": { "base": "entity/hare/female-darkbrown" }
 		},
 		"*-hare-female-desert": {
-			"skin": {
-				"base": "entity/hare/female-desert"
-			}
+			"skin": { "base": "entity/hare/female-desert" }
 		},
 		"*-hare-female-gold": {
-			"skin": {
-				"base": "entity/hare/female-gold"
-			}
+			"skin": { "base": "entity/hare/female-gold"	}
 		},
 		"*-hare-female-lightbrown": {
-			"skin": {
-				"base": "entity/hare/female-lightbrown"
-			}
+			"skin": { "base": "entity/hare/female-lightbrown"}
 		},
 		"*-hare-female-lightgrey": {
-			"skin": {
-				"base": "entity/hare/female-lightgrey"
-			}
+			"skin": { "base": "entity/hare/female-lightgrey" }
 		},
 		"*-hare-female-silver": {
-			"skin": {
-				"base": "entity/hare/female-silver"
-			}
+			"skin": { "base": "entity/hare/female-silver" }
 		},
 		"*-hare-female-smokegrey": {
-			"skin": {
-				"base": "entity/hare/female-smokegrey"
-			}
+			"skin": { "base": "entity/hare/female-smokegrey" }
 		},
 		"*-humanoid-*": {
-			"all": {
-				"base": "entity/humanoid/trader"
-			}
+			"all": { "base": "entity/humanoid/trader" }
 		},
 		"*-hyena-wild-male": {
-			"all": {
-				"base": "entity/hyena/wild-male"
-			}
+			"all": { "base": "entity/hyena/wild-male" }
 		},
 		"*-hyena-wild-female-tan": {
-			"all": {
-				"base": "entity/hyena/wild-female-tan"
-			}
+			"all": { "base": "entity/hyena/wild-female-tan"	}
 		},
 		"*-hyena-wild-female-brown": {
-			"all": {
-				"base": "entity/hyena/wild-female-brown"
-			}
+			"all": { "base": "entity/hyena/wild-female-brown" }
 		},
 		"*-hyena-wild-pup": {
-			"all": {
-				"base": "entity/hyena/wild-pup"
-			}
+			"all": { "base": "entity/hyena/wild-pup" }
 		},
 		"*-pig-boar-ashgrey": {
-			"all": {
-				"base": "entity/pig/ashgrey"
-			}
+			"all": { "base": "entity/pig/ashgrey" }
 		},
 		"*-pig-boar-brown": {
-			"all": {
-				"base": "entity/pig/brown"
-			}
+			"all": { "base": "entity/pig/brown" }
 		},
 		"*-pig-boar-chocolate": {
-			"all": {
-				"base": "entity/pig/chocolate"
-			}
+			"all": { "base": "entity/pig/chocolate"	}
 		},
 		"*-pig-boar-darkgrey": {
-			"all": {
-				"base": "entity/pig/darkgrey"
-			}
+			"all": { "base": "entity/pig/darkgrey" }
 		},
 		"*-pig-boar-smokegrey": {
-			"all": {
-				"base": "entity/pig/smokegrey"
-			}
+			"all": { "base": "entity/pig/smokegrey" }
 		},
 		"*-pig-boar-walnut": {
-			"all": {
-				"base": "entity/pig/walnut"
-			}
+			"all": { "base": "entity/pig/walnut" }
 		},
 		"*-pig-sow-ashgrey": {
-			"all": {
-				"base": "entity/pig/sow/ashgrey"
-			}
+			"all": { "base": "entity/pig/sow/ashgrey" }
 		},
 		"*-pig-sow-brown": {
-			"all": {
-				"base": "entity/pig/sow/brown"
-			}
+			"all": { "base": "entity/pig/sow/brown"	}
 		},
 		"*-pig-sow-chocolate": {
-			"all": {
-				"base": "entity/pig/sow/chocolate"
-			}
+			"all": { "base": "entity/pig/sow/chocolate"	}
 		},
 		"*-pig-sow-darkgrey": {
-			"all": {
-				"base": "entity/pig/sow/darkgrey"
-			}
+			"all": { "base": "entity/pig/sow/darkgrey" }
 		},
 		"*-pig-sow-smokegrey": {
-			"all": {
-				"base": "entity/pig/sow/smokegrey"
-			}
+			"all": {  "base": "entity/pig/sow/smokegrey" }
 		},
 		"*-pig-sow-walnut": {
-			"all": {
-				"base": "entity/pig/sow/walnut"
-			}
+			"all": { "base": "entity/pig/sow/walnut" }
 		},
 		"*-pig-piglet": {
-			"all": {
-				"base": "entity/pig/pig-wild-piglet"
-			}
+			"all": { "base": "entity/pig/pig-wild-piglet" }
 		},
 		"*-pig-domestic-boar": {
-			"all": {
-				"base": "entity/pig-domestic/boar"
-			}
+			"all": { "base": "entity/pig-domestic/boar"	}
 		},
 		"*-pig-domestic-sow": {
-			"all": {
-				"base": "entity/pig-domestic/sow"
-			}
+			"all": { "base": "entity/pig-domestic/sow" }
 		},
 		"*-pig-domestic-piglet": {
-			"all": {
-				"base": "entity/pig-domestic/piglet"
-			}
+			"all": { "base": "entity/pig-domestic/piglet" }
 		},
 		"*-racoon-male": {
-			"all": {
-				"base": "entity/racoon/racoon-male1"
-			}
+			"all": { "base": "entity/racoon/racoon-male1" }
 		},
 		"*-racoon-female": {
-			"all": {
-				"base": "entity/racoon/racoon-female1"
-			}
+			"all": { "base": "entity/racoon/racoon-female1"	}
 		},
 		"*-racoon-pup": {
-			"all": {
-				"base": "entity/racoon/racoon-pup1"
-			}
+			"all": { "base": "entity/racoon/racoon-pup1" }
 		},
 		"*-wild-sheep-ram": {
-			"all": {
-				"base": "entity/wild-sheep/ram"
-			}
+			"all": { "base": "entity/wild-sheep/ram" }
 		},
 		"*-wild-sheep-ewe": {
-			"all": {
-				"base": "entity/wild-sheep/ewe"
-			}
+			"all": { "base": "entity/wild-sheep/ewe" }
 		},
 		"*-wild-sheep-lamb": {
-			"all": {
-				"base": "entity/wild-sheep/lamb"
-			}
+			"all": { "base": "entity/wild-sheep/lamb" }
 		},
 		"*-sheep-ram": {
-			"all": {
-				"base": "entity/sheep/ram"
-			}
+			"all": { "base": "entity/sheep/ram"	}
 		},
 		"*-sheep-ewe": {
-			"all": {
-				"base": "entity/sheep/ewe"
-			}
+			"all": { "base": "entity/sheep/ewe"	}
 		},
 		"*-sheep-lamb": {
-			"all": {
-				"base": "entity/sheep/lamb"
-			}
+			"all": { "base": "entity/sheep/lamb" }
 		},
 		"*-wolf-male-ashgrey": {
-			"all": {
-				"base": "entity/wolf/ashgrey"
-			}
+			"all": { "base": "entity/wolf/ashgrey" }
 		},
 		"*-wolf-male-black": {
-			"all": {
-				"base": "entity/wolf/black"
-			}
+			"all": { "base": "entity/wolf/black" }
 		},
 		"*-wolf-male-brown": {
-			"all": {
-				"base": "entity/wolf/brown"
-			}
+			"all": { "base": "entity/wolf/brown" }
 		},
 		"*-wolf-male-darkgrey": {
-			"all": {
-				"base": "entity/wolf/darkgrey"
-			}
+			"all": { "base": "entity/wolf/darkgrey"	}
 		},
 		"*-wolf-male-gold": {
-			"all": {
-				"base": "entity/wolf/gold"
-			}
+			"all": { "base": "entity/wolf/gold"	}
 		},
 		"*-wolf-male-grey": {
-			"all": {
-				"base": "entity/wolf/grey"
-			}
+			"all": { "base": "entity/wolf/grey"	}
 		},
 		"*-wolf-male-silver": {
-			"all": {
-				"base": "entity/wolf/silver"
-			}
+			"all": { "base": "entity/wolf/silver" }
 		},
 		"*-wolf-male-smokegrey": {
-			"all": {
-				"base": "entity/wolf/smokegrey"
-			}
+			"all": { "base": "entity/wolf/smokegrey" }
 		},
 		"*-wolf-male-white": {
-			"all": {
-				"base": "entity/wolf/white"
-			}
+			"all": { "base": "entity/wolf/white" }
 		},
 		"*-wolf-female-ashgrey": {
-			"all": {
-				"base": "entity/wolf/ashgrey"
-			}
+			"all": { "base": "entity/wolf/ashgrey" }
 		},
 		"*-wolf-female-black": {
-			"all": {
-				"base": "entity/wolf/black"
-			}
+			"all": { "base": "entity/wolf/black" }
 		},
 		"*-wolf-female-brown": {
-			"all": {
-				"base": "entity/wolf/brown"
-			}
+			"all": { "base": "entity/wolf/brown" }
 		},
 		"*-wolf-female-darkgrey": {
-			"all": {
-				"base": "entity/wolf/darkgrey"
-			}
+			"all": { "base": "entity/wolf/darkgrey"	}
 		},
 		"*-wolf-female-gold": {
-			"all": {
-				"base": "entity/wolf/gold"
-			}
+			"all": { "base": "entity/wolf/gold"	}
 		},
 		"*-wolf-female-grey": {
-			"all": {
-				"base": "entity/wolf/grey"
-			}
+			"all": { "base": "entity/wolf/grey"	}
 		},
 		"*-wolf-female-silver": {
-			"all": {
-				"base": "entity/wolf/silver"
-			}
+			"all": { "base": "entity/wolf/silver" }
 		},
 		"*-wolf-female-smokegrey": {
-			"all": {
-				"base": "entity/wolf/smokegrey"
-			}
+			"all": { "base": "entity/wolf/smokegrey" }
 		},
 		"*-wolf-female-white": {
-			"all": {
-				"base": "entity/wolf/white"
-			}
+			"all": { "base": "entity/wolf/white" }
 		},
 		"*-wolf-pup-ashgrey": {
-			"all": {
-				"base": "entity/wolf/pup/ashgrey"
-			}
+			"all": { "base": "entity/wolf/pup/ashgrey" }
 		},
 		"*-wolf-pup-black": {
-			"all": {
-				"base": "entity/wolf/pup/black"
-			}
+			"all": { "base": "entity/wolf/pup/black" }
 		},
 		"*-wolf-pup-brown": {
-			"all": {
-				"base": "entity/wolf/pup/brown"
-			}
+			"all": { "base": "entity/wolf/pup/brown" }
 		},
 		"*-wolf-pup-darkgrey": {
-			"all": {
-				"base": "entity/wolf/pup/darkgrey"
-			}
+			"all": { "base": "entity/wolf/pup/darkgrey"	}
 		},
 		"*-wolf-pup-gold": {
-			"all": {
-				"base": "entity/wolf/pup/gold"
-			}
+			"all": { "base": "entity/wolf/pup/gold"	}
 		},
 		"*-wolf-pup-grey": {
-			"all": {
-				"base": "entity/wolf/pup/grey"
-			}
+			"all": { "base": "entity/wolf/pup/grey"	}
 		},
 		"*-wolf-pup-silver": {
-			"all": {
-				"base": "entity/wolf/pup/silver"
-			}
+			"all": { "base": "entity/wolf/pup/silver" }
 		},
 		"*-wolf-pup-smokegrey": {
-			"all": {
-				"base": "entity/wolf/pup/smokegrey"
-			}
+			"all": { "base": "entity/wolf/pup/smokegrey" }
 		},
 		"*-wolf-pup-white": {
-			"all": {
-				"base": "entity/wolf/pup/white"
-			}
+			"all": { "base": "entity/wolf/pup/white" }
 		}
 	},
-	"creativeinventory": {
-		"general": [
-			"*"
-		],
-		"items": [
-			"*"
-		],
-		"immersionfauna": [
-			"*"
-		]
-	},
+	"creativeinventory": { "general": ["*"], "items": ["*"], "immersionfauna": ["*"]},
 	"materialDensity": 600,
 	"guiTransformByType": {
 		"*-armadillo-*": {
 			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 1,
-				"z": 0
-			},
-			"rotation": {
-				"x": 4,
-				"y": -59,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.5,
-				"z": 0.5
-			},
+			"translation": {"x": 2,"y": 1,"z": 0},
+			"rotation": {"x": 4,"y": -59,"z": -180},
+			"origin": {"x": 0.5,"y": 0.5,"z": 0.5},
 			"scale": 1.16
 		},
 		"*-butterfly-*": {
-			"translation": {
-				"x": 0,
-				"y": 0,
-				"z": 0
-			},
-			"rotation": {
-				"x": 0,
-				"y": -118,
-				"z": 62
-			},
-			"origin": {
-				"x": 0.55,
-				"y": -0.2,
-				"z": 0.42
-			},
+			"translation": {"x": 0,"y": 0,"z": 0},
+			"rotation": {"x": 0,"y": -118,"z": 62},
+			"origin": {"x": 0.55,"y": -0.2,"z": 0.42},
 			"scale": 2.5
 		},
 		"*-chicken-chick-*": {
 			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 0,
-				"z": 0
-			},
-			"rotation": {
-				"x": -11,
-				"y": -15,
-				"z": -171
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.15,
-				"z": 0.5
-			},
+			"translation": {"x": 2,"y": 0,"z": 0},
+			"rotation": {"x": -11,"y": -15,"z": -171},
+			"origin": {"x": 0.5,"y": 0.15,"z": 0.5},
 			"scale": 4.5
 		},
 		"*-chicken-hen-*": {
 			"rotate": true,
-			"translation": {
-				"x": 0,
-				"y": 3,
-				"z": 0
-			},
-			"rotation": {
-				"x": -7,
-				"y": -37,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.32,
-				"z": 0.5
-			},
+			"translation": {"x": 0,"y": 3,"z": 0},
+			"rotation": {"x": -7,"y": -37,"z": -180},
+			"origin": {"x": 0.5,"y": 0.32,"z": 0.5},
 			"scale": 2.3599
 		},
 		"*-chicken-rooster-*": {
 			"rotate": true,
-			"translation": {
-				"x": 6,
-				"y": 6,
-				"z": 0
-			},
-			"rotation": {
-				"x": -7,
-				"y": -37,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.32,
-				"z": 0.5
-			},
+			"translation": {"x": 6,"y": 6,"z": 0},
+			"rotation": {"x": -7,"y": -37,"z": -180},
+			"origin": {"x": 0.5,"y": 0.32,"z": 0.5},
 			"scale": 2.14
 		},
 		"*-drifter-*": {
