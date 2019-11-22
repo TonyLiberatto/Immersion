@@ -13,9 +13,5 @@
 	{ file: "entities/land/chicken-baby", op: "add", path: "/enabled",  value: false },
 	{ file: "entities/land/hyena-pup", op: "add", path: "/enabled",  value: false },
 	{ file: "entities/land/hyena-male", op: "add", path: "/enabled",  value: false },
-	{ file: "entities/land/hyena-female", op: "add", path: "/enabled",  value: false },
-	{ file: "entities/land/fox-male", op: "add", path: "/enabled",  value: false },
-	{ file: "entities/land/fox-female", op: "add", path: "/enabled",  value: false },
-	{ file: "entities/land/fox-arctic-male", op: "add", path: "/enabled",  value: false },
-	{ file: "entities/land/fox-arctic-female", op: "add", path: "/enabled",  value: false },
+	{ file: "entities/land/hyena-female", op: "add", path: "/enabled",  value: false },	
 ]
