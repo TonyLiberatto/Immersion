@@ -12,11 +12,12 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/pig/piglet" },
+		shape: { base: "entity/land/pig-wild-piglet" },
 		texture: { base: "entity/pig/pig-wild-piglet" },
 		behaviors: [
 			{ code: "repulseagents" }, 
-			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
 		],
 		animations: [
@@ -27,6 +28,37 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 2,
+				weight: 10,
+				blendMode: "Average",
+				triggeredBy: { onControls: ["dead"] }
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				supressDefaultAnimation: true,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				supressDefaultAnimation: true,
+				blendMode: "Average", 
+			}
 		]
 	},
 	server: {
@@ -53,16 +85,7 @@
 						animationSpeed: 7,
 						animation: "Run",
 						sound: "creature/pig/piglet-hurt"
-					},
- 					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					}, 					
 					{
 						code: "getoutofwater",
 						priority: 1.4,
@@ -79,6 +102,20 @@
 						searchRange: 25,
 						animation: "Run",
 						animationSpeed: 7
+					},
+					{
+						code: "idle",
+						priority: 1.35,
+						minduration: 200000,
+						maxduration: 800000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						priorityForCancel: 1.35,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 4, toHour: 15 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 6
 					},
 					{
 						code: "idle",
@@ -101,12 +138,12 @@
 					},
 					{
 						code: "idle",
-						priority: 0.5,
-						priorityForCancel: 0.5,
-						minduration: 2100,
-						maxduration: 2100,
-						mincooldown: 30000,
-						maxcooldown: 60000,
+						priority: 0.8,
+						priorityForCancel: 1.35,
+						minduration: 5000,
+						maxduration: 15000,
+						mincooldown: 2000,
+						maxcooldown: 120000,
 						animation: "Sit",
 						animationSpeed: 1.0
 					},

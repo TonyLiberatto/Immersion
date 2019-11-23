@@ -9,7 +9,7 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/hyena/pup" },
+		shape: { base: "entity/land/hyena-pup" },
 		texture: { base: "entity/hyena/wild-pup" }, 
 		behaviors: [
 			{ code: "repulseagents" }, 

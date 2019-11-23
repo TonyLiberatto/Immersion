@@ -13,7 +13,7 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/pig/sow" },
+		shape: { base: "entity/land/pig-wild-female" },
 		texture: { base: "entity/pig/sow/{color}" },
 		behaviors: [
 			{ code: "repulseagents" }, 
@@ -28,6 +28,35 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 2,
+				weight: 10,
+				blendMode: "Average",
+				triggeredBy: { onControls: ["dead"] }
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			}
 		]
 	},
 	server: {
@@ -58,8 +87,10 @@
 			{
 				code: "emotionstates",
 				states: [
-					{ code: "aggressiveondamage", duration: 15, chance: 0.6, slot: 0, prority: 2, accumType: "noaccum" },
-					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" }
+					{ code: "fleeondamage", duration: 60, chance: 1, slot: 0, priority: 5, accumType: "max", whenHealthRelBelow: 0.5 },
+					{ code: "aggressiveondamage", duration: 15, chance: 0.6, slot: 0, priority: 2, accumType: "noaccum" },
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, priority: 1, accumType: "max" },
+					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" }
 				],
 			},
 			{
@@ -78,16 +109,7 @@
 						animationSpeed: 2,
 						sound: "creature/pig/pig-attack",
 						whenInEmotionState: "aggressiveondamage"
-					},
- 					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					}, 					
 					{
 						code: "seekentity",
 						entityCodes: ["player"],
@@ -110,6 +132,20 @@
 						animationSpeed: 4,
 						sound: "creature/pig/hurt",
 						whenInEmotionState: "fleeondamage"
+					},
+					{
+						code: "idle",
+						priority: 1.35,
+						minduration: 200000,
+						maxduration: 800000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						priorityForCancel: 1.35,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 4, toHour: 15 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 6
 					},
 					{
 						code: "stayclosetoentity",
@@ -141,14 +177,6 @@
 						maxcooldownHours: 4,
 					},
 					{
-						code: "wander", 
-						priority: 1.0, 
-						movespeed: 0.004,
-						animationSpeed: 2,
-						animation: "Walk",
-						preferredLightLevel: 20
-					},
-					{
 						code: "idle",
 						priority: 1.2,
 						priorityForCancel: 1.35,
@@ -157,7 +185,30 @@
 						mincooldown: 6000,
 						maxcooldown: 20000,
 						animation: "Dig",
-						animationSpeed: 1.5
+						animationSpeed: 1.5,
+						whenNotInEmotionState: "aggressiveondamage"
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						movespeed: 0.004,
+						animationSpeed: 2,
+						animation: "Walk",
+						preferredLightLevel: 20,
+						priorityForCancel: 1.35
+					},
+					{
+						code: "idle",
+						priority: 0.9,
+						minduration: 5000,
+						maxduration: 30000,
+						mincooldown: 2000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.28,
+						animation: "Sit",
+						whenNotInEmotionState: "aggressiveondamage",
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 5
 					},
 					{
 						code: "lookaround", 

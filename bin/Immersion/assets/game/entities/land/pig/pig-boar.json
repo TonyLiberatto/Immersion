@@ -13,11 +13,12 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/pig/boar" },
+		shape: { base: "entity/land/pig-wild-male" },
 		texture: { base: "entity/pig/{color}" },
 		behaviors: [
 			{ code: "repulseagents" }, 
-			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
 		],
 		animations: [
@@ -28,6 +29,35 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 2,
+				weight: 10,
+				blendMode: "Average",
+				triggeredBy: { onControls: ["dead"] }
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			}
 		]
 	},
 	server: {
@@ -36,12 +66,15 @@
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 25, maxhealth: 25, },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" },
 			{ 
 				code: "emotionstates",
 				states: [
-					{ code: "aggressiveondamage", duration: 20, chance: 0.9, slot: 0, prority: 2, accumType: "noaccum" },
-					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" }
+					{ code: "fleeondamage", duration: 60, chance: 1, slot: 0, priority: 5, accumType: "max", whenHealthRelBelow: 0.5 },
+					{ code: "aggressiveondamage", duration: 20, chance: 0.9, slot: 0, priority: 2, accumType: "noaccum" },
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, priority: 1, accumType: "max" },
+					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" }
 				],
 			},
 			{ 
@@ -60,16 +93,7 @@
 						animationSpeed: 2,
 						whenInEmotionState: "aggressiveondamage",
 						sound: "creature/pig/pig-attack",
-					},
- 					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					}, 					
 					{
 						code: "seekentity",
 						entityCodes: ["player"],
@@ -85,7 +109,7 @@
 					{
 						code: "fleeentity",
 						entityCodes: ["player"],
-						priority: 1.5,
+						priority: 1.8,
 						movespeed: 0.02,
 						seekingRange: 12,
 						animation: "Run",
@@ -101,49 +125,66 @@
 						animationSpeed: 2.2
 					},
 					{
+						code: "idle",
+						priority: 1.35,
+						minduration: 200000,
+						maxduration: 800000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						priorityForCancel: 1.35,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 4, toHour: 15 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 6
+					},
+					{
 						code: "seekfoodandeat",
 						movespeed: 0.004,
 						priority: 1.3,
 						animationSpeed: 2,
 						animation: "Walk",
+						eatAnimation: "Eat",
 						eatSound: "player/eat",
 						eatTime: 1.5,
 						mincooldownHours: 1,
 						maxcooldownHours: 4,
-						doConsumePortion: false
 					},
 					{
 						code: "idle",
 						priority: 1.2,
-						priorityForCancel: 1.35,
-						minduration: 2500,
-						maxduration: 2500,
-						mincooldown: 6000,
-						maxcooldown: 20000,
-						animation: "Idle",
-						animationSpeed: 1.25
-					},
-					{
-						code: "idle",
-						priority: 1.1,
 						priorityForCancel: 1.35,
 						minduration: 3200,
 						maxduration: 3200,
 						mincooldown: 6000,
 						maxcooldown: 20000,
 						animation: "Dig",
-						animationSpeed: 1.5
+						animationSpeed: 1.5,
+						whenNotInEmotionState: "aggressiveondamage"
 					},
 					{
 						code: "wander", 
 						priority: 1.0, 
-						priorityForCancel: 1.35,
 						movespeed: 0.004,
 						animationSpeed: 2,
 						animation: "Walk",
-						preferredLightLevel: 20
+						preferredLightLevel: 20,
+						priorityForCancel: 1.35
 					},
-					{ 
+					{
+						code: "idle",
+						priority: 0.9,
+						minduration: 5000,
+						maxduration: 30000,
+						mincooldown: 2000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.28,
+						animation: "Sit",
+						whenNotInEmotionState: "aggressiveondamage",
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 5
+					},
+					{
 						code: "lookaround", 
 						priority: 0.5
 					}

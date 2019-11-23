@@ -50,8 +50,8 @@
 		"*-hyena-wild-female-brown": { "base": "entity/land/hyena-female" },
 		"*-hyena-wild-pup": { "base": "entity/land/hyena-pup" },
 		"*-locust-*": {	"base": "entity/land/{type}" },
-		"*-pig-boar-*": { "base": "entity/land/pig/boar" },
-		"*-pig-sow-*": { "base": "entity/land/pig/sow" },
+		"*-pig-boar-*": { "base": "entity/land/pig-wild-male" },
+		"*-pig-sow-*": { "base": "entity/land/pig-wild-female" },
 		"*-pig-piglet": { "base": "entity/land/pig-wild-piglet" },
 		"*-pig-domestic-boar": { "base": "entity/land/pig-domestic/boar" },
 		"*-pig-domestic-sow": { "base": "entity/land/pig-domestic/sow" },
@@ -519,53 +519,21 @@
 			scale: 3
 		},
 		"*-humanoid-trader-*": {
-			"rotation": {
-				"x": 0,
-				"y": -90,
-				"z": -178
-			},
-			"origin": {
-				"x": 0.6,
-				"y": 0.78,
-				"z": 0.5
-			}
+			"rotation": { "x": 0, "y": -90,	"z": -178 },
+			"origin": {	"x": 0.6, "y": 0.78, "z": 0.5 }
 		},
 		"*-hyena-wild-male": {
 			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 1,
-				"z": 0
-			},
-			"rotation": {
-				"x": 4,
-				"y": -59,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.5,
-				"z": 0.5
-			},
+			"translation": { "x": 2, "y": 1, "z": 0	},
+			"rotation": { "x": 4, "y": -59,	"z": -180 },
+			"origin": {	"x": 0.5, "y": 0.5,	"z": 0.5 },
 			"scale": 1.16
 		},
 		"*-hyena-wild-female-tan": {
 			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 1,
-				"z": 0
-			},
-			"rotation": {
-				"x": 4,
-				"y": -59,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.5,
-				"z": 0.5
-			},
+			"translation": { "x": 2, "y": 1, "z": 0	},
+			"rotation": { "x": 4, "y": -59,	"z": -180 },
+			"origin": {	"x": 0.5, "y": 0.5,	"z": 0.5 },
 			"scale": 1.16
 		},
 		"*-hyena-wild-female-brown": {
@@ -625,175 +593,67 @@
 			"scale": 1.88
 		},
 		"*-pig-boar-*": {
-			"rotate": true,
-			"translation": {
-				"x": 0,
-				"y": 2,
-				"z": 0
-			},
-			"rotation": {
-				"x": -14,
-				"y": -50,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.35,
-				"z": 0.5
-			},
-			"scale": 1.36
+			rotate: true,
+			translation: { x: 0, y: 2, z: 0 },
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.35, z: 0.5 },
+			scale: 1.36
 		},
 		"*-pig-sow-*": {
-			"rotate": true,
-			"translation": {
-				"x": 0,
-				"y": 2,
-				"z": 0
-			},
-			"rotation": {
-				"x": -14,
-				"y": -50,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.35,
-				"z": 0.5
-			},
-			"scale": 1.36
+			rotate: true,
+			translation: { x: 0, y: 2, z: 0 },
+			rotation: { x: -14, y: -50, z: -180 },
+			origin: { x: 0.5, y: 0.35, z: 0.5 },
+			scale: 1.36
 		},
-		"*-pig-piglet-*": {
-			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 2,
-				"z": 0
-			},
-			"rotation": {
-				"x": -5,
-				"y": -36,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.17,
-				"z": 0.5
-			},
-			"scale": 3
+		"*-pig-piglet": {
+			rotate: true,
+			translation: { x: 2, y: 2, z: 0 },
+			rotation: { x: -5, y: -36, z: -180 },
+			origin: { x: 0.5, y: 0.17, z: 0.5 },
+			scale: 3
 		},
 		"*-pig-domestic-boar": {
 			"rotate": true,
-			"translation": {
-				"x": 0,
-				"y": 2,
-				"z": 0
-			},
-			"rotation": {
-				"x": -14,
-				"y": -50,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.35,
-				"z": 0.5
-			},
+			"translation": { "x": 0, "y": 2, "z": 0	},
+			"rotation": { "x": -14,	"y": -50, "z": -180	},
+			"origin": {	"x": 0.5, "y": 0.35, "z": 0.5 },
 			"scale": 1.36
 		},
 		"*-pig-domestic-sow": {
 			"rotate": true,
-			"translation": {
-				"x": 0,
-				"y": 2,
-				"z": 0
-			},
-			"rotation": {
-				"x": -14,
-				"y": -50,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.35,
-				"z": 0.5
-			},
+			"translation": { "x": 0, "y": 2, "z": 0	},
+			"rotation": { "x": -14,	"y": -50, "z": -180	},
+			"origin": {	"x": 0.5, "y": 0.35, "z": 0.5 },
 			"scale": 1.36
 		},
 		"*-pig-domestic-piglet": {
 			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 2,
-				"z": 0
-			},
-			"rotation": {
-				"x": -5,
-				"y": -36,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.17,
-				"z": 0.5
-			},
+			"translation": { "x": 2, "y": 2, "z": 0	},
+			"rotation": { "x": -5, "y": -36, "z": -180 },
+			"origin": { "x": 0.5, "y": 0.17, "z": 0.5 },
 			"scale": 3
 		},
-		"*-raccoon-male": {
-			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 1,
-				"z": 0
-			},
-			"rotation": {
-				"x": 4,
-				"y": -59,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.25,
-				"z": 0.5
-			},
-			"scale": 3
+		"creature-raccoon-male": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.25, z: 0.5 },
+			scale: 3
 		},
-		"*-raccoon-female": {
-			"rotate": true,
-			"translation": {
-				"x": 2,
-				"y": 1,
-				"z": 0
-			},
-			"rotation": {
-				"x": 4,
-				"y": -59,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.25,
-				"z": 0.5
-			},
-			"scale": 3
+		"creature-raccoon-female": {
+			rotate: true,
+			translation: { x: 2, y: 1, z: 0 },
+			rotation: { x: 4, y: -59, z: -180 },
+			origin: { x: 0.5, y: 0.25, z: 0.5 },
+			scale: 3
 		},
-		"*-raccoon-pup": {
-			"rotate": true,
-			"translation": {
-				"x": 3,
-				"y": 0,
-				"z": 0
-			},
-			"rotation": {
-				"x": -12,
-				"y": -48,
-				"z": -180
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.2,
-				"z": 0.5
-			},
-			"scale": 3
+		"creature-raccoon-pup": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.2, z: 0.5 },
+			scale: 3
 		},
 		"*-sheep-ram": {
 			"rotate": true,
@@ -1227,92 +1087,36 @@
 			"scale": 0.53
 		},
 		"*-pig-boar-*": {
-			"translation": {
-				"x": -1,
-				"y": -0.6,
-				"z": -0.7
-			},
-			"rotation": {
-				"x": -180,
-				"y": 0,
-				"z": -156
-			},
-			"scale": 0.5
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
 		},
 		"*-pig-sow-*": {
-			"translation": {
-				"x": -1,
-				"y": -0.6,
-				"z": -0.7
-			},
-			"rotation": {
-				"x": -180,
-				"y": 0,
-				"z": -156
-			},
-			"scale": 0.5
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
 		},
-		"*-pig-piglet-*": {
-			"translation": {
-				"x": -0.4,
-				"y": -0.1,
-				"z": -0.4
-			},
-			"rotation": {
-				"x": -136,
-				"y": -19,
-				"z": -135
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.1,
-				"z": 0.5
-			},
-			"scale": 0.92
+		"*-pig-piglet": {
+			translation: { x: -0.4, y: -0.1, z: -0.4 },
+			rotation: { x: -136, y: -19, z: -135 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
 		},
 		"*-pig-domestic-boar": {
-			"translation": {
-				"x": -1,
-				"y": -0.6,
-				"z": -0.7
-			},
-			"rotation": {
-				"x": -180,
-				"y": 0,
-				"z": -156
-			},
-			"scale": 0.5
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
 		},
 		"*-pig-domestic-sow": {
-			"translation": {
-				"x": -1,
-				"y": -0.6,
-				"z": -0.7
-			},
-			"rotation": {
-				"x": -180,
-				"y": 0,
-				"z": -156
-			},
-			"scale": 0.5
+			translation: { x: -1, y: -0.6, z: -0.7 },
+			rotation: { x: -180, y: 0, z: -156 },
+			scale: 0.5
 		},
 		"*-pig-domestic-piglet": {
-			"translation": {
-				"x": -0.4,
-				"y": -0.1,
-				"z": -0.4
-			},
-			"rotation": {
-				"x": -136,
-				"y": -19,
-				"z": -135
-			},
-			"origin": {
-				"x": 0.5,
-				"y": 0.1,
-				"z": 0.5
-			},
-			"scale": 0.92
+			translation: { x: -0.4, y: -0.1, z: -0.4 },
+			rotation: { x: -136, y: -19, z: -135 },
+			origin: { x: 0.5, y: 0.1, z: 0.5 },
+			scale: 0.92
 		},
 		"*-raccoon-male": {
 			"translation": {
@@ -1731,7 +1535,7 @@
 			},
 			"scale": 1.36
 		},
-		"*-pig-piglet-*": {
+		"*-pig-piglet": {
 			"translation": {
 				"x": 0.5,
 				"y": 0.1,
