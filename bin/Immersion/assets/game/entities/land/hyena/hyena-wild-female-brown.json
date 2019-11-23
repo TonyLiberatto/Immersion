@@ -13,7 +13,7 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/hyena/female" },
+		shape: { base: "entity/land/hyena-female" },
 		texture: { base: "immersion:entity/hyena/wild-female-brown" },
 		behaviors: [
 			{ code: "repulseagents" }, 
@@ -35,6 +35,27 @@
 				animationSpeed: 1.25,
 				weight: 10,
 				blendMode: "AddAverage" 
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
 			}
 		]
 	},
@@ -98,6 +119,20 @@
 						sound: "creature/hyena/attack"
 					},
 					{
+						code: "idle",
+						priority: 1.6,
+						minduration: 5000000,
+						maxduration: 5000000,
+						mincooldown: 5000,
+						maxcooldown: 15000,
+						priorityForCancel: 1.6,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 20, toHour: 24 }, { fromHour: 0, toHour: 7 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 6
+					},
+					{
                         code: "seekfoodandeat",
                         priority: 1.85,
                         eatSound: "player/eat",
@@ -111,15 +146,7 @@
                         maxcooldownHours: 4,
                         doConsumePortion: true
                     },
-					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: true,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					
 					{
 						code: "seekentity",
 						entityCodes: ["player"],
@@ -156,7 +183,8 @@
 						mincooldown: 6000,
 						maxcooldown: 20000,
 						animation: "Sniff",
-						animationSpeed: 1.25
+						animationSpeed: 1.25,
+						whenNotInEmotionState: "aggressiveondamage"
 					},
 					{
 						code: "wander", 
@@ -165,6 +193,19 @@
 						movespeed: 0.006,
 						animation: "Walk",
 						preferredLightLevel: 24
+					},
+					{
+						code: "idle",
+						priority: 0.9,
+						minduration: 5000,
+						maxduration: 30000,
+						mincooldown: 2000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.28,
+						animation: "Sit",
+						whenNotInEmotionState: "aggressiveondamage",
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 5
 					},
 					{ 
 						code: "lookaround", 

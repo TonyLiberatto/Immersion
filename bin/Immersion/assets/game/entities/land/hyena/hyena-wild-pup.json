@@ -31,6 +31,27 @@
 				animationSpeed: 1.75,
 				weight: 10,
 				blendMode: "AddAverage" 
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
 			}
 		]
 	},
@@ -67,16 +88,7 @@
 						seekingRange: 5,
 						animation: "Run",
 						sound: "creature/wolf/wolf-pup-bark"
-					},
-					{
-						code: "sleep",
-						priority: 1.6,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: true,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					},					
 					{
 						code: "fleeentity",
 						entityCodes: ["player"],
@@ -98,12 +110,26 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "hyena-wild-female",
+						entityCode: "hyena-wild-female-*",
 						movespeed: 0.02,
 						animationSpeed: 3,
 						maxDistance: 5,
 						searchRange: 25,
 						animation: "Run"
+					},
+					{
+						code: "idle",
+						priority: 1.38,
+						minduration: 5000000,
+						maxduration: 5000000,
+						mincooldown: 5000,
+						maxcooldown: 15000,
+						priorityForCancel: 1.38,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 20, toHour: 24 }, { fromHour: 0, toHour: 7 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 8
 					},
 					{
 						code: "idle",
