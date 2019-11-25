@@ -901,6 +901,11 @@
   "block-dead-pig-sow-darkgrey": "Dead DarkGrey Sow",
   "block-dead-pig-sow-smokegrey": "Dead SmokeGrey Sow",
   "block-dead-pig-sow-walnut": "Dead Walnut Sow",
+  
+  "block-dead-pig-domestic-boar": "Dead Pig Domestic (Boar)",
+  "block-dead-pig-domestic-sow": "Dead Pig Domestic (Sow)",
+  "block-skinned-domestic-boar": "Skinned Domestic (Boar)",
+  "block-skinned-domestic-sow": "Skinned Domestic (Sow)",
 
   "block-dead-wolf-male-ashgrey": "Dead AshGrey Male Wolf",
   "block-dead-wolf-male-black": "Dead Black Male Wolf",
@@ -925,10 +930,10 @@
   "block-dead-panther-male-black": "Dead Black Male Panther",
   "block-dead-panther-female-black": "Dead Black Female Panther",
 
-  "block-dead-fox-red-male": "Dead Male Fox ",
-  "block-dead-fox-red-female": "Dead Female Fox",
-  "block-dead-fox-snow-male": "Dead Male Snow Fox",
-  "block-dead-fox-snow-female": "Dead Female Snow Fox",
+  "block-dead-fox-male": "Dead Male Fox ",
+  "block-dead-fox-female": "Dead Female Fox",
+  "block-dead-fox-arctic-male": "Dead Male Snow Fox",
+  "block-dead-fox-arctic-female": "Dead Female Snow Fox",
 
   "block-dead-hyena-wild-male": "Dead Male Hyena",
   "block-dead-hyena-wild-female-tan": "Dead Female Tan Hyena",
@@ -2176,7 +2181,10 @@
 	"block-dryingtray-acacia": "Drying Tray (Acacia)",
 	"block-dryingtray-kapok": "Drying Tray (Kapok)",
 	"block-dryingtray-aged": "Drying Tray (Aged)",
-  "item-seawaterportion": "Sea Water",
-  "incontainer-item-seawaterportion": "Sea Water",
-  "incontainer-item-salt": "Salt"
+    "item-seawaterportion": "Sea Water",
+    "incontainer-item-seawaterportion": "Sea Water",
+    "incontainer-item-salt": "Salt"
+	
+	
+	
 }
