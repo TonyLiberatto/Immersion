@@ -272,40 +272,40 @@
 			"all": { "base": "entity/pig/ashgrey" }
 		},
 		"*-pig-boar-brown": {
-			"all": { "base": "entity/pig/brown" }
+			"boar": { "base": "entity/pig/brown" }
 		},
 		"*-pig-boar-chocolate": {
-			"all": { "base": "entity/pig/chocolate"	}
+			"boar": { "base": "entity/pig/chocolate"	}
 		},
 		"*-pig-boar-darkgrey": {
-			"all": { "base": "entity/pig/darkgrey" }
+			"boar": { "base": "entity/pig/darkgrey" }
 		},
 		"*-pig-boar-smokegrey": {
-			"all": { "base": "entity/pig/smokegrey" }
+			"boar": { "base": "entity/pig/smokegrey" }
 		},
 		"*-pig-boar-walnut": {
-			"all": { "base": "entity/pig/walnut" }
+			"boar": { "base": "entity/pig/walnut" }
 		},
 		"*-pig-sow-ashgrey": {
-			"all": { "base": "entity/pig/sow/ashgrey" }
+			"sow": { "base": "entity/pig/sow/ashgrey" }
 		},
 		"*-pig-sow-brown": {
-			"all": { "base": "entity/pig/sow/brown"	}
+			"sow": { "base": "entity/pig/sow/brown"	}
 		},
 		"*-pig-sow-chocolate": {
-			"all": { "base": "entity/pig/sow/chocolate"	}
+			"sow": { "base": "entity/pig/sow/chocolate"	}
 		},
 		"*-pig-sow-darkgrey": {
-			"all": { "base": "entity/pig/sow/darkgrey" }
+			"sow": { "base": "entity/pig/sow/darkgrey" }
 		},
 		"*-pig-sow-smokegrey": {
-			"all": {  "base": "entity/pig/sow/smokegrey" }
+			"sow": {  "base": "entity/pig/sow/smokegrey" }
 		},
 		"*-pig-sow-walnut": {
-			"all": { "base": "entity/pig/sow/walnut" }
+			"sow": { "base": "entity/pig/sow/walnut" }
 		},
 		"*-pig-piglet": {
-			"all": { "base": "entity/pig/pig-wild-piglet" }
+			"piglet": { "base": "entity/pig/pig-wild-piglet" }
 		},
 		"*-pig-domestic-boar": {
 			"all": { "base": "entity/pig-domestic/boar"	}
@@ -317,13 +317,13 @@
 			"all": { "base": "entity/pig-domestic/piglet" }
 		},
 		"*-racoon-male": {
-			"all": { "base": "entity/racoon/racoon-male1" }
+			"raccoon": { "base": "entity/racoon/racoon-male1" }
 		},
 		"*-racoon-female": {
-			"all": { "base": "entity/racoon/racoon-female1"	}
+			"raccoon": { "base": "entity/racoon/racoon-female1"	}
 		},
 		"*-racoon-pup": {
-			"all": { "base": "entity/racoon/racoon-pup1" }
+			"raccoon": { "base": "entity/racoon/racoon-pup1" }
 		},
 		"*-wild-sheep-ram": {
 			"all": { "base": "entity/wild-sheep/ram" }
@@ -344,85 +344,85 @@
 			"all": { "base": "entity/sheep/lamb" }
 		},
 		"*-wolf-male-ashgrey": {
-			"all": { "base": "entity/wolf/ashgrey" }
+			"skin": { "base": "entity/wolf/ashgrey" }
 		},
 		"*-wolf-male-black": {
-			"all": { "base": "entity/wolf/black" }
+			"skin": { "base": "entity/wolf/black" }
 		},
 		"*-wolf-male-brown": {
-			"all": { "base": "entity/wolf/brown" }
+			"skin": { "base": "entity/wolf/brown" }
 		},
 		"*-wolf-male-darkgrey": {
-			"all": { "base": "entity/wolf/darkgrey"	}
+			"skin": { "base": "entity/wolf/darkgrey"	}
 		},
 		"*-wolf-male-gold": {
-			"all": { "base": "entity/wolf/gold"	}
+			"skin": { "base": "entity/wolf/gold"	}
 		},
 		"*-wolf-male-grey": {
-			"all": { "base": "entity/wolf/grey"	}
+			"skin": { "base": "entity/wolf/grey"	}
 		},
 		"*-wolf-male-silver": {
-			"all": { "base": "entity/wolf/silver" }
+			"skin": { "base": "entity/wolf/silver" }
 		},
 		"*-wolf-male-smokegrey": {
-			"all": { "base": "entity/wolf/smokegrey" }
+			"skin": { "base": "entity/wolf/smokegrey" }
 		},
 		"*-wolf-male-white": {
-			"all": { "base": "entity/wolf/white" }
+			"skin": { "base": "entity/wolf/white" }
 		},
 		"*-wolf-female-ashgrey": {
-			"all": { "base": "entity/wolf/ashgrey" }
+			"skin": { "base": "entity/wolf/ashgrey" }
 		},
 		"*-wolf-female-black": {
-			"all": { "base": "entity/wolf/black" }
+			"skin": { "base": "entity/wolf/black" }
 		},
 		"*-wolf-female-brown": {
-			"all": { "base": "entity/wolf/brown" }
+			"skin": { "base": "entity/wolf/brown" }
 		},
 		"*-wolf-female-darkgrey": {
-			"all": { "base": "entity/wolf/darkgrey"	}
+			"skin": { "base": "entity/wolf/darkgrey"	}
 		},
 		"*-wolf-female-gold": {
-			"all": { "base": "entity/wolf/gold"	}
+			"skin": { "base": "entity/wolf/gold"	}
 		},
 		"*-wolf-female-grey": {
-			"all": { "base": "entity/wolf/grey"	}
+			"skin": { "base": "entity/wolf/grey"	}
 		},
 		"*-wolf-female-silver": {
-			"all": { "base": "entity/wolf/silver" }
+			"skin": { "base": "entity/wolf/silver" }
 		},
 		"*-wolf-female-smokegrey": {
-			"all": { "base": "entity/wolf/smokegrey" }
+			"skin": { "base": "entity/wolf/smokegrey" }
 		},
 		"*-wolf-female-white": {
-			"all": { "base": "entity/wolf/white" }
+			"skin": { "base": "entity/wolf/white" }
 		},
 		"*-wolf-pup-ashgrey": {
-			"all": { "base": "entity/wolf/pup/ashgrey" }
+			"skin": { "base": "entity/wolf/pup/ashgrey" }
 		},
 		"*-wolf-pup-black": {
-			"all": { "base": "entity/wolf/pup/black" }
+			"skin": { "base": "entity/wolf/pup/black" }
 		},
 		"*-wolf-pup-brown": {
-			"all": { "base": "entity/wolf/pup/brown" }
+			"skin": { "base": "entity/wolf/pup/brown" }
 		},
 		"*-wolf-pup-darkgrey": {
-			"all": { "base": "entity/wolf/pup/darkgrey"	}
+			"skin": { "base": "entity/wolf/pup/darkgrey"	}
 		},
 		"*-wolf-pup-gold": {
-			"all": { "base": "entity/wolf/pup/gold"	}
+			"skin": { "base": "entity/wolf/pup/gold"	}
 		},
 		"*-wolf-pup-grey": {
-			"all": { "base": "entity/wolf/pup/grey"	}
+			"skin": { "base": "entity/wolf/pup/grey"	}
 		},
 		"*-wolf-pup-silver": {
-			"all": { "base": "entity/wolf/pup/silver" }
+			"skin": { "base": "entity/wolf/pup/silver" }
 		},
 		"*-wolf-pup-smokegrey": {
-			"all": { "base": "entity/wolf/pup/smokegrey" }
+			"skin": { "base": "entity/wolf/pup/smokegrey" }
 		},
 		"*-wolf-pup-white": {
-			"all": { "base": "entity/wolf/pup/white" }
+			"skin": { "base": "entity/wolf/pup/white" }
 		}
 	},
 	"creativeinventory": { "general": ["*"], "items": ["*"], "immersionfauna": ["*"]},

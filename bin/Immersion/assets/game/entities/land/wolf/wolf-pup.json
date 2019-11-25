@@ -1,7 +1,7 @@
 {
 	code: "wolf-pup",
 	class: "EntityAgent",
-	hitboxSize: { x: 1.0, y: 0.5 },
+	hitboxSize: { x: 0.85, y: 0.5 },
 	eyeHeight: 0.4,
 	variantgroups: [
 		{ code: "color", states: ["ashgrey", "black", "brown", "darkgrey", "gold", "grey", "silver", "smokegrey","white"] }],
@@ -10,11 +10,12 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/wolf/pup" },
+		shape: { base: "entity/land/wolf-pup" },
 		texture: { base: "entity/wolf/pup/{color}" },
 		behaviors: [
 			{ code: "repulseagents" }, 
-			{ code: "controlledphysics", stepHeight: 1.0001 }, 
+			{ code: "controlledphysics", stepHeight: 1.0001 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },			
 			{ code: "interpolateposition" },
 		],
 		animations: [
@@ -25,6 +26,35 @@
 				weight: 10,
 				blendMode: "AddAverage" 
 			},
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 1.5,
+				weight: 10,
+				blendMode: "Average",
+				triggeredBy: { onControls: ["dead"] }
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			}
 		]
 	},
 	server: {
@@ -33,7 +63,14 @@
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 5, maxhealth: 5 },
+			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" },
+			{ 
+				code: "emotionstates",
+				states: [
+					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" }
+				],
+			},
 			{ 
 				code: "grow" ,
 				hoursToGrow: 336,
@@ -69,16 +106,7 @@
 						seekingRange: 5,
 						animation: "Run",
 						sound: "creature/wolf/wolf-pup-bark"
-					},
-					{
-						code: "sleep",
-						priority: 1.6,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: true,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					},					
 					{
 						code: "fleeentity",
 						entityCodes: ["player"],
@@ -105,6 +133,20 @@
 						maxDistance: 5,
 						searchRange: 25,
 						animation: "Run"
+					},
+					{
+						code: "idle",
+						priority: 1.35,
+						priorityForCancel: 1.35,
+						minduration: 200000,
+						maxduration: 800000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 10, toHour: 18 }, { fromHour: 1, toHour: 3 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 6
 					},
 					{
 						code: "idle",
@@ -148,6 +190,16 @@
 						animationSpeed: 2,
 						animation: "Walk",
 						preferredLightLevel: 18
+					},
+					{
+						code: "idle",
+						priority: 0.9,
+						minduration: 5000,
+						maxduration: 30000,
+						mincooldown: 2000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.35,
+						animation: "Sit"
 					},
 					{ 
 						code: "lookaround", 
