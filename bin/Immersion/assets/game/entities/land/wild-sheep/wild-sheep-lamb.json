@@ -13,8 +13,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/wild-sheep/lamb" },
-		texture: { base: "entity/wild-sheep/lamb" },
+		shape: { base: "entity/land/sheep-bighorn-lamb" },
+		texture: { base: "entity/sheep/sheep-bighorn-lamb" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -35,6 +35,34 @@
 				animationSpeed: 1.25,
 				weight: 10,
 				blendMode: "AddAverage" 
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{ 
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 1,
+				easeOutSpeed: 1,
+				blendMode: "Average", 
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
 			}
 		]
 	},
@@ -51,14 +79,17 @@
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 10, maxhealth: 10, },
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
-			{ code: "breathe" }, 
-			{ 
-				code: "grow",
+			{ code: "breathe" },
+			{ code: "emotionstates",
+				states: [
+					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" }
+				],
+			},
+			{ code: "grow",
 				hoursToGrow: 336,
 				adultEntityCodes: ["wild-sheep-ram", "wild-sheep-ewe"],
 			},
-			{ 
-				code: "taskai",
+			{ code: "taskai",
 				aitasks: [
 					{
 						code: "fleeentity",
@@ -69,16 +100,7 @@
 						animationSpeed: 4,
 						animation: "Run",
 						sound: "creature/sheep/lamb-hurt2"
-					},
- 					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					}, 					
 					{
 						code: "getoutofwater",
 						priority: 1.4,
@@ -95,6 +117,20 @@
 						searchRange: 25,
 						animation: "Run",
 						animationSpeed: 4
+					},
+					{
+						code: "idle",
+						priority: 1.35,
+						priorityForCancel: 1.35,
+						minduration: 5000000,
+						maxduration: 5000000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 22, toHour: 24 }, { fromHour: 0, toHour: 5 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 8
 					},
 					{
 						code: "idle",
@@ -126,6 +162,16 @@
 						animationSpeed: 2,
 						animation: "Walk",
 						preferredLightLevel: 24
+					},
+					{
+						code: "idle",
+						priority: 0.9,
+						minduration: 5000,
+						maxduration: 45000,
+						mincooldown: 6000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.28,
+						animation: "Sit"
 					},
 					{ 
 						code: "lookaround", 

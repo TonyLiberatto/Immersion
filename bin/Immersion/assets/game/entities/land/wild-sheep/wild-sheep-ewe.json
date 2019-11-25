@@ -12,8 +12,8 @@
 	],
 	client: {
 		renderer: "Shape",
-		shape: { base: "entity/land/wild-sheep/ewe" },
-		texture: { base: "entity/wild-sheep/ewe" },
+		shape: { base: "entity/land/sheep-bighorn-female" },
+		texture: { base: "entity/sheep/sheep-bighorn-female" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -35,6 +35,27 @@
 				animationSpeed: 1.25,
 				weight: 10,
 				blendMode: "AddAverage" 
+			},
+			{ 
+				code: "idle", 
+				animation: "idle",
+				blendMode: "AddAverage",
+				easeOutSpeed: 4,
+				triggeredBy: { defaultAnim: true },
+			},
+			{
+				code: "sleep", 
+				animation: "sleep",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
+			},
+			{
+				code: "sit", 
+				animation: "sit",
+				easeInSpeed: 4,
+				easeOutSpeed: 4,
+				blendMode: "Average", 
 			}
 		]
 	},
@@ -60,8 +81,7 @@
 				code: "multiply",
 				spawnEntityCode: "sheep-lamb",
 				spawnQuantityMin: 1,
-				spawnQuantityMax: 2,
-				growthCapEntityCodes: ["sheep-ram", "sheep-ewe", "sheep-lamb"],
+				spawnQuantityMax: 2,				
 				requiresNearbyEntityCode: "wild-sheep-ram",
 				requiresNearbyEntityRange: 10,				
 				pregnancyDays: 5,
@@ -72,8 +92,10 @@
 			{ 
 				code: "emotionstates",
 				states: [
-					{ code: "aggressiveondamage", duration: 15, chance: 0.6, slot: 0, prority: 2, accumType: "noaccum" },
-					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" }
+					{ code: "fleeondamage", duration: 60, chance: 1, slot: 0, priority: 5, accumType: "max", whenHealthRelBelow: 0.5 },
+					{ code: "aggressiveondamage", duration: 30, chance: 0.75, slot: 0, priority: 2, accumType: "noaccum" },
+					{ code: "fleeondamage", duration: 30, chance: 1, slot: 0, priority: 1, accumType: "max" },
+					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" }
 				],
 			},
 			{ 
@@ -91,16 +113,7 @@
 						animation: "Attack",
 						animationSpeed: 1,
 						whenInEmotionState: "aggressiveondamage"
-					},
- 					{
-						code: "sleep",
-						priority: 1.8,
-						priorityForCancel: 1.35,
-						animation: "sleep",
-						isnocturnal: false,
-						cancelOnHurt: true,
-						animationSpeed: 0.20,
-					},
+					}, 					
 					{
 						code: "seekentity",
 						entityCodes: ["player"],
@@ -130,6 +143,20 @@
 						movespeed: 0.015,
 						animation: "Walk",
 						animationSpeed: 4
+					},
+					{
+						code: "idle",
+						priority: 1.35,
+						priorityForCancel: 1.35,
+						minduration: 5000000,
+						maxduration: 5000000,
+						mincooldown: 10000,
+						maxcooldown: 30000,
+						animation: "Sleep",
+						whenNotInEmotionState: "aggressiveondamage",
+						duringDayTimeFrames: [ { fromHour: 22, toHour: 24 }, { fromHour: 0, toHour: 5 } ],
+						stopOnNearbyEntityCodes: ["player"],
+						stopRange: 8
 					},
 					{
 						code: "stayclosetoentity",
@@ -172,6 +199,16 @@
 						animationSpeed: 1.4,
 						animation: "Walk",
 						preferredLightLevel: 24
+					},
+					{
+						code: "idle",
+						priority: 0.9,
+						minduration: 6000,
+						maxduration: 45000,
+						mincooldown: 6000,
+						maxcooldown: 120000,
+						priorityForCancel: 1.28,
+						animation: "Sit"
 					},
 					{ 
 						code: "lookaround", 
