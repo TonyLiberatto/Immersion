@@ -1,6 +1,6 @@
 {
 	code: "logwall",
-  class: "BlockLogWall",
+    class: "BlockLogWall",
 	entityClass: "LogWall",
 	behaviors: [
 		{

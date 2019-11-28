@@ -2,7 +2,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-bark-*",
+		"Code": "immersion:branch-thin-pine-bark-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -12,7 +12,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-bark-leatherstrips-ud",
+        "Code": "immersion:branch-cordage-thin-pine-bark-leatherstrips-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -23,7 +23,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-debarked-*",
+		"Code": "immersion:branch-thin-pine-debarked-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -33,7 +33,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-debarked-leatherstrips-ud",
+        "Code": "immersion:branch-cordage-thin-pine-debarked-leatherstrips-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -44,7 +44,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-bark-*",
+		"Code": "immersion:branch-thin-pine-bark-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -54,7 +54,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-bark-sinew-ud",
+        "Code": "immersion:branch-cordage-thin-pine-bark-sinew-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -65,7 +65,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-debarked-*",
+		"Code": "immersion:branch-thin-pine-debarked-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -75,7 +75,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-debarked-sinew-ud",
+        "Code": "immersion:branch-cordage-thin-pine-debarked-sinew-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -86,7 +86,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-bark-*",
+		"Code": "immersion:branch-thin-pine-bark-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -96,7 +96,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-bark-sisal-ud",
+        "Code": "immersion:branch-cordage-thin-pine-bark-sisal-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -107,7 +107,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-debarked-*",
+		"Code": "immersion:branch-thin-pine-debarked-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -117,7 +117,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-debarked-sisal-ud",
+        "Code": "immersion:branch-cordage-thin-pine-debarked-sisal-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -128,7 +128,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-bark-*",
+		"Code": "immersion:branch-thin-pine-bark-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -138,7 +138,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-bark-reeds-ud",
+        "Code": "immersion:branch-cordage-thin-pine-bark-reeds-ns",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -149,7 +149,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-thin-maple-debarked-*",
+		"Code": "immersion:branch-thin-pine-debarked-ns",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -159,7 +159,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-thin-maple-debarked-reeds-ud",
+        "Code": "immersion:branch-cordage-thin-pine-debarked-reeds-ns",
         "Type": "Block",		
         "StackSize": 1
     }],

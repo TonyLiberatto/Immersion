@@ -1,5 +1,6 @@
 {
-	code: "branch",	
+	code: "branch",
+    behaviors: [{name: "Pillar"}],	
 	attributes: {
 		handbook: {
 			groupBy: ["branch-*"]
@@ -86,7 +87,7 @@
 			},
 		],
 	},
-	collisionboxbytype: {
+	collisionSelectionBoxbytype: {
 		"branch-very-thin-*-ud": { x1: 0.45, y1: 0, z1: 0.45, x2: 0.55, y2: 1, z2: 0.55 },
 		"branch-thin-*-ud": { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 1, z2: 0.65 },
 		"branch-medium-*-ud": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
@@ -101,23 +102,7 @@
 		"branch-thin-*-we": { x1: 0, y1: 0.35, z1: 0.35, x2: 1, y2: 0.65, z2: 0.65 },
 		"branch-medium-*-we": { x1: 0, y1: 0.25, z1: 0.25, x2: 1, y2: 0.75, z2: 0.75 },
 		"branch-thick-*-we": { x1: 0, y1: 0.15, z1: 0.15, x2: 1, y2: 0.85, z2: 0.85 },
-		},
-		selectionboxbytype: {
-		"branch-very-thin-*-ud": { x1: 0.45, y1: 0, z1: 0.45, x2: 0.55, y2: 1, z2: 0.55 },
-		"branch-thin-*-ud": { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 1, z2: 0.65 },
-		"branch-medium-*-ud": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
-		"branch-thick-*-ud": { x1: 0.15, y1: 0, z1: 0.15, x2: 0.85, y2: 1, z2: 0.85 },
-		
-		"branch-very-thin-*-ns": { x1: 0.45, y1: 0.45, z1: 0, x2: 0.55, y2: 0.55, z2: 1 },
-		"branch-thin-*-ns": { x1: 0.35, y1: 0.35, z1: 0, x2: 0.65, y2: 0.65, z2: 1 },
-		"branch-medium-*-ns": { x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.75, z2: 1 },
-		"branch-thick-*-ns": { x1: 0.15, y1: 0.15, z1: 0, x2: 0.85, y2: 0.85, z2: 1 },
-		
-		"branch-very-thin-*-we": { x1: 0, y1: 0.45, z1: 0.45, x2: 1, y2: 0.55, z2: 0.55 },
-		"branch-thin-*-we": { x1: 0, y1: 0.35, z1: 0.35, x2: 1, y2: 0.65, z2: 0.65 },
-		"branch-medium-*-we": { x1: 0, y1: 0.25, z1: 0.25, x2: 1, y2: 0.75, z2: 0.75 },
-		"branch-thick-*-we": { x1: 0, y1: 0.15, z1: 0.15, x2: 1, y2: 0.85, z2: 0.85 },
-		},
+		},	
 	combustiblePropsByType: {
 		"branch-very-thin-birch-*": {
 			burnTemperature: 800,

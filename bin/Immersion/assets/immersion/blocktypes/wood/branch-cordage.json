@@ -1,5 +1,6 @@
 {
 	code: "branch-cordage",
+	behaviors: [{name: "Pillar"}],
 	variantgroups: [
 		{ code: "size", states: ["very-thin", "thin", "medium"] },
 		{ loadFromProperties: "block/wood" },
@@ -28,6 +29,22 @@
 		"branch-cordage-thin-*-we": {base: "block/wood/branch4-cordage", rotateZ: 90, rotateX: 90},
 		"branch-cordage-medium-*-we": {base: "block/wood/branch8-cordage", rotateZ: 90, rotateX: 90},
 	},
+	collisionSelectionBoxbytype: {
+		"branch-cordage-very-thin-*-ud": { x1: 0.45, y1: 0, z1: 0.45, x2: 0.55, y2: 1, z2: 0.55 },
+		"branch-cordage-thin-*-ud": { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 1, z2: 0.65 },
+		"branch-cordage-medium-*-ud": { x1: 0.25, y1: 0, z1: 0.25, x2: 0.75, y2: 1, z2: 0.75 },
+		"branch-cordage-thick-*-ud": { x1: 0.15, y1: 0, z1: 0.15, x2: 0.85, y2: 1, z2: 0.85 },
+		
+		"branch-cordage-very-thin-*-ns": { x1: 0.45, y1: 0.45, z1: 0, x2: 0.55, y2: 0.55, z2: 1 },
+		"branch-cordage-thin-*-ns": { x1: 0.35, y1: 0.35, z1: 0, x2: 0.65, y2: 0.65, z2: 1 },
+		"branch-cordage-medium-*-ns": { x1: 0.25, y1: 0.25, z1: 0, x2: 0.75, y2: 0.75, z2: 1 },
+		"branch-cordage-thick-*-ns": { x1: 0.15, y1: 0.15, z1: 0, x2: 0.85, y2: 0.85, z2: 1 },
+		
+		"branch-cordage-very-thin-*-we": { x1: 0, y1: 0.45, z1: 0.45, x2: 1, y2: 0.55, z2: 0.55 },
+		"branch-cordage-thin-*-we": { x1: 0, y1: 0.35, z1: 0.35, x2: 1, y2: 0.65, z2: 0.65 },
+		"branch-cordage-medium-*-we": { x1: 0, y1: 0.25, z1: 0.25, x2: 1, y2: 0.75, z2: 0.75 },
+		"branch-cordage-thick-*-we": { x1: 0, y1: 0.15, z1: 0.15, x2: 1, y2: 0.85, z2: 0.85 },
+		},
 	blockmaterial: "Wood",
 	requiredMiningTier: 1,
 	textures: {	
@@ -40,8 +57,7 @@
 	sounds: {
 		"place": "game:block/planks",
 		"walk": "game:walk/wood"
-	},
-	collisionSelectionBox: { x1: 0.40625, y1: 0, z1: 0.40625, x2: 0.59375, y2: 1, z2: 0.59375 },
+	},	
 	maxStackSize: 64,
 	materialDensity: 700
 }
