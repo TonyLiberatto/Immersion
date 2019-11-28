@@ -24,6 +24,7 @@ namespace Immersion
         LCGRandom rnd;
         IWorldGenBlockAccessor bA;
         Dictionary<int, int> surfaceBlocks = new Dictionary<int, int>();
+        List<DeepOreGenProperty> genProperties;
 
         public override void StartServerSide(ICoreServerAPI Api)
         {
@@ -41,6 +42,13 @@ namespace Immersion
                         }
                     }
                 }
+                genProperties = Api.Assets.Get("game:worldgen/deeporebits.json").ToObject<List<DeepOreGenProperty>>();
+
+                foreach (var val in genProperties)
+                {
+                    val.id = Api.World.GetBlock(val.Code).Id;
+                }
+
                 Api.Event.InitWorldGenerator(InitWorldGen, "standard");
                 Api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
                 Api.Event.GetWorldgenBlockAccessor(c => bA = c.GetBlockAccessor(true));
@@ -74,6 +82,19 @@ namespace Immersion
                     int ore = val.Value;
                     if (surfaceBlocks.TryGetValue(ore, out int surface))
                     {
+                        double chance = 1.0;
+                        genProperties.Any(d =>
+                        {
+                            if (d.id == surface)
+                            {
+                                chance = d.Chance;
+                                return true;
+                            }
+                            return false;
+                        });
+
+                        if (rnd.NextDouble() > chance) continue;
+
                         for (int y = vec.Y; y < chunksize; y++)
                         {
                             rnd.InitPositionSeed(chunkX * vec.X, chunkZ * vec.Z);
@@ -86,6 +107,7 @@ namespace Immersion
                             {
                                 chunk.Blocks[(y * chunksize + dZ) * chunksize + dX] = surface;
                                 bA.ScheduleBlockUpdate(new BlockPos(dX, y, dZ));
+                                break;
                             }
                         }
                     }
@@ -98,5 +120,22 @@ namespace Immersion
             LoadGlobalConfig(Api);
             rnd = new LCGRandom(Api.WorldManager.Seed);
         }
+    }
+    [JsonObject(MemberSerialization.OptIn)]
+    class DeepOreGenProperty
+    {
+        public DeepOreGenProperty(AssetLocation code, float chance)
+        {
+            Code = code;
+            Chance = chance;
+        }
+
+        public int id;
+
+        [JsonProperty]
+        public AssetLocation Code { get; set; }
+
+        [JsonProperty]
+        public double Chance { get; set; }
     }
 }
