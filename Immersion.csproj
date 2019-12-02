@@ -1956,7 +1956,6 @@
     <None Include="bin\Totems\modinfo.json" />
     <None Include="bin\Totems\VS-1.10.15-The-Totems-Mod-1.3.0.zip" />
     <None Include="LICENSE" />
-    <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
