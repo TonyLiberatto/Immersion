@@ -77,10 +77,10 @@ namespace Immersion
             get
             {
                 object value = null;
-                Api.ObjectCache.TryGetValue("quernbasemesh-" + Material, out value);
+                Api.ObjectCache.TryGetValue("mpbasemesh-" + Material, out value);
                 return (MeshData)value;
             }
-            set { Api.ObjectCache["quernbasemesh-" + Material] = value; }
+            set { Api.ObjectCache["mpbasemesh-" + Material] = value; }
         }
 
         MeshData quernTopMesh
@@ -88,10 +88,10 @@ namespace Immersion
             get
             {
                 object value = null;
-                Api.ObjectCache.TryGetValue("querntopmesh-" + Material, out value);
+                Api.ObjectCache.TryGetValue("mptopmesh-" + Material, out value);
                 return (MeshData)value;
             }
-            set { Api.ObjectCache["querntopmesh-" + Material] = value; }
+            set { Api.ObjectCache["mptopmesh-" + Material] = value; }
         }
 
         #endregion
@@ -356,7 +356,7 @@ namespace Immersion
                 using (MemoryStream ms = new MemoryStream())
                 {
                     BinaryWriter writer = new BinaryWriter(ms);
-                    writer.Write("BlockEntityQuern");
+                    writer.Write("BEMortarAndPestle");
                     writer.Write(DialogTitle);
                     TreeAttribute tree = new TreeAttribute();
                     inventory.ToTreeAttributes(tree);
