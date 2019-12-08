@@ -149,7 +149,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:panel-oaks-debarked-*",
+		"Code": "immersion:panel-oak-debarked-*",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -159,7 +159,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-       "Code": "immersion:door-assemble-oaks-east",
+       "Code": "immersion:door-assemble-oak-east",
         "Type": "Block",		
         
     }],

@@ -1,8 +1,7 @@
 {
-	ingredientPattern: "_S	P_",
+	ingredientPattern: "P_,PP",
 	ingredients: {
-		"S": { type: "item", code: "saw-*", isTool: true  },
-		"P": { type: "block", code: "planks-*", name: "wood", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "aged"] }
+		"P": { type: "item", code: "plank-*", name: "wood", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "aged"] }
 	},
 	width: 2,
 	height: 2,
