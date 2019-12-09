@@ -1,0 +1,96 @@
+{
+	code: "bonfire",
+	behaviors: [{name: "CanIgnite"}],	
+	attributes: {
+		convertFrom: "bonfire-lit", 
+		convertTo: "bonfire-extinct", 
+		inGameHours: "24",
+	},
+	"entityClass": "Generic",
+    "entityBehaviorsByType": { 
+		"bonfire-lit": [{
+            "name": "Transient",
+            "properties": {
+                "convertFrom": "bonfire-lit",
+                "convertTo": "bonfire-extinct", 
+                "inGameHours": 24
+				}
+			},
+			{ "name": "BonfireScary", "properties": { "fearRadius": 48 } }
+		],		
+	},
+	variantgroups: [
+		{ code:"burnstate", states: [ "extinct", "lit"] }
+	],
+	renderpass: "OpaqueNoCull",
+	shape: { base: "block/wood/bonfire/{burnstate}" },
+	textures: {
+		"log": { base: "block/wood/bonfire/log" },
+		"ceramic": { base: "block/clay/ceramic" },
+		"ember": { base: "block/ember" },
+		"ashes": { base: "block/wood/bonfire/ground" },
+		"fire": { base: "block/wood/bonfire/fire" },
+	},
+	creativeinventory: { general: ["bonfire-extinct", "bonfire-lit"], decorative: ["bonfire-extinct", "bonfire-lit"] },
+	blockmaterial: "Wood",
+	lightAbsorption: 0,
+	lightHsvByType: {
+		"bonfire-extinct": [7, 7, 3],
+		"bonfire-lit": [7, 7, 25],
+	},
+	particlePropertiesByType: {
+		"bonfire-extinct": [
+			{
+				hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 70, var: 30 },  { avg: 220, var: 50 }],
+				opacityEvolve: { transform: "quadratic", factor: -16 },
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.2 }, { avg: -0.4, var: 0 }, { avg: 0, var: 0.2 }],
+				velocity: [ { avg: 0, var: 0.05 }, { avg: 0.1, var: 0.05 }, { avg: 0, var: 0.05 }],
+				quantity: { avg: 0.02 },
+				size: { avg: 0.3, var: 0.05 },
+				sizeEvolve: { transform: "linear", factor: 1.5 },
+				particleModel: "Quad"
+			}
+		],
+		"bonfire-lit": [
+			{
+				hsvaColor: [{ avg: 30, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.7 }, { avg: -1.9, var: 0 }, { avg: 0, var: 0.7 }],
+				velocity: [ { avg: 0.0, var: 0.05 }, { avg: 0.5, var: 0.1 }, { avg: 0, var: 0.2 }],
+				quantity: { avg: 0.3 },
+				size: { avg: 2.25, var: 0.5 },
+				glowLevel: 64,
+				sizeEvolve: { transform: "quadratic", factor: -0.5 },
+				selfPropelled: true
+			},
+			{
+				hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 70, var: 30 },  { avg: 220, var: 50 }],
+				opacityEvolve: { transform: "linear", factor: -255 },
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.7 }, { avg: -1.9, var: 0 }, { avg: 0, var: 0.7 }],
+				velocity: [ { avg: 0, var: 0.05 }, { avg: 0.1, var: 0.05 }, { avg: 0, var: 0.2 }],
+				quantity: { avg: 0.3 },
+				size: { avg: 0.3, var: 0.5 },
+				sizeEvolve: { transform: "linear", factor: 1.5 },
+				particleModel: "Quad",
+				lifeLength: { avg: 5 } 
+			}
+		]
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	replaceable: 10,
+	resistance: 2.5,
+	collisionSelectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 2, z2: 1 },
+	guiTransform: {
+		origin: { x: 0.5, y: 1, z: 0.5 },
+		scale: 0.5
+	},
+	drops: [],
+	materialDensity: 600
+}
