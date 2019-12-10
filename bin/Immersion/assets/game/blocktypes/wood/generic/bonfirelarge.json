@@ -1,18 +1,18 @@
 {
-	code: "bonfire",
+	code: "bonfirelarge",
 	behaviors: [{name: "CanIgnite"}],	
 	attributes: {
-		convertFrom: "bonfire-lit", 
-		convertTo: "bonfire-extinct", 
+		convertFrom: "bonfirelarge-lit", 
+		convertTo: "bonfirelarge-extinct", 
 		inGameHours: "24",
 	},
 	"entityClass": "Generic",
     "entityBehaviorsByType": { 
-		"bonfire-lit": [{
+		"bonfirelarge-lit": [{
             "name": "Transient",
             "properties": {
-                "convertFrom": "bonfire-lit",
-                "convertTo": "bonfire-extinct", 
+                "convertFrom": "bonfirelarge-lit",
+                "convertTo": "bonfirelarge-extinct", 
                 "inGameHours": 24
 				}
 			},
@@ -23,23 +23,25 @@
 		{ code:"burnstate", states: [ "extinct", "lit"] }
 	],
 	renderpass: "OpaqueNoCull",
-	shape: { base: "block/wood/bonfire/{burnstate}" },
+	shape: { base: "block/wood/bonfirelarge/{burnstate}" },
 	textures: {
+		"all": { base: "block/wood/bark/acacia" },
+		"acaciatop": { base: "block/wood/treetrunk/acacia" },
 		"log": { base: "block/wood/bonfire/log" },
 		"ceramic": { base: "block/clay/ceramic" },
 		"ember": { base: "block/ember" },
 		"ashes": { base: "block/wood/bonfire/ground" },
 		"fire": { base: "block/wood/bonfire/fire" },
 	},
-	creativeinventory: { general: ["bonfire-extinct", "bonfire-lit"], decorative: ["bonfire-extinct", "bonfire-lit"] },
+	creativeinventory: { general: ["bonfirelarge-extinct", "bonfirelarge-lit"], decorative: ["bonfirelarge-extinct", "bonfirelarge-lit"] },
 	blockmaterial: "Wood",
 	lightAbsorption: 0,
 	lightHsvByType: {
-		"bonfire-extinct": [7, 7, 3],
-		"bonfire-lit": [7, 7, 25],
+		"bonfirelarge-extinct": [7, 7, 3],
+		"bonfirelarge-lit": [7, 7, 25],
 	},
 	particlePropertiesByType: {
-		"bonfire-extinct": [
+		"bonfirelarge-extinct": [
 			{
 				hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 70, var: 30 },  { avg: 220, var: 50 }],
 				opacityEvolve: { transform: "quadratic", factor: -16 },
@@ -52,7 +54,7 @@
 				particleModel: "Quad"
 			}
 		],
-		"bonfire-lit": [
+		"bonfirelarge-lit": [
 			{
 				hsvaColor: [{ avg: 30, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
 				gravityEffect: { avg: 0, var: 0 },
