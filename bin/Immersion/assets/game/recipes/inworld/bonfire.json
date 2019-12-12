@@ -1,0 +1,24 @@
+[ 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "firepit-construct1",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-thin-*-bark-ud",
+        "Type": "Block",
+		"StackSize": 16		
+    },
+    "Makes": [{
+        "Code": "bonfire-lit",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+     
+]

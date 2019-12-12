@@ -2,9 +2,15 @@
 	code: "bonfire",
 	behaviors: [{name: "CanIgnite"}],	
 	attributes: {
-		convertFrom: "bonfire-lit", 
-		convertTo: "bonfire-extinct", 
-		inGameHours: "24",
+		"handbook": {
+            "include": true,
+            "extraSections": [
+                {
+                    "title": "Created by",
+                    "text": "Placing <a href=\"handbook://item-drygrass\">dry grass</a> on the ground and then adding 16 <a href=\"handbook://immersion:block-branch-thin-*-bark-ud\">thin branches</a>."
+                }
+            ]
+        }
 	},
 	"entityClass": "Generic",
     "entityBehaviorsByType": { 
@@ -75,7 +81,40 @@
 				sizeEvolve: { transform: "linear", factor: 1.5 },
 				particleModel: "Quad",
 				lifeLength: { avg: 5 } 
-			}
+			},
+			{
+			hsvaColor: [{ avg: 30, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			gravityEffect: { avg: 0, var: 0 },
+			velocity: [ { avg: 0.2, var: 0.05 }, { avg: 0.5, var: 0.1 }, { avg: 0, var: 0.2 }],
+			quantity: { avg: 0 },
+			size: { avg: 0.25, var: 0 },
+			glowLevel: 128,
+			sizeEvolve: { transform: "quadratic", factor: -0.5 },
+			selfPropelled: true
+		},
+		{
+			hsvaColor: [{ avg: 30, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			velocity: [ { avg: 0, var: 0.02 }, { avg: 0.0, var: 0.02 }, { avg: 0, var: 0.02 }],
+			quantity: { avg: 0 },
+			glowLevel: 128,
+			size: { avg: 0.3, var: 0.05 },
+			sizeEvolve: { transform: "linear", factor: 1.5 },
+			particleModel: "Quad",
+			lifeLength: { avg: 0.5 } 
+		},
+		{
+			hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 40, var: 30 },  { avg: 220, var: 50 }],
+			opacityEvolve: { transform: "quadratic", factor: -16 },
+			gravityEffect: { avg: 0, var: 0 },
+			velocity: [ { avg: 0, var: 0.05 }, { avg: 0.1, var: 0.05 }, { avg: 0, var: 0.05 }],
+			quantity: { avg: 0 },
+			size: { avg: 0.3, var: 0.05 },
+			sizeEvolve: { transform: "linear", factor: 1.5 },
+			particleModel: "Quad",
+			lifeLength: { avg: 1.5 } 
+		}
 		]
 	},
 	sidesolid: {
