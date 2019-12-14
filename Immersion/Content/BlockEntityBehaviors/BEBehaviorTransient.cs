@@ -57,7 +57,7 @@ namespace Immersion
         public void CheckTransition(float dt)
         {
             if (transitionAtTotalDays > Api.World.Calendar.TotalDays) return;
-            if (Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.MaxTimeOfDayLight) < (conditions?.RequiredSunlight ?? -1)) return;
+            if (Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight) < (conditions?.RequiredSunlight ?? -1)) return;
 
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             Block tblock;
