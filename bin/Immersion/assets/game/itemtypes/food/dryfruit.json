@@ -1,5 +1,5 @@
 {
-	code: "fruit",
+	code: "dryfruit",
 	maxstacksize: 64,
 	variantgroups: [
 		{ code: "type", states: ["blueberry", "cranberry", "redcurrant", "whitecurrant", "blackcurrant", "saguaro" ] },
@@ -14,27 +14,18 @@
 			foodcategory: "Fruit" 
 		},
 	},
-	texture: { base: "item/food/fruit/{type}" },
+	texture: { base: "immersion:item/food/dryfruit/{type}" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-saguaro": { satiety: 120, health: 1, foodcategory: "Fruit" },
+		"*-saguaro": { satiety: 120, foodcategory: "Fruit" },
 		"*-cranberry": { satiety: 120, foodcategory: "Fruit" },
 		"*": { satiety: 160, foodcategory: "Fruit" }
 	},
-	transitionablePropsByType: {
-		"*-cranberry": [{
-			type: "Perish",
-			freshHours: { avg: 96 },
-			transitionHours: { avg: 12 },
-			transitionedStack: { type: "item", code: "rot" },
-			transitionRatio: 0.25
-		}],
-		"*": [{
-			type: "Perish",
-			freshHours: { avg: 48 },
-			transitionHours: { avg: 12 },
-			transitionedStack: { type: "item", code: "rot" },
-			transitionRatio: 0.25
-		}]
-	}
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 8760 },
+		spoilHours: { avg: 4380 },
+		transitionedStack: { type: "item", code: "rot" },
+		transitionRatio: 0.25
+	}],
 }

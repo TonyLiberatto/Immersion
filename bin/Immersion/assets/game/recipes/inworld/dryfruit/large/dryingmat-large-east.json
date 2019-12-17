@@ -1,0 +1,128 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fruit-blackcurrant",
+        "Type": "Block",        
+		"StackSize": 64
+    },
+    "Makes": [{
+        "Code": "immersion:dryingmat-fresh-large-blackcurrant-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fruit-blueberry",
+        "Type": "Block",        
+		"StackSize": 64
+    },
+    "Makes": [{
+        "Code": "immersion:dryingmat-fresh-large-blueberry-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fruit-cranberry",
+        "Type": "Block",        
+		"StackSize": 64
+    },
+    "Makes": [{
+        "Code": "immersion:dryingmat-fresh-large-cranberry-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fruit-redcurrant",
+        "Type": "Block",        
+		"StackSize": 64
+    },
+    "Makes": [{
+        "Code": "immersion:dryingmat-fresh-large-redcurrant-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fruit-saguaro",
+        "Type": "Block",        
+		"StackSize": 64
+    },
+    "Makes": [{
+        "Code": "immersion:dryingmat-fresh-large-saguaro-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:sisalrug-large-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fruit-whitecurrant",
+        "Type": "Block",        
+		"StackSize": 64
+    },
+    "Makes": [{
+        "Code": "immersion:dryingmat-fresh-large-whitecurrant-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]
