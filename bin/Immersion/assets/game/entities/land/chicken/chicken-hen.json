@@ -2,6 +2,9 @@
   code: "chicken-hen",
   class: "EntityAgent",
   hitboxSize: { x: 0.5, y: 0.6 },
+  attributes: {
+		blockDiet: ["crop-cabbage*", "crop-carrot*", "crop-flax*", "crop-parsnip*", "crop-rye*", "crop-soybean*", "crop-spelt*", "crop-turnip*", "dryingmat-*"]
+	},
   deadHitboxSize: {  x: 0.5,  y: 0.25 },
   variantgroups: [  {  code: "color", states: [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ] }
   ],

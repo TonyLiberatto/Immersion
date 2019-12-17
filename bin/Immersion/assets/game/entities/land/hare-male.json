@@ -4,7 +4,7 @@
 	variantgroups:  [ { code: "type", states: ["arctic", "ashgrey", "darkbrown", "desert", "gold", "lightbrown", "lightgrey", "silver", "smokegrey" ] } ] ,
 	hitboxSize: { x: 0.75, y: 0.5 },
 	attributes: {
-		blockDiet: ["crop-cabbage-*", "crop-carrot-*", "crop-flax-*", "crop-parsnip-*", "crop-rye-*", "crop-soybean-*", "crop-spelt-*", "crop-turnip-*"]
+		blockDiet: ["crop-cabbage*", "crop-carrot*", "crop-flax*", "crop-parsnip*", "crop-rye*", "crop-soybean*", "crop-spelt*", "crop-turnip*", "dryingmat-*"]
 	},
 	eyeHeight: 0.7,
 	drops: [
