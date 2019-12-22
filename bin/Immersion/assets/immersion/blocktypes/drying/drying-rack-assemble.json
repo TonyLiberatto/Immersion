@@ -1,0 +1,38 @@
+{
+	code: "drying-rack-assemble",
+	behaviors: [ {name: "NWOrientable"}],
+	variantgroups: [		
+		{ loadFromProperties: "block/wood" },		
+		{ code:"orientation", states: ["ns", "we"] },
+	],	
+	creativeinventory: { "general": [""],  "immersionblocks": [""],  },
+	drawtype: "json",
+	lightabsorption: 0,
+	sidesolid: {
+		all: false,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	shapeByType: {
+		"drying-rack-*-ns":{ base: "block/wood/drying-rack"},		
+		"drying-rack-*-we": {base: "block/wood/drying-rack", rotateY: 0, rotateY: 90 },		
+	},	
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	textures: {		
+		"acacia": { base: "block/wood/bark/{wood}" },
+		"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+		"cordage": { base: "game:block/transparent" },
+		"meat": { base: "game:block/transparent" },				
+	},
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},	
+	maxStackSize: 64,
+	materialDensity: 700
+}

@@ -28,4 +28,7 @@
 		transitionedStack: { type: "item", code: "rot" },
 		transitionRatio: 0.25
 	}],
+	grindingProps: {
+		grindedStack: { type: "item", code: "flour-dryfruit-{type}" }
+	},
 }

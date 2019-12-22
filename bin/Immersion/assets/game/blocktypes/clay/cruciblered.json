@@ -8,6 +8,7 @@
 	heldTpIdleAnimation: "holdbothhands",
 	attributesByType: {
 		"cruciblered-burned": {
+			shelvable: true,
 			cookingContainerSlots: 4,
 			storageType: 4,
 			maxHeatableTemp: 1200,
@@ -17,11 +18,15 @@
 			}
 		},
 		"cruciblered-smelted": {
+			shelvable: true,
 			inFirePitProps: {
 				transform: { },
 				useFirepitModel: "Wide"
 			},
 			emptiedBlockCode: "cruciblered-burned"
+		},
+		"*": {
+			shelvable: true
 		}
 	},
 	variantgroups: [

@@ -15,7 +15,7 @@
 		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
 	},
 	variantgroups: [
-		{ code: "type", states: ["raw", "cooked", "vintage", "cured" ] },
+		{ code: "type", states: ["raw", "cooked", "vintage", "cured", "salted", "dry" ] },
 	],
 	shapebytype: { 
 		"redmeat-vintage": { base: "item/empty", voxelizeTexture: true },
@@ -33,28 +33,47 @@
 		},
 		"redmeat-vintage": {
 			"item/empty":  { base: "item/food/meat/vintage" }
-		}
+		},
+		"redmeat-salted":  { 
+			"meat": {base: "item/food/meat/cured" }
+		},
+		"redmeat-dry":  { 
+			"meat": {base: "item/food/meat/cured-smoked" }
+		},
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
 		"redmeat-cooked": { satiety: 560, health: 0, foodcategory: "Protein" },
 		"redmeat-cured": { satiety: 400, health: 0, foodcategory: "Protein" },
 		"redmeat-vintage": { satiety: 560, health: 2, foodcategory: "Protein" },
+		"redmeat-dry": { satiety: 560, health: 0, foodcategory: "Protein" },
 	},
 	transitionablePropsByType: {
-		"*-raw": [
-			{
+		"*-raw": [{
 				type: "Perish",
 				freshHours: { avg: 36 },
 				transitionHours: { avg: 24 },
 				transitionedStack: { type: "item", code: "rot" },
 				transitionRatio: 1
-			}
-		],
+		}],
 		"*-cooked": [{
 			type: "Perish",
 			freshHours: { avg: 120 },
 			spoilHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "rot" },
+			transitionRatio: 1
+		}],
+		"*-salted": [{
+			type: "Perish",
+			freshHours: { avg: 120 },
+			spoilHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "rot" },
+			transitionRatio: 1
+		}],
+		"*-dry": [{
+			type: "Perish",
+			freshHours: { avg: 8760 },
+			spoilHours: { avg: 4380 },
 			transitionedStack: { type: "item", code: "rot" },
 			transitionRatio: 1
 		}],
@@ -65,6 +84,11 @@
 			transitionedStack: { type: "item", code: "rot" },
 			transitionRatio: 1
 		}]
+	},
+	grindingPropsByType: {
+		"*-dry":{
+			grindedStack: { type: "item", code: "flour-redmeat-dry" }
+		},
 	},
 	materialDensity: 600,
 	tpHandTransform: {

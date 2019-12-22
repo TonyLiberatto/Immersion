@@ -1,0 +1,254 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-acacia-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-sinew-salt-meat-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-acacia-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-sinew-salt-meat-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-birch-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-sinew-salt-meat-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-birch-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-sinew-salt-meat-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-kapok-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-sinew-salt-meat-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-kapok-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-sinew-salt-meat-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-maple-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-sinew-salt-meat-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-maple-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-sinew-salt-meat-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-oak-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-sinew-salt-meat-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-oak-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-sinew-salt-meat-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-pine-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-sinew-salt-meat-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-pine-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:redmeat-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-sinew-salt-meat-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

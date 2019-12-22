@@ -15,13 +15,17 @@
 	],
 	attributesByType: {
 		"*-burned-*": {
+			shelvable: true,
 			mealContainer: true,
 			mealBlockCode: "crock-{color}-burned-east",
 			servingCapacity: 4,
 			bowlContents: null,
 			handleLiquidContainerInteract: true,
 			handleCookingContainerInteract: true
-		},	
+		},
+		"*": {
+			shelvable: true,
+		}
 	},
 	combustiblePropsByType: {
 		"*-raw-*": {

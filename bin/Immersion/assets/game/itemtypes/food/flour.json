@@ -1,0 +1,24 @@
+{
+	code: "flour",
+	maxstacksize: 64,
+	attributes: {
+		dissolveInWater: true
+	},
+	variantgroups: [
+		{ code: "type", states: ["spelt", "rice", "flax", "rye", "dryfruit-blueberry", "dryfruit-cranberry", "dryfruit-redcurrant", "dryfruit-whitecurrant", "dryfruit-blackcurrant", "dryfruit-saguaro","redmeat-dry" ] },
+	],
+	textureByType:{
+		"*-dryfruit-*":{ base: "item/food/dry-fruit" },
+		"*-redmeat-dry":{base: "item/food/dry-meat" },
+		"*":{ base: "item/food/grain/{type}-flour" },
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"] },
+	materialDensity: 600,
+	transitionableProps: [{
+		type: "Perish",
+		freshHours: { avg: 4320 },
+		transitionHours: { avg: 336 },
+		transitionedStack: { type: "item", code: "rot" },
+		transitionRatio: 0.25
+	}]
+}

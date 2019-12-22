@@ -11,6 +11,7 @@
 	],
 	attributesByType: {
 		"*-burned": {
+			shelvable: true,
 			contentItem2BlockCodes: {
 				"honeyportion": "bowl-{color}-honey",
 				"milkportion": "bowl-{color}-milk"
@@ -21,14 +22,17 @@
 			bowlContents: null,
 		},
 		"*-honey": {
+			shelvable: true,
 			contentItemCode: "honeyportion",
 			emptiedBlockCode: "bowl-{color}-burned",
 		},
 		"*-milk": {
+			shelvable: true,
 			bowlContents: "milkportion",
 			emptiedBlockCode: "bowl-{color}-burned",
 		},
 		"*": {
+			shelvable: true,
 			bowlContents: null
 		}
 	},
@@ -123,25 +127,11 @@
 		scale: 0.66
 	},
 	nutritionPropsByType: {
-		"bowl-blue-honey": { 
+		"*-honey": { 
 			saturation: 60, 
 			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-blue-burned" }
-		},
-		"bowl-fire-honey": { 
-			saturation: 60, 
-			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-fire-burned" }
-		},
-		"bowl-red-honey": { 
-			saturation: 60, 
-			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-red-burned" }
-		},
-		"bowl-brown-honey": { 
-			saturation: 60, 
-			health: 0.5,
-			eatenStack: { type: "block", code: "bowl-brown-burned" }
-		},
+			eatenStack: { type: "block", code: "bowl-{color}-burned" }
+		},	
+
 	}
 }
