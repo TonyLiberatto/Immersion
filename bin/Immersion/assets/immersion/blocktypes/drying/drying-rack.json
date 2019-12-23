@@ -1,0 +1,82 @@
+{
+	code: "drying-rack",
+	behaviorsByType: {
+		"*-dry-meat-*": [ {name: "NWOrientable"},
+			{name: "Harvestable", properties: { 
+				harvestTime: 0.6, 
+				harvestedStack: { type: "item", code: "redmeat-dry", quantity: { avg: 4 }  },
+				harvestedBlockCode: "drying-rack-{wood}-{cordage}-rope-{orientation}"
+		}} ],
+		"*": [{name: "NWOrientable"}],
+	},
+	"entityClass": "Generic",
+    "entityBehaviors": [
+		{ "name": "Transient",
+            "properties": {
+                "convertFrom": "drying-rack-*-salt-meat-*",
+                "convertTo": "drying-rack-*-dry-meat-*",
+                "inGameHours": 72,
+				"TransitionConditions": { "RequiredSunlight": 32, }
+            }
+        },
+        {
+            "name": "Consumable",
+            "properties": {
+                "eatenTo": "drying-rack-{wood}-{cordage}-rope-{rotation}",
+                "contentConfig": {
+                    "foodFor": ["game:wolf-*", "game:hyena-*", "game:fox-*"]
+                }
+            }
+        }
+    ],
+	variantgroups: [		
+		{ loadFromProperties: "block/wood" },		
+		{ code: "cordage", states: [  "leatherstrips", "reeds","sinew", "sisal"]},
+		{ code: "state", states: [  "rope","salt-meat","dry-meat" ]},
+		{ code:"orientation", states: ["ns", "we"] },
+	],	
+	creativeinventory: { "general": ["*-ns"],  "immersionblocks": ["*-ns"],  },
+	drawtype: "json",
+	lightabsorption: 0,
+	sidesolid: {
+		all: false,
+		up: true
+	},
+	sideopaque: {
+		all: false
+	},
+	shapeByType: {
+		"drying-rack-*-ns":{ base: "block/wood/drying-rack"},		
+		"drying-rack-*-we": {base: "block/wood/drying-rack", rotateY: 0, rotateY: 90 },		
+	},	
+	blockmaterial: "Wood",
+	requiredMiningTier: 1,
+	texturesbytype: {		
+		"*-rope-*": {	
+			"acacia": { base: "block/wood/bark/{wood}" },
+			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+			"cordage": { base: "block/{cordage}" },
+			"meat": { base: "game:block/transparent" },
+		},
+		"*-salt-meat-*": {	
+			"acacia": { base: "block/wood/bark/{wood}" },
+			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+			"cordage": { base: "block/{cordage}" },
+			"meat": {base: "game:item/food/meat/cured" }
+		},
+		"*-dry-meat-*": {	
+			"acacia": { base: "block/wood/bark/{wood}" },
+			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
+			"cordage": { base: "block/{cordage}" },
+			"meat": {base: "game:item/food/meat/cured-smoked" }
+		},
+	},
+	replaceable: 500,
+	resistance: 4.5,
+	sounds: {
+		"place": "game:block/planks",
+		"walk": "game:walk/wood"
+	},	
+	maxStackSize: 64,
+	materialDensity: 700
+}

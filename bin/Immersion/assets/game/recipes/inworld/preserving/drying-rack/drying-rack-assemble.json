@@ -1,0 +1,128 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-acacia-bark-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-acacia-bark-ud",
+        "Type": "block",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-assemble-acacia-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-birch-bark-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-birch-bark-ud",
+        "Type": "block",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-assemble-birch-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-kapok-bark-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-kapok-bark-ud",
+        "Type": "block",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-assemble-kapok-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-maple-bark-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-maple-bark-ud",
+        "Type": "block",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-assemble-maple-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-oak-bark-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-oak-bark-ud",
+        "Type": "block",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-assemble-oak-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-pine-bark-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-pine-bark-ud",
+        "Type": "block",
+		"StackSize": 3
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-assemble-pine-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

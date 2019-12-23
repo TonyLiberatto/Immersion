@@ -1,0 +1,254 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-acacia-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-leatherstrips-rope-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-acacia-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-leatherstrips-rope-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-birch-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-leatherstrips-rope-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-birch-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-leatherstrips-rope-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-kapok-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-leatherstrips-rope-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-kapok-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-leatherstrips-rope-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-maple-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-leatherstrips-rope-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-maple-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-leatherstrips-rope-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-oak-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-leatherstrips-rope-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-oak-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-leatherstrips-rope-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-pine-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-leatherstrips-rope-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-assemble-pine-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-leatherstrips-rope-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

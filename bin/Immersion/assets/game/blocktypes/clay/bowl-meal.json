@@ -2,26 +2,12 @@
   code: "bowl-meal",
   behaviors: [ { name: "UnstableFalling" } ],
   class: "BlockMeal",
-  variantgroups: [
-    {
-      code: "color",
-      states: [ "blue", "brown", "fire", "red" ],
-      combine: "add"
-    },
+  variantgroups: [ {  code: "color", states: [ "blue", "brown", "fire", "red" ], combine: "add" },
   ],
-  attributesByType: {
-    "*blue": {
-      eatenBlock: "bowl-blue-burned"
-    },
-    "*brown": {
-      eatenBlock: "bowl-brown-burned"
-    },
-    "*fire": {
-      eatenBlock: "bowl-fire-burned"
-    },
-    "*red": {
-      eatenBlock: "bowl-red-burned"
-    },
+  attributes: {
+    shelvable: true,
+		eatenBlock: "bowl-{color}-burned",
+		handleCookingContainerInteract: true	
   },
   entityClass: "Meal",
   heldTpIdleAnimation: "holdbothhands",

@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-blue-raw-meat",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:salt",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-blue-salted-meat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-brown-raw-meat",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:salt",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-brown-salted-meat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-fire-raw-meat",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:salt",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-fire-salted-meat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-red-raw-meat",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:salt",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-red-salted-meat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]
