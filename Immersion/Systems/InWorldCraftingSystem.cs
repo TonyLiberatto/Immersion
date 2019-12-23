@@ -181,6 +181,20 @@ namespace Immersion
             {
                 slot.TakeOut(recipe.Tool.StackSize);
             }
+            if (recipe.Returns != null)
+            {
+                foreach (var val in recipe.Returns)
+                {
+                    val.Resolve(byPlayer.Entity.World, "");
+                    if (val.ResolvedItemstack != null)
+                    {
+                        if (!byPlayer.InventoryManager.TryGiveItemstack(val.ResolvedItemstack))
+                        {
+                            byPlayer.Entity.World.SpawnItemEntity(val.ResolvedItemstack, byPlayer.Entity.LocalPos.XYZ);
+                        }
+                    }
+                }
+            }
         }
 
         public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot) =>
@@ -194,6 +208,7 @@ namespace Immersion
         public EnumInWorldCraftingMode Mode { get; set; } = EnumInWorldCraftingMode.Swap;
         public JsonCraftingIngredient Takes { get; set; }
         public JsonCraftingIngredient Tool { get; set; }
+        public JsonCraftingOutput[] Returns { get; set; }
         public JsonCraftingOutput[] Makes { get; set; }
         public AssetLocation CraftSound { get; set; } = new AssetLocation("sounds/block/planks");
         public bool IsTool { get; set; } = false;
