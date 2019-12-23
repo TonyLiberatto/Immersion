@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-blue-meat-fruit",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:fat",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-blue-meat-fruit-fat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-brown-meat-fruit",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+         "Code": "game:fat",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-brown-meat-fruit-fat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-fire-meat-fruit",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+         "Code": "game:fat",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-fire-meat-fruit-fat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-red-meat-fruit",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+         "Code": "game:fat",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-red-meat-fruit-fat",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-blue-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-redmeat-dry",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-blue-meat-flour",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-brown-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-redmeat-dry",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-brown-meat-flour",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-fire-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-redmeat-dry",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-fire-meat-flour",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-red-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-redmeat-dry",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-red-meat-flour",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

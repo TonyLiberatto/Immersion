@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-blue-meat-flour",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-dryfruit",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-blue-meat-fruit",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-brown-meat-flour",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-dryfruit",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-brown-meat-fruit",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-fire-meat-flour",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-dryfruit",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-fire-meat-fruit",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-medium-red-meat-flour",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:flour-dryfruit",
+        "Type": "item",
+		"StackSize": 16
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-medium-red-meat-fruit",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

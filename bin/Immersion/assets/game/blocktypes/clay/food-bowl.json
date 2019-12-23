@@ -62,7 +62,7 @@
 	variantgroups: [
 		{ code:"size", states: ["small", "medium", "large"] },
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },		
-		{ code:"materialtype", states: ["raw", "burned", "raw-meat", "salted-meat", "rotten"] },
+		{ code:"materialtype", states: ["raw", "burned", "raw-meat", "salted-meat", "rotten", "meat-flour", "meat-fruit", "meat-fruit-fat", "pemmican" ] },
 	],	
 	combustiblePropsByType: {
 		"*-raw": {
@@ -87,8 +87,22 @@
 		"*-raw-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/raw" }},
 		"*-salted-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/cured" }},
 		"*-rotten": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:block/wood/barrel/rot" }},
+		"*-meat-flour": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-flour" }},
+		"*-meat-fruit": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit" }},
+		"*-meat-fruit-fat": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit-fat" }},
+		"*-pemmican": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/pemmican" }},
 	},
-	shape: { base: "block/clay/food-bowl-{size}" },
+	shapeByType: {		
+		"*-raw": { base: "block/clay/food-bowl-{size}" },
+		"*-burned": { base: "block/clay/food-bowl-{size}" },
+		"*-raw-meat": { base: "block/clay/food-bowl-{size}" },
+		"*-salted-meat": { base: "block/clay/food-bowl-{size}" },
+		"*-rotten": { base: "block/clay/food-bowl-{size}" },
+		"*-meat-flour": { base: "block/clay/food-bowl-{size}-pemmican1" },
+		"*-meat-fruit": { base: "block/clay/food-bowl-{size}-pemmican2" },
+		"*-meat-fruit-fat": { base: "block/clay/food-bowl-{size}-pemmican3" },
+		"*-pemmican": { base: "block/clay/food-bowl-{size}-pemmican4" },
+	},
 	sounds: {
 		walk: "walk/stone",
 	},
