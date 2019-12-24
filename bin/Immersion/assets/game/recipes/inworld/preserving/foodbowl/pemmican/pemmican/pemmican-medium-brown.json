@@ -2,19 +2,24 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-blue-meat-fruit-fat",
+		"Code": "game:food-bowl-medium-blue-meat-fruit-fat",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:honeyportion",
+        "Code": "game:bowl-brown-honey",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-blue-pemmican",
+        "Code": "game:food-bowl-medium-blue-pemmican",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:bowl-brown-burned",
+        "Type": "Block",        
+        "StackSize": 8
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -23,19 +28,24 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-brown-meat-fruit-fat",
+		"Code": "game:food-bowl-medium-brown-meat-fruit-fat",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:honeyportion",
+        "Code": "game:bowl-brown-honey",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-brown-pemmican",
+        "Code": "game:food-bowl-medium-brown-pemmican",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:bowl-brown-burned",
+        "Type": "Block",        
+        "StackSize": 8
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -44,19 +54,24 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-fire-meat-fruit-fat",
+		"Code": "game:food-bowl-medium-fire-meat-fruit-fat",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:honeyportion",
+        "Code": "game:bowl-brown-honey",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-fire-pemmican",
+        "Code": "game:food-bowl-medium-fire-pemmican",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:bowl-brown-burned",
+        "Type": "Block",        
+        "StackSize": 8
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -65,19 +80,24 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-red-meat-fruit-fat",
+		"Code": "game:food-bowl-medium-red-meat-fruit-fat",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:honeyportion",
+        "Code": "game:bowl-brown-honey",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-red-pemmican",
+        "Code": "game:food-bowl-medium-red-pemmican",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:bowl-brown-burned",
+        "Type": "Block",        
+        "StackSize": 8
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
