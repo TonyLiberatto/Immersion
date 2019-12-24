@@ -5,7 +5,7 @@
 		"animal-large-bone":{ knappable: true }
 	},
 	variantgroups: [
-		{ code: "type", states: ["large-bone", "tendon", "horn", "leatherstrips", "small-bones"] },
+		{ code: "type", states: ["large-bone", "tendon", "horn", "leatherstrips", "small-bones", "intestine", "cleanintestine", "casings" ] },
 	],
 	texture: { base: "item/resource/animal/{type}" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
