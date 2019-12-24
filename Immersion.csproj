@@ -135,6 +135,7 @@
     <Compile Include="Immersion\Content\EntityBehavior\BehaviorSlaughterable.cs" />
     <Compile Include="Immersion\Content\Item\ItemAdze.cs" />
     <Compile Include="Immersion\Content\Item\ItemGiantReedsRoot.cs" />
+    <Compile Include="Immersion\Content\Item\ItemMultiPropFood.cs" />
     <Compile Include="Immersion\Content\Item\ItemSickle.cs" />
     <Compile Include="Immersion\Content\Item\ItemSlaughteringAxe.cs" />
     <Compile Include="Immersion\Content\Item\ItemSwapBlocks.cs" />

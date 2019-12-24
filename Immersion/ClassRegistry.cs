@@ -62,6 +62,7 @@ namespace Immersion
             Api.RegisterItemClass("ItemChisel", typeof(ItemChiselFix));
             Api.RegisterItemClass("ItemSwapBlocks", typeof(ItemSwapBlocks));
             Api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
+            Api.RegisterItemClass("ItemFoodMultiProp", typeof(ItemMultiPropFood));
         }
 
         public void RegisterBlocks()
