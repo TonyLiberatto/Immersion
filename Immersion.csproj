@@ -118,6 +118,7 @@
     <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorScary.cs" />
     <Compile Include="Immersion\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Immersion\Content\BlockEntityBehaviors\BEBehaviorTransient.cs" />
+    <Compile Include="Immersion\Content\BlockEntity\IngotPileOverride.cs" />
     <Compile Include="Immersion\Content\Block\BlockChandelierFix.cs" />
     <Compile Include="Immersion\Content\Block\BlockCheeseCloth.cs" />
     <Compile Include="Immersion\Content\Block\BlockCraftingStation.cs" />

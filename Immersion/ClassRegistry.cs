@@ -44,6 +44,7 @@ namespace Immersion
             Api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
             Api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
             Api.RegisterBlockEntityClass("Stairs", typeof(BlockEntityStairs));
+            Api.RegisterBlockEntityClass("IngotPileOverride", typeof(IngotPileOverride));
         }
 
         public void RegisterBlockEntityBehaviors()
@@ -64,6 +65,7 @@ namespace Immersion
             Api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
             Api.RegisterItemClass("ItemFoodMultiProp", typeof(ItemMultiPropFood));
             Api.RegisterItemClass("ItemProspectingPick", typeof(ItemPropick));
+            Api.RegisterItemClass("ItemIngot", typeof(ItemIngotOverride));
         }
 
         public void RegisterBlocks()
@@ -80,6 +82,7 @@ namespace Immersion
             Api.RegisterBlockClass("BlockDryingStation", typeof(BlockDryingStation));
             Api.RegisterBlockClass("BlockSeaweed", typeof(BlockSeaweedOverride)); //
             Api.RegisterBlockClass("BlockPalmTree", typeof(BlockPalmTree));
+            Api.RegisterBlockClass("BlockIngotPile", typeof(BlockIngotPileOverride)); //
         }
 
         public void RegisterBlockBehaviors()
