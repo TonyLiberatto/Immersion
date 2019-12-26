@@ -24,7 +24,7 @@ namespace Immersion
         LCGRandom rnd;
         IWorldGenBlockAccessor bA;
         Dictionary<int, int> surfaceBlocks = new Dictionary<int, int>();
-        List<DeepOreGenProperty> genProperties;
+        DeepOreGenProperties genProperties;
 
         public override void StartServerSide(ICoreServerAPI Api)
         {
@@ -42,9 +42,9 @@ namespace Immersion
                         }
                     }
                 }
-                genProperties = Api.Assets.Get("game:worldgen/deeporebits.json").ToObject<List<DeepOreGenProperty>>();
+                genProperties = Api.Assets.Get("game:worldgen/deeporebits.json").ToObject<DeepOreGenProperties>();
 
-                foreach (var val in genProperties)
+                foreach (var val in genProperties.GenProperties)
                 {
                     val.id = Api.World.GetBlock(val.Code).Id;
                 }
@@ -83,11 +83,11 @@ namespace Immersion
                     if (surfaceBlocks.TryGetValue(ore, out int surface))
                     {
                         double chance = 1.0;
-                        genProperties.Any(d =>
+                        genProperties.GenProperties.Any(d =>
                         {
                             if (d.id == surface)
                             {
-                                chance = d.Chance;
+                                chance = d.Chance * genProperties.GlobalMult;
                                 return true;
                             }
                             return false;
@@ -121,6 +121,17 @@ namespace Immersion
             rnd = new LCGRandom(Api.WorldManager.Seed);
         }
     }
+
+    [JsonObject(MemberSerialization.OptIn)]
+    class DeepOreGenProperties
+    {
+        [JsonProperty]
+        public double GlobalMult { get; set; }
+
+        [JsonProperty]
+        public List<DeepOreGenProperty> GenProperties { get; set; }
+    }
+
     [JsonObject(MemberSerialization.OptIn)]
     class DeepOreGenProperty
     {
