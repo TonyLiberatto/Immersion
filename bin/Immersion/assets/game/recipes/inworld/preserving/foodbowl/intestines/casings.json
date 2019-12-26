@@ -1,0 +1,83 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-blue-intestines",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-blue-casings",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-fire-intestines",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-fire-casings",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-brown-intestines",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-brown-casings",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-red-intestines",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-red-casings",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

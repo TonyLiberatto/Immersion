@@ -1,0 +1,23 @@
+[
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "game:water-*",
+        "Type": "Block",        
+		"Remove": false	
+    },
+    "Tool": {
+        "Code": "game:food-bowl-large-blue-intestines",
+        "Type": "Block",
+		"StackSize": 1,		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-blue-cleanintestines",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]
