@@ -47,11 +47,11 @@ namespace Immersion
 
             tmpBlock = Api.World.BlockAccessor.GetBlock(Pos);
             tmpTextureSource = ((ICoreClientAPI)Api).Tesselator.GetTexSource(tmpBlock);
-            Shape shape = Api.Assets.TryGet("shapes/block/metal/ingotpile.json").ToObject<Shape>();
+            string path = Block.Attributes["pileshapes"]?["*"]?.AsString("shapes/block/metal/ingotpile.json");
             MetalProperty metals = Api.Assets.TryGet("worldproperties/block/metal.json").ToObject<MetalProperty>();
             List<MetalPropertyVariant> variants = metals.Variants.ToList();
             
-            variants.AddRange(Api.Assets.TryGet("worldproperties/block/customingots.json").ToObject<List<MetalPropertyVariant>>());
+            variants.AddRange(Api.Assets.TryGet("config/immersionproperties/customingots.json").ToObject<List<MetalPropertyVariant>>());
 
             metals.Variants = variants.ToArray();
 
@@ -63,6 +63,8 @@ namespace Immersion
                 MeshData[] meshes = new MeshData[65];
 
                 tmpMetal = metals.Variants[i].Code;
+                if (tmpMetal != null) path = Block.Attributes["pileshapes"]?[tmpMetal.Path]?.AsString(path);
+                Shape shape = Api.Assets.TryGet(path + ".json").ToObject<Shape>();
 
                 for (int j = 0; j <= 64; j++)
                 {
