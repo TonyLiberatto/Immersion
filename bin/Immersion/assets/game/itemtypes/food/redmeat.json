@@ -1,8 +1,14 @@
 {
 	code: "redmeat",
 	maxstacksize: 64,
-	attributes: {
-		inContainerTexture: { base: "block/wood/barrel/{type}-redmeat" },
+	attributesByType: {
+		"*-dry": {
+			handbook: {			
+				extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-preserving\">Immersion Food Preserving</a>" }
+			]},
+		},
+		"*":{ inContainerTexture: { base: "block/wood/barrel/{type}-redmeat" },
 		inFirePitProps: {
 			transform: {
 				scale: 0.85,
@@ -13,6 +19,7 @@
 			useFirepitModel: "Cooking"
 		},
 		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
+		}
 	},
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked", "vintage", "cured", "salted", "dry" ] },

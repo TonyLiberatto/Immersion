@@ -13,6 +13,12 @@
 			},
 			foodcategory: "Fruit" 
 		},
+		handbook: {
+			groupBy: ["dryfruit-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-preserving\">Immersion Food Preserving</a>" }
+			]
+		}
 	},
 	texture: { base: "immersion:item/food/dryfruit/{type}" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },
