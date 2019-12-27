@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-blue-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-intestines",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-blue-intestines",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-fire-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-intestines",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-fire-intestines",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-brown-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-intestines",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-brown-intestines",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-red-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-intestines",
+        "Type": "item",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-red-intestines",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

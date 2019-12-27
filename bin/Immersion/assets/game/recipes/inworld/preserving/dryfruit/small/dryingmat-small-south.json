@@ -8,7 +8,7 @@
     },
     "Tool": {
         "Code": "game:fruit-blackcurrant",
-        "Type": "Block",        
+        "Type": "Item",        
 		"StackSize": 16
     },
     "Makes": [{
@@ -29,7 +29,7 @@
     },
     "Tool": {
         "Code": "game:fruit-blueberry",
-        "Type": "Block",        
+        "Type": "Item",        
 		"StackSize": 16
     },
     "Makes": [{
@@ -50,7 +50,7 @@
     },
     "Tool": {
         "Code": "game:fruit-cranberry",
-        "Type": "Block",        
+        "Type": "Item",        
 		"StackSize": 16
     },
     "Makes": [{
@@ -71,7 +71,7 @@
     },
     "Tool": {
         "Code": "game:fruit-redcurrant",
-        "Type": "Block",        
+        "Type": "Item",        
 		"StackSize": 16
     },
     "Makes": [{
@@ -92,7 +92,7 @@
     },
     "Tool": {
         "Code": "game:fruit-saguaro",
-        "Type": "Block",        
+        "Type": "Item",        
 		"StackSize": 16
     },
     "Makes": [{
@@ -113,7 +113,7 @@
     },
     "Tool": {
         "Code": "game:fruit-whitecurrant",
-        "Type": "Block",        
+        "Type": "Item",        
 		"StackSize": 16
     },
     "Makes": [{

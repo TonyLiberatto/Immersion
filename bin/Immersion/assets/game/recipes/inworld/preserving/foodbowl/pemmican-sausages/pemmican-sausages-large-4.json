@@ -1,0 +1,106 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-blue-pemmican4",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-casings",
+        "Type": "item",
+		"StackSize": 4,		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-blue-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:pemmican-sausage",
+        "Type": "Item",        
+        "StackSize": 4
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-brown-pemmican4",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-casings",
+        "Type": "item",
+		"StackSize": 4,		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-brown-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:pemmican-sausage",
+        "Type": "Item",        
+        "StackSize": 4
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-fire-pemmican4",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-casings",
+        "Type": "item",
+		"StackSize": 4,		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-fire-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:pemmican-sausage",
+        "Type": "Item",        
+        "StackSize": 4
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-large-red-pemmican4",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-casings",
+        "Type": "item",
+		"StackSize": 4,		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-large-red-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:pemmican-sausage",
+        "Type": "Item",        
+        "StackSize": 4
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }, 
+]

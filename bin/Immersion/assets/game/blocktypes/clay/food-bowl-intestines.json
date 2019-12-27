@@ -1,0 +1,84 @@
+{
+	code: "food-bowl",	
+	behaviorsByType: {		
+		"*-large-*-casings": [ 
+			{name: "Harvestable", properties: { 
+				harvestTime: 0.6, 
+				harvestedStack: { type: "item", code: "immersion:animal-casings", quantity: { avg: 16 }  },
+				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
+		}} ],
+	},
+	"entityClass": "Generic",
+    "entityBehaviorsByType": {
+		"*": [{
+            "name": "Transient",
+            "properties": {
+                "convertFrom": "food-bowl-*",
+                "convertTo": "food-bowl-{size}-{color}-rotten",
+                "inGameHours": 48
+            }
+			},
+			{
+				"name": "Consumable",
+				"properties": {
+					"eatenTo": "food-bowl-{size}-{color}-burned",
+					"contentConfig": {
+						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+					}
+				}
+			}
+		],
+	},
+	variantgroups: [
+		{ code:"size", states: ["large"] },
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },		
+		{ code:"materialtype", states: [ "intestines", "cleanintestines", "casings"] },
+	],	
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": [""], "immersionblocks": [""] },
+	replaceable: 1200,
+	resistance: 1.5,
+	maxStackSize: 1,
+	liquidSelectable: 1,
+	lightAbsorption: 0,
+	texturesByType: {					
+		"*-intestines": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/resource/animal/intestines" }},
+		"*-cleanintestines": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/resource/animal/cleanintestines" }},
+		"*-casings": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/resource/animal/casings" }},
+	},
+	shapeByType: {				
+		"*-intestines": { base: "block/clay/food-bowl-{size}-pemmican3" },
+		"*-cleanintestines": { base: "block/clay/food-bowl-{size}-pemmican3" },
+		"*-casings": { base: "block/clay/food-bowl-{size}-pemmican3" },
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionSelectionboxByType: {		
+		"*-large-*": {	x1: 0.09375, y1: 0, z1: 0.09375, x2: 0.90625, y2: 0.15625, z2: 0.90625, },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	fpHandTransform: {
+		rotation: { x: 0, y: -134, z: 0 },
+		scale: 1.56
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.35, z: 0.5 },
+		scale: 1.87
+	},
+	tpHandTransform: {
+		translation: { x: -0.97, y: -0.71, z: -0.71 },
+		rotation: { x: 0, y: 180, z: 9 },
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 0.65
+	},
+	groundTransform: {
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.5
+	}
+}

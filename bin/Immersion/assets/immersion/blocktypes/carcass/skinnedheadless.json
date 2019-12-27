@@ -29,54 +29,19 @@
 	"shapeByType": {
 		"*": {
 			"base": "block/skinnedheadless/{type}",
-			"alternates": [{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 45
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 90
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 135
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 180
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 225
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 270
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 45
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 90
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 135
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 180
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 225
-				},
-				{
-					"base": "block/skinnedheadless/{type}",
-					"rotateY": 270
-				}
+			"alternates": [
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 45	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 90	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 135	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 180	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 225	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 270	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 45	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 90	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 135	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 180	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 225	},
+				{	"base": "block/skinnedheadless/{type}",	"rotateY": 270	}
 			]
 		}
 	},
@@ -119,6 +84,11 @@
 				"tool": "knife"
 			},
 			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
+				"tool": "knife"
+			},
+			{	"type": "item",
 				"code": "animal-tendon",
 				"quantity": {"avg": 1,	"var": 1},
 				"tool": "knife"
@@ -138,6 +108,11 @@
 			{	"type": "item",
 				"code": "mutton-raw",
 				"quantity": {"avg": 5,	"var": 1.5	},
+				"tool": "knife"
+			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
 				"tool": "knife"
 			},
 			{	"type": "item",
@@ -211,6 +186,11 @@
 				"quantity": {	"avg": 5,	"var": 1},
 				"tool": "knife"
 			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
+				"tool": "knife"
+			},
 			{
 				"type": "item",
 				"code": "animal-tendon",
@@ -232,6 +212,11 @@
 			{	"type": "item",
 				"code": "game:fat",
 				"quantity": {	"avg": 4,	"var": 1},
+				"tool": "knife"
+			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
 				"tool": "knife"
 			},
 			{	"type": "item",

@@ -1,68 +1,10 @@
 {
-	code: "food-bowl",	
-	behaviorsByType: {
-		"*-small-*-salted-meat": [ 
-			{name: "Harvestable", properties: { 
-				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 4 }  },
-				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
-		}} ],
-		"*-medium-*-salted-meat": [ 
-			{name: "Harvestable", properties: { 
-				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 8 }  },
-				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
-		}} ],
-		"*-large-*-salted-meat": [ 
-			{name: "Harvestable", properties: { 
-				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 16 }  },
-				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
-		}} ],
-	},
-	"entityClass": "Generic",
-    "entityBehaviorsByType": {
-		"*-raw-meat": [{
-            "name": "Transient",
-            "properties": {
-                "convertFrom": "food-bowl-*-raw-meat",
-                "convertTo": "food-bowl-{size}-{color}-rotten",
-                "inGameHours": 48
-            }
-			},
-			{
-				"name": "Consumable",
-				"properties": {
-					"eatenTo": "food-bowl-{size}-{color}-burned",
-					"contentConfig": {
-						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
-					}
-				}
-			}
-		],
-		"*-salted-meat": [{
-            "name": "Transient",
-            "properties": {
-                "convertFrom": "food-bowl-*-salted-meat",
-                "convertTo": "food-bowl-{size}-{color}-rotten",
-                "inGameHours": 96
-            }
-        },
-        {
-            "name": "Consumable",
-            "properties": {
-                "eatenTo": "food-bowl-{size}-{color}-burned",
-                "contentConfig": {
-                    "foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
-                }
-            }
-        }
-    ],
-	},
+	code: "food-bowl",		
+	"entityClass": "Generic",    
 	variantgroups: [
 		{ code:"size", states: ["small", "medium", "large"] },
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },		
-		{ code:"materialtype", states: ["raw", "burned", "raw-meat", "salted-meat", "rotten", "meat-flour", "meat-fruit", "meat-fruit-fat", "pemmican" ] },
+		{ code:"materialtype", states: ["raw", "burned", "rotten",  ] },
 	],	
 	combustiblePropsByType: {
 		"*-raw": {
@@ -75,7 +17,7 @@
 		}
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*-raw", "*-burned"], "immersionblocks": [ "*-raw", "*-burned"] },
 	replaceable: 1200,
 	resistance: 1.5,
 	maxStackSize: 1,
@@ -83,25 +25,13 @@
 	lightAbsorption: 0,
 	texturesByType: {
 		"*-raw": {  all: { base: "block/clay/{color}-raw" }, "meat": { base: "game:block/transparent" } },
-		"*-burned": {  all: { base: "block/clay/{color}-burned" }, "meat": { base: "game:block/transparent" } },
-		"*-raw-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/raw" }},
-		"*-salted-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/cured" }},
-		"*-rotten": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:block/wood/barrel/rot" }},
-		"*-meat-flour": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-flour" }},
-		"*-meat-fruit": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit" }},
-		"*-meat-fruit-fat": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit-fat" }},
-		"*-pemmican": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/pemmican" }},
+		"*-burned": {  all: { base: "block/clay/{color}-burned" }, "meat": { base: "game:block/transparent" } },		
+		"*-rotten": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:block/wood/barrel/rot" }},				
 	},
 	shapeByType: {		
 		"*-raw": { base: "block/clay/food-bowl-{size}" },
-		"*-burned": { base: "block/clay/food-bowl-{size}" },
-		"*-raw-meat": { base: "block/clay/food-bowl-{size}" },
-		"*-salted-meat": { base: "block/clay/food-bowl-{size}" },
-		"*-rotten": { base: "block/clay/food-bowl-{size}" },
-		"*-meat-flour": { base: "block/clay/food-bowl-{size}-pemmican1" },
-		"*-meat-fruit": { base: "block/clay/food-bowl-{size}-pemmican2" },
-		"*-meat-fruit-fat": { base: "block/clay/food-bowl-{size}-pemmican3" },
-		"*-pemmican": { base: "block/clay/food-bowl-{size}-pemmican4" },
+		"*-burned": { base: "block/clay/food-bowl-{size}" },		
+		"*-rotten": { base: "block/clay/food-bowl-{size}" },		
 	},
 	sounds: {
 		walk: "walk/stone",

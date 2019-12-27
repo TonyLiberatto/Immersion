@@ -1,0 +1,69 @@
+{
+	code: "food-bowl",		
+	"entityClass": "Generic",
+    "entityBehaviorsByType": {
+		"*": [{"name": "Consumable",
+				"properties": {
+					"eatenTo": "food-bowl-{size}-{color}-burned",
+					"contentConfig": {
+						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+					}
+				}
+			}
+		],
+	},
+	variantgroups: [
+		{ code:"size", states: ["small", "medium", "large"] },
+		{ code:"color", states: ["blue", "brown", "fire", "red"] },		
+		{ code:"materialtype", states: [ "meat-flour", "meat-fruit", "meat-fruit-fat",  ] },
+	],	
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": [""], "immersionblocks": [""] },
+	replaceable: 1200,
+	resistance: 1.5,
+	maxStackSize: 1,
+	liquidSelectable: 1,
+	lightAbsorption: 0,
+	texturesByType: {					
+		"*-meat-flour": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-flour" }},
+		"*-meat-fruit": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit" }},
+		"*-meat-fruit-fat": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit-fat" }},		
+	},
+	shapeByType: {				
+		"*-meat-flour": { base: "block/clay/food-bowl-{size}-pemmican1" },
+		"*-meat-fruit": { base: "block/clay/food-bowl-{size}-pemmican2" },
+		"*-meat-fruit-fat": { base: "block/clay/food-bowl-{size}-pemmican3" },		
+	},
+	sounds: {
+		walk: "walk/stone",
+	},
+	collisionSelectionboxByType: {		
+		"*-small-*": {	x1: 0.28125, y1: 0, z1: 0.33, x2: 0.71875, y2: 0.15625, z2: 0.66, },
+		"*-medium-*": {	x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.15625, z2: 0.8125, },
+		"*-large-*": {	x1: 0.09375, y1: 0, z1: 0.09375, x2: 0.90625, y2: 0.15625, z2: 0.90625, },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	fpHandTransform: {
+		rotation: { x: 0, y: -134, z: 0 },
+		scale: 1.56
+	},
+	guiTransform: {
+		origin: { x: 0.5, y: 0.35, z: 0.5 },
+		scale: 1.87
+	},
+	tpHandTransform: {
+		translation: { x: -0.97, y: -0.71, z: -0.71 },
+		rotation: { x: 0, y: 180, z: 9 },
+		origin: { x: 0.5, y: 0.3, z: 0.5 },
+		scale: 0.65
+	},
+	groundTransform: {
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.5
+	}
+}

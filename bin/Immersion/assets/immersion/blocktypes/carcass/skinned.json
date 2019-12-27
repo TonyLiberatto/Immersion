@@ -85,6 +85,11 @@
 				"tool": "knife"
 			},
 			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
+				"tool": "knife"
+			},
+			{	"type": "item",
 				"code": "game:bone",
 				"quantity": {	"avg": 4,	"var": 0	},
 				"tool": "knife"
@@ -114,6 +119,11 @@
 			{	"type": "item",
 				"code": "animal-tendon",
 				"quantity": {	"avg": 2,	"var": 1},
+				"tool": "knife"
+			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
 				"tool": "knife"
 			},
 			{	"type": "item",
@@ -204,6 +214,11 @@
 				"quantity": {	"avg": 4,	"var": 0	},
 				"tool": "knife"
 			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
+				"tool": "knife"
+			},
 			{	"type": "block",
 				"code": "skullboar-ground-north",
 				"quantity": {"avg": 0.1,"var": 0},
@@ -228,6 +243,11 @@
 				"tool": "knife"
 			},
 			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
+				"tool": "knife"
+			},
+			{	"type": "item",
 				"code": "game:bone",
 				"quantity": {	"avg": 4,	"var": 0},
 				"tool": "knife"
@@ -242,6 +262,11 @@
 			{	"type": "item",
 				"code": "game:fat",
 				"quantity": {"avg": 4,	"var": 1},
+				"tool": "knife"
+			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
 				"tool": "knife"
 			},
 			{	"type": "item",
@@ -270,6 +295,11 @@
 			{	"type": "item",
 				"code": "game:fat",
 				"quantity": {	"avg": 10,	"var": 2},
+				"tool": "knife"
+			},
+			{	"type": "item",
+				"code": "immersion:animal-intestines",
+				"quantity": {	"avg": 1,	"var": 0},
 				"tool": "knife"
 			},
 			{	"type": "item",
