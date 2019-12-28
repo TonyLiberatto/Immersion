@@ -12,7 +12,7 @@
 		"StackSize": 16,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-blue-pemmican",
+        "Code": "game:food-bowl-large-blue-pemmican16",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -38,7 +38,7 @@
 		"StackSize": 16,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-brown-pemmican",
+        "Code": "game:food-bowl-large-brown-pemmican16",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -64,7 +64,7 @@
 		"StackSize": 16,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-fire-pemmican",
+        "Code": "game:food-bowl-large-fire-pemmican16",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -90,7 +90,7 @@
 		"StackSize": 16,		
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-red-pemmican",
+        "Code": "game:food-bowl-large-red-pemmican16",
         "Type": "Block",
         "StackSize": 1
     }],

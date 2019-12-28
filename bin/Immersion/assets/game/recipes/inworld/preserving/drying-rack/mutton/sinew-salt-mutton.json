@@ -1,0 +1,254 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-acacia-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-sinew-salt-mutton-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-acacia-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-sinew-salt-mutton-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-birch-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-sinew-salt-mutton-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-birch-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-sinew-salt-mutton-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-kapok-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-sinew-salt-mutton-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-kapok-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-sinew-salt-mutton-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-maple-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-sinew-salt-mutton-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-maple-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-sinew-salt-mutton-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-oak-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-sinew-salt-mutton-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-oak-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-sinew-salt-mutton-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-pine-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-sinew-salt-mutton-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-pine-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-sinew-salt-mutton-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

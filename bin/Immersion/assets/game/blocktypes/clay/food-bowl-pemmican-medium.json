@@ -37,8 +37,8 @@
 		"*-pemmican*": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/pemmican" }},
 	},
 	shapeByType: {			
-		"*-pemmican4": { base: "block/clay/food-bowl-medium-pemmican2" },
-		"*-pemmican8": { base: "block/clay/food-bowl-medium-pemmican4" },
+		"*-pemmican4": { base: "block/clay/food-bowl/pemmican/medium-pemmican2" },
+		"*-pemmican8": { base: "block/clay/food-bowl/pemmican/medium-pemmican4" },
 	},
 	sounds: {
 		walk: "walk/stone",

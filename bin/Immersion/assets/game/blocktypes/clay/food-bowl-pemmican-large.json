@@ -6,14 +6,14 @@
             "name": "Transient",
             "properties": {
                 "convertFrom": "food-bowl-*",
-                "convertTo": "food-bowl-medium-{color}-rotten",
+                "convertTo": "food-bowl-large-{color}-rotten",
                 "inGameHours": 48
             }
 			},
 			{
 				"name": "Consumable",
 				"properties": {
-					"eatenTo": "food-bowl-medium-{color}-burned",
+					"eatenTo": "food-bowl-large-{color}-burned",
 					"contentConfig": {
 						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
 					}
@@ -37,10 +37,10 @@
 		"*-pemmican*": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/pemmican" }},
 	},
 	shapeByType: {			
-		"*-pemmican4": { base: "block/clay/food-bowl-large-pemmican1" },
-		"*-pemmican8": { base: "block/clay/food-bowl-large-pemmican2" },
-		"*-pemmican12": { base: "block/clay/food-bowl-large-pemmican3" },
-		"*-pemmican16": { base: "block/clay/food-bowl-large-pemmican4" },
+		"*-pemmican4": { base: "block/clay/food-bowl/pemmican/large-pemmican1" },
+		"*-pemmican8": { base: "block/clay/food-bowl/pemmican/large-pemmican2" },
+		"*-pemmican12": { base: "block/clay/food-bowl/pemmican/large-pemmican3" },
+		"*-pemmican16": { base: "block/clay/food-bowl/pemmican/large-pemmican4" },
 	},
 	sounds: {
 		walk: "walk/stone",

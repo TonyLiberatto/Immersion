@@ -28,14 +28,8 @@
 		"*-burned": {  all: { base: "block/clay/{color}-burned" }, "meat": { base: "game:block/transparent" } },		
 		"*-rotten": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:block/wood/barrel/rot" }},				
 	},
-	shapeByType: {		
-		"*-raw": { base: "block/clay/food-bowl-{size}" },
-		"*-burned": { base: "block/clay/food-bowl-{size}" },		
-		"*-rotten": { base: "block/clay/food-bowl-{size}" },		
-	},
-	sounds: {
-		walk: "walk/stone",
-	},
+	shape: 	{ base: "block/clay/food-bowl/redmeat/{size}-redmeat" },	
+	sounds: { walk: "walk/stone",},
 	collisionSelectionboxByType: {
 		"*-small-*": {	x1: 0.28125, y1: 0, z1: 0.33, x2: 0.71875, y2: 0.15625, z2: 0.66, },
 		"*-medium-*": {	x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.15625, z2: 0.8125, },

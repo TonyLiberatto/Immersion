@@ -76,8 +76,8 @@
 		"*-salted-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/cured" }},
 	},
 	shapeByType: {				
-		"*-raw-meat": { base: "block/clay/food-bowl-{size}" },
-		"*-salted-meat": { base: "block/clay/food-bowl-{size}" },
+		"*-raw-meat": { base: "block/clay/food-bowl/redmeat/{size}-redmeat" },
+		"*-salted-meat": { base: "block/clay/food-bowl/redmeat/{size}-redmeat" },
 	},
 	sounds: {
 		walk: "walk/stone",

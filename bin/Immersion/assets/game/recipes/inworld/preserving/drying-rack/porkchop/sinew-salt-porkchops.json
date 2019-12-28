@@ -1,0 +1,254 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-acacia-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-sinew-salt-pork-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-acacia-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-acacia-sinew-salt-pork-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-birch-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-sinew-salt-pork-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-birch-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-birch-sinew-salt-pork-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-kapok-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-sinew-salt-pork-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-kapok-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-kapok-sinew-salt-pork-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-maple-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-sinew-salt-pork-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-maple-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-maple-sinew-salt-pork-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-oak-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-sinew-salt-pork-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-oak-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-oak-sinew-salt-pork-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-pine-sinew-rope-ns",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-sinew-salt-pork-ns",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:drying-rack-pine-sinew-rope-we",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:porkchops-salted",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "immersion:drying-rack-pine-sinew-salt-pork-we",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

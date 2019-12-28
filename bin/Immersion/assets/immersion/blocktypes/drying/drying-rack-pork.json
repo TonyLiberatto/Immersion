@@ -1,10 +1,10 @@
 {
 	code: "drying-rack",
 	behaviorsByType: {
-		"*-dry-meat-*": [ {name: "NWOrientable"},
+		"*-dry-pork-*": [ {name: "NWOrientable"},
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "redmeat-dry", quantity: { avg: 4 }  },
+				harvestedStack: { type: "item", code: "porkchop-dry", quantity: { avg: 4 }  },
 				harvestedBlockCode: "drying-rack-{wood}-{cordage}-rope-{orientation}"
 		}} ],
 		"*": [{name: "NWOrientable"}],
@@ -13,8 +13,8 @@
     "entityBehaviors": [
 		{ "name": "Transient",
             "properties": {
-                "convertFrom": "drying-rack-*-salt-meat-*",
-                "convertTo": "drying-rack-*-dry-meat-*",
+                "convertFrom": "drying-rack-*-salt-pork-*",
+                "convertTo": "drying-rack-*-dry-pork-*",
                 "inGameHours": 72,
 				"TransitionConditions": { "RequiredSunlight": 32, }
             }
@@ -32,7 +32,7 @@
 	variantgroups: [		
 		{ loadFromProperties: "block/wood" },		
 		{ code: "cordage", states: [  "leatherstrips", "reeds","sinew", "sisal"]},
-		{ code: "state", states: [  "rope","salt-meat","dry-meat" ]},
+		{ code: "state", states: [  "salt-pork","dry-pork" ]},
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
 	creativeinventory: { "general": ["*-ns"],  "immersionblocks": ["*-ns"],  },
@@ -46,8 +46,8 @@
 		all: false
 	},
 	shapeByType: {
-		"drying-rack-*-ns":{ base: "block/wood/drying-rack/redmeat"},		
-		"drying-rack-*-we": {base: "block/wood/drying-rack/redmeat", rotateY: 0, rotateY: 90 },		
+		"drying-rack-*-ns":{ base: "block/wood/drying-rack/pork"},		
+		"drying-rack-*-we": {base: "block/wood/drying-rack/pork", rotateY: 0, rotateY: 90 },		
 	},	
 	blockmaterial: "Wood",
 	requiredMiningTier: 1,
@@ -58,13 +58,13 @@
 			"cordage": { base: "block/{cordage}" },
 			"meat": { base: "game:block/transparent" },
 		},
-		"*-salt-meat-*": {	
+		"*-salt-pork-*": {	
 			"acacia": { base: "block/wood/bark/{wood}" },
 			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
 			"cordage": { base: "block/{cordage}" },
 			"meat": {base: "game:item/food/meat/cured" }
 		},
-		"*-dry-meat-*": {	
+		"*-dry-pork-*": {	
 			"acacia": { base: "block/wood/bark/{wood}" },
 			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
 			"cordage": { base: "block/{cordage}" },
