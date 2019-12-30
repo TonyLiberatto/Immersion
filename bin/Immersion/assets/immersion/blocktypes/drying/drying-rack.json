@@ -30,10 +30,10 @@
         }
     ],
 	variantgroups: [		
-		{ loadFromProperties: "block/wood" },		
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },		
 		{ code: "cordage", states: [  "leatherstrips", "reeds","sinew", "sisal"]},
 		{ code: "state", states: [  "rope","salt-meat","dry-meat" ]},
-		{ code:"orientation", states: ["ns", "we"] },
+		{ code:"orientation", states: ["ns", "we"] }, 
 	],	
 	creativeinventory: { "general": ["*-rope-ns"],  "immersionblocks": ["*-rope-ns"],  },
 	drawtype: "json",
