@@ -1,5 +1,6 @@
 {
-	code: "food-bowl",		
+	code: "food-bowl",
+	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
 		"*": [{"name": "Consumable",
@@ -9,7 +10,7 @@
 						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
 					}
 				}
-			}
+			},			
 		],
 	},
 	variantgroups: [

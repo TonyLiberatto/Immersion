@@ -1,5 +1,6 @@
 {
-	code: "food-bowl",		
+	code: "food-bowl",
+	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	"entityClass": "Generic",    
 	variantgroups: [
 		{ code:"size", states: ["small", "medium", "large"] },
@@ -35,12 +36,9 @@
 		"*-medium-*": {	x1: 0.1875, y1: 0, z1: 0.1875, x2: 0.8125, y2: 0.15625, z2: 0.8125, },
 		"*-large-*": {	x1: 0.09375, y1: 0, z1: 0.09375, x2: 0.90625, y2: 0.15625, z2: 0.90625, },
 	},
-	sideopaque: {
-		all: false
-	},
-	sidesolid: {
-		all: false
-	},
+	sideopaque: { all: false },
+	sidesolid: { all: false	},
+	liquidSelectable: 1,
 	fpHandTransform: {
 		rotation: { x: 0, y: -134, z: 0 },
 		scale: 1.56

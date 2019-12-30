@@ -6,19 +6,22 @@
 				harvestTime: 0.6, 
 				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 4 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
-		}} ],
+			}},
+			{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"}],
 		"*-medium-*-salted-meat": [ 
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
 				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 8 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
-		}} ],
+			}}, 
+			{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"}],
 		"*-large-*-salted-meat": [ 
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
 				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 16 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
-		}} ],
+			}}, 
+			{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"}],
 	},
 	"entityClass": "Generic",
 	"entityBehaviorsByType": {
