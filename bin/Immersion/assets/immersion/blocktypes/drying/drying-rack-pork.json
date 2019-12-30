@@ -4,7 +4,7 @@
 		"*-dry-pork-*": [ {name: "NWOrientable"},
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "porkchop-dry", quantity: { avg: 4 }  },
+				harvestedStack: { type: "item", code: "immersion:porkchops-dry", quantity: { avg: 4 }  },
 				harvestedBlockCode: "drying-rack-{wood}-{cordage}-rope-{orientation}"
 		}} ],
 		"*": [{name: "NWOrientable"}],
@@ -22,7 +22,7 @@
         {
             "name": "Consumable",
             "properties": {
-                "eatenTo": "drying-rack-{wood}-{cordage}-rope-{rotation}",
+                "eatenTo": "drying-rack-{wood}-{cordage}-rope-{orientation}",
                 "contentConfig": {
                     "foodFor": ["game:wolf-*", "game:hyena-*", "game:fox-*"]
                 }
@@ -35,7 +35,7 @@
 		{ code: "state", states: [  "salt-pork","dry-pork" ]},
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
-	creativeinventory: { "general": ["*-ns"],  "immersionblocks": ["*-ns"],  },
+	creativeinventory: { "general": [""],  "immersionblocks": [""],  },
 	drawtype: "json",
 	lightabsorption: 0,
 	sidesolid: {

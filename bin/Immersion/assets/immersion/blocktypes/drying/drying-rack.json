@@ -22,7 +22,7 @@
         {
             "name": "Consumable",
             "properties": {
-                "eatenTo": "drying-rack-{wood}-{cordage}-rope-{rotation}",
+                "eatenTo": "drying-rack-{wood}-{cordage}-rope-{orientation}",
                 "contentConfig": {
                     "foodFor": ["game:wolf-*", "game:hyena-*", "game:fox-*"]
                 }
@@ -35,7 +35,7 @@
 		{ code: "state", states: [  "rope","salt-meat","dry-meat" ]},
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
-	creativeinventory: { "general": ["*-ns"],  "immersionblocks": ["*-ns"],  },
+	creativeinventory: { "general": ["*-rope-ns"],  "immersionblocks": ["*-rope-ns"],  },
 	drawtype: "json",
 	lightabsorption: 0,
 	sidesolid: {
