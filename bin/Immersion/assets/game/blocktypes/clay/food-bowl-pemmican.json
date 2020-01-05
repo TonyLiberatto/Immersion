@@ -1,5 +1,6 @@
 {
-	code: "food-bowl",		
+	code: "food-bowl",
+	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
 		"*": [{"name": "Consumable",
@@ -9,7 +10,7 @@
 						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
 					}
 				}
-			}
+			},			
 		],
 	},
 	variantgroups: [
@@ -30,9 +31,9 @@
 		"*-meat-fruit-fat": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit-fat" }},		
 	},
 	shapeByType: {				
-		"*-meat-flour": { base: "block/clay/food-bowl-{size}-pemmican1" },
-		"*-meat-fruit": { base: "block/clay/food-bowl-{size}-pemmican2" },
-		"*-meat-fruit-fat": { base: "block/clay/food-bowl-{size}-pemmican3" },		
+		"*-meat-flour": { base: "block/clay/food-bowl/pemmican/{size}-pemmican1" },
+		"*-meat-fruit": { base: "block/clay/food-bowl/pemmican/{size}-pemmican2" },
+		"*-meat-fruit-fat": { base: "block/clay/food-bowl/pemmican/{size}-pemmican3" },		
 	},
 	sounds: {
 		walk: "walk/stone",

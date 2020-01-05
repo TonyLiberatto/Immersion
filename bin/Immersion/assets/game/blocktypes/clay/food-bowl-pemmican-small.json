@@ -1,5 +1,6 @@
 {
-	code: "food-bowl",	
+	code: "food-bowl",
+	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
 		"*": [{
@@ -18,7 +19,8 @@
 						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
 					}
 				}
-			}
+			},
+			
 		],
 	},
 	variantgroups: [
@@ -37,7 +39,7 @@
 		"*-pemmican4": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/pemmican" }},
 	},
 	shapeByType: {			
-		"*-pemmican4": { base: "block/clay/food-bowl-small-pemmican4" },
+		"*-pemmican4": { base: "block/clay/food-bowl/pemmican/small-pemmican4" },
 	},
 	sounds: {
 		walk: "walk/stone",

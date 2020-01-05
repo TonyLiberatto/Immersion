@@ -3,8 +3,8 @@
 	class: "ItemFoodMultiProp",
 	attributes: {
 		NutritionProps: [ 
-			{ saturation: 1400, health: 1,foodcategory: "Protein" },
-			{ saturation: 1400, health: 1,foodcategory: "Fruit" },
+			{ saturation: 420, health: 1,foodcategory: "Protein" },
+			{ saturation: 420, health: 1,foodcategory: "Fruit" },
 		]
 	},
 	maxstacksize: 64,	

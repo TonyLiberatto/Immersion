@@ -57,7 +57,7 @@
 				{ type: "item", code: "poultry-raw", shapeElement: "bowl/meat/*" },
 				{ type: "item", code: "egg-chicken-raw", shapeElement: "bowl/meat/*" },
 				{ type: "item", code: "fish-bass-raw", shapeElement: "bowl/meat/*" },
-				{ type: "item", code: "immersion:chicken-raw",  shapeElement: "bowl/poultry/*" },
+				{ type: "item", code: "poultry-raw",  shapeElement: "bowl/poultry/*" },
 				{ type: "item", code: "immersion:mutton-raw",  shapeElement: "bowl/red meat/*" },
 				{ type: "item", code: "immersion:porkchops-raw",  shapeElement: "bowl/red meat/*" },
 				{ type: "item", code: "immersion:hare-raw",  shapeElement: "bowl/poultry/*" },

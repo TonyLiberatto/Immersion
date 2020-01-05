@@ -2,7 +2,7 @@
 	code: "drying-rack-assemble",
 	behaviors: [ {name: "NWOrientable"}],
 	variantgroups: [		
-		{ loadFromProperties: "block/wood" },		
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },			
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
 	creativeinventory: { "general": [""],  "immersionblocks": [""],  },
@@ -16,8 +16,8 @@
 		all: false
 	},
 	shapeByType: {
-		"drying-rack-*-ns":{ base: "block/wood/drying-rack"},		
-		"drying-rack-*-we": {base: "block/wood/drying-rack", rotateY: 0, rotateY: 90 },		
+		"drying-rack-*-ns":{ base: "block/wood/drying-rack/redmeat"},		
+		"drying-rack-*-we": {base: "block/wood/drying-rack/redmeat", rotateY: 0, rotateY: 90 },		
 	},	
 	blockmaterial: "Wood",
 	requiredMiningTier: 1,

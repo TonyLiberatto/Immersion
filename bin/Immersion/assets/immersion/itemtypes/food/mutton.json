@@ -1,7 +1,14 @@
 {
 	code: "mutton",
 	maxstacksize: 64,
-	attributes: {
+	attributesByType: {
+		"*-dry": {
+			handbook: {			
+				extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-preserving\">Immersion Food Preserving</a>" }
+			]},
+		},
+		"*":{ inContainerTexture: { base: "block/wood/barrel/{type}-redmeat" },
 		inFirePitProps: {
 			transform: {
 				scale: 0.85,
@@ -10,19 +17,36 @@
 				rotation: { x: 0, y: 0, z: 90 }
 			},
 			useFirepitModel: "Cooking"
+		},
+		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
 		}
 	},
 	variantgroups: [
-		{ code: "type", states: ["raw", "cooked", "cured" ] },
+		{ code: "type", states: ["raw", "cooked", "cured", "salted", "dry" ] },
 	],
-	textures: {
-		"meat": {base: "item/food/meat/mutton-{type}" },
+	texturesbytype: {
+		"*-raw": { 
+			"meat": {base: "item/food/meat/mutton-raw" }
+		},
+		"*-cooked":  { 
+			"meat": {base: "item/food/meat/mutton-cooked" }
+		},
+		"*-cured":  { 
+			"meat": {base: "item/food/meat/mutton-cured" } 
+		},		
+		"*-salted":  { 
+			"meat": {base: "game:item/food/meat/cured" }
+		},
+		"*-dry":  { 
+			"meat": {base: "game:item/food/meat/cured-smoked" }
+		},
 	},
 	shape: { base: "item/food/meat/mutton" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"mutton-cooked": { saturation: 2400, health: 0, foodcategory: "Protein" },
-		"mutton-cured": { saturation: 2400, health: 0, foodcategory: "Protein" }
+		"mutton-cured": { saturation: 2400, health: 0, foodcategory: "Protein" },
+		"mutton-dry": { saturation: 2400, health: 0, foodcategory: "Protein" }
 	},
 	materialDensity: 600,
 	guiTransform: {
@@ -82,6 +106,20 @@
 			spoilHours: { avg: 4380 },
 			transitionedStack: { type: "item", code: "game:rot" },
 			transitionRatio: 1
-		}]
+		}],
+		"*-salted": [{
+			type: "Perish",
+			freshHours: { avg: 120 },
+			spoilHours: { avg: 36 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}],
+		"*-dry": [{
+			type: "Perish",
+			freshHours: { avg: 8760 },
+			spoilHours: { avg: 4380 },
+			transitionedStack: { type: "item", code: "game:rot" },
+			transitionRatio: 1
+		}],
 	},
 }

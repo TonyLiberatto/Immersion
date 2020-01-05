@@ -1,0 +1,83 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-blue-rotten",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+		
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-blue-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-fire-rotten",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-fire-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-brown-rotten",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-brown-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-red-rotten",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "item",
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-red-burned",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

@@ -1,0 +1,58 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Porkchop",
+			"from": [ 2.0, 0.0, 3.36 ], 
+			"to": [ 4.8, 1.12, 6.16 ], 
+			"rotationOrigin": [ 1.736, 0.0, 3.36 ],
+			"faces": {
+				"north": { "texture": "#meat", "uv": [ 14.0, 1.0, 15.12, 4.36 ], "rotation": 90, "autoUv": false },
+				"east": { "texture": "#meat", "uv": [ 0.0, 0.0, 2.5, 1.0 ] },
+				"south": { "texture": "#meat", "uv": [ 0.0, 4.0, 1.12, 6.8 ], "rotation": 90, "autoUv": false },
+				"west": { "texture": "#meat", "uv": [ 14.0, 0.0, 15.12, 2.8 ], "rotation": 90, "autoUv": false },
+				"up": { "texture": "#meat", "uv": [ 3.0, 1.0, 8.04, 6.04 ], "autoUv": false },
+				"down": { "texture": "#meat", "uv": [ 3.0, 1.0, 8.04, 6.04 ], "rotation": 180, "autoUv": false }
+			},
+			"children": [
+				{
+					"name": "Porkchop2",
+					"from": [ 2.8, 0.056, 0.112 ], 
+					"to": [ 4.48, 1.064, 2.352 ], 
+					"rotationOrigin": [ 2.8, 0.056, 0.112 ],
+					"faces": {
+						"north": { "texture": "#meat", "uv": [ 14.0, 6.0, 15.12, 8.8 ], "rotation": 90, "autoUv": false },
+						"east": { "texture": "#meat", "uv": [ 14.0, 7.0, 15.12, 10.36 ], "rotation": 90, "autoUv": false },
+						"south": { "texture": "#meat", "uv": [ 0.0, 11.0, 1.12, 13.8 ], "rotation": 90, "autoUv": false },
+						"west": { "texture": "#meat", "uv": [ 0.0, 0.0, 2.24, 0.56 ], "enabled": false },
+						"up": { "texture": "#meat", "uv": [ 7.0, 7.0, 10.92, 10.92 ], "autoUv": false },
+						"down": { "texture": "#meat", "uv": [ 7.0, 6.0, 10.92, 9.92 ], "autoUv": false }
+					},
+					"children": [
+						{
+							"name": "Porkchop3",
+							"from": [ 1.624, 0.056, 0.168 ], 
+							"to": [ 3.304, 0.952, 1.848 ], 
+							"rotationOrigin": [ 1.624, 0.056, 0.168 ],
+							"rotationY": -22.5,
+							"faces": {
+								"north": { "texture": "#meat", "uv": [ 14.0, 0.0, 15.12, 3.36 ], "rotation": 90, "autoUv": false },
+								"east": { "texture": "#meat", "uv": [ 0.0, 6.0, 1.12, 9.36 ], "rotation": 90, "autoUv": false },
+								"south": { "texture": "#meat", "uv": [ 0.0, 4.0, 1.12, 6.24 ], "rotation": 90, "autoUv": false },
+								"west": { "texture": "#meat", "uv": [ 0.0, 0.0, 1.68, 0.56 ], "enabled": false },
+								"up": { "texture": "#meat", "uv": [ 9.0, 11.0, 12.36, 13.8 ], "autoUv": false },
+								"down": { "texture": "#meat", "uv": [ 9.0, 11.0, 12.36, 13.8 ], "autoUv": false }
+							}
+						}
+					]
+				}
+			]
+		}
+	]}

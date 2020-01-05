@@ -7,6 +7,7 @@
 				harvestedStack: { type: "item", code: "immersion:animal-casings", quantity: { avg: 16 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
 		}} ],
+		"*": [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	},
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
@@ -14,14 +15,14 @@
             "name": "Transient",
             "properties": {
                 "convertFrom": "food-bowl-*",
-                "convertTo": "food-bowl-{size}-{color}-rotten",
+                "convertTo": "food-bowl-large-{color}-rotten",
                 "inGameHours": 48
             }
 			},
 			{
 				"name": "Consumable",
 				"properties": {
-					"eatenTo": "food-bowl-{size}-{color}-burned",
+					"eatenTo": "food-bowl-large-{color}-burned",
 					"contentConfig": {
 						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
 					}
@@ -46,23 +47,11 @@
 		"*-cleanintestines": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/resource/animal/cleanintestines" }},
 		"*-casings": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/resource/animal/casings" }},
 	},
-	shapeByType: {				
-		"*-intestines": { base: "block/clay/food-bowl-{size}-pemmican3" },
-		"*-cleanintestines": { base: "block/clay/food-bowl-{size}-pemmican3" },
-		"*-casings": { base: "block/clay/food-bowl-{size}-pemmican3" },
-	},
-	sounds: {
-		walk: "walk/stone",
-	},
-	collisionSelectionboxByType: {		
-		"*-large-*": {	x1: 0.09375, y1: 0, z1: 0.09375, x2: 0.90625, y2: 0.15625, z2: 0.90625, },
-	},
-	sideopaque: {
-		all: false
-	},
-	sidesolid: {
-		all: false
-	},
+	shape:{ base: "block/clay/food-bowl/pemmican/large-pemmican3" },
+	sounds: { walk: "walk/stone",},
+	collisionSelectionbox: { x1: 0.09375, y1: 0, z1: 0.09375, x2: 0.90625, y2: 0.15625, z2: 0.90625, },
+	sideopaque: { all: false},
+	sidesolid: { all: false	},
 	fpHandTransform: {
 		rotation: { x: 0, y: -134, z: 0 },
 		scale: 1.56
