@@ -22,13 +22,13 @@ namespace Immersion
         {
             // 1..5 per tick
             FlourDustParticles = new SimpleParticleProperties(1, 3, ColorUtil.ToRgba(40, 220, 220, 220), new Vec3d(), new Vec3d(), new Vec3f(-0.25f, -0.25f, -0.25f), new Vec3f(0.25f, 0.25f, 0.25f), 1, 1, 0.1f, 0.3f, EnumParticleModel.Quad);
-            FlourDustParticles.addQuantity = 5;
-            FlourDustParticles.minVelocity.Set(-0.05f, 0, -0.05f);
-            FlourDustParticles.addVelocity.Set(0.1f, 0.2f, 0.1f);
+            FlourDustParticles.AddQuantity = 5;
+            FlourDustParticles.MinVelocity.Set(-0.05f, 0, -0.05f);
+            FlourDustParticles.AddVelocity.Set(0.1f, 0.2f, 0.1f);
             FlourDustParticles.WithTerrainCollision = false;
-            FlourDustParticles.lifeLength = 1.5f;
+            FlourDustParticles.LifeLength = 1.5f;
             FlourDustParticles.SelfPropelled = true;
-            FlourDustParticles.gravityEffect = 0;
+            FlourDustParticles.GravityEffect = 0;
             FlourDustParticles.SizeEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, 0.4f);
             FlourDustParticles.OpacityEvolve = EvolvingNatFloat.create(EnumTransformFunction.QUADRATIC, -16f);
         }
@@ -170,14 +170,14 @@ namespace Immersion
                     float flourPartMinQ = 1 * grindSpeed;
                     float flourPartAddQ = 20 * grindSpeed;
 
-                    FlourDustParticles.color = InputStack.Collectible.GetRandomColor(Api as ICoreClientAPI, InputStack);
-                    FlourDustParticles.color &= 0xffffff;
-                    FlourDustParticles.color |= (200 << 24);
-                    FlourDustParticles.minQuantity = dustMinQ;
-                    FlourDustParticles.addQuantity = dustAddQ;
-                    FlourDustParticles.minPos.Set(Pos.MidPoint().Add(0, 0.1, 0));
-                    FlourDustParticles.minVelocity.Set(-0.1f, 0, -0.1f);
-                    FlourDustParticles.addVelocity.Set(0.2f, 0.2f, 0.2f);
+                    FlourDustParticles.Color = InputStack.Collectible.GetRandomColor(Api as ICoreClientAPI, InputStack);
+                    FlourDustParticles.Color &= 0xffffff;
+                    FlourDustParticles.Color |= (200 << 24);
+                    FlourDustParticles.MinQuantity = dustMinQ;
+                    FlourDustParticles.AddQuantity = dustAddQ;
+                    FlourDustParticles.MinPos.Set(Pos.MidPoint().Add(0, 0.1, 0));
+                    FlourDustParticles.MinVelocity.Set(-0.1f, 0, -0.1f);
+                    FlourDustParticles.AddVelocity.Set(0.2f, 0.2f, 0.2f);
                     Api.World.SpawnParticles(FlourDustParticles);
                 }
 
@@ -204,7 +204,7 @@ namespace Immersion
 
         private void grindInput()
         {
-            ItemStack grindedStack = InputGrindProps.GrindedStack.ResolvedItemstack;
+            ItemStack grindedStack = InputGrindProps.GroundStack.ResolvedItemstack;
 
             if (OutputSlot.Itemstack == null)
             {
@@ -335,9 +335,9 @@ namespace Immersion
             if (grindProps == null) return false;
             if (OutputSlot.Itemstack == null) return true;
 
-            int mergableQuantity = OutputSlot.Itemstack.Collectible.GetMergableQuantity(OutputSlot.Itemstack, grindProps.GrindedStack.ResolvedItemstack);
+            int mergableQuantity = OutputSlot.Itemstack.Collectible.GetMergableQuantity(OutputSlot.Itemstack, grindProps.GroundStack.ResolvedItemstack);
 
-            return mergableQuantity >= grindProps.GrindedStack.ResolvedItemstack.StackSize;
+            return mergableQuantity >= grindProps.GroundStack.ResolvedItemstack.StackSize;
         }
 
 
