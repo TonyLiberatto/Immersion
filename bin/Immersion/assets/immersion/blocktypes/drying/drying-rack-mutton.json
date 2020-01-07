@@ -30,7 +30,7 @@
         }
     ],
 	variantgroups: [		
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },			
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },			
 		{ code: "cordage", states: [  "leatherstrips", "reeds","sinew", "sisal"]},
 		{ code: "state", states: [  "salt-mutton","dry-mutton" ]},
 		{ code:"orientation", states: ["ns", "we"] },

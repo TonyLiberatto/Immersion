@@ -26,10 +26,10 @@
 		
 	],	
 	shapeByType: {
-		"*-north": { base: "block/wood/chest", rotateY: 0 },
-		"*-east": { base: "block/wood/chest", rotateY: 270 },
-		"*-south": { base: "block/wood/chest", rotateY: 180 },
-		"*-west": { base: "block/wood/chest", rotateY: 90 },		
+		"*-north": { base: "block/wood/chest/normal", rotateY: 0 },
+		"*-east": { base: "block/wood/chest/normal", rotateY: 270 },
+		"*-south": { base: "block/wood/chest/normal", rotateY: 180 },
+		"*-west": { base: "block/wood/chest/normal", rotateY: 90 },		
 	},
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",

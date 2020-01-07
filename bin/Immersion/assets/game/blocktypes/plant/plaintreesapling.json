@@ -15,46 +15,24 @@
 		},
 		"growthDays": { "avg": 6.5, "var": 1.5 }
 	},
-	"variantgroups": [{
-		"code": "wood",
-		"states": [
-			"bamboobrown",
-			"bamboogreen"
-		],
-		"loadFromProperties": "block/wood"
-	}],
-	"creativeinventory": {
-		"general": [
-			"*"
-		],
-		"immersionflora": [
-			"*"
-		]
-	},
+	"variantgroups": [
+		{ "code": "wood", "states": [ "bamboobrown", "bamboogreen" ], "loadFromProperties": "block/wood"}
+	],
+	"creativeinventory": { "general": ["*"], "immersionflora": [ "*" ]},
 	"renderpass": "OpaqueNoCull",
 	"drawtype": "json",
 	"randomDrawOffset": true,
-	"shape": {
-		"base": "block/plant/sapling/plaintree/{wood}"
-	},
+	"shape": { "base": "block/plant/sapling/plaintree/{wood}" },
 	"blockmaterial": "Plant",
-	"sideopaque": {
-		"all": false
-	},
-	"sidesolid": {
-		"all": false
-	},
+	"sideopaque": {	"all": false},
+	"sidesolid": { "all": false	},
 	"replaceable": 5200,
 	"lightAbsorption": 0,
 	"resistance": 0,
 	"collisionbox": null,
 	"selectionbox": {
-		"x1": 0.25,
-		"y1": 0,
-		"z1": 0.25,
-		"x2": 0.75,
-		"y2": 0.875,
-		"z2": 0.75
+		"x1": 0.25,	"y1": 0,"z1": 0.25,
+		"x2": 0.75,	"y2": 0.875, "z2": 0.75
 	},
 	"sounds": {
 		"place": "block/plant",
@@ -68,29 +46,13 @@
 		"burnDuration": 10
 	},
 	"guiTransform": {
-		"translation": {
-			"x": 0,
-			"y": 1,
-			"z": 0
-		},
-		"rotation": {
-			"x": -22,
-			"y": -44,
-			"z": 0
-		},
+		"translation": { "x": 0, "y": 1, "z": 0	},
+		"rotation": { "x": -22,	"y": -44, "z": 0 },
 		"scale": 1.4
 	},
 	"tpHandTransform": {
-		"translation": {
-			"x": -1.3,
-			"y": -1,
-			"z": -1
-		},
-		"rotation": {
-			"x": 2,
-			"y": -12,
-			"z": -105
-		},
+		"translation": { "x": -1.3, "y": -1, "z": -1 },
+		"rotation": { "x": 2, "y": -12,	"z": -105 },
 		"scale": 0.5
 	}
 }

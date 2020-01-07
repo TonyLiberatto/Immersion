@@ -2,7 +2,7 @@
 	code: "drying-rack-assemble",
 	behaviors: [ {name: "NWOrientable"}],
 	variantgroups: [		
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bone"] },			
+		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", ] },			
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
 	creativeinventory: { "general": [""],  "immersionblocks": [""],  },
