@@ -47,6 +47,10 @@ namespace Immersion
                         {
                             validassets.Add(c);
                         }
+                        else
+                        {
+                            Api.World.Logger.Error("Loot list collectible with the code " + c + " is not valid. Will remove from loot list.");
+                        }
                     }
                     li.codes = validassets.ToArray();
                 }
