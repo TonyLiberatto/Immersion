@@ -50,8 +50,9 @@ namespace Immersion
             string path = Block.Attributes["pileshapes"]?["*"]?.AsString("shapes/block/metal/ingotpile.json");
             MetalProperty metals = Api.Assets.TryGet("worldproperties/block/metal.json").ToObject<MetalProperty>();
             List<MetalPropertyVariant> variants = metals.Variants.ToList();
-            
-            variants.AddRange(Api.Assets.TryGet("config/immersionproperties/customingots.json").ToObject<List<MetalPropertyVariant>>());
+            var a = Api.Assets.TryGet("config/immersionproperties/customingots.json")?.ToObject<List<MetalPropertyVariant>>();
+
+            if (a != null) variants.AddRange(a);
 
             metals.Variants = variants.ToArray();
 
