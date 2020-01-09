@@ -1,10 +1,22 @@
-{
-	ingredientPattern: " F 	W_W	WWW",
-	ingredients: {
-		"F": { type: "item", code: "animal-leatherstrips" },
-		"W": { type: "block", code: "planks-*" }
+[
+	{
+		ingredientPattern: " F 	W_W	WWW",
+		ingredients: {
+			"F": { type: "item", code: "animal-leatherstrips" },
+			"W": { type: "block", code: "game:bamboostakes-green" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "game:woodbucket-bamboo-green"  }
 	},
-	width: 3,
-	height: 3,
-	output: { type: "block", code: "game:woodbucket"  }
-}
+	{
+		ingredientPattern: " F 	W_W	WWW",
+		ingredients: {
+			"F": { type: "item", code: "animal-leatherstrips" },
+			"W": { type: "block", code: "game:bamboostakes-brown" }
+		},
+		width: 3,
+		height: 3,
+		output: { type: "block", code: "game:woodbucket-bamboo-brown"  }
+	}
+]

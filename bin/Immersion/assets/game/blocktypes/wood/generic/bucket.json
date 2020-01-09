@@ -1,0 +1,134 @@
+{
+	"code": "woodbucket",
+	"class": "BlockBucket",
+	"behaviors": [{
+			"name": "UnstableFalling"
+		},
+		{
+			"name": "RightClickPickup"
+		}
+	],
+	"entityClass": "Bucket",
+	"attributes": {
+		"liquidcontainer": true,
+		"canhold": [
+			"water-*"
+		]
+	},
+	"variantgroups": [
+		{ "code": "wood", "states": ["aged", "bamboo-green", "bamboo-brown"], "loadFromProperties": "block/wood" }
+	],
+	"creativeinventory": {
+		"general": [
+			"woodbucket-*"
+		],
+		"decorative": [
+			"woodbucket-*"
+		]
+	},
+	"shape": {
+		"base": "block/wood/bucket/empty"
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"blockmaterial": "Wood",
+	"texturesByType": {
+		"*-bamboo-*": {
+			"sides": {
+				"base": "block/wood/planks/{wood}-side",
+				"overlays": ["block/wood/overlays/bucket/sides"]
+			},
+			"inner side": {
+				"base": "block/wood/planks/{wood}-side"
+			},
+			"wood": {
+				"base": "block/wood/planks/{wood}-side"
+			},
+			"honeyportion": {
+				"base": "block/liquid/honey"
+			}
+		},
+		"*": {
+			"sides": {
+				"base": "block/wood/bark/{wood}-i",
+				"overlays": ["block/wood/overlays/bucket/sides"]
+			},
+			"inner side": {
+				"base": "block/wood/debarked/{wood}"
+			},
+			"wood": {
+				"base": "block/wood/planks/{wood}"
+			},
+			"honeyportion": {
+				"base": "block/liquid/honey"
+			}
+		}
+	},
+	"replaceable": 500,
+	"resistance": 1.5,
+	"liquidSelectable": 1,
+	"lightAbsorption": 0,
+	"sounds": {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 12
+	},
+	"collisionbox": {
+		"x1": 0.25,
+		"y1": 0,
+		"z1": 0.25,
+		"x2": 0.75,
+		"y2": 0.75,
+		"z2": 0.75
+	},
+	"selectionbox": {
+		"x1": 0.25,
+		"y1": 0,
+		"z1": 0.25,
+		"x2": 0.75,
+		"y2": 0.75,
+		"z2": 0.75
+	},
+	"materialDensity": 400,
+	"tpHandTransform": {
+		"translation": {
+			"x": -0.86,
+			"y": -1.03,
+			"z": -0.88
+		},
+		"rotation": {
+			"x": 0,
+			"y": 0,
+			"z": 0
+		},
+		"scale": 0.55
+	},
+	"guiTransform": {
+		"origin": {
+			"x": 0.5,
+			"y": 0.3,
+			"z": 0.5
+		},
+		"scale": 1.75
+	},
+	"fpHandTransform": {
+		"scale": 1.5
+	},
+	"groundTransform": {
+		"origin": {
+			"x": 0.5,
+			"y": 0,
+			"z": 0.5
+		},
+		"scale": 2
+	}
+}

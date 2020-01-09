@@ -1,7 +1,7 @@
 [
   {
     "op": "add",
-    "path": "/textures/milkportion",
+    "path": "/texturesByType/*/milkportion",
     "value": {
       "base": "block/liquid/milk"
     },
@@ -9,7 +9,7 @@
   },
   {
     "op": "add",
-    "path": "/textures/curdsportion",
+    "path": "/texturesByType/*/curdsportion",
     "value": {
       "base": "block/liquid/curds"
     },
@@ -17,7 +17,7 @@
   },
   {
     "op": "add",
-    "path": "/textures/wheyportion",
+    "path": "/texturesByType/*/wheyportion",
     "value": {
       "base": "block/liquid/whey"
     },
@@ -25,7 +25,40 @@
   },
   {
     "op": "add",
-    "path": "/textures/seawaterportion",
+    "path": "/texturesByType/*/seawaterportion",
+    "value": {
+      "base": "block/liquid/seawater"
+    },
+    "file": "game:blocktypes/wood/generic/bucket.json"
+  },
+
+  {
+    "op": "add",
+    "path": "/texturesByType/*-bamboo-*/milkportion",
+    "value": {
+      "base": "block/liquid/milk"
+    },
+    "file": "game:blocktypes/wood/generic/bucket.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/*-bamboo-*/curdsportion",
+    "value": {
+      "base": "block/liquid/curds"
+    },
+    "file": "game:blocktypes/wood/generic/bucket.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/*-bamboo-*/wheyportion",
+    "value": {
+      "base": "block/liquid/whey"
+    },
+    "file": "game:blocktypes/wood/generic/bucket.json"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/*-bamboo-*/seawaterportion",
     "value": {
       "base": "block/liquid/seawater"
     },
