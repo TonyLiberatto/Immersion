@@ -42,7 +42,6 @@ namespace Immersion
                     StopAllAnims();
                     if (!action)
                     {
-
                         util.StartAnimation(new AnimationMetaData() { Code = block.animProps.actionAnim });
                     }
                     else if (inventory[0].Itemstack?.StackSize > 0)
@@ -92,7 +91,7 @@ namespace Immersion
 
         public void StopAllAnims()
         {
-            foreach (var val in block.animProps.allAnims)
+            foreach (var val in block?.animProps?.allAnims ?? new string[0])
             {
                 util.StopAnimation(val);
             }

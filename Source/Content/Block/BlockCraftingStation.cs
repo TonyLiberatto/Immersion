@@ -40,5 +40,11 @@ namespace Immersion
             builder = craftingStation?.inventory?[0]?.Itemstack != null ? builder.AppendLine().AppendLine(craftingStation.inventory[0].StackSize + "x " + Lang.Get(craftingStation.inventory[0].Itemstack.Collectible.Code.ToString())) : builder;
             return builder.ToString();
         }
+
+        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
+        {
+            base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
+            world.BlockAccessor.RemoveBlockEntity(pos);
+        }
     }
 }

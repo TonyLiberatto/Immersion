@@ -34,6 +34,6 @@
     "creativeinventory": { "general": ["*-north"] },
     "sideopaque": { "all": false },
     "sidesolid": { "all": false },
-    "lightAbsorption": 1,
+    "lightAbsorption": 0,
     "collisionSelectionBox": { "x1": 0, "y1": 0, "z1": 0, "x2": 1, "y2": 0.25, "z2": 1 }
 }
