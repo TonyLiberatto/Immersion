@@ -6,7 +6,16 @@
 	variantgroups: [
 		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron"] },
 	],
-	shape: { base: "item/tool/spear" },
+	shapeByType: {		
+		"spear-copper": { base: "item/tool/spear-copper" },
+		
+		"spear-tinbronze": { base: "item/tool/spear-bronze" },
+		"spear-bismuthbronze": { base: "item/tool/spear-bronze" },
+		"spear-blackbronze": { base: "item/tool/spear-bronze" },
+		"spear-gold": { base: "item/tool/spear-bronze" },
+		"spear-silver": { base: "item/tool/spear-bronze" },
+		"spear-iron": { base: "item/tool/spear-bronze" },
+	},
 	heldTpHitAnimation: "spearhit",
 	textures: {
 		"metal": { base: "item/tool/material/{metal}" },

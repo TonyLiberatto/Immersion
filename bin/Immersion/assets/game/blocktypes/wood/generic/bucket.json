@@ -58,10 +58,10 @@
 				"overlays": ["block/wood/overlays/bucket/sides"]
 			},
 			"inner side": {
-				"base": "block/wood/debarked/{wood}"
+				"base": "game:block/wood/debarked/{wood}"
 			},
 			"wood": {
-				"base": "block/wood/planks/{wood}"
+				"base": "game:block/wood/planks/{wood}1"
 			},
 			"honeyportion": {
 				"base": "block/liquid/honey"
