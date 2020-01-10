@@ -36,7 +36,13 @@
 		"*-chicken-rooster-*": { "base": "entity/land/chicken-rooster" },
 		"*-chicken-hen-*": { "base": "entity/land/chicken-hen" },
 		"*-chicken-chick-*": { "base": "entity/land/chicken-baby" },
-		"*-drifter-*": { "base": "entity/land/drifter" },
+		
+		"*-drifter-normal": { "base": "entity/land/drifter/surface" },
+		"*-drifter-deep": { "base": "entity/land/drifter/surface" },
+		"*-drifter-tainted": { "base": "entity/land/drifter/spiked1" },
+		"*-drifter-corrupt": { "base": "entity/land/drifter/deerhorn" },
+		"*-drifter-nightmare": { "base": "entity/land/drifter/knife" },
+
 		"*-fox-male": {	"base": "entity/land/fox-male" },
 		"*-fox-female": { "base": "entity/land/fox-female"	},
 		"*-fox-arctic-male": { "base": "entity/land/fox-male"	},
@@ -97,19 +103,19 @@
 			"all": { "base": "entity/butterfly/bluepansy" }
 		},
 		"*-drifter-normal": {
-			"skin": { "base": "entity/drifter/normal" }
+			"skin": { "base": "entity/drifter/surface1" }
 		},
 		"*-drifter-deep": {
-			"skin": { "base": "entity/drifter/deep" }
+			"skin": { "base": "entity/drifter/deep1" }
 		},
 		"*-drifter-tainted": {
-			"skin": { "base": "entity/drifter/tainted" }
+			"skin": { "base": "entity/drifter/spiked1" }
 		},
 		"*-drifter-corrupt": {
-			"skin": { "base": "entity/drifter/corrupt" }
+			"skin": { "base": "entity/drifter/deerhorn" }
 		},
 		"*-drifter-nightmare": {
-			"skin": { "base": "entity/drifter/nightmare" }
+			"skin": { "base": "entity/drifter/knife" }
 		},
 		"*-chicken-rooster-ashgrey": {
 			"all": { "base": "entity/chicken/rooster/ashgrey" }
@@ -463,11 +469,10 @@
 			"scale": 2.14
 		},
 		"*-drifter-*": {
-			"rotate": true,
-			"translation": { "x": 0, "y": 0, "z": 0	},
-			"rotation": { "x": 0, "y": -62, "z": -180 },
-			"origin": {	"x": 0.5, "y": 0.73, "z": 0.5 },
-			"scale": 1.17
+			translation: { x: 0, y: 0, z: 0 },
+			rotation: { x: 0, y: -62, z: -180 },
+			origin: { x: 0.5, y: 0.73, z: 0.5 },
+			scale: 1.09
 		},
 		"creature-fox-male": {
 			rotate: true,
