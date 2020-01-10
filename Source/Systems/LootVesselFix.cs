@@ -49,7 +49,7 @@ namespace Immersion
                         }
                         else
                         {
-                            Api.World.Logger.Error("Loot list collectible with the code " + c + " is not valid. Will remove from loot list.");
+                            Api.World.Logger.Error("Loot list " + li.type.ToString().ToLower() + "type with the code " + c + " is not valid. Will remove from loot list.");
                         }
                     }
                     li.codes = validassets.ToArray();
