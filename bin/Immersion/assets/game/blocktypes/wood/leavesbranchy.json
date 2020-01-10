@@ -20,7 +20,8 @@
 	blockmaterial: "Leaves",
 	requiredMiningTier: 1,
 	vertexFlags: {
-		zOffset: 3
+		zOffset: 4,
+		leavesWindWave: true
 	},
 	attributesByType: {
 		"leavesbranchy-grown-*": {

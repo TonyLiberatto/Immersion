@@ -51,7 +51,7 @@
 	rainPermeable: true,
 	materialDensity: 200,
 	vertexFlags: {
-		windwave: true
+		grassWindwave: true
 	},
 	combustibleProps: {
 		burnTemperature: 600,
