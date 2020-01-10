@@ -3,7 +3,7 @@
 	"class": "BlockBarrel",
 	"entityClass": "Barrel",
 	"variantgroups": [
-		{ "code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" }
+		{ "code": "wood", "states": ["aged", "bamboo-brown", "bamboo-green"], "loadFromProperties": "block/wood" }
 	],
 	"behaviors": [{
 		"name": "UnstableFalling"
@@ -24,14 +24,37 @@
 	"resistance": 1.5,
 	"maxStackSize": 1,
 	"lightAbsorption": 1,
-	"textures": {
-		"lid": { "base": "block/wood/bark/{wood}" },
-		"sides": { 
-			"base": "block/wood/bark/{wood}", 
-			"overlays": ["block/wood/overlays/barrel/sides"]
+	"texturesByType": {
+		"*-bamboo-*": {
+			"lid": {
+				"base": "block/wood/planks/{wood}-side"
+			},
+			"sides": {
+				"base": "block/wood/planks/{wood}-side",
+				"overlays": ["block/wood/overlays/barrel/sides"]
+			},
+			"inside": {
+				"base": "block/wood/planks/{wood}-side"
+			},
+			"top-empty": {
+				"base": "block/wood/planks/{wood}-side"
+			}
 		},
-		"inside": { "base": "block/wood/debarked/{wood}" },
-		"top-empty": { "base": "block/wood/debarked/{wood}" }
+		"*": {
+			"lid": {
+				"base": "block/wood/bark/{wood}"
+			},
+			"sides": {
+				"base": "block/wood/bark/{wood}",
+				"overlays": ["block/wood/overlays/barrel/sides"]
+			},
+			"inside": {
+				"base": "block/wood/debarked/{wood}"
+			},
+			"top-empty": {
+				"base": "block/wood/debarked/{wood}"
+			}
+		}
 	},
 	"attributes": {
 		"partialAttachable": true

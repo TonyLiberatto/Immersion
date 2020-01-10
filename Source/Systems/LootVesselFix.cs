@@ -41,6 +41,8 @@ namespace Immersion
                 foreach (var li in vp.Value.lootItems)
                 {
                     List<AssetLocation> validassets = new List<AssetLocation>();
+                    string type = li.type.ToString().ToLower() + "type";
+
                     foreach (var c in li.codes)
                     {
                         if (Api.World.GetItem(c) != null || Api.World.GetBlock(c) != null)
@@ -49,7 +51,7 @@ namespace Immersion
                         }
                         else
                         {
-                            Api.World.Logger.Error("Loot list " + li.type.ToString().ToLower() + "type with the code " + c + " is not valid. Will remove from loot list.");
+                            Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
                         }
                     }
                     li.codes = validassets.ToArray();

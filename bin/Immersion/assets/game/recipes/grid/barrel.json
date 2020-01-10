@@ -1,10 +1,68 @@
-{
-	ingredientPattern: "SPS,_P_,SPS",
-	ingredients: {
-		"S": { type: "item", code: "stick" },
-		"P": { type: "item", code: "plank-*",  name: "wood", allowedVariants: ["birch", "oak", "maple", "pine", "acacia", "kapok", "aged"] }
+[{
+		"ingredientPattern": "SPS,_P_,SPS",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "stick"
+			},
+			"P": {
+				"type": "item",
+				"code": "plank-*",
+				"name": "wood",
+				"allowedVariants": [
+					"birch",
+					"oak",
+					"maple",
+					"pine",
+					"acacia",
+					"kapok",
+					"aged"
+				]
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "barrel-{wood}"
+		}
 	},
-	width: 3,
-	height: 3,
-	output: { type: "block", code: "barrel-{wood}" }
-}
+	{
+		"ingredientPattern": "SPS,_P_,SPS",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "stick"
+			},
+			"P": {
+				"type": "block",
+				"code": "bamboostakes-brown",
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "barrel-bamboo-brown"
+		}
+	},
+	{
+		"ingredientPattern": "SPS,_P_,SPS",
+		"ingredients": {
+			"S": {
+				"type": "item",
+				"code": "stick"
+			},
+			"P": {
+				"type": "block",
+				"code": "bamboostakes-green",
+			}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "barrel-bamboo-green"
+		}
+	}
+]
