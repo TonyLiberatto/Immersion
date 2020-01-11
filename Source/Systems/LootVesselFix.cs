@@ -29,13 +29,19 @@ namespace Immersion
             VesselDrops drops = Api.Assets.TryGet("config/vesseldrops.json")?.ToObject<VesselDrops>();
             if (drops != null)
             {
-                BlockLootVessel.lootLists.Clear();
+                if (drops.ClearVanilla) BlockLootVessel.lootLists.Clear();
+                else ErrorCheckVessel(Api);
 
                 foreach (var val in drops.vessels)
                 {
                     BlockLootVessel.lootLists[val.name] = LootList.Create(val.tries, val.drops.ToArray());
                 }
             }
+            ErrorCheckVessel(Api, true);
+        }
+
+        public void ErrorCheckVessel(ICoreAPI Api, bool verbose = false)
+        {
             foreach (var vp in BlockLootVessel.lootLists)
             {
                 foreach (var li in vp.Value.lootItems)
@@ -51,13 +57,12 @@ namespace Immersion
                         }
                         else
                         {
-                            Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
+                            if (verbose) Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
                         }
                     }
                     li.codes = validassets.ToArray();
                 }
             }
-
         }
     }
 
@@ -70,6 +75,7 @@ namespace Immersion
 
     class VesselDrops
     {
+        public bool ClearVanilla { get; set; } = true;
         public List<Vessels> vessels { get; set; }
     }
 }
