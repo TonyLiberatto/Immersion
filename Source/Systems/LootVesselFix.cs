@@ -14,6 +14,8 @@ namespace Immersion
 {
     class LootVesselFix : ModSystem
     {
+        public Dictionary<string, LootList> LootLists { get => BlockLootVessel.lootLists; }
+
         public override void StartServerSide(ICoreServerAPI Api)
         {
             Api.Event.SaveGameLoaded += () => LootVesselRemap(Api);
@@ -29,12 +31,12 @@ namespace Immersion
             VesselDrops drops = Api.Assets.TryGet("config/vesseldrops.json")?.ToObject<VesselDrops>();
             if (drops != null)
             {
-                if (drops.ClearVanilla) BlockLootVessel.lootLists.Clear();
+                if (drops.ClearVanilla) LootLists.Clear();
                 else ErrorCheckVessel(Api);
 
                 foreach (var val in drops.vessels)
                 {
-                    BlockLootVessel.lootLists[val.name] = LootList.Create(val.tries, val.drops.ToArray());
+                    LootLists[val.name] = LootList.Create(val.tries, val.drops.ToArray());
                 }
             }
             ErrorCheckVessel(Api, true);
@@ -42,7 +44,7 @@ namespace Immersion
 
         public void ErrorCheckVessel(ICoreAPI Api, bool verbose = false)
         {
-            foreach (var vp in BlockLootVessel.lootLists)
+            foreach (var vp in LootLists)
             {
                 foreach (var li in vp.Value.lootItems)
                 {
