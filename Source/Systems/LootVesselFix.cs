@@ -51,14 +51,8 @@ namespace Immersion
 
                     foreach (var c in li.codes)
                     {
-                        if (Api.World.GetItem(c) != null || Api.World.GetBlock(c) != null)
-                        {
-                            validassets.Add(c);
-                        }
-                        else
-                        {
-                            if (verbose) Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
-                        }
+                        if (Api.World.GetItem(c) != null || Api.World.GetBlock(c) != null) validassets.Add(c);
+                        else if (verbose) Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
                     }
                     li.codes = validassets.ToArray();
                 }
