@@ -1,0 +1,25 @@
+{
+	"editor": {
+		"allAngles": false,
+		"singleTexture": false
+	},
+	"textureWidth": 16,
+	"textureHeight": 16,
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [ 0.1, 0.0, 0.1 ], 
+			"to": [ 15.9, 0.4, 15.9 ], 
+			"rotationOrigin": [ 0.1, 0.0, 0.1 ],
+			"faces": {
+				"north": { "texture": "#stone", "uv": [ 0.0, 0.0, 15.5, 0.5 ] },
+				"east": { "texture": "#stone", "uv": [ 0.0, 0.0, 15.5, 0.5 ] },
+				"south": { "texture": "#stone", "uv": [ 0.0, 0.0, 15.5, 0.5 ] },
+				"west": { "texture": "#stone", "uv": [ 0.0, 0.0, 15.5, 0.5 ] },
+				"up": { "texture": "#stone", "uv": [ 0.0, 0.0, 15.5, 15.5 ] },
+				"down": { "texture": "#stone", "uv": [ 0.0, 0.0, 15.5, 15.5 ] }
+			}
+		}
+	]}
