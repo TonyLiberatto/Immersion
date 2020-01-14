@@ -54,14 +54,14 @@
 		},
 		"*": {
 			"sides": {
-				"base": "block/wood/bark/{wood}-i",
+				"base": "block/wood/smallplanks/{wood}",
 				"overlays": ["block/wood/overlays/bucket/sides"]
 			},
 			"inner side": {
-				"base": "game:block/wood/debarked/{wood}"
+				"base": "game:block/wood/smallplanks/{wood}"
 			},
 			"wood": {
-				"base": "game:block/wood/planks/{wood}1"
+				"base": "game:block/wood/smallplanks/{wood}"
 			},
 			"honeyportion": {
 				"base": "block/liquid/honey"

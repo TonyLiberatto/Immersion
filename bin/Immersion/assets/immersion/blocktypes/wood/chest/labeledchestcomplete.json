@@ -27,7 +27,7 @@
 		"*-south": { base: "block/wood/chest/normal-labeled", rotateY: 180 },
 		"*-west": { base: "block/wood/chest/normal-labeled", rotateY: 90 },		
 	},
-	drops: [{ code: "immersion:chest-east", attributes: { type: "normal-labeled-{color}" } }],
+	drops: [{ code: "game:survivallabeledchest-{color}-east" }],
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,

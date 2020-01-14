@@ -42,17 +42,17 @@
 		},
 		"*": {
 			"lid": {
-				"base": "block/wood/bark/{wood}"
+				"base": "block/wood/smallplanks/{wood}"
 			},
 			"sides": {
-				"base": "block/wood/bark/{wood}",
+				"base": "block/wood/smallplanks/{wood}",
 				"overlays": ["block/wood/overlays/barrel/sides"]
 			},
 			"inside": {
-				"base": "block/wood/debarked/{wood}"
+				"base": "block/wood/smallplanks/{wood}"
 			},
 			"top-empty": {
-				"base": "block/wood/debarked/{wood}"
+				"base": "block/wood/smallplanks/{wood}"
 			}
 		}
 	},
