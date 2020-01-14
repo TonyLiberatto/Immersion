@@ -48,7 +48,15 @@
         { "code": "wood", "states": ["aged", "bamboo-brown", "bamboo-green"], "loadFromProperties": "block/wood" },
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
-    "creativeinventory": { "general": [ "*-east" ], "decorative": [ "*-east" ] },
+    "creativeinventory": {  },
+	"creativeinventoryStacks": [
+		{
+			"tabs": [ "general", "decorative" ],
+			"stacks": [
+				{ "type": "block", "code": "survivallabeledchest-{wood}-east", "attributes": { "type": "normal" } }
+			]
+		}
+	],
     "heldTpIdleAnimation": "holdunderarm",
     "shapeInventory": {
         "base": "block/wood/chest/normal",
