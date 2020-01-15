@@ -15,6 +15,7 @@
 	],
 	creativeinventory: { "general": ["leavesbranchy-placed-*"], "flora": ["leavesbranchy-placed-*"] },
 	shape: { base: "block/basic/leavesbranchy" },
+	lod0Shape: { base: "block/basic/leavesbranchy-lod0" },
 	renderpass: "OpaqueNoCull",
 	faceCullMode: "CollapseMaterial",
 	blockmaterial: "Leaves",

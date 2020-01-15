@@ -31,6 +31,7 @@
 		"*-south": { base: "block/wood/chest/normal", rotateY: 180 },
 		"*-west": { base: "block/wood/chest/normal", rotateY: 90 },		
 	},
+	drops: [{ code: "game:survivalchest-{color}-east" }],
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,

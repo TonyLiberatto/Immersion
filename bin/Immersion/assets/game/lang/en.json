@@ -397,7 +397,6 @@
   "block-lantern-base-candle-sides-glass-layer-molybdochalkos-silver":"Molybdochalkos Lantern Base with candle Sides, Glass and Silver Linen",
   "block-lantern-base-candle-sides-glass-layer-silver-silver":"Silver Lantern Base with candle Sides, Glass and Silver Linen",
   "block-lantern-base-candle-sides-glass-layer-gold-silver":"Gold Lantern Base with candle Sides, Glass and Silver Linen",
-  "blockdesc-lantern-base-candle-sides-glass-layer-*":"Right click with Top to finish the lantern",
   
   "block-glasslantern-*-*-plain-*": "A Glasslantern with a plain Lantern ",
   "block-glasslantern-*-*-gold-*": "A Glasslantern with a Gold Lined Lantern ",
@@ -4494,6 +4493,25 @@
 	"block-slab-branch-basalt-kapok-debarked": "Slab Branch Basalt Kapok (Debarked)",
 	"block-slab-branch-peridotite-kapok-debarked": "Slab Branch Peridotite Kapok (Debarked)",
 	"block-dryingtray-aged": "Dryingtray (Aged)",
-
+	
+	"block-normal-survivalchest-acacia-*": "Immersion Acacia Chest",
+	"block-normal-survivalchest-aged-*": "Immersion Aged Chest",
+	"block-normal-survivalchest-birch-*": "Immersion Birch Chest",
+	"block-normal-survivalchest-kapok-*": "Immersion Kapok Chest",
+	"block-normal-survivalchest-maple-*": "Immersion Maple Chest",
+	"block-normal-survivalchest-oak-*": "Immersion Oak Chest",
+	"block-normal-survivalchest-pine-*": "Immersion Pine Chest",
+	"block-normal-survivalchest-bamboo-green-*": "Immersion Green Bamboo Chest",
+	"block-normal-survivalchest-bamboo-brown-*": "Immersion Brown Bamboo Chest",
+	
+	"block-normal-survivallabeledchest-acacia-*": "Immersion Acacia Labeled chest",
+	"block-normal-survivallabeledchest-aged-*": "Immersion Aged Labeled chest",
+	"block-normal-survivallabeledchest-birch-*": "Immersion Birch Labeled chest",
+	"block-normal-survivallabeledchest-kapok-*": "Immersion Kapok Labeled chest",
+	"block-normal-survivallabeledchest-maple-*": "Immersion Maple Labeled chest",
+	"block-normal-survivallabeledchest-oak-*": "Immersion Oak Labeled chest",
+	"block-normal-survivallabeledchest-pine-*": "Immersion Pine Labeled chest",
+	"block-normal-survivallabeledchest-bamboo-green-*": "Immersion Green Bamboo Labeled chest",
+	"block-normal-survivallabeledchest-bamboo-brown-*": "Immersion Brown Bamboo Labeled chest",
 	
 }

@@ -14,6 +14,8 @@ namespace Immersion
 {
     class LootVesselFix : ModSystem
     {
+        public Dictionary<string, LootList> LootLists { get => BlockLootVessel.lootLists; }
+
         public override void StartServerSide(ICoreServerAPI Api)
         {
             Api.Event.SaveGameLoaded += () => LootVesselRemap(Api);
@@ -29,14 +31,20 @@ namespace Immersion
             VesselDrops drops = Api.Assets.TryGet("config/vesseldrops.json")?.ToObject<VesselDrops>();
             if (drops != null)
             {
-                BlockLootVessel.lootLists.Clear();
+                if (drops.ClearVanilla) LootLists.Clear();
+                else ErrorCheckVessel(Api);
 
                 foreach (var val in drops.vessels)
                 {
-                    BlockLootVessel.lootLists[val.name] = LootList.Create(val.tries, val.drops.ToArray());
+                    LootLists[val.name] = LootList.Create(val.tries, val.drops.ToArray());
                 }
             }
-            foreach (var vp in BlockLootVessel.lootLists)
+            ErrorCheckVessel(Api, true);
+        }
+
+        public void ErrorCheckVessel(ICoreAPI Api, bool verbose = false)
+        {
+            foreach (var vp in LootLists)
             {
                 foreach (var li in vp.Value.lootItems)
                 {
@@ -45,19 +53,12 @@ namespace Immersion
 
                     foreach (var c in li.codes)
                     {
-                        if (Api.World.GetItem(c) != null || Api.World.GetBlock(c) != null)
-                        {
-                            validassets.Add(c);
-                        }
-                        else
-                        {
-                            Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
-                        }
+                        if (Api.World.GetItem(c) != null || Api.World.GetBlock(c) != null) validassets.Add(c);
+                        else if (verbose) Api.World.Logger.Error("Loot list " + type + " with the code " + c + " is not valid. Will remove from loot list.");
                     }
                     li.codes = validassets.ToArray();
                 }
             }
-
         }
     }
 
@@ -70,6 +71,7 @@ namespace Immersion
 
     class VesselDrops
     {
+        public bool ClearVanilla { get; set; } = true;
         public List<Vessels> vessels { get; set; }
     }
 }

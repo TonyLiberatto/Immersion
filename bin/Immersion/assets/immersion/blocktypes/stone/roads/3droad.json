@@ -17,8 +17,9 @@
     "general": [ "*" ],
     "immersiondeco": [ "*" ]
   },
+  lod0Shape: { base: "block/road/road-{pattern}" },
   shapeByType: {
-    "*": { base: "block/road/road-{pattern}" },
+    "*": { base: "block/road/road-lod" },
   },
   blockmaterial: "Stone",
   replaceable: 900,
