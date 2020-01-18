@@ -82,8 +82,7 @@
   "block-food-bowl-large-fire-raw-meat": "Food Bowl Large Fire (Raw-meat)",
   "block-food-bowl-small-red-raw-meat": "Food Bowl Small Red (Raw-meat)",
   "block-food-bowl-medium-red-raw-meat": "Food Bowl Medium Red (Raw-meat)",
-  "block-food-bowl-large-red-raw-meat": "Food Bowl Large Red (Raw-meat)",
-  "block-food-bowl-large-red-raw-meat": "Food Bowl Large Red (Raw-meat)",
+  "block-food-bowl-large-red-raw-meat": "Food Bowl Large Red (Raw-meat)",  
   "blockdesc-food-bowl-*-raw-meat": "Sneak Right click with Salt to make Salted Meat",
   
   "block-food-bowl-small-blue-salted-meat": "Food Bowl Small Blue (Salted-Meat)",
@@ -279,15 +278,15 @@
   "block-lantern-silver-plain-*":"A Plain Silver Lantern",
   "block-lantern-gold-plain-*":"A Plain Gold Lantern",
   
-  "block-lantern-copper-silver-*":"A Gold Lined Copper Lantern",
-  "block-lantern-brass-silver-*":"A Gold Lined Brass Lantern",
-  "block-lantern-blackbronze-silver-*":"A Gold Lined Blackbronze Lantern",
-  "block-lantern-bismuth-silver-*":"A Gold Lined Bismuth Lantern",
-  "block-lantern-tinbronze-silver-*":"A Gold Lined Tinbronze Lantern",
-  "block-lantern-bismuthbronze-silver-*":"A Gold Lined Bismuthbronze Lantern",
-  "block-lantern-molybdochalkos-silver-*":"A Gold Lined Molybdochalkos Lantern",
-  "block-lantern-silver-silver-*":"A Gold Lined Silver Lantern",
-  "block-lantern-gold-silver-*":"A Gold Lined Gold Lantern",
+  "block-lantern-copper-gold-*":"A Gold Lined Copper Lantern",
+  "block-lantern-brass-gold-*":"A Gold Lined Brass Lantern",
+  "block-lantern-blackbronze-gold-*":"A Gold Lined Blackbronze Lantern",
+  "block-lantern-bismuth-gold-*":"A Gold Lined Bismuth Lantern",
+  "block-lantern-tinbronze-gold-*":"A Gold Lined Tinbronze Lantern",
+  "block-lantern-bismuthbronze-gold-*":"A Gold Lined Bismuthbronze Lantern",
+  "block-lantern-molybdochalkos-gold-*":"A Gold Lined Molybdochalkos Lantern",
+  "block-lantern-silver-gold-*":"A Gold Lined Silver Lantern",
+  "block-lantern-gold-gold-*":"A Gold Lined Gold Lantern",
   
   "block-lantern-copper-silver-*":"A Silver Lined Copper Lantern",
   "block-lantern-brass-silver-*":"A Silver Lined Brass Lantern",
@@ -4328,14 +4327,11 @@
 	"block-sword-obsidian-oak-leatherstrips-*": "Sword Obsidian Oak Leatherstrips",
 	"block-sword-flint-oak-leatherstrips-*": "Sword Flint Oak Leatherstrips",
 	"block-sword-obsidian-pine-leatherstrips-*": "Sword Obsidian Pine Leatherstrips",
-	"block-sword-flint-pine-leatherstrips-*": "Sword Flint Pine Leatherstrips",	
-	"blockdesc-sword-*": "Break to pick it up",	
+	"block-sword-flint-pine-leatherstrips-*": "Sword Flint Pine Leatherstrips",			
 	
-	"item-sail": "Sail",
+	"item-sail": "Sail",	
 	
-	
-	
-		"block-toolmold-blue-raw-lamellae": "Toolmold Blue Raw (Lamellae)",
+	"block-toolmold-blue-raw-lamellae": "Toolmold Blue Raw (Lamellae)",
 	"block-toolmold-brown-raw-lamellae": "Toolmold Brown Raw (Lamellae)",
 	"block-toolmold-fire-raw-lamellae": "Toolmold Fire Raw (Lamellae)",
 	"block-toolmold-red-raw-lamellae": "Toolmold Red Raw (Lamellae)",
@@ -4531,6 +4527,6 @@
 	"block-normal-oak-survivallabeledchest-*": "Immersion Oak Labeled chest",
 	"block-normal-pine-survivallabeledchest-*": "Immersion Pine Labeled chest",
 	"block-normal-bamboo-green-survivallabeledchest-*": "Immersion Green Bamboo Labeled chest",
-	"block-normal-bamboo-brown-survivallabeledchest-*": "Immersion Brown Bamboo Labeled chest",
+	"block-normal-bamboo-brown-survivallabeledchest-*": "Immersion Brown Bamboo Labeled chest"
 	
 }

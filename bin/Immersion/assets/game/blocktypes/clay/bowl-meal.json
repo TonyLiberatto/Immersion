@@ -28,19 +28,19 @@
 	"*-blue": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/blue-burned" },
-		},
-		"*-fire": {
+	},
+	"*-fire": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/fire-burned" },
-		},
-		"*-red": {
+	},
+	"*-red": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/red-burned" },
-		},
-		"*-brown": {
+	},
+	"*-brown": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/brown-burned" },
-		},
+	},
   },
   sideopaque: {
     all: false
