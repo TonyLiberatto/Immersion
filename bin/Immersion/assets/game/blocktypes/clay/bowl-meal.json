@@ -15,7 +15,7 @@
   blockmaterial: "Ceramic",
   creativeinventory: {
     "general": [ "" ],
-    "decorative": [ "*" ]
+    "decorative": [ "" ]
   },
   replaceable: 300,
   resistance: 0.75,
