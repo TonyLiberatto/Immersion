@@ -98,12 +98,12 @@
     "textures": {
 		"normal-bamboo-brown-sides2": { "base": "block/wood/planks/bamboo-brown-side", "overlays": ["block/wood/overlays/chest/sides"]},
 		"normal-bamboo-brown-lid": { "base": "block/wood/planks/bamboo-brown-side" },
-		"normal-bamboo-brown-floor": { "base": "block/wood/bark/bamboo-brown-side" },
+		"normal-bamboo-brown-floor": { "base": "block/wood/planks/bamboo-brown-side" },
 		"normal-bamboo-brown-accessories": { "base": "block/wood/planks/bamboo-brown-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
 		
 		"normal-bamboo-green-sides2": { "base": "block/wood/planks/bamboo-green-side", "overlays": ["block/wood/overlays/chest/sides"]},
 		"normal-bamboo-green-lid": { "base": "block/wood/planks/bamboo-green-side" },
-		"normal-bamboo-green-floor": { "base": "block/wood/bark/bamboo-green-side" },
+		"normal-bamboo-green-floor": { "base": "block/wood/planks/bamboo-green-side" },
 		"normal-bamboo-green-accessories": { "base": "block/wood/planks/bamboo-green-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
 		
 		"normal-acacia-sides2": { "base": "block/wood/smallplanks/acacia",	"overlays": ["block/wood/overlays/chest/sides"]	},
