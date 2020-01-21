@@ -4,6 +4,11 @@
 	ttributes: {
 		handbook: {
 			groupBy: ["hammer-hand-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.2 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
@@ -16,6 +21,9 @@
 	textures: {
 		"stone": { base: "item/tool/material/{stone}" },
 	},
+	tooltierbytype: {
+		"*": 1,		
+	},
 	durabilitybytype: {
 		"hammer-hand-granite": 70,
 		"hammer-hand-andesite": 70,
@@ -24,6 +32,7 @@
 		"hammer-hand-obsidian": 120,
 		"hammer-hand-flint": 100,
 	},
+	attackpower: 1,
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },

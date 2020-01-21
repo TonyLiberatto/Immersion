@@ -11,11 +11,16 @@
 	attributes: {
 		codePrefixes: ["crop", "tallgrass", "frostedtallgrass"],
 		handbook: { 
-		groupBy: ["sicle-*"],
-extraSections: [
+			groupBy: ["sicle-*"],
+			extraSections: [
 				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]		
-			}
+		},
+		toolrackTransform: {
+			rotation: { y: 3, z: -1 },
+			translation: { x: -0.35, y: 0.5 },
+			scale: 1,
+		}
 	},
 	heldTpHitAnimation: "breaktool",
 	shapeByType: {

@@ -21,19 +21,18 @@
 		]
 	},
 	tool: "bow",
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
-	attributesByType: {
-		"bow-simple": {
-			damage: 3
+	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },	
+	attributes: {
+		damageByType: {
+			"*-simple": 3,
+			"*-carved": 4,
+			"*-composite": 5,
+			"*-recurve": 6
 		},
-		"bow-carved": {
-			damage: 4
-		},
-		"bow-composite": {
-			damage: 5
-		},
-		"bow-recurve": {
-			damage: 6
+		toolrackTransform: {
+			rotation: { x: 1, z: -30 },
+			translation: { y: 0.65 },
+			scale: 1.25,
 		}
 	},
 	durabilitybytype: {
@@ -43,13 +42,24 @@
 		"bow-recurve": 300,
 		},
 	fpHandTransform: {
-		translation: { x: 0.046875, y: 0.1, z: 0 },
+		translation: { x: 0.0468, y: 0.1, z: 0 },
 		rotation: { x: 171, y: 98, z: -27 },
-		scale: 1.1
+		scale: 1.5
 	},
 	tpHandTransform: {
 		translation: { x: -0.8, y: -0.45, z: -0.67 },
 		rotation: { x: 27, y: 7, z: 25 },
 		scale: 0.65
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.15
+	},
+	fpHandTransform: {
+		translation: { x: 0.0468, y: 0.1, z: 0 },
+		rotation: { x: 172, y: 91, z: -27 },
+		scale: 1.7
 	}
 }

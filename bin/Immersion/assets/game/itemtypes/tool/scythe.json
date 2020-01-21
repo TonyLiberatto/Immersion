@@ -10,6 +10,11 @@
 		codePrefixes: ["crop", "tallgrass", "frostedtallgrass"],
 		handbook: {
 			groupBy: ["scythe-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 3, z: -1 },
+			translation: { x: -0.35, y: 0.5 },
+			scale: 1,
 		}
 	},
 	shape: { base: "item/tool/scythe" },

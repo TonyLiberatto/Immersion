@@ -6,6 +6,10 @@
 	attributes: {
 		handbook: {
 			groupBy: ["shears-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: -90 },
+			scale: 1.5
 		}
 	},
 	variantgroups: [

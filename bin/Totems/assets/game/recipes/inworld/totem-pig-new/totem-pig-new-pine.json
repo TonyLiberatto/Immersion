@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:peltboartrophy-north",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:log-placed-pine-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-new-pine-lit-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:peltboartrophy-south",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:log-placed-pine-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-new-pine-lit-south",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:peltboartrophy-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:log-placed-pine-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-new-pine-lit-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "totems:peltboartrophy-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:log-placed-pine-ud",
+        "Type": "Block",
+		"StackSize": 1
+    },
+    "Makes": [{
+        "Code": "totems:totem-pig-new-pine-lit-west",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

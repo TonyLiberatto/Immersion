@@ -3,6 +3,11 @@
 	attributes: {
 		handbook: {
 			groupBy: ["pickaxe-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.1, y: 0.55 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
@@ -16,7 +21,7 @@
 		"metal": { base: "block/metal/ingot/{metal}" },
 		"wood": { base: "item/tool/material/wood" } 
 	},
-	miningtierbytype: {
+	tooltierbytype: {
 		"*-copper": 2,
 		"*-gold": 2,
 		"*-silver": 2,

@@ -23,11 +23,11 @@
 	},
 	attackRange: 3.5,
 	attackpowerbytype: {
-		"spear-copper": 2.5,
+		"spear-copper": 2.75,
 		"spear-gold": 3,
 		"spear-silver": 3,
 		"spear-bismuthbronze": 3.5,
-		"spear-tinbronze": 3.5,
+		"spear-tinbronze": 3.75,
 		"spear-blackbronze": 4,
 		"spear-iron": 5,
 		"spear-steel": 6,
@@ -44,9 +44,14 @@
 			"*-iron": 9,
 			"*-steel": 10,
 		},
-		spearEntityCode: "spear-metal",
+		spearEntityCode: "spear-{metal}",
 		handbook: {
 			groupBy: ["spear-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.35, y: 0.5 },
+			scale: 1
 		}
 	},
 	durabilitybytype: {

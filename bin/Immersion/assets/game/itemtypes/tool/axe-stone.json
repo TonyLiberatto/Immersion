@@ -13,6 +13,11 @@
 			extraSections: [
 				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.2, y: 0.55 },
+			scale: 1.25,
 		}
 	},
 	heldTpHitAnimation: "axechop",	
@@ -34,7 +39,7 @@
 		},		
 	},
 	attackRange: 2,
-	miningtier: 1,
+	tooltier: 1,
 	miningspeedbytype: {
 		"axe-granite-*": {
 			"wood": 3.3,

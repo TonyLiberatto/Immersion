@@ -3,6 +3,11 @@
 	attributes: {
 		handbook: {
 			groupBy: ["shovel-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.1 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
