@@ -2,15 +2,7 @@
 	code: "spear",
 	class: "ItemSpear",
 	damagedby: ["attacking"],
-	tool: "spear",
-	attributes: {
-		handbook: {
-			groupBy: ["spear-javelin-*"],
-			extraSections: [
-				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
-			]
-		}
-	},
+	tool: "spear",	
 	variantgroups: [
 		{code: "type", states: ["javelin"]},
 		{ code: "shaft", states: ["bamboo-green", "bamboo-brown"] },
@@ -29,9 +21,17 @@
 	attackpower: 1,
 	"__comment": "Thrown damage",
 	attributes: {
-	damage: 2.5,
-	spearEntityCode: "spear-javelin"
-	},
+		handbook: {
+			groupBy: ["spear-javelin-*"],
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
+			]
+		},
+		damageByType: {
+			"*": 2.5,			
+		},
+		spearEntityCode: "spear-javelin"
+	},	
 	durability: 8,
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	fpHandTransform: {

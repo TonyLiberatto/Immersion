@@ -8,6 +8,11 @@
 			extraSections: [
 				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]
+		},
+		toolrackTransform: {
+			rotation: { y: 180, z: 1 },
+			translation: { x: -0.3, y: 0.55 },
+			scale: 1.25
 		}
 	},
 	variantgroups: [
@@ -23,6 +28,7 @@
 		"cordage": { base: "block/cordage/{cordage}" },
 	},
 	attackRange: 2.5,
+	tooltier: 1,
 	miningspeedbytype: {
 		"sword-flint-*": {
 			"wood": 1.5,
@@ -30,7 +36,7 @@
 		},
 		"sword-obsidian-*": {
 			"wood": 2,
-			"leaves": 1.2
+			"leaves": 1.4
 		},
 	},
 	attackpowerbytype: {

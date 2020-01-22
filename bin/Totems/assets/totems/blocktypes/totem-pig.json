@@ -1,6 +1,6 @@
 {
 	code: "totem-pig",
-	creativeinventory: { "general": ["*-north"], "decorative": ["*-north"], "totems": ["*-north"] },
+	creativeinventory: { "general": ["*-east"], "decorative": ["*-east"], "totems": ["*-east"] },
 	blockmaterial: "Wood",
 	variantgroups: [
 		{ code: "type", states: ["new", "bowl", "eyes", "tusk", ] },

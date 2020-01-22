@@ -1,0 +1,38 @@
+{
+	code: "peltboartrophy",	
+	enabled: true,
+	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	variantgroups: [		
+		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
+	],	
+	drawtype: "json",
+	shapeByType: {
+		"*-north": { base: "block/wood/totem/pig/peltboartrophy", rotateY: 0 },
+		"*-east": { base: "block/wood/totem/pig/peltboartrophy", rotateY: 270 },
+		"*-south": { base: "block/wood/totem/pig/peltboartrophy", rotateY: 180 },
+		"*-west": { base: "block/wood/totem/pig/peltboartrophy", rotateY: 90 },
+		
+	},
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	blockmaterial: "Cloth",
+	creativeinventory: { "general": ["*-east"], "totems": ["*-east"] },
+	drops: [ {type: "block",code: "peltboartrophy-east",quantity: { avg: 1, var: 0 } } ],
+	replaceable: 4000,
+	resistance: 0.5,
+	lightAbsorption: 0,		
+	sideao: { all: false },
+	combustibleProps: {
+		burnTemperature: 200,
+		burnDuration: 5,
+	},
+	sounds: {
+		place: "game:block/cloth",
+		walk: "game:walk/cloth"
+	},
+	guiTransform: {
+		translation: { x: 0, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 }
+},
+	materialDensity: 200
+}

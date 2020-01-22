@@ -18,7 +18,7 @@
 		"stone": { base: "item/tool/material/{stone}" },
 	},
 	attackRange: 2,
-	miningtierbytype: {
+	tooltierbytype: {
 		"axe-hand-granite": 1,
 		"axe-hand-andesite": 1,
 		"axe-hand-peridotite": 1,

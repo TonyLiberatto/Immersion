@@ -5,6 +5,11 @@
 	attributes: {
 		handbook: {
 			groupBy: ["sword-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 180, z: 1 },
+			translation: { x: -0.3, y: 0.55 },
+			scale: 1.25
 		}
 	},
 	variantgroups: [
@@ -17,6 +22,16 @@
 		"wood": { base: "item/tool/material/wood" } 
 	},
 	attackRange: 2.5,
+	tooltierbytype: {
+		"*-copper": 2,
+		"*-gold": 2,
+		"*-silver": 2,
+		"*-bismuthbronze": 3,
+		"*-tinbronze": 3,
+		"*-blackbronze": 3,
+		"*-iron": 4,
+		"*-steel": 5,
+	},
 	miningspeedbytype: {
 		"sword-stone": {
 			"wood": 2,

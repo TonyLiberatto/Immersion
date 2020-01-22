@@ -4,17 +4,32 @@
 	attributes: {
 		handbook: {
 			groupBy: ["hammer-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.2 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
 		{ code: "metal", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	tool: "hammer",
-	heldTpHitAnimation: "breaktool",
+	heldTpHitAnimation: "smithing",
 	shape: { base: "item/tool/hammer" },
 	textures: {
 		"metal": { base: "block/metal/ingot/{metal}" },
 		"wood": { base: "item/tool/material/wood" } 
+	},
+	tooltierbytype: {		
+		"*-copper": 2,
+		"*-gold": 2,
+		"*-silver": 2,
+		"*-bismuthbronze": 3,
+		"*-tinbronze": 3,
+		"*-blackbronze": 3,
+		"*-iron": 4,
+		"*-steel": 5,
 	},
 	durabilitybytype: {
 		"hammer-stone": 30,

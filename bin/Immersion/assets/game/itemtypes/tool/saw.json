@@ -4,6 +4,11 @@
 	attributes: {
 		handbook: {
 			groupBy: ["saw-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.35 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
@@ -18,8 +23,7 @@
 		"linen": { base: "item/tool/material/linen" }
 
 	},
-	miningtierbytype: {
-		"*-stone": 1,
+	tooltierbytype: {		
 		"*-copper": 2,
 		"*-gold": 2,
 		"*-silver": 2,
@@ -29,11 +33,7 @@
 		"*-iron": 4,
 		"*-steel": 5,
 	},
-	miningspeedbytype: {
-		"*-stone": {
-			"wood": 3,
-			"leaves": 1.6
-		},
+	miningspeedbytype: {		
 		"*-copper": {
 			"wood": 4,
 			"leaves": 2.4

@@ -5,117 +5,151 @@
     "attributes": {
         "partialAttachable": true,
         "inventoryClassName": "chest",
-        "defaultType": "normal",
-        "types": [
-            "normal"
-        ],
-        "drop": {
-            "normal": true
+        "defaultType": "normal-aged",
+        "types": [ "normal-aged", "normal-acacia", " normal-bamboo-brown", "normal-bamboo-brown", "normal-birch", "normal-kapok", "normal-maple", "normal-oak", "normal-pine", ],
+        "rotatatableInterval": {
+            "normal-*": "22.5degnot45deg"
         },
-        "quantitySlots": {
-            "normal": 32
-        },
+        drop: {			
+			"normal-acacia": true,
+			"normal-aged": true,
+			"normal-birch": true,
+			"normal-kapok": true,
+			"normal-maple": true,
+			"normal-oak": true,
+			"normal-pine": true,
+			"normal-bamboo-green": true,
+			"normal-bamboo-brown": true,
+		},
+		quantitySlots: {
+			"normal-acacia": 32,
+			"normal-aged": 32,
+			"normal-birch": 32,
+			"normal-kapok": 32,
+			"normal-maple": 32,
+			"normal-oak": 32,
+			"normal-pine": 32,
+			"normal-bamboo-green": 16,
+			"normal-bamboo-brown": 16,
+			
+		},
         "dialogTitleLangCode": {
-            "normal": "chestcontents"
+            "normal-*": "chestcontents"
         },
         "storageType": {
-            "normal": 189
+            "normal-*": 189
         },
         "retrieveOnly": {
-            "normal": false
+            "normal-*": false
         },
-        "shape": {
-            "normal": "block/wood/chest/normal-labeled"
-        },
-        "variantByGroup": "wood",
-        "variantByGroupInventory": "wood"
+        shape: {
+			"normal-acacia": "game:block/wood/chest/normal-labeled",
+			"normal-aged": "game:block/wood/chest/normal-labeled",
+			"normal-birch": "game:block/wood/chest/normal-labeled",
+			"normal-kapok": "game:block/wood/chest/normal-labeled",
+			"normal-maple": "game:block/wood/chest/normal-labeled",
+			"normal-oak": "game:block/wood/chest/normal-labeled",
+			"normal-pine": "game:block/wood/chest/normal-labeled",
+			"normal-bamboo-green": "game:block/wood/chest/normal-labeled",
+			"normal-bamboo-brown": "game:block/wood/chest/normal-labeled",
+		},
+        "variantByGroup": "side",
+        "variantByGroupInventory": null
     },
-    "behaviors": [
-        {
-            "name": "Lockable"
-        },
-        {
-            "name": "Container"
-        },
-        {
-            "name": "HorizontalOrientable",
-            "properties": {
-                "dropBlockFace": "east"
-            }
-        }
-    ],
-    "variantgroups": [
-        { "code": "wood", "states": ["aged", "bamboo-brown", "bamboo-green"], "loadFromProperties": "block/wood" },
+    behaviors: [
+		{ name: "Carryable", properties: { translation: [ 0.0625, 0, 0 ], rotation: [ 0, 180, 0 ], slots: { "Hands": {  }, "Back": {  },}}},
+		{name: "Container"}, {name: "Lockable" },
+		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},		
+	],
+    "variantgroups": [        
         { "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
     "creativeinventory": {  },
-	"creativeinventoryStacks": [
-		{
-			"tabs": [ "general", "decorative" ],
-			"stacks": [
-				{ "type": "block", "code": "survivallabeledchest-{wood}-east", "attributes": { "type": "normal" } }
-			]
-		}
-	],
+	creativeinventoryStacksByType: {
+		"*-east": [
+			{
+				tabs: [ "general", "decorative", "immersiondeco" ],
+				stacks: [
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-acacia" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-aged" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-birch" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-kapok" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-maple" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-oak" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-pine" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-bamboo-green" } },
+					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-bamboo-brown" } },
+				]
+			}
+		]
+	},
     "heldTpIdleAnimation": "holdunderarm",
     "shapeInventory": {
         "base": "block/wood/chest/normal",
         "rotateY": 270
     },
     "shapeByType": {
-        "*-north": {
-            "base": "block/wood/chest/normal",
-            "rotateY": 0
-        },
-        "*-east": {
-            "base": "block/wood/chest/normal",
-            "rotateY": 270
-        },
-        "*-west": {
-            "base": "block/wood/chest/normal",
-            "rotateY": 90
-        },
-        "*-south": {
-            "base": "block/wood/chest/normal",
-            "rotateY": 180
-        }
+        "*-north": { "base": "block/wood/chest/normal", "rotateY": 0 },
+        "*-east": { "base": "block/wood/chest/normal", "rotateY": 270 },
+        "*-west": { "base": "block/wood/chest/normal", "rotateY": 90  },
+        "*-south": { "base": "block/wood/chest/normal", "rotateY": 180 }
     },
     "_comment": "Must declare textures so they get added to the block texture atlas",
-    "texturesByType": {
-		"*-bamboo-*": {
-			"normal-sides2": {
-				"base": "block/wood/planks/{wood}-side",
-				"overlays": ["block/wood/overlays/chest/sides"]
-			},
-			"normal-lid": {
-				"base": "block/wood/planks/{wood}-side"
-			},
-			"normal-floor": {
-				"base": "block/wood/bark/{wood}-side"
-            },
-			"normal-accessories": {
-				"base": "block/wood/planks/{wood}-side",
-				"overlays": ["block/wood/overlays/chest/accessories"]
-            },
-            "normal-label": { "base": "block/wood/chest/label" }
-		},
-		"*": {
-			"normal-sides2": {
-				"base": "block/wood/smallplanks/{wood}*",
-				"overlays": ["block/wood/overlays/chest/sides"]
-			},
-			"normal-lid": {
-				"base": "block/wood/smallplanks/{wood}*"
-			},
-			"normal-floor": {
-				"base": "block/wood/smallplanks/{wood}*"
-			},
-			"normal-accessories": {
-				"base": "block/wood/smallplanks/{wood}*",
-				"overlays": ["block/wood/overlays/chest/accessories"]
-            },
-            "normal-label": { "base": "block/wood/chest/label" }
-		}
+    "textures": {		
+		"normal-bamboo-brown-sides2": { "base": "block/wood/planks/bamboo-brown-side", "overlays": ["block/wood/overlays/chest/sides"]},
+		"normal-bamboo-brown-lid": { "base": "block/wood/planks/bamboo-brown-side" },
+		"normal-bamboo-brown-floor": { "base": "block/wood/planks/bamboo-brown-side" },
+		"normal-bamboo-brown-accessories": { "base": "block/wood/planks/bamboo-brown-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-bamboo-brown-label": { "base": "block/wood/chest/label" },
+		
+		"normal-bamboo-green-sides2": { "base": "block/wood/planks/bamboo-green-side", "overlays": ["block/wood/overlays/chest/sides"]},
+		"normal-bamboo-green-lid": { "base": "block/wood/planks/bamboo-green-side" },
+		"normal-bamboo-green-floor": { "base": "block/wood/planks/bamboo-green-side" },
+		"normal-bamboo-green-accessories": { "base": "block/wood/planks/bamboo-green-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-bamboo-green-label": { "base": "block/wood/chest/label" },
+		
+		"normal-acacia-sides2": { "base": "block/wood/smallplanks/acacia",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-acacia-lid": { "base": "block/wood/smallplanks/acacia"	},
+		"normal-acacia-floor": { "base": "block/wood/smallplanks/acacia"},
+		"normal-acacia-accessories": { "base": "block/wood/smallplanks/acacia", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-acacia-label": { "base": "block/wood/chest/label" },
+		
+		"normal-aged-sides2": { "base": "block/wood/smallplanks/aged",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-aged-lid": { "base": "block/wood/smallplanks/aged"	},
+		"normal-aged-floor": { "base": "block/wood/smallplanks/aged"},
+		"normal-aged-accessories": { "base": "block/wood/smallplanks/aged", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-aged-label": { "base": "block/wood/chest/label" },
+		
+		"normal-birch-sides2": { "base": "block/wood/smallplanks/birch",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-birch-lid": { "base": "block/wood/smallplanks/birch"	},
+		"normal-birch-floor": { "base": "block/wood/smallplanks/birch"},
+		"normal-birch-accessories": { "base": "block/wood/smallplanks/birch", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-birch-label": { "base": "block/wood/chest/label" },
+		
+		"normal-kapok-sides2": { "base": "block/wood/smallplanks/kapok",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-kapok-lid": { "base": "block/wood/smallplanks/kapok"	},
+		"normal-kapok-floor": { "base": "block/wood/smallplanks/kapok"},
+		"normal-kapok-accessories": { "base": "block/wood/smallplanks/kapok", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-kapok-label": { "base": "block/wood/chest/label" },
+		
+		"normal-maple-sides2": { "base": "block/wood/smallplanks/maple",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-maple-lid": { "base": "block/wood/smallplanks/maple"	},
+		"normal-maple-floor": { "base": "block/wood/smallplanks/maple"},
+		"normal-maple-accessories": { "base": "block/wood/smallplanks/maple", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-maple-label": { "base": "block/wood/chest/label" },
+		
+		"normal-oak-sides2": { "base": "block/wood/smallplanks/oak",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-oak-lid": { "base": "block/wood/smallplanks/oak"	},
+		"normal-oak-floor": { "base": "block/wood/smallplanks/oak"},
+		"normal-oak-accessories": { "base": "block/wood/smallplanks/oak", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-oak-label": { "base": "block/wood/chest/label" },
+		
+		"normal-pine-sides2": { "base": "block/wood/smallplanks/pine",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-pine-lid": { "base": "block/wood/smallplanks/pine"	},
+		"normal-pine-floor": { "base": "block/wood/smallplanks/pine"},
+		"normal-pine-accessories": { "base": "block/wood/smallplanks/pine", "overlays": ["block/wood/overlays/chest/accessories"]},
+		"normal-pine-label": { "base": "block/wood/chest/label" },
+		
     },
     "blockmaterial": "Wood",
     "replaceable": 900,
@@ -127,26 +161,9 @@
     "sideopaque": {
         "all": false
     },
-    "collisionbox": {
-        "x1": 0.0625,
-        "y1": 0,
-        "z1": 0.0625,
-        "x2": 0.9375,
-        "y2": 0.8125,
-        "z2": 0.9375
-    },
-    "selectionbox": {
-        "x1": 0.0625,
-        "y1": 0,
-        "z1": 0.0625,
-        "x2": 0.9375,
-        "y2": 0.8125,
-        "z2": 0.9375
-    },
-    "combustibleProps": {
-        "burnTemperature": 600,
-        "burnDuration": 35
-    },
+    "collisionbox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.8125, "z2": 0.9375  },
+    "selectionbox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.8125, "z2": 0.9375  },
+    "combustibleProps": { "burnTemperature": 600,  "burnDuration": 35 },
     "sounds": {
         "place": "block/planks",
         "hit": "block/planks",
@@ -155,24 +172,12 @@
     },
     "materialDensity": 600,
     "tpHandTransform": {
-        "translation": {
-            "x": -0.9,
-            "y": -0.5,
-            "z": -0.3
-        },
-        "rotation": {
-            "x": 0,
-            "y": 90,
-            "z": -102
-        },
+        "translation": { "x": -0.9, "y": -0.5,  "z": -0.3 },
+        "rotation": { "x": 0, "y": 90, "z": -102 },
         "scale": 0.56
     },
     "guiTransform": {
-        "origin": {
-            "x": 0.5,
-            "y": 0.4,
-            "z": 0.5
-        },
+        "origin": { "x": 0.5, "y": 0.4, "z": 0.5  },
         "scale": 1.16
     }
 }

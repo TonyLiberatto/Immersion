@@ -857,14 +857,8 @@
   "block-roofstairs-topend-kapok-debarked-north": "Top End Kapok Debarked Stairs Roof",
   "block-roofstairs-topend-maple-debarked-north": "Top End Maple Debarked Stairs Roof",
   "block-roofstairs-topend-oak-debarked-north": "Top End Oak Debarked Stairs Roof",
-  "block-roofstairs-topend-pine-debarked-north": "Top End Pine Debarked Stairs Roof",
+  "block-roofstairs-topend-pine-debarked-north": "Top End Pine Debarked Stairs Roof",  
   
-  "block-crop-sisal-*": "Growing Sisal",
-  "block-crop-sisal-5": "Mature Sisal",
-  "block-crop-sisal-6": "Mature Flowered Sisal",
-  "blockdesc-crop-sisal-*": "Not Mature Yet, will give One leaf, Use a Knife",
-  "blockdesc-crop-sisal-5": "Mature Sisal, Not Flowering Yet, will give some leaves, but not Seeds, Use a Knife",
-  "blockdesc-crop-sisal-6": "Ready to Harvest, Will Give Plenty of Leaves and Seeds, Use a Knife",
   "block-planks-bamboo-brown": "Brown Bamboo Planks",
   "block-planks-bamboo-green": "Green Bamboo Planks",
 
@@ -1418,10 +1412,7 @@
   "item-sisal-fibers": "Sisal Fibers",
   "item-sisal-thread": "Sisal Thread",
   "item-sisal-twine": "Sisal Twine",
-  "item-sisal-rope": "Sisal Rope",
-
-  "block-planks-bamboo-brown": "Brown Bamboo Planks",
-  "block-planks-bamboo-green": "Green Bamboo Planks",
+  "item-sisal-rope": "Sisal Rope",  
 
   "itemdesc-sisal-fibers": "Put 3 in a row to make Sisal Thread",
   "itemdesc-sisal-thread": "Arrange in the grid 2 in row under 2 in row. Like a square to make Twine",
@@ -1443,9 +1434,8 @@
   "blockdesc-leavesbranchy-*-maple": "Must use an axe to break",
   "blockdesc-leavesbranchy-*-pine": "Must use an axe to break",
   "blockdesc-leavesbranchy-*-acacia": "Must use an axe to break",
-  "blockdesc-leavesbranchy-*-kapok": "Must use an axe to break",
+  "blockdesc-leavesbranchy-*-kapok": "Must use an axe to break",  
   
-  "block-bunchotallowcandles-*": "Bunch O Tallow Candles",
   "block-giantreed-arundo-*-normal": "Arundo donax - Giant Reed",
   "blockdesc-giantreed-arundo-*-normal": "Use a knife to harvest a root that can be planted",
   

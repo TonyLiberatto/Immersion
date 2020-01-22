@@ -7,6 +7,11 @@
 			extraSections: [
 				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.2 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
@@ -31,6 +36,9 @@
 			"shaft": { base: "game:block/wood/debarked/{shaft}" },
 			"cordage": { base: "block/cordage/{cordage}" },
 		},		
+	},
+	tooltierbytype: {
+		"*": 1,		
 	},
 	durabilitybytype: 
 	{

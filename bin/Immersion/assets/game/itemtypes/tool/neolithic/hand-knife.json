@@ -5,6 +5,11 @@
 	attributes: {
 		handbook: {
 			groupBy: ["knife-hand-*"]
+		},
+		toolrackTransform: {
+			rotation: { x: 90 },
+			translation: { x: -0.35 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [
@@ -16,9 +21,7 @@
 	textures: {
 		"stone": { base: "item/tool/material/{stone}" },
 	},
-
-	durabilitybytype: 
-	{
+	durabilitybytype: {
 		"knife-hand-granite": 60,
 		"knife-hand-andesite": 60,
 		"knife-hand-peridotite": 60,
@@ -26,8 +29,27 @@
 		"knife-hand-obsidian": 100,
 		"knife-hand-flint": 80,
 	},
-	attackpowerbytype: 
-	{
+	miningspeedbytype: {
+		"*-granite": {
+			"plant": 1,
+		},
+		"*-peridotite": {
+			"plant": 1,
+		},
+		"*-andesite": {
+			"plant": 1,
+		},
+		"*-basalt": {
+			"plant": 1.1,
+		},
+		"*-obsidian": {
+			"plant": 1.2,
+		},
+		"*-flint": {
+			"plant": 1.2,
+		},		
+	},
+	attackpowerbytype: {
 		"knife-hand-granite": 0.75,
 		"knife-hand-andesite": 0.75,
 		"knife-hand-peridotite": 0.75,

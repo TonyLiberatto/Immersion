@@ -15,7 +15,7 @@
   blockmaterial: "Ceramic",
   creativeinventory: {
     "general": [ "" ],
-    "decorative": [ "*" ]
+    "decorative": [ "" ]
   },
   replaceable: 300,
   resistance: 0.75,
@@ -28,19 +28,19 @@
 	"*-blue": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/blue-burned" },
-		},
-		"*-fire": {
+	},
+	"*-fire": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/fire-burned" },
-		},
-		"*-red": {
+	},
+	"*-red": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/red-burned" },
-		},
-		"*-brown": {
+	},
+	"*-brown": {
 		"transparent": { base: "block/transparent" },
 		"ceramic": { base: "block/clay/brown-burned" },
-		},
+	},
   },
   sideopaque: {
     all: false

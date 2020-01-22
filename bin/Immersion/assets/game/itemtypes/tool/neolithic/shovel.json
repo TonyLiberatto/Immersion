@@ -6,6 +6,11 @@
 			extraSections: [
 				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-toolmaking\">Immersion Tool Making</a>" }
 			]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.1 },
+			scale: 1.25,
 		}
 	},
 	variantgroups: [

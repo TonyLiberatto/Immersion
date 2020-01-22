@@ -26,6 +26,16 @@
 		"knife-iron": 2200,
 		"knife-steel": 3300,
 	},
+	miningspeedbytype: {		
+		"knife-copper": {"plant": 1.5,},
+		"knife-silver": {"plant": 1.6,},
+		"knife-gold": {	"plant": 1.6,},
+		"knife-bismuthbronze": {"plant": 1.7,},
+		"knife-tinbronze": {"plant": 1.8,},
+		"knife-blackbronze": { "plant": 1.9,},
+		"knife-iron": {	"plant": 2	},
+		"knife-steel": {"plant": 2.4,},
+	},
 	attackpowerbytype: {
 		"knife-copper": 1.5,
 		"knife-bismuthbronze": 2,
