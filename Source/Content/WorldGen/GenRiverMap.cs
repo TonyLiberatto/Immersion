@@ -16,6 +16,7 @@ namespace Immersion
     {
         ICoreServerAPI api;
         IWorldGenBlockAccessor blockAccessor;
+        public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
 
         public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
 
@@ -34,7 +35,7 @@ namespace Immersion
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
-            Vec3i climate = chunks[0].MapChunk.MapRegion.ClimateMap.ToClimateVec(chunkX, chunkZ, api.WorldManager.RegionSize, chunksize);
+            Vec3i climate = chunks[0].MapChunk.MapRegion.ClimateMap.ToClimateVec(chunkX, chunkZ, api.WorldManager.RegionSize, chunksize2);
         }
     }
 }
