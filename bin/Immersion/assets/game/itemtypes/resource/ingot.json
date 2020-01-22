@@ -19,7 +19,9 @@
 				"*-stainlessteel": true,
 				"*-uranium": true
 			}
-		}
+		},
+		displaycaseable: true, 
+		shelvable: true
 	},
 	variantgroups: [
 		{ code: "metal", states: ["wax", "tallow", "rawironbloom", "refinedironbloom" ], loadFromProperties: "block/metal" },
