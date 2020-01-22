@@ -151,6 +151,7 @@
     <Compile Include="Source\Content\Utility\Missing.cs" />
     <Compile Include="Source\Content\Utility\ShaderTest.cs" />
     <Compile Include="Source\Content\WorldGen\GenDeepOreBits.cs" />
+    <Compile Include="Source\Content\WorldGen\GenRiverMap.cs" />
     <Compile Include="Source\Content\WorldGen\ModifyLakes.cs" />
     <Compile Include="Source\Debugging\RedirectLogs.cs" />
     <Compile Include="Source\Systems\InWorldCraftingSystem.cs" />

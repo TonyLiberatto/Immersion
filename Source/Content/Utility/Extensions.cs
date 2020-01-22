@@ -4,6 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -272,5 +273,26 @@ namespace Immersion
                 capi.BlockTextureAtlas.GetPosition(collectible.Code.GetBlock(capi), direction);
         }
         public static double DistanceTo(this Vec3d start, Vec3d end) => Math.Sqrt(start.SquareDistanceTo(end));
+
+        public static Vec3i ToClimateVec(this IntMap climateMap, int chunkX, int chunkZ, int regionsize, int chunksize)
+        {
+            int regionChunkSize = regionsize / chunksize;
+            float fac = (float)climateMap.InnerSize / regionChunkSize;
+            int rlX = chunkX % regionChunkSize;
+            int rlZ = chunkZ % regionChunkSize;
+
+            int climateUpLeft = climateMap.GetUnpaddedInt((int)(rlX * fac), (int)(rlZ * fac));
+            int climateUpRight = climateMap.GetUnpaddedInt((int)(rlX * fac + fac), (int)(rlZ * fac));
+            int climateBotLeft = climateMap.GetUnpaddedInt((int)(rlX * fac), (int)(rlZ * fac + fac));
+            int climateBotRight = climateMap.GetUnpaddedInt((int)(rlX * fac + fac), (int)(rlZ * fac + fac));
+
+            int climateMid = GameMath.BiLerpRgbColor(0.5f, 0.5f, climateUpLeft, climateUpRight, climateBotLeft, climateBotRight);
+
+            int rain = (climateMid >> 8) & 0xff;
+            int humidity = climateMid & 0xff;
+            int temp = (climateMid >> 16) & 0xff;
+
+            return new Vec3i(rain, humidity, temp);
+        }
     }
 }
