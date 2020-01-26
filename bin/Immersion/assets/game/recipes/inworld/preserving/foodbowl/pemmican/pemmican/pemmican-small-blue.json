@@ -2,7 +2,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-blue-meat-fruit-fat",
+		"Code": "game:food-bowl-small-blue-meat-fruitfat",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -28,7 +28,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-brown-meat-fruit-fat",
+		"Code": "game:food-bowl-small-brown-meat-fruitfat",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -54,7 +54,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-fire-meat-fruit-fat",
+		"Code": "game:food-bowl-small-fire-meat-fruitfat",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -80,7 +80,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-red-meat-fruit-fat",
+		"Code": "game:food-bowl-small-red-meat-fruitfat",
         "Type": "Block",        
 		"Remove": true	
     },

@@ -16,7 +16,7 @@
 	variantgroups: [
 		{ code:"size", states: ["small", "medium", "large"] },
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },		
-		{ code:"materialtype", states: [ "meat-flour", "meat-fruit", "meat-fruit-fat",  ] },
+		{ code:"materialtype", states: [ "meat-flour", "meat-fruit", "meat-fruitfat",  ] },
 	],	
 	blockmaterial: "Ceramic",
 	creativeinventory: { "general": [""], "immersionblocks": [""] },
@@ -28,12 +28,12 @@
 	texturesByType: {					
 		"*-meat-flour": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-flour" }},
 		"*-meat-fruit": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit" }},
-		"*-meat-fruit-fat": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruit-fat" }},		
+		"*-meat-fruitfat": { all: { base: "block/clay/{color}-burned" },"contents": {base: "immersion:item/food/pemmican/meat-fruitfat" }},		
 	},
 	shapeByType: {				
 		"*-meat-flour": { base: "block/clay/food-bowl/pemmican/{size}-pemmican1" },
 		"*-meat-fruit": { base: "block/clay/food-bowl/pemmican/{size}-pemmican2" },
-		"*-meat-fruit-fat": { base: "block/clay/food-bowl/pemmican/{size}-pemmican3" },		
+		"*-meat-fruitfat": { base: "block/clay/food-bowl/pemmican/{size}-pemmican3" },		
 	},
 	sounds: {
 		walk: "walk/stone",

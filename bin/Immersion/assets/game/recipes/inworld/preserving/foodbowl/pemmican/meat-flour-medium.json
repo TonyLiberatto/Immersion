@@ -9,7 +9,7 @@
     "Tool": {
         "Code": "game:flour-redmeat-dry",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-blue-meat-flour",
@@ -30,7 +30,7 @@
     "Tool": {
         "Code": "game:flour-redmeat-dry",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-brown-meat-flour",
@@ -51,7 +51,7 @@
     "Tool": {
         "Code": "game:flour-redmeat-dry",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-fire-meat-flour",
@@ -72,7 +72,7 @@
     "Tool": {
         "Code": "game:flour-redmeat-dry",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-red-meat-flour",

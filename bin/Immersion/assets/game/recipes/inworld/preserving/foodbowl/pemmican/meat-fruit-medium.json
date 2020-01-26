@@ -9,7 +9,7 @@
     "Tool": {
         "Code": "game:flour-dryfruit",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-blue-meat-fruit",
@@ -30,7 +30,7 @@
     "Tool": {
         "Code": "game:flour-dryfruit",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-brown-meat-fruit",
@@ -51,7 +51,7 @@
     "Tool": {
         "Code": "game:flour-dryfruit",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-fire-meat-fruit",
@@ -72,7 +72,7 @@
     "Tool": {
         "Code": "game:flour-dryfruit",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
         "Code": "game:food-bowl-medium-red-meat-fruit",

@@ -2,17 +2,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-blue-meat-fruit",
+		"Code": "game:food-bowl-medium-blue-meat-fruit",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
         "Code": "game:fat",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-blue-meat-fruit-fat",
+        "Code": "game:food-bowl-medium-blue-meat-fruitfat",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -23,17 +23,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-brown-meat-fruit",
+		"Code": "game:food-bowl-medium-brown-meat-fruit",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
          "Code": "game:fat",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-brown-meat-fruit-fat",
+        "Code": "game:food-bowl-medium-brown-meat-fruitfat",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -44,17 +44,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-fire-meat-fruit",
+		"Code": "game:food-bowl-medium-fire-meat-fruit",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
          "Code": "game:fat",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-fire-meat-fruit-fat",
+        "Code": "game:food-bowl-medium-fire-meat-fruitfat",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -65,17 +65,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-red-meat-fruit",
+		"Code": "game:food-bowl-medium-red-meat-fruit",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
          "Code": "game:fat",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-red-meat-fruit-fat",
+        "Code": "game:food-bowl-medium-red-meat-fruitfat",
         "Type": "Block",
         "StackSize": 1
     }],

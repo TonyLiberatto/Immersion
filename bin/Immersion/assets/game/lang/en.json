@@ -102,7 +102,8 @@
   "blockdesc-food-bowl-*-intestines": "Sneak Right click with a knife to make Sausage Casings",
   "blockdesc-food-bowl-*-meat-flour": "Sneak Right click with Dry Fruit Flour to mix ingredients for Pemmican",
   "blockdesc-food-bowl-*-meat-fruit": "Sneak Right click with Fat to mix ingredients for Pemmican",
-  "blockdesc-food-bowl-*-meat-fruit-fat": "Sneak Right click with bowls of honey to finalize Pemmican",
+  "blockdesc-food-bowl-*-meat-fruitfat": "Sneak Right click with bowls of honey to finalize Pemmican",
+  "blockdesc-food-bowl-*-pemmican*": "Sneak Right click with sausage casings to get Pemmican Sausages",
   
   "item-flour-dryfruit": "Flour (Dryfruit)",
   "item-flour-redmeat-dry": "Flour Redmeat (Dry)",
