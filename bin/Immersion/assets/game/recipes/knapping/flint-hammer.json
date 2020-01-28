@@ -1,6 +1,6 @@
 {
 	ingredient: { type: "item", code: "flint" },
-	pattern: [
+	pattern: [[
 			"____###___",
 			"___#####__",
 			"___#####__",
@@ -12,7 +12,7 @@
 			"___#####__",
 			"____###___"
 
-		],
+		]],
 	name: "Flint Hammer",
 	output: { type: "block", code: "hammer-head-flint-north"  }
 }

@@ -21,7 +21,7 @@
 	creativeinventory: { "general": ["*-raw", "*-burned"], "immersionblocks": [ "*-raw", "*-burned"] },
 	replaceable: 1200,
 	resistance: 1.5,
-	maxStackSize: 1,
+	maxStackSize: 16,
 	liquidSelectable: 1,
 	lightAbsorption: 0,
 	texturesByType: {

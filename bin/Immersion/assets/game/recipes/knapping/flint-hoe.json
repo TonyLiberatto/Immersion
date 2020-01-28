@@ -1,10 +1,10 @@
 {
 		ingredient: { type: "item", code: "flint", },
-		pattern: [
+		pattern: [[
 			"__########",
 			"________##",
 			"_________#"
-		],
+		]],
 		name: "Flint Hoe Head",
 		output: { type: "block", code: "hoe-head-flint-north"  }
 }

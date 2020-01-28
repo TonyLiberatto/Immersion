@@ -1,6 +1,6 @@
 {
 	ingredient: { type: "item", code: "flint" },
-	pattern: [
+	pattern: [[
 			"#_#___#_#_",
 			"#_#___#_#_",
 			"#_#___#_#_",
@@ -11,7 +11,7 @@
 			"#_#___#_#_",
 			"#_#___#_#_",
 			"__________"
-		],
+		]],
 	name: "Flint Flakes",
 	output: { type: "block", code: "sword-flakes-flint-north" }
 }

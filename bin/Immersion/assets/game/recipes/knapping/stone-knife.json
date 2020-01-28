@@ -1,6 +1,6 @@
 {
 	ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "peridotite"] },
-	pattern: [
+	pattern: [[
 		"___#__#___",
 		"___#__#___",
 		"__##__##__",
@@ -11,7 +11,7 @@
 		"_###__###_",
 		"_###__###_",
 		"_###__###_"
-	],
+	]],
 	name: "Stone knife",
 	output: { type: "block", code: "knife-head-{rock}-north", stacksize: 2  }
 }

@@ -1,6 +1,6 @@
 {
 	ingredient: { type: "item", code: "ingot-*", name: "metal", allowedVariants: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "silver", "gold", "iron"] },
-	pattern: [
+	pattern: [[
 		"##________",
 		"####______",
 		"_#####____",
@@ -11,7 +11,7 @@
 		"___######_",
 		"_____#####",
 		"________##"
-	],
+	]],
 	name: "Spear",
 	output: { type: "item", code: "spearhead-{metal}"  }
 }

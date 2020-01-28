@@ -2,17 +2,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-acacia-sinew-rope-ns",
+		"Code": "immersion:drying-rack-acacia-sisal-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-sinew-salt-mutton-ns",
+        "Code": "immersion:drying-rack-acacia-sisal-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -23,17 +23,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-acacia-sinew-rope-we",
+		"Code": "immersion:drying-rack-acacia-sisal-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-sinew-salt-mutton-we",
+        "Code": "immersion:drying-rack-acacia-sisal-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -44,17 +44,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-birch-sinew-rope-ns",
+		"Code": "immersion:drying-rack-birch-sisal-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-sinew-salt-mutton-ns",
+        "Code": "immersion:drying-rack-birch-sisal-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -65,17 +65,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-birch-sinew-rope-we",
+		"Code": "immersion:drying-rack-birch-sisal-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-sinew-salt-mutton-we",
+        "Code": "immersion:drying-rack-birch-sisal-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -86,17 +86,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-kapok-sinew-rope-ns",
+		"Code": "immersion:drying-rack-kapok-sisal-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-sinew-salt-mutton-ns",
+        "Code": "immersion:drying-rack-kapok-sisal-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -107,17 +107,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-kapok-sinew-rope-we",
+		"Code": "immersion:drying-rack-kapok-sisal-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-sinew-salt-mutton-we",
+        "Code": "immersion:drying-rack-kapok-sisal-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -128,17 +128,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-maple-sinew-rope-ns",
+		"Code": "immersion:drying-rack-maple-sisal-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-sinew-salt-mutton-ns",
+        "Code": "immersion:drying-rack-maple-sisal-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -149,17 +149,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-maple-sinew-rope-we",
+		"Code": "immersion:drying-rack-maple-sisal-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-sinew-salt-mutton-we",
+        "Code": "immersion:drying-rack-maple-sisal-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -170,17 +170,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-oak-sinew-rope-ns",
+		"Code": "immersion:drying-rack-oak-sisal-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-sinew-salt-mutton-ns",
+        "Code": "immersion:drying-rack-oak-sisal-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -191,17 +191,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-oak-sinew-rope-we",
+		"Code": "immersion:drying-rack-oak-sisal-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-sinew-salt-mutton-we",
+        "Code": "immersion:drying-rack-oak-sisal-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -212,17 +212,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-pine-sinew-rope-ns",
+		"Code": "immersion:drying-rack-pine-sisal-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-sinew-salt-mutton-ns",
+        "Code": "immersion:drying-rack-pine-sisal-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -233,17 +233,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-pine-sinew-rope-we",
+		"Code": "immersion:drying-rack-pine-sisal-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-sinew-salt-mutton-we",
+        "Code": "immersion:drying-rack-pine-sisal-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],

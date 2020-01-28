@@ -1,6 +1,6 @@
 {
 	ingredient: { type: "item", code: "bone" },
-	pattern: [
+	pattern: [[
 		"_#_____#__",
 		"###___###_",
 		"#_#___#_#_",
@@ -11,7 +11,7 @@
 		"___#_#____",
 		"___###____",
 		"____#_____"
-	],
+	]],
 	name: "Bone arrowhead",
 	output: { type: "item", code: "primitive-arrowhead-bone", stacksize: 6  }
 }

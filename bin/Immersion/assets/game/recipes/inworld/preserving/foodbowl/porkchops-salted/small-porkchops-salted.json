@@ -2,17 +2,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-blue-burned",
+		"Code": "game:food-bowl-small-blue-porkchops-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-blue-raw-meat",
+        "Code": "game:food-bowl-small-blue-porkchops-salted",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -23,17 +23,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-brown-burned",
+		"Code": "game:food-bowl-small-brown-porkchops-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-brown-raw-meat",
+        "Code": "game:food-bowl-small-brown-porkchops-salted",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -44,17 +44,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-fire-burned",
+		"Code": "game:food-bowl-small-fire-porkchops-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-fire-raw-meat",
+        "Code": "game:food-bowl-small-fire-porkchops-salted",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -65,17 +65,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-large-red-burned",
+		"Code": "game:food-bowl-small-red-porkchops-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
-		"StackSize": 16
+		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-large-red-raw-meat",
+        "Code": "game:food-bowl-small-red-porkchops-salted",
         "Type": "Block",
         "StackSize": 1
     }],

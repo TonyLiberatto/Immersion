@@ -1,0 +1,86 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-blue-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-raw",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-blue-mutton-raw",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-brown-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-raw",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-brown-mutton-raw",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-fire-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-raw",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-fire-mutton-raw",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "game:food-bowl-small-red-burned",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:mutton-raw",
+        "Type": "item",
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:food-bowl-small-red-mutton-raw",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

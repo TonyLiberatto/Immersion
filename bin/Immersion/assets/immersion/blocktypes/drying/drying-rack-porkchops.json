@@ -1,11 +1,11 @@
 {
 	code: "drying-rack",
 	behaviorsByType: {
-		"*-dry-pork-*": [ {name: "NWOrientable"},
+		"*-porkchops-dry-*": [ {name: "NWOrientable"},
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
 				harvestedStack: { type: "item", code: "immersion:porkchops-dry", quantity: { avg: 4 }  },
-				harvestedBlockCode: "drying-rack-{wood}-{cordage}-rope-{orientation}"
+				harvestedBlockCode: "drying-rack-{wood}-{cordage}-empty-{orientation}"
 		}} ],
 		"*": [{name: "NWOrientable"}],
 	},
@@ -13,8 +13,8 @@
     "entityBehaviors": [
 		{ "name": "Transient",
             "properties": {
-                "convertFrom": "drying-rack-*-salt-pork-*",
-                "convertTo": "drying-rack-*-dry-pork-*",
+                "convertFrom": "drying-rack-*-porkchops-salted-*",
+                "convertTo": "drying-rack-*-porkchops-dry-*",
                 "inGameHours": 72,
 				"TransitionConditions": { "RequiredSunlight": 32, }
             }
@@ -22,7 +22,7 @@
         {
             "name": "Consumable",
             "properties": {
-                "eatenTo": "drying-rack-{wood}-{cordage}-rope-{orientation}",
+                "eatenTo": "drying-rack-{wood}-{cordage}-empty-{orientation}",
                 "contentConfig": {
                     "foodFor": ["game:wolf-*", "game:hyena-*", "game:fox-*"]
                 }
@@ -30,9 +30,9 @@
         }
     ],
 	variantgroups: [		
-		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine" ] },			
-		{ code: "cordage", states: [  "leatherstrips", "reeds","sinew", "sisal"]},
-		{ code: "state", states: [  "salt-pork","dry-pork" ]},
+		{ code: "wood", states: [ "acacia", "birch", "kapok", "maple", "oak", "pine" ] },			
+		{ code: "cordage", states: [ "leatherstrips", "reeds","sinew", "sisal"]},
+		{ code: "state", states: [ "porkchops-salted","porkchops-dry" ]},
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
 	creativeinventory: { "general": [""],  "immersionblocks": [""],  },
@@ -52,19 +52,13 @@
 	blockmaterial: "Wood",
 	requiredMiningTier: 1,
 	texturesbytype: {		
-		"*-rope-*": {	
-			"acacia": { base: "block/wood/bark/{wood}" },
-			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
-			"cordage": { base: "block/{cordage}" },
-			"meat": { base: "game:block/transparent" },
-		},
-		"*-salt-pork-*": {	
+		"*-porkchops-salted-*": {	
 			"acacia": { base: "block/wood/bark/{wood}" },
 			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
 			"cordage": { base: "block/{cordage}" },
 			"meat": {base: "game:item/food/meat/cured" }
 		},
-		"*-dry-pork-*": {	
+		"*-porkchops-dry-*": {	
 			"acacia": { base: "block/wood/bark/{wood}" },
 			"acaciatop": { base: "block/wood/treetrunk/{wood}" },
 			"cordage": { base: "block/{cordage}" },

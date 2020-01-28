@@ -12,7 +12,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-sisal-rope-ns",
+        "Code": "immersion:drying-rack-acacia-sisal-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -33,7 +33,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-sisal-rope-we",
+        "Code": "immersion:drying-rack-acacia-sisal-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -54,7 +54,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-sisal-rope-ns",
+        "Code": "immersion:drying-rack-birch-sisal-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -75,7 +75,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-sisal-rope-we",
+        "Code": "immersion:drying-rack-birch-sisal-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -96,7 +96,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-sisal-rope-ns",
+        "Code": "immersion:drying-rack-kapok-sisal-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -117,7 +117,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-sisal-rope-we",
+        "Code": "immersion:drying-rack-kapok-sisal-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -138,7 +138,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-sisal-rope-ns",
+        "Code": "immersion:drying-rack-maple-sisal-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -159,7 +159,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-sisal-rope-we",
+        "Code": "immersion:drying-rack-maple-sisal-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -180,7 +180,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-sisal-rope-ns",
+        "Code": "immersion:drying-rack-oak-sisal-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -201,7 +201,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-sisal-rope-we",
+        "Code": "immersion:drying-rack-oak-sisal-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -222,7 +222,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-sisal-rope-ns",
+        "Code": "immersion:drying-rack-pine-sisal-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -243,7 +243,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-sisal-rope-we",
+        "Code": "immersion:drying-rack-pine-sisal-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],

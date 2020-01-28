@@ -12,7 +12,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-reeds-rope-ns",
+        "Code": "immersion:drying-rack-acacia-reeds-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -33,7 +33,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-reeds-rope-we",
+        "Code": "immersion:drying-rack-acacia-reeds-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -54,7 +54,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-reeds-rope-ns",
+        "Code": "immersion:drying-rack-birch-reeds-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -75,7 +75,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-reeds-rope-we",
+        "Code": "immersion:drying-rack-birch-reeds-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -96,7 +96,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-reeds-rope-ns",
+        "Code": "immersion:drying-rack-kapok-reeds-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -117,7 +117,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-reeds-rope-we",
+        "Code": "immersion:drying-rack-kapok-reeds-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -138,7 +138,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-reeds-rope-ns",
+        "Code": "immersion:drying-rack-maple-reeds-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -159,7 +159,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-reeds-rope-we",
+        "Code": "immersion:drying-rack-maple-reeds-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -180,7 +180,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-reeds-rope-ns",
+        "Code": "immersion:drying-rack-oak-reeds-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -201,7 +201,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-reeds-rope-we",
+        "Code": "immersion:drying-rack-oak-reeds-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -222,7 +222,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-reeds-rope-ns",
+        "Code": "immersion:drying-rack-pine-reeds-empty-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -243,7 +243,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-reeds-rope-we",
+        "Code": "immersion:drying-rack-pine-reeds-empty-we",
         "Type": "Block",
         "StackSize": 1
     }],

@@ -5,11 +5,11 @@
 		dissolveInWater: true
 	},
 	variantgroups: [
-		{ code: "type", states: ["spelt", "rice", "flax", "rye", "dryfruit","redmeat-dry" ] },
+		{ code: "type", states: ["spelt", "rice", "flax", "rye", "dryfruit","meat-dry" ] },
 	],
 	textureByType:{
 		"*-dryfruit":{ base: "item/food/dry-fruit" },
-		"*-redmeat-dry":{base: "item/food/dry-meat" },
+		"*-meat-dry":{base: "item/food/dry-meat" },
 		"*":{ base: "item/food/grain/{type}-flour" },
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },

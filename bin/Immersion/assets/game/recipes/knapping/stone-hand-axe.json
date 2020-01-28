@@ -1,6 +1,6 @@
 {
 		ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "peridotite"] },
-		pattern: [
+		pattern: [[
 			"___####___",
 			"__######__",
 			"__######__",
@@ -11,7 +11,7 @@
 			"___####___",
 			"___####___",
 			"____##____"
-		],
+		]],
 		name: "Stone Hand Axe ",
 		output: { type: "item", code: "axe-hand-{rock}"  }
 }

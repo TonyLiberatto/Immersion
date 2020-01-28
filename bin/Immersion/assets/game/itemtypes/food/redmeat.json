@@ -94,7 +94,7 @@
 	},
 	grindingPropsByType: {
 		"*-dry":{
-			grindedStack: { type: "item", code: "flour-redmeat-dry" }
+			grindedStack: { type: "item", code: "flour-meat-dry" }
 		},
 	},
 	materialDensity: 600,

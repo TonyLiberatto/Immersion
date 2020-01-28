@@ -2,17 +2,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-medium-blue-burned",
+		"Code": "game:food-bowl-small-blue-mutton-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
 		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-medium-blue-raw-meat",
+        "Code": "game:food-bowl-small-blue-mutton-salted",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -23,17 +23,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-medium-brown-burned",
+		"Code": "game:food-bowl-small-brown-mutton-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
 		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-medium-brown-raw-meat",
+        "Code": "game:food-bowl-small-brown-mutton-salted",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -44,17 +44,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-medium-fire-burned",
+		"Code": "game:food-bowl-small-fire-mutton-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
 		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-medium-fire-raw-meat",
+        "Code": "game:food-bowl-small-fire-mutton-salted",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -65,17 +65,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-medium-red-burned",
+		"Code": "game:food-bowl-small-red-mutton-raw",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "game:salt",
         "Type": "item",
 		"StackSize": 8
     },
     "Makes": [{
-        "Code": "game:food-bowl-medium-red-raw-meat",
+        "Code": "game:food-bowl-small-red-mutton-salted",
         "Type": "Block",
         "StackSize": 1
     }],

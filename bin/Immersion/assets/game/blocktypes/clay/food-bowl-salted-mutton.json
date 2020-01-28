@@ -1,34 +1,34 @@
 {
 	code: "food-bowl",	
 	behaviorsByType: {
-		"*-small-*-salted-meat": [ 
+		"*-small-*-mutton-salted": [ 
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 4 }  },
+				harvestedStack: { type: "item", code: "immersion:mutton-salted", quantity: { avg: 4 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
 			}},
 			{name: "UnstableFalling"}, { name: "SneakPlacing"}],
-		"*-medium-*-salted-meat": [ 
+		"*-medium-*-mutton-salted": [ 
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 8 }  },
+				harvestedStack: { type: "item", code: "immersion:mutton-salted", quantity: { avg: 8 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
 			}}, 
 			{name: "UnstableFalling"}, { name: "SneakPlacing"}],
-		"*-large-*-salted-meat": [ 
+		"*-large-*-mutton-salted": [ 
 			{name: "Harvestable", properties: { 
 				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "game:redmeat-salted", quantity: { avg: 16 }  },
+				harvestedStack: { type: "item", code: "immersion:mutton-salted", quantity: { avg: 16 }  },
 				harvestedBlockCode: "food-bowl-{size}-{color}-burned"
 			}}, 
 			{name: "UnstableFalling"}, { name: "SneakPlacing"}],
 	},
 	"entityClass": "Generic",
 	"entityBehaviorsByType": {
-		"*-raw-meat": [{
+		"*-mutton-salted": [{
             "name": "Transient",
             "properties": {
-                "convertFrom": "food-bowl-*-raw-meat",
+                "convertFrom": "food-bowl-*-mutton-raw",
                 "convertTo": "food-bowl-{size}-{color}-rotten",
                 "inGameHours": 48
             }
@@ -43,10 +43,10 @@
 				}
 			}
 		],
-		"*-salted-meat": [{
+		"*-mutton-salted": [{
             "name": "Transient",
             "properties": {
-                "convertFrom": "food-bowl-*-salted-meat",
+                "convertFrom": "food-bowl-*-mutton-salted",
                 "convertTo": "food-bowl-{size}-{color}-rotten",
                 "inGameHours": 96
             }
@@ -65,22 +65,22 @@
 	variantgroups: [
 		{ code:"size", states: ["small", "medium", "large"] },
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },		
-		{ code:"materialtype", states: [ "raw-meat", "salted-meat",] },
+		{ code:"materialtype", states: [ "mutton-raw", "mutton-salted",] },
 	],	
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": [""], "immersionblocks": [""] },
+	creativeinventory: { "general": ["*"], "immersionblocks": [""] },
 	replaceable: 1200,
 	resistance: 1.5,
 	maxStackSize: 1,
 	liquidSelectable: 1,
 	lightAbsorption: 0,
 	texturesByType: {					
-		"*-raw-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/raw" }},
-		"*-salted-meat": { all: { base: "block/clay/{color}-burned" },"meat": {base: "game:item/food/meat/cured" }},
+		"*-mutton-raw": { all: { base: "block/clay/{color}-burned" },"meat": {base: "immersion:item/food/meat/mutton-raw" }},
+		"*-mutton-salted": { all: { base: "block/clay/{color}-burned" },"meat": {base: "immersion:item/food/meat/mutton-cured" }},
 	},
 	shapeByType: {				
-		"*-raw-meat": { base: "block/clay/food-bowl/redmeat/{size}-redmeat" },
-		"*-salted-meat": { base: "block/clay/food-bowl/redmeat/{size}-redmeat" },
+		"*-mutton-raw": { base: "block/clay/food-bowl/mutton/{size}-mutton" },
+		"*-mutton-salted": { base: "block/clay/food-bowl/mutton/{size}-mutton" },
 	},
 	sounds: {
 		walk: "walk/stone",

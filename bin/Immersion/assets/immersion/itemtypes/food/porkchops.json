@@ -83,6 +83,11 @@
 			requiresContainer: false
 		}
 	},
+	grindingPropsByType: {
+		"*-dry":{
+			grindedStack: { type: "item", code: "game:flour-meat-dry" }
+		},
+	},
 	transitionablePropsByType: {
 		"*-raw": [
 			{

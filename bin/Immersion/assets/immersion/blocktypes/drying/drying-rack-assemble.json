@@ -5,7 +5,7 @@
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", ] },			
 		{ code:"orientation", states: ["ns", "we"] },
 	],	
-	creativeinventory: { "general": [""],  "immersionblocks": [""],  },
+	creativeinventory: { "general": ["*"],  "immersionblocks": [""],  },
 	drawtype: "json",
 	lightabsorption: 0,
 	sidesolid: {

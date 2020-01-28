@@ -2,17 +2,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-blue-burned",
+		"Code": "game:food-bowl-large-blue-burned",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "redmeat-raw",
         "Type": "item",
-		"StackSize": 4
+		"StackSize": 16
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-blue-raw-meat",
+        "Code": "game:food-bowl-large-blue-raw-meat",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -23,17 +23,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-brown-burned",
+		"Code": "game:food-bowl-large-brown-burned",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "redmeat-raw",
         "Type": "item",
-		"StackSize": 4
+		"StackSize": 16
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-brown-raw-meat",
+        "Code": "game:food-bowl-large-brown-raw-meat",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -44,17 +44,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-fire-burned",
+		"Code": "game:food-bowl-large-fire-burned",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "redmeat-raw",
         "Type": "item",
-		"StackSize": 4
+		"StackSize": 16
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-fire-raw-meat",
+        "Code": "game:food-bowl-large-fire-raw-meat",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -65,17 +65,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "game:food-bowl-small-red-burned",
+		"Code": "game:food-bowl-large-red-burned",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:redmeat-raw",
+        "Code": "redmeat-raw",
         "Type": "item",
-		"StackSize": 4
+		"StackSize": 16
     },
     "Makes": [{
-        "Code": "game:food-bowl-small-red-raw-meat",
+        "Code": "game:food-bowl-large-red-raw-meat",
         "Type": "Block",
         "StackSize": 1
     }],

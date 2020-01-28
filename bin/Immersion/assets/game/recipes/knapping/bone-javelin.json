@@ -1,6 +1,6 @@
 {
 	ingredient: { type: "item", code: "bone" },
-	pattern: [
+	pattern: [[
 			"_##____##_",
 			"####__####",
 			"####__####",
@@ -11,7 +11,7 @@
 			"####__####",
 			"####__####",
 			"#__#__#__#",
-		],
+		]],
 	name: "Javelin Head",
 	output: { type: "block", code: "javelin-head-north", stacksize: 4  }
 }

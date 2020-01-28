@@ -2,17 +2,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-acacia-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-acacia-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-leatherstrips-salt-mutton-ns",
+        "Code": "immersion:drying-rack-acacia-leatherstrips-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -23,17 +23,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-acacia-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-acacia-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-acacia-leatherstrips-salt-mutton-we",
+        "Code": "immersion:drying-rack-acacia-leatherstrips-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -44,17 +44,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-birch-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-birch-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-leatherstrips-salt-mutton-ns",
+        "Code": "immersion:drying-rack-birch-leatherstrips-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -65,17 +65,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-birch-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-birch-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-birch-leatherstrips-salt-mutton-we",
+        "Code": "immersion:drying-rack-birch-leatherstrips-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -86,17 +86,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-kapok-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-kapok-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-leatherstrips-salt-mutton-ns",
+        "Code": "immersion:drying-rack-kapok-leatherstrips-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -107,17 +107,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-kapok-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-kapok-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-kapok-leatherstrips-salt-mutton-we",
+        "Code": "immersion:drying-rack-kapok-leatherstrips-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -128,17 +128,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-maple-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-maple-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-leatherstrips-salt-mutton-ns",
+        "Code": "immersion:drying-rack-maple-leatherstrips-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -149,17 +149,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-maple-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-maple-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-maple-leatherstrips-salt-mutton-we",
+        "Code": "immersion:drying-rack-maple-leatherstrips-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -170,17 +170,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-oak-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-oak-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-leatherstrips-salt-mutton-ns",
+        "Code": "immersion:drying-rack-oak-leatherstrips-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -191,17 +191,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-oak-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-oak-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-oak-leatherstrips-salt-mutton-we",
+        "Code": "immersion:drying-rack-oak-leatherstrips-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -212,17 +212,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-pine-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-pine-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-leatherstrips-salt-mutton-ns",
+        "Code": "immersion:drying-rack-pine-leatherstrips-porkchops-salted-ns",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -233,17 +233,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-pine-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-pine-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:mutton-salted",
+        "Code": "immersion:porkchops-salted",
         "Type": "item",
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:drying-rack-pine-leatherstrips-salt-mutton-we",
+        "Code": "immersion:drying-rack-pine-leatherstrips-porkchops-salted-we",
         "Type": "Block",
         "StackSize": 1
     }],
