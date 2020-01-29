@@ -2,7 +2,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-acacia-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-acacia-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -23,7 +23,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-acacia-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-acacia-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -44,7 +44,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-birch-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-birch-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -65,7 +65,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-birch-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-birch-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -86,7 +86,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-kapok-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-kapok-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -107,7 +107,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-kapok-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-kapok-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -128,7 +128,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-maple-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-maple-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -149,7 +149,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-maple-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-maple-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -170,7 +170,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-oak-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-oak-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -191,7 +191,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-oak-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-oak-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -212,7 +212,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-pine-leatherstrips-rope-ns",
+		"Code": "immersion:drying-rack-pine-leatherstrips-empty-ns",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -233,7 +233,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:drying-rack-pine-leatherstrips-rope-we",
+		"Code": "immersion:drying-rack-pine-leatherstrips-empty-we",
         "Type": "Block",        
 		"Remove": true	
     },
