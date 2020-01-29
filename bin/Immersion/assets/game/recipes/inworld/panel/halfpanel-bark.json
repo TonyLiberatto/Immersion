@@ -4,7 +4,7 @@
     "Takes": {
 		"Code": "immersion:panel-aged-bark-*",
         "Type": "Block",		
-		"Remove": true	
+			
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -16,6 +16,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
@@ -24,7 +25,6 @@
     "Takes": {
 		"Code": "immersion:panel-acacia-bark-*",
         "Type": "Block",		
-		"Remove": true	
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -36,6 +36,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -43,8 +44,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:panel-birch-bark-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",	
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -56,6 +56,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -63,8 +64,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:panel-kapok-bark-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -76,6 +76,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -83,8 +84,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:panel-maple-bark-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -96,6 +96,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -103,8 +104,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:panel-oaks-bark-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -116,6 +116,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -123,8 +124,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:panel-pine-bark-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:saw-*",
@@ -136,6 +136,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  }, 

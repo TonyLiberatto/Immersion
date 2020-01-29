@@ -3,8 +3,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "game:bowlstamp-*",
-        "Type": "Block",        
-		"Remove": false	
+        "Type": "Block",	
     },
     "Tool": {
         "Code": "game:clay-blue",
@@ -17,6 +16,7 @@
         "StackSize": 1
     }],
     "IsTool": false,
+	"Remove": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -24,8 +24,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "game:bowlstamp-*",
-        "Type": "Block",        
-		"Remove": false	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:clay-fire",
@@ -38,6 +37,7 @@
         "StackSize": 1
     }],
     "IsTool": false,
+	"Remove": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -45,8 +45,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "game:bowlstamp-*",
-        "Type": "Block",        
-		"Remove": false	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:clay-red",
@@ -59,6 +58,7 @@
         "StackSize": 1
     }],
     "IsTool": false,
+	"Remove": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -66,8 +66,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "game:bowlstamp-*",
-        "Type": "Block",        
-		"Remove": false	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:clay-brown",
@@ -80,6 +79,7 @@
         "StackSize": 1
     }],
     "IsTool": false,
+	"Remove": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  }, 

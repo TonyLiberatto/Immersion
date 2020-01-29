@@ -3,8 +3,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-bamboo-brown-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-bamboo-brown-down",
@@ -16,6 +15,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -23,8 +23,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-bamboo-green-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-bamboo-green-down",
@@ -36,6 +35,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -43,8 +43,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-aged-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-aged-debarked-down",
@@ -56,6 +55,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
@@ -63,8 +63,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-acacia-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-acacia-debarked-down",
@@ -76,6 +75,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -83,8 +83,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-birch-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-birch-debarked-down",
@@ -96,6 +95,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -103,8 +103,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-kapok-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-kapok-debarked-down",
@@ -116,6 +115,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -123,8 +123,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-maple-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-maple-debarked-down",
@@ -136,6 +135,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -143,8 +143,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-oak-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-oak-debarked-down",
@@ -156,6 +155,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -163,8 +163,7 @@
     "Mode": "Create",
     "Takes": {
 		"Code": "immersion:door-assemble-pine-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:panel-pine-debarked-down",
@@ -176,6 +175,7 @@
         "StackSize": 2
     }],
     "IsTool": true,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },

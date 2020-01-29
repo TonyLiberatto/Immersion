@@ -3,8 +3,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-bamboo-brown-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "immersion:animal-leatherstrips",
@@ -17,6 +16,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -24,8 +24,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-bamboo-green-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",	
     },
     "Tool": {
         "Code": "immersion:animal-leatherstrips",
@@ -38,6 +37,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  }, 
@@ -45,8 +45,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-aged-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -59,6 +58,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
@@ -66,8 +66,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-acacia-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -80,6 +79,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -87,8 +87,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-birch-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",	
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -101,6 +100,7 @@
        
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -108,8 +108,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-kapok-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -122,6 +121,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -129,8 +129,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-maple-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -143,6 +142,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -150,8 +150,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-oak-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -164,6 +163,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -171,8 +171,7 @@
     "Mode": "Swap",
     "Takes": {
 		"Code": "immersion:panel-pine-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
+        "Type": "Block",
     },
     "Tool": {
         "Code": "game:hinges-*",
@@ -185,6 +184,7 @@
         
     }],
     "IsTool": false,
+	"Remove": true,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  }, 
