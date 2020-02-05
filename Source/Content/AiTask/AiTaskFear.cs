@@ -39,6 +39,7 @@ namespace Immersion
 
             runAwayFrom = (IPointOfFear)poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 1000, (poi) => 
             {
+                if (poi == null) return false;
                 float? fear = (poi as IPointOfFear)?.FearRadius;
                 if (fear == null) return false;
                 return poi.Position.DistanceTo(entity.Pos.XYZ) < fear && poi.Type == "scary";
