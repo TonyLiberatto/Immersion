@@ -1,0 +1,44 @@
+[ 
+ {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "firepit-construct1",
+        "Type": "Block",
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-*-bark-ud",
+        "Type": "Block",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "firestarter",
+        "Type": "item",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+	"Remove": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Create",
+    "Takes": {
+		"Code": "firepit-construct1",
+        "Type": "Block",
+    },
+    "Tool": {
+        "Code": "stick",
+        "Type": "item",
+		"StackSize": 1		
+    },
+    "Makes": [{
+        "Code": "firestarter",
+        "Type": "item",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+	"Remove": true,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },    
+]

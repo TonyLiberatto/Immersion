@@ -2,7 +2,13 @@
 	code: "bighornpelt",
 	class: "BlockSign",
 	enabled: true,
-	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	behaviors: [
+	{name: "Harvestable", properties: { 
+				harvestTime: 0.6, 
+				harvestedStack: { type: "item", code: "immersion:animal-leatherstrips", quantity: { avg: 4 }  },
+				harvestedBlockCode: "immersion:bighornrug-ground-{side}"
+			}},
+	{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },

@@ -1,0 +1,100 @@
+{
+	code: "firepit-flatstone",
+	
+	attributes: {
+		handbook: {
+			include: true,			
+		}
+	},	
+	class: "BlockFirepit",
+	entityClass: "Firepit",
+	behaviors: [{name: "Container"}, {name: "Unstable"}, { name: "Ignitable" }],
+	renderpass: "OpaqueNoCull",
+	shape: { base: "block/wood/firepit/lit-normal-flatstone-bread" },
+	textures: {
+		"log": { base: "game:block/wood/firepit/log" },
+		"ceramic": { base: "game:block/clay/ceramic" },
+		"ember": { base: "game:block/ember" },
+		"ashes": { base: "game:block/wood/firepit/ground" },
+		"fire": { base: "game:block/wood/firepit/fire" },
+		"tinder": { base: "game:block/hay/normal-side" },
+		"rock": { base: "game:block/stone/rock/andesite1" },
+		"flaxbread": { base: "game:item/food/grain/flaxbread" }
+	},
+	creativeinventory: { general: ["firepit-*"], decorative: ["firepit-*"] },
+	blockmaterial: "Wood",
+	lightAbsorption: 0,
+	lightHsvByType: {
+		
+		"firepit-*": [7, 7, 16],
+	},
+	particlePropertiesByType: {
+		
+		"firepit-*": [
+			{
+				"__comment": "Ember cubicles",
+				hsvaColor: [{ avg: 30, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+				gravityEffect: { dist: "invexp", avg: -0.1, var: 0.4 },
+				posOffset: [ { avg: 0, var: 0.2 }, { avg: -0.4, var: 0 }, { avg: 0, var: 0.2 }],
+				velocity: [ { avg: 0, var: 0.15 }, { avg: 0.5, var: 0.1 }, { avg: 0, var: 0.15 }],
+				quantity: { avg: 0.015 },
+				size: { avg: 0.4, var: 0 },
+				sizeEvolve: { transform: "quadratic", factor: -0.7 },
+				lifeLength: { avg: 1.5 },
+				vertexFlags: 128,
+				windAffectednes: 0.2
+			},
+			{
+				"__comment": "Smoke quads",
+				hsvaColor: [{ avg: 0, var: 0 }, { avg: 0, var: 0 }, { avg: 70, var: 30 },  { avg: 220, var: 50 }],
+				opacityEvolve: { transform: "linear", factor: -255 },
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.2 }, { avg: -0.4, var: 0 }, { avg: 0, var: 0.2 }],
+				velocity: [ { avg: 0, var: 0.025 }, { avg: 0.2, var: 0.05 }, { avg: 0, var: 0.025 }],
+				quantity: { avg: 0.08 },
+				size: { avg: 0.3, var: 0.05 },
+				sizeEvolve: { transform: "linear", factor: 1.5 },
+				particleModel: "Quad",
+				lifeLength: { avg: 18 },
+				selfPropelled: true,
+				windAffectednes: 0.7
+			},
+			{
+				"__comment": "Fire quads",
+				hsvaColor: [{ avg: 20, var: 20 }, { avg: 255, var: 50 }, { avg: 255, var: 50 },  { avg: 255, var: 0 }],
+				opacityEvolve: { transform: "quadratic", factor: -16 },
+				gravityEffect: { avg: 0, var: 0 },
+				posOffset: [ { avg: 0, var: 0.1 }, { avg: -0.4, var: 0 }, { avg: 0, var: 0.1 }],
+				velocity: [ { avg: 0, var: 0.1 }, { avg: 0.125, var: 0.05 }, { avg: 0, var: 0.1 }],
+				quantity: { avg: 0.4 },
+				size: { avg: 0.25, var: 0.05 },
+				lifeLength: { avg: 0.5 },
+				sizeEvolve: { transform: "linear", factor: 0.5 },
+				particleModel: "Quad",
+				vertexFlags: 128,
+				windAffectednes: 0.7
+			}
+		]
+	},
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	replaceable: 10,
+	resistance: 2.5,
+	collisionbox: null,
+	selectionbox: { x1: 0.125, y1: 0, z1: 0.125, x2: 0.875, y2: 0.5, z2: 0.875 },
+	guiTransform: {
+		origin: { x: 0.5, y: 0.0625, z: 0.5 },
+		scale: 1.5
+	},
+	drops: [],
+	materialDensity: 600,
+	sounds: {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks"
+	},
+}

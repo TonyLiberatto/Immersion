@@ -6,6 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
+		"ChoppingBlock": "block/wood/choppingblock/acacia"
 	},
 	"elements": [
 		{
