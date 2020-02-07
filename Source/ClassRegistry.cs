@@ -45,6 +45,7 @@ namespace Immersion
             Api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
             Api.RegisterBlockEntityClass("Stairs", typeof(BlockEntityStairs));
             Api.RegisterBlockEntityClass("IngotPileOverride", typeof(IngotPileOverride));
+            Api.RegisterBlockEntityClass("Well", typeof(BlockEntityWell));
         }
 
         public void RegisterBlockEntityBehaviors()
@@ -83,6 +84,7 @@ namespace Immersion
             Api.RegisterBlockClass("BlockSeaweed", typeof(BlockSeaweedOverride)); //
             Api.RegisterBlockClass("BlockPalmTree", typeof(BlockPalmTree));
             Api.RegisterBlockClass("BlockIngotPile", typeof(BlockIngotPileOverride)); //
+            Api.RegisterBlockClass("BlockWell", typeof(BlockWell));
         }
 
         public void RegisterBlockBehaviors()

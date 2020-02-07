@@ -119,6 +119,7 @@
     <Compile Include="Source\Content\BlockEntity\BlockEntityChimney.cs" />
     <Compile Include="Source\Content\BlockEntityBehaviors\BEBehaviorTransient.cs" />
     <Compile Include="Source\Content\BlockEntity\IngotPileOverride.cs" />
+    <Compile Include="Source\Content\Block\BlockWell.cs" />
     <Compile Include="Source\Content\Item\ItemIngotOverride.cs" />
     <Compile Include="Source\Content\Block\BlockChandelierFix.cs" />
     <Compile Include="Source\Content\Block\BlockCheeseCloth.cs" />
