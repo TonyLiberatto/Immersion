@@ -6,7 +6,7 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-					{ title: "handbook-item-sources", text: "Place a Bamboo panel down on the ground, right click with 2 leatherstrips to create the bamboo door assemble, right click with another brown bamboo panel to complete the door, pick it up to have the door." }
+					{ title: "handbook-item-sources", text: "Both panels must be the same bamboo type to craft this block. Place one bamboo panel on a solid surface (RMB). Add two leather strips as hinges (Sneak + RMB). Complete the door by adding a second bamboo panel (Sneak + RMB). Break with any tool and replace to use the door." }
 					]
 			
 		}

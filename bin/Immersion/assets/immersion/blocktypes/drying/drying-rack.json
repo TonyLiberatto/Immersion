@@ -1,5 +1,16 @@
 {
 	code: "drying-rack",
+	attributes: {
+		"handbook": {
+            "include": true,
+            "extraSections": [
+                {
+                    "title": "Created by",
+                    "text": "Place one barked very thin branch on a solid surface to begin the first frame (RMB). Add three additional branches to construct the frames (Sneak + RMB).Add any cordage (sisal twine, sinew, leather strips, reeds) to connect the frames and complete the structure (Sneak + RMB). When complete, break the drying rack using a stone or higher tier tool to collect. Replace the drying rack in a sunny spot to dry up to 4 salted raw meat."
+                }
+            ]
+        }
+	},
 	behaviorsByType: {
 		"*-dry-meat-*": [ {name: "NWOrientable"},
 			{name: "Harvestable", properties: { 

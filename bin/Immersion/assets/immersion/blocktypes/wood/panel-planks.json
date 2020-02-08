@@ -5,13 +5,13 @@
 		handbook: {
 			groupBy: ["panel-*"],
 			extraSections: [
-					{ title: "handbook-item-sources", text: "Place a log on a solid surface (RMB). Break the log using a saw to create 4 barked and 4 debarked panels (LMB)."}
+					{ title: "handbook-item-sources", text: "Place a plank block on a solid surface (RMB). Break the block using a saw to create 8 planks panels (LMB)."}
 					]
 		}
 	},
 	variantgroups: [
 		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
-		{ code: "style", states: ["bark", "debarked"]},
+		{ code: "style", states: [ "planks"]},
 		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
 	],
 	shapebytype: {

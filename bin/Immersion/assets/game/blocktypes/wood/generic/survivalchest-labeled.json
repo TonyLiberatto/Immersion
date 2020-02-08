@@ -3,7 +3,16 @@
     "class": "BlockLabeledChest",
     "entityclass": "LabeledChest",
     "attributes": {
-        "partialAttachable": true,
+        "handbook": {
+            "include": true,
+            "extraSections": [
+                {
+                    "title": "Created by",
+                    "text": "All panels must be the same wood type to craft this block. Place one debarked panel of the selected wood type on a solid surface (RMB). Add four very thin branches (of any wood type) to create the frame for the sides (Sneak + RMB). Add four debarked panels to construct the sides (Sneak + RMB). Add two metal hinges to prepare the container for the top (Sneak + RMB). For the Bamboo chests, Add two leather strips as hinges (Sneak + RMB). To construct the top, add one debarked panel (Sneak + RMB).  Add a label using a small sisal rug (Sneak + RMB). Break with any tool and replace to use the container. "
+                }
+            ]
+        },
+		"partialAttachable": true,
         "inventoryClassName": "chest",
         "defaultType": "normal-aged",
         "types": [ "normal-aged", "normal-acacia", " normal-bamboo-brown", "normal-bamboo-brown", "normal-birch", "normal-kapok", "normal-maple", "normal-oak", "normal-pine", ],

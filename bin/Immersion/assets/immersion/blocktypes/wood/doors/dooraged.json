@@ -3,6 +3,16 @@
 	class: "BlockDoor",
 	renderpass: "OpaqueNoCull",
 	heldTpIdleAnimation: "holdunderarm",
+	attributes: {
+		handbook: {
+			extraSections: [
+					{ title: "handbook-item-sources", 
+					text: "Both panels must be the same wood type to craft this block. Place one debarked wood panel on a solid surface (RMB). Add two metal hinges (Sneak + RMB). Complete the door by adding a second wood panel (Sneak + RMB). Break with any tool and replace to use the door." 
+					}
+			]
+			
+		}
+	},
 	sidesolid: {
 		all: false
 	},

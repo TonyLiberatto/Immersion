@@ -8,7 +8,7 @@
 	attributes: {
 		handbook: {			
 			extraSections: [
-				{ title: "handbook-item-sources", text: "To make a Blue Oil Lamp,  place an empty blue bowl down on any surface and right click the bowl with a lump of fat. Once the bowl is filled with fat, right clicking with a torch in your active hand will light the fat in the bowl, and complete the lamp. Right click to pick up and place the oil lamp where you desire." }
+				{ title: "handbook-item-sources", text: "Place a burned clay bowl onto a solid surface (RMB). Fill the bowl with a lump of fat (Sneak + RMB). Ignite the lamp using the torch (Sneak + RMB). This action consumes the torch! When complete, break the lamp to collect." }
 			]
 		}
 	},

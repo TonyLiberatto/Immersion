@@ -9,7 +9,7 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-				{ title: "handbook-collectible-sources", text: "Place a Very-thin debarked branch down, shift right click with sisal twine, shift right click again with 4 of the same very thin debarked branch to make the structure. Now shift right click with a large sisal rug to make the Burdenbasket." }
+				{ title: "handbook-collectible-sources", text: "Place one very thin branch 'vertically' on a solid surface to begin the basket (RMB). Add cordage to the frame (Sneak + RMB). Add (4) very thin branches to complete the bag frame (Sneak + RMB). Add a large sisal rug to complete the item (Sneak + RMB). To collect the item, break with an empty hand or any tool. When collected, the burden bag will be placed in the first available inventory container slot." }
 			]
 		},
 		backpack: {

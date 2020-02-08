@@ -6,8 +6,10 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-					{ title: "handbook-item-sources", text: "Place a Debarked panel down on the ground, right click with 2 Metal Hinges to create the door assemble, right click with another Debarked panel to complete the door, pick it up to have the door." }
-					]
+					{ title: "handbook-item-sources", 
+					text: "Both panels must be the same wood type to craft this block. Place one debarked wood panel on a solid surface (RMB). Add two metal hinges (Sneak + RMB). Complete the door by adding a second wood panel (Sneak + RMB). Break with any tool and replace to use the door." 
+					}
+			]
 			
 		}
 	},

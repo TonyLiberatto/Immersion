@@ -262,9 +262,9 @@
   "block-chestframe-maple-*": "Maple Chest Frame",
   "block-chestframe-oak-*": "Oak Chest Frame",
   "block-chestframe-pine-*": "Pine Chest Frame",  
-  "blockdesc-chestframe-bamboo-brown-*": "shift right click with 4 Brown Bamboo Panels to make the Brown Bamboo Chest Assemble",
-  "blockdesc-chestframe-bamboo-green-*": "shift right click with 4 Green Bamboo Panels to make the Green Bamboo Chest Assemble",
-  "blockdesc-chestframe-*": "shift right click with 4 Debarked Wood Panels to make the Chest Assemble",  
+  "blockdesc-chestframe-bamboo-brown-*": "Sneak + RMB with 4 Brown Bamboo Panels to build the Brown Bamboo Chest Assembly",
+  "blockdesc-chestframe-bamboo-green-*": "Sneak + RMB with 4 Green Bamboo Panels to build the Green Bamboo Chest Assembly",
+  "blockdesc-chestframe-*": "Sneak RMB with 4 Debarked Wood Panels to build the Chest Assembly", 
   
   "block-chestsides-bamboo-green-*": "Green Bamboo Chest Sides",
   "block-chestsides-bamboo-brown-*": "Brown Bamboo Chest Sides",
@@ -275,8 +275,8 @@
   "block-chestsides-maple-*": "Maple Chest Sides",
   "block-chestsides-oak-*": "Oak Chest Sides",
   "block-chestsides-pine-*": "Pine Chest Sides",  
-  "blockdesc-chestsides-bamboo-*": "shift right click with 2 leatherstrips to make a Latched Bamboo Chest",  
-  "blockdesc-chestsides-*": "shift right click with 2 Hinges to make a latched Chest",   
+  "blockdesc-chestsides-bamboo-*": "Add 2 leather strips using Sneak + RMB to make a Latched Bamboo Chest" ,  
+  "blockdesc-chestsides-*": "Add 2 metal hinges (Sneak + RMB) to create a Latched Wood Chest",    
     
   "block-chestlatched-bamboo-brown-*": "Latched Brown Bamboo Chest",
   "block-chestlatched-bamboo-green-*": "Latched GreenBamboo Chest",
@@ -287,10 +287,10 @@
   "block-chestlatched-maple-*": "Latched Maple Chest",
   "block-chestlatched-oak-*": "Latched Oak Chest",
   "block-chestlatched-pine-*": "Latched Pine Chest",
-  "blockdesc-chestlatched-*": "shift right click with a panel to make the Complete Chest",
+  "blockdesc-chestlatched-*": "Sneak + RMB with a panel to complete the chest",
   
   "block-chestcomplete-bamboo-green-*": "Completed Green Bamboo Chest",
-  "block-chestcomplete-bamboo-brown-*": "Completed Acacia Chest",
+  "block-chestcomplete-bamboo-brown-*": "Completed Brown Bamboo Chest",
   "block-chestcomplete-acacia-*": "Completed Acacia Chest",
   "block-chestcomplete-aged-*": "Completed Aged Chest",
   "block-chestcomplete-birch-*": "Completed Birch Chest",
@@ -298,7 +298,7 @@
   "block-chestcomplete-maple-*": "Completed Maple Chest",
   "block-chestcomplete-oak-*": "Completed Oak Chest",
   "block-chestcomplete-pine-*": "Completed Pine Chest",
-  "blockdesc-chestcomplete-*": "shift right click with sisal rug to make a Labeled chest or pick up to have a regular Chest",  
+  "blockdesc-chestcomplete-*": "Add a label using a small sisal rug (Sneak + RMB). Break at this step to collect a chest without a label",    
   
   "block-labeledchestcomplete-bamboo-green-*":"Labeled Green Bamboo Chest",
   "block-labeledchestcomplete-bamboo-brown-*":"Labeled Brown Bamboo Chest",
@@ -309,7 +309,7 @@
   "block-labeledchestcomplete-maple-*":"Labeled Maple Chest",
   "block-labeledchestcomplete-oak-*":"Labeled Oak Chest",
   "block-labeledchestcomplete-pine-*":"Labeled Pine Chest",  
-  "blockdesc-labeledchestcomplete-*":"Pick Up to get a Labeled Chest",  
+  "blockdesc-labeledchestcomplete-*":"Break to collect the Labeled Chest", 
   
   "block-normal-generic-acacia-chest-*": "Immersion Acacia Chest",
   "block-normal-generic-aged-chest-*": "Immersion Aged Chest",
@@ -364,6 +364,7 @@
   "block-halfpanel-maple-planks-*":"Maple Planks Half Panel",
   "block-halfpanel-oak-planks-*":"oak Planks Half Panel",
   "block-halfpanel-pine-planks-*":"Pine Planks Half Panel",
+  "blockdesc-halfpanel-*-planks-*":"Used to construct drying tray",
   
   "block-backpack": "Backpack",
   "block-basket": "Basket",
@@ -580,57 +581,53 @@
   "block-greendoor-*-down-closed-left": "Green Bamboo Door",
   
   "block-door-full-bamboo-brown-*": "Brown Bamboo Door Complete",
-  "blockdesc-door-full-bamboo-brown-*": "Pick Up to have a Brown Bamboo Door",
+  "blockdesc-door-full-bamboo-brown-*": "Break to collect, and place to use the Bamboo Door",
   "block-door-full-bamboo-green-*": "Green Bamboo Door Complete",
-  "blockdesc-door-full-bamboo-green-*": "Pick Up to have a Green Bamboo Door",
+  "blockdesc-door-full-bamboo-green-*": "Break to collect, and place to use the Bamboo Door",
   "block-door-assemble-bamboo-brown-*": "Brown Bamboo Door Assemble",
-  "blockdesc-door-assemble-bamboo-brown-*": "shift right click with a Brown Bamboo Panel to make the Full Brown Bamboo Door",
+  "blockdesc-door-assemble-bamboo-brown-*": "Add a brown bamboo panel (Sneak + RMB) to complete the Brown Bamboo Door",
   "block-door-assemble-bamboo-green-*": "Green Bamboo Door Assemble",
-  "blockdesc-door-assemble-bamboo-green-*": "shift right click with a Green Bamboo Panel to make the Full Brown Bamboo Door",
+  "blockdesc-door-assemble-bamboo-green-*": "Add a green bamboo panel (Sneak + RMB) to complete the Green Bamboo Door",
   
   "block-door-full-acacia-*": "Acacia Door Complete",
-  "blockdesc-door-full-acacia-*": "Pick Up to have an Acacia Door",
+  "blockdesc-door-full-acacia-*":  "Break to collect the complete Acacia Door",
+  "block-door-full-aged-*": "Aged Door Complete",
+  "blockdesc-door-full-aged-*":  "Break to collect the complete Aged Door",
   "block-door-full-birch-*": "Birch Door Complete",
-  "blockdesc-door-full-birch-*": "Pick Up to have a Birch Door",
+  "blockdesc-door-full-birch-*":  "Break to collect the complete Birch Door",
   "block-door-full-kapok-*": "Kapok Door Complete",
-  "blockdesc-door-full-kapok-*": "Pick Up to have a Kapok Door",
+  "blockdesc-door-full-kapok-*":  "Break to collect the complete Kapok Door",
   "block-door-full-maple-*": "Maple Door Complete",
-  "blockdesc-door-full-maple-*": "Pick Up to have an Maple Door",
+  "blockdesc-door-full-maple-*": "Break to collect the complete Maple Door",
   "block-door-full-oak-*": "Oak Door Complete",
-  "blockdesc-door-full-oak-*": "Pick Up to have an Oak Door",
+  "blockdesc-door-full-oak-*":  "Break to collect the complete Oak Door",  
   "block-door-full-pine-*": "Pine Door Complete",
-  "blockdesc-door-full-pine-*": "Pick Up to have a Pine Door",
+  "blockdesc-door-full-pine-*":  "Break to collect the complete Pine Door",
   
+  "block-door-assemble-aged-*": "Aged Door Assemble",
+  "blockdesc-door-assemble-aged-*": "Add an Aged Debarked Panel (Sneak + RMB) to complete the Aged Door",
   "block-door-assemble-acacia-*": "Acacia Door Assemble",
-  "blockdesc-door-assemble-acacia-*": "shift right click with an Acacia Debarked Panel to make the Full Acacia Door",
+  "blockdesc-door-assemble-acacia-*": "Add an Acacia Debarked Panel (Sneak + RMB) to complete the Acacia Door",   
   "block-door-assemble-birch-*": "Birch Door Assemble",
-  "blockdesc-door-assemble-birch-*": "shift right click with a Birch Debarked Panel to make the Full Birch Door",
+  "blockdesc-door-assemble-birch-*":  "Add a Birch Debarked Panel (Sneak + RMB) to complete the Birch Door", 
   "block-door-assemble-kapok-*": "Kapok Door Assemble",
-  "blockdesc-door-assemble-kapok-*": "shift right click with a Kapok Debarked Panel to make the Full Kapok Door",
+  "blockdesc-door-assemble-kapok-*":  "Add a Kapok Debarked Panel (Sneak + RMB) to complete the Kapok Door", 
   "block-door-assemble-maple-*": "Maple Door Assemble",
-  "blockdesc-door-assemble-maple-*": "shift right click with a Maple Debarked Panel to make the Full Maple Door",
+  "blockdesc-door-assemble-maple-*": "Add a Maple Debarked Panel (Sneak + RMB) to complete the Maple Door", 
   "block-door-assemble-oak-*": "Oak Door Assemble",
-  "blockdesc-door-assemble-oak-*": "shift right click with an Oak Debarked Panel to make the Full Oak Door",
+  "blockdesc-door-assemble-oak-*":  "Add an Oak Debarked Panel (Sneak + RMB) to complete the Oak Door", 
   "block-door-assemble-pine-*": "Pine Door Assemble",
-  "blockdesc-door-assemble-pine-*": "shift right click with a Pine Debarked Panel to make the Full Pine Door",
+  "blockdesc-door-assemble-pine-*":  "Add a Pine Debarked Panel (Sneak + RMB) to complete the Pine Door", 
   
   "block-basket-frame-*": "Basket frame",
   "blockdesc-basket-frame-*": "shift right click with 4 Reeds to make a Basket",
   
   "block-bag-assembly-*": "Bag frame",
   "blockdesc-bag-assembly-*-bark-leatherstrips": "shift right click with 4 hides to make a Backpack",
-  "blockdesc-bag-assembly-*-bark-sisal": "shift right click with a Large Sisal Rug to make a Burden Basket",
-  
-  
-  
-  
-  
-  
-  
-  
+  "blockdesc-bag-assembly-*-bark-sisal": "shift right click with a Large Sisal Rug to make a Burden Basket", 
   
   "block-door-full-bamboo-*":"Completed Bamboo Door",
-  "blockdesc-door-full-bamboo-*":"Pick Up to get a Bamboo Door",
+  "blockdesc-door-full-bamboo-*":"Break to collect, and place to use the Bamboo Door",
   
   "block-panel-bamboo-brown-*":"Brown Bamboo Panel",
   "block-panel-bamboo-green-*":"Green Bamboo Panel",
@@ -649,8 +646,8 @@
   "block-panel-pine-debarked-*":"Pine Debarked Panel",
   "block-panel-kapok-debarked-*":"Kapok Debarked Panel",
   "block-panel-maple-debarked-*":"Maple Debarked Panel",
-  "blockdesc-panel-bamboo-*":"place on ground or walls for decoration, on ground shift right click with leather strips to make Door Assemble, or Very Thin Branches to make a Chest Frame, or bamboo stakes to make bamboo planks.",
-  "blockdesc-panel-*-planks-*":"place on ground or walls for decoration.",
+  "blockdesc-panel-bamboo-*":"Place on ground (Shift + RMB) and add materials to construct blocks. Add leather strips to begin Door Assembly,  Very Thin Branches to create a Bamboo Chest Frame, or bamboo stakes to craft bamboo planks. Can be placed on walls or floors for decoration.",
+  "blockdesc-panel-*-planks-*":"Place on ground (Shift + RMB) and add materials to construct blocks.  Add Very Thin Branches to create a drying tray. Can be placed on walls or floors for decoration. Place on the ground and use the saw to create half panels.",
   "blockdesc-panel-*-bark-*":"place on ground or walls for decoration.",
   "blockdesc-panel-*-debarked-*":"place on ground or walls for decoration, on ground shift right click with hinges to make Door Assemble, or Very Thin Branches to make a Chest Frame.",
   
@@ -660,7 +657,7 @@
   "recipeingredient-item-rabbit-raw": "rabbit",
 
   "block-scaffolding": "Scaffolding",
-  "blockdesc-scaffolding": "Climb just like ladders, break to come down safelly.",
+  "blockdesc-scaffolding":  "Use these blocks as portable ladders. Climb up the blocks (Sneak + RMB, as a ladder), break the blocks to descend safely.",
 
   "block-rooframp-corner-acacia-bark-north": "Corner Acacia Bark Ramp Roof",
   "block-rooframp-corner-birch-bark-north": "Corner Birch Bark Ramp Roof",
