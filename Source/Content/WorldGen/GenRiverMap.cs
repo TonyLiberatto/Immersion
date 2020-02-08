@@ -16,20 +16,21 @@ namespace Immersion
     {
         ICoreServerAPI api;
         IWorldGenBlockAccessor blockAccessor;
-        MapLayerBase riverGen;
+        MapLayerBase aquiferGen;
         int noiseSizeRiver;
         public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<ModifyLakes>().config; }
 
         public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
+        public override double ExecuteOrder() => 0.1;
 
-        public override bool ShouldLoad(EnumAppSide forSide) => false;// forSide == EnumAppSide.Server;
+        public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
             api.Event.MapRegionGeneration(OnMapRegionGen, "standard");
             api.Event.InitWorldGenerator(InitWorldGen, "standard");
-            api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.Vegetation, "standard");
+            api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
             api.Event.GetWorldgenBlockAccessor(c => blockAccessor = c.GetBlockAccessor(true));
         }
 
@@ -37,7 +38,7 @@ namespace Immersion
         {
             mapRegion.ModData["rivermap"] = JsonUtil.ToBytes(
                 new IntMap() { 
-                    Data = riverGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1),
+                    Data = aquiferGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1),
                     BottomRightPadding = 1,
                     Size = noiseSizeRiver + 1
                 }
@@ -47,15 +48,14 @@ namespace Immersion
         public void InitWorldGen()
         {
             long seed = api.WorldManager.Seed;
-            riverGen = new MapLayerPerlin(seed + 1, 6, 0.9f, TerraGenConfig.beachMapScale / 16, 255, new double[] { 0.2f, 0.2f, 0.2f, 0.2f, 0.2f, 0.2f });
-            noiseSizeRiver = api.WorldManager.RegionSize / TerraGenConfig.beachMapScale;
+            aquiferGen = new MapLayerPerlin(seed + 46841, 6, 0.1f, 1, 255, new double[] { 0.02f, 0.02f, 0.02f, 0.02f, 0.02f, 0.02f });
+            noiseSizeRiver = api.WorldManager.RegionSize / 16;
         }
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
             IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["rivermap"]);
-            Vec3i climate = chunks[0].MapChunk.MapRegion.ClimateMap.ToClimateVec(chunkX, chunkZ, api.WorldManager.RegionSize, chunksize2);
-            ushort[] heightMap = chunks[0].MapChunk.RainHeightMap;
+            //ushort[] heightMap = chunks[0].MapChunk.RainHeightMap;
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
             int rdx = chunkX % regionChunkSize;
@@ -72,24 +72,42 @@ namespace Immersion
             {
                 for (int z = 0; z < chunksize2; z++)
                 {
-                    NormalizedSimplexNoise noise = NormalizedSimplexNoise.FromDefaultOctaves(4, 1.0, 1.0, api.WorldManager.Seed);
-                    int posY = (int)(TerraGenConfig.seaLevel - 8 - (noise.Noise(z, x) * 2));
-                    float riverRel = GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f;
-                    int posYAlt = posY;
+                    SimplexNoise noise = SimplexNoise.FromDefaultOctaves(2, 0.1, 1.0, api.WorldManager.Seed);
+                    double n = noise.Noise(rdx + x, rdx + z);
+
+                    float riverRel = 1.0f - (GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f);
+                    if (riverRel > 0.5) continue;
+
+                    int sub = (int)Math.Round(riverRel * 8);
                     
-                    while (posYAlt > posY - 4 - (noise.Noise(x, z) * 2))
+                    int maxY = TerraGenConfig.seaLevel - 20 - (int)Math.Round(n * 2);
+                    int minY = maxY - sub;
+
+                    int dY = maxY;
+                    int rockID = chunks[0].MapChunk.TopRockIdMap[z * chunksize + x];
+                    Vec2i iMax = new Vec2i((maxY + 1) / chunksize2, (chunksize2 * ((maxY + 1) % chunksize2) + z) * chunksize2 + x);
+                    Vec2i iMin = new Vec2i((minY - 1) / chunksize2, (chunksize2 * ((minY - 1) % chunksize2) + z) * chunksize2 + x);
+
+                    if (chunks[iMax.X].Blocks[iMax.Y] == 0)
                     {
-                        GenRiver(x, posYAlt, z, chunks, riverRel);
-                        posYAlt--;
+                        chunks[iMax.X].Blocks[iMax.Y] = rockID;
+                    }
+                        
+                    if (chunks[iMin.X].Blocks[iMin.Y] == 0)
+                    {
+                        chunks[iMin.X].Blocks[iMin.Y] = rockID;
+                    }
+
+                    while (dY >= minY)
+                    {
+                        //double n3 = noise.Noise(x, dY, z);
+                        //if (n3 > 0.5) { dY--; continue; }
+
+                        chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = config.LakeWaterBlockId;
+                        dY--;
                     }
                 }
             }
-        }
-
-        private void GenRiver(int x, int posY, int z, IServerChunk[] chunks, float riverRel)
-        {
-            if (riverRel > 0.5 || chunks.Count() - 1 < posY / chunksize2) return;
-            chunks[posY / chunksize2].Blocks[(chunksize2 * (posY % chunksize2) + z) * chunksize2 + x] = config.LakeWaterBlockId;
         }
     }
 }

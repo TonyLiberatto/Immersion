@@ -1,0 +1,15 @@
+{
+    "code": "wellpipe",
+    "creativeInventory": { "general": ["*"] },
+    "textures": {
+        "andesite1": {
+            "base": "block/stone/cobblestone/andesite*"
+        }
+    },
+    "shape": {
+        "base": "block/stone/wellpipe"
+    },
+    "sidesolid": { "all": false, "down": true, "up": true },
+    "sideopaque": { "all": false },
+    "lightAbsorption": 0
+}

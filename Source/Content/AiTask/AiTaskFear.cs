@@ -36,14 +36,16 @@ namespace Immersion
         public override bool ShouldExecute()
         {
             runAwayFrom = null;
-
-            runAwayFrom = (IPointOfFear)poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 1000, (poi) => 
-            {
-                if (poi == null) return false;
-                float? fear = (poi as IPointOfFear)?.FearRadius;
-                if (fear == null) return false;
-                return poi.Position.DistanceTo(entity.Pos.XYZ) < fear && poi.Type == "scary";
-            });
+            try { 
+                runAwayFrom = poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 1000, (poi) => 
+                {
+                    if (poi == null) return false;
+                    float? fear = (poi as IPointOfFear)?.FearRadius;
+                    if (fear == null) return false;
+                    return poi.Position.DistanceTo(entity.Pos.XYZ) < fear && poi.Type == "scary";
+                }) as IPointOfFear;
+            }
+            catch(Exception) { }
 
             return runAwayFrom != null;
         }

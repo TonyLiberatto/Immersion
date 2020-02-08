@@ -1,0 +1,23 @@
+{
+    "code": "well",
+    "class": "BlockWell",
+    "entityClass": "Well",
+    "creativeInventory": { "general": ["*"] },
+    "textures": {
+        "andesite1": {
+            "base": "block/stone/cobblestone/andesite*"
+        },
+        "rope": {
+            "base": "immersion:block/rope"
+        },
+        "oak": {
+            "base": "block/wood/oak"
+        }
+    },
+    "shape": {
+        "base": "block/stone/well"
+    },
+    "sidesolid": { "all": false, "down": true, "up": true },
+    "sideopaque": { "all": false },
+    "lightAbsorption": 0
+}

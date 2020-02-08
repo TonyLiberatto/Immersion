@@ -18,6 +18,7 @@ namespace Immersion
 {
     class ItemPropick : ItemProspectingPick
     {
+        public Dictionary<string, bool> PreventDuplicates = new Dictionary<string, bool>();
 
         public override void OnLoaded(ICoreAPI api)
         {
@@ -42,9 +43,18 @@ namespace Immersion
 
             if (api.Side.IsServer() && blockSel?.Position != null)
             {
-                (api as ICoreServerAPI).SendMessage(api.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID), 0, GetHighestOre(blockSel.Position), EnumChatType.OwnMessage);
-                slot.Itemstack.Collectible.DamageItem(api.World, byEntity, slot);
-                slot.MarkDirty();
+                string uid = (byEntity as EntityPlayer).PlayerUID;
+                if (!PreventDuplicates.ContainsKey((byEntity as EntityPlayer).PlayerUID)) PreventDuplicates[uid] = true;
+
+                if (PreventDuplicates[uid])
+                {
+                    (api as ICoreServerAPI).SendMessage(api.World.PlayerByUid(((EntityPlayer)byEntity).PlayerUID), 0, GetHighestOre(blockSel.Position), EnumChatType.OwnMessage);
+                    slot.Itemstack.Collectible.DamageItem(api.World, byEntity, slot);
+                    slot.MarkDirty();
+
+                    PreventDuplicates[uid] = false;
+                    api.Event.RegisterCallback(dt => PreventDuplicates[uid] = true, 500);
+                }
             }
         }
 
