@@ -1,9 +1,13 @@
 {
     "code": "wellpipe",
+    "class": "BlockWellPipe",
     "creativeInventory": { "general": ["*"] },
+    "variantgroups": [
+        { "loadFromProperties": "block/rock" }
+    ],
     "textures": {
         "andesite1": {
-            "base": "block/stone/cobblestone/andesite*"
+            "base": "block/stone/cobblestone/{rock}*"
         }
     },
     "shape": {
@@ -11,5 +15,12 @@
     },
     "sidesolid": { "all": false, "down": true, "up": true },
     "sideopaque": { "all": false },
-    "lightAbsorption": 0
+    "lightAbsorption": 0,
+    "drops": [
+        {
+            "type": "block",
+            "code": "cobblestone-{rock}",
+            "quantity": { "avg": 1, "var": 0 }
+        }
+    ]
 }

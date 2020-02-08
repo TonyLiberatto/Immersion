@@ -2,10 +2,13 @@
     "code": "well",
     "class": "BlockWell",
     "entityClass": "Well",
+    "variantgroups": [
+        { "loadFromProperties": "block/rock" }
+    ],
     "creativeInventory": { "general": ["*"] },
     "textures": {
         "andesite1": {
-            "base": "block/stone/cobblestone/andesite*"
+            "base": "block/stone/cobblestone/{rock}*"
         },
         "rope": {
             "base": "immersion:block/rope"
