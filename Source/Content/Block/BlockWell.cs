@@ -25,9 +25,10 @@ namespace Immersion
             BlockEntityWell well = pos.BlockEntity(world) as BlockEntityWell;
             if (well != null)
             {
+                int progress = (int)GameMath.Min((float)Math.Round(100 * well.MiningProgress), 100f);
                 bdr.AppendLine("Depth: " + well.Depth)
                     .AppendLine("FoundLiquid: " + well.FoundLiquidCode)
-                    .AppendLine("Mining Progress: " + (int)(100 * well.MiningProgress) + "%")
+                    .AppendLine("Mining Progress: " + progress + "%")
                     .AppendLine("Mining Difficulty: " + Math.Round(100 * (1.0f - well.Difficulty)) + "%");
             }
 
@@ -61,7 +62,7 @@ namespace Immersion
 
         public int Depth { get; set; } = 1;
         public float MiningProgress { get; set; } = 0;
-        public float Difficulty { get => FoundLiquid ? 0.0f : GameMath.Max(1.0f / (Depth * 0.5f), 0.01f); }
+        public float Difficulty { get => FoundLiquid ? 0.0f : BlockAtWellDepth.Id == 0 ? 1.0f : GameMath.Clamp(1.5f / (Depth * 0.5f), 0.01f, 1.00f); }
 
         public BlockPos posAtWellDepth { get => new BlockPos(Pos.X, Pos.Y - Depth, Pos.Z);  }
         public Block BlockAtWellDepth { get => posAtWellDepth.GetBlock(Api);  }
@@ -101,7 +102,8 @@ namespace Immersion
             if (!FoundLiquid && slot?.Itemstack?.Item?.Tool == EnumTool.Pickaxe)
             {
                 if (MiningProgress < 1.0) MiningProgress += Difficulty;
-                else
+
+                if (MiningProgress >= 1.0)
                 {
                     Block cobbleBlock = null;
                     if (slot.Itemstack.Item.ToolTier >= replacing.RequiredMiningTier && slot.Inventory.Any(s =>
