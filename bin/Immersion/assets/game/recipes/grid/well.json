@@ -1,0 +1,24 @@
+{
+    "ingredientPattern": "WWW,CFC,CCC",
+    "ingredients": {
+        "F": {
+            "type": "item",
+            "code": "flaxtwine"
+		},
+		"W": {
+			"type": "item",
+			"code": "planks-*"
+		},
+        "C": {
+            "type": "block",
+            "name": "rock",
+            "code": "cobblestone-*"
+        }
+    },
+    "width": 3,
+    "height": 3,
+    "output": {
+        "type": "block",
+        "code": "game:well-{rock}"
+    }
+}

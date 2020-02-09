@@ -6,10 +6,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.Client.NoObf;
+using Vintagestory.GameContent;
 using Vintagestory.ServerMods.NoObf;
 
 namespace Immersion
@@ -23,8 +25,11 @@ namespace Immersion
             BlockEntityWell well = pos.BlockEntity(world) as BlockEntityWell;
             if (well != null)
             {
-                bdr.AppendLine("Depth: " + well.Depth);
-                bdr.AppendLine("FoundLiquid: " + well.FoundLiquidCode);
+                int progress = (int)GameMath.Min((float)Math.Round(100 * well.MiningProgress), 100f);
+                bdr.AppendLine("Depth: " + well.Depth)
+                    .AppendLine("FoundLiquid: " + well.FoundLiquidCode)
+                    .AppendLine("Mining Progress: " + progress + "%")
+                    .AppendLine("Mining Difficulty: " + Math.Round(100 * (1.0f - well.Difficulty)) + "%");
             }
 
             return bdr.ToString();
@@ -35,11 +40,19 @@ namespace Immersion
             if (world.Side.IsServer())
             {
                 BlockEntityWell well = blockSel.Position.BlockEntity(world) as BlockEntityWell;
-                well?.Interact();
+                well?.Interact(byPlayer.InventoryManager.ActiveHotbarSlot, byPlayer.Entity);
+            }
+            else
+            {
+                (byPlayer as IClientPlayer).TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
             }
 
             return true;
         }
+    }
+
+    class BlockWellPipe : Block
+    {
     }
 
     class BlockEntityWell : BlockEntity
@@ -48,8 +61,11 @@ namespace Immersion
         public bool FoundLiquid { get => BlockAtWellDepth.IsLiquid(); }
 
         public int Depth { get; set; } = 1;
-        public int MaxDepth = 32;
-        public Block BlockAtWellDepth { get => new BlockPos(Pos.X, Pos.Y - Depth, Pos.Z).GetBlock(Api);  }
+        public float MiningProgress { get; set; } = 0;
+        public float Difficulty { get => FoundLiquid ? 0.0f : BlockAtWellDepth.Id == 0 ? 1.0f : GameMath.Clamp(1.5f / (Depth * 0.5f), 0.01f, 1.00f); }
+
+        public BlockPos posAtWellDepth { get => new BlockPos(Pos.X, Pos.Y - Depth, Pos.Z);  }
+        public Block BlockAtWellDepth { get => posAtWellDepth.GetBlock(Api);  }
 
         public override void Initialize(ICoreAPI api)
         {
@@ -71,7 +87,7 @@ namespace Immersion
             for (int i = 0; i < (Api as ICoreServerAPI).WorldManager.MapSizeY; i++)
             {
                 iPos.Y--;
-                if (iPos.GetBlock(Api).Code.ToString() == "game:wellpipe")
+                if (iPos.GetBlock(Api) is BlockWellPipe)
                 {
                     Depth++;
                 }
@@ -79,31 +95,63 @@ namespace Immersion
             }
         }
 
-        public void Interact()
+        public void Interact(ItemSlot slot, EntityPlayer byEntity)
         {
-            if (!FoundLiquid)
+            BlockPos position = new BlockPos(Pos.X, Pos.Y - Depth, Pos.Z);
+            Block replacing = Api.World.BlockAccessor.GetBlock(position);
+            if (!FoundLiquid && slot?.Itemstack?.Item?.Tool == EnumTool.Pickaxe)
             {
-                BlockPos position = new BlockPos(Pos.X, Pos.Y - Depth, Pos.Z);
+                if (MiningProgress < 1.0) MiningProgress += Difficulty;
 
-                Block replacing = Api.World.BlockAccessor.GetBlock(position);
-                Block block = Api.World.BlockAccessor.GetBlock(new AssetLocation("game:wellpipe"));
-                if (replacing.Id != 1) Api.World.BlockAccessor.SetBlock(block.Id, position);
-                Depth++;
-                UpdateState();
-                MarkDirty();
+                if (MiningProgress >= 1.0)
+                {
+                    Block cobbleBlock = null;
+                    if (slot.Itemstack.Item.ToolTier >= replacing.RequiredMiningTier && slot.Inventory.Any(s =>
+                    {
+                        if (s?.Itemstack?.Block?.FirstCodePart() == "cobblestone")
+                        {
+                            cobbleBlock = s.Itemstack.Block;
+                            s.TakeOut(1);
+                            s.MarkDirty();
+                            return true;
+                        }
+                        return false;
+                    }))
+                    {
+                        Block block = Api.World.BlockAccessor.GetBlock(new AssetLocation("game:wellpipe".Apd(cobbleBlock.Variant["rock"])));
+                        byEntity.World.PlaySoundAt(replacing.Sounds.GetBreakSound(byEntity.Player), position.X, position.Y, position.Z, null);
+                        Api.World.BlockAccessor.BreakBlock(position, byEntity.Player);
+                        Api.World.BlockAccessor.SetBlock(block.Id, position);
+                        slot.Itemstack.Collectible.DamageItem(Api.World, byEntity, slot);
+                        slot.MarkDirty();
+                        byEntity.World.PlaySoundAt(new AssetLocation("sounds/tool/reinforce"), Pos.X, Pos.Y, Pos.Z, null);
+                        
+                        Depth++;
+                        UpdateState();
+                        MiningProgress = 0;
+                    }
+                }
             }
+            else if (FoundLiquid && slot?.Itemstack?.Block is BlockLiquidContainerBase)
+            {
+                if (((BlockLiquidContainerBase)slot.Itemstack.Block).TryFillFromBlock(slot, byEntity, posAtWellDepth))
+                    byEntity.World.PlaySoundAt(new AssetLocation("sounds/block/water"), Pos.X, Pos.Y, Pos.Z, null);
+            }
+            MarkDirty();
         }
 
         public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
         {
             base.FromTreeAtributes(tree, worldAccessForResolve);
-            Depth = tree.GetInt("depth");
+            Depth = tree.GetInt("depth", 1);
+            MiningProgress = tree.GetFloat("miningprogress");
         }
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);
             tree.SetInt("depth", Depth);
+            tree.SetFloat("miningprogress", MiningProgress);
         }
     }
 }
