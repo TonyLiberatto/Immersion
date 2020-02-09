@@ -262,7 +262,7 @@
   "block-chestframe-maple-*": "Maple Chest Frame",
   "block-chestframe-oak-*": "Oak Chest Frame",
   "block-chestframe-pine-*": "Pine Chest Frame",  
-  "blockdesc-chestframe-bamboo-brown-*": "Sneak + RMB with 4 Brown Bamboo Panels to build the Brown Bamboo Chest Assembly",
+  "blockdesc-chestframe-bamboo-brown-*":  "Sneak + RMB with 4 Brown Bamboo Panels to build the Brown Bamboo Chest Assembly",
   "blockdesc-chestframe-bamboo-green-*": "Sneak + RMB with 4 Green Bamboo Panels to build the Green Bamboo Chest Assembly",
   "blockdesc-chestframe-*": "Sneak RMB with 4 Debarked Wood Panels to build the Chest Assembly", 
   
@@ -889,6 +889,7 @@
   
   "block-planks-bamboo-brown": "Brown Bamboo Planks",
   "block-planks-bamboo-green": "Green Bamboo Planks",
+  "blockdesc-planks-bamboo-brown": "Crafted from Bamboo panels and stakes",
 
   "block-chair-acacia": "Acacia Chair",
   "block-chair-birch": "Birch Chair",

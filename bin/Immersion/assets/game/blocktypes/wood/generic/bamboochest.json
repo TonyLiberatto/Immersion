@@ -1,0 +1,119 @@
+{
+    "code": "bamboochest",
+    "class": "BlockGenericTypedContainer",
+	"entityclass": "GenericTypedContainer",
+    "attributes": {
+        "handbook": {
+            "include": true,
+            "extraSections": [
+                {
+                    "title": "Created by",
+                    "text": "All panels must be the same bamboo type to craft this block. Place one bamboo panel on a solid surface (RMB). Add four very thin branches (of any type) to create the frame for the sides (Sneak + RMB). Add four bamboo panels to construct the sides (Sneak + RMB). Add two leather strips to prepare the container for the top (Sneak + RMB). To complete the item, add one bamboo panel to construct the lid (Sneak + RMB). Break with any tool and replace to use the container."
+                }
+            ]
+        },
+		"partialAttachable": true,
+        "inventoryClassName": "chest",
+        "defaultType": "normal-aged",
+        "types": [ "normal-bamboo-brown", "normal-bamboo-brown" ],
+        "rotatatableInterval": {
+            "normal-*": "22.5degnot45deg"
+        },
+        drop: {			
+			"normal-bamboo-green": true,
+			"normal-bamboo-brown": true,
+		},
+		quantitySlots: {			
+			"normal-bamboo-green": 16,
+			"normal-bamboo-brown": 16,
+			
+		},
+        "dialogTitleLangCode": {
+            "normal-*": "chestcontents"
+        },
+        "storageType": {
+            "normal-*": 189
+        },
+        "retrieveOnly": {
+            "normal-*": false
+        },
+        shape: {			
+			"normal-bamboo-green": "game:block/wood/chest/normal",
+			"normal-bamboo-brown": "game:block/wood/chest/normal",
+		},
+        "variantByGroup": "side",
+        "variantByGroupInventory": null
+    },
+    behaviors: [
+		{ name: "Carryable", properties: { translation: [ 0.0625, 0, 0 ], rotation: [ 0, 180, 0 ], slots: { "Hands": {  }, "Back": {  },}}},
+		{name: "Container"}, {name: "Lockable" },
+		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }},		
+	],
+    "variantgroups": [		
+		{ "code": "side", "loadFromProperties": "abstract/horizontalorientation" }
+	],
+	"creativeinventory": {  },
+	creativeinventoryStacksByType: {
+		"*-east": [
+			{
+				tabs: [ "general", "decorative", "immersiondeco" ],
+				stacks: [					
+					{ type: "block", code: "bamboochest-east", attributes: { type: "normal-bamboo-green" } },
+					{ type: "block", code: "bamboochest-east", attributes: { type: "normal-bamboo-brown" } },
+				]
+			}
+		]
+	},
+    "heldTpIdleAnimation": "holdunderarm",
+    "shapeInventory": {
+        "base": "block/wood/chest/normal",
+        "rotateY": 270
+    },
+    "shapeByType": {
+        "*-north": { "base": "block/wood/chest/normal", "rotateY": 0 },
+        "*-east": { "base": "block/wood/chest/normal", "rotateY": 270 },
+        "*-west": { "base": "block/wood/chest/normal", "rotateY": 90  },
+        "*-south": { "base": "block/wood/chest/normal", "rotateY": 180 }
+    },
+    "_comment": "Must declare textures so they get added to the block texture atlas",
+    "textures": {
+		"normal-bamboo-brown-sides2": { "base": "block/wood/planks/bamboo-brown-side", "overlays": ["block/wood/overlays/chest/sides"]},
+		"normal-bamboo-brown-lid": { "base": "block/wood/planks/bamboo-brown-side" },
+		"normal-bamboo-brown-floor": { "base": "block/wood/planks/bamboo-brown-side" },
+		"normal-bamboo-brown-accessories": { "base": "block/wood/planks/bamboo-brown-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
+		
+		"normal-bamboo-green-sides2": { "base": "block/wood/planks/bamboo-green-side", "overlays": ["block/wood/overlays/chest/sides"]},
+		"normal-bamboo-green-lid": { "base": "block/wood/planks/bamboo-green-side" },
+		"normal-bamboo-green-floor": { "base": "block/wood/planks/bamboo-green-side" },
+		"normal-bamboo-green-accessories": { "base": "block/wood/planks/bamboo-green-side",	"overlays": ["block/wood/overlays/chest/accessories"]},			
+    },
+    "blockmaterial": "Wood",
+    "replaceable": 900,
+    "resistance": 3,
+    "lightAbsorption": 0,
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "collisionbox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.8125, "z2": 0.9375  },
+    "selectionbox": { "x1": 0.0625, "y1": 0, "z1": 0.0625, "x2": 0.9375, "y2": 0.8125, "z2": 0.9375  },
+    "combustibleProps": { "burnTemperature": 600,  "burnDuration": 35 },
+    "sounds": {
+        "place": "block/planks",
+        "hit": "block/planks",
+        "break": "block/planks",
+        "walk": "walk/wood"
+    },
+    "materialDensity": 600,
+    "tpHandTransform": {
+        "translation": { "x": -0.9, "y": -0.5,  "z": -0.3 },
+        "rotation": { "x": 0, "y": 90, "z": -102 },
+        "scale": 0.56
+    },
+    "guiTransform": {
+        "origin": { "x": 0.5, "y": 0.4, "z": 0.5  },
+        "scale": 1.16
+    }
+}

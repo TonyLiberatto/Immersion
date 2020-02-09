@@ -15,7 +15,7 @@
 		"partialAttachable": true,
         "inventoryClassName": "chest",
         "defaultType": "normal-aged",
-        "types": [ "normal-aged", "normal-acacia", " normal-bamboo-brown", "normal-bamboo-brown", "normal-birch", "normal-kapok", "normal-maple", "normal-oak", "normal-pine", ],
+        "types": [ "normal-aged", "normal-acacia", "normal-birch", "normal-kapok", "normal-maple", "normal-oak", "normal-pine", ],
         "rotatatableInterval": {
             "normal-*": "22.5degnot45deg"
         },
@@ -26,9 +26,7 @@
 			"normal-kapok": true,
 			"normal-maple": true,
 			"normal-oak": true,
-			"normal-pine": true,
-			"normal-bamboo-green": true,
-			"normal-bamboo-brown": true,
+			"normal-pine": true,			
 		},
 		quantitySlots: {
 			"normal-acacia": 32,
@@ -37,9 +35,7 @@
 			"normal-kapok": 32,
 			"normal-maple": 32,
 			"normal-oak": 32,
-			"normal-pine": 32,
-			"normal-bamboo-green": 16,
-			"normal-bamboo-brown": 16,
+			"normal-pine": 32,			
 			
 		},
         "dialogTitleLangCode": {
@@ -58,9 +54,7 @@
 			"normal-kapok": "game:block/wood/chest/normal",
 			"normal-maple": "game:block/wood/chest/normal",
 			"normal-oak": "game:block/wood/chest/normal",
-			"normal-pine": "game:block/wood/chest/normal",
-			"normal-bamboo-green": "game:block/wood/chest/normal",
-			"normal-bamboo-brown": "game:block/wood/chest/normal",
+			"normal-pine": "game:block/wood/chest/normal",			
 		},
         "variantByGroup": "side",
         "variantByGroupInventory": null
@@ -85,9 +79,7 @@
 					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-kapok" } },
 					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-maple" } },
 					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-oak" } },
-					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-pine" } },
-					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-bamboo-green" } },
-					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-bamboo-brown" } },
+					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-pine" } },					
 				]
 			}
 		]
@@ -104,17 +96,7 @@
         "*-south": { "base": "block/wood/chest/normal", "rotateY": 180 }
     },
     "_comment": "Must declare textures so they get added to the block texture atlas",
-    "textures": {
-		"normal-bamboo-brown-sides2": { "base": "block/wood/planks/bamboo-brown-side", "overlays": ["block/wood/overlays/chest/sides"]},
-		"normal-bamboo-brown-lid": { "base": "block/wood/planks/bamboo-brown-side" },
-		"normal-bamboo-brown-floor": { "base": "block/wood/planks/bamboo-brown-side" },
-		"normal-bamboo-brown-accessories": { "base": "block/wood/planks/bamboo-brown-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
-		
-		"normal-bamboo-green-sides2": { "base": "block/wood/planks/bamboo-green-side", "overlays": ["block/wood/overlays/chest/sides"]},
-		"normal-bamboo-green-lid": { "base": "block/wood/planks/bamboo-green-side" },
-		"normal-bamboo-green-floor": { "base": "block/wood/planks/bamboo-green-side" },
-		"normal-bamboo-green-accessories": { "base": "block/wood/planks/bamboo-green-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
-		
+    "textures": {		
 		"normal-acacia-sides2": { "base": "block/wood/smallplanks/acacia",	"overlays": ["block/wood/overlays/chest/sides"]	},
 		"normal-acacia-lid": { "base": "block/wood/smallplanks/acacia"	},
 		"normal-acacia-floor": { "base": "block/wood/smallplanks/acacia"},

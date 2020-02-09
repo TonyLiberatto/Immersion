@@ -6,7 +6,7 @@
         handbook:{ 
 				groupBy: ["dryingtray-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text: "Place a plank panel down on the ground, right click with 4 half plank panels of the same wood, then right click with 4 Very-thin branches to complete the Drying Tray."}
+					{ title: "handbook-item-sources", text: "Plank panels must be the same type to craft this item. Place one plank panel on a solid surface to create the bottom of the tray (RMB). Add four half plank panels to construct the sides (Sneak + RMB). Finish the frame by adding four very thin branches of any type (Sneak + RMB). When complete, break the tray to collect and replace in a sunny spot before filling with salt water."}
 					]
 
 		},

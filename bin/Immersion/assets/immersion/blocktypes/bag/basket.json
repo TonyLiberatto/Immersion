@@ -9,7 +9,7 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-				{ title: "handbook-block-sources", text: "Place a Very-thin debarked branch down, right click with reeds, right click again with 4 of the same very thin debarked branch to make the structure. Now right click with 4 reeds to make the Basket." }
+				{ title: "handbook-block-sources", text: "Branches must be the same wood type to craft this item. Place one debarked very thin branch on a solid surface (RMB). Add one reed to create the basket base (Sneak + RMB). Add four branches to construct the basket frame (Sneak + RMB). Add four reeds to complete the basket (Sneak + RMB). When complete, break the basket and replace to use the container." }
 			]
 		},
 		backpack: {

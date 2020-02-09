@@ -13,7 +13,7 @@
         "extraSections": [
           {
             "title": "handbook-item-sources",
-            "text": "To make candles you need to make a <a href=\"handbook://block-candlemold-copper-plain\">metal candle mold</a> , Place sisal twine for candle wick on the mold, and then pour smelted fat for tallow candles or bees wax for wax candles."
+            "text": "Place the <a href=\"handbook://block-candlemold-copper-plain\">metal candle mold</a> onto a solid surface (Sneak + RMB). Add Sisal Twine to the molds to create candle wicks (Sneak + RMB). Prepare 100 units of wax or tallow using the crucible in a firepit. Pour the melted wax into the mold (Sneak + RMB). Collect candles from the mold when cool (RMB)."
           }
         ]
 
@@ -27,7 +27,7 @@
         "extraSections": [
           {
             "title": "handbook-item-sources",
-            "text": "To make candles you need to make a <a href=\"handbook://block-candlemold-copper-plain\">metal candle mold</a> , Place sisal twine for candle wick on the mold, and then pour smelted fat for tallow candles or bees wax for wax candles."
+            "text": "Place the <a href=\"handbook://block-candlemold-copper-plain\">metal candle mold</a> onto a solid surface (Sneak + RMB). Add Sisal Twine to the molds to create candle wicks (Sneak + RMB). Prepare 100 units of wax or tallow using the crucible in a firepit. Pour the melted wax into the mold (Sneak + RMB). Collect candles from the mold when cool (RMB)."
           }
         ]
 

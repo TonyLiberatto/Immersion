@@ -7,7 +7,7 @@
 		handbook: {
 			groupBy: ["planks-bamboo-*"],
 			extraSections: [
-					{ title: "handbook-item-sources", text: "Place green or brown bamboo panel down, right click with bamboo stakes of same color. "}
+					{ title: "handbook-item-sources", text: "Bamboo must be the same type to craft this item. Place one bamboo panel on a solid surface (RMB). Add one bamboo stake to create the block (Sneak + RMB). When complete, break the block to collect."}
 					]
 		}
 	},

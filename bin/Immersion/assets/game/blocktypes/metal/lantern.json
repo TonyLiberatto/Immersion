@@ -5,8 +5,9 @@
 		handbook: {
 			groupBy: ["lantern-*"],
 			extraSections: [
-					{ title: "handbook-item-sources", text:"To make a Lantern place a <a href=\"handbook://block-lantern-base-copper\">Lantern base</a>  on the ground and right click with a wax candle, next right click with 4 <a href=\"handbook://block-lantern-sides-copper\">Lantern sides</a>, then right click with a Glass Block. If you want to make a lining, right click with a Silver or Gold plate. To finish the block, right click with a <a href=\"handbook://block-lantern-top-copper\">Lantern Top</a>. All parts need to be of the same metal. <a href=\"handbook://block-glasslanternframe-copper-down\">Glasslantern Frames</a>" }
-					]
+				{ title: "handbook-item-sources", text:"Place a <a href=\"handbook://block-lantern-base-copper\">cast lantern base</a>  onto a solid surface (RMB). onto a solid surface (RMB). next right click with 4 <a href=\"handbook://block-lantern-sides-copper\">Lantern sides</a>. Place a Quartz Glass or Glass block onto the Lantern assembly (Shift + RMB). If you want to make a lining, right click with a Silver or Gold plate. To finish the block, right click with a <a href=\"handbook://block-lantern-top-copper\">Lantern Top</a>. All parts need to be of the same metal."		
+				}
+			]
 		},
 	},
 	behaviors: [{name: "OmniAttachable", properties: { facingCode: "position" }}],
