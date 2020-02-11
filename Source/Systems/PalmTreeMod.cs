@@ -5,21 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using Immersion;
 using Immersion.Utility;
+using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 using Vintagestory.GameContent;
+using Vintagestory.ServerMods;
 
 namespace Immersion
 {
-    public class BlockPalmTree : Block
+    public class GenPalms : ModStdWorldGen
     {
+        ICoreServerAPI api;
+        IWorldGenBlockAccessor blockAccessor;
+        public override double ExecuteOrder() => 0.1;
         public static BlockPos[] bottomOffsets;
         public static BlockPos[] offsets;
         public static BlockPos[] cardinaloffsets;
-        ICoreAPI Api { get => this.api; }
 
         LCGRandom rand;
 
@@ -33,36 +38,183 @@ namespace Immersion
         };
         static readonly int maxTreeSize = parts.Length + 10;
 
-        Block[] trunk;
-        public Block[] frond;
-        public Block[][] fruits;
+        int[] trunk;
+        public int[] frond;
+        public int[][] fruits;
 
-        Block tip;
-        ItemAxe axe;
+        int tip;
 
-        public override void OnLoaded(ICoreAPI Api)
+        public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
+
+        public override void StartServerSide(ICoreServerAPI api)
         {
-            base.OnLoaded(Api);
-            axe = new ItemAxe();
-            //if (LastCodePart(1) != "bottom") return;
+            this.api = api;
+            chunksize = api.WorldManager.ChunkSize;
+            api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.Vegetation, "standard");
+            api.Event.InitWorldGenerator(() => SetupPalm(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmlog-bottom-grown"))), "standard");
+            api.Event.GetWorldgenBlockAccessor(c => blockAccessor = c.GetBlockAccessor(true));
+        }
 
+        private void SetupPalm(Block palmBase)
+        {
             bottomOffsets = AreaMethods.AreaBelowOffsetList().ToArray();
             offsets = AreaMethods.AreaAroundOffsetList().ToArray();
             cardinaloffsets = AreaMethods.CardinalOffsetList().ToArray();
 
-            rand = new LCGRandom(Api.World.Seed);
+            rand = new LCGRandom(api.World.Seed);
+
+            List<int> trunkblocks = new List<int>();
+            List<int> frondblocks = new List<int>();
+
+            List<int> nannerblocks = new List<int>();
+            List<int> cocoblocks = new List<int>();
+
+            for (int i = 0; i < parts.Length; i++)
+            {
+                trunkblocks.Add(api.World.BlockAccessor.GetBlock(palmBase.CodeWithPart(parts[i], 1)).Id);
+            }
+            trunk = trunkblocks.ToArray();
+
+            for (int i = 0; i < directions.Length; i++)
+            {
+                frondblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfrond-1-grown-" + directions[i])).Id);
+                nannerblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-bananna-" + directions[i])).Id);
+                cocoblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-coconut-" + directions[i])).Id);
+            }
+            frond = frondblocks.ToArray();
+            fruits = new int[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
+
+            tip = api.World.BlockAccessor.GetBlock(palmBase.CodeWithPart("tip", 1)).Id;
+        }
+
+        private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams)
+        {
+            IntMap beachMap = chunks[0].MapChunk.MapRegion.BeachMap;
+            Vec3i climate = chunks[0].MapChunk.MapRegion.ClimateMap.ToClimateVec(chunkX, chunkZ, api.WorldManager.RegionSize, chunksize);
+
+            ushort[] heightMap = chunks[0].MapChunk.RainHeightMap;
+
+            int regionChunkSize = api.WorldManager.RegionSize / chunksize;
+            int rdx = chunkX % regionChunkSize;
+            int rdz = chunkZ % regionChunkSize;
+
+            float beachStep = (float)beachMap.InnerSize / regionChunkSize;
+
+            int beachUpLeft = beachMap.GetUnpaddedInt((int)(rdx * beachStep), (int)(rdz * beachStep));
+            int beachUpRight = beachMap.GetUnpaddedInt((int)(rdx * beachStep + beachStep), (int)(rdz * beachStep));
+            int beachBotLeft = beachMap.GetUnpaddedInt((int)(rdx * beachStep), (int)(rdz * beachStep + beachStep));
+            int beachBotRight = beachMap.GetUnpaddedInt((int)(rdx * beachStep + beachStep), (int)(rdz * beachStep + beachStep));
+
+            for (int x = 1; x < chunksize - 1; x++)
+            {
+                for (int z = 1; z < chunksize - 1; z++)
+                {
+                    int y = heightMap[z * chunksize + x];
+                    float beachRel = GameMath.BiLerp(beachUpLeft, beachUpRight, beachBotLeft, beachBotRight, (float)x / chunksize, (float)z / chunksize) / 255f;
+                    float tempRel = climate.Z / 255f;
+                    if (beachRel > 0.5 && tempRel > 0.5)
+                    {
+                        int rockID = chunks[0].MapChunk.TopRockIdMap[z * chunksize + x];
+
+                        SimplexNoise sNoise = SimplexNoise.FromDefaultOctaves(16, 4.0, 0.5, api.WorldManager.Seed);
+                        double noise = sNoise.Noise(rdx + x, rdx + z);
+
+                        int chunkY = y / chunksize;
+                        int lY = y % chunksize;
+                        int index3d = (chunksize * lY + z) * chunksize + x;
+                        
+
+                        GenPalmTree(chunks, chunkY, chunkX, chunkZ, index3d, x, y, z, rockID, noise);
+                    }
+                }
+            }
+        }
+
+        private void GenPalmTree(IServerChunk[] chunks, int chunkY, int chunkX, int chunkZ, int i3d, int x, int y, int z, int topRock, double noise)
+        {
+            var a = api.ModLoader.GetModSystem<GenBlockLayers>();
+            
+            if (a.blockLayerConfig.BeachLayer.BlockIdMapping.TryGetValue(topRock, out int sand))
+            {
+                if (chunks[chunkY].Blocks[i3d] == sand && noise > 0.8)
+                {
+                    int[] stretched = trunk.Stretch((int)(((1.0 - noise) * 2) * maxTreeSize));
+                    int i, jY, index3d;
+
+                    for (i = 0; i < stretched.Length; i++)
+                    {
+                        jY = (y + i + 1) % chunksize;
+                        index3d = (chunksize * jY + z) * chunksize + x;
+                        chunks[chunkY].Blocks[index3d] = stretched[i];
+                    }
+
+                    jY = (y + i + 1) % chunksize;
+                    int posX = chunkX * chunksize + x, posY = chunkY * chunksize + jY, posZ = chunkZ * chunksize + z;
+
+                    GenFrondAndFruits(chunks, chunkY, x, jY, z, GameMath.Max(0, ((1.0 - noise) * 2)));
+
+                    blockAccessor.SetBlock(tip, new BlockPos(posX, posY, posZ));
+                    blockAccessor.SpawnBlockEntity("PalmTree", new BlockPos(posX, posY, posZ));
+                }
+            }
+        }
+
+        public void GenFrondAndFruits(IServerChunk[] chunks, int chunkY, int x, int y, int z, double noise)
+        {
+            SimplexNoise sNoise = SimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 6151);
+            noise = GameMath.Max(0, sNoise.Noise(x, y, z));
+
+            SimplexNoise fNoise = SimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 4987);
+            double fruitNoise = GameMath.Max(0, fNoise.Noise(x, y, z));
+
+            int fruit = (int)Math.Round(fruitNoise * 2.0);
+
+            int palmi = (int)Math.Round((noise * 3.0));
+            for (int i = 0; i < cardinaloffsets.Length; i++)
+            {
+                int dX = x + cardinaloffsets[i].X, dY = y + cardinaloffsets[i].Y, dZ = z + cardinaloffsets[i].Z;
+
+                int palm = blockAccessor.GetBlock(blockAccessor.GetBlock(frond[i]).CodeWithPart(palmi.ToString(), 1)).Id;
+
+                int jY = dY % chunksize;
+                int index3d = (chunksize * jY + dZ) * chunksize + dX;
+                chunks[chunkY].Blocks[index3d] = palm;
+                if (fruits[fruit] != null) chunks[chunkY].Blocks[(chunksize * (jY - 1) + dZ) * chunksize + dX] = fruits[fruit][i];
+            }
+        }
+
+    }
+    public class BlockPalmTree : Block
+    {
+        public static BlockPos[] bottomOffsets;
+        public static BlockPos[] offsets;
+        public static BlockPos[] cardinaloffsets;
+        ICoreAPI Api { get => this.api; }
+
+        static readonly string[] parts = new string[]
+        {
+            "bottom", "middle", "top"
+        };
+        static readonly string[] directions = new string[]
+        {
+            "north", "west", "south", "east"
+        };
+        public Block[] frond;
+        public Block[][] fruits;
+
+        public override void OnLoaded(ICoreAPI Api)
+        {
+            base.OnLoaded(Api);
+
+            bottomOffsets = AreaMethods.AreaBelowOffsetList().ToArray();
+            offsets = AreaMethods.AreaAroundOffsetList().ToArray();
+            cardinaloffsets = AreaMethods.CardinalOffsetList().ToArray();
 
             List<Block> trunkblocks = new List<Block>();
             List<Block> frondblocks = new List<Block>();
 
             List<Block> nannerblocks = new List<Block>();
             List<Block> cocoblocks = new List<Block>();
-
-            for (int i = 0; i < parts.Length; i++)
-            {
-                trunkblocks.Add(Api.World.BlockAccessor.GetBlock(CodeWithPart(parts[i], 1)));
-            }
-            trunk = trunkblocks.ToArray();
 
             for (int i = 0; i < directions.Length; i++)
             {
@@ -72,8 +224,6 @@ namespace Immersion
             }
             frond = frondblocks.ToArray();
             fruits = new Block[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
-
-            tip = Api.World.BlockAccessor.GetBlock(CodeWithPart("tip", 1));
         }
 
         public override void OnBlockBroken(IWorldAccessor world, BlockPos Pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
@@ -110,73 +260,6 @@ namespace Immersion
                 }
             }
         }
-
-        public override bool TryPlaceBlockForWorldGen(IBlockAccessor blockAccessor, BlockPos Pos, BlockFacing onBlockFace, LCGRandom worldgenRandom)
-        {
-            int fruit = (int)Math.Round(worldgenRandom.NextDouble() * 2.0);            
-            GenPalmTree(blockAccessor, Pos, fruit);
-            return true;
-        }
-
-        public void GenPalmTree(IBlockAccessor blockAccessor, BlockPos Pos, int fruit)
-        {
-            Block block = blockAccessor.GetBlock(Pos.DownCopy());
-            if (block.FirstCodePart() == "sand")
-            {
-                for (int i = 0; i < bottomOffsets.Length; i++)
-                {
-                    Block d = blockAccessor.GetBlock(Pos.X + bottomOffsets[i].X, Pos.Y + bottomOffsets[i].Y, Pos.Z + bottomOffsets[i].Z);
-                    if (d.LiquidCode == "seawater")
-                    {
-                        for (int k = 0; k < offsets.Length; k++)
-                        {
-                            Block c = blockAccessor.GetBlock(Pos.X + offsets[i].X, Pos.Y + offsets[i].Y, Pos.Z + offsets[i].Z);
-                            if (c.Class == Class) return;
-                        }
-                        rand.InitPositionSeed(Pos.X, Pos.Y);
-                        Block[] stretchedTrunk = trunk.Stretch((int)(rand.NextDouble() * (maxTreeSize)));
-
-                        BlockPos top = new BlockPos(Pos.X, Pos.Y + stretchedTrunk.Length, Pos.Z);
-                        for (int j = 0; j < stretchedTrunk.Length; j++)
-                        {
-                            blockAccessor.SetBlock(stretchedTrunk[j].BlockId, new BlockPos(Pos.X, Pos.Y + j, Pos.Z));
-                        }
-                        blockAccessor.SetBlock(tip.BlockId, top);
-                        blockAccessor.SpawnBlockEntity("PalmTree", top);
-
-                        GenFrondAndFruits(top, blockAccessor, stretchedTrunk.Length, fruit);
-                        break;
-                    }
-                }
-            }
-            return;
-        }
-
-        public void GenFrondAndFruits(BlockPos Pos, IBlockAccessor blockAccessor, double treesize, int f)
-        {
-            double scalar = (treesize - parts.Length) / maxTreeSize;
-            int palmnum = (int)Math.Round((scalar * 3.0));
-
-            for (int i = 0; i < cardinaloffsets.Length; i++)
-            {
-                BlockPos vPos = new BlockPos(Pos.X + cardinaloffsets[i].X, Pos.Y + cardinaloffsets[i].Y, Pos.Z + cardinaloffsets[i].Z);
-                BlockPos dPos = new BlockPos(Pos.X + cardinaloffsets[i].X, Pos.Y + cardinaloffsets[i].Y - 1, Pos.Z + cardinaloffsets[i].Z);
-                Block block = blockAccessor.GetBlock(vPos);
-                Block dblock = blockAccessor.GetBlock(dPos);
-
-                if (block.IsReplacableBy(this))
-                {
-                    Block zBlock = blockAccessor.GetBlock(frond[i].CodeWithPart(palmnum.ToString(), 1));
-
-                    if (zBlock != null) blockAccessor.SetBlock(zBlock.BlockId, vPos);
-                }
-
-                if (dblock.IsReplacableBy(this) && fruits[f] != null)
-                {
-                    blockAccessor.SetBlock(fruits[f][i].BlockId, dPos);
-                }
-            }
-        }
     }
 
     public class BEPalmTree : BlockEntity
@@ -202,7 +285,8 @@ namespace Immersion
 
             if (myFruits == null || myFruits[0] == null) return;
 
-            myFruit = Api.World.BlockAccessor.GetBlock(myFruits[0]);
+            myFruit = myFruit ?? Api.World.BlockAccessor.GetBlock(0);
+
             for (int i = 0; i < palmtree.fruits.Length; i++)
             {
                 if (palmtree.fruits[i] == null) return;
@@ -213,6 +297,21 @@ namespace Immersion
                     break;
                 }
             }
+        }
+
+        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
+        {
+            base.FromTreeAtributes(tree, worldAccessForResolve);
+            tree.SetBytes("myFruit", JsonUtil.ToBytes(myFruit));
+            tree.SetDouble("nextGrowTime", nextGrowTime);
+        }
+
+        public override void ToTreeAttributes(ITreeAttribute tree)
+        {
+            base.ToTreeAttributes(tree);
+            byte[] bytes = tree.GetBytes("myFruit");
+            if (bytes != null) myFruit = JsonUtil.FromBytes<Block>(tree.GetBytes("myFruit"));
+            nextGrowTime = tree.GetDouble("nextGrowTime");
         }
 
         public void CheckTree(float dt)

@@ -1,134 +1,174 @@
 [
-	{ file: "game:worldgen/blockpatches", op: "add", path: "/patches/-", value:
-	
-        {
-			comment: "Palm Trees",
-			blockCodes: [ "immersion:palmlog-bottom-grown" ],
-			minTemp: 10,
-			maxTemp: 40,
-			minRain: 0,
-			maxRain: 1,
-			maxForest: 1,
-			quantity: { avg: 6, var: 3 },
-			chance: 0.5,
-		}
-	
-	},
-	
-	{ file: "game:worldgen/blockpatches", op: "add", path: "/patches/-", value:
-	
-        {
-			comment: "Large patches of giant reed",
-			blockCodes: ["giantreed-arundo-water-normal"],
-			minTemp: 3,
-			maxTemp: 40,
-			minRain: 0.4,
-			maxRain: 1,
-			quantity: { avg: 25, var: 15 },
-			offsetX: { avg: 0, var: 12 },
-			offsetZ: { avg: 0, var: 12 },
-			chance: 0.5,
-			placement: "NearWater"
-		}
-	
-	},
-	
-	{ file: "game:worldgen/blockpatches", op: "add", path: "/patches/-", value:
-	
-        {
-			comment: "Small patches of giant reed",
-			blockCodes: ["giantreed-arundo-water-normal"],
-			minTemp: 3,
-			maxTemp: 40,
-			minRain: 0.4,
-			maxRain: 1,
-			quantity: { avg: 5, var: 5 },
-			chance: 0.5,
-			placement: "NearWater"
-		}
-		
-			
-	},
-
-  { file: "game:worldgen/blockpatches", op: "add", path: "/patches/-", value:
-	
-        {
-			comment: "Large patches of sisal",
-			blockCodes: ["crop-sisal-3","crop-sisal-4", "crop-sisal-5", "crop-sisal-6" ],
-			minTemp: 10,
-			maxTemp: 40,
-			minRain: 0.35,
-			maxRain: 0.75,
-			maxForest: 1,
-			quantity: { avg: 8, var: 5 },
-			chance: 0.05,
-		}
-		
-			
-	},
-  
-  { file: "game:worldgen/blockpatches", op: "replace", path: "/patches/0", value: 
-			
-        {
-      comment: "Large patches of coopers reed",
-			blockCodes: ["tallplant-coopersreed-water-normal"],
-			minTemp: 3,
-			maxTemp: 40,
-			minRain: 0.4,
-			maxRain: 1,
-			quantity: { avg: 25, var: 15 },
-			offsetX: { avg: 0, var: 12 },
-			offsetZ: { avg: 0, var: 12 },
-			chance: 1,
-			placement: "NearWater"
-		}
-
-
-  },
-
-  {
-    file: "game:worldgen/blockpatches", op: "replace", path: "/patches/1", value: 
-			
-        {
-      comment: "Small patches of coopers reed",
-			blockCodes: ["tallplant-coopersreed-water-normal"],
-			minTemp: 3,
-			maxTemp: 40,
-			minRain: 0.4,
-			maxRain: 1,
-			quantity: { avg: 5, var: 5 },
-			chance: 1,
-			placement: "NearWater"
-		}
-  },
-  {
-    file: "game:worldgen/blockpatches", op: "replace", path: "/patches/2", value: 
-			
-        {
-			comment: "Large patches of seaweed",
-			blockCodes: ["seaweed-section"],
-			minTemp: 3,
-			maxTemp: 40,
-			minRain: 0,
-			maxRain: 1,
-			quantity: { avg: 25, var: 15 },
-			offsetX: { avg: 0, var: 12 },
-			offsetZ: { avg: 0, var: 12 },
-			chance: 1,
-		}
-  },
-  {
-    file: "game:worldgen/blockpatches", op: "replace", path: "/patches/3", value: 
-			
-        {
-			comment: "Small patches of seaweed",
-			blockCodes: ["seaweed-section"],
-			minTemp: 3,
-			maxTemp: 40,
-			minRain: 0,
-			maxRain: 1,
-			quantity: { avg: 5, var: 5 },
-			chance: 1,
-		}
-  }
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "add",
+        "path": "/patches/-",
+        "value": {
+            "comment": "Large patches of giant reed",
+            "blockCodes": [
+                "giantreed-arundo-water-normal"
+            ],
+            "minTemp": 3,
+            "maxTemp": 40,
+            "minRain": 0.4,
+            "maxRain": 1,
+            "quantity": {
+                "avg": 25,
+                "var": 15
+            },
+            "offsetX": {
+                "avg": 0,
+                "var": 12
+            },
+            "offsetZ": {
+                "avg": 0,
+                "var": 12
+            },
+            "chance": 0.5,
+            "placement": "NearWater"
+        }
+    },
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "add",
+        "path": "/patches/-",
+        "value": {
+            "comment": "Small patches of giant reed",
+            "blockCodes": [
+                "giantreed-arundo-water-normal"
+            ],
+            "minTemp": 3,
+            "maxTemp": 40,
+            "minRain": 0.4,
+            "maxRain": 1,
+            "quantity": {
+                "avg": 5,
+                "var": 5
+            },
+            "chance": 0.5,
+            "placement": "NearWater"
+        }
+    },
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "add",
+        "path": "/patches/-",
+        "value": {
+            "comment": "Large patches of sisal",
+            "blockCodes": [
+                "crop-sisal-3",
+                "crop-sisal-4",
+                "crop-sisal-5",
+                "crop-sisal-6"
+            ],
+            "minTemp": 10,
+            "maxTemp": 40,
+            "minRain": 0.35,
+            "maxRain": 0.75,
+            "maxForest": 1,
+            "quantity": {
+                "avg": 8,
+                "var": 5
+            },
+            "chance": 0.05
+        }
+    },
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "replace",
+        "path": "/patches/0",
+        "value": {
+            "comment": "Large patches of coopers reed",
+            "blockCodes": [
+                "tallplant-coopersreed-water-normal"
+            ],
+            "minTemp": 3,
+            "maxTemp": 40,
+            "minRain": 0.4,
+            "maxRain": 1,
+            "quantity": {
+                "avg": 25,
+                "var": 15
+            },
+            "offsetX": {
+                "avg": 0,
+                "var": 12
+            },
+            "offsetZ": {
+                "avg": 0,
+                "var": 12
+            },
+            "chance": 1,
+            "placement": "NearWater"
+        }
+    },
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "replace",
+        "path": "/patches/1",
+        "value": {
+            "comment": "Small patches of coopers reed",
+            "blockCodes": [
+                "tallplant-coopersreed-water-normal"
+            ],
+            "minTemp": 3,
+            "maxTemp": 40,
+            "minRain": 0.4,
+            "maxRain": 1,
+            "quantity": {
+                "avg": 5,
+                "var": 5
+            },
+            "chance": 1,
+            "placement": "NearWater"
+        }
+    },
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "replace",
+        "path": "/patches/2",
+        "value": {
+            "comment": "Large patches of seaweed",
+            "blockCodes": [
+                "seaweed-section"
+            ],
+            "minTemp": 3,
+            "maxTemp": 40,
+            "minRain": 0,
+            "maxRain": 1,
+            "quantity": {
+                "avg": 25,
+                "var": 15
+            },
+            "offsetX": {
+                "avg": 0,
+                "var": 12
+            },
+            "offsetZ": {
+                "avg": 0,
+                "var": 12
+            },
+            "chance": 1
+        }
+    },
+    {
+        "file": "game:worldgen/blockpatches",
+        "op": "replace",
+        "path": "/patches/3",
+        "value": {
+            "comment": "Small patches of seaweed",
+            "blockCodes": [
+                "seaweed-section"
+            ],
+            "minTemp": 3,
+            "maxTemp": 40,
+            "minRain": 0,
+            "maxRain": 1,
+            "quantity": {
+                "avg": 5,
+                "var": 5
+            },
+            "chance": 1
+        }
+    }
 ]
