@@ -6,8 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"palm_top": "block/flora/palm/top",
-		"palm_tip": "block/flora/palm/tip"
 	},
 	"elements": [
 		{
@@ -20,8 +18,8 @@
 				"east": { "texture": "#palm_tip", "uv": [ 4.0, 0.0, 12.0, 8.0 ] },
 				"south": { "texture": "#palm_tip", "uv": [ 4.0, 0.0, 12.0, 8.0 ] },
 				"west": { "texture": "#palm_tip", "uv": [ 4.0, 0.0, 12.0, 8.0 ] },
-				"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
-				"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+				"up": { "texture": "#palm_top", "uv": [ 4.0, 4.0, 12.0, 12.0 ], "autoUv": false },
+				"down": { "texture": "#palm_top", "uv": [ 4.0, 4.0, 12.0, 12.0 ], "autoUv": false }
 			},
 			"children": [
 				{
@@ -34,8 +32,8 @@
 						"east": { "texture": "#palm_tip", "uv": [ 4.5, 0.0, 10.5, 4.0 ] },
 						"south": { "texture": "#palm_tip", "uv": [ 4.5, 0.0, 10.5, 4.0 ] },
 						"west": { "texture": "#palm_tip", "uv": [ 4.5, 0.0, 10.5, 4.0 ] },
-						"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
-						"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+						"up": { "texture": "#palm_top", "uv": [ 5.0, 5.0, 11.0, 11.0 ], "autoUv": false },
+						"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false, "autoUv": false }
 					}
 				},
 				{
@@ -48,8 +46,8 @@
 						"east": { "texture": "#palm_tip", "uv": [ 6.0, 0.0, 10.0, 5.0 ] },
 						"south": { "texture": "#palm_tip", "uv": [ 6.0, 0.0, 10.0, 5.0 ] },
 						"west": { "texture": "#palm_tip", "uv": [ 6.0, 0.0, 10.0, 5.0 ] },
-						"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
-						"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+						"up": { "texture": "#palm_top", "uv": [ 6.0, 6.0, 10.0, 10.0 ], "autoUv": false },
+						"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "enabled": false, "autoUv": false }
 					}
 				},
 				{
