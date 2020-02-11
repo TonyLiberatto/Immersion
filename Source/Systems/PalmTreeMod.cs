@@ -116,7 +116,7 @@ namespace Immersion
                     {
                         int rockID = chunks[0].MapChunk.TopRockIdMap[z * chunksize + x];
 
-                        SimplexNoise sNoise = SimplexNoise.FromDefaultOctaves(16, 4.0, 0.5, api.WorldManager.Seed);
+                        NormalizedSimplexNoise sNoise = NormalizedSimplexNoise.FromDefaultOctaves(16, 8.0, 0.5, api.WorldManager.Seed);
                         double noise = sNoise.Noise(rdx + x, rdx + z);
 
                         int chunkY = y / chunksize;
@@ -136,7 +136,7 @@ namespace Immersion
             
             if (a.blockLayerConfig.BeachLayer.BlockIdMapping.TryGetValue(topRock, out int sand))
             {
-                if (chunks[chunkY].Blocks[i3d] == sand && noise > 0.8)
+                if (chunks[chunkY].Blocks[i3d] == sand && noise > 0.84)
                 {
                     int[] stretched = trunk.Stretch((int)(((1.0 - noise) * 2) * maxTreeSize));
                     int i, jY, index3d;
@@ -151,21 +151,20 @@ namespace Immersion
                     jY = (y + i + 1) % chunksize;
                     int posX = chunkX * chunksize + x, posY = chunkY * chunksize + jY, posZ = chunkZ * chunksize + z;
 
-                    GenFrondAndFruits(chunks, chunkY, x, jY, z, GameMath.Max(0, ((1.0 - noise) * 2)));
+                    GenFrondAndFruits(chunks, chunkY, x, jY, z);
 
                     blockAccessor.SetBlock(tip, new BlockPos(posX, posY, posZ));
-                    blockAccessor.SpawnBlockEntity("PalmTree", new BlockPos(posX, posY, posZ));
                 }
             }
         }
 
-        public void GenFrondAndFruits(IServerChunk[] chunks, int chunkY, int x, int y, int z, double noise)
+        public void GenFrondAndFruits(IServerChunk[] chunks, int chunkY, int x, int y, int z)
         {
-            SimplexNoise sNoise = SimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 6151);
-            noise = GameMath.Max(0, sNoise.Noise(x, y, z));
+            NormalizedSimplexNoise sNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 6151);
+            double noise = sNoise.Noise(x, y, z);
 
-            SimplexNoise fNoise = SimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 4987);
-            double fruitNoise = GameMath.Max(0, fNoise.Noise(x, y, z));
+            NormalizedSimplexNoise fNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 4987);
+            double fruitNoise = fNoise.Noise(x, y, z);
 
             int fruit = (int)Math.Round(fruitNoise * 2.0);
 
@@ -179,7 +178,8 @@ namespace Immersion
                 int jY = dY % chunksize;
                 int index3d = (chunksize * jY + dZ) * chunksize + dX;
                 chunks[chunkY].Blocks[index3d] = palm;
-                if (fruits[fruit] != null) chunks[chunkY].Blocks[(chunksize * (jY - 1) + dZ) * chunksize + dX] = fruits[fruit][i];
+
+                if ((chunksize * (jY - 1) + dZ) * chunksize + dX >= 0 && fruits[fruit] != null) chunks[chunkY].Blocks[(chunksize * (jY - 1) + dZ) * chunksize + dX] = fruits[fruit][i];
             }
         }
 
@@ -209,8 +209,6 @@ namespace Immersion
             bottomOffsets = AreaMethods.AreaBelowOffsetList().ToArray();
             offsets = AreaMethods.AreaAroundOffsetList().ToArray();
             cardinaloffsets = AreaMethods.CardinalOffsetList().ToArray();
-
-            List<Block> trunkblocks = new List<Block>();
             List<Block> frondblocks = new List<Block>();
 
             List<Block> nannerblocks = new List<Block>();
@@ -243,7 +241,7 @@ namespace Immersion
                             {
                                 BlockPos bPos = new BlockPos(Pos.X + x, Pos.Y + y, Pos.Z + z);
                                 Block bBlock = Api.World.BlockAccessor.GetBlock(bPos);
-                                if (bBlock is BlockPalmTree)
+                                if (bBlock is BlockPalmTree || bBlock.FirstCodePart() == "palmfruits")
                                 {
                                     if (itemslot.Itemstack == null) return;
 
@@ -285,7 +283,18 @@ namespace Immersion
 
             if (myFruits == null || myFruits[0] == null) return;
 
-            myFruit = myFruit ?? Api.World.BlockAccessor.GetBlock(0);
+            Block tempfruit = Api.World.GetBlock(0);
+
+            foreach (var val in myFruits)
+            {
+                if (val.GetBlock(Api).FirstCodePart() == "palmfruits")
+                {
+                    tempfruit = val.GetBlock(Api);
+                    break;
+                }
+            }
+
+            myFruit = myFruit ?? tempfruit;
 
             for (int i = 0; i < palmtree.fruits.Length; i++)
             {
@@ -344,6 +353,7 @@ namespace Immersion
                     Block fruitspace = Api.World.BlockAccessor.GetBlock(fruitPos);
                     Block palmspace = Api.World.BlockAccessor.GetBlock(palmPos);
 
+                    if (palmtree == null) return;
                     if (fruitspace.Id == 0) Api.World.BlockAccessor.SetBlock(palmtree.fruits[fruitnum][i].BlockId, fruitPos);
                     if (palmspace.Id == 0) Api.World.BlockAccessor.SetBlock(palmtree.frond[i].BlockId, palmPos);
                 }
