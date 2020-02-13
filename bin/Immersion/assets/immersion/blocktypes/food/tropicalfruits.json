@@ -1,6 +1,52 @@
 ﻿{
     "code": "tropicalfruits",
     "behaviorsByType": {
+        "*-coconutshell-*": [
+            {
+                "name": "HorizontalOrientable"
+            },
+            {
+                "name": "Unstable"
+            },
+            {
+                "name": "Harvestable",
+                "properties": {
+                    "harvestTime": 0.6,
+                    "harvestedStack": {
+                        "type": "block",
+                        "code": "immersion:tropicalfruits-coconut-north",
+                        "quantity": {
+                            "avg": 1
+                        }
+                    },
+                    "harvestingSound":"game:sounds/block/plant",
+                    "harvestedBlockCode": "game:air"
+                }
+            }
+        ],
+        "*-coconut-*": [
+            {
+                "name": "HorizontalOrientable"
+            },
+            {
+                "name": "Unstable"
+            },
+            {
+                "name": "Harvestable",
+                "properties": {
+                    "harvestTime": 0.6,
+                    "harvestedStack": {
+                        "type": "block",
+                        "code": "immersion:tropicalfruits-coconutslice-north",
+                        "quantity": {
+                            "avg": 6
+                        }
+                    },
+                    "harvestingSound":"game:sounds/block/plant",
+                    "harvestedBlockCode": "game:air"
+                }
+            }
+        ],
         "*": [
             {
                 "name": "HorizontalOrientable"
@@ -34,7 +80,7 @@
         ]
     },
     "nutritionPropsByType": {
-        "*-coconutshell-*": {
+        "*-coconutslice-*": {
             "saturation": 160,
             "foodcategory": "Fruit"
         },

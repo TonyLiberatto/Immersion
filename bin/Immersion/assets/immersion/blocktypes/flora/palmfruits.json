@@ -9,11 +9,12 @@
                     "harvestTime": 0.6,
                     "harvestedStack": {
                         "type": "block",
-                        "code": "immersion:tropicalfruits-coconut-north",
+                        "code": "immersion:tropicalfruits-coconutshell-north",
                         "quantity": {
-                            "avg": 2.2
+                            "avg": 4
                         }
                     },
+                    "harvestingSound":"game:sounds/block/plant",
                     "harvestedBlockCode": "game:air"
                 }
             }
@@ -28,9 +29,10 @@
                       "type": "block",
                       "code": "immersion:tropicalfruits-bananna-north",
                       "quantity": {
-                          "avg": 2.2
+                          "avg": 11
                       }
                   },
+                  "harvestingSound":"game:sounds/block/plant",
                   "harvestedBlockCode": "game:air"
               }
           }
