@@ -19,6 +19,7 @@
                             "avg": 1
                         }
                     },
+                    "harvestingSound":"game:sounds/block/plant",
                     "harvestedBlockCode": "game:air"
                 }
             }
@@ -41,6 +42,7 @@
                             "avg": 6
                         }
                     },
+                    "harvestingSound":"game:sounds/block/plant",
                     "harvestedBlockCode": "game:air"
                 }
             }
