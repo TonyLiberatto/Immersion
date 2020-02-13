@@ -27,7 +27,15 @@
   behaviors: [ { name: "Unstable" } ],
   attributes: {
 		handbook: {
-			groupBy: ["3droad-*"]
+			groupBy: ["3droad-*"],
+			extraSectionsByType: {
+				"3droad-*-stepping*":[
+					{ title: "handbook-item-sources", text: "Place the small stone on any full block (as in knapping) and use RMB with the tamper in the active hand to convert the small stone to one of four stepping stones. The pattern is selected based on surrounding blocks and cannot be adjusted or changed using a tamper tool mode." }
+					],
+				"3droad-*": [
+					{ title: "handbook-item-sources", text: "Use the setting hammer (RMB) on stone pathway blocks created using the tamper to change the shape of the block. Each use of the hammer will cycle through the following nine road shapes: Fish, Cobble, Bricks, Tight Bricks, Squares, Tight Square, Large Square, Flat, Circle. There is no way to change the tool mode to specify the shape of the stepping stones. " }
+					],
+				}
 		},
 	},
   sounds: {

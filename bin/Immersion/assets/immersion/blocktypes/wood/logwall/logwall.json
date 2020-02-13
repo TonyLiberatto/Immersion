@@ -17,7 +17,7 @@
 		handbook: {
 			groupBy: ["logwall-*-up-north"],
 			extraSections: [
-					{ title: "handbook-item-sources", text: "Place a medium branch upwards on the ground, right click with leather strips, sinew, sisal twine or reeds, then right click again with another medium branch." }
+					{ title: "handbook-item-sources", text: "Both branches must be the same barked or debarked wood type to build. Place one barked or debarked medium branch vertically on a solid surface to begin the wall (RMB). Add cordage (Sisal twine, sinew, leather strips) to the structure (Sneak + RMB). Add one additional medium branch to complete the structure (Sneak + RMB)." }
 					]
 		},
 	},

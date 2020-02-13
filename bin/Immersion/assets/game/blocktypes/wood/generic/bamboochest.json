@@ -5,6 +5,7 @@
     "attributes": {
         "handbook": {
             "include": true,
+			"groupBy": ["bamboochest-*"],
             "extraSections": [
                 {
                     "title": "Created by",
@@ -14,18 +15,18 @@
         },
 		"partialAttachable": true,
         "inventoryClassName": "chest",
-        "defaultType": "normal-aged",
-        "types": [ "normal-bamboo-brown", "normal-bamboo-brown" ],
+        "defaultType": "normal-bamboo-brown",
+        "types": [ "normal-bamboo-brown", "normal-bamboo-green" ],
         "rotatatableInterval": {
             "normal-*": "22.5degnot45deg"
         },
         drop: {			
-			"normal-bamboo-green": true,
 			"normal-bamboo-brown": true,
+			"normal-bamboo-green": true,
 		},
 		quantitySlots: {			
-			"normal-bamboo-green": 16,
 			"normal-bamboo-brown": 16,
+			"normal-bamboo-green": 16,
 			
 		},
         "dialogTitleLangCode": {
