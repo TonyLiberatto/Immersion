@@ -8,7 +8,7 @@
 		handbook:{ 
 				groupBy: ["glasslantern-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text:"To make Glasslantern place a metal sheet on the ground and right click with a  Lantern, then right click with a Glass Block, to finish the block, right click with 5 <a href=\"handbook://block-glasslanternframe-copper-down\">Glasslantern Frames</a>" }
+					{ title: "handbook-item-sources", text:"Place the metal sheet onto a solid surface (RMB). Place a completed lantern onto the base plate (Shift + RMB). Place the Glass Block (Bloomery Glass) onto the Lantern assembly (Shift + RMB). Add 5 <a href=\"handbook://block-glasslanternframe-copper-down\">Glass Lantern Frames</a> to complete the sides and top (Shift + RMB).Break the lantern to collect and replace."	}
 					]
 
 		},

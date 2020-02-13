@@ -6,7 +6,7 @@
 		handbook: {
 			groupBy: ["mortarandpestle-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text: "Place a log down on the ground, right click with a thin debarked branch."}
+					{ title: "handbook-item-sources", text: "Place a log of any wood type (except aged) vertically (Wood Grain face at the top of the block) on a solid surface (RMB). With a debarked thin branch in the active hand, add the pestle (Shit + RMB)."}
 					]
 			
 		}

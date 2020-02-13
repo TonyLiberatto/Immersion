@@ -508,16 +508,16 @@
   "itemdesc-arrow-poison*": "Adds +2 damage. Future recipe should include cooking with a herb to get poison.",
   
   "item-bow-simple": "Simple Bow",
-  "itemdesc-bow-simple": "Flimsy stick with some weak string.  Make a strong bowstring using animal sinew and carve a better limb.",
+  "itemdesc-bow-simple": "A little better than a flimsy stick. Craft the limb using a knife and stick. Combine with bowstring to create a carved bow.",
   
   "item-bow-carved": "Carved Bow",
   "itemdesc-bow-carved": "A little better than a flimsy stick.  Made by combining a carved limb with a bowstring. Replace bowstring before it breaks and destroys the bow.",
   
   "item-bow-composite": "Composite Bow",
-  "itemdesc-bow-composite": "A decent bow made by gluing layers of horn and sinew onto a carved bow limb. Replace bowstring before it breaks and destroys the bow.",
+  "itemdesc-bow-composite": "A real bow with good stopping power. Craft using a carved limb, glue, horn slab, and sinew. Combine with bowstring to create a composite bow.",
   
   "item-bow-recurve": "Recurve Bow",
-  "itemdesc-bow-recurve": "Advanced bow made by adding hide and more horn and sinew to composite limb. Replace bowstring before it breaks and destroys the bow. ",
+  "itemdesc-bow-recurve": "Well worth the time and effort to create. Craft using a composite limb, glue, horn slab, sinew and raw hide. Combine with bowstring to create a recurve bow ",
   
   "item-cookedgiantreedsroot": "Cooked Giant Reeds Root",
   "block-giantreed-arundo-free-normal": "Giantreed Arundo Free (Normal)",
@@ -2035,6 +2035,7 @@
   "block-bowlstamp-bismuthbronze": "Bismuth Bronze Bowl Stamp",
   "block-bowlstamp-blackbronze": "Black Bronze Bowl Stamp",
   "block-bowlstamp-copper": "Copper Bowl Stamp",
+  "blockdesk-bowlstamp-*": "Place the metal bowl stamp on a solid surface. Target the stamp with the crosshairs. With clay in the active hand, each action (Sneak + RMB) creates a clay bowl.",
   
   
   "block-trough-immersion-genericwood-small-ns": "small trough",
@@ -2107,6 +2108,7 @@
 	"block-bowlstampmold-brown-burned": "Brown Bowl Stamp mold (Burned)",
 	"block-bowlstampmold-fire-burned": "Fire Bowl Stamp mold (Burned)",
 	"block-bowlstampmold-red-burned": "Red Bowl Stamp mold (Burned)",
+	
 	
     "block-crucibleblue-raw": "Blue Crucible (Raw)",
 	"block-cruciblebrown-raw": "Brown Crucible (Raw)",
@@ -2421,7 +2423,7 @@
 	"block-ingotstamp-bismuthbronze": "Ingotstamp (Bismuthbronze)",
 	"block-ingotstamp-blackbronze": "Ingotstamp (Blackbronze)",
 	"block-ingotstamp-copper": "Ingotstamp (Copper)",
-	"blockdesc-ingotstamp-*": "Sneak Right Click with clay in hand to make ingot molds",
+	"blockdesc-ingotstamp-*": "Place the metal ingot mold stamp on a solid surface. Target the stamp with the crosshairs. With clay in the active hand, each action (Sneak + RMB) creates a clay ingot mold.",
 	
 	"block-stair-side-cobble-andesite-up-north": "Cobblestone Stairs (Andesite)",
 	"block-stair-side-cobble-chalk-up-north": "Cobblestone Stairs (Chalk)",

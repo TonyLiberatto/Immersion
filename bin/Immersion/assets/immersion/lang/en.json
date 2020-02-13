@@ -404,7 +404,7 @@
   "blockdesc-branch-cordage-*-bark-sisal":"shift right click with 4 Very Thin Branch of the same to make a bag Assembly",
   "blockdesc-branch-cordage-*-bark-reeds":"shift right click with 4 Very Thin Branch of the same to make a Basket Frame",
   
-  "blockdesc-logwall-*": "Using  a Hammer, Crouch and shift right click to change from Corner to Wall to Jut, Sprint and shift right click to rotate vertically, shift right click to rotate Horizontally.",
+  "blockdesc-logwall-*": "Equip any hammer to change block shape and rotation.  To change block shapes: Wall, Jut and Corner, use (Sneak + RMB). To rotate blocks horizontally: use (RMB). To rotate blocks vertically, use (Sprint + RMB).",
   
   "block-logwall-wall-birch-bark-up-*": "Logwall Wall Birch Bark Up",
   "block-logwall-wall-oak-bark-up-*": "Logwall Wall Oak Bark Up",
@@ -771,8 +771,8 @@
   "block-rooframp-topend-oak-debarked-north": "Top End Oak Debarked Ramp Roof",
   "block-rooframp-topend-pine-debarked-north": "Top End Pine Debarked Ramp Roof",
   
-  "blockdesc-rooframp-*": "shift right click with an Axe to change between Ramp and Stairs, shift right click with a hammer to change styles",
-  "blockdesc-roofstairs-*": "shift right click with an Axe to change between Ramp and Stairs, shift right click with a hammer to change styles",
+  "blockdesc-rooframp-*": "To change block style (Ramp to Stairs), equip any axe and use (Sneak + RMB). To change block shape (Slope, Slope Wall, Top, Top Wall, Top End, Corner, Inside Corner, Top Corner), equip any hammer and use (Sneak + RMB). To rotate the block horizontally, use a hammer + RMB or (Sprint + RMB).",
+  "blockdesc-roofstairs-*": "To change block style (Ramp to Stairs), equip any axe and use (Sneak + RMB). To change block shape (Slope, Slope Wall, Top, Top Wall, Top End, Corner, Inside Corner, Top Corner), equip any hammer and use (Sneak + RMB). To rotate the block horizontally, use a hammer + RMB or (Sprint + RMB).",
 
 
   "block-roofstairs-corner-acacia-bark-north": "Corner Acacia Bark Stairs Roof",
@@ -1403,12 +1403,12 @@
   "item-animal-large-bone": "Large Animal Bone",
   "itemdesc-animal-large-bone": "Crafting Grid with a knife to make arrow heads, Use for some tools also",
   "item-animal-leatherstrips": "Leather Strips",
-  "itemdesc-animal-leatherstrips": "Used to make tools",
+  "itemdesc-animal-leatherstrips": "Used as cordage in immersive crafting",
   "item-animal-tendon": "Animal Tendon",
-  "itemdesc-animal-tendon": "Use a knife to cut into usable strips",
+  "itemdesc-animal-tendon": "Use any knife to create Sinew (grid)",
 
   "item-byproducts-sinew": "Sinew",
-  "itemdesc-byproducts-sinew": "Hammer into Sinew Fibers for thread, glue and rope. Also used to bind tools, bowstrings, and for composite bows.",
+  "itemdesc-byproducts-sinew": "Used as cordage in immersive crafting, Used to craft Sinew Fibers and  bowlimbs.",
   "item-byproducts-sinew-fibers": "Sinew Fibers ",
   "itemdesc-byproducts-sinew-fibers": "Hammered from strips. Combine 6 over a bowl then put in a fire to make glue. Or craft 3 horizontally to make Sinew Thread.",
   "item-byproducts-sinew-thread": "Sinew Thread ",
@@ -1456,7 +1456,7 @@
   "block-mortarandpestle-maple-*": "Maple Mortar and Pestle",
   "block-mortarandpestle-oak-*": "Oak Mortar and Pestle",
   "block-mortarandpestle-pine-*": "Pine Mortar and Pestle",
-  "blockdesc-mortarandpestle-*": "Grind grains here.",
+  "blockdesc-mortarandpestle-*": "A wooden quern, used to grind grains, dried foods, and other resources.",
   
   "blockdesc-leavesbranchy-*-birch": "Must use an axe to break",
   "blockdesc-leavesbranchy-*-oak": "Must use an axe to break",
