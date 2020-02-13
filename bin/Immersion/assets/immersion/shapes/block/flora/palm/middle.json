@@ -6,8 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"palm_top": "block/flora/palm/top",
-		"palm_trunk": "block/flora/palm/trunk"
 	},
 	"elements": [
 		{
@@ -20,8 +18,8 @@
 				"east": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
 				"south": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
 				"west": { "texture": "#palm_trunk", "uv": [ 2.0, 8.0, 14.0, 16.0 ] },
-				"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
-				"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+				"up": { "texture": "#palm_top", "uv": [ 2.0, 2.0, 14.0, 14.0 ], "enabled": false, "autoUv": false },
+				"down": { "texture": "#palm_top", "uv": [ 2.0, 2.0, 14.0, 14.0 ], "autoUv": false }
 			},
 			"children": [
 				{
@@ -34,8 +32,8 @@
 						"east": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
 						"south": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
 						"west": { "texture": "#palm_trunk", "uv": [ 1.0, 0.0, 15.0, 8.0 ] },
-						"up": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false },
-						"down": { "texture": "#palm_top", "uv": [ 0.0, 0.0, 16.0, 16.0 ], "autoUv": false }
+						"up": { "texture": "#palm_top", "uv": [ 1.0, 1.0, 15.0, 15.0 ], "autoUv": false },
+						"down": { "texture": "#palm_top", "uv": [ 1.0, 1.0, 15.0, 15.0 ], "autoUv": false }
 					}
 				}
 			]

@@ -1,63 +1,92 @@
 ﻿{
-  code: "palmfrond",
-  class: "BlockPalmTree",
-  behaviorsByType: {
-    "*-grown-*": [
-      {
-        name: "PushEventOnBlockBroken",
-        properties: { eventName: "testForDecay" }
-      }
+    "code": "palmfrond",
+    "class": "BlockPalmTree",
+    "behaviorsByType": {
+        "*-grown-*": [
+            {
+                "name": "PushEventOnBlockBroken",
+                "properties": {
+                    "eventName": "testForDecay"
+                }
+            }
+        ],
+        "*": [
+            {
+                "name": "HorizontalOrientable"
+            }
+        ]
+    },
+    "variantgroups": [
+        {
+            "code": "amount",
+            "states": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        {
+            "code": "type",
+            "states": [
+                "grown",
+                "placed"
+            ]
+        },
+        {
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
     ],
-    "*": [ { name: "HorizontalOrientable" } ],
-  },
-  variantgroups: [
-    {
-      code: "amount",
-      states: [ "0", "1", "2", "3" ]
+    "vertexFlags": {
+        "zOffset": 4,
+        "leavesWindWave": true
     },
-    {
-      code: "type",
-      states: [ "grown", "placed" ]
+    "creativeinventory": {
+        "general": [
+            "*"
+        ],
+        "flora": [
+            "*"
+        ],
+        "immersionflora": [
+            "*"
+        ]
     },
-    { loadFromProperties: "abstract/horizontalorientation" }
-  ],
-	vertexFlags: {
-		zOffset: 4,
-		leavesWindWave: true
-	},
-  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "immersionflora": [ "" ]  },
-  randomDrawOffset: false,
-  shapeByType: {
-    "*-north": {
-      base: "block/flora/palm/fronds/frond{amount}",
-      rotateY: 180
+    "renderPass": "OpaqueNoCull",
+    "randomDrawOffset": false,
+    "shapeByType": {
+        "*-north": {
+            "base": "block/flora/palm/fronds/frond{amount}",
+            "rotateY": 180
+        },
+        "*-east": {
+            "base": "block/flora/palm/fronds/frond{amount}",
+            "rotateY": 90
+        },
+        "*-south": {
+            "base": "block/flora/palm/fronds/frond{amount}",
+            "rotateY": 0
+        },
+        "*-west": {
+            "base": "block/flora/palm/fronds/frond{amount}",
+            "rotateY": 270
+        }
     },
-    "*-east": {
-      base: "block/flora/palm/fronds/frond{amount}",
-      rotateY: 90
+    "textures": {
+        "palm_fronds": {
+            "base": "block/flora/palm/frond"
+        }
     },
-    "*-south": {
-      base: "block/flora/palm/fronds/frond{amount}",
-      rotateY: 0
+    "blockmaterial": "Plant",
+    "sideopaque": {
+        "all": false
     },
-    "*-west": {
-      base: "block/flora/palm/fronds/frond{amount}",
-      rotateY: 270
+    "sidesolid": {
+        "all": false
     },
-  },
-  textures: {
-    palm_fronds: { base: "block/flora/palm/frond" },
-  },
-  blockmaterial: "Plant",
-  sideopaque: {
-    all: false
-  },
-  sidesolid: {
-    all: false
-  },
-  replaceable: 600,
-  lightAbsorption: 0,
-  resistance: 1,
-  rainPermeable: true,
-  materialDensity: 200
+    "replaceable": 600,
+    "lightAbsorption": 0,
+    "resistance": 1,
+    "rainPermeable": true,
+    "materialDensity": 200
 }

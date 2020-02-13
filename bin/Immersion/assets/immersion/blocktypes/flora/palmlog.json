@@ -2,8 +2,7 @@
   code: "palmlog",
   class: "BlockPalmTree",
   entityClassByType: {
-    "*": null,
-    "*-tip": "PalmTree",
+		"*-tip-grown": "PalmTree"
   },
   behaviorsByType: {
     "*-grown": [
@@ -28,7 +27,7 @@
       states: [ "grown", "placed" ]
     },
   ],
-  creativeinventory: {  "general": [ "" ], "flora": [ "" ], "immersionflora": [ "" ]  },
+  creativeinventory: {  "general": [ "*" ], "flora": [ "*" ], "immersionflora": [ "*" ]  },
   randomDrawOffset: false,
   shape: { base: "block/flora/palm/{segment}" },
   textures: {
