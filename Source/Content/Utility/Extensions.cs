@@ -294,5 +294,12 @@ namespace Immersion
 
             return new Vec3i(rain, humidity, temp);
         }
+
+        public static Block GetBlock(this int BlockId, ICoreAPI api) => BlockId.GetBlock(api.World);
+
+        public static Block GetBlock(this int BlockId, IWorldAccessor world)
+        {
+            return world.GetBlock(BlockId);
+        }
     }
 }

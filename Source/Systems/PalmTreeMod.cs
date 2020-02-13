@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Immersion;
 using Immersion.Utility;
 using Vintagestory.API;
 using Vintagestory.API.Client;
@@ -110,6 +108,7 @@ namespace Immersion
                 for (int z = 1; z < chunksize - 1; z++)
                 {
                     int y = heightMap[z * chunksize + x];
+                    
                     float beachRel = GameMath.BiLerp(beachUpLeft, beachUpRight, beachBotLeft, beachBotRight, (float)x / chunksize, (float)z / chunksize) / 255f;
                     float tempRel = climate.Z / 255f;
                     if (beachRel > 0.5 && tempRel > 0.5)
@@ -133,13 +132,20 @@ namespace Immersion
         private void GenPalmTree(IServerChunk[] chunks, int chunkY, int chunkX, int chunkZ, int i3d, int x, int y, int z, int topRock, double noise)
         {
             var a = api.ModLoader.GetModSystem<GenBlockLayers>();
-            
+            int posX = chunkX * chunksize + x, posZ = chunkZ * chunksize + z;
+            double sizeNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 2361).Noise(posX, y, posZ);
+
             if (a.blockLayerConfig.BeachLayer.BlockIdMapping.TryGetValue(topRock, out int sand))
             {
                 if (chunks[chunkY].Blocks[i3d] == sand && noise > 0.84)
                 {
-                    int[] stretched = trunk.Stretch((int)(((1.0 - noise) * 2) * maxTreeSize));
+                    int[] stretched = trunk.Stretch((int)(sizeNoise * maxTreeSize));
                     int i, jY, index3d;
+
+                    jY = (y + 1) % chunksize;
+                    index3d = (chunksize * jY + z) * chunksize + x;
+
+                    if (((y % chunksize) + stretched.Length + 1) >= chunksize || chunks[chunkY].Blocks[index3d] != 0) return;
 
                     for (i = 0; i < stretched.Length; i++)
                     {
@@ -149,26 +155,24 @@ namespace Immersion
                     }
 
                     jY = (y + i + 1) % chunksize;
-                    int posX = chunkX * chunksize + x, posY = chunkY * chunksize + jY, posZ = chunkZ * chunksize + z;
+                    int posY = chunkY * chunksize + jY;
 
                     GenFrondAndFruits(chunks, chunkY, x, jY, z);
 
                     blockAccessor.SetBlock(tip, new BlockPos(posX, posY, posZ));
+                    blockAccessor.SpawnBlockEntity("PalmTree", new BlockPos(posX, posY, posZ));
                 }
             }
         }
 
         public void GenFrondAndFruits(IServerChunk[] chunks, int chunkY, int x, int y, int z)
         {
-            NormalizedSimplexNoise sNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 6151);
-            double noise = sNoise.Noise(x, y, z);
-
-            NormalizedSimplexNoise fNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 4987);
-            double fruitNoise = fNoise.Noise(x, y, z);
+            double palmNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 6151).Noise(x, y, z);
+            double fruitNoise = NormalizedSimplexNoise.FromDefaultOctaves(4, 2.0, 1.0, api.WorldManager.Seed + 4987).Noise(x, y, z);
 
             int fruit = (int)Math.Round(fruitNoise * 2.0);
 
-            int palmi = (int)Math.Round((noise * 3.0));
+            int palmi = (int)Math.Round((palmNoise * 3.0));
             for (int i = 0; i < cardinaloffsets.Length; i++)
             {
                 int dX = x + cardinaloffsets[i].X, dY = y + cardinaloffsets[i].Y, dZ = z + cardinaloffsets[i].Z;
@@ -183,237 +187,5 @@ namespace Immersion
             }
         }
 
-    }
-    public class BlockPalmTree : Block
-    {
-        public static BlockPos[] bottomOffsets;
-        public static BlockPos[] offsets;
-        public static BlockPos[] cardinaloffsets;
-        ICoreAPI Api { get => this.api; }
-
-        static readonly string[] parts = new string[]
-        {
-            "bottom", "middle", "top"
-        };
-        static readonly string[] directions = new string[]
-        {
-            "north", "west", "south", "east"
-        };
-        public Block[] frond;
-        public Block[][] fruits;
-
-        public override void OnLoaded(ICoreAPI Api)
-        {
-            base.OnLoaded(Api);
-
-            bottomOffsets = AreaMethods.AreaBelowOffsetList().ToArray();
-            offsets = AreaMethods.AreaAroundOffsetList().ToArray();
-            cardinaloffsets = AreaMethods.CardinalOffsetList().ToArray();
-            List<Block> frondblocks = new List<Block>();
-
-            List<Block> nannerblocks = new List<Block>();
-            List<Block> cocoblocks = new List<Block>();
-
-            for (int i = 0; i < directions.Length; i++)
-            {
-                frondblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfrond-1-grown-" + directions[i])));
-                nannerblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-bananna-" + directions[i])));
-                cocoblocks.Add(Api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-coconut-" + directions[i])));
-            }
-            frond = frondblocks.ToArray();
-            fruits = new Block[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
-        }
-
-        public override void OnBlockBroken(IWorldAccessor world, BlockPos Pos, IPlayer byPlayer, float dropQuantityMultiplier = 1)
-        {
-            base.OnBlockBroken(world, Pos, byPlayer, dropQuantityMultiplier);
-            ItemSlot itemslot = byPlayer.InventoryManager.ActiveHotbarSlot;
-            if (FirstCodePart() == "palmlog")
-            {
-                if (itemslot.Itemstack == null || !Code.ToString().Contains("grown") || !world.Side.IsServer()) return;
-                if (itemslot.Itemstack.Collectible.Tool == EnumTool.Axe)
-                {
-                    for (int x = -2; x <= 2; x++)
-                    {
-                        for (int z = -2; z <= 2; z++)
-                        {
-                            for (int y = 0; y <= 16; y++)
-                            {
-                                BlockPos bPos = new BlockPos(Pos.X + x, Pos.Y + y, Pos.Z + z);
-                                Block bBlock = Api.World.BlockAccessor.GetBlock(bPos);
-                                if (bBlock is BlockPalmTree || bBlock.FirstCodePart() == "palmfruits")
-                                {
-                                    if (itemslot.Itemstack == null) return;
-
-                                    world.BlockAccessor.SetBlock(0, bPos);
-
-                                    foreach (ItemStack item in GetDrops(world, bPos, byPlayer))
-                                    {
-                                        world.SpawnItemEntity(item, bPos.ToVec3d());
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    public class BEPalmTree : BlockEntity
-    {
-        public BlockPos[] myTree;
-        public BlockPos[] myFronds;
-        public BlockPos[] myFruits;
-        public Block myFruit;
-        public BlockPalmTree palmtree;
-        public int fruitnum;
-
-        public double nextGrowTime;
-
-        public override void Initialize(ICoreAPI Api)
-        {
-            base.Initialize(Api);
-            UpdateTreeSize();
-            UpdateFruitsFronds();
-
-            palmtree = Api.World.BlockAccessor.GetBlock(Pos) as BlockPalmTree;
-            if (Api.World.Side.IsServer()) RegisterGameTickListener(CheckTree, 1000);
-            if (Api.World.Calendar.TotalHours > nextGrowTime) UpdateGrowTime();
-
-            if (myFruits == null || myFruits[0] == null) return;
-
-            Block tempfruit = Api.World.GetBlock(0);
-
-            foreach (var val in myFruits)
-            {
-                if (val.GetBlock(Api).FirstCodePart() == "palmfruits")
-                {
-                    tempfruit = val.GetBlock(Api);
-                    break;
-                }
-            }
-
-            myFruit = myFruit ?? tempfruit;
-
-            for (int i = 0; i < palmtree.fruits.Length; i++)
-            {
-                if (palmtree.fruits[i] == null) return;
-
-                if (palmtree.fruits[i].FirstOrDefault().FirstCodePart(1) == myFruit.FirstCodePart(1))
-                {
-                    fruitnum = i;
-                    break;
-                }
-            }
-        }
-
-        public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldAccessForResolve)
-        {
-            base.FromTreeAtributes(tree, worldAccessForResolve);
-            tree.SetBytes("myFruit", JsonUtil.ToBytes(myFruit));
-            tree.SetDouble("nextGrowTime", nextGrowTime);
-        }
-
-        public override void ToTreeAttributes(ITreeAttribute tree)
-        {
-            base.ToTreeAttributes(tree);
-            byte[] bytes = tree.GetBytes("myFruit");
-            if (bytes != null) myFruit = JsonUtil.FromBytes<Block>(tree.GetBytes("myFruit"));
-            nextGrowTime = tree.GetDouble("nextGrowTime");
-        }
-
-        public void CheckTree(float dt)
-        {
-            if (myTree == null || myTree.Length == 0)
-            {
-                Api.World.BlockAccessor.RemoveBlockEntity(Pos);
-                return;
-            }
-
-            for (int i = 0; i < myTree.Length; i++)
-            {
-                if (myTree[i] == null) continue;
-
-                Block checkedBlock = Api.World.BlockAccessor.GetBlock(myTree[i]);
-                if (!(checkedBlock is BlockPalmTree))
-                {
-                    UpdateTreeSize();
-                    break;
-                }
-            }
-
-            if (nextGrowTime < Api.World.Calendar.TotalHours)
-            {
-                for (int i = 0; i < BlockPalmTree.cardinaloffsets.Length; i++)
-                {
-                    BlockPos v = BlockPalmTree.cardinaloffsets[i];
-                    BlockPos palmPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y, Pos.Z + v.Z);
-                    BlockPos fruitPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y - 1, Pos.Z + v.Z);
-                    Block fruitspace = Api.World.BlockAccessor.GetBlock(fruitPos);
-                    Block palmspace = Api.World.BlockAccessor.GetBlock(palmPos);
-
-                    if (palmtree == null) return;
-                    if (fruitspace.Id == 0) Api.World.BlockAccessor.SetBlock(palmtree.fruits[fruitnum][i].BlockId, fruitPos);
-                    if (palmspace.Id == 0) Api.World.BlockAccessor.SetBlock(palmtree.frond[i].BlockId, palmPos);
-                }
-                UpdateGrowTime();
-            }
-        }
-
-        public void UpdateGrowTime()
-        {
-            nextGrowTime = Api.World.Calendar.TotalHours + 48;
-        }
-
-        public void UpdateTreeSize()
-        {
-            List<BlockPos> mytree = new List<BlockPos>();
-
-            for (int x = -2; x <= 2; x++)
-            {
-                for (int y = 0; y < 20; y++)
-                {
-                    for (int z = -2; z <= 2; z++)
-                    {
-                        BlockPos bPos = new BlockPos(Pos.X + x, Pos.Y - y, Pos.Z + z);
-                        Block bBlock = Api.World.BlockAccessor.GetBlock(bPos);
-
-                        if (bBlock is BlockPalmTree)
-                        {
-                            mytree.Add(bPos);
-                        }
-                    }
-                }
-            }
-            myTree = mytree.ToArray();
-        }
-
-        public void UpdateFruitsFronds()
-        {
-            if (myFruits == null || myFronds == null)
-            {
-                for (int i = 0; i < BlockPalmTree.cardinaloffsets.Length; i++)
-                {
-                    BlockPos v = BlockPalmTree.cardinaloffsets[i];
-                    BlockPos frondPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y, Pos.Z + v.Z);
-                    BlockPos fruitPos = new BlockPos(Pos.X + v.X, Pos.Y + v.Y - 1, Pos.Z + v.Z);
-
-                    Block frondBlock = Api.World.BlockAccessor.GetBlock(frondPos);
-                    Block fruitBlock = Api.World.BlockAccessor.GetBlock(fruitPos);
-
-                    if (frondBlock.FirstCodePart() == "palmfrond")
-                    {
-                        if (myFronds == null) myFronds = new BlockPos[4];
-                        myFronds[i] = frondPos;
-                    }
-                    if (fruitBlock.FirstCodePart() == "palmfruits")
-                    {
-                        if (myFruits == null) myFruits = new BlockPos[4];
-                        myFruits[i] = fruitPos;
-                    }
-                }
-            }
-        }
     }
 }
