@@ -10,12 +10,7 @@
   "Place a Barked Very Thin Branch horizontally , shift right click with any cordage, then shift right click again with 3 more Barked Very Thin Branches.":"Place a Barked Very Thin Branch horizontally , shift right click with any cordage, then shift right click again with 3 more Barked Very Thin Branches.",
   "Place a Debarked Very Thin Branch vertically on the ground, shift right click with any cordage, next shift right click again with Debarked Very Thin Branch to make the scafolding.":"Place a Debarked Very Thin Branch vertically on the ground, shift right click with any cordage, next shift right click again with Debarked Very Thin Branch to make the scafolding.",
   
-  	"block-drying-rack-assemble-acacia-*": "Drying Rack Assemble Acacia",
-	"block-drying-rack-assemble-birch-*": "Drying Rack Assemble Birch",
-	"block-drying-rack-assemble-kapok-*": "Drying Rack Assemble Kapok",
-	"block-drying-rack-assemble-maple-*": "Drying Rack Assemble Maple",
-	"block-drying-rack-assemble-oak-*": "Drying Rack Assemble Oak",
-	"block-drying-rack-assemble-pine-*": "Drying Rack Assemble Pine",
+  	
 	"block-drying-rack-assemble-acacia-*": "Drying Rack Assemble Acacia",
 	"block-drying-rack-assemble-birch-*": "Drying Rack Assemble Birch",
 	"block-drying-rack-assemble-kapok-*": "Drying Rack Assemble Kapok",
@@ -1174,23 +1169,23 @@
   "block-dead-hyena-wild-female-tan": "Dead Female Tan Hyena",
   "block-dead-hyena-wild-female-brown": "Dead Female Brown Hyena",
 
-  "blockdesc-dead-chicken-*": "Use a Knife to get feathers, chicken meat and some fat.",
-  "blockdesc-dead-rabbit-*": "Use a knife to get rabbit meat, A chance of a pelt or hide.",
-  "blockdesc-dead-armadillo-*": "Use a knife to get red meat.",
-  "blockdesc-dead-fox-*": "Use a knife to get fox meat, A chance of a pelt or hide.",
-  "blockdesc-dead-sheep-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
-  "blockdesc-dead-wild-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
-  "blockdesc-dead-wolf-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
-  "blockdesc-dead-hyena-*": "Use a saw for a chance to get a Head Trophy, Use a knife for a chance to get a pelt otherwise, hides.",
+  "blockdesc-dead-chicken-*":  "Butcher with any knife to harvest feathers, poultry meat, and possibly some fat.",
+  "blockdesc-dead-rabbit-*":  "Butcher using any knife to harvest rabbit meat and sometimes a pelt or hide.",
+  "blockdesc-dead-armadillo-*":  "Butcher using any knife to harvest red meat.",
+  "blockdesc-dead-fox-*": "Butcher using any knife to harvest carnivore meat, and sometimes a pelt or hide.",
+  "blockdesc-dead-sheep-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest mutton, tendons, fat, bones and intestines. Rams may also provide horns. Use a saw before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
+  "blockdesc-dead-wild-*":  "Skin the animal using any knife to harvest raw hides. Butcher to harvest pork chops, tendons, fat, bones and intestines. Use a saw before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
+  "blockdesc-dead-wolf-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest carnivore meat, tendons, fat, bones. Use a saw before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
+  "blockdesc-dead-hyena-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest carnivore meat, tendons, fat, bones. Use a saw before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
 
   "block-dead-rotten-small": "Small Carrion",
   "block-dead-rotten-large": "Large Carrion",
-  "blockdesc-dead-rotten-*": "The Carrion Cannot be destroyed, it will turn into a Skeleton",
+  "blockdesc-dead-rotten-*": "Carrion cannot be destroyed. It will decay into a skeleton",
 
   "block-skeleton-small": "Small Animal Skeleton",
   "block-skeleton-large": "Large Animal Skeleton",
-  "blockdesc-skeleton-small": "Harvest with a knife to get a pile of small bones",
-  "blockdesc-skeleton-large": "Harvest with an Axe to get 4 large bones and 2 piles of small bones",
+  "blockdesc-skeleton-small":  "Use any knife to collect a pile of small bones",
+  "blockdesc-skeleton-large": "Use any axe to harvest 4 large bones and 2 piles of small bones",
 
   "block-headless-sheep-ewe": "Headless Ewe",
   "block-headless-sheep-ram": "Headless Ram",
@@ -1236,7 +1231,7 @@
   "block-headless-hyena-wild-female-tan": "Headless Tan Female Hyena",
   "block-headless-hyena-wild-female-brown": "Headless Brown Female Hyena",
 
-  "blockdesc-headless-*": "Use a Knife to skin the animal, with a chance for a nice Pelt or some hide",
+  "blockdesc-headless-*": "Skin using any knife to harvest raw hides. Headless animals sometimes provide pelts instead of hides.",
 
   "block-skinned-ewe": "Skinned Ewe",
   "block-skinned-ram": "Skinned Ram",
@@ -1248,7 +1243,7 @@
   "block-skinned-panther-male": "Skinned male Panther",
   "block-skinned-panther-female": "Skinned Female Panther",
 
-  "blockdesc-skinned-*": "Use a Knife to harvest meat, fat, tendons,bones and a chance for a nice Skull",
+  "blockdesc-skinned-*":  "Butcher to harvest meat, fat, bones and other useful materials. Sometimes skinned animals provide a skull trophy.",
 
   "block-skinnedheadless-ewe": "Skinned Headless Ewe",
   "block-skinnedheadless-ram": "Skinned Headless Ram",
@@ -1260,7 +1255,7 @@
   "block-skinnedheadless-panther-male": "Skinned Headless male Panther",
   "block-skinnedheadless-panther-female": "Skinned Headless Female Panther",
 
-  "blockdesc-skinnedheadless-*": "Use a Knife to harvest meat, fat, tendons and bones ",
+  "blockdesc-skinnedheadless-*": "Butcher to harvest meat, fat, bones, and other useful materials.",
 
   "block-ramheadtrophy-*-*": "Ram Head Trophy",
   "block-eweheadtrophy-ground-north": "Ewe Head Trophy",
@@ -1297,17 +1292,17 @@
 
   "block-bighornpelt-ground-*": "BigHorn Sheep Pelt",
   "block-bighornrug-ground-*": "Bighorn Sheep Rug",
-  "blockdesc-bighornpelt-ground-*": "In the crafting grid a Knife on top of Pelt will make 1 Rug and 4 leather strips.",
-  "blockdesc-bighornrug-ground-*": "In the crafting grid a Knife on top of Rug will make 5 Raw-Hides.",
+  "blockdesc-bighornpelt-ground-*": "Place the pelt on the ground and use a knife (Sneak + RMB) to  create a Rug + 4 leather strips.",
+  "blockdesc-bighornrug-ground-*": "Rugs can be placed on floors or walls. Converts to 5 (medium or large) raw hides using a knife in the crafting grid.",
 
   "block-boarpelt-ground-*": "Boar Pelt",
   "block-boarrug-ground-*": "Boar Rug",
-  "blockdesk-boarpelt-ground-*": "In the crafting grid a Knife on top of Pelt will make 1 Rug and 4 Leather Strips.",
-  "blockdesk-boarrug-ground-*": "In the crafting grid a Knife on top of Rug will make 7 Raw-Hides.",
+  "blockdesk-boarpelt-ground-*": "Place the pelt on the ground and use a knife (Sneak + RMB) to  create a Rug + 4 leather strips.",
+  "blockdesk-boarrug-ground-*": "Rugs can be placed on floors or walls. Converts to 7 medium raw hides using a knife in the crafting grid.",
 
   "block-foxpelt-red-*": "Red Fox Pelt",
   "block-foxpelt-snow-*": "Snow Fox Pelt",
-  "blockdesc-foxpelt-*": "In the crafting grid a Knife on top of Pelt will make 1 Raw-Hide.",
+  "blockdesc-foxpelt-*": "Place a knife over the pelt in the crafting grid to convert to 1 medium raw hide. This pelt is too small to craft a rug, but can be placed on floors or walls.",
 
 
 
@@ -1318,7 +1313,7 @@
   "block-rabbitpelt-lightgrey-ground-*": "LightGrey Rabbit pelt",
   "block-rabbitpelt-tan-ground-*": "Tan Rabbit pelt",
   "block-rabbitpelt-white-ground-*": "White Rabbit pelt",
-  "blockdesc-rabbitpelt-*-ground-*": "In the crafting grid a Knife on top of Pelt will make 1 Raw-Hides.",
+  "blockdesc-rabbitpelt-*-ground-*": "Place a knife over the pelt in the crafting grid to convert to 1 small raw hide. This pelt is too small to craft a rug, but can be placed on floors or walls.",
 
   "block-wolfpelt-ashgrey-ground-*": "AshGrey Wolf Pelt",
   "block-wolfpelt-black-ground-*": "Black Wolf Pelt",
@@ -1329,13 +1324,13 @@
   "block-wolfpelt-silver-ground-*": "Silver Wolf Pelt",
   "block-wolfpelt-smokegrey-ground-*": "SmokeGrey Wolf Pelt",
   "block-wolfpelt-white-ground-*": "White Wolf Pelt",
-  "blockdesc-wolfpelt-*-*-*": "In the crafting grid a Knife on top of Pelt will make 1 Rug and 4 leather strips .",
+  "blockdesc-wolfpelt-*-*-*": "Place the pelt on the ground and use a knife (Sneak + RMB) to  create a Rug + 4 leather strips.",
 
   "block-pantherpelt-black-ground-*": "Black Panther Pelt",
-  "blockdesc-pantherpelt-*-*-*": "In the crafting grid a Knife on top of Pelt will make 1 Rug and 4 leather strips .",
+  "blockdesc-pantherpelt-*-*-*": "Place the pelt on the ground and use a knife (Sneak + RMB) to  create a Rug + 4 leather strips.",
 
   "block-hyenapelt-ground-*": " Hyena Pelt",
-  "blockdesc-hyenapelt-*": "In the crafting grid a Knife on top of Pelt will make 1 Rug and 4 leather strips .",
+  "blockdesc-hyenapelt-*": "Place the pelt on the ground and use a knife (Sneak + RMB) to  create a Rug + 4 leather strips." ,
 
   "block-wolfrug-ashgrey-ground-*": "AshGrey Wolf Rug",
   "block-wolfrug-black-ground-*": "Black Wolf Rug",
@@ -1346,21 +1341,21 @@
   "block-wolfrug-silver-ground-*": "Silver Wolf Rug",
   "block-wolfrug-smokegrey-ground-*": "SmokeGrey Wolf Rug",
   "block-wolfrug-white-ground-*": "White Wolf Rug",
-  "blockdesc-wolfrug-*-*-*": "In the crafting grid a Knife on top of Pelt will make 3 Raw-Hides.",
+  "blockdesc-wolfrug-*-*-*": "Rugs can be placed on floors or walls. Converts to 3 medium raw hides using a knife in the crafting grid.",
 
   "block-pantherrug-black-ground-*": "Black Panther Rug",
-  "blockdesc-pantherrug-*-*-*": "In the crafting grid a Knife on top of Pelt will make 3 Raw-Hides.",
+  "blockdesc-pantherrug-*-*-*": "Rugs can be placed on floors or walls. Converts to 3 medium raw hides using a knife in the crafting grid.",
 
   "block-hyenarug-*": "Hyena Rug",
-  "blockdesc-hyenarug-*": "In the crafting grid a Knife on top of Pelt will make 3 Raw-Hides.",
+  "blockdesc-hyenarug-*": "Rugs can be placed on floors or walls. Converts to 3 medium raw hides using a knife in the crafting grid.",
 
   "item-carnivoremeat-cooked": "Cooked Carnivore Meat",
   "item-carnivoremeat-raw": "Raw Carnivore Meat",
-  "itemdesc-carnivoremeat-cooked": "Eat only in emergency, will satiate your hunger, but is bad for your health",
+  "itemdesc-carnivoremeat-cooked": "Eat only in emergency. This meat will give satiation, but is bad for your health!",
 
   "item-foxmeat-cooked": "Cooked Fox Meat",
   "item-foxmeat-raw": "Raw Fox Meat",
-  "itemdesc-foxmeat-cooked": "Eat only in emergency, will satiate your hunger, but is bad for your health",
+  "itemdesc-foxmeat-cooked": "Eat only in emergency. This meat will give satiation, but is bad for your health!",
 
   "item-porkchops-cooked": "Cooked Pork Chops",
   "item-porkchops-raw": "Raw Pork Chops",
@@ -1422,11 +1417,11 @@
   "item-animal-horn": "Animal Horn",
   "itemdesc-animal-horn": "Use any knife to craft horn slabs (grid). (Future Use: tool handles and trade goods.)",
   "item-byproducts-bowlfiber": "Fibers in a bowl",
-  "itemdesc-byproduct-bowlfiber": "Place 6 sinew fibers above a bowl in the grid. Used to make glue in a fire pit.",,
+  "itemdesc-byproduct-bowlfiber": "Place 6 sinew fibers above a bowl in the grid. Used to make glue in a fire pit.",
   "item-byproducts-glue": "Glue",
   "itemdesc-byproducts-glue": "Crafted by heating sinew fibers in a bowl. Used for crafting composite and recurve bowlimbs. (Future uses of glue include other tool assembly.)",
   "item-byproducts-hornslab": "Horn Slab",
-  "itemdesc-byproducts-hornslab": "Use any knife above the horn to carve horn slabs (grid). Used to craft composite and recurve bowlimbs. (Future use: tool handles and trade goods.)",,
+  "itemdesc-byproducts-hornslab": "Use any knife above the horn to carve horn slabs (grid). Used to craft composite and recurve bowlimbs. (Future use: tool handles and trade goods.)",
   "item-fletching-*": "Fletching for arrows",
   "itemdesc-fletching-*":  "Not yet implemented.  A knife with feather, bamboo or vine will create fletching. Future: add immersion and alternate materials.",
 	
@@ -1443,7 +1438,7 @@
   "item-sisal-twine": "Sisal Twine",
   "item-sisal-rope": "Sisal Rope",  
 
-  "itemdesc-sisal-fibers": "Place 3 in a row to craft Sisal Thread (grid)",,
+  "itemdesc-sisal-fibers": "Place 3 in a row to craft Sisal Thread (grid)",
   "itemdesc-sisal-thread": "Crafted from sisal fiber. Arrange in a 2 X 2 square to craft Sisal Twine (grid).",
   "itemdesc-sisal-twine": "Used as cordage in immersive crafting. Used to make Sisal Rope",
   "itemdesc-sisal-rope": "Sisal Rope",
@@ -1466,7 +1461,7 @@
   "blockdesc-leavesbranchy-*-kapok": "Must use an axe to break",  
   
   "block-giantreed-arundo-*-normal": "Arundo donax - Giant Reed",
-  "blockdesc-giantreed-arundo-*-normal": "Use a knife to harvest reed bundles and edible roots",,
+  "blockdesc-giantreed-arundo-*-normal": "Use a knife to harvest reed bundles and edible roots",
   
   "item-animal-small-bones": "Pile of Small Bones",
   "itemdesc-animal-small-bones": "Future use for fertilizers.",
@@ -1886,9 +1881,9 @@
   "block-planks-bamboo-*": "Bamboo planks",
   
   "block-trough-genericwood-large-head-north": "Large trough",
-  "blockdesc-trough-genericwood-large-head-north": "For feeding large animals with grain (2 per portion) or dry grass (8 per portion)",
+  "blockdesc-trough-genericwood-large-head-north":  "Add grain (2 per portion) or dry grass (8 per portion) to feed large animals",
   "block-trough-genericwood-small-ns": "Small trough",
-  "blockdesc-trough-genericwood-small-ns": "For feeding small animals with grain (1 per portion)",
+  "blockdesc-trough-genericwood-small-ns": "Add grain (1 per portion) to feed small animals",
   
   "block-rammedearth-light": "Rammedearth (Light)",
   "block-rammedearth-medium": "Rammedearth (Medium)",
@@ -1989,6 +1984,7 @@
 	
 	"block-dead-hare-male-arctic": "Dead Hare Male (Arctic)",
 	"block-dead-hare-female-arctic": "Dead Hare Female (Arctic)",
+	
 	"block-jar-smallest-blue-raw": "Jar Smallest Blue (Raw)",
 	"block-jar-small-blue-raw": "Jar Small Blue (Raw)",
 	"block-jar-medium-blue-raw": "Jar Medium Blue (Raw)",
@@ -2029,6 +2025,8 @@
 	"block-jar-medium-red-burned": "Jar Medium Red (Burned)",
 	"block-jar-large-red-burned": "Jar Large Red (Burned)",
 	"block-jar-largest-red-burned": "Jar Largest Red (Burned)",
+	"blockdesc-jar-*": "These are decorative ONLY. Storage function is not yet implemented.",
+	
 	"block-crackedbrick-chert": "Crackedbrick (Chert)",
 	"block-crackedbrick-conglomerate": "Crackedbrick (Conglomerate)",
 	"block-crackedbrick-limestone": "Crackedbrick (Limestone)",
@@ -2084,9 +2082,14 @@
 	"block-harepelt-lightgrey-ground-*": "Harepelt Lightgrey Ground",
 	"block-harepelt-silver-ground-*": "Harepelt Silver Ground",
 	"block-harepelt-smokegrey-ground-*": "Harepelt Smokegrey Ground",
+	
 	"block-sisalrug-small-ground-*": "Sisalrug Small Ground",
 	"block-sisalrug-medium-ground-*": "Sisalrug Medium Ground",
 	"block-sisalrug-large-ground-*": "Sisalrug Large Ground",
+	"blockdesc-sisalrug-small-ground-*": "Use as a label when creating chests, When placed in a sunny location, dries up to 8 berries",
+	"blockdesc-sisalrug-medium-ground-*": "When placed in a sunny location, dries up to 16 berries.",
+	"blockdesc-sisalrug-large-ground-*": "Used to craft the Burden basket. When placed in a sunny location, dries up to 32 berries.",
+	
 	"block-3droad-andesite-bricks": "Road Andesite (Bricks)",
 	"block-3droad-basalt-bricks": "Road Basalt (Bricks)",
 	"block-3droad-bauxite-bricks": "Road Bauxite (Bricks)",
@@ -2391,7 +2394,9 @@
 	"item-settinghammer-blackbronze": "Settinghammer (Blackbronze)",   
 	"item-settinghammer-copper": "Settinghammer (Copper)",   
 	"item-settinghammer-iron": "Settinghammer (Iron)",   
-	"item-settinghammer-tinbronze": "Settinghammer (Tinbronze)",   
+	"item-settinghammer-tinbronze": "Settinghammer (Tinbronze)",
+	"itemdesc-settinghammer-*": "Use on stepping stones to convert to paved road blocks",
+	
 	"item-tamper-wood": "Tamper (Wood)",   
 	"item-tamper-bismuthbronze": "Tamper (Bismuthbronze)",   
 	"item-tamper-blackbronze": "Tamper (Blackbronze)",   
@@ -2416,6 +2421,8 @@
 	"block-dryingtray-acacia": "Drying Tray (Acacia)",
 	"block-dryingtray-kapok": "Drying Tray (Kapok)",
 	"block-dryingtray-aged": "Drying Tray (Aged)",
+	"blockdesc-dryingtray-*": "Place in the sun and add a bucket of saltwater to obtain salt",
+	
     "item-seawaterportion": "Sea Water",
     "incontainer-item-seawaterportion": "Sea Water",
     "incontainer-item-salt": "Salt"

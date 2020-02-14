@@ -3,8 +3,7 @@
     "class": "BlockGenericTypedContainer",
 	"entityclass": "GenericTypedContainer",
     "attributes": {
-        "handbook": {
-            "include": true,
+        "handbook": {            
             "extraSections": [
                 {
                     "title": "Created by",
