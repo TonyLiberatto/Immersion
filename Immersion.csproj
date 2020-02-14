@@ -157,11 +157,11 @@
     <Compile Include="Source\Content\WorldGen\GenRiverMap.cs" />
     <Compile Include="Source\Content\WorldGen\ModifyLakes.cs" />
     <Compile Include="Source\Debugging\RedirectLogs.cs" />
-    <Compile Include="Source\Systems\BEPalmTree.cs" />
-    <Compile Include="Source\Systems\BlockPalmTree.cs" />
+    <Compile Include="Source\Content\BlockEntity\BEPalmTree.cs" />
+    <Compile Include="Source\Content\Block\BlockPalmTree.cs" />
     <Compile Include="Source\Systems\InWorldCraftingSystem.cs" />
     <Compile Include="Source\Systems\LootVesselFix.cs" />
-    <Compile Include="Source\Systems\PalmTreeMod.cs" />
+    <Compile Include="Source\Content\WorldGen\GenPalms.cs" />
     <Compile Include="Source\Systems\Remapper.cs" />
     <Compile Include="Source\Systems\ReturnBlockTest.cs" />
     <Compile Include="Source\Immersion.cs" />
