@@ -7,7 +7,7 @@
 	"textureHeight": 16,
 	"textures": {
 		"sisalbark": "block/plant/sisal/sisalbark",
-		"sisalleaf": "block/plant/sisal/sisalleaf",
+		"sisalleaf": "block/plant/sisal/sisalleaf"
 	},
 	"elements": [
 		{

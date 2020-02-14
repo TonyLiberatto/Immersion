@@ -6,7 +6,7 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-	"sisalleaf": "block/plant/sisal/sisalleaf",
+	"sisalleaf": "block/plant/sisal/sisalleaf"
 	},
 	"elements": [
 		{
