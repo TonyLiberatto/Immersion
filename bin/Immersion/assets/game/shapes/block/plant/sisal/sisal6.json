@@ -8,7 +8,7 @@
 	"textures": {
 		"sisalflowers": "block/plant/sisal/sisalflowers",
 		"sisalleaf": "block/plant/sisal/sisalleaf",
-		"sisalbark": "block/plant/sisal/sisalbark",
+		"sisalbark": "block/plant/sisal/sisalbark"
 	},
 	"elements": [
 		{

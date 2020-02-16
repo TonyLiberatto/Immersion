@@ -1,6 +1,6 @@
 {
 	code: "crop",
-	class: "BlockCrop",
+	class: "BlockSisalPlant",
 	behaviors: [{name: "Unstable"}],
 	variantgroups: [
 		{ code: "type", states: ["sisal"] },
