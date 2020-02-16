@@ -6,10 +6,10 @@
 			groupBy: ["primitivefence-*"],
 			extraSectionsByType: {
 				"primitivefence-support-*":[
-					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one very thin branch (any wood type) vertically on a solid surface to begin the support (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add three very thin branches to complete the structure (Sneak + RMB)." }
+					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) vertically on a solid surface to begin the support (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add three thin branches to complete the structure (Sneak + RMB)." }
 					],
 				"primitivefence-midsection-*": [
-					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one very thin branch (any wood type) horizontally on a solid surface to begin the midsection (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add three very thin branches to complete the structure (Sneak + RMB)." }
+					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) horizontally on a solid surface to begin the midsection (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add three thin branches to complete the structure (Sneak + RMB)." }
 					],
 				}
 		},
@@ -21,10 +21,10 @@
 	],
 	creativeinventory: { "general": ["primitivefence-*-we"], "decorative": ["primitivefence-*-we"], "immersionblocks": ["primitivefence-*-we"] },	
 	shapebytype: {
-		"*-support-*-ns": { base: "block/wood/fence/primitivefence-support" },
-		"*-support-*-we": { base: "block/wood/fence/primitivefence-support", rotateY: 90 },
-		"*-midsection-*-ns": { base: "block/wood/fence/primitivefence-midsection" },
-		"*-midsection-*-we": { base: "block/wood/fence/primitivefence-midsection", rotateY: 90 },
+		"*-support-*-ns": { base: "block/wood/fence/primitivefence-support", rotateY: 90 },
+		"*-support-*-we": { base: "block/wood/fence/primitivefence-support" },
+		"*-midsection-*-ns": { base: "block/wood/fence/primitivefence-midsection", rotateY: 90  },
+		"*-midsection-*-we": { base: "block/wood/fence/primitivefence-midsection"},
 	},
 	blockmaterial: "Wood",
 	texturesbytype: {

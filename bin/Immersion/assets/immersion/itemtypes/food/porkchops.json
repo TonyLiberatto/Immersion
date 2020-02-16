@@ -16,9 +16,11 @@
 				translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
 				rotation: { x: 0, y: 0, z: 90 }
 			},
-			useFirepitModel: "Cooking"
+			useFirepitModel: "Spit"
 		},
-		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
+		nutritionPropsWhenInMeal: { satiety: 450, foodcategory: "Protein" },
+		displaycaseable: true,
+		shelvable: true
 		}
 	},
 	variantgroups: [
@@ -44,9 +46,9 @@
 	shape: { base: "item/food/meat/porkchops" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
-		"porkchops-cooked": { saturation: 2800, health: 0, foodcategory: "Protein" },
-		"porkchops-cured": { saturation: 2800, health: 0, foodcategory: "Protein" },
-		"porkchops-dry": { saturation: 2800, health: 0, foodcategory: "Protein" }
+		"porkchops-cooked": { saturation: 300, health: 0, foodcategory: "Protein" },
+		"porkchops-cured": { saturation: 300, health: 0, foodcategory: "Protein" },
+		"porkchops-dry": { saturation: 300, health: 0, foodcategory: "Protein" }
 	},
 	materialDensity: 600,
 	guiTransform: {

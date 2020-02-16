@@ -18,8 +18,8 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-flax": { saturation: 320, foodcategory: "Grain" },
-		"*": { saturation: 600, foodcategory: "Grain" }
+		"*-flax": { saturation: 200, foodcategory: "Grain" },
+		"*": { saturation: 360, foodcategory: "Grain" }
 	},
 	transitionableProps: [{
 		type: "Perish",

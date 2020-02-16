@@ -16,9 +16,11 @@
 				translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
 				rotation: { x: 0, y: 0, z: 90 }
 			},
-			useFirepitModel: "Cooking"
+			useFirepitModel: "Spit"
 		},
-		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
+		nutritionPropsWhenInMeal: { satiety: 400, foodcategory: "Protein" },
+		displaycaseable: true,
+		shelvable: true
 		}
 	},
 	variantgroups: [
@@ -44,9 +46,9 @@
 	shape: { base: "item/food/meat/mutton" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
-		"mutton-cooked": { saturation: 2400, health: 0, foodcategory: "Protein" },
-		"mutton-cured": { saturation: 2400, health: 0, foodcategory: "Protein" },
-		"mutton-dry": { saturation: 2400, health: 0, foodcategory: "Protein" }
+		"mutton-cooked": { saturation: 300, health: 0, foodcategory: "Protein" },
+		"mutton-cured": { saturation: 300, health: 0, foodcategory: "Protein" },
+		"mutton-dry": { saturation: 300, health: 0, foodcategory: "Protein" }
 	},
 	materialDensity: 600,
 	guiTransform: {

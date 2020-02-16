@@ -2,7 +2,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-bark-*",
+		"Code": "immersion:branch-very-thin-kapok-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -23,7 +23,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-debarked-*",
+		"Code": "immersion:branch-very-thin-kapok-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -44,7 +44,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-bark-*",
+		"Code": "immersion:branch-very-thin-kapok-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -65,7 +65,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-debarked-*",
+		"Code": "immersion:branch-very-thin-kapok-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -86,7 +86,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-bark-*",
+		"Code": "immersion:branch-very-thin-kapok-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -107,7 +107,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-debarked-*",
+		"Code": "immersion:branch-very-thin-kapok-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -128,7 +128,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-bark-*",
+		"Code": "immersion:branch-very-thin-kapok-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -149,7 +149,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-kapok-debarked-*",
+		"Code": "immersion:branch-very-thin-kapok-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },

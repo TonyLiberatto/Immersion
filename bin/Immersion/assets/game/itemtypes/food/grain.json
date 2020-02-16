@@ -2,8 +2,8 @@
 	code: "grain",
 	maxstacksize: 64,
 	attributesByType: {
-		"*-flax": { "nutritionPropsWhenInMeal": { satiety: 135, foodcategory: "Grain" } }, 
-		"*": { "nutritionPropsWhenInMeal": { satiety: 270, foodcategory: "Grain" } }
+		"*-flax": { "nutritionPropsWhenInMeal": { satiety: 140, foodcategory: "Grain" } }, 
+		"*": { "nutritionPropsWhenInMeal": { satiety: 280, foodcategory: "Grain" } }
 	},
 	variantgroups: [
 		{ code: "type", states: ["spelt", "rice", "flax", "rye" ] },
@@ -12,11 +12,11 @@
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
 		"*-flax": { 
-			satiety: 60, 
+			satiety: 40, 
 			foodcategory: "Grain"
 		},
 		"*": {
-			satiety: 120, 
+			satiety: 80, 
 			foodcategory: "Grain"
 		}
 	},

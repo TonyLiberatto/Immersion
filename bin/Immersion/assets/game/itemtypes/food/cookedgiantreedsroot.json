@@ -4,7 +4,7 @@
 	texture: { base: "item/food/cookedgiantreedsroot" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
-		"*": { satiety: 100, health: 1.5, foodcategory: "Vegetable" },
+		"*": { satiety: 120, health: 1.5, foodcategory: "Vegetable" },
 	},
 	materialDensity: 600,
 

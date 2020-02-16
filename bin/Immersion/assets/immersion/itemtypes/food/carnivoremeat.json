@@ -9,7 +9,7 @@
 				translation: { x: -0.03125, y: 0.125, z: 0 },
 				rotation: { x: 0, y: 0, z: 90 }
 			},
-			useFirepitModel: "Cooking"
+			useFirepitModel: "Spit"
 		}
 	},
 	variantgroups: [
@@ -21,8 +21,8 @@
 	shape: { base: "item/food/meat/carnivoremeat" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
-		"carnivoremeat-cooked": { saturation: 1600, health: -1, foodcategory: "Protein" },
-		"carnivoremeat-cured": { saturation: 1600, health: 0, foodcategory: "Protein" },
+		"carnivoremeat-cooked": { saturation: 90, health: -1, foodcategory: "Protein" },
+		"carnivoremeat-cured": { saturation: 80, health: 0, foodcategory: "Protein" },
 	},
 	materialDensity: 600,
 	guiTransform: {

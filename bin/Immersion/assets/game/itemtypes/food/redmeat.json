@@ -16,9 +16,11 @@
 				translation: { x: -0.03125, y: 0.0625, z: 0.046875 },
 				rotation: { x: 0, y: 0, z: 90 }
 			},
-			useFirepitModel: "Cooking"
+			useFirepitModel: "Spit"
 		},
-		nutritionPropsWhenInMeal: { satiety: 840, foodcategory: "Protein" }
+		nutritionPropsWhenInMeal: { satiety: 450, foodcategory: "Protein" },
+		displaycaseable: true,
+		shelvable: true
 		}
 	},
 	variantgroups: [
@@ -50,10 +52,10 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"redmeat-cooked": { satiety: 560, health: 0, foodcategory: "Protein" },
-		"redmeat-cured": { satiety: 400, health: 0, foodcategory: "Protein" },
-		"redmeat-vintage": { satiety: 560, health: 2, foodcategory: "Protein" },
-		"redmeat-dry": { satiety: 560, health: 0, foodcategory: "Protein" },
+		"redmeat-cooked": { satiety: 300, health: 0, foodcategory: "Protein" },
+		"redmeat-cured": { satiety: 250, health: 0, foodcategory: "Protein" },
+		"redmeat-vintage": { satiety: 400, health: 2, foodcategory: "Protein" },
+		"redmeat-dry": { satiety: 400, health: 0, foodcategory: "Protein" },
 	},
 	transitionablePropsByType: {
 		"*-raw": [{

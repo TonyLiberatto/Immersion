@@ -9,8 +9,11 @@
 				translation: { x: -0.03125, y: 0.125, z: 0 },
 				rotation: { x: 0, y: 0, z: 90 }
 			},
-			useFirepitModel: "Cooking"
-		}
+			useFirepitModel: "Spit"
+		},
+		nutritionPropsWhenInMeal: { satiety: 350, foodcategory: "Protein" },
+		displaycaseable: true,
+		shelvable: true
 	},
 	variantgroups: [
 		{ code: "type", states: ["raw", "cooked", "cured" ] },
@@ -21,8 +24,8 @@
 	shape: { base: "item/food/meat/hare" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
-		"hare-cooked": { saturation: 1800, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } },
-		"hare-cured": { saturation: 1800, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } }
+		"hare-cooked": { saturation: 200, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } },
+		"hare-cured": { saturation: 200, health: 0, foodcategory: "Protein", eatenStack: { type: "item", code: "animal-small-bones" } }
 	},
 	materialDensity: 600,
 	guiTransform: {

@@ -28,7 +28,7 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-cooked": { satiety: 240, foodcategory: "Protein" },
+		"*-cooked": { satiety: 90, foodcategory: "Protein" },
 		"*-cured": { satiety: 180, foodcategory: "Protein" },
 	},
 	materialDensity: 600,

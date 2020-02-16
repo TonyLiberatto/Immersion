@@ -21,8 +21,7 @@
 		},
 		behaviors: [
 			{ code: "repulseagents" }, 
-			{ code: "controlledphysics", stepHeight: 1.0001 }, 
-			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "controlledphysics", stepHeight: 1.0001 },			
 			{ code: "interpolateposition" },
 			{ code: "harvestable" }
 		],
@@ -43,15 +42,7 @@
 				code: "longdig",
 				animation: "longdig", 
 				animationSpeed: 1,
-			},
-			{
-				code: "die",
-				animation: "death", 
-				animationSpeed: 1.25,
-				weight: 10,
-				blendMode: "Average",
-				triggeredBy: { onControls: ["dead"] }
-			},
+			},		
 			{ 
 				code: "idle", 
 				animation: "idle",
@@ -80,9 +71,7 @@
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
-			{ code: "health", currenthealth: 5, maxhealth: 5, },
-			{ code: "deaddecay", hoursToDecay: 96, decayedBlock: "carcass-tiny" },
-			{ code: "floatupwhenstuck", onlyWhenDead: true },			
+			{ code: "health", currenthealth: 5, maxhealth: 5, },					
 			{ code: "breathe" },
 			{ 
 				code: "emotionstates",

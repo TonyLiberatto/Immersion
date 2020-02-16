@@ -646,8 +646,7 @@
   "blockdesc-panel-*-bark-*":"place on ground or walls for decoration.",
   "blockdesc-panel-*-debarked-*":"place on ground or walls for decoration, on ground shift right click with hinges to make Door Assemble, or Very Thin Branches to make a Chest Frame.",
   
-  "recipeingredient-item-mutton-raw": "mutton",
-  "recipeingredient-item-chicken-raw": "chicken",
+  "recipeingredient-item-mutton-raw": "mutton",  
   "recipeingredient-item-porkchops-raw": "pork chops",
   "recipeingredient-item-rabbit-raw": "rabbit",
 
@@ -972,14 +971,7 @@
   "block-primitivefence-support-maple-ns": "Maple Primitive Fence Support NS",
   "block-primitivefence-support-pine-ns": "Pine Primitive Fence Support NS",
   "block-primitivefence-support-acacia-ns": "Acacia Primitive Fence Support NS",
-  "block-primitivefence-support-kapok-ns": "Kapok Primitive Fence Support NS",
-
-  "block-primitivefence-midsection-birch-ns": "Birch Primitive Fence MidSection NS",
-  "block-primitivefence-midsection-oak-ns": "Oak Primitive Fence MidSection NS",
-  "block-primitivefence-midsection-maple-ns": "Maple Primitive Fence MidSection NS",
-  "block-primitivefence-midsection-pine-ns": "Pine Primitive Fence MidSection NS",
-  "block-primitivefence-midsection-acacia-ns": "Acacia Primitive Fence MidSection NS",
-  "block-primitivefence-midsection-kapok-ns": "Kapok Primitive Fence MidSection NS",
+  "block-primitivefence-support-kapok-ns": "Kapok Primitive Fence Support NS",  
   
   "block-primitivefence-support-birch-we": "Birch Primitive Fence Support WE",
   "block-primitivefence-support-oak-we": "Oak Primitive Fence Support WE",
@@ -994,6 +986,13 @@
   "block-primitivefence-midsection-pine-we": "Pine Primitive Fence MidSection WE",
   "block-primitivefence-midsection-acacia-we": "Acacia Primitive Fence MidSection WE",
   "block-primitivefence-midsection-kapok-we": "Kapok Primitive Fence MidSection WE",
+  
+  "block-primitivefence-midsection-birch-ns": "Birch Primitive Fence MidSection NS",
+  "block-primitivefence-midsection-oak-ns": "Oak Primitive Fence MidSection NS",
+  "block-primitivefence-midsection-maple-ns": "Maple Primitive Fence MidSection NS",
+  "block-primitivefence-midsection-pine-ns": "Pine Primitive Fence MidSection NS",
+  "block-primitivefence-midsection-acacia-ns": "Acacia Primitive Fence MidSection NS",
+  "block-primitivefence-midsection-kapok-ns": "Kapok Primitive Fence MidSection NS",
   
   "block-primitivegate-birch-*": "Birch Primitive Gate",
   "block-primitivegate-oak-*": "Oak Primitive Gate",
@@ -1367,11 +1366,7 @@
   "item-mutton-raw": "Raw Mutton",
   "item-mutton-cured": "Cured Mutton",
   "item-mutton-salted": "Mutton (Salted)",
-  "item-mutton-dry": "Mutton (Dry)",
-
-  "item-chicken-raw": "Raw Chicken",
-  "item-chicken-cooked": "Cooked Chicken",
-  "item-chicken-cured": "Cured Chicken",
+  "item-mutton-dry": "Mutton (Dry)",  
 
   "item-rabbit-raw": "Raw Rabbit",
   "item-rabbit-cooked": "Cooked Rabbit",

@@ -6,7 +6,7 @@
 	],
 	attributes: {
 		inContainerTexture: { base: "block/wood/barrel/raw-soybean" },
-		nutritionPropsWhenInMeal: { satiety: 480, foodcategory: "Protein" }
+		nutritionPropsWhenInMeal: { satiety: 280, foodcategory: "Protein" }
 	},
 	texture: { base: "item/food/legume/{type}" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },

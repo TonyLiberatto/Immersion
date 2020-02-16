@@ -8,10 +8,10 @@
 	texture: { base: "item/food/egg/chicken" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	attributes: {
-		"nutritionPropsWhenInMeal": { saturation: 400, foodcategory: "Protein" }
+		"nutritionPropsWhenInMeal": { saturation: 240, foodcategory: "Protein" }
 	},
 	nutritionPropsByType: {
-		"*-boiled": { saturation: 320, foodcategory: "Protein" },
+		"*-boiled": { saturation: 200, foodcategory: "Protein" },
 	},
 	materialDensity: 200,
 	fpHandTransform: {

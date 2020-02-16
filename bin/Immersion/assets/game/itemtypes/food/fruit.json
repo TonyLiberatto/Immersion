@@ -7,9 +7,9 @@
 	attributes: {
 		nutritionPropsWhenInMeal: { 
 			satietyByType:  { 
-				"*-saguaro": 180, 
-				"*-cranberry": 180,
-				"*":  240 
+				"*-saguaro": 80, 
+				"*-cranberry": 80,
+				"*":  100 
 			},
 			foodcategory: "Fruit" 
 		},
@@ -17,9 +17,9 @@
 	texture: { base: "item/food/fruit/{type}" },
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-saguaro": { satiety: 120, health: 1, foodcategory: "Fruit" },
-		"*-cranberry": { satiety: 120, foodcategory: "Fruit" },
-		"*": { satiety: 160, foodcategory: "Fruit" }
+		"*-saguaro": { satiety: 100, health: 1, foodcategory: "Fruit" },
+		"*-cranberry": { satiety: 100, foodcategory: "Fruit" },
+		"*": { satiety: 140, foodcategory: "Fruit" }
 	},
 	transitionablePropsByType: {
 		"*-cranberry": [{

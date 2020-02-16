@@ -1,5 +1,7 @@
 {
 	code: "knife",
+	"__comment": "ItemKnife contains code for harvesting animal carcasses",
+	class: "ItemKnife",
 	damagedby: ["blockbreaking", "attacking"],
 	tool: "knife",
 	attributes: {

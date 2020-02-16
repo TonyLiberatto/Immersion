@@ -1,0 +1,42 @@
+[
+  {
+    "op": "add",
+    "path": "/startStacks/0",
+    "value": {
+      "type": "block",
+      "code": "immersion:burdenbasket",
+      "stackSize": 1
+    },
+    "file": "config/general.json"
+  },
+  {
+    "op": "add",
+    "path": "/startStacks/1",
+    "value": {
+      "type": "block",
+      "code": "immersion:burdenbasket",
+      "stackSize": 1
+    },
+    "file": "config/general.json"
+  },
+  {
+    "op": "add",
+    "path": "/startStacks/2",
+    "value": {
+      "type": "block",
+      "code": "immersion:burdenbasket",
+      "stackSize": 1
+    },
+    "file": "config/general.json"
+  },
+  {
+    "op": "add",
+    "path": "/startStacks/3",
+    "value": {
+      "type": "block",
+      "code": "immersion:burdenbasket",
+      "stackSize": 1
+    },
+    "file": "config/general.json"
+  }
+]

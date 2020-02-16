@@ -18,8 +18,7 @@
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
-			{ code: "interpolateposition" }, 
-			{ code: "floatupwhenstuck", onlyWhenDead: true },			
+			{ code: "interpolateposition" },					
 		],
 		animations: [
 			{
@@ -28,15 +27,7 @@
 				animationSpeed: 2.2,
 				weight: 10,
 				blendMode: "AddAverage" 
-			},
-			{
-				code: "die",
-				animation: "death", 
-				animationSpeed: 1.25,
-				weight: 10,
-				blendMode: "Average",
-				triggeredBy: { onControls: ["dead"] }
-			},
+			},		
 			{ 
 				code: "idle", 
 				animation: "idle",
@@ -65,9 +56,7 @@
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
-			{ code: "health", currenthealth: 6, maxhealth: 6, },
-			{ code: "deaddecay", hoursToDecay: 96, decayedBlock: "carcass-small" },
-			{ code: "floatupwhenstuck", onlyWhenDead: true },			
+			{ code: "health", currenthealth: 6, maxhealth: 6, },						
 			{ code: "breathe" },
 			{ code: "emotionstates",
 				states: [

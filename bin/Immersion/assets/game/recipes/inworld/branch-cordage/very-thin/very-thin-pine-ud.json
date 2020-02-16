@@ -2,7 +2,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-bark-*",
+		"Code": "immersion:branch-very-thin-pine-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -12,7 +12,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-bark-leatherstrips-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-bark-leatherstrips-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -23,7 +23,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-debarked-*",
+		"Code": "immersion:branch-very-thin-pine-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -33,7 +33,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-debarked-leatherstrips-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-debarked-leatherstrips-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -44,7 +44,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-bark-*",
+		"Code": "immersion:branch-very-thin-pine-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -54,7 +54,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-bark-sinew-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-bark-sinew-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -65,7 +65,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-debarked-*",
+		"Code": "immersion:branch-very-thin-pine-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -75,7 +75,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-debarked-sinew-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-debarked-sinew-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -86,7 +86,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-bark-*",
+		"Code": "immersion:branch-very-thin-pine-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -96,7 +96,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-bark-sisal-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-bark-sisal-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -107,7 +107,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-debarked-*",
+		"Code": "immersion:branch-very-thin-pine-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -117,7 +117,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-debarked-sisal-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-debarked-sisal-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -128,7 +128,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-bark-*",
+		"Code": "immersion:branch-very-thin-pine-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -138,7 +138,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-bark-reeds-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-bark-reeds-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -149,7 +149,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-oak-debarked-*",
+		"Code": "immersion:branch-very-thin-pine-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -159,7 +159,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-oak-debarked-reeds-ud",
+        "Code": "immersion:branch-cordage-very-thin-pine-debarked-reeds-ud",
         "Type": "Block",		
         "StackSize": 1
     }],

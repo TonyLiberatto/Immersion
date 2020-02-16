@@ -2,7 +2,28 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-bark-*",
+		"Code": "immersion:branch-very-thin-acacia-bark-ud",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 2		
+    },
+    "Makes": [{
+        "Code": "immersion:branch-cordage-very-thin-acacia-bark-leatherstrips-ud",
+        "Type": "Block",		
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:branch-very-thin-acacia-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -12,28 +33,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-bark-leatherstrips-ud",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },  
-  {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:branch-very-thin-maple-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:animal-leatherstrips",
-        "Type": "Item",
-		"StackSize": 2
-    },
-    "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-debarked-leatherstrips-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-debarked-leatherstrips-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -44,7 +44,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-bark-*",
+		"Code": "immersion:branch-very-thin-acacia-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -54,7 +54,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-bark-sinew-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-bark-sinew-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -65,7 +65,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-debarked-*",
+		"Code": "immersion:branch-very-thin-acacia-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -75,7 +75,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-debarked-sinew-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-debarked-sinew-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -86,7 +86,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-bark-*",
+		"Code": "immersion:branch-very-thin-acacia-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -96,7 +96,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-bark-sisal-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-bark-sisal-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -107,7 +107,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-debarked-*",
+		"Code": "immersion:branch-very-thin-acacia-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -117,7 +117,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-debarked-sisal-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-debarked-sisal-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -128,17 +128,17 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-bark-*",
+		"Code": "immersion:branch-very-thin-acacia-bark-ud",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
         "Code": "game:reeds",
         "Type": "Item",
-		"StackSize": 2
+		"StackSize": 2		
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-bark-reeds-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-bark-reeds-ud",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -149,7 +149,7 @@
   {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:branch-very-thin-maple-debarked-*",
+		"Code": "immersion:branch-very-thin-acacia-debarked-ud",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -159,7 +159,7 @@
 		"StackSize": 2
     },
     "Makes": [{
-        "Code": "immersion:branch-cordage-very-thin-maple-debarked-reeds-ud",
+        "Code": "immersion:branch-cordage-very-thin-acacia-debarked-reeds-ud",
         "Type": "Block",		
         "StackSize": 1
     }],

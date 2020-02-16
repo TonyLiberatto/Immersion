@@ -2,7 +2,7 @@
 	ingredientPattern: "ECM,PRC,MPR",
 	ingredients: {
 		"E": { type: "item", code: "offering-bowl-empty" },
-		"C": { type: "item", code: "immersion:chicken-cooked", quantity: 64 },
+		"C": { type: "item", code: "game:poultry-cooked", quantity: 64 },
 		"M": { type: "item", code: "immersion:mutton-cooked", quantity: 64 },
 		"P": { type: "item", code: "immersion:porkchops-cooked", quantity: 64 },
 		"R": { type: "item", code: "immersion:hare-cooked", quantity: 64 },

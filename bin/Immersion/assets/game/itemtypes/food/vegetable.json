@@ -9,7 +9,7 @@
 		},
 		"*-pumpkin": {
 			inContainerTexture: { base: "block/wood/barrel/raw-{type}" },
-			nutritionPropsWhenInMeal: { satiety: 180, foodcategory: "Vegetable" },
+			nutritionPropsWhenInMeal: { satiety: 200, foodcategory: "Vegetable" },
 			handbook:{ 				
 				extraSections: [
 					{ title: "handbook-item-sources", text: "Place a pumpkin down on the ground, break with a knife to get 4 slices of pumpkin and 2 seeds." }
@@ -19,7 +19,7 @@
 		},
 		"*": {
 			inContainerTexture: { base: "block/wood/barrel/raw-{type}" },
-			nutritionPropsWhenInMeal: { satiety: 150, foodcategory: "Vegetable" }
+			nutritionPropsWhenInMeal: { satiety: 180, foodcategory: "Vegetable" }
 		}
 	},
 	variantgroups: [
@@ -38,9 +38,9 @@
 	},
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
-		"*-cabbage": { satiety: 600, foodcategory: "Vegetable" },
-		"*-pumpkin": { satiety: 240, foodcategory: "Vegetable" },
-		"*": { satiety: 200, foodcategory: "Vegetable" },
+		"*-cabbage": { satiety: 300, foodcategory: "Vegetable" },
+		"*-pumpkin": { satiety: 150, foodcategory: "Vegetable" },
+		"*": { satiety: 120, foodcategory: "Vegetable" },
 	},
 	transitionablePropsByType: {
 		"*-pumpkin": [{
