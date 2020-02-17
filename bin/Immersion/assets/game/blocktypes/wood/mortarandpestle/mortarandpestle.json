@@ -6,7 +6,7 @@
 		handbook: {
 			groupBy: ["mortarandpestle-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text: "Place a log of any wood type (except aged) vertically (Wood Grain face at the top of the block) on a solid surface (RMB). With a debarked thin branch in the active hand, add the pestle (Shit + RMB)."}
+					{ title: "handbook-item-sources", text: "Place a log of any wood type (except aged) vertically (Wood Grain face at the top of the block) on a solid surface (RMB). With a debarked thin branch of the same wood type in the active hand, add the pestle (Sneak + RMB) to the TOP of the log."}
 					]
 			
 		}

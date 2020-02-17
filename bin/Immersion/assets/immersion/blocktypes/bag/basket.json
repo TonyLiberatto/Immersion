@@ -13,10 +13,15 @@
 			]
 		},
 		backpack: {
-			quantitySlots: 2 
+			quantitySlots: 3 
 		}
 	},
 	storageFlags: 2,
+	blockmaterial: "Wood",
+	combustibleProps: {
+		burnTemperature: 600,
+		burnDuration: 10,
+	},
 	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	drawtype: "json",
 	lightAbsorption: 0,

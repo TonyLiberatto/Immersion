@@ -8,12 +8,18 @@
     },
     "Tool": {
         "Code": "game:torch-up",
-        "Type": "Block",		
+        "Type": "Block",
+		"StackSize": 1,
     },
     "Makes": [{
         "Code": "game:oillampblue-up",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:torch-up",
+        "Type": "Block",
+		"StackSize": 1
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -28,12 +34,18 @@
     },
     "Tool": {
         "Code": "game:torch-up",
-        "Type": "Block",		
+        "Type": "Block",
+		"StackSize": 1,		
     },
     "Makes": [{
         "Code": "game:oillampbrown-up",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:torch-up",
+        "Type": "Block",
+		"StackSize": 1
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -48,18 +60,24 @@
     },
     "Tool": {
         "Code": "game:torch-up",
-        "Type": "Block",		
+        "Type": "Block",
+		"StackSize": 1,	
     },
     "Makes": [{
         "Code": "game:oillampred-up",
         "Type": "Block",
         "StackSize": 1
     }],
+	"Returns": [{
+        "Code": "game:torch-up",
+        "Type": "Block",
+		"StackSize": 1
+    }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
-{
+ {
     "Mode": "Swap",
     "Takes": {
 		"Code": "game:bowl-fat-fire",
@@ -68,12 +86,18 @@
     },
     "Tool": {
         "Code": "game:torch-up",
-        "Type": "Block",		
+        "Type": "Block",
+		"StackSize": 1,	
     },
     "Makes": [{
         "Code": "game:oillampfire-up",
         "Type": "Block",
         "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "game:torch-up",
+        "Type": "Block",
+		"StackSize": 1
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",

@@ -3,6 +3,15 @@
 	behaviors: [ 
 		{name: "HorizontalOrientable" },		
 	],
+	attributes: {
+		handbook: {
+			groupBy: ["sword-flakeswood-*"],
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Add cordage (sisal twine, leather strips or sinew) to complete the tool (Sneak + RMB)"}
+					]
+			
+		}
+	},
 	variantgroups: [
 		{ code: "stone", states: ["flint", "obsidian" ] },
 		{ code: "shaft", states: ["acacia", "birch", "kapok", "maple", "oak", "pine"] },

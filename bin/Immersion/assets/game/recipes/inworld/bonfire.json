@@ -12,7 +12,7 @@
 		"StackSize": 16		
     },
     "Makes": [{
-        "Code": "bonfire-lit",
+        "Code": "bonfire-cold",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -20,5 +20,56 @@
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
-     
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "bonfire-cold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:torch-up",
+        "Type": "Block",
+		"StackSize": 1,
+    },
+    "Makes": [{
+        "Code": "bonfire-lit",
+        "Type": "Block",	
+        
+    }],
+	"Returns": [{
+        "Code": "game:torch-up",
+        "Type": "Block",
+		"StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "bonfire-cold",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:firestarter",
+        "Type": "Item",
+		"StackSize": 1,
+    },
+    "Makes": [{
+        "Code": "bonfire-lit",
+        "Type": "Block",	
+        
+    }],
+	"Returns": [{
+        "Code": "game:firestarter",
+        "Type": "Item",
+		"StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },    
 ]

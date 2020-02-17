@@ -6,7 +6,7 @@
 			groupBy: ["primitivegate-*"],
 			handbook: {
 			extraSections: [
-					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) vertically on a solid surface to begin the gate (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the gate (Sneak + RMB). Add one very thin branch to complete the gate (Sneak + RMB). Break with any tool and replace to use the gate." },
+					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) vertically on a solid surface to begin the gate (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the gate (Sneak + RMB). Add four very thin branch to complete the gate (Sneak + RMB). Break with any tool and replace to use the gate." },
 					]
 		},
 		},

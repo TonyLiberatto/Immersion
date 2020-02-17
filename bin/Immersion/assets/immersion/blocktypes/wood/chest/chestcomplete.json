@@ -1,9 +1,9 @@
 {
 	code: "chestcomplete",
 	behaviorsByType: { 
-		"*-bamboo-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivalchest-east", attributes: { type: "normal-bamboo-brown" }}}},			
+		"*-bamboo-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboochest-east", attributes: { type: "normal-bamboo-brown" }}}},			
 		],
-		"*-bamboo-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivalchest-east", attributes: { type: "normal-bamboo-green" }}}},			
+		"*-bamboo-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboochest-east", attributes: { type: "normal-bamboo-green" }}}},			
 		],
 		"*-acacia-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivalchest-east", attributes: { type: "normal-acacia" }}}},			
 		],

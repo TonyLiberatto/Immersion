@@ -2547,15 +2547,10 @@
 	"blockdesc-spear-head-*": "Right click with Debarked Very Thin Branch For next step",
 	
 	"block-sword-flakes-flint-*": "Sword Flakes Flint",
-	"block-sword-flakes-obsidian-*": "Sword Flakes Obsidian",
+	"block-sword-flakes-obsidian-*": "Sword Flakes Obsidian",	
 	
+	"blockdesc-*-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	
-	"blockdesc-*-head-granite-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
-	"blockdesc-*-head-andesite-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
-	"blockdesc-*-head-basalt-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
-	"blockdesc-*-head-obsidian-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
-	"blockdesc-*-head-flint-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
-	"blockdesc-*-head-peridotite-*": "Right click with Debarked Very Thin Branch or Large Bone For next step",
 	
 	"blockdesc-*-headshaft-*": "Right click with Leatherstrips or Sisal Twine or Sinew For Finished Tool",
 	"blockdesc-*sword-head-*": "Right click with Debarked  Thin Branch For next step",
@@ -3018,8 +3013,6 @@
 	"block-sword-flakeswood-obsidian-oak-*": "Sword Flakeswood Obsidian Oak",
 	"block-sword-flakeswood-flint-pine-*": "Sword Flakeswood Flint Pine",
 	"block-sword-flakeswood-obsidian-pine-*": "Sword Flakeswood Obsidian Pine",
-	"blockdesc-sword-*": "Break to pick it up",
-
 	
 	"block-adze-granite-acacia-rope-*": "Adze Granite Acacia Rope",
 	"block-adze-andesite-acacia-rope-*": "Adze Andesite Acacia Rope",
@@ -3167,8 +3160,6 @@
 	"block-adze-obsidian-bone-leatherstrips-*": "Adze Obsidian Bone Leatherstrips",
 	"block-adze-flint-bone-leatherstrips-*": "Adze Flint Bone Leatherstrips",
 	"block-adze-peridotite-bone-leatherstrips-*": "Adze Peridotite Bone Leatherstrips",
-	"blockdesc-adze-*": "Break to pick it up",
-
 	
 	"block-axe-granite-acacia-rope-*": "Axe Granite Acacia Rope",
 	"block-axe-andesite-acacia-rope-*": "Axe Andesite Acacia Rope",
@@ -3316,8 +3307,6 @@
 	"block-axe-obsidian-bone-leatherstrips-*": "Axe Obsidian Bone Leatherstrips",
 	"block-axe-flint-bone-leatherstrips-*": "Axe Flint Bone Leatherstrips",
 	"block-axe-peridotite-bone-leatherstrips-*": "Axe Peridotite Bone Leatherstrips",
-	"blockdesc-axe-*": "Break to pick it up",
-
 	
 	"block-hammer-granite-acacia-rope-*": "Hammer Granite Acacia Rope",
 	"block-hammer-andesite-acacia-rope-*": "Hammer Andesite Acacia Rope",
@@ -3465,8 +3454,6 @@
 	"block-hammer-obsidian-bone-leatherstrips-*": "Hammer Obsidian Bone Leatherstrips",
 	"block-hammer-flint-bone-leatherstrips-*": "Hammer Flint Bone Leatherstrips",
 	"block-hammer-peridotite-bone-leatherstrips-*": "Hammer Peridotite Bone Leatherstrips",
-	"blockdesc-hammer-*": "Break to pick it up",
-
 	
 	"block-hoe-granite-acacia-rope-*": "Hoe Granite Acacia Rope",
 	"block-hoe-andesite-acacia-rope-*": "Hoe Andesite Acacia Rope",
@@ -3614,7 +3601,6 @@
 	"block-hoe-obsidian-bone-leatherstrips-*": "Hoe Obsidian Bone Leatherstrips",
 	"block-hoe-flint-bone-leatherstrips-*": "Hoe Flint Bone Leatherstrips",
 	"block-hoe-peridotite-bone-leatherstrips-*": "Hoe Peridotite Bone Leatherstrips",
-	"blockdesc-hoe-*": "Break to pick it up",
 	
 	"block-javelin-bamboo-green-rope-*": "Javelin Bamboo Green Rope",
 	"block-javelin-bamboo-brown-rope-*": "Javelin Bamboo Brown Rope",
@@ -3622,8 +3608,6 @@
 	"block-javelin-bamboo-brown-sinew-*": "Javelin Bamboo Brown Sinew",
 	"block-javelin-bamboo-green-leatherstrips-*": "Javelin Bamboo Green Leatherstrips",
 	"block-javelin-bamboo-brown-leatherstrips-*": "Javelin Bamboo Brown Leatherstrips",
-	"blockdesc-javelin-*": "Break to pick it up",
-
 	
 	"block-knife-granite-acacia-rope-*": "Knife Granite Acacia Rope",
 	"block-knife-andesite-acacia-rope-*": "Knife Andesite Acacia Rope",
@@ -3771,8 +3755,6 @@
 	"block-knife-obsidian-bone-leatherstrips-*": "Knife Obsidian Bone Leatherstrips",
 	"block-knife-flint-bone-leatherstrips-*": "Knife Flint Bone Leatherstrips",
 	"block-knife-peridotite-bone-leatherstrips-*": "Knife Peridotite Bone Leatherstrips",
-	"blockdesc-knife-*": "Break to pick it up",
-
 	
 	"block-shovel-granite-acacia-rope-*": "Shovel Granite Acacia Rope",
 	"block-shovel-andesite-acacia-rope-*": "Shovel Andesite Acacia Rope",
@@ -3920,8 +3902,6 @@
 	"block-shovel-obsidian-bone-leatherstrips-*": "Shovel Obsidian Bone Leatherstrips",
 	"block-shovel-flint-bone-leatherstrips-*": "Shovel Flint Bone Leatherstrips",
 	"block-shovel-peridotite-bone-leatherstrips-*": "Shovel Peridotite Bone Leatherstrips",
-	"blockdesc-shovel-*": "Break to pick it up",
-
 	
 	"block-sickle-granite-acacia-rope-*": "Sickle Granite Acacia Rope",
 	"block-sickle-andesite-acacia-rope-*": "Sickle Andesite Acacia Rope",
@@ -4068,9 +4048,7 @@
 	"block-sickle-basalt-bone-leatherstrips-*": "Sickle Basalt Bone Leatherstrips",
 	"block-sickle-obsidian-bone-leatherstrips-*": "Sickle Obsidian Bone Leatherstrips",
 	"block-sickle-flint-bone-leatherstrips-*": "Sickle Flint Bone Leatherstrips",
-	"block-sickle-peridotite-bone-leatherstrips-*": "Sickle Peridotite Bone Leatherstrips",
-	"blockdesc-sickle-*": "Break to pick it up",
-	
+	"block-sickle-peridotite-bone-leatherstrips-*": "Sickle Peridotite Bone Leatherstrips",	
 	
 	"block-slaughteringaxe-granite-acacia-rope-*": "Slaughteringaxe Granite Acacia Rope",
 	"block-slaughteringaxe-andesite-acacia-rope-*": "Slaughteringaxe Andesite Acacia Rope",
@@ -4217,9 +4195,7 @@
 	"block-slaughteringaxe-basalt-bone-leatherstrips-*": "Slaughteringaxe Basalt Bone Leatherstrips",
 	"block-slaughteringaxe-obsidian-bone-leatherstrips-*": "Slaughteringaxe Obsidian Bone Leatherstrips",
 	"block-slaughteringaxe-flint-bone-leatherstrips-*": "Slaughteringaxe Flint Bone Leatherstrips",
-	"block-slaughteringaxe-peridotite-bone-leatherstrips-*": "Slaughteringaxe Peridotite Bone Leatherstrips",
-	"blockdesc-slaughteringaxe-*": "Break to pick it up",
-	
+	"block-slaughteringaxe-peridotite-bone-leatherstrips-*": "Slaughteringaxe Peridotite Bone Leatherstrips",	
 	
 	"block-spear-granite-acacia-rope-*": "Spear Granite Acacia Rope",
 	"block-spear-andesite-acacia-rope-*": "Spear Andesite Acacia Rope",
@@ -4346,7 +4322,7 @@
 	"block-spear-obsidian-pine-leatherstrips-*": "Spear Obsidian Pine Leatherstrips",
 	"block-spear-flint-pine-leatherstrips-*": "Spear Flint Pine Leatherstrips",
 	"block-spear-peridotite-pine-leatherstrips-*": "Spear Peridotite Pine Leatherstrips",
-	"blockdesc-spear-*": "Break to pick it up",
+	
 	
 	
 	"block-sword-obsidian-acacia-rope-*": "Sword Obsidian Acacia Rope",

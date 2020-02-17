@@ -6,10 +6,10 @@
 			groupBy: ["primitivefence-*"],
 			extraSectionsByType: {
 				"primitivefence-support-*":[
-					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) vertically on a solid surface to begin the support (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add three thin branches to complete the structure (Sneak + RMB)." }
+					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) vertically on a solid surface to begin the support (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add four thin branches to complete the structure (Sneak + RMB)." }
 					],
 				"primitivefence-midsection-*": [
-					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) horizontally on a solid surface to begin the midsection (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add three thin branches to complete the structure (Sneak + RMB)." }
+					{ title: "handbook-item-sources", text: "All branches must be the same barked wood type to build. Place one thin branch (any wood type) horizontally on a solid surface to begin the midsection (RMB). Add cordage (Sisal twine, Sinew or Leather strips) to the fence (Sneak + RMB). Add four thin branches to complete the structure (Sneak + RMB)." }
 					],
 				}
 		},

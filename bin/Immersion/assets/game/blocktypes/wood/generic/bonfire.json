@@ -1,6 +1,6 @@
 {
 	code: "bonfire",
-	behaviors: [{name: "CanIgnite"}],	
+	behaviors: [{name: "Ignitable"},{name: "Unstable"}],	
 	attributes: {
 		"handbook": {
             "include": true,
@@ -26,10 +26,13 @@
 		],		
 	},
 	variantgroups: [
-		{ code:"burnstate", states: [ "extinct", "lit"] }
+		{ code:"burnstate", states: [ "extinct", "lit", "cold"] }
 	],
 	renderpass: "OpaqueNoCull",
-	shape: { base: "block/wood/bonfire/{burnstate}" },
+	shapeByType: {
+		"bonfire-extint": { base: "block/wood/bonfire/extint" },
+		"bonfire-*": { base: "block/wood/bonfire/lit" },
+	},
 	textures: {
 		"log": { base: "block/wood/bonfire/log" },
 		"ceramic": { base: "block/clay/ceramic" },
@@ -37,11 +40,12 @@
 		"ashes": { base: "block/wood/bonfire/ground" },
 		"fire": { base: "block/wood/bonfire/fire" },
 	},
-	creativeinventory: { general: ["bonfire-extinct", "bonfire-lit"], decorative: ["bonfire-extinct", "bonfire-lit"] },
+	creativeinventory: { general: ["bonfire-cold"], decorative: ["bonfire-cold"] },
 	blockmaterial: "Wood",
 	lightAbsorption: 0,
 	lightHsvByType: {
 		"bonfire-extinct": [7, 7, 3],
+		"bonfire-cold": [7, 7, 3],
 		"bonfire-lit": [7, 7, 25],
 	},
 	particlePropertiesByType: {

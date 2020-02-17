@@ -1,8 +1,8 @@
 {
 	code: "labeledchestcomplete",
 	behaviorsByType: { 
-		"*-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-bamboo-brown" }}}}],
-		"*-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-bamboo-green" }}}}],
+		"*-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboolabeledchest-east", attributes: { type: "normal-bamboo-brown" }}}}],
+		"*-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboolabeledchest-east", attributes: { type: "normal-bamboo-green" }}}}],
 		"*-acacia-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-acacia" }}}}],
 		"*-aged-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-aged" }}}}],
 		"*-birch-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-birch" }}}}],
