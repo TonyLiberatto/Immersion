@@ -51,7 +51,7 @@ namespace Immersion
                         {
                             ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                             float animstep = (secondsUsed / val.MakeTime) * 1.0f;
-                            Api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
+                            //Api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
                         }
 
                         return secondsUsed < val.MakeTime;
@@ -77,7 +77,7 @@ namespace Immersion
             {
                 foreach (var val in createBlocks)
                 {
-                    if (Api.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+                    //if (Api.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
 
                     if (secondsUsed > val.MakeTime && active.ActiveHotbarSlot.Itemstack.Collectible.WildCardMatch(val.Takes.Code) && active.ActiveHotbarSlot.StackSize >= val.Takes.StackSize)
                     {
@@ -139,7 +139,7 @@ namespace Immersion
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
-            if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+            //if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
             return false;
         }
 

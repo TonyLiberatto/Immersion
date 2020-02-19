@@ -171,7 +171,7 @@ namespace Immersion
                 {
                     ((byPlayer.Entity as EntityPlayer)?.Player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     float animstep = (secondsUsed / swap.MakeTime) * 1.0f;
-                    Api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
+                    //Api.ModLoader.GetModSystem<ShaderTest>().progressBar = animstep;
                 }
                 return secondsUsed < swap.MakeTime;
             }
@@ -197,7 +197,7 @@ namespace Immersion
 
                 if (swapSystem.SwapPairs.TryGetValue(key, out SwapBlocks swap))
                 {
-                    if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+                    //if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
 
                     if (swap.Takes != null && swap.Takes != block.Code.ToString() || secondsUsed < swap.MakeTime)
                     {
@@ -263,7 +263,7 @@ namespace Immersion
 
         public override bool OnBlockInteractCancel(float secondsUsed, IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref EnumHandling handled)
         {
-            if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
+           // if (world.Side.IsClient()) Api.ModLoader.GetModSystem<ShaderTest>().progressBar = 0;
             return false;
         }
 
