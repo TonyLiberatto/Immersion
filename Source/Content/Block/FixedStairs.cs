@@ -37,23 +37,28 @@ namespace Immersion
             Block nBlock = neibpos.GetBlock(world);
             if (!(nBlock is FixedStairs)) return;
 
-            if (Side)
+            if (world.Side.IsServer())
             {
-                StairsCheck(world, Pos);
-            }
-            else if (Corner)
-            {
-                CornersCheck(world, Pos);
+                if (Side)
+                {
+                    StairsCheck(world, Pos);
+                }
+                else if (Corner)
+                {
+                    CornersCheck(world, Pos);
+                }
             }
         }
 
         public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack = null)
         {
             base.OnBlockPlaced(world, blockPos, byItemStack);
-
-            if (Side)
+            if (world.Side.IsServer())
             {
-                StairsCheck(world, blockPos);
+                if (Side)
+                {
+                    StairsCheck(world, blockPos);
+                }
             }
         }
 
@@ -232,15 +237,18 @@ namespace Immersion
         public override void Initialize(ICoreAPI Api)
         {
             base.Initialize(Api);
-            RegisterGameTickListener(dt =>
+            if (Api.Side.IsServer())
             {
-                FixedStairs fixedStairs = (Pos.GetBlock(Api) as FixedStairs);
-                if (fixedStairs != null)
+                RegisterGameTickListener(dt =>
                 {
-                    if (fixedStairs.Corner) fixedStairs.CornersCheck(Api.World, Pos);
-                    else if (fixedStairs.Side) fixedStairs.StairsCheck(Api.World, Pos);
-                }
-            }, 30);
+                    FixedStairs fixedStairs = (Pos.GetBlock(Api) as FixedStairs);
+                    if (fixedStairs != null)
+                    {
+                        if (fixedStairs.Corner) fixedStairs.CornersCheck(Api.World, Pos);
+                        else if (fixedStairs.Side) fixedStairs.StairsCheck(Api.World, Pos);
+                    }
+                }, 30);
+            }
         }
     }
 }
