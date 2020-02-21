@@ -196,10 +196,10 @@
 			"skin": { "base": "entity/fox/arctic-female" }
 		},
 		"*-fox-male": {
-			"skin": { "base": "entity/fox/male" }
+			"skin": { "base": "entity/fox/forest-male" }
 		},
 		"*-fox-female": {
-			"skin": { "base": "entity/fox/female" }
+			"skin": { "base": "entity/fox/forest-female" }
 		},
 		"*-hare-baby": {
 			"skin": { "base": "entity/hare/baby-brown" }

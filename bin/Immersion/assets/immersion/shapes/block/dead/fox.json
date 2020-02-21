@@ -5,8 +5,7 @@
 	},
 	"textureWidth": 32,
 	"textureHeight": 32,
-	"textures": {
-		"skin": "entity/fox/red-male"
+	"textures": {		
 	},
 	"elements": [
 		{

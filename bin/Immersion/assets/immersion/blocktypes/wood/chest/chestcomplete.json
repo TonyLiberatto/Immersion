@@ -1,10 +1,6 @@
 {
 	code: "chestcomplete",
-	behaviorsByType: { 
-		"*-bamboo-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboochest-east", attributes: { type: "normal-bamboo-brown" }}}},			
-		],
-		"*-bamboo-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboochest-east", attributes: { type: "normal-bamboo-green" }}}},			
-		],
+	behaviorsByType: { 		
 		"*-acacia-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivalchest-east", attributes: { type: "normal-acacia" }}}},			
 		],
 		"*-aged-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivalchest-east", attributes: { type: "normal-aged" }}}},			
@@ -21,15 +17,15 @@
 		],
 	},
 	variantgroups: [		
-		{ code: "wood", states: ["bamboo-brown", "bamboo-green", "acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
 		
 	],	
 	shapeByType: {
-		"*-north": { base: "block/wood/chest/normal", rotateY: 0 },
-		"*-east": { base: "block/wood/chest/normal", rotateY: 270 },
-		"*-south": { base: "block/wood/chest/normal", rotateY: 180 },
-		"*-west": { base: "block/wood/chest/normal", rotateY: 90 },		
+		"*-north": { base: "game:block/wood/chest/normal", rotateY: 0 },
+		"*-east": { base: "game:block/wood/chest/normal", rotateY: 270 },
+		"*-south": { base: "game:block/wood/chest/normal", rotateY: 180 },
+		"*-west": { base: "game:block/wood/chest/normal", rotateY: 90 },		
 	},
 	drops: [{ code: "game:survivalchest-east" }],
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
@@ -52,10 +48,10 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-			"corners": { base: "block/wood/chest/{wood}/corners" },
-			"lid": { base: "block/wood/chest/{wood}/lid" },
-			"sides": { base: "block/wood/chest/{wood}/sides" },
-			"floor": { base: "block/wood/chest/{wood}/floor" },
+			"accessories": { "base": "game:block/wood/smallplanks/{wood}"},
+			"lid": { "base": "game:block/wood/smallplanks/{wood}"	},
+			"sides2": { "base": "game:block/wood/smallplanks/{wood}"},
+			"floor": { "base": "game:block/wood/smallplanks/{wood}"},
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },

@@ -6,10 +6,10 @@
 		
 	],	
 	shapeByType: {
-		"*-north": { base: "block/wood/chest/chest-assemble", rotateY: 0 },
-		"*-east": { base: "block/wood/chest/chest-assemble", rotateY: 270 },
-		"*-south": { base: "block/wood/chest/chest-assemble", rotateY: 180 },
-		"*-west": { base: "block/wood/chest/chest-assemble", rotateY: 90 },		
+		"*-north": { base: "block/wood/chest/chest-assemble1", rotateY: 0 },
+		"*-east": { base: "block/wood/chest/chest-assemble1", rotateY: 270 },
+		"*-south": { base: "block/wood/chest/chest-assemble1", rotateY: 180 },
+		"*-west": { base: "block/wood/chest/chest-assemble1", rotateY: 90 },		
 	},
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
@@ -31,6 +31,7 @@
 		"walk": "walk/wood"
 	},
 	textures: {		
+			
 			"corners": { base: "block/wood/chest/{wood}/corners" },
 			"sides": { base: "game:block/transparent" },
 			"floor": { base: "block/wood/chest/{wood}/floor" },

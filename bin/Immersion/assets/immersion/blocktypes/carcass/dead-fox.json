@@ -33,8 +33,11 @@
 	}],
 	"creativeinventory": { "general": ["*"], "immersionfauna": ["*"]},
 	"variantgroups": [{	"code": "type",	"states": [	"male",	"female", "arctic-male", "arctic-female" ]}],
-	"textures": {
-		"all": { "base": "game:entity/fox/{type}" }
+	"texturesByType": {
+		"dead-fox-male": { base: "entity/fox/forest-male" },
+		"dead-fox-female": { base: "entity/fox/forest-female" },
+		"dead-fox-arctic-male": { base: "entity/fox/arctic-male" },
+		"dead-fox-arctic-female": { base: "entity/fox/arctic-female" },
 	},
 	"shapeByType": {
 		"*": {
@@ -137,7 +140,7 @@
 				"quantity": { "avg": 1,	"var": 0 },
 				"tool": "knife",
 				"lastDrop": true
-			}
+			},
 		],
 		"dead-fox-arctic-male": [{
 				"type": "item",

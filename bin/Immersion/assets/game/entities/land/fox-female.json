@@ -1,4 +1,4 @@
-{
+ {
 	code: "fox-female",
 	class: "EntityAgent",
 	hitboxSize: { x: 0.75, y: 0.75 },
@@ -14,7 +14,7 @@
 	client: {
 		renderer: "Shape",
 		shape: { base: "entity/land/fox-female" },
-		texture: { base: "entity/fox/female" },
+		texture: { base: "entity/fox/forest-female" },
 		behaviors: [
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -58,6 +58,19 @@
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 6, maxhealth: 6, },						
 			{ code: "breathe" },
+			{ 
+				code: "multiply",
+				spawnEntityCode: "fox-baby",
+				requiresNearbyEntityCode: "fox-male",
+				requiresNearbyEntityRange: 10,
+				spawnQuantityMin: 1,
+				spawnQuantityMax: 4,
+				eatAnyway: true,
+				pregnancyDays: 5,
+				multiplyCooldownDaysMin: 2,
+				multiplyCooldownDaysMax: 5,
+				portionsEatenForMultiply: 2
+			},
 			{ code: "emotionstates",
 				states: [
 					{ code: "aggressiveondamage", duration: 15, chance: 0.6, slot: 0, prority: 2, accumType: "noaccum" },

@@ -1,13 +1,14 @@
 {
-	code: "chestsides",		
+	code: "chestlatched",
+	behaviors: [{ name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }} ],	
 	variantgroups: [		
-		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "wood", states: ["bamboo-brown", "bamboo-green", ] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
 		
-	],
+	],	
 	attributes: {
 		handbook: {
-			groupBy: ["chest-assemble-*"]
+			groupBy: ["chestlatched-*"]
 		},
 	},
 	shapeByType: {
@@ -35,10 +36,10 @@
 		"place": "block/planks",
 		"walk": "walk/wood"
 	},
-	textures: {					
-			"sides2": { "base": "game:block/wood/smallplanks/{wood}"},
+	textures: {
+			"sides2": { base: "block/wood/chest/{wood}/sides"},
 			"lid": { base: "game:block/transparent" },
-			"accessories": { base: "game:block/transparent" },
+			"accessories": { base: "game:block/wood/trunk/accessories" },			
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },

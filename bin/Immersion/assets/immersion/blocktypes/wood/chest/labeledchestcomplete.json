@@ -1,8 +1,6 @@
 {
 	code: "labeledchestcomplete",
-	behaviorsByType: { 
-		"*-brown-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboolabeledchest-east", attributes: { type: "normal-bamboo-brown" }}}}],
-		"*-green-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:bamboolabeledchest-east", attributes: { type: "normal-bamboo-green" }}}}],
+	behaviorsByType: { 		
 		"*-acacia-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-acacia" }}}}],
 		"*-aged-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-aged" }}}}],
 		"*-birch-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-birch" }}}}],
@@ -12,7 +10,7 @@
 		"*-pine-*": [{name: "HorizontalOrientable", properties: {  drop:{ type:"block", code: "game:survivallabeledchest-east", attributes: { type: "normal-pine" }}}}],
 	},
 	variantgroups: [		
-		{ code: "color", states: ["bamboo-brown", "bamboo-green", "acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
+		{ code: "wood", states: ["acacia", "aged", "birch", "kapok", "maple", "oak", "pine"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
 		
 	],
@@ -22,10 +20,10 @@
 		},
 	},
 	shapeByType: {
-		"*-north": { base: "block/wood/chest/normal-labeled", rotateY: 0 },
-		"*-east": { base: "block/wood/chest/normal-labeled", rotateY: 270 },
-		"*-south": { base: "block/wood/chest/normal-labeled", rotateY: 180 },
-		"*-west": { base: "block/wood/chest/normal-labeled", rotateY: 90 },		
+		"*-north": { base: "game:block/wood/chest/normal-labeled", rotateY: 0 },
+		"*-east": { base: "game:block/wood/chest/normal-labeled", rotateY: 270 },
+		"*-south": { base: "game:block/wood/chest/normal-labeled", rotateY: 180 },
+		"*-west": { base: "game:block/wood/chest/normal-labeled", rotateY: 90 },		
 	},
 	drops: [{ code: "game:survivallabeledchest-east" }],
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
@@ -48,11 +46,11 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-			"corners": { base: "block/wood/chest/{color}/corners" },
-			"lid": { base: "block/wood/chest/{color}/lid" },
-			"sides": { base: "block/wood/chest/{color}/sides" },
-			"floor": { base: "block/wood/chest/{color}/floor" },
-			"label": { base: "block/wood/chest/{color}/label"},
+			"accessories": { "base": "game:block/wood/smallplanks/{wood}"},
+			"lid": { "base": "game:block/wood/smallplanks/{wood}"	},
+			"sides2": { "base": "game:block/wood/smallplanks/{wood}"},
+			"floor": { "base": "game:block/wood/smallplanks/{wood}"},
+			"label": { base: "game:block/wood/chest/label"},
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },
