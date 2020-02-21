@@ -32,10 +32,7 @@ namespace Immersion
         {
             Api = coreClientAPI;
             this.Pos = Pos;
-            MeshRef test = new MeshRef();
-
             meshref = coreClientAPI.Render.UploadMesh(mesh);
-            
         }
 
         public double RenderOrder
@@ -130,7 +127,5 @@ namespace Immersion
         {
             meshref.Dispose();
         }
-
-
     }
 }

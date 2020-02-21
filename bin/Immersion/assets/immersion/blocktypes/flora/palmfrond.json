@@ -77,7 +77,7 @@
             "base": "block/flora/palm/frond"
         }
     },
-    "blockmaterial": "Plant",
+    "blockmaterial": "Leaves",
     "sideopaque": {
         "all": false
     },

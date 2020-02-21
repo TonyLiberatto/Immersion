@@ -197,10 +197,15 @@ namespace Immersion
             }
         }
 
-        public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot) =>
-            (slot.Itemstack?.Collectible?.Code?.WildCardMatch(recipe?.Tool?.Code, slot.Itemstack.Collectible.ItemClass, byPlayer.Entity.World.Api) ?? false && slot.Itemstack?.StackSize >= recipe.Tool.StackSize) ||
-            (recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString() && slot.Itemstack?.StackSize >= recipe.Tool.StackSize))
-            && ((recipe.Tool.Attributes != null) && (recipe.Tool.Attributes == slot.Itemstack?.Collectible?.Attributes));
+        public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot)
+        {
+            bool toolMatchesCheck1 = slot.Itemstack?.Collectible?.Code?.WildCardMatch(recipe?.Tool?.Code, slot.Itemstack.Collectible.ItemClass, byPlayer.Entity.World.Api) ?? false;
+            bool toolMatchesCheck2 = recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString());
+            bool validStackSize = slot.Itemstack?.StackSize >= recipe.Tool.StackSize;
+            bool attributesCheck = !(recipe.Tool.Attributes != null && recipe.Tool.Attributes == slot.Itemstack?.Collectible?.Attributes);
+
+            return (validStackSize && (toolMatchesCheck1 || toolMatchesCheck2) && attributesCheck);
+        }
     }
 
     class InWorldCraftingRecipe
