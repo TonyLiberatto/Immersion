@@ -22,7 +22,7 @@ namespace Immersion
     class IWCSPacket
     {
         public EnumDataType DataType { get; set; }
-        public string SerializedData { get; set; }
+        public byte[] SerializedData { get; set; }
     }
 
     class InWorldCraftingSystem : ModSystem
@@ -58,7 +58,7 @@ namespace Immersion
             foreach (var val in InWorldCraftingRecipes)
             {
                 string data = JsonConvert.SerializeObject(val, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-                sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = data }, byPlayer);
+                sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = JsonUtil.ToBytes(data) }, byPlayer);
             }
         }
 
@@ -72,12 +72,12 @@ namespace Immersion
                 {
                     try
                     {
-                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
+                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(JsonUtil.FromBytes<string>(h.SerializedData), new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
                         InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
                     }
                     catch (Exception ex)
                     {
-                        Api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h?.SerializedData ?? "");
+                        Api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Key: {1}", ex, JsonUtil.FromBytes<string>(h.SerializedData) ?? "");
                         throw ex;
                     }
                 }
