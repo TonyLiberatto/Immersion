@@ -34,10 +34,10 @@
 	"creativeinventory": { "general": ["*"], "immersionfauna": ["*"]},
 	"variantgroups": [{	"code": "type",	"states": [	"male",	"female", "arctic-male", "arctic-female" ]}],
 	"texturesByType": {
-		"dead-fox-male": { base: "entity/fox/forest-male" },
-		"dead-fox-female": { base: "entity/fox/forest-female" },
-		"dead-fox-arctic-male": { base: "entity/fox/arctic-male" },
-		"dead-fox-arctic-female": { base: "entity/fox/arctic-female" },
+		"dead-fox-male": { all: {base: "entity/fox/forest-male"} },
+		"dead-fox-female": { all: {base: "entity/fox/forest-female" }},
+		"dead-fox-arctic-male": { all: {base: "entity/fox/arctic-male" }},
+		"dead-fox-arctic-female": { all: {base: "entity/fox/arctic-female"} },
 	},
 	"shapeByType": {
 		"*": {
