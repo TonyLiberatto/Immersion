@@ -59,7 +59,7 @@ namespace Immersion
 
         public string Material
         {
-            get { return Block.LastCodePart(); }
+            get { return Block.Variant["wood"]; }
         }
 
         public float GrindSpeed
