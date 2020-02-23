@@ -54,7 +54,7 @@ namespace Immersion
 
                             texPos = val.TextureSource.Type == EnumItemClass.Block ? capi.BlockTextureAtlas.GetPosition(val.TextureSource.Code.GetBlock(Api), "up")
                             : capi.ItemTextureAtlas.GetPosition(val.TextureSource.Code.GetItem(Api));
-                            if ((bool)val.TextureSource.Code.GetBlock(Api).ShapeHasWaterTint) fillPlane.AddTintIndex(2);
+                            if (val.TextureSource.Code.GetBlock(Api).ShapeHasWaterTint) fillPlane.AddTintIndex(2);
                             fillPlane.SetUv(texPos);
                             mesh.AddMeshData(fillPlane);
                             break;
@@ -119,7 +119,8 @@ namespace Immersion
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
             if (slot != null)
             {
-                if (slot.Itemstack?.Block is BlockBucket)
+                if (slot.Itemstack?.Block is BlockBucket && 
+                    (inventory[0].Empty || inventory[0].Itemstack.Collectible.Code == (slot.Itemstack.Block as BlockBucket).GetContent(world, slot.Itemstack)?.Collectible?.Code))
                 {
                     BlockBucket bucket = (slot.Itemstack.Block as BlockBucket);
                     if (byPlayer.Entity.Controls.Sneak)

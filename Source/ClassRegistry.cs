@@ -87,6 +87,7 @@ namespace Immersion
             Api.RegisterBlockClass("BlockWell", typeof(BlockWell));
             Api.RegisterBlockClass("BlockWellPipe", typeof(BlockWellPipe));
             Api.RegisterBlockClass("BlockSisalPlant", typeof(BlockSisalPlant));
+            Api.RegisterBlockClass("BlockWashable", typeof(BlockWashable));
         }
 
         public void RegisterBlockBehaviors()

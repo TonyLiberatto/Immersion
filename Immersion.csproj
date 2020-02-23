@@ -121,6 +121,7 @@
     <Compile Include="Source\Content\BlockEntities\IngotPileOverride.cs" />
     <Compile Include="Source\Content\BlockEntities\BlockEntityDryingStation.cs" />
     <Compile Include="Source\Content\Block\BlockSisalPlant.cs" />
+    <Compile Include="Source\Content\Block\BlockWashable.cs" />
     <Compile Include="Source\Content\Block\BlockWell.cs" />
     <Compile Include="Source\Content\Item\ItemIngotOverride.cs" />
     <Compile Include="Source\Content\Block\BlockChandelierFix.cs" />
