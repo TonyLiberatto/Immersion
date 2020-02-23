@@ -20,25 +20,21 @@
 		"*": [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}]
 	},
 	"entityClass": "Generic",
-    "entityBehaviors": [
-		{ "name": "Transient",
-            "properties": {
+    "entityBehaviorsByType": {	
+		"*-fresh-*": [{ "name": "Transient",
+				"properties": {
                 "convertFrom": "dryingmat-fresh-{size}-{fruit}-{side}",
                 "convertTo": "dryingmat-dry-{size}-{fruit}-{side}",
                 "inGameHours": 48,
 				"TransitionConditions": { "RequiredSunlight": 32, }
-            }
-        },
-        {
-            "name": "Consumable",
-            "properties": {
-                "eatenTo": "sisalrug-{size}-ground-{side}",
-                "contentConfig": {
-                    "foodFor": ["game:hare-*", "game:chicken-*", ]
-                }
-            }
-        }
-    ],
+				}}],
+        "*":[{"name": "Consumable",
+				"properties": {
+					"eatenTo": "sisalrug-{size}-ground-{side}",
+					"contentConfig": {
+						"foodFor": ["game:hare-*", "game:chicken-*", ]
+					}}}]
+	},
 	variantgroups: [
 		{ code: "state" , states: ["fresh", "dry"]},
 		{ code: "size" , states: ["small", "medium", "large"]},		
