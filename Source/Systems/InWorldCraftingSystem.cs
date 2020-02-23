@@ -22,7 +22,7 @@ namespace Immersion
     class IWCSPacket
     {
         public EnumDataType DataType { get; set; }
-        public string SerializedData { get; set; }
+        public byte[] SerializedData { get; set; }
     }
 
     class InWorldCraftingSystem : ModSystem
@@ -58,7 +58,7 @@ namespace Immersion
             foreach (var val in InWorldCraftingRecipes)
             {
                 string data = JsonConvert.SerializeObject(val, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-                sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = data }, byPlayer);
+                sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = JsonUtil.ToBytes(data) }, byPlayer);
             }
         }
 
@@ -72,12 +72,12 @@ namespace Immersion
                 {
                     try
                     {
-                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(h.SerializedData, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
+                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(JsonUtil.FromBytes<string>(h.SerializedData), new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
                         InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
                     }
                     catch (Exception ex)
                     {
-                        Api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Data: {1}", ex, h?.SerializedData ?? "");
+                        Api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Key: {1}", ex, JsonUtil.FromBytes<string>(h.SerializedData) ?? "");
                         throw ex;
                     }
                 }
@@ -103,7 +103,6 @@ namespace Immersion
                     capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                     e.Handled = true;
                 }
-
             }
         }
 
@@ -124,8 +123,10 @@ namespace Immersion
 
             foreach (var val in InWorldCraftingRecipes)
             {
-                foreach (var recipe in val.Value)
+                foreach (var rawRec in val.Value)
                 {
+                    var recipe = rawRec.Clone();
+
                     if (recipe.Disabled || (recipe.Takes.AllowedVariants != null && !block.WildCardMatch(recipe.Takes.AllowedVariants)) || (recipe.Tool.AllowedVariants != null && !slot.Itemstack.Collectible.WildCardMatch(recipe.Tool.AllowedVariants))
                         || (recipe.Takes.Attributes != null) && recipe.Takes.Attributes.Token.HasValues && block.Attributes.Token != recipe.Takes.Attributes.Token) continue;
                     if (block.WildCardMatch(recipe.Takes.Code))
@@ -200,9 +201,9 @@ namespace Immersion
         public bool IsValid(IPlayer byPlayer, InWorldCraftingRecipe recipe, ItemSlot slot)
         {
             bool toolMatchesCheck1 = slot.Itemstack?.Collectible?.Code?.WildCardMatch(recipe?.Tool?.Code, slot.Itemstack.Collectible.ItemClass, byPlayer.Entity.World.Api) ?? false;
-            bool toolMatchesCheck2 = recipe.Tool.Code.IsWildCard && recipe.Tool.Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString());
-            bool validStackSize = slot.Itemstack?.StackSize >= recipe.Tool.StackSize;
-            bool attributesCheck = !(recipe.Tool.Attributes != null && recipe.Tool.Attributes == slot.Itemstack?.Collectible?.Attributes);
+            bool toolMatchesCheck2 = recipe.Tool.Code.IsWildCard && recipe.Tool.Clone().Code.GetMatches(byPlayer.Entity.Api).Any(t => t.ToString() == slot.Itemstack?.Collectible?.Code?.ToString());
+            bool validStackSize = slot.Itemstack?.StackSize >= recipe.Tool.Clone().StackSize;
+            bool attributesCheck = !(recipe.Tool.Clone().Attributes != null && recipe.Tool.Clone().Attributes == slot.Itemstack?.Collectible?.Attributes);
 
             return (validStackSize && (toolMatchesCheck1 || toolMatchesCheck2) && attributesCheck);
         }
@@ -210,6 +211,25 @@ namespace Immersion
 
     class InWorldCraftingRecipe
     {
+        public InWorldCraftingRecipe(EnumInWorldCraftingMode mode, JsonCraftingIngredient takes, JsonCraftingIngredient tool, JsonCraftingOutput[] returns, JsonCraftingOutput[] makes, AssetLocation craftSound, bool isTool, bool disabled, bool remove, float makeTime)
+        {
+            Mode = mode;
+            Takes = takes;
+            Tool = tool;
+            Returns = returns;
+            Makes = makes;
+            CraftSound = craftSound;
+            IsTool = isTool;
+            Disabled = disabled;
+            Remove = remove;
+            MakeTime = makeTime;
+        }
+
+        public InWorldCraftingRecipe Clone()
+        {
+            return new InWorldCraftingRecipe(Mode, Takes, Tool, Returns, Makes, CraftSound, IsTool, Disabled, Remove, MakeTime);
+        }
+
         public EnumInWorldCraftingMode Mode { get; set; } = EnumInWorldCraftingMode.Swap;
         public JsonCraftingIngredient Takes { get; set; }
         public JsonCraftingIngredient Tool { get; set; }

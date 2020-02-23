@@ -32,6 +32,7 @@ namespace Immersion
         {
             Api = coreClientAPI;
             this.Pos = Pos;
+            if (mesh == null) return;
             meshref = coreClientAPI.Render.UploadMesh(mesh);
         }
 
@@ -125,7 +126,7 @@ namespace Immersion
 
         public void Dispose()
         {
-            meshref.Dispose();
+            meshref?.Dispose();
         }
     }
 }

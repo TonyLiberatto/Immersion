@@ -36,7 +36,7 @@
 	lightAbsorption: 0,
 	textures: {
 		all: { 
-			base: "game:block/wood/{style}/{wood}*"
+			base: "game:block/wood/{style}/{wood}"
 		}
 	},
 	selectionbox: {
