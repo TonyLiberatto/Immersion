@@ -8,7 +8,7 @@
     },
     "Tool": {
         "Code": "game:bowl-fire-honey",
-        "Type": "item",
+        "Type": "Block",
 		"StackSize": 8,		
     },
     "Makes": [{
@@ -34,7 +34,7 @@
     },
     "Tool": {
         "Code": "game:bowl-fire-honey",
-        "Type": "item",
+        "Type": "Block",
 		"StackSize": 8,		
     },
     "Makes": [{
@@ -60,7 +60,7 @@
     },
     "Tool": {
         "Code": "game:bowl-fire-honey",
-        "Type": "item",
+        "Type": "Block",
 		"StackSize": 8,		
     },
     "Makes": [{
@@ -86,7 +86,7 @@
     },
     "Tool": {
         "Code": "game:bowl-fire-honey",
-        "Type": "item",
+        "Type": "Block",
 		"StackSize": 8,		
     },
     "Makes": [{

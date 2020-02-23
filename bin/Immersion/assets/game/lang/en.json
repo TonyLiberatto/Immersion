@@ -2547,7 +2547,11 @@
 	"blockdesc-spear-head-*": "Right click with Debarked Very Thin Branch For next step",
 	
 	"block-sword-flakes-flint-*": "Sword Flakes Flint",
-	"block-sword-flakes-obsidian-*": "Sword Flakes Obsidian",	
+	"block-sword-flakes-obsidian-*": "Sword Flakes Obsidian",
+	
+	"blockdesc-bed-wood-head-*": "Wooden bed",
+    "blockdesc-bed-hay-head-*": "Hay bed",
+	"blockdesc-bed-woodaged-head-*": "Aged wooden bed",
 	
 	"blockdesc-*-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	

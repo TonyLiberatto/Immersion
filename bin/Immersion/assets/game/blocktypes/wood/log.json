@@ -80,8 +80,8 @@
 	},
 	drops: [
 		{ type: "block", code: "log-placed-{wood}-ud", quantity: { avg: 1 }, tool:"axe"  },
-		{ type: "block", code: "immersion:panel-{wood}-bark-down", quantity: { avg: 4 }, tool:"saw"  },
-		{ type: "block", code: "immersion:panel-{wood}-debarked-down", quantity: { avg: 4 }, tool:"saw"  },
+		{ type: "block", code: "immersion:panel-{wood}-bark-down", quantity: { avg: 2 }, tool:"saw"  },
+		{ type: "block", code: "immersion:panel-{wood}-debarked-down", quantity: { avg: 6 }, tool:"saw"  },
 		
 	],
 	combustiblePropsByType: {

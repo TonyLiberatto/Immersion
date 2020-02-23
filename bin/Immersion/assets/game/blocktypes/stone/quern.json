@@ -3,7 +3,7 @@
 	class: "BlockQuern",
 	entityClass: "Quern",
 	entityBehaviors: [{ name: "MPConsumer" }],
-	behaviors: [{name: "Container"}, {name: "UnstableFalling"}],
+	behaviors: [{name: "Container"}, {name: "UnstableFalling", properties: { exceptions: ["woodenaxle-ud"] }}],
 	attributes: {
 		handbook: {
 			groupBy: ["quern-*"],
