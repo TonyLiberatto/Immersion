@@ -30,6 +30,7 @@ namespace Immersion
         {
             base.Initialize(Api);
             props = (Pos.GetBlock(Api) as BlockDryingStation)?.props;
+            if (props == null) return;
 
             RegisterGameTickListener(dt =>
             {

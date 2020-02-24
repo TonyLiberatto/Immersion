@@ -28,7 +28,7 @@
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,
-	
+	"renderPass": "OpaqueNoCull",
 	selectionbox: {
 		x1: 0, y1: 0, z1: 0, 
 		x2: 2, y2: 0.0625, z2: 2,

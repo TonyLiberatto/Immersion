@@ -29,7 +29,6 @@ namespace Immersion
     {
         ICoreServerAPI sapi;
         ICoreClientAPI capi;
-        IServerNetworkChannel sChannel;
         IClientNetworkChannel cChannel;
 
         public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
@@ -38,7 +37,7 @@ namespace Immersion
         public override void StartServerSide(ICoreServerAPI Api)
         {
             this.sapi = Api;
-            sChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
+            Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
             {
                 if (b.DataType == EnumDataType.Action)
                 {
@@ -50,38 +49,13 @@ namespace Immersion
                 }
             });
             Api.Event.SaveGameLoaded += OnSaveGameLoaded;
-            Api.Event.PlayerJoin += SendCraftingRecipes;
-        }
-
-        private void SendCraftingRecipes(IServerPlayer byPlayer)
-        {
-            foreach (var val in InWorldCraftingRecipes)
-            {
-                string data = JsonConvert.SerializeObject(val, Formatting.None, new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore });
-                sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = JsonUtil.ToBytes(data) }, byPlayer);
-            }
         }
 
         public override void StartClientSide(ICoreClientAPI Api)
         {
             this.capi = Api;
             Api.Event.MouseDown += SendBlockAction;
-            cChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>(h =>
-            {
-                if (h.DataType == EnumDataType.Recipes)
-                {
-                    try
-                    {
-                        var recipe = JsonConvert.DeserializeObject<KeyValuePair<AssetLocation, InWorldCraftingRecipe[]>>(JsonUtil.FromBytes<string>(h.SerializedData), new JsonSerializerSettings() { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, NullValueHandling = NullValueHandling.Ignore });
-                        InWorldCraftingRecipes.Add(recipe.Key, recipe.Value);
-                    }
-                    catch (Exception ex)
-                    {
-                        Api.World.Logger.Error("Exception thrown while receiving an In World Recipe packet: {0}, Key: {1}", ex, JsonUtil.FromBytes<string>(h.SerializedData) ?? "");
-                        throw ex;
-                    }
-                }
-            });
+            cChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>();
         }
 
         public override void Dispose()
@@ -115,6 +89,8 @@ namespace Immersion
 
         public bool OnPlayerInteract(IPlayer byPlayer, BlockSelection blockSel)
         {
+            if (byPlayer is IClientPlayer) return true;
+
             BlockPos Pos = blockSel?.Position;
             Block block = Pos?.GetBlock(byPlayer.Entity.World);
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
@@ -159,7 +135,7 @@ namespace Immersion
                                 if (recipe.Remove) byPlayer.Entity.World.BlockAccessor.SetBlock(0, Pos);
                                 shouldbreak = true;
                             }
-                            if (byPlayer.Entity.World.Side.IsServer()) byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, Pos);
+                            byPlayer.Entity.World.PlaySoundAt(recipe.CraftSound, Pos);
                         }
                         else continue;
 

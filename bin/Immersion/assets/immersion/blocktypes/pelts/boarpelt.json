@@ -27,6 +27,7 @@
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,
+	"renderPass": "OpaqueNoCull",
 	textures: {
 		all: { 
 			base: "block/pelt/boar"
