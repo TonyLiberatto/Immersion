@@ -42,7 +42,7 @@
 	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "immersiondeco": ["*-down"] },
 	replaceable: 4000,
 	resistance: 1,
-	lightAbsorption: 1,
+	lightAbsorption: 0,
 	textures: {
 		all: {	base: "block/wood/planks/bamboo-{color}-side" }
 	},

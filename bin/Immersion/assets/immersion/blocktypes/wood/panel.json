@@ -114,7 +114,7 @@
     },
     "replaceable": 4000,
     "resistance": 1,
-    "lightAbsorption": 1,
+    "lightAbsorption": 0,
     "textures": {
 		"all": {
 			"base": "game:block/wood/{style}/{wood}"
