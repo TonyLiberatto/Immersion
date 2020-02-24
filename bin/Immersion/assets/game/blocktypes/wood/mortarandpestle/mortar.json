@@ -3,7 +3,7 @@
 	variantgroups: [
 		{ loadFromProperties: "block/wood" }
 	],
-	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": [""], "immersionblocks": [""] },
 	shape: { base: "immersion:block/wood/mortarandpestle/base" },
 	blockmaterial: "Wood",
 	drawtype: "json",

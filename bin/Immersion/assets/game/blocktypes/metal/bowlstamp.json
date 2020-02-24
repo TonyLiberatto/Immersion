@@ -11,6 +11,13 @@
             ]
         }
     ],
+	attributes: {
+		handbook: {			
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-smelting\">Smelting</a>" }
+			]
+		},
+	},	
     "blockmaterial": "Metal",
     "behaviors": [  {  "name": "UnstableFalling"  },  ],
     "replaceable": 300,

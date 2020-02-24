@@ -11,7 +11,7 @@
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code:"materialtype", states: ["raw", "burned"] },
-		{ code:"tooltype", states: ["axe", "pickaxe", "shovel", "sword", "hammer", "anvil", "hoe", "prospectingpick", "lamellae"] }
+		{ code:"tooltype", states: ["axe", "pickaxe", "shovel", "sword", "hammer", "anvil", "helvehammer","hoe", "prospectingpick", "lamellae"] }
 	],
 	attributesByType: {
 		"toolmold-*-burned-anvil": {
@@ -32,6 +32,14 @@
 				{ x1: 1, z1: 5, x2: 15, z2: 11 },
 			],
 			"drop": { type:"Block", code: "anvil-{metal}" }
+		},
+		"toolmold-burned-helvehammer": {
+			"requiredUnits": 300,
+			"fillHeight": 3,
+			"fillQuadsByLevel": [
+				{ x1: 4, z1: 4, x2: 12, z2: 12 }
+			],
+			"drop": { type: "Item", code: "helvehammerhead-{metal}" }
 		},
 		"toolmold-*-burned-sword": {
 			"requiredUnits": 100,

@@ -11,25 +11,25 @@
 	],
 	attributesByType: {
 		"*-blue-burned": {
-			"requiredUnits": 40,
+			"requiredUnits": 100,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "metalsheet-{metal}-down" }
 		},
 		"*-brown-burned": {
-			"requiredUnits": 40,
+			"requiredUnits": 100,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "metalsheet-{metal}-down" }
 		},
 		"*-fire-burned": {
-			"requiredUnits": 40,
+			"requiredUnits": 100,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "metalsheet-{metal}-down" }
 		},
 		"*-red-burned": {
-			"requiredUnits": 40,
+			"requiredUnits": 100,
 			"fillHeight": 1,
 			"fillQuadsByLevel": [ { x1: 1, z1: 1, x2: 15, z2: 15 } ],
 			"drop": { class:"Block", code: "metalsheet-{metal}-down" }

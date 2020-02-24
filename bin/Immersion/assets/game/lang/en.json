@@ -10,17 +10,18 @@
   "tabname-special": "Special",
   
   "handbook-collectible-sources": "Sources",  
-  "To make a wicked candle mold  you need to place sisal twine  over an empty candle mold": "To make a wicked candle mold  you need to place sisal twine  over an empty candle mold.",
-  "To make an empty candle mold use clayforming to create a clay candlemold, and pour metal into it.": "To make an empty candle mold use clayforming to create a clay candlemold, and pour metal into it.",
+  "Created by adding sisal twine (Sneak + RMB) to an empty metal candle mold.": "Created by adding sisal twine (Sneak + RMB) to an empty metal candle mold.",  
   
   "craftinginfo-toolmaking-title": "Immersion Tool Making",
   "craftinginfo-toolmaking-text": "<strong>toolmaking</strong><br><br>Immersion Tool Making 101. Only here on The Immersion Mod.<br><br>In the immersion mod, hafted <a href=\"handbook://item-flint0\">flint</a> or stone (e.g. <a href=\"handbook://item-stone-granite0\">granite</a>) tools are created outside the crafting grid. You will create them step by step on a workspace block in front of you. You will need a flint tool/weapon head, a shaft, and binding material to attach the tool or weapon head to the shaft. The first step is to create the tool head using the <a href=\"handbook://craftinginfo-knapping\">knapping interface</a>.  If you wish to make a tool or weapon using a head that you prepared ahead of time, or you found by panning, Shift (Sneak) + Right click will allow you to place the flint head and create a workspace. Once the head is made or placed, it will remain on the block where you knapped or placed it, which will become your workspace. Next, you will need to add a shaft, either debarked very thin branch or large bone. Right click the workspace to add the shaft to your knapped flint or stone head.  The last step is to secure the shaft to the tool/weapon head using <a href=\"handbook://immersion:item-sisal-twine\">sisal twine</a>, sinew or leather strips. Right click the workspace to add the binding and complete your tool. The completed tool will stay on the workspace block until you Left click (break) and pick it up.<br><br>Congratulations! You are now a master Tool Maker \\o/<br>",
   
   "craftinginfo-preserving-title": "Immersion Food Preserving",
-  "craftinginfo-preserving-text": "<strong>preserving</strong><br><br>Immersion Food Preserving 101. Only here on The Immersion Mod.<br><br>To make dry fruits place a  sisal rug on the ground and sneak right click with enough fruits, after some time under the sun they will dry. To make dry meat, first sneak right click raw meat over a Food Bowl , then add salt, remove it by holding right click. Place salted meat on a Drying Rack, after some time under the sun you will be able to harvest Dry Meat. To make Pemmican, first place intestines on a large Food Bowl and sneak right click with a knife to make casings. Harvest casings. next step is to grind the dry meat and the dry fruit in a Quern or Mortar and Pestle. Add the dry meat flour first to a food bowl, then add, dry fruit flour, fat and lastly sneak right click wqith enough honey bowls. Once the Pemmican mixture is done, just sneak right click with casings to make Pemmican Sausages<br><br>Congratulations! You are now a master Food Preserver \\o/<br>",
+  "craftinginfo-preserving-text": "<strong>preserving</strong><br><br>Immersion Food Preserving 101. To dry fruit: place a sisal rug on a solid surface in direct sunlight. With fresh fruit in the active hand (Sneak + RMB)  on the rug. (Small rug  holds 16 fresh fruit, medium holds 32 and large holds 64). Over time,  the berries will dry in the sun. Sun-dried berries appear darker and can be harvested using RMB. To dry meat, prepare salted meat using a mixing bowl. Place the bowl and add raw meat (Sneak + RMB), then add salt to the bowl. Remove salted meat by holding RMB and place on a Drying Rack in direct sunlight using (Sneak + RMB). Sun-dried meat can be removed from racks (RMB) and stored. To make Pemmican, prepare dried meat and dried fruit flours from Sun-dried ingredients using a Quern or Mortar and Pestle.  Choose a bowl size based on portions: small bowl holds 4, medium holds 8 and large holds 16. Place a mixing bowl and add equal portions of ingredients using (Sneak + RMB) in this order: dry meat flour, dry fruit flour, fat and bowls of honey.  After adding the ingredients, package the pemmican using (Sneak + RMB) with the container in the active hand.<br><br>Congratulations! You are now a master Food Preserver \\o/<br>",
   
   "craftinginfo-immersivecrafting-title": "Immersive Crafting",
   "craftinginfo-immersivecrafting-text": "Crafting items, blocks and containers (objects) using this mechanic requires players to assemble the object through the step-wise addition of components on a workspace block. Wherever possible, crafting performed within the player's grid has been changed to the immersive mechanic, and the Vanilla grid recipes do not function. General Crafting Directions:  Placing the first component on a solid block creates a workspace (RMB). Workspaces can be created on any block where a player could knap stones or form clay in vanilla. All subsequent components are added using (Sneak + RMB). Each successful component addition is accompanied by a visual change in the object. When a crafting recipe specifies 'add 4 components', one addition step adds all 4 items from the player's inventory. The player does not need to add each component individually (Sneak + RMB X 4). When the object is complete, breaking the object completes the crafting process. No additional components can be added once the block is broken. Replacing the block or container activates the object for use. Substituting a component that is not specified in the recipe (debarked branch for a barked branch) will result in the creation of a different item than the player intends to build. Changing the order of component addition will also change the item creation. When building an item, if attempting to add a component that is not permitted in the recipe, nothing will happen when using (Sneak + RMB). Check the crafting directions again and make sure the chosen component is allowable. Good Luck and happy crafting!",
+  
+  "blockdesc-metalsheet-*":"Use to assemble Glass Lanterns",
   
   "block-barrel-aged": "Barrel (Aged)",
   "block-barrel-bamboo-brown": "Barrel Bamboo (Brown)",
@@ -46,6 +47,8 @@
   
   "block-bonfire-extinct": "Bonfire (Extinct)" ,
   "block-bonfire-lit": "Bonfire (Lit)" ,
+  "block-bonfire-cold": "Bonfire (Cold)" ,
+  "blockdesc-bonfire-*": "The bonfire drives away predators within a range of 48 blocks. It lasts for 24 hours, and cannot be refueled once extinguished." ,
   
   	"block-food-bowl-small-blue-porkchops-raw": "Food Bowl Small Blue Porkchops (Raw)",
 	"block-food-bowl-medium-blue-porkchops-raw": "Food Bowl Medium Blue Porkchops (Raw)",
@@ -179,7 +182,7 @@
   "block-ingotstampmold-brown-burned": "Brown Ingot Stamp Mold",
   "block-ingotstampmold-fire-burned": "Fire Ingot Stamp Mold",
   "block-ingotstampmold-red-burned": "red Ingot Stamp Mold",
-  "blockdesc-ingotstampmold-*-burned": "Pour melted copper or bronze to make a ingot stamper",
+  "blockdesc-ingotstampmold-*-burned": "Add copper or bronze to create an Ingot Mold stamp for instant ingot mold creation. ",
   
   "block-pumpkin-fruit-*": "Growing pumpkin",
   "blockdesc-pumpkin-fruit-*": "Not ready for harvesting",
@@ -229,6 +232,7 @@
   "block-toolpinmold-brown-burned": "Tool Pin Mold Brown (Burned)",
   "block-toolpinmold-fire-burned": "Tool Pin Mold Fire (Burned)",
   "block-toolpinmold-red-burned": "Tool Pin Mold Red (Burned)",
+  "blockdesk-toolpinmold-*": "Fill with metal to create 98 tool pins.",  
   
   "block-bowl-fat-blue": "Bowl Fat (Blue)",
   "block-bowl-fat-brown": "Bowl Fat (Brown)",
@@ -289,6 +293,7 @@
   
   "block-bamboostakes-brown": "Brown Bamboo Stakes",
   "block-bamboostakes-green": "Green Bamboo Stakes",
+  "blockdesc-bamboostakes-*": "Used to craft bamboo panel components for other bamboo blocks, planks, buckets, and barrels.",
   
   "block-rockslab-andesite-*": "Andesite Rock Slab",
   "block-rockslab-chalk-*": "Chalk Rock Slab",
@@ -314,10 +319,18 @@
   "block-rockslab-redmarble-*": "Red Marble Rock Slab",
   "block-rockslab-greenmarble-*": "Green Marble Rock Slab",
   
-  "block-candlemold-*-plain": "Empty Metal Candle Mold",
-  "blockdesc-candlemold-*-plain": "Right click with sisal twine to make Wicked Candle Mold",
-  "block-candlemold-*-burned": "Wicked Metal Candle Mold",
-  "blockdesc-candlemold-*-burned": "Pour smelted bees wax to make wax candle or smelted fat to make tallow candles",
+  "block-candlemold-copper-plain": "Empty Copper Candle Mold",
+  "block-candlemold-bismuthbronze-plain": "Empty Bismuth Bronze Candle Mold",
+  "block-candlemold-blackbronze-plain": "Empty Black Bronze Candle Mold",
+  "block-candlemold-tinbronze-plain": "Empty Tin Bronze Candle Mold",
+  
+  "blockdesc-candlemold-*-plain": "Add sisal twine (Sneak + RMB) to make Wicked Candle Mold",
+  "block-candlemold-copper-burned": "Wicked Copper Candle Mold",
+  "block-candlemold-bismuthbronze-burned": "Wicked Bismuth Bronze Candle Mold",
+  "block-candlemold-bismuthbronze-burned": "Wicked Black Bronze Candle Mold",
+  "block-candlemold-bismuthbronze-burned": "Wicked Tin Bronze Candle Mold",
+  
+  "blockdesc-candlemold-*-burned": "Pour smelted beeswax to make wax candles or smelted fat to make tallow candles",
   "block-claycandlemold-*-raw": "Raw Clay Candle Mold",
   "blockdesc-claycandlemold-*-raw": "Burn in a fire pit to make a Clay Candle Mold",
   "block-claycandlemold-*-burned": "Burned Clay Candle Mold",
@@ -546,9 +559,12 @@
   "block-mortarandpestle-maple-east": "Mortarandpestle Maple",
   "block-mortarandpestle-oak-east": "Mortarandpestle Oak",
   "block-mortarandpestle-pine-east": "Mortarandpestle Pine",
+  "blockdesc-mortarandpestle-*": "A wooden quern, used to grind grains, dried foods, and other resources. Access the block inventory using the mouse on the interior of the block. This block requires a space above the mortar to use.",
   
   "item-seeds-sisal": "Sisal Seeds",
   "item-sisal-leaves": "Sisal Leaves",
+  "itemdesc-sisal-leaves": "Harvested from sisal plants using any knife. Crush with any hammer in the grid to obtain sisal fiber. Each leaf provides 16 fiber. These leaves are used to craft all sisal cordage.",
+  
   "block-crop-sisal-1": "Crop Sisal (1)",
   "block-crop-sisal-2": "Crop Sisal (2)",
   "block-crop-sisal-3": "Crop Sisal (3)",
@@ -2002,10 +2018,7 @@
 	"item-slaughteringaxe-iron-pine": "Slaughteringaxe Iron (Pine)",   
 	"item-slaughteringaxe-lead-pine": "Slaughteringaxe Lead (Pine)",   
 	"item-slaughteringaxe-silver-pine": "Slaughteringaxe Silver (Pine)",   
-	"item-slaughteringaxe-tinbronze-pine": "Slaughteringaxe Tinbronze (Pine)", 
-  
-  "item-bamboostakes-brown": "Brown Bamboo Stakes",
-  "item-bamboostakes-green": "Green Bamboo Stakes",  
+	"item-slaughteringaxe-tinbronze-pine": "Slaughteringaxe Tinbronze (Pine)",   
   
   "block-mortar-acacia": "Acacia Mortar",
   "block-mortar-birch": "Birch Mortar",
@@ -2108,7 +2121,7 @@
 	"block-bowlstampmold-brown-burned": "Brown Bowl Stamp mold (Burned)",
 	"block-bowlstampmold-fire-burned": "Fire Bowl Stamp mold (Burned)",
 	"block-bowlstampmold-red-burned": "Red Bowl Stamp mold (Burned)",
-	
+	"blockdesc-bowlstampmold-*-burned": "Add copper or bronze to create a Bowl stamp for instant bowl creation. ",
 	
     "block-crucibleblue-raw": "Blue Crucible (Raw)",
 	"block-cruciblebrown-raw": "Brown Crucible (Raw)",

@@ -7,7 +7,7 @@
             "extraSections": [
                 {
                     "title": "Created by",
-                    "text": "Place <a href=\"handbook://item-drygrass\">dry grass</a> on a solid surface to begin the bonfire (RMB). Add barked <a href=\"handbook://immersion:block-branch-thin-*-bark-ud\">thin branches</a> (16, any wood type) to construct the fire (Sneak + RMB). Ignite the structure using the fire starter."
+                    "text": "Place <a href=\"handbook://item-drygrass\">dry grass</a> on a solid surface to begin the bonfire (RMB). Add barked <a href=\"handbook://immersion:block-branch-thin-acacia-bark-ud\">thin branches</a> (16, any wood type) to construct the fire (Sneak + RMB). Ignite the structure using the fire starteror torch."
                 }
             ]
         }

@@ -3,12 +3,9 @@
     "class": "BlockSimpleCoating",
     "attributes": {
         "handbook": {
-            "groupBy": [
-                "panel-*"
-            ],
+            "groupBy": [ "panel-*"  ],
             "extraSections": [
-                {
-                    "title": "handbook-item-sources",
+                { "title": "handbook-item-sources",
                     "text": "Place a log on a solid surface (RMB). Break the log using a saw to create 2 barked and 6 debarked panels (LMB)."
                 }
             ]

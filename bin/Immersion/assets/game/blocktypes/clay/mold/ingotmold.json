@@ -1,7 +1,19 @@
 {
 	code: "ingotmold",
 	class: "BlockIngotMold",
-	behaviors: [{name: "UnstableFalling"}],
+	behaviorsByType: {
+		"*-raw": [{name: "UnstableFalling"}, {name: "RightClickPickup" }],
+		"*": [{name: "UnstableFalling"}],
+	},
+	attributes: {
+		handbook: {
+			groupBy: ["ingotmold-*"],
+				extraSections: [
+					{ title: "handbook-item-sources", text: "Ingot molds can be created instantly using the <a href=\"handbook://block-ingotstamp-copper\">Ingot mold stamp.</a>"}
+					]
+			
+		}
+	},
 	variantgroups: [
 		{ code:"color", states: ["blue", "brown", "fire", "red"] },
 		{ code:"type", states: ["raw", "burned"] }

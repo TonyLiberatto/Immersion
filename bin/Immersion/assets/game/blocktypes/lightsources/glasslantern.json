@@ -8,7 +8,7 @@
 		handbook:{ 
 				groupBy: ["glasslantern-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text:"Place the metal sheet onto a solid surface (RMB). Place a completed lantern onto the base plate (Shift + RMB). Place the Glass Block (Bloomery Glass) onto the Lantern assembly (Shift + RMB). Add 5 <a href=\"handbook://block-glasslanternframe-copper-down\">Glass Lantern Frames</a> to complete the sides and top (Shift + RMB).Break the lantern to collect and replace."	}
+					{ title: "handbook-item-sources", text:"Place the metal sheet onto a solid surface (RMB). Place a completed lantern onto the base plate (Sneak + RMB). Place the Glass Block (Bloomery Glass) onto the Lantern assembly (Sneak + RMB). Add 5 <a href=\"handbook://block-glasslanternframe-copper-down\">Glass Lantern Frames</a> to complete the sides and top (Sneak + RMB).Break the lantern to collect and replace."	}
 					]
 
 		},

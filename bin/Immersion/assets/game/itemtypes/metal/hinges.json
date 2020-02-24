@@ -1,5 +1,12 @@
 {
     "code": "hinges",
+	attributes: {
+		handbook: {			
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-smelting\">Smelting</a>" }
+			]
+		},
+	},
     "variantgroups": [{"code": "metal", "states": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ]}],
     "shape": { "base": "item/hinges" },
     "texture": { "base": "item/tool/material/{metal}" },
