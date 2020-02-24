@@ -24,6 +24,7 @@
 	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "immersiondeco": ["*-ground-east"] },
 	replaceable: 4000,
 	resistance: 0.5,
+	"renderPass": "OpaqueNoCull",
 	lightAbsorption: 0,
 	textures: {
 		all: { 
