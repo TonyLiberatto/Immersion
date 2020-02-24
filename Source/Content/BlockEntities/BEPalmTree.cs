@@ -67,7 +67,9 @@ namespace Immersion
             if (ConnectedFruits == null) SetConnectedFruits();
             if (ConnectedFronds == null) SetConnectedFronds();
 
-            (api as ICoreServerAPI)?.World.RegisterGameTickListener(dt =>
+            if (!api.World.Side.IsServer()) return;
+
+            RegisterGameTickListener(dt =>
             {
                 if (api.World.Calendar.TotalHours > nextGrowTime)
                 {
