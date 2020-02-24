@@ -35,7 +35,7 @@
 	textures: {
 		"all": { base: "block/wood/lamppost/middle"}
 	},
-	lightAbsorption: 99,
+	lightAbsorption: 0,
 	resistance: 3,
 	sounds: {
 		"place": "game:block/planks",

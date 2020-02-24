@@ -1,129 +1,198 @@
 {
-	code: "flowerpotfire",
-	classByType: {
-		"*-raw": "Block",
-		"*": "BlockFlowerPot"
-	},
-	behaviors: [{name: "UnstableFalling"}],
-	attributes: {
-		sitHeight: 0.75,
-		beeFeedByType: {
-			"*-catmint": true,
-			"*-forgetmenot": true,
-			"*-edelweiss": true,
-			"*-heather": true,
-			"*-orangemallow": true,
-			"*-wilddaisy": true,
-			"*-westerngorse": true,
-			"*-cowparsley": true,
-			"*-californiapoppy": true,
-			"*-horsetail": true,
-			"*-lupine-*": true
-		},
-		butterflyFeedByType: {
-			"*-catmint": true,
-			"*-forgetmenot": true,
-			"*-edelweiss": true,
-			"*-heather": true,
-			"*-orangemallow": true,
-			"*-wilddaisy": true,
-			"*-westerngorse": true,
-			"*-cowparsley": true,
-			"*-californiapoppy": true,
-			"*-horsetail": true,
-			"*-lupine-*": true
-		},
-		contentBlockCodeByType: {
-			"*-lupine-blue": "flower-lupine-blue",
-			"*-lupine-orange": "flower-lupine-orange",
-			"*-lupine-purple": "flower-lupine-purple",
-			"*-lupine-red": "flower-lupine-red",
-			"*-lupine-white": "flower-lupine-white",
-			
-			"*-catmint": "flower-catmint",
-			"*-forgetmenot": "flower-forgetmenot",
-			"*-edelweiss": "flower-edelweiss",
-			"*-heather": "flower-heather",
-			"*-orangemallow": "flower-orangemallow",
-			"*-wilddaisy": "flower-wilddaisy",
-			"*-westerngorse": "flower-westerngorse",
-			"*-cowparsley": "flower-cowparsley",
-			"*-californiapoppy": "flower-californiapoppy",
-			"*-horsetail": "flower-horsetail",
-			
-			"*-birch": "sapling-birch",
-			"*-oak": "sapling-oak",
-			"*-maple": "sapling-maple",
-			"*-pine": "sapling-pine",
-			"*-acacia": "sapling-acacia",
-			"*-kapok": "sapling-kapok",
-			"*-flyagaric": "mushroom-flyagaric-normal",
-			"*-bolete": "mushroom-bolete-normal",
-			"*-fieldmushroom": "mushroom-fieldmushroom-normal"
-		}
-	},
-	variantgroups: [
-		{ code: "type", states: ["raw"] },
-    { 
-        code: "contents", 
-        states: ["empty", "lupine-blue", "lupine-orange", "lupine-purple", "lupine-red", "lupine-white"], 
-        loadFromPropertiesCombine: ["block/flower", "block/mushroom", "block/wood"],
-        combine: "add" 
-    }
-	],
-	shapeByType: {
-		"*-raw": { base: "block/clay/flowerpot/empty" },
-		"*-empty": { base: "block/clay/flowerpot/empty" },
-		"flowerpotfire-*": { base: "block/clay/flowerpot/full" }
-	},
-	creativeinventory: { "general": ["*-raw", "*-empty"], "decorative": ["*-raw", "*-empty"], "immersiondeco": ["*-raw", "*-empty"] },
-	blockmaterial: "Ceramic",
-	replaceable: 900,
-	resistance: 1.5,
-	lightAbsorption: 1,
-	texturesByType: {
-		"*-raw": { all: {  base: "block/clay/fire-raw", }  },
-		"*-empty": { 
-			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
-			"1": {  base: "block/clay/flowerpot/fire-sides" },
+    "code": "flowerpotfire",
+    "classByType": {
+        "*-raw": "Block",
+        "*": "BlockFlowerPot"
+    },
+    "behaviors": [
+        {
+            "name": "UnstableFalling"
+        }
+    ],
+    "attributes": {
+        "sitHeight": 0.75,
+        "beeFeedByType": {
+            "*-catmint": true,
+            "*-forgetmenot": true,
+            "*-edelweiss": true,
+            "*-heather": true,
+            "*-orangemallow": true,
+            "*-wilddaisy": true,
+            "*-westerngorse": true,
+            "*-cowparsley": true,
+            "*-californiapoppy": true,
+            "*-horsetail": true,
+            "*-lupine-*": true
+        },
+        "butterflyFeedByType": {
+            "*-catmint": true,
+            "*-forgetmenot": true,
+            "*-edelweiss": true,
+            "*-heather": true,
+            "*-orangemallow": true,
+            "*-wilddaisy": true,
+            "*-westerngorse": true,
+            "*-cowparsley": true,
+            "*-californiapoppy": true,
+            "*-horsetail": true,
+            "*-lupine-*": true
+        },
+        "contentBlockCodeByType": {
+            "*-lupine-blue": "flower-lupine-blue",
+            "*-lupine-orange": "flower-lupine-orange",
+            "*-lupine-purple": "flower-lupine-purple",
+            "*-lupine-red": "flower-lupine-red",
+            "*-lupine-white": "flower-lupine-white",
+            "*-catmint": "flower-catmint",
+            "*-forgetmenot": "flower-forgetmenot",
+            "*-edelweiss": "flower-edelweiss",
+            "*-heather": "flower-heather",
+            "*-orangemallow": "flower-orangemallow",
+            "*-wilddaisy": "flower-wilddaisy",
+            "*-westerngorse": "flower-westerngorse",
+            "*-cowparsley": "flower-cowparsley",
+            "*-californiapoppy": "flower-californiapoppy",
+            "*-horsetail": "flower-horsetail",
+            "*-birch": "sapling-birch",
+            "*-oak": "sapling-oak",
+            "*-maple": "sapling-maple",
+            "*-pine": "sapling-pine",
+            "*-acacia": "sapling-acacia",
+            "*-kapok": "sapling-kapok",
+            "*-flyagaric": "mushroom-flyagaric-normal",
+            "*-bolete": "mushroom-bolete-normal",
+            "*-fieldmushroom": "mushroom-fieldmushroom-normal"
+        }
+    },
+    "variantgroups": [
+        {
+            "code": "type",
+            "states": [
+                "raw"
+            ]
+        },
+        {
+            "code": "contents",
+            "states": [
+                "empty",
+                "lupine-blue",
+                "lupine-orange",
+                "lupine-purple",
+                "lupine-red",
+                "lupine-white"
+            ],
+            "loadFromPropertiesCombine": [
+                "block/flower",
+                "block/mushroom",
+                "block/wood"
+            ],
+            "combine": "add"
+        }
+    ],
+    "shapeByType": {
+        "*-raw": {
+            "base": "block/clay/flowerpot/empty"
+        },
+        "*-empty": {
+            "base": "block/clay/flowerpot/empty"
+        },
+        "flowerpotfire-*": {
+            "base": "block/clay/flowerpot/full"
+        }
+    },
+    "creativeinventory": {
+        "general": [
+            "*-raw",
+            "*-empty"
+        ],
+        "decorative": [
+            "*-raw",
+            "*-empty"
+        ],
+        "immersiondeco": [
+            "*-raw",
+            "*-empty"
+        ]
+    },
+    "blockmaterial": "Ceramic",
+    "replaceable": 900,
+    "resistance": 1.5,
+    "lightAbsorption": 0,
+    "texturesByType": {
+        "*-raw": {
+            "all": {
+                "base": "block/clay/fire-raw"
+            }
+        },
+        "*": {
+            "-1": {
+                "base": "block/clay/flowerpot/fire-topbottom"
+            },
+            "sides": {
+                "base": "block/clay/flowerpot/fire-sides"
 			},
-		"flowerpotfire-*": {
-			"0": {  base: "block/clay/flowerpot/fire-topbottom" },
-			"1": {  base: "block/clay/flowerpot/fire-sides" },
-			"flower": { base: "block/plant/potted/{contents}" }
-		},
-	},
-	sidesolid: {
-		all: false
-	},
-	sideopaque: {
-		all: false
-	},
-	combustiblePropsByType: {
-		"*-raw": {
-			meltingPoint: 600,
-			meltingDuration: 30,
-			smeltedRatio: 1,
-			smeltingType: "bake",
-			smeltedStack: { type: "block", code: "flowerpotfire-empty" },
-			requiresContainer: false
-		}
-	},
-	collisionbox: {
-		x1: 0.3125, y1: 0, z1: 0.3125,
-		x2: 0.6875, y2: 0.4375, z2: 0.6875
-	},
-	selectionbox: {
-		x1: 0.3125, y1: 0, z1: 0.3125,
-		x2: 0.6875, y2: 0.4375, z2: 0.6875
-	},
-	tpHandTransform: {
-		translation: { x: -1.5, y: -0.9, z: -1 },
-		rotation: { x: -78, y: 32, z: -95 },
-		scale: 0.45
-	},
-	guiTransform: {
-		origin: { x: 0.5, y: 0.3, z: 0.5 },
-		scale: 1.5
-	}
+			"topbottom": {
+                "base": "block/clay/flowerpot/fire-topbottom"
+            },
+            "flower": {
+                "base": "block/plant/potted/{contents}"
+            }
+        }
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "combustiblePropsByType": {
+        "*-raw": {
+            "meltingPoint": 600,
+            "meltingDuration": 30,
+            "smeltedRatio": 1,
+            "smeltingType": "bake",
+            "smeltedStack": {
+                "type": "block",
+                "code": "flowerpotfire-empty"
+            },
+            "requiresContainer": false
+        }
+    },
+    "collisionbox": {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 0.6875,
+        "y2": 0.4375,
+        "z2": 0.6875
+    },
+    "selectionbox": {
+        "x1": 0.3125,
+        "y1": 0,
+        "z1": 0.3125,
+        "x2": 0.6875,
+        "y2": 0.4375,
+        "z2": 0.6875
+    },
+    "tpHandTransform": {
+        "translation": {
+            "x": -1.5,
+            "y": -0.9,
+            "z": -1
+        },
+        "rotation": {
+            "x": -78,
+            "y": 32,
+            "z": -95
+        },
+        "scale": 0.45
+    },
+    "guiTransform": {
+        "origin": {
+            "x": 0.5,
+            "y": 0.3,
+            "z": 0.5
+        },
+        "scale": 1.5
+    }
 }

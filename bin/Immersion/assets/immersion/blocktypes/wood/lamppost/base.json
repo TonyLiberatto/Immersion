@@ -12,7 +12,7 @@
 		"top1": { base: "block/wood/lamppost/top1"},
 		"top2": { base: "block/wood/lamppost/top2"}
 	},
-	lightAbsorption: 99,
+	lightAbsorption: 0,
 	resistance: 3,
 	sounds: {
 		"place": "game:block/planks",

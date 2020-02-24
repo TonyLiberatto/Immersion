@@ -19,7 +19,7 @@
 	textures: {
 		all: { base: "block/plant/wicker/wood" },
 	},
-	lightAbsorption: 1,
+	lightAbsorption: 0,
     resistance: 1.5,
     replaceable: 900,
 	sounds: {

@@ -42,6 +42,7 @@
 	groundTransform: {
 		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: 180, y: 33, z: -180 },
-		scale: 8
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 5.21
 	}
 }

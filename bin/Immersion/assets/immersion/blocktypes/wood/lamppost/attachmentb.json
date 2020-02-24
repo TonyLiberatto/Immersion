@@ -18,11 +18,8 @@
 		"*-east-*": { base: "block/post/{style}/attachment-{type}", rotateY: 270 },
 		"*-west-*": { base: "block/post/{style}/attachment-{type}", rotateY: 90 },
 	},
-	sidesolidByType: {
-		"*-north-*": { all: true, east: false, west: false },
-		"*-south-*": { all: true, east: false, west: false },
-		"*-east-*": { all: true, north: false, south: false },
-		"*-west-*": { all: true, north: false, south: false },
+	sidesolid: { 
+		all: true
 	},
 	sideopaque: {all: false},
 	sideAo: {all: false},
@@ -30,7 +27,7 @@
 	textures: {
 		all: { base: "block/wood/lamppost/middle" },
 	},
-	lightAbsorption: 99,
+	lightAbsorption: 0,
 	resistance: 3,
 	sounds: {
 		"place": "game:block/planks",
