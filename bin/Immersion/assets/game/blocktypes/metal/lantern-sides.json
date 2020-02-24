@@ -3,6 +3,13 @@
 	variantgroups: [
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
 	],
+	attributes: {
+		handbook: {			
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-smelting\">Smelting</a>" }
+			]
+		},
+	},
 	creativeinventory: { "general": ["*"], "construction": ["*"] },
 	shape: { base: "block/metal/lantern/lantern-sides" },
 	blockmaterial: "metal",

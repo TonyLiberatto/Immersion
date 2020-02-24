@@ -9,7 +9,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-acacia-bark-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-acacia-bark-up-north",
@@ -30,7 +30,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-acacia-debarked-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-acacia-debarked-up-north",
@@ -51,7 +51,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-birch-bark-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-birch-bark-up-north",
@@ -72,7 +72,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-birch-debarked-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-birch-debarked-up-north",
@@ -93,7 +93,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-kapok-bark-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-kapok-bark-up-north",
@@ -114,7 +114,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-kapok-debarked-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-kapok-debarked-up-north",
@@ -135,7 +135,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-maple-bark-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-maple-bark-up-north",
@@ -156,7 +156,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-maple-debarked-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-maple-debarked-up-north",
@@ -177,7 +177,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-oak-bark-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-oak-bark-up-north",
@@ -198,7 +198,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-oak-debarked-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-oak-debarked-up-north",
@@ -219,7 +219,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-pine-bark-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-pine-bark-up-north",
@@ -240,7 +240,7 @@
     "Tool": {
         "Code": "immersion:branch-medium-pine-debarked-ud",
         "Type": "Item",
-		"StackSize": 4		
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "immersion:logwall-wall-pine-debarked-up-north",

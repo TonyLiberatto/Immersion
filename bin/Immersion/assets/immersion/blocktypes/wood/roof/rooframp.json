@@ -7,7 +7,7 @@
 		handbook: {
 			groupBy: ["rooframp-*"],
 			extraSections: [
-				{ title: "handbook-item-sources", text: "All branches must be the same barked or debarked wood type to build. Place one barked or debarked thin branch horizontally on a solid surface to begin the roof (RMB). Add cordage (Sisal twine, sinew, leather strips) to the structure (Sneak + RMB). Add three additional thin branches to complete the structure (Sneak + RMB)." }
+				{ title: "handbook-item-sources", text: "All constructed roof sections begin as stairs. All branches must be the same barked or debarked wood type to build. Place one barked or debarked thin branch horizontally on a solid surface to begin the roof (RMB). Add two cordage (Sisal twine, sinew, leather strips) to the structure (Sneak + RMB). Add three additional thin branches to complete the structure (Sneak + RMB)." }
 			]
 		},
 	},
