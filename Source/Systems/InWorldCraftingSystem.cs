@@ -75,7 +75,7 @@ namespace Immersion
                 {
                     cChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Action });
                     capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
-                    e.Handled = true;
+                    e.Handled = false;
                 }
             }
         }
