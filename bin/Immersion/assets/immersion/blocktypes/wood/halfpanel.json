@@ -1,81 +1,176 @@
 {
-	code: "halfpanel",
-	class: "BlockSimpleCoating",	
-	attributes: {
-		handbook: {
-			groupBy: ["halfpanel-*"],
-				extraSections: [
-					{ title: "handbook-item-sources", text: "Place one plank panel on a solid surface (RMB). Using the saw, cut the panel in half (Sneak + RMB) to produce two half panels."}
-					]
-			
-		}
-	},	
-	variantgroups: [
-		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
-		{ code: "style", states: ["bark", "debarked", "planks"]},
-		{ code:"side", states: ["north", "east", "south", "west", "up", "down"] }
-	],
-	shapebytype: {
-		"*-down": { base: "block/wood/halfpanel" },
-		"*-up": { base: "block/wood/halfpanel", rotateX: 180 },
-		"*-north": { base: "block/wood/halfpanel", rotateX: 90 },
-		"*-east": { base: "block/wood/halfpanel", rotateX: 90, rotateY: 180, rotateZ: 270 },
-		"*-west": { base: "block/wood/halfpanel", rotateX: 90, rotateY: 0, rotateZ: 270 },
-		"*-south": { base: "block/wood/halfpanel", rotateX: 270 },
-	},
-	sideopaque: {
-		all: false
-	},
-	sidesolid: {
-		all: false
-	},
-	blockmaterial: "Wood",
-	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"], "immersiondeco": ["*-down"] },
-	replaceable: 4000,
-	resistance: 1,
-	lightAbsorption: 0,
-	textures: {
-		all: { 
-			base: "game:block/wood/{style}/{wood}"
-		}
-	},
-	selectionbox: {
-		x1: 0.25, y1: 0, z1: 0, x2: 0.75, y2: 0.0625, z2: 1,
-		rotateXByType: {
-			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
+    "code": "halfpanel",
+    "class": "BlockSimpleCoating",
+    "attributes": {
+        "handbook": {
+            "groupBy": [
+                "halfpanel-*"
+            ],
+            "extraSections": [
+                {
+                    "title": "handbook-item-sources",
+                    "text": "Place one plank panel on a solid surface (RMB). Using the saw, cut the panel in half (Sneak + RMB) to produce two half panels."
+                }
+            ]
+        }
+    },
+    "variantgroups": [
+        {
+            "code": "wood",
+            "states": [
+                "aged"
+            ],
+            "loadFromProperties": "block/wood"
+        },
+        {
+            "code": "style",
+            "states": [
+                "bark",
+                "debarked",
+                "planks"
+            ]
+        },
+        {
+            "code": "side",
+            "states": [
+                "north",
+                "east",
+                "south",
+                "west",
+                "up",
+                "down"
+            ]
+        }
+    ],
+    "shapebytype": {
+        "*-down": {
+            "base": "block/wood/halfpanel"
+        },
+        "*-up": {
+            "base": "block/wood/halfpanel",
+            "rotateX": 180
+        },
+        "*-north": {
+            "base": "block/wood/halfpanel",
+            "rotateX": 90
+        },
+        "*-east": {
+            "base": "block/wood/halfpanel",
+            "rotateX": 90,
+            "rotateY": 180,
+            "rotateZ": 270
+        },
+        "*-west": {
+            "base": "block/wood/halfpanel",
+            "rotateX": 90,
+            "rotateY": 0,
+            "rotateZ": 270
+        },
+        "*-south": {
+            "base": "block/wood/halfpanel",
+            "rotateX": 270
+        }
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "blockmaterial": "Wood",
+    "creativeinventory": {
+        "general": [
+            "*-down"
+        ],
+        "decorative": [
+            "*-down"
+        ],
+        "immersiondeco": [
+            "*-down"
+        ]
+    },
+    "replaceable": 4000,
+    "resistance": 1,
+    "lightAbsorption": 0,
+    "texturesByType": {
+		"*-planks-*": {
+			"all": {
+				"base": "game:block/wood/{style}/{wood}*"
+			}
 		},
-		rotateYByType: {
-			"*-east": 180, "*-west": 0,
-		},
-		rotateZByType: {
-			"*-east": 270, "*-west": 270
+		"*": {
+			"all": {
+				"base": "game:block/wood/{style}/{wood}"
+			}
 		}
-	},
-	collisionbox: {
-		x1: 0.25, y1: 0, z1: 0, x2: 0.75, y2: 0.0625, z2: 1,
-		rotateXByType: {
-			"*-up": 180, "*-north": 90, "*-east": 90, "*-west": 90, "*-south": 270,
-		},
-		rotateYByType: {
-			"*-east": 180, "*-west": 0,
-		},
-		rotateZByType: {
-			"*-east": 270, "*-west": 270
-		}
-	},
-	combustibleProps: {
-		burnTemperature: 400,
-		burnDuration: 15,
-	},
-	sounds: {
-		place: "game:block/planks",
-		break: "game:block/planks",
-		hit: "game:block/planks",
-		walk: "game:block/planks"
-	},
-	materialDensity: 200,
-	guiTransform: {
-		translation: { x: 0, y: 3, z: 0 },
-		origin: { x: 0.5, y: 0.5, z: 0.5 }
-	}
+    },
+    "selectionbox": {
+        "x1": 0.25,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.75,
+        "y2": 0.0625,
+        "z2": 1,
+        "rotateXByType": {
+            "*-up": 180,
+            "*-north": 90,
+            "*-east": 90,
+            "*-west": 90,
+            "*-south": 270
+        },
+        "rotateYByType": {
+            "*-east": 180,
+            "*-west": 0
+        },
+        "rotateZByType": {
+            "*-east": 270,
+            "*-west": 270
+        }
+    },
+    "collisionbox": {
+        "x1": 0.25,
+        "y1": 0,
+        "z1": 0,
+        "x2": 0.75,
+        "y2": 0.0625,
+        "z2": 1,
+        "rotateXByType": {
+            "*-up": 180,
+            "*-north": 90,
+            "*-east": 90,
+            "*-west": 90,
+            "*-south": 270
+        },
+        "rotateYByType": {
+            "*-east": 180,
+            "*-west": 0
+        },
+        "rotateZByType": {
+            "*-east": 270,
+            "*-west": 270
+        }
+    },
+    "combustibleProps": {
+        "burnTemperature": 400,
+        "burnDuration": 15
+    },
+    "sounds": {
+        "place": "game:block/planks",
+        "break": "game:block/planks",
+        "hit": "game:block/planks",
+        "walk": "game:block/planks"
+    },
+    "materialDensity": 200,
+    "guiTransform": {
+        "translation": {
+            "x": 0,
+            "y": 3,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0.5,
+            "z": 0.5
+        }
+    }
 }
