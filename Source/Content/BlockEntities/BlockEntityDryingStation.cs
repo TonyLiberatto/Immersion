@@ -39,21 +39,25 @@ namespace Immersion
 
             MarkDirty(true);
 
-            if (Api.World.Side.IsServer())
+            RegisterGameTickListener(dt =>
             {
-                RegisterGameTickListener(dt =>
+                bool recipeFound = false;
+                foreach (var val in props)
                 {
-                    foreach (var val in props)
+                    var recipe = val.Clone();
+
+                    if (recipe?.Input?.Code == null) continue;
+                    if (inventory[0]?.Itemstack?.Collectible?.Code?.ToString() == recipe.Input.Code.ToString() && recipe.Output != null)
                     {
-                        var recipe = val.Clone();
+                        recipeFound = true;
+
                         if (timeWhenDone == 0)
                         {
                             UpdateDoneTime(recipe.DryingTime ?? 0);
                             break;
                         }
 
-                        if (recipe?.Input?.Code == null) continue;
-                        if (inventory[0]?.Itemstack?.Collectible?.Code?.ToString() == recipe.Input.Code.ToString() && recipe.Output != null)
+                        if (recipe.Output != null)
                         {
                             if (Api.World.Calendar.TotalHours > timeWhenDone)
                             {
@@ -63,21 +67,15 @@ namespace Immersion
                                 tmpStack.StackSize = inventory[0].Itemstack.StackSize * recipe.Output.StackSize;
                                 inventory[0].Itemstack = tmpStack;
                                 inventory.MarkSlotDirty(0);
-                                MarkDirty(true);
                                 UpdateDoneTime(recipe.DryingTime ?? 0);
                             }
+                            break;
                         }
                     }
-
-                }, 5000);
-            }
-            else
-            {
-                RegisterGameTickListener(dt =>
-                {
-                    MarkDirty(true);
-                }, 5000);
-            }
+                }
+                if (!recipeFound) timeWhenDone = 0;
+                MarkDirty(true);
+            }, 5000);
         }
 
         public void UpdateMesh(ICoreClientAPI capi)
@@ -193,17 +191,21 @@ namespace Immersion
                         if (!inventory[0].Empty && inventory[0].Itemstack.Item.Code.ToString().Contains("portion") && bucket.TryPutContent(world, slot.Itemstack, inventory[0].Itemstack, 1) > 0)
                         {
                             inventory[0].TakeOut(1);
+                            timeWhenDone = 0;
                         }
                     }
                     else if (inventory[0].Empty || inventory[0].Itemstack.Item.Code.ToString().Contains("portion"))
                     {
                         DummySlot dummy = new DummySlot(bucket.TryTakeContent(world, slot.Itemstack, 1));
                         dummy.TryPutInto(world, inventory[0]);
+                        timeWhenDone = 0;
                     }
                 }
-                else if (!inventory[0]?.Itemstack?.Item?.Code.ToString().Contains("portion") ?? false)inventory[0].TryPutInto(world, slot);
-
-                timeWhenDone = 0;
+                else if (!inventory[0]?.Itemstack?.Item?.Code.ToString().Contains("portion") ?? false)
+                {
+                    inventory[0].TryPutInto(world, slot);
+                    timeWhenDone = 0;
+                }
             }
 
             inventory[0].MarkDirty();

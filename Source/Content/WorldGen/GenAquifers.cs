@@ -15,10 +15,10 @@ namespace Immersion
     public class GenAquifers : ModStdWorldGen
     {
         ICoreServerAPI api;
-        IWorldGenBlockAccessor blockAccessor;
         MapLayerBase aquiferGen;
         int noiseSizeRiver;
         public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<ModifyLakes>().config; }
+        NormalizedSimplexNoise noise;
 
         public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
         public override double ExecuteOrder() => 0.1;
@@ -31,7 +31,6 @@ namespace Immersion
             api.Event.MapRegionGeneration(OnMapRegionGen, "standard");
             api.Event.InitWorldGenerator(InitWorldGen, "standard");
             api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
-            api.Event.GetWorldgenBlockAccessor(c => blockAccessor = c.GetBlockAccessor(true));
         }
 
         private void OnMapRegionGen(IMapRegion mapRegion, int regionX, int regionZ)
@@ -50,6 +49,7 @@ namespace Immersion
             long seed = api.WorldManager.Seed;
             aquiferGen = new MapLayerPerlin(seed + 46841, 6, 0.1f, 1, 255, new double[] { 0.02f, 0.02f, 0.02f, 0.02f, 0.02f, 0.02f });
             noiseSizeRiver = api.WorldManager.RegionSize / 16;
+            noise = NormalizedSimplexNoise.FromDefaultOctaves(2, 0.1, 1.0, api.WorldManager.Seed + 1276);
         }
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
@@ -72,7 +72,6 @@ namespace Immersion
             {
                 for (int z = 0; z < chunksize2; z++)
                 {
-                    SimplexNoise noise = SimplexNoise.FromDefaultOctaves(2, 0.1, 1.0, api.WorldManager.Seed);
                     double n = noise.Noise(rdx + x, rdx + z);
 
                     float riverRel = 1.0f - (GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f);
@@ -100,9 +99,6 @@ namespace Immersion
 
                     while (dY >= minY)
                     {
-                        //double n3 = noise.Noise(x, dY, z);
-                        //if (n3 > 0.5) { dY--; continue; }
-
                         chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = config.LakeWaterBlockId;
                         dY--;
                     }

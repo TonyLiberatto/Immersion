@@ -38,7 +38,6 @@ namespace Immersion
         public void RegisterBlockEntities()
         {
             Api.RegisterBlockEntityClass("BEMortarAndPestle", typeof(BlockEntityMortarAndPestle));
-            Api.RegisterBlockEntityClass("BlockEntityChimney", typeof(BlockEntityChimney));
             Api.RegisterBlockEntityClass("ImmersionRoads", typeof(BEImmersionRoads));
             Api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));
             Api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
@@ -60,9 +59,7 @@ namespace Immersion
         {
             Api.RegisterItemClass("ItemSickle", typeof(ItemSickle));
             Api.RegisterItemClass("ItemGiantReedsRoot", typeof(ItemGiantReedsRoot));
-            Api.RegisterItemClass("ItemAdze", typeof(ItemAdze));            
-            Api.RegisterItemClass("ItemChisel", typeof(ItemChiselFix));
-            Api.RegisterItemClass("ItemSwapBlocks", typeof(ItemSwapBlocks));
+            Api.RegisterItemClass("ItemAdze", typeof(ItemAdze));
             Api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
             Api.RegisterItemClass("ItemFoodMultiProp", typeof(ItemMultiPropFood));
             Api.RegisterItemClass("ItemProspectingPick", typeof(ItemPropick));
@@ -97,7 +94,6 @@ namespace Immersion
             Api.RegisterBlockBehaviorClass("LampConnectorBehavior", typeof(LampConnectorBehavior));
             Api.RegisterBlockBehaviorClass("LampPostBehavior", typeof(LampPostBehavior));
             Api.RegisterBlockBehaviorClass("RotateNinety", typeof(RotateNinety));
-            Api.RegisterBlockBehaviorClass("ChimneyBehavior", typeof(ChimneyBehavior));
         }
     }
 }
