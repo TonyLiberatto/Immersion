@@ -203,17 +203,5 @@
 				"down": { "texture": "#material", "uv": [ 0.0, 14.5, 0.5, 15.5 ] }
 			}
 		}
-	],
-	"animations": [
-		{
-			"name": "Fill",
-			"code": "100",
-			"quantityframes": 30,
-			"onActivityStopped": "Rewind",
-			"onAnimationEnd": "Repeat",
-			"keyframes": [
-
-			]
-		}
 	]
 }
