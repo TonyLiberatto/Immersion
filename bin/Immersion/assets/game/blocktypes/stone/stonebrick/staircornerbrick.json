@@ -1,7 +1,6 @@
 ﻿{
   code: "stair-corner-brick",
   class: "FixedStairs",
-	entityClass: "Stairs",
   variantgroups: [
     { loadFromProperties: "block/rock"
     },

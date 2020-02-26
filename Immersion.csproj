@@ -131,7 +131,7 @@
     <Compile Include="Source\Content\Block\BlockLooseStonesModified.cs" />
     <Compile Include="Source\Content\Block\BlockMortarAndPestle.cs" />
     <Compile Include="Source\Content\Block\BlockImmersionRoads.cs" />
-    <Compile Include="Source\Content\Block\FixedStairs.cs" />
+    <Compile Include="Source\Content\Block\BlockFixedStairs.cs" />
     <Compile Include="Source\Content\EntityBehavior\BehaviorFeatherPluck.cs" />
     <Compile Include="Source\Content\EntityBehavior\BehaviorMilkable.cs" />
     <Compile Include="Source\Content\EntityBehavior\BehaviorNotifyHerd.cs" />

@@ -1,7 +1,6 @@
 {
 	code: "stair-side-cbrick",
 	class: "FixedStairs",
-	entityClass: "Stairs",
 	variantgroups: [
 		{ code:"clay", states: ["blue", "brown", "fire", "red"] },
 		{ loadFromProperties: "abstract/verticalorientation" },

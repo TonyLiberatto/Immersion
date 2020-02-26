@@ -42,7 +42,6 @@ namespace Immersion
             Api.RegisterBlockEntityClass("CraftingStation", typeof(BlockEntityCraftingStation));
             Api.RegisterBlockEntityClass("DryingStation", typeof(BlockEntityDryingStation));
             Api.RegisterBlockEntityClass("PalmTree", typeof(BEPalmTree));
-            Api.RegisterBlockEntityClass("Stairs", typeof(BlockEntityStairs));
             Api.RegisterBlockEntityClass("IngotPileOverride", typeof(IngotPileOverride));
             Api.RegisterBlockEntityClass("Well", typeof(BlockEntityWell));
         }
@@ -73,7 +72,7 @@ namespace Immersion
             Api.RegisterBlockClass("BlockCheeseCloth", typeof(BlockCheeseCloth));
             Api.RegisterBlockClass("BlockImmersionRoads", typeof(BlockImmersionRoads));
             Api.RegisterBlockClass("BlockLooseStones", typeof(BlockLooseStonesModified)); //
-            Api.RegisterBlockClass("FixedStairs", typeof(FixedStairs));
+            Api.RegisterBlockClass("FixedStairs", typeof(BlockFixedStairs));
             Api.RegisterBlockClass("BlockChandelier", typeof(BlockChandelierFix));
             Api.RegisterBlockClass("BlockToolMold", typeof(BlockToolMoldReturnBlock)); //
             Api.RegisterBlockClass("BlockCraftingStation", typeof(BlockCraftingStation));

@@ -1,7 +1,6 @@
 ﻿{
   code: "stair-corner-planks",
   class: "FixedStairs",
-	entityClass: "Stairs",
   variantgroups: [
     { code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
     {
