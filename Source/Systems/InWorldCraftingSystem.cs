@@ -30,12 +30,7 @@ namespace Immersion
         ICoreServerAPI sapi;
         ICoreClientAPI capi;
         IClientNetworkChannel cChannel;
-
-        public override void Start(ICoreAPI api)
-        {
-            AssetCategory.categories.Remove(nameof(AssetCategory.recipes));
-            AssetCategory.recipes = new AssetCategory(nameof(AssetCategory.recipes), true, EnumAppSide.Universal);
-        }
+        IServerNetworkChannel sChannel;
 
         public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
         public override double ExecuteOrder() => 1;
@@ -43,7 +38,7 @@ namespace Immersion
         public override void StartServerSide(ICoreServerAPI Api)
         {
             this.sapi = Api;
-            Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
+            sChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a, b) => 
             {
                 if (b.DataType == EnumDataType.Action)
                 {
@@ -55,15 +50,20 @@ namespace Immersion
                 }
             });
             Api.Event.SaveGameLoaded += OnSaveGameLoaded;
+            Api.Event.PlayerJoin += (p) => sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = JsonUtil.ToBytes(InWorldCraftingRecipes)}, p);
         }
 
         public override void StartClientSide(ICoreClientAPI Api)
         {
             this.capi = Api;
             Api.Input.InWorldAction += SendBlockAction;
-            cChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>();
-            Api.Event.BlockTexturesLoaded += () => 
-                InWorldCraftingRecipes = Api.Assets.GetMany<InWorldCraftingRecipe[]>(Api.Logger, "recipes/inworld");
+            cChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a) => 
+            {
+                if (a.DataType == EnumDataType.Recipes)
+                {
+                    InWorldCraftingRecipes = JsonUtil.FromBytes<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(a.SerializedData);
+                }
+            });
         }
 
         public override void Dispose()
@@ -212,7 +212,7 @@ namespace Immersion
 
         public InWorldCraftingRecipe Clone()
         {
-            return new InWorldCraftingRecipe(Mode, Takes, Tool, Returns, Makes, CraftSound, IsTool, Disabled, Remove, MakeTime);
+            return new InWorldCraftingRecipe(Mode, Takes.Clone(), Tool.Clone(), Returns.DeepClone(), Makes.DeepClone(), CraftSound, IsTool, Disabled, Remove, MakeTime);
         }
 
         public EnumInWorldCraftingMode Mode { get; set; } = EnumInWorldCraftingMode.Swap;
@@ -232,6 +232,25 @@ namespace Immersion
 
     class JsonCraftingIngredient : JsonItemStack
     {
+        public JsonCraftingIngredient(AssetLocation[] allowedVariants, AssetLocation name, int count)
+        {
+            AllowedVariants = allowedVariants;
+            Name = name;
+            Count = count;
+        }
+
+        public new JsonCraftingIngredient Clone()
+        {
+            JsonCraftingIngredient ingredient = new JsonCraftingIngredient(AllowedVariants, Name, Count);
+            ingredient.Attributes = Attributes?.Token?.HasValues ?? false ? Attributes : null;
+            ingredient.Code = Code;
+            ingredient.Name = Name;
+            ingredient.StackSize = StackSize;
+            ingredient.Type = Type;
+
+            return ingredient;
+        }
+
         public AssetLocation[] AllowedVariants { get; set; }
         public AssetLocation Name { get; set; }
 
@@ -242,7 +261,7 @@ namespace Immersion
         }
     }
 
-    class JsonCraftingOutput : JsonItemStack
+    public class JsonCraftingOutput : JsonItemStack
     {
         public int Count
         {
