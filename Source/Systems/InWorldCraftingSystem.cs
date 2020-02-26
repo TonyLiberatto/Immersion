@@ -25,6 +25,60 @@ namespace Immersion
         public byte[] SerializedData { get; set; }
     }
 
+    class ProgressBarRenderer : IRenderer
+    {
+        ICoreClientAPI capi;
+        IShaderProgram prog;
+        MeshRef quadRef;
+
+        public ProgressBarRenderer(ICoreClientAPI capi, int shaderid)
+        {
+            this.capi = capi;
+            var shader = capi.Shader.GetProgram(shaderid);
+            MeshData quadMesh = QuadMeshUtil.GetQuad();
+            quadMesh.Rgba = null;
+            quadRef = capi.Render.UploadMesh(quadMesh);
+
+            if (shader.Compile())
+            {
+                prog = shader;
+            }
+            else
+            {
+                Dispose();
+            }
+        }
+
+        public double RenderOrder => 1.0;
+
+        public int RenderRange => 99;
+
+        public void Dispose()
+        {
+            capi?.Event.UnregisterRenderer(this, EnumRenderStage.Ortho);
+            prog?.Dispose();
+            quadRef?.Dispose();
+        }
+
+        public void OnRenderFrame(float deltaTime, EnumRenderStage stage)
+        {
+            if (prog?.Disposed ?? true) return;
+            capi.Render.GlToggleBlend(true);
+            IShaderProgram curShader = capi.Render.CurrentActiveShader;
+
+            curShader?.Stop();
+
+            prog.Use();
+            prog.Uniform("iTime", capi.World.ElapsedMilliseconds / 500f);
+            prog.Uniform("iResolution", new Vec2f(capi.Render.FrameWidth, capi.Render.FrameHeight));
+            prog.Uniform("iProgressBar", capi.ModLoader.GetModSystem<InWorldCraftingSystem>().progress);
+            capi.Render.RenderMesh(quadRef);
+            prog.Stop();
+
+            curShader?.Use();
+        }
+    }
+
     class InWorldCraftingSystem : ModSystem
     {
         ICoreServerAPI sapi;
@@ -45,7 +99,8 @@ namespace Immersion
                     if (a?.CurrentBlockSelection?.Position == null) return;
                     if (Api.World.Claims.TryAccess(a, a.CurrentBlockSelection.Position, EnumBlockAccessFlags.BuildOrBreak))
                     {
-                        OnPlayerInteract(a, a.CurrentBlockSelection);
+                        var recipe = OnPlayerInteractStart(a, a.CurrentBlockSelection);
+                        OnPlayerInteractStop(recipe, a, a.CurrentBlockSelection, JsonUtil.FromBytes<float>(b.SerializedData));
                     }
                 }
             });
@@ -53,9 +108,14 @@ namespace Immersion
             Api.Event.PlayerJoin += (p) => sChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Recipes, SerializedData = JsonUtil.ToBytes(InWorldCraftingRecipes)}, p);
         }
 
+        ProgressBarRenderer progRenderer;
+
         public override void StartClientSide(ICoreClientAPI Api)
         {
             this.capi = Api;
+            capi.Event.ReloadShader += LoadRenderer;
+            LoadRenderer();
+
             Api.Input.InWorldAction += SendBlockAction;
             cChannel = Api.Network.RegisterChannel("iwcr").RegisterMessageType<IWCSPacket>().SetMessageHandler<IWCSPacket>((a) => 
             {
@@ -64,6 +124,17 @@ namespace Immersion
                     InWorldCraftingRecipes = JsonUtil.FromBytes<Dictionary<AssetLocation, InWorldCraftingRecipe[]>>(a.SerializedData);
                 }
             });
+        }
+
+        public bool LoadRenderer()
+        {
+            progRenderer?.Dispose();
+
+            IShaderProgram progressBar = capi.Shader.NewShaderProgram();
+            int shader = capi.Shader.RegisterFileShaderProgram("progressbar", progressBar);
+            progRenderer = new ProgressBarRenderer(capi, shader);
+            capi.Event.RegisterRenderer(progRenderer, EnumRenderStage.Ortho);
+            return true;
         }
 
         public override void Dispose()
@@ -75,17 +146,46 @@ namespace Immersion
             base.Dispose();
         }
 
+        long id;
+
+        public float progress { get; private set; }
+        public float secondsUsed { get; private set; }
+
         private void SendBlockAction(EnumEntityAction action, ref EnumHandling handled)
         {
             var controls = capi.World.Player.Entity.Controls;
             if (action == EnumEntityAction.RightMouseDown && controls.Sneak)
             {
-                if (OnPlayerInteract(capi.World.Player, capi.World.Player.CurrentBlockSelection))
+                var recipe = OnPlayerInteractStart(capi.World.Player, capi.World.Player.CurrentBlockSelection);
+                if (recipe != null)
                 {
-                    cChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Action });
-                    capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                    if (id == 0)
+                    {
+                        var originalSel = capi.World.Player.CurrentBlockSelection?.Clone();
+
+                        id = capi.Event.RegisterGameTickListener(dt =>
+                        {
+                            var currentSel = capi.World.Player.CurrentBlockSelection;
+
+                            if (currentSel != null && originalSel.Position == currentSel.Position && capi.Input.MouseButton.Right && controls.Sneak && OnPlayerInteractStep(recipe, capi.World.Player, secondsUsed))
+                            {
+                                secondsUsed += dt;
+                            }
+                            else
+                            {
+                                cChannel.SendPacket(new IWCSPacket() { DataType = EnumDataType.Action, SerializedData = JsonUtil.ToBytes(secondsUsed) });
+                                secondsUsed = 0;
+                                capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
+                                capi.Event.UnregisterGameTickListener(id);
+                                id = 0;
+                            }
+                            progress = recipe.MakeTime * secondsUsed;
+                        }, 30);
+                    }
                     handled = EnumHandling.PreventDefault;
                 }
+
+
             }
         }
 
@@ -96,13 +196,14 @@ namespace Immersion
             sapi.World.Logger.StoryEvent("Immersion crafting...");
         }
 
-        public bool OnPlayerInteract(IPlayer byPlayer, BlockSelection blockSel)
+        public InWorldCraftingRecipe OnPlayerInteractStart(IPlayer byPlayer, BlockSelection blockSel)
         {
+            InWorldCraftingRecipe iwcs = null;
+
             BlockPos Pos = blockSel?.Position;
             Block block = Pos?.GetBlock(byPlayer.Entity.World);
             ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
-            if (block == null || slot?.Itemstack == null) return false;
-            bool shouldbreak = false;
+            if (block == null || slot?.Itemstack == null) return iwcs;
 
             foreach (var val in InWorldCraftingRecipes)
             {
@@ -116,43 +217,52 @@ namespace Immersion
                     {
                         if (IsValid(byPlayer, recipe, slot))
                         {
-                            if (recipe.IsSwap)
-                            {
-                                var make = recipe.Makes[0].Clone();
-                                make.Resolve(byPlayer.Entity.World, null);
-                                if (make.IsBlock())
-                                {
-                                    if (recipe.Remove) (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(0, Pos);
-                                    Block resolvedBlock = make.ResolvedItemstack.Block;
-                                    (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, Pos);
-                                    resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, Pos);
-                                    TakeOrDamage(recipe, slot, byPlayer);
-                                    shouldbreak = true;
-                                }
-                            }
-                            else if (recipe.IsCreate)
-                            {
-                                foreach (var make in recipe.Makes)
-                                {
-                                    var makeClone = make.Clone();
-                                    makeClone.Resolve(byPlayer.Entity.World, null);
-                                    (byPlayer as IServerPlayer)?.Entity.World.SpawnItemEntity(makeClone.ResolvedItemstack, Pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
-                                }
-                                TakeOrDamage(recipe, slot, byPlayer);
-                                if (recipe.Remove) (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(0, Pos);
-                                shouldbreak = true;
-                            }
-                            (byPlayer as IServerPlayer)?.Entity.World.PlaySoundAt(recipe.CraftSound, Pos);
+                            iwcs = recipe;
+                            break;
                         }
-                        else continue;
-
-                        slot.MarkDirty();
-                        break;
                     }
                 }
-                if (shouldbreak) return true;
             }
-            return false;
+            return iwcs;
+        }
+
+        public bool OnPlayerInteractStep(InWorldCraftingRecipe recipe, IPlayer byPlayer, float secondsUsed)
+        {
+            return secondsUsed < recipe.MakeTime;
+        }
+
+        public void OnPlayerInteractStop(InWorldCraftingRecipe recipe, IPlayer byPlayer, BlockSelection blockSel, float secondsUsed)
+        {
+            ItemSlot slot = byPlayer?.InventoryManager?.ActiveHotbarSlot;
+            BlockPos Pos = blockSel?.Position;
+            if (secondsUsed < (recipe?.MakeTime ?? float.MaxValue) || slot?.Itemstack == null || Pos == null) return;
+
+            if (recipe.IsSwap)
+            {
+                var make = recipe.Makes[0].Clone();
+                make.Resolve(byPlayer.Entity.World, null);
+                if (make.IsBlock())
+                {
+                    if (recipe.Remove) (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(0, Pos);
+                    Block resolvedBlock = make.ResolvedItemstack.Block;
+                    (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, Pos);
+                    resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, Pos);
+                    TakeOrDamage(recipe, slot, byPlayer);
+                }
+            }
+            else if (recipe.IsCreate)
+            {
+                foreach (var make in recipe.Makes)
+                {
+                    var makeClone = make.Clone();
+                    makeClone.Resolve(byPlayer.Entity.World, null);
+                    (byPlayer as IServerPlayer)?.Entity.World.SpawnItemEntity(makeClone.ResolvedItemstack, Pos.MidPoint(), new Vec3d(0.0, 0.1, 0.0));
+                }
+                TakeOrDamage(recipe, slot, byPlayer);
+                if (recipe.Remove) (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(0, Pos);
+            }
+            slot.MarkDirty();
+            (byPlayer as IServerPlayer)?.Entity.World.PlaySoundAt(recipe.CraftSound, Pos);
         }
 
         public void TakeOrDamage(InWorldCraftingRecipe recipe, ItemSlot slot, IPlayer byPlayer)
@@ -221,6 +331,7 @@ namespace Immersion
         public JsonCraftingOutput[] Returns { get; set; }
         public JsonCraftingOutput[] Makes { get; set; }
         public AssetLocation CraftSound { get; set; } = new AssetLocation("sounds/block/planks");
+        public AssetLocation CraftingSound { get; set; } = new AssetLocation("sounds/block/wood-tool");
         public bool IsTool { get; set; } = false;
         public bool Disabled { get; set; } = false;
         public bool Remove { get; set; } = false;
