@@ -1,0 +1,106 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:bighornpelt-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:bighornrug-ground-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:bighornpelt-ground-west",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:bighornrug-ground-west",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:bighornpelt-ground-south",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:bighornrug-ground-south",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:bighornpelt-ground-north",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:bighornrug-ground-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]

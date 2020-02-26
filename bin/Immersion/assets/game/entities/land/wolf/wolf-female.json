@@ -65,11 +65,9 @@
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 },
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
-			{ code: "health", currenthealth: 10, maxhealth: 10, },
-			{ code: "floatupwhenstuck", onlyWhenDead: true },
+			{ code: "health", currenthealth: 10, maxhealth: 10, },			
 			{ code: "breathe" },
-			{ 
-				code: "multiply",
+			{ code: "multiply",
 				quantityPerDay: 0,
 				spawnEntityCodeByType: {
 					"*-ashgrey": "wolf-pup-ashgrey",
@@ -88,8 +86,7 @@
 				requiresNearbyEntityCode: "wolf-male-*",
 				requiresNearbyEntityRange: 10
 			},
-			{ 
-				code: "emotionstates",
+			{ code: "emotionstates",
 				states: [
 					{ code: "fleeondamage", duration: 60, chance: 1, slot: 2, priority: 5, accumType: "max", whenHealthRelBelow: 0.3 },
 					{ code: "saturated", duration: 1200, chance: 1, slot: 0, priority: 1, accumType: "sum" },

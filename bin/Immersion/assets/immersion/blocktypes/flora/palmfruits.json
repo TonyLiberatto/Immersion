@@ -3,16 +3,10 @@
     "behaviorsByType": {
         "*-coconut-*": [
             { "name": "HorizontalOrientable" },
-            {
-                "name": "Harvestable",
+            { "name": "Harvestable",
                 "properties": {
                     "harvestTime": 0.6,
-                    "harvestedStack": {
-                        "type": "block",
-                        "code": "immersion:tropicalfruits-coconutshell-north",
-                        "quantity": {
-                            "avg": 4
-                        }
+                    "harvestedStack": {"type": "block","code": "immersion:tropicalfruits-coconutshell-north", "quantity": {"avg": 4 }
                     },
                     "harvestingSound":"game:sounds/block/plant",
                     "harvestedBlockCode": "game:air"

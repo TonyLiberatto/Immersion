@@ -1,14 +1,11 @@
 {
-	code: "bighornpelt",
-	class: "BlockSign",
+	code: "bighornpelt",	
 	enabled: true,
-	behaviors: [
-	{name: "Harvestable", properties: { 
-				harvestTime: 0.6, 
-				harvestedStack: { type: "item", code: "immersion:animal-leatherstrips", quantity: { avg: 4 }  },
-				harvestedBlockCode: "immersion:bighornrug-ground-{side}"
-			}},
-	{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	entityClass: "Generic",
+	behaviorsByType: {		
+		"*": [ 
+			{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+		},
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
@@ -16,7 +13,7 @@
 	drawtype: "json",
 	shapeByType: {
 		"*-ground-north": { base: "block/floormats/pelt", rotateY: 0 },
-		"*-ground-east": { base: "block/floormats/pelt", rotateY: 270 },
+		"*-ground-east": { base: "block/floormats/pelt", rotateY: 270 }, 
 		"*-ground-south": { base: "block/floormats/pelt", rotateY: 180 },
 		"*-ground-west": { base: "block/floormats/pelt", rotateY: 90 },
 		"*-wall-north": { base: "block/wallmats/pelt", rotateY: 0 },

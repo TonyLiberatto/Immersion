@@ -1,13 +1,20 @@
 {
 	code: "wolfpelt",
-	behaviors: [{name: "UnstableFalling"}, {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }} ],
+	class: "BlockSign",
+	behaviors: [
+		{name: "Harvestable", properties: { 
+				harvestTime: 0.6, 
+				harvestedStack: { type: "item", code: "immersion:animal-leatherstrips", quantity: { avg: 4 }  },
+				harvestedBlockCode: "immersion:wolfpelt-{color}-ground-{side}"
+			}}, 
+		{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }} ],
 	variantgroups: [
 		{ code:"color", states: ["ashgrey", "black", "brown", "darkgrey", "gold","grey", "silver", "smokegrey", "white" ] },
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
 	],
 	drops: [
-	{ type: "block", code: "wolfpelt-{color}-ground-east", quantity: { avg: 1 }}
+		{ type: "block", code: "wolfpelt-{color}-ground-east", quantity: { avg: 1 }}
 	],
 	drawtype: "json",
 	shapeByType: {
