@@ -15,12 +15,14 @@
                 "input": { "type": "item", "code": "seawaterportion", "stacksize": 1 },
                 "output": { "type": "item", "code": "salt", "stacksize": 1 },
                 "dryingtime": 12,
+								"--comment--" : "Texture Source is only used if in container props aren't valid",
                 "texturesource": { "type": "block", "code": "seawater-still-7" }
             },
             {
                 "input": { "type": "item", "code": "salt", "stacksize": 1 },
                 "output": null,
                 "dryingtime": null,
+								"--comment--" : "Texture Source is only used if in container props aren't valid",
                 "texturesource": { "type": "block", "code": "gravel-chalk" }
             }
         ]

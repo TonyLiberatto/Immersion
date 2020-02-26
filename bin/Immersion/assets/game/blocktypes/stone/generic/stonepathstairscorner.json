@@ -1,7 +1,6 @@
 ﻿{
   code: "stair-corner-path-a",
   class: "FixedStairs",
-	entityClass: "Stairs",
   behaviors: [
 		{name: "UnstableFalling"},
 	],

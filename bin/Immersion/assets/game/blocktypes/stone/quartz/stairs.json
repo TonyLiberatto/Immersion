@@ -1,7 +1,6 @@
 {
 	code: "stair-side-quartz-a",
 	class: "FixedStairs",
-	entityClass: "Stairs",
 	variantgroups: [
 		{ loadFromProperties: "abstract/verticalorientation" },
 		{ loadFromProperties: "abstract/horizontalorientation" }

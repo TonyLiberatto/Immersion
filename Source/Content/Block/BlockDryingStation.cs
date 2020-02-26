@@ -34,7 +34,14 @@ namespace Immersion
             BlockEntityDryingStation craftingStation = (Pos.BlockEntity(world) as BlockEntityDryingStation);
             ItemStack stack = craftingStation?.inventory?[0]?.Itemstack;
             builder = stack != null ? builder.AppendLine().AppendLine(stack.StackSize + "x " +
-                Lang.Get("incontainer-" + stack.Class.ToString().ToLowerInvariant() + "-" + stack.Collectible.Code.Path)) : builder;
+                Lang.Get("incontainer-" + stack.Class.ToString().ToLowerInvariant() + "-" + stack.Collectible.Code.Path)) : builder.AppendLine();
+            if (craftingStation != null)
+            {
+                int hours = (int)Math.Round(craftingStation.timeWhenDone - world.Calendar.TotalHours);
+                hours = hours < 0 ? 0 : hours;
+
+                builder.AppendLine("Remaining Drying Time: " + hours.ToString() + " Hours");
+            }
             return builder.ToString();
         }
     }

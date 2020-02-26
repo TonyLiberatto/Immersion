@@ -1,7 +1,6 @@
 {
 	code: "stair-side-cobble",
 	class: "FixedStairs",
-	entityClass: "Stairs",
 	variantgroups: [
 		{ loadFromProperties: "block/rock" },
 		{ loadFromProperties: "abstract/verticalorientation" },

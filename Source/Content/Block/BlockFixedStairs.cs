@@ -9,7 +9,7 @@ using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    public class FixedStairs : BlockStairs
+    public class BlockFixedStairs : BlockStairs
     {
 		string type, material, updown, outside, inside;
 		Block north, south, east, west;
@@ -35,7 +35,7 @@ namespace Immersion
 		public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos Pos, BlockPos neibpos)
         {
             Block nBlock = neibpos.GetBlock(world);
-            if (!(nBlock is FixedStairs)) return;
+            if (!(nBlock is BlockFixedStairs)) return;
 
             if (world.Side.IsServer())
             {
@@ -229,26 +229,6 @@ namespace Immersion
                 bA.GetBlock(Pos.WestCopy()).Code,
             };
             return cardinal;
-        }
-    }
-
-    public class BlockEntityStairs : BlockEntity
-    {
-        public override void Initialize(ICoreAPI Api)
-        {
-            base.Initialize(Api);
-            if (Api.Side.IsServer())
-            {
-                RegisterGameTickListener(dt =>
-                {
-                    FixedStairs fixedStairs = (Pos.GetBlock(Api) as FixedStairs);
-                    if (fixedStairs != null)
-                    {
-                        if (fixedStairs.Corner) fixedStairs.CornersCheck(Api.World, Pos);
-                        else if (fixedStairs.Side) fixedStairs.StairsCheck(Api.World, Pos);
-                    }
-                }, 30);
-            }
         }
     }
 }

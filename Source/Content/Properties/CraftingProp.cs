@@ -13,6 +13,19 @@ namespace Immersion
 
     class DryingProp
     {
+        public DryingProp(JsonItemStack input, JsonItemStack output, int? dryingTime, JsonItemStack textureSource)
+        {
+            Input = input;
+            Output = output;
+            DryingTime = dryingTime;
+            TextureSource = textureSource;
+        }
+
+        public DryingProp Clone()
+        {
+            return new DryingProp(Input, Output, DryingTime, TextureSource);
+        }
+
         public JsonItemStack Input { get; set; }
         public JsonItemStack Output { get; set; }
         public int? DryingTime { get; set; } = 12;

@@ -301,5 +301,23 @@ namespace Immersion
         {
             return world.GetBlock(BlockId);
         }
+
+        public static JsonCraftingOutput[] DeepClone(this JsonCraftingOutput[] outputs)
+        {
+            if (outputs == null) return null;
+
+            List<JsonCraftingOutput> outputlist = new List<JsonCraftingOutput>();
+            foreach (var val in outputs)
+            {
+                JsonCraftingOutput output = new JsonCraftingOutput();
+                output.Attributes = val.Attributes?.Token?.HasValues ?? false ? val.Attributes : null;
+                output.Code = val.Code;
+                output.StackSize = val.StackSize;
+                output.Type = val.Type;
+                outputlist.Add(output);
+            }
+
+            return outputlist.ToArray();
+        }
     }
 }
