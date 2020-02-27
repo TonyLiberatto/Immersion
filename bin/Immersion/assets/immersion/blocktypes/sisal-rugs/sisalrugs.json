@@ -2,7 +2,7 @@
 	code: "sisalrug",
 	class: "BlockSign",
 	enabled: true,
-	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
+	behaviors: [{name: "HorizontalOrientable"}],
 	variantgroups: [
 		{ code: "size" , states: ["small", "medium", "large"]},
 		{ code:"attachment", states: ["ground", "wall"] },
@@ -39,7 +39,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "immersiondeco": ["*-ground-east"] },
+	creativeinventory: { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "immersiondeco": ["*-ground-north"] },
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,
