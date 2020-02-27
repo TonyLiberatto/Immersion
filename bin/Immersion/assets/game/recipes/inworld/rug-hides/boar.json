@@ -1,0 +1,23 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:boarrug-ground-*",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "game:hide-raw-medium",
+        "Type": "Item",
+        "StackSize": 5
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ } 
+]

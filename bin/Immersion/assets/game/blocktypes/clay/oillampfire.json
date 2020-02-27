@@ -8,7 +8,7 @@
 	attributes: {
 		handbook: {			
 			extraSections: [
-				{ title: "handbook-item-sources", text: "Place a burned clay bowl onto a solid surface (RMB). Fill the bowl with a lump of fat (Sneak + RMB). Ignite the lamp using the torch (Sneak + RMB). This action consumes the torch! When complete, break the lamp to collect." }
+				{ title: "handbook-item-sources", text: "Place a burned clay bowl onto a solid surface (RMB). Fill the bowl with a lump of fat (Sneak + RMB). Ignite the lamp using the torch (Sneak + RMB). When complete, break the lamp to collect." }
 			]
 		}
 	},
