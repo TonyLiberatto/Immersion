@@ -2048,7 +2048,7 @@
   "block-bowlstamp-bismuthbronze": "Bismuth Bronze Bowl Stamp",
   "block-bowlstamp-blackbronze": "Black Bronze Bowl Stamp",
   "block-bowlstamp-copper": "Copper Bowl Stamp",
-  "blockdesk-bowlstamp-*": "Place the metal bowl stamp on a solid surface. Target the stamp with the crosshairs. With clay in the active hand, each action (Sneak + RMB) creates a clay bowl.",
+  "blockdesc-bowlstamp-*": "Place the metal bowl stamp on a solid surface. Target the stamp with the crosshairs. With clay in the active hand, each action (Sneak + RMB) creates a clay bowl.",
   
   
   "block-trough-immersion-genericwood-small-ns": "small trough",
