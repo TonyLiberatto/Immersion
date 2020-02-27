@@ -48,7 +48,7 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-			"accessories": { "base": "game:block/wood/smallplanks/{wood}"},
+			"accessories": { "base": "game:block/wood/trunk/accessories"},
 			"lid": { "base": "game:block/wood/smallplanks/{wood}"	},
 			"sides2": { "base": "game:block/wood/smallplanks/{wood}"},
 			"floor": { "base": "game:block/wood/smallplanks/{wood}"},
