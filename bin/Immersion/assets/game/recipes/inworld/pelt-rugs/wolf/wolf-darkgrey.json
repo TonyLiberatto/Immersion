@@ -1,0 +1,106 @@
+[
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:wolfpelt-darkgrey-ground-east",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:wolfrug-darkgrey-ground-east",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:wolfpelt-darkgrey-ground-west",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:wolfrug-darkgrey-ground-west",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:wolfpelt-darkgrey-ground-north",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:wolfrug-darkgrey-ground-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:wolfpelt-darkgrey-ground-south",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:wolfrug-darkgrey-ground-south",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+	"Returns": [{
+        "Code": "immersion:animal-leatherstrips",
+        "Type": "Item",
+		"StackSize": 4
+    }],
+    "IsTool": true,
+	"MakeTime": 8,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+]
