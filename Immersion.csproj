@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props" Condition="Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" />
+  <Import Project="packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props" Condition="Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" />
+  <Import Project="packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props" Condition="Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props" Condition="Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" />
+  <Import Project="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props" Condition="Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +17,8 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,36 +39,36 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="cairo-sharp">
-      <HintPath>..\..\VS-1.12-X\Lib\cairo-sharp.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\cairo-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CommandLine">
-      <HintPath>..\..\VS-1.12-X\Lib\CommandLine.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\CommandLine.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csogg">
-      <HintPath>..\..\VS-1.12-X\Lib\csogg.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\csogg.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="csvorbis">
-      <HintPath>..\..\VS-1.12-X\Lib\csvorbis.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\csvorbis.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="ENet">
-      <HintPath>..\..\VS-1.12-X\Lib\ENet.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\ENet.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\VS-1.12-X\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="OpenTK">
-      <HintPath>..\..\VS-1.12-X\Lib\OpenTK.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\OpenTK.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\VS-1.12-X\Lib\protobuf-net.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\protobuf-net.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -73,31 +80,39 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="Tavis.JsonPatch">
-      <HintPath>..\..\VS-1.12-X\Lib\Tavis.JsonPatch.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\Tavis.JsonPatch.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryAPI">
-      <HintPath>..\..\VintagestoryAPI.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VintagestoryLib">
-      <HintPath>..\..\VintagestoryLib.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\VintagestoryLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSBuildLib">
+      <HintPath>..\Vintagestory1.12.4\VSBuildLib.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>..\..\VS-1.12-X\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>..\..\VS-1.12-X\Mods\VSEssentials.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Mods\VSEssentials.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="VSModLauncher">
+      <HintPath>..\Vintagestory1.12.4\Mods\VSModLauncher.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>..\..\VS-1.12-X\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>..\..\VS-1.12-X\Lib\websocket-sharp.dll</HintPath>
+      <HintPath>..\Vintagestory1.12.4\Lib\websocket-sharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -248,24 +263,11 @@
     <None Include="bin\Immersion\assets\game\blocktypes\clay\flowerpotbrown.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\flowerpotfire.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\flowerpotred.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-intestines.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-pemmican-large.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-pemmican-medium.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-pemmican-small.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-pemmican.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-salted-mutton.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-saltedmeat.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-saltedpork.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\glasslanternframemold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\hingesmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\ingotmold.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\ingotstampmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\lanternbasetopmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\lanternsidesmold.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\metalsheetmold.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\mold\ingotmold.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\mold\toolmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\oillampblue.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\oillampbrown.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\oillampfire.json" />
@@ -288,7 +290,6 @@
     <None Include="bin\Immersion\assets\game\blocktypes\hay.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\lightsources\bunchotallowcandles.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\lightsources\glasslantern.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\lightsources\locust-cage.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\lightsources\sheet-lantern-glass.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\lightsources\sheet-lantern.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\bowlstamp.json" />
@@ -334,8 +335,6 @@
     <None Include="bin\Immersion\assets\game\blocktypes\stone\slab-branch.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\stone\stonebrick\staircornerbrick.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\stone\stonebrick\stonebrickstairs.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\stone\well.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\stone\wellpipe.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\tools\adze.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\tools\axe.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\tools\hammer.json" />
@@ -373,15 +372,8 @@
     <None Include="bin\Immersion\assets\game\blocktypes\wood\choppingblock.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\dryingtray.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\dryingtraysides.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bamboochest-labeled.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bamboochest.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\barrel.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bed.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bonfire.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bucket.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\pan.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\survivalchest-labeled.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\survivalchest.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\trough-large.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\trough-small.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\leavesbranchy.json" />
@@ -393,10 +385,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\wood\plankstairs.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\plankstairscorner.json" />
     <None Include="bin\Immersion\assets\game\config\general.json" />
-    <None Include="bin\Immersion\assets\game\config\handbook\immersivecrafting.json" />
-    <None Include="bin\Immersion\assets\game\config\handbook\preserving.json" />
     <None Include="bin\Immersion\assets\game\config\handbook\toolmaking.json" />
-    <None Include="bin\Immersion\assets\game\config\immersionproperties\customingots.json" />
     <None Include="bin\Immersion\assets\game\config\orthoshaderlist.json" />
     <None Include="bin\Immersion\assets\game\config\vesseldrops.json" />
     <None Include="bin\Immersion\assets\game\entities\air\butterfly.json" />
@@ -412,16 +401,10 @@
     <None Include="bin\Immersion\assets\game\entities\land\chicken\chicken-chick.json" />
     <None Include="bin\Immersion\assets\game\entities\land\chicken\chicken-hen.json" />
     <None Include="bin\Immersion\assets\game\entities\land\chicken\chicken-rooster.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox-arctic-female.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox-arctic-male.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox-female.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-red-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-red-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-snow-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-snow-male.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\hare-female.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\hare-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare\hare-baby.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare\hare-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare\hare-male.json" />
@@ -451,10 +434,8 @@
     <None Include="bin\Immersion\assets\game\itemtypes\food\bread.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\bushmeat.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\cookedgiantreedsroot.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\food\dryfruit.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\egg.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\fish.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\food\flour.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\fruit.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\grain.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\legume.json" />
@@ -488,10 +469,7 @@
     <None Include="bin\Immersion\assets\game\itemtypes\resource\wheyportion.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\toolhead\bonearrowhead.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\toolhead\spearhead.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\tool\axe-metal.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\tool\axe-stone.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\bow.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\tool\firestarter.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\adze.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\arrow-primitive.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\axe.json" />
@@ -510,7 +488,6 @@
     <None Include="bin\Immersion\assets\game\itemtypes\tool\slaughteringaxe.json" />
     <None Include="bin\Immersion\assets\game\lang\en.json" />
     <None Include="bin\Immersion\assets\game\patches\entities.json" />
-    <None Include="bin\Immersion\assets\game\patches\survival-config-general.json" />
     <None Include="bin\Immersion\assets\game\recipes\barrel\neocuredmeat.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\anvilmold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\axemold.json" />
@@ -522,9 +499,6 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\crock.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\crucible.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\flowerpot.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-small.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourbowls.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourclapots.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourcrock.json" />
@@ -532,15 +506,11 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourflowerpot.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\glasslanternframemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\hammermold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\helvehammer.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\hingesmold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\hoemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\ingotmold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\ingotstampmold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\lamellaemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\lanternbasetopmold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\lanternsidesmold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\metal-sheet-mold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\pickaxemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\propickmold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\shingles.json" />
@@ -552,12 +522,10 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\wateringcan.json" />
     <None Include="bin\Immersion\assets\game\recipes\cooking\meatystew.json" />
     <None Include="bin\Immersion\assets\game\recipes\cooking\soup.json" />
-    <None Include="bin\Immersion\assets\game\recipes\grid\barrel.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\beenade.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\claybrickstairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\clayshinglestairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\cobblestairs.json" />
-    <None Include="bin\Immersion\assets\game\recipes\grid\dough.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\plankstairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\poultice.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\sealedcrock.json" />
@@ -572,16 +540,10 @@
     <None Include="bin\Immersion\assets\game\recipes\grid\tool\sword.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\trough-large.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\trough-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\grid\well.json" />
-    <None Include="bin\Immersion\assets\game\recipes\grid\woodbucket.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\bags\backpack-burdenbasket.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly-leatherstrips.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly-sisal.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\basket-frame.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\basket.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bed.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\bonfire.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bowl-fat.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-acacia.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-birch.json" />
@@ -589,53 +551,17 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-maple.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-oak.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-pine.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-birch-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-birch-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-birch-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-birch.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-kapok-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-kapok-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-kapok-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-kapok.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-maple-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-maple-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-maple-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-maple.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-oak-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-oak-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-oak-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-oak.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-pine-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-pine-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-pine-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-pine.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-acacia-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-acacia-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-acacia-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-acacia.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-birch-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-birch-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-birch-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-birch.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-kapok-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-kapok-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-kapok-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-kapok.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-maple-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-maple-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-maple-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-maple.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-oak-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-oak-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-oak-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-oak.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-pine-ns.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-pine-ud.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-pine-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\very-thin\very-thin-pine.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\candlemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\chest\chestcomplete.json" />
@@ -649,7 +575,6 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\door\door-assemble.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\door\door-full.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\dryingtray.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\firestarter.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\glasslantern\glasslantern-gold.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\glasslantern\glasslantern-plain.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\glasslantern\glasslantern-sheet-glass-gold.json" />
@@ -669,7 +594,6 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\logwall\logwall-down-north.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\logwall\logwall-down-norths.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\logwall\logwall-left-north.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\logwall\logwall-up-north.json" />
@@ -679,99 +603,7 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\panel\halfpanel-debarked.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\panel\halfpanel-planks.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\panel\panel-bamboo.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\bighorn.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\boar.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\hyena.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-ashgrey.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-black.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-brown.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-darkgrey.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-gold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-grey.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-silver.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-smokegrey.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\pelt-rugs\wolf\wolf-white.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\planks-bamboo.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\large\dryingmat-large-east.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\large\dryingmat-large-north.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\large\dryingmat-large-south.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\large\dryingmat-large-west.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\medium\dryingmat-medium-east.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\medium\dryingmat-medium-north.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\medium\dryingmat-medium-south.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\medium\dryingmat-medium-west.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\small\dryingmat-small-east.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\small\dryingmat-small-north.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\small\dryingmat-small-south.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\dryfruit\small\dryingmat-small-west.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\drying-rack-assemble.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\drying-rack-leatherstrip.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\drying-rack-reeds.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\drying-rack-sinew.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\drying-rack-sisal-twine.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\mutton\leatherstrip-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\mutton\reeds-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\mutton\sinew-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\mutton\sisal-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\porkchops\leatherstrip-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\porkchops\reeds-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\porkchops\sinew-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\porkchops\sisal-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\redmeat\drying-rack-leatherstrip-salt-meat.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\redmeat\drying-rack-reeds-salt-meat.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\redmeat\drying-rack-sinew-salt-meat.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\drying-rack\redmeat\drying-rack-sisal-salt-meat.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\intestines\casings.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\intestines\intestines.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\meat-raw\raw-meat-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\meat-raw\raw-meat-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\meat-raw\raw-meat-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\meat-salted\saltedmeat-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\meat-salted\saltedmeat-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\meat-salted\saltedmeat-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\mutton-raw\raw-mutton-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\mutton-raw\raw-mutton-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\mutton-raw\raw-mutton-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\mutton-salted\large-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\mutton-salted\medium-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\mutton-salted\small-mutton-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-large-12.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-large-16.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-large-4.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-large-8.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-medium-4.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-medium-8.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican-sausages\pemmican-sausages-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-flour-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-flour-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-flour-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruit-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruit-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruit-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruitfat-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruitfat-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruitfat-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-blue.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-brown.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-fire.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-red.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-medium-blue.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-medium-brown.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-medium-fire.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-medium-red.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-small-blue.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-small-brown.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-small-fire.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-small-red.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\porkchops-raw\raw-porkchops-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\porkchops-raw\raw-porkchops-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\porkchops-raw\raw-porkchops-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\porkchops-salted\large-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\porkchops-salted\medium-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\porkchops-salted\small-porkchops-salted.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\Washing\food-bowl-large-rot.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\Washing\food-bowl-medium-rot.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\Washing\food-bowl-small-rot.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\primitive-fence\midsection-ns.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\primitive-fence\midsection-we.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\primitive-fence\primitivegate.json" />
@@ -1280,7 +1112,6 @@
     <None Include="bin\Immersion\assets\game\recipes\smithing\spear.json" />
     <None Include="bin\Immersion\assets\game\shaders\progressbar.fsh" />
     <None Include="bin\Immersion\assets\game\shapes\block\basic\giantreeds-free.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\basic\liquid.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\basic\stairs-lowered.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\basic\stairs.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\bowlstamp.json" />
@@ -1296,35 +1127,12 @@
     <None Include="bin\Immersion\assets\game\shapes\block\clay\crock\label-pumpkin.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\crock\label-soybean.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\crock\label-turnip.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\mutton\large-mutton.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\mutton\medium-mutton.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\mutton\small-mutton.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\large-pemmican1.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\large-pemmican2.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\large-pemmican3.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\large-pemmican4.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\medium-pemmican1.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\medium-pemmican2.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\medium-pemmican3.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\medium-pemmican4.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\small-pemmican1.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\small-pemmican2.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\small-pemmican3.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\pemmican\small-pemmican4.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\porkchops\large-porkchops.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\porkchops\medium-porkchops.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\porkchops\small-porkchops.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\redmeat\large-redmeat.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\redmeat\medium-redmeat.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\food-bowl\redmeat\small-redmeat.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\bowlstampmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\claycandlemold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\glasslanternmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\hingesmold.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\ingotstampmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\lanternbasetopmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\lanternsidesmold.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\metalsheetmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\toolpinmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\pot-closed.json" />
@@ -1333,17 +1141,14 @@
     <None Include="bin\Immersion\assets\game\shapes\block\clay\storagevessel.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\ingotstamp.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\lightsources\glass-lantern.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\lightsources\locust-cage.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\lightsources\tallow\tallowbunch.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\lightsources\tallow\tallowcandle1.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\lightsources\tallow\tallowcandle2.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\lightsources\tallow\tallowcandle3.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\meal\meaty-stew.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\candlemold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\candlemoldwick.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\glasslanternframe.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\ingotpile.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\metal\ironbloompile.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\lantern\ceiling.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\lantern\ground.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\lantern\lantern-base-candle-sides.json" />
@@ -1396,12 +1201,6 @@
     <None Include="bin\Immersion\assets\game\shapes\block\staircorners\staircornerinside.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\staircorners\stairs-lowered-corner.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\staircorners\stairs-lowered-cornerinside.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\stone\well.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\stone\wellpipe.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\wood\bonfire\extinct.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\wood\bonfire\lit-2.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\wood\bonfire\lit.json" />
-    <None Include="bin\Immersion\assets\game\shapes\block\wood\bucket\empty.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\wood\choppingblock.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\wood\dryingtray.json" />
     <None Include="bin\Immersion\assets\game\shapes\entity\air\butterfly.json" />
@@ -1437,9 +1236,6 @@
     <None Include="bin\Immersion\assets\game\shapes\entity\primitive-spear.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\bamboostakes.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\hinges.json" />
-    <None Include="bin\Immersion\assets\game\shapes\item\ironbloom.json" />
-    <None Include="bin\Immersion\assets\game\shapes\item\rawironbloom.json" />
-    <None Include="bin\Immersion\assets\game\shapes\item\refinedironbloom.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-adze.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-axe.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-hammer.json" />
@@ -1467,7 +1263,6 @@
     <None Include="bin\Immersion\assets\game\shapes\item\tool\slaughteringaxe-head.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\slaughteringaxe.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\toolpin.json" />
-    <None Include="bin\Immersion\assets\game\worldgen\deeporebits.json" />
     <None Include="bin\Immersion\assets\game\worldgen\deposits\soil\clay.json" />
     <None Include="bin\Immersion\assets\game\worldgen\global.json" />
     <None Include="bin\Immersion\assets\game\worldgen\schematics\buriedtreasure\alchemist.json" />
@@ -1695,11 +1490,6 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\crackedblocks\crackedbrick.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\crackedblocks\crackedrock.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\crackedblocks\crackedrockpolished.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\drying\drying-rack-assemble.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\drying\drying-rack-mutton.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\drying\drying-rack-porkchops.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\drying\drying-rack.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\drying\dryingmat.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\flora\palmfrond.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\flora\palmfruits.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\flora\palmlog.json" />
@@ -1728,15 +1518,11 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\branch-cross.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\branch.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chest.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestcomplete-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestcomplete.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestframe.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestlatched-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestlatched.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestsides-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestsides.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\labeledchest.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\labeledchestcomplete-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\labeledchestcomplete.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\doors\browndoor.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\doors\door-assemble-bamboo.json" />
@@ -1751,7 +1537,6 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\doors\dooroak.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\doors\doorpine.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\doors\greendoor.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\firepit-flatstone.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\furniture\chair.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\furniture\table.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\halflog.json" />
@@ -1762,7 +1547,6 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\lamppost\post.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\logwall\logwall.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\panel-bamboo.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\panel-planks.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\panel.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\planks-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\primitivefence.json" />
@@ -1774,7 +1558,6 @@
     <None Include="bin\Immersion\assets\immersion\itemtypes\food\chicken.json" />
     <None Include="bin\Immersion\assets\immersion\itemtypes\food\hare.json" />
     <None Include="bin\Immersion\assets\immersion\itemtypes\food\mutton.json" />
-    <None Include="bin\Immersion\assets\immersion\itemtypes\food\pemmican-sausage.json" />
     <None Include="bin\Immersion\assets\immersion\itemtypes\food\porkchops.json" />
     <None Include="bin\Immersion\assets\immersion\itemtypes\resource\animal.json" />
     <None Include="bin\Immersion\assets\immersion\itemtypes\resource\bowlimb.json" />
@@ -2014,7 +1797,6 @@
     <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-fish.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-flat.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-largesquare.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-lod.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-squares.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-stepping1.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\road\road-stepping2.json" />
@@ -2065,8 +1847,6 @@
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\branch8-cordage.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\chest-assemble.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\chest-assemble1.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\normal.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\cordage.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\door-assemble.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\down_closed_left.json" />
@@ -2078,16 +1858,12 @@
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\up_closed_right.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\up_opened_left.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\up_opened_right.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\drying-rack\mutton.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\drying-rack\pork.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\drying-rack\redmeat.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\fence\primitivefence-midsection.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\fence\primitivefence-support.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\fence\primitivegate-closed-left.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\fence\primitivegate-closed-right.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\fence\primitivegate-opened-left.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\fence\primitivegate-opened-right.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\firepit\lit-normal-flatstone-bread.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\furniture\chair-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\furniture\chair.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\furniture\table-bamboo.json" />
@@ -2127,9 +1903,7 @@
     <None Include="bin\Immersion\assets\immersion\shapes\item\food\meat\chicken.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\item\food\meat\hare.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\item\food\meat\mutton.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\item\food\meat\mutton2.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\item\food\meat\porkchops.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\item\food\meat\porkchops2.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\item\resource\stonebrick.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\item\tool\roadwork\settinghammer.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\item\tool\roadwork\settinghammerhead.json" />
@@ -2138,7 +1912,6 @@
     <None Include="bin\Immersion\assets\immersion\shapes\item\tool\woodenmallet.json" />
     <None Include="bin\Immersion\assets\immersion\textures\block\clay\adobe\Thumbs.db" />
     <None Include="bin\Immersion\assets\immersion\textures\block\clay\rammedearth\Thumbs.db" />
-    <None Include="bin\Immersion\assets\immersion\textures\block\wood\chest.zip" />
     <None Include="bin\Immersion\Game-lang.docx" />
     <None Include="bin\Immersion\LICENSE" />
     <None Include="bin\Immersion\Mod-spreadsheets.xlsx" />
@@ -2192,6 +1965,7 @@
     <None Include="bin\Totems\modinfo.json" />
     <None Include="bin\Totems\VS-1.10.15-The-Totems-Mod-1.3.0.zip" />
     <None Include="LICENSE" />
+    <None Include="packages.config" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
@@ -2289,7 +2063,6 @@
     <Content Include="bin\Immersion\assets\game\textures\block\cordage\leatherstrips.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\cordage\rope.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\cordage\sinew.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\ember.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\Glasscase.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\glasscase\bismuth.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\glasscase\bismuthbronze.png" />
@@ -2322,7 +2095,6 @@
     <Content Include="bin\Immersion\assets\game\textures\block\liquid\seawater.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\liquid\seawater2.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\liquid\whey.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\metal\ingot\ironbloom.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\metal\ingot\tallow.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\metal\ingot\wax.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\plant\bamboo\leaves.png" />
@@ -2416,17 +2188,6 @@
     <Content Include="bin\Immersion\assets\game\textures\block\stone\roads\stones\shale_stones_3.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\stone\roads\stones\shale_stones_4.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\tallow\tallowcandle.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\acacia-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\aged-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\birch-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\kapok-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\maple-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\oak-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\pine-i.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bonfire\fire.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bonfire\fire_extinct.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bonfire\ground.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\bonfire\log.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\acacia.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\aged.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\birch.png" />
@@ -2434,24 +2195,10 @@
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\maple.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\oak.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\pine.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\acacia2.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\kapok2.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\pine2.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\overlays\barrel\sides.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\overlays\bucket\sides.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\overlays\chest\accessories.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\overlays\chest\sides.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-brown-side.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-brown-top.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-green-side.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-green-top.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\acacia.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\aged.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\birch.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\kapok.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\maple.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\oak.png" />
-    <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\pine.png" />
     <Content Include="bin\Immersion\assets\game\textures\entity\armadillo\armadillo.png" />
     <Content Include="bin\Immersion\assets\game\textures\entity\armadillo\armadillo_tail.png" />
     <Content Include="bin\Immersion\assets\game\textures\entity\arrow\arrowbone.png" />
@@ -2558,9 +2305,6 @@
     <Content Include="bin\Immersion\assets\game\textures\entity\wolf\smokegrey.png" />
     <Content Include="bin\Immersion\assets\game\textures\entity\wolf\white.png" />
     <Content Include="bin\Immersion\assets\game\textures\item\food\cookedgiantreedsroot.png" />
-    <Content Include="bin\Immersion\assets\game\textures\item\food\dry-fruit.png" />
-    <Content Include="bin\Immersion\assets\game\textures\item\food\dry-meat.png" />
-    <Content Include="bin\Immersion\assets\game\textures\item\food\meat-flour.png" />
     <Content Include="bin\Immersion\assets\game\textures\item\liquid\seawaterportion.png" />
     <Content Include="bin\Immersion\assets\game\textures\item\resource\clay\raw-blueclay.png" />
     <Content Include="bin\Immersion\assets\game\textures\item\resource\clay\raw-brownclay.png" />
@@ -2724,44 +2468,6 @@
     <Content Include="bin\Immersion\assets\immersion\textures\block\dead\rooster.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\dead\she-wolf.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\dead\sow.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\large\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\large\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\large\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\large\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\large\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\large\whitecurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\medium\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\medium\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\medium\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\medium\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\medium\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\medium\whitecurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\small.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\dry\small\whitecurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\large\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\large\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\large\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\large\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\large\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\large\whitecurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\medium\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\medium\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\medium\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\medium\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\medium\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\medium\whitecurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\raspberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\dryingmat\fresh\small\whitecurrant.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\fire.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\flora\palm\frond.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\flora\palm\fruits.png" />
@@ -2810,7 +2516,6 @@
     <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\fox\snow.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\hare\arctic.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\hare\ashgrey.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\hare\ashgrey2.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\hare\darkbrown.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\hare\darkgrey.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\pelt\hare\desert.png" />
@@ -2834,7 +2539,6 @@
     <Content Include="bin\Immersion\assets\immersion\textures\block\plant\bamboo\stem-brown.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\plant\bamboo\stem-green.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\plant\normal-side-h.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\block\plant\wicker\wicker.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\plant\wicker\wicker1.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\plant\wicker\wicker2.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\plant\wicker\wicker3.png" />
@@ -3254,12 +2958,6 @@
     <Content Include="bin\Immersion\assets\immersion\textures\entity\chicken\rooster\savanna.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\chicken\rooster\white.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\chicken\rooster\woodland.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\arctic-female.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\arctic-male.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\arctic-pup.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\forest-female.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\forest-male.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\forest-pup.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\red-female.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\red-male.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\fox\snow-female.png" />
@@ -3302,12 +3000,6 @@
     <Content Include="bin\Immersion\assets\immersion\textures\entity\wolf\silver.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\wolf\smokegrey.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\entity\wolf\white.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\dryfruit\blackcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\dryfruit\blueberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\dryfruit\cranberry.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\dryfruit\redcurrant.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\dryfruit\saguaro.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\dryfruit\whitecurrant.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\meat\carnivoremeat-cooked.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\meat\carnivoremeat-cured.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\meat\carnivoremeat-raw.png" />
@@ -3323,19 +3015,9 @@
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\meat\porkchops-cooked.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\meat\porkchops-cured.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\meat\porkchops-raw.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\flax.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-flour.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-fruit.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-fruitfat.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\pemmican.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\sausage\cookedsausage.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\sausage\rawsausage.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\casings.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\cleanintestines.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\fangs.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\furitem.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\horn.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\intestines.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\large-bone.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\leatherstrips.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\resource\animal\small-bones.png" />
@@ -3461,10 +3143,31 @@
     <Content Include="bin\Totems\assets\totems\textures\item\offering-bowl\meat.png" />
     <Content Include="bin\Totems\assets\totems\textures\item\offering-bowl\vegetable.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\cs\Microsoft.CodeAnalysis.VersionCheckAnalyzer.resources.dll" />
+    <Analyzer Include="packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\analyzers\dotnet\Microsoft.CodeAnalysis.VersionCheckAnalyzer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Humanizer.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.CodeQuality.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.CodeQuality.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
+    <Analyzer Include="packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
       <UserProperties bin_4immersion_4assets_4game_4itemtypes_4creature_1json__JsonSchema="http://json.schemastore.org/ansible-stable-2.7" />
     </VisualStudio>
   </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.VersionCheckAnalyzer.2.9.6\build\Microsoft.CodeAnalysis.VersionCheckAnalyzer.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeQuality.Analyzers.2.9.6\build\Microsoft.CodeQuality.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetCore.Analyzers.2.9.6\build\Microsoft.NetCore.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.2.9.6\build\Microsoft.NetFramework.Analyzers.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.6\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
+  </Target>
 </Project>

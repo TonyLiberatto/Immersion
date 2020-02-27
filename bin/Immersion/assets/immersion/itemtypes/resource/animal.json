@@ -1,6 +1,9 @@
 {
 	code: "animal",
-	maxstacksize: 64,	
+	maxstacksize: 64,
+	attributesByType: {
+		"animal-large-bone":{ knappable: true }
+	},
 	variantgroups: [
 		{ code: "type", states: ["tendon", "horn", "leatherstrips", "small-bones", "intestines", "cleanintestines", "casings" ] },
 	],

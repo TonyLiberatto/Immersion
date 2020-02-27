@@ -33,7 +33,7 @@
 			],
 			"drop": { type:"Block", code: "anvil-{metal}" }
 		},
-		"toolmold-*-burned-helvehammer": {
+		"toolmold-burned-helvehammer": {
 			"requiredUnits": 300,
 			"fillHeight": 3,
 			"fillQuadsByLevel": [

@@ -23,6 +23,7 @@
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 },			
 			{ code: "interpolateposition" },
+			{ code: "harvestable" }
 		],
 		animations: [
 			{

@@ -1,7 +1,6 @@
 {
 	code: "dryingmat",	
-	enabled: true,
-	entityClass: "Generic",	
+	enabled: true,	
 	behaviorsByType: {
 		"*-dry-small-*": [ {name: "Harvestable", properties: { 
 			harvestTime: 0.6, 

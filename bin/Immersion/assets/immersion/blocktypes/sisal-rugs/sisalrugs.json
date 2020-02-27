@@ -2,12 +2,12 @@
 	code: "sisalrug",
 	class: "BlockSign",
 	enabled: true,
-	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "north" }}],
+	behaviors: [{name: "HorizontalOrientable", properties: {  dropBlockFace: "east" }}],
 	variantgroups: [
 		{ code: "size" , states: ["small", "medium", "large"]},
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" },
-	],	
+	],
 	drawtype: "json",
 	shapeByType: {
 		"*-small-ground-north": { base: "block/floormats/peltsmall", rotateY: 0 },
@@ -39,7 +39,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "immersiondeco": ["*-ground-north"] },
+	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "immersiondeco": ["*-ground-east"] },
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,

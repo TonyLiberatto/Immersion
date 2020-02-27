@@ -13,7 +13,7 @@
         "extraSections": [
           {
             "title": "handbook-item-sources",
-            "text": "(Created by <a href=\"handbook://craftinginfo-smelting\">Smelting</a>). Place the <a href=\"handbook://block-candlemold-copper-plain\">metal candle mold</a> onto a solid surface (Sneak + RMB). Add Sisal Twine to the molds to create candle wicks (Sneak + RMB). Prepare 100 units of wax or tallow using the crucible in a firepit. Pour the melted wax into the mold (Sneak + RMB). Collect candles from the mold when cool (RMB)."
+            "text": "Place the <a href=\"handbook://block-candlemold-copper-plain\">metal candle mold</a> onto a solid surface (Sneak + RMB). Add Sisal Twine to the molds to create candle wicks (Sneak + RMB). Prepare 100 units of wax or tallow using the crucible in a firepit. Pour the melted wax into the mold (Sneak + RMB). Collect candles from the mold when cool (RMB)."
           }
         ]
 

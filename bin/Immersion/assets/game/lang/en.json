@@ -2336,8 +2336,6 @@
     "block-toolmold-blue-burned-anvil": "Blue Anvil mold (Fired)",
     "block-toolmold-blue-raw-hoe": "Blue Hoe mold (Raw)",
     "block-toolmold-blue-burned-hoe": "Blue Hoe mold (Fired)",
-	"block-toolmold-blue-raw-helvehammer": "Blue Helvehammer mold (Raw)",
-    "block-toolmold-blue-burned-helvehammer": "Blue Helvehammer mold (Fired)",
 	
 	"block-toolmold-brown-raw-axe": "Brown Axe mold (Raw)",
     "block-toolmold-brown-burned-axe": "Brown Axe mold (Fired)",
@@ -2354,9 +2352,7 @@
     "block-toolmold-brown-raw-anvil": "Brown Anvil mold (Raw)",
     "block-toolmold-brown-burned-anvil": "Brown Anvil mold (Fired)",
     "block-toolmold-brown-raw-hoe": "Brown Hoe mold (Raw)",
-    "block-toolmold-brown-burned-hoe": "Brown Hoe mold (Fired)",
-	"block-toolmold-brown-raw-helvehammer": "Brown Helvehammer mold (Raw)",
-    "block-toolmold-brown-burned-helvehammer": "Brown Helvehammer mold (Fired)",
+    "block-toolmold-brown-burned-hoe": "Brown Hoe mold (Fired)",	
 	
 	"block-toolmold-fire-raw-axe": "Fire Axe mold (Raw)",
     "block-toolmold-fire-burned-axe": "Fire Axe mold (Fired)",
@@ -2374,8 +2370,6 @@
     "block-toolmold-fire-burned-anvil": "Fire Anvil mold (Fired)",
     "block-toolmold-fire-raw-hoe": "Fire Hoe mold (Raw)",
     "block-toolmold-fire-burned-hoe": "Fire Hoe mold (Fired)",
-	"block-toolmold-fire-raw-helvehammer": "Fire Helvehammer mold (Raw)",
-    "block-toolmold-fire-burned-helvehammer": "Fire Helvehammer mold (Fired)",
 	
 	"block-toolmold-red-raw-axe": "Red Axe mold (Raw)",
     "block-toolmold-red-burned-axe": "Red Axe mold (Fired)",
@@ -2393,8 +2387,6 @@
     "block-toolmold-red-burned-anvil": "Red Anvil mold (Fired)",
     "block-toolmold-red-raw-hoe": "Red Hoe mold (Raw)",
     "block-toolmold-red-burned-hoe": "Red Hoe mold (Fired)",
-	"block-toolmold-red-raw-helvehammer": "Red Helvehammer mold (Raw)",
-    "block-toolmold-red-burned-helvehammer": "Red Helvehammer mold (Fired)",
 	
 	"block-ingotmold-blue-raw": "Blue Ingot mold (Raw)",
     "block-ingotmold-blue-burned": "Blue Ingot mold (Fired)",
@@ -2425,10 +2417,8 @@
     "blockcraftdesc-toolmold-*-raw-shovel": "To create shovel heads directly from molten metal",
     "blockcraftdesc-toolmold-*-raw-sword": "To create sword blades directly from molten metal",
     "blockcraftdesc-toolmold-*-raw-hoe": "To create hoe heads directly from molten metal",
-	"blockcraftdesc-toolmold-*-raw-helvehammer": "To create Helvehammer directly from molten metal",
     "blockcraftdesc-toolmold-*-raw-pickaxe": "To create pickaxe heads directly from molten metal",
     "blockcraftdesc-toolmold-*-raw-prospectingpick": "To create prospecting pick heads directly from molten metal",
-	
     "blockcraftdesc-bowl-*-raw": "Bowls can be combined with fat for permanent light sources and other uses",
     "blockcraftdesc-clayplanter-*-raw": "Large container for flowers",
     "blockcraftdesc-flowerpot-*-raw": "Small container for flowers",
