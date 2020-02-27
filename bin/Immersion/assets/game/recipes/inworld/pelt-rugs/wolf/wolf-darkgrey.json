@@ -2,7 +2,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:bighornpelt-ground-east",
+		"Code": "immersion:wolfpelt-darkgrey-ground-east",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -11,7 +11,7 @@
         "Type": "Item",		
     },
     "Makes": [{
-        "Code": "immersion:bighornrug-ground-east",
+        "Code": "immersion:wolfrug-darkgrey-ground-east",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -28,7 +28,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:bighornpelt-ground-west",
+		"Code": "immersion:wolfpelt-darkgrey-ground-west",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -37,7 +37,7 @@
         "Type": "Item",		
     },
     "Makes": [{
-        "Code": "immersion:bighornrug-ground-west",
+        "Code": "immersion:wolfrug-darkgrey-ground-west",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -54,7 +54,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:bighornpelt-ground-south",
+		"Code": "immersion:wolfpelt-darkgrey-ground-north",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -63,7 +63,7 @@
         "Type": "Item",		
     },
     "Makes": [{
-        "Code": "immersion:bighornrug-ground-south",
+        "Code": "immersion:wolfrug-darkgrey-ground-north",
         "Type": "Block",
         "StackSize": 1
     }],
@@ -80,7 +80,7 @@
  {
     "Mode": "Swap",
     "Takes": {
-		"Code": "immersion:bighornpelt-ground-north",
+		"Code": "immersion:wolfpelt-darkgrey-ground-south",
         "Type": "Block",        
 		"Remove": true	
     },
@@ -89,7 +89,7 @@
         "Type": "Item",		
     },
     "Makes": [{
-        "Code": "immersion:bighornrug-ground-north",
+        "Code": "immersion:wolfrug-darkgrey-ground-south",
         "Type": "Block",
         "StackSize": 1
     }],
