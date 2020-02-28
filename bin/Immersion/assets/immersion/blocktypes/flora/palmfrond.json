@@ -8,7 +8,7 @@
                 "properties": {
                     "eventName": "testForDecay"
                 }
-            }
+            },
         ],
         "*": [
             {
@@ -87,6 +87,6 @@
     "replaceable": 600,
     "lightAbsorption": 0,
     "resistance": 1,
-    "rainPermeable": true,
+    "rainPermeable": false,
     "materialDensity": 200
 }

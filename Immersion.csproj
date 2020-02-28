@@ -760,9 +760,9 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruit-large.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruit-medium.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruit-small.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruitfat-large.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruitfat-medium.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fruitfat-small.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fat-large.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fat-medium.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\meat-fat-small.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-blue.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-brown.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\preserving\foodbowl\pemmican\pemmican\pemmican-large-fire.json" />
@@ -3298,7 +3298,7 @@
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\flax.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-flour.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-fruit.png" />
-    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-fruitfat.png" />
+    <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\meat-fat.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\pemmican\pemmican.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\sausage\cookedsausage.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\item\food\sausage\rawsausage.png" />
