@@ -159,7 +159,7 @@
   "blockdesc-food-bowl-*-intestines": "Sneak Right click with a knife to make Sausage Casings",
   "blockdesc-food-bowl-*-meat-flour": "Sneak Right click with Dry Fruit Flour to mix ingredients for Pemmican",
   "blockdesc-food-bowl-*-meat-fruit": "Sneak Right click with Fat to mix ingredients for Pemmican",
-  "blockdesc-food-bowl-*-meat-fruitfat": "Sneak Right click with bowls of honey to finalize Pemmican",
+  "blockdesc-food-bowl-*-meat-fat": "Sneak Right click with bowls of honey to finalize Pemmican",
   "blockdesc-food-bowl-*-pemmican*": "Sneak Right click with sausage casings to get Pemmican Sausages",
   
   "item-flour-dryfruit": "Dry Fruit Flour",
@@ -327,8 +327,8 @@
   "blockdesc-candlemold-*-plain": "Add sisal twine (Sneak + RMB) to make Wicked Candle Mold",
   "block-candlemold-copper-burned": "Wicked Copper Candle Mold",
   "block-candlemold-bismuthbronze-burned": "Wicked Bismuth Bronze Candle Mold",
-  "block-candlemold-bismuthbronze-burned": "Wicked Black Bronze Candle Mold",
-  "block-candlemold-bismuthbronze-burned": "Wicked Tin Bronze Candle Mold",
+  "block-candlemold-blackbronze-burned": "Wicked Black Bronze Candle Mold",
+  "block-candlemold-tinbronze-burned": "Wicked Tin Bronze Candle Mold",
   
   "blockdesc-candlemold-*-burned": "Pour smelted beeswax to make wax candles or smelted fat to make tallow candles",
   "block-claycandlemold-*-raw": "Raw Clay Candle Mold",
