@@ -74,6 +74,14 @@ namespace Immersion.Utility
             return Positions;
         }
 
+        public static readonly BlockPos[] Cardinals = new BlockPos[]
+        {
+                new BlockPos(0,0,1),
+                new BlockPos(1,0,0),
+                new BlockPos(0,0,-1),
+                new BlockPos(-1,0,0),
+        };
+
         public static BlockPos[] LargeAreaBelow(BlockPos Pos)
         {
             List<BlockPos> Positions = new List<BlockPos>();

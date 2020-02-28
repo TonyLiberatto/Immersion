@@ -1,5 +1,6 @@
 ﻿{
     "code": "palmfruits",
+		"class": "BlockPalmTree",
     "behaviorsByType": {
         "*-coconut-*": [
             { "name": "HorizontalOrientable" },
@@ -103,7 +104,7 @@
     },
     "maxStackSize": 16,
     "materialDensity": 200,
-    "rainPermeable": true,
+    "rainPermeable": false,
     "lightAbsorption": 0,
     "collisionSelectionBoxByType": {
         "*-west": {
