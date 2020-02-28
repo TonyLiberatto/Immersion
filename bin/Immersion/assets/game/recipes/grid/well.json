@@ -7,7 +7,7 @@
 		},
 		"W": {
 			"type": "item",
-			"code": "planks-*"
+			"code": "plank-*"
 		},
         "C": {
             "type": "block",
