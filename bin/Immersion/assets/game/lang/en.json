@@ -1,5 +1,4 @@
 {
-
   "tabname-immersionblocks": "I Blocks",
   "tabname-immersiondeco": "I Decor",
   "tabname-immersionfauna": "I Fauna",
@@ -241,13 +240,14 @@
   "block-machine": "Machine",
   "block-wedger": "Wedger",
   
-  "block-choppingblock-birch-north": "Choppingblock Birch",
-  "block-choppingblock-oak-north": "Choppingblock Oak",
-  "block-choppingblock-maple-north": "Choppingblock Maple",
-  "block-choppingblock-pine-north": "Choppingblock Pine",
-  "block-choppingblock-acacia-north": "Choppingblock Acacia",
-  "block-choppingblock-kapok-north": "Choppingblock Kapok",
-  "block-choppingblock-aged-north": "Choppingblock Aged",
+  "block-choppingblock-birch-*": "Choppingblock Birch",
+  "block-choppingblock-oak-*": "Choppingblock Oak",
+  "block-choppingblock-maple-*": "Choppingblock Maple",
+  "block-choppingblock-pine-*": "Choppingblock Pine",
+  "block-choppingblock-acacia-*": "Choppingblock Acacia",
+  "block-choppingblock-kapok-*": "Choppingblock Kapok",
+  "block-choppingblock-aged-*": "Choppingblock Aged",
+  "blockdesc-choppingblock-*": "Place a log or branch (any wood type) on the chopping block using RMB. Convert the log or branch to firewood using an axe (Sneak + RMB). Firewood yield is 8 (log) and 6 (thick), 4 (medium) or 2 (thin)",
   
   "block-crock-blue-raw-*":"Raw Blue Crock",
   "block-crock-fire-raw-*":"Raw Fire Crock",

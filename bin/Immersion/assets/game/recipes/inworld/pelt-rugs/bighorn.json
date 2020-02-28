@@ -21,7 +21,7 @@
 		"StackSize": 4
     }],
     "IsTool": true,
-	"MakeTime": 8,
+	"MakeTime": 2,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -47,7 +47,7 @@
 		"StackSize": 4
     }],
     "IsTool": true,
-	"MakeTime": 8,
+	"MakeTime": 2,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -73,7 +73,7 @@
 		"StackSize": 4
     }],
     "IsTool": true,
-	"MakeTime": 8,
+	"MakeTime": 2,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
@@ -99,7 +99,7 @@
 		"StackSize": 4
     }],
     "IsTool": true,
-	"MakeTime": 8,
+	"MakeTime": 2,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },

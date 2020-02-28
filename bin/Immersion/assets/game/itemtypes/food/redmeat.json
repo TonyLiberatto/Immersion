@@ -53,9 +53,9 @@
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
 		"redmeat-cooked": { satiety: 300, health: 0, foodcategory: "Protein" },
-		"redmeat-cured": { satiety: 250, health: 0, foodcategory: "Protein" },
-		"redmeat-vintage": { satiety: 400, health: 2, foodcategory: "Protein" },
-		"redmeat-dry": { satiety: 400, health: 0, foodcategory: "Protein" },
+		"redmeat-cured": { satiety: 300, health: 0, foodcategory: "Protein" },
+		"redmeat-vintage": { satiety: 300, health: 2, foodcategory: "Protein" },
+		"redmeat-dry": { satiety: 300, health: 0, foodcategory: "Protein" },
 	},
 	transitionablePropsByType: {
 		"*-raw": [{

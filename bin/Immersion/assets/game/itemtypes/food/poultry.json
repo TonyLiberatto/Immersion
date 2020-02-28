@@ -26,7 +26,7 @@
 	creativeinventory: { "general": ["*"], "items": ["*"] },
 	nutritionPropsByType: {
 		"*-cooked": { satiety: 240, foodcategory: "Protein", eatenStack: { type: "item", code: "immersion:animal-small-bones" } },
-		"*-cured": { satiety: 180, foodcategory: "Protein", eatenStack: { type: "item", code: "immersion:animal-small-bones" } },
+		"*-cured": { satiety: 240, foodcategory: "Protein", eatenStack: { type: "item", code: "immersion:animal-small-bones" } },
 	},
 	transitionablePropsByType: {
 		"*-raw": [

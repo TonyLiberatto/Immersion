@@ -7,7 +7,7 @@
 		handbook:{ 
 				groupBy: ["choppingblock-*"],
 				extraSections: [
-					{ title: "handbook-item-sources", text: "Place a log down, hold right click with an Axe, to make 2 half Logs. Place the Half Log down and hold right click with an Axe again."}
+					{ title: "handbook-item-sources", text: "Place a log on a solid surface to begin the chopping block (RMB). Use an axe to cut the log in half and create two half logs (Sneak + RMB). Replace one half log and (Sneak + RMB) with an axe in the active hand to create the chopping block."}
 					]
 
 		},
@@ -17,11 +17,21 @@
             { "craftTime": 500, "craftSound": "sounds/block/wood-tool", 
 			"tool": "axe", 
 			"input": { "Type": "block", "Code": "log-placed-*", "StackSize": 1 }, 
-			"output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }, 
+			"output": [ { "Type": "item", "Code": "firewood", "StackSize": 8} ] }, 
             { "craftTime": 500, 
 			"craftSound": "sounds/block/wood-tool", 
 			"tool": "axe", 
-			"input": { "Type": "block", "Code": "immersion:branch-*", "StackSize": 1 }, 
+			"input": { "Type": "block", "Code": "immersion:branch-thick-*", "StackSize": 1 }, 
+			"output": [ { "Type": "item", "Code": "firewood", "StackSize": 6} ] },
+			{ "craftTime": 500, 
+			"craftSound": "sounds/block/wood-tool", 
+			"tool": "axe", 
+			"input": { "Type": "block", "Code": "immersion:branch-medium-*", "StackSize": 1 }, 
+			"output": [ { "Type": "item", "Code": "firewood", "StackSize": 4} ] },
+			{ "craftTime": 500, 
+			"craftSound": "sounds/block/wood-tool", 
+			"tool": "axe", 
+			"input": { "Type": "block", "Code": "immersion:branch-thin-*", "StackSize": 1 }, 
 			"output": [ { "Type": "item", "Code": "firewood", "StackSize": 2} ] }
         ]
     },

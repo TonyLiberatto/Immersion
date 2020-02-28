@@ -11,12 +11,16 @@
         "Type": "Item",		
     },
     "Makes": [{
+        "Code": "game:air",
+        "Type": "Block",        
+    }],
+	"Returns": [{
         "Code": "game:hide-raw-small",
-        "Type": "Block",
+        "Type": "Item",
         "StackSize": 3
     }],	
     "IsTool": true,
-	"MakeTime": 8,
+	"MakeTime": 2,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  } 

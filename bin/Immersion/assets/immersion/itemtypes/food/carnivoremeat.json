@@ -13,7 +13,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "type", states: ["raw", "cooked", "cured" ] },
+		{ code: "type", states: ["raw", "cooked", ] },
 	],
 	textures: {
 		"meat": {base: "item/food/meat/carnivoremeat-{type}" },
@@ -21,8 +21,7 @@
 	shape: { base: "item/food/meat/carnivoremeat" },
 	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
-		"carnivoremeat-cooked": { saturation: 90, health: -1, foodcategory: "Protein" },
-		"carnivoremeat-cured": { saturation: 80, health: 0, foodcategory: "Protein" },
+		"carnivoremeat-cooked": { saturation: 90, health: -1, foodcategory: "Protein" },		
 	},
 	materialDensity: 600,
 	guiTransform: {
@@ -76,12 +75,5 @@
 			transitionedStack: { type: "item", code: "game:rot" },
 			transitionRatio: 1
 		}],
-		"*-cured": [{
-			type: "Perish",
-			freshHours: { avg: 8760 },
-			spoilHours: { avg: 4380 },
-			transitionedStack: { type: "item", code: "game:rot" },
-			transitionRatio: 1
-		}]
 	}
 }
