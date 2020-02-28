@@ -56,6 +56,7 @@
 		"*-large-*-south": { base: "block/floormats/pelt", rotateY: 180 },
 		"*-large-*-west": { base: "block/floormats/pelt", rotateY: 90 },		
 	},
+	drop: {code: "sisalrug-{size}-ground-north"},
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
