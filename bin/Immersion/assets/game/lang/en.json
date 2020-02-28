@@ -2507,7 +2507,8 @@
 	"block-adze-head-basalt-*": "Adze Head Basalt",
 	"block-adze-head-obsidian-*": "Adze Head Obsidian",
 	"block-adze-head-flint-*": "Adze Head Flint",
-	"block-adze-head-peridotite-*": "Adze Head Peridotite",	
+	"block-adze-head-peridotite-*": "Adze Head Peridotite",
+	"blockdesc-adze-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",	
 	
 	"block-axe-head-granite-*": "Axe Head Granite",
 	"block-axe-head-andesite-*": "Axe Head Andesite",
@@ -2515,6 +2516,7 @@
 	"block-axe-head-obsidian-*": "Axe Head Obsidian",
 	"block-axe-head-flint-*": "Axe Head Flint",
 	"block-axe-head-peridotite-*": "Axe Head Peridotite",	
+	"blockdesc-axe-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	
 	"block-hammer-head-granite-*": "Hammer Head Granite",
 	"block-hammer-head-andesite-*": "Hammer Head Andesite",
@@ -2522,6 +2524,7 @@
 	"block-hammer-head-obsidian-*": "Hammer Head Obsidian",
 	"block-hammer-head-flint-*": "Hammer Head Flint",
 	"block-hammer-head-peridotite-*": "Hammer Head Peridotite",	
+	"blockdesc-hammer-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	
 	"block-hoe-head-granite-*": "Hoe Head Granite",
 	"block-hoe-head-andesite-*": "Hoe Head Andesite",
@@ -2529,15 +2532,18 @@
 	"block-hoe-head-obsidian-*": "Hoe Head Obsidian",
 	"block-hoe-head-flint-*": "Hoe Head Flint",
 	"block-hoe-head-peridotite-*": "Hoe Head Peridotite",	
+	"blockdesc-hoe-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	
 	"block-javelin-head-north": "Javelin Head",
+	"blockdesc-javelin-head-*": "Add bamboo stake to create a handle (Sneak + RMB).",
 	
 	"block-knife-head-granite-*": "Knife Head Granite",
 	"block-knife-head-andesite-*": "Knife Head Andesite",
 	"block-knife-head-basalt-*": "Knife Head Basalt",
 	"block-knife-head-obsidian-*": "Knife Head Obsidian",
 	"block-knife-head-flint-*": "Knife Head Flint",
-	"block-knife-head-peridotite-*": "Knife Head Peridotite",	
+	"block-knife-head-peridotite-*": "Knife Head Peridotite",
+	"blockdesc-knife-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",	
 	
 	"block-shovel-head-granite-*": "Shovel Head Granite",
 	"block-shovel-head-andesite-*": "Shovel Head Andesite",
@@ -2545,20 +2551,23 @@
 	"block-shovel-head-obsidian-*": "Shovel Head Obsidian",
 	"block-shovel-head-flint-*": "Shovel Head Flint",
 	"block-shovel-head-peridotite-*": "Shovel Head Peridotite",	
+	"blockdesc-shovel-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",	
 	
 	"block-sickle-head-granite-*": "Sickle Head Granite",
 	"block-sickle-head-andesite-*": "Sickle Head Andesite",
 	"block-sickle-head-basalt-*": "Sickle Head Basalt",
 	"block-sickle-head-obsidian-*": "Sickle Head Obsidian",
 	"block-sickle-head-flint-*": "Sickle Head Flint",
-	"block-sickle-head-peridotite-*": "Sickle Head Peridotite",	
+	"block-sickle-head-peridotite-*": "Sickle Head Peridotite",
+	"blockdesc-sickle-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	
 	"block-slaughteringaxe-head-granite-*": "Slaughteringaxe Head Granite",
 	"block-slaughteringaxe-head-andesite-*": "Slaughteringaxe Head Andesite",
 	"block-slaughteringaxe-head-basalt-*": "Slaughteringaxe Head Basalt",
 	"block-slaughteringaxe-head-obsidian-*": "Slaughteringaxe Head Obsidian",
 	"block-slaughteringaxe-head-flint-*": "Slaughteringaxe Head Flint",
-	"block-slaughteringaxe-head-peridotite-*": "Slaughteringaxe Head Peridotite",	
+	"block-slaughteringaxe-head-peridotite-*": "Slaughteringaxe Head Peridotite",
+	"blockdesc-slaughteringaxe-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
 	
 	
 	"block-spear-head-granite-*": "Spear Head Granite",
@@ -2575,9 +2584,6 @@
 	"blockdesc-bed-wood-head-*": "Wooden bed",
     "blockdesc-bed-hay-head-*": "Hay bed",
 	"blockdesc-bed-woodaged-head-*": "Aged wooden bed",
-	
-	"blockdesc-*-head-*": "Add a bone or debarked very thin branch to create a handle (Sneak + RMB)",
-	
 	
 	"blockdesc-*-headshaft-*": "Right click with Leatherstrips or Sisal Twine or Sinew For Finished Tool",
 	"blockdesc-*sword-head-*": "Right click with Debarked  Thin Branch For next step",
