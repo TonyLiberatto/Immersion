@@ -72,6 +72,6 @@
   lightAbsorption: 0,
   maxStackSize: 16,
   materialDensity: 700,
-  rainPermeable: true,
+  rainPermeable: false,
   materialDensity: 200
 }
