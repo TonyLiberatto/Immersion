@@ -30,7 +30,7 @@
 		},
 	creativeinventory: { "general": ["*-north"], "items": ["*-north"], "immersionitems": ["*-north"]  },
 	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
-	blockmaterial: "Wood",
+	blockmaterial: "Stone",
 	replaceable: 900,
 	resistance: 0.5,
 	lightAbsorption: 0,

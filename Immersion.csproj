@@ -411,6 +411,7 @@
     <None Include="bin\Immersion\assets\game\config\immersionproperties\customingots.json" />
     <None Include="bin\Immersion\assets\game\config\orthoshaderlist.json" />
     <None Include="bin\Immersion\assets\game\config\vesseldrops.json" />
+    <None Include="bin\Immersion\assets\game\crucible-color.json" />
     <None Include="bin\Immersion\assets\game\entities\air\butterfly.json" />
     <None Include="bin\Immersion\assets\game\entities\arrow-primitive.json" />
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-buildmaterials.json" />
@@ -532,7 +533,6 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\clayplanter.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\claypot.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\crock.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\crucible.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\flowerpot.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-large.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-medium.json" />

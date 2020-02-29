@@ -63,7 +63,7 @@
 		y2: 0.1,
 		z2: 1
 	},
-	blockmaterial: "Wood",
+	blockmaterial: "Stone",
 	replaceable: 900,
 	resistance: 1.5,
 	lightAbsorption: 0,
