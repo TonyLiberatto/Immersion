@@ -265,3 +265,5 @@ __pycache__/
 /bin/CarryCapacity
 /bin/TheNeolithicMod/Newtonsoft.Json.dll
 *.aseprite
+/bin/Immersion/assets/game/lang/en.json.org
+/bin/Immersion/assets/immersion/lang/en.json.org
