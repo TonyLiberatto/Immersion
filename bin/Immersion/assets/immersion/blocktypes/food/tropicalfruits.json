@@ -2,14 +2,9 @@
     "code": "tropicalfruits",
     "behaviorsByType": {
         "*-coconutshell-*": [
-            {
-                "name": "HorizontalOrientable"
-            },
-            {
-                "name": "Unstable"
-            },
-            {
-                "name": "Harvestable",
+            { "name": "HorizontalOrientable" },
+            { "name": "Unstable" },
+            { "name": "Harvestable",
                 "properties": {
                     "harvestTime": 0.6,
                     "harvestedStack": {
@@ -25,14 +20,9 @@
             }
         ],
         "*-coconut-*": [
-            {
-                "name": "HorizontalOrientable"
-            },
-            {
-                "name": "Unstable"
-            },
-            {
-                "name": "Harvestable",
+            { "name": "HorizontalOrientable" },
+            { "name": "Unstable" },
+            { "name": "Harvestable",
                 "properties": {
                     "harvestTime": 0.6,
                     "harvestedStack": {
@@ -47,79 +37,25 @@
                 }
             }
         ],
-        "*": [
-            {
-                "name": "HorizontalOrientable"
-            },
-            {
-                "name": "Unstable"
-            }
-        ]
+        "*": [ { "name": "HorizontalOrientable" }, { "name": "Unstable" }  ]
     },
-    "variantgroups": [
-        {
-            "code": "type",
-            "states": [
-                "bananna",
-                "coconut",
-                "coconutbroken",
-                "coconutshell",
-                "coconutslice"
-            ]
-        },
-        {
-            "loadFromProperties": "abstract/horizontalorientation"
-        }
-    ],
-    "creativeinventory": {
-        "general": [
-            "*-north"
-        ],
-        "flora": [
-            "*-north"
-        ]
-    },
+    "variantgroups": [ { "code": "type",  "states": [ "bananna", "coconut", "coconutbroken", "coconutshell", "coconutslice"  ] },
+        { "loadFromProperties": "abstract/horizontalorientation"  }  ],
+    "creativeinventory": {  "general": [ "*-north" ], "flora": [ "*-north" ] },
     "nutritionPropsByType": {
-        "*-coconutslice-*": {
-            "saturation": 160,
-            "foodcategory": "Fruit"
-        },
-        "*-bananna-*": {
-            "saturation": 160,
-            "foodcategory": "Fruit"
-        }
-    },
+		"*-coconutslice-*": { "saturation": 160, "foodcategory": "Fruit" },
+        "*-bananna-*": { "saturation": 160,  "foodcategory": "Fruit"  }   },
     "randomDrawOffset": false,
     "shapeByType": {
-        "*-north": {
-            "base": "block/flora/palm/fruits/{type}",
-            "rotateY": 180
-        },
-        "*-east": {
-            "base": "block/flora/palm/fruits/{type}",
-            "rotateY": 90
-        },
-        "*-south": {
-            "base": "block/flora/palm/fruits/{type}",
-            "rotateY": 0
-        },
-        "*-west": {
-            "base": "block/flora/palm/fruits/{type}",
-            "rotateY": 270
-        }
-    },
+        "*-north": { "base": "block/flora/palm/fruits/{type}", "rotateY": 180 },
+        "*-east": { "base": "block/flora/palm/fruits/{type}", "rotateY": 90 },
+        "*-south": { "base": "block/flora/palm/fruits/{type}", "rotateY": 0 },
+        "*-west": { "base": "block/flora/palm/fruits/{type}", "rotateY": 270 }},
     "textures": {
-        "fruits": {
-            "base": "block/flora/palm/fruits"
-        }
-    },
+        "fruits": { "base": "block/flora/palm/fruits" } },
     "blockmaterial": "Wood",
-    "sideopaque": {
-        "all": false
-    },
-    "sidesolid": {
-        "all": false
-    },
+    "sideopaque": { "all": false },
+    "sidesolid": {  "all": false },
     "replaceable": 500,
     "resistance": 4.5,
     "sounds": {
@@ -135,11 +71,7 @@
         }
     },
     "combustiblePropsByType": {
-        "*": {
-            "burnTemperature": 800,
-            "burnDuration": 78
-        }
-    },
+        "*": { "burnTemperature": 800, "burnDuration": 78 } },
     "maxStackSize": 64,
     "materialDensity": 200,
     "rainPermeable": true,

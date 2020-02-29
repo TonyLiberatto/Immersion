@@ -8,7 +8,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-copper-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-copper-gold",
@@ -28,7 +29,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-brass-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-brass-gold",
@@ -48,7 +50,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-blackbronze-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-blackbronze-gold",
@@ -68,7 +71,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-bismuth-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-bismuth-gold",
@@ -88,7 +92,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-tinbronze-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-tinbronze-gold",
@@ -108,7 +113,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-bismuthbronze-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-bismuthbronze-gold",
@@ -128,7 +134,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-molybdochalkos-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-molybdochalkos-gold",
@@ -148,7 +155,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-silver-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-silver-gold",
@@ -168,7 +176,8 @@
     },
     "Tool": {
         "Code": "game:glasslanternframe-gold-down",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 5
     },
     "Makes": [{
         "Code": "game:glasslantern-gold-gold",

@@ -1,7 +1,7 @@
 {
 	code: "sisalrug",
 	class: "BlockSign",
-	enabled: true,
+	enabled: true,	
 	behaviors: [{name: "HorizontalOrientable"}],
 	variantgroups: [
 		{ code: "size" , states: ["small", "medium", "large"]},

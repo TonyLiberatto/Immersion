@@ -17,7 +17,7 @@
 		"*-south": { base: "game:block/wood/chest/normal", rotateY: 180 },
 		"*-west": { base: "game:block/wood/chest/normal", rotateY: 90 },		
 	},
-	creativeinventory: { "general": ["*"], "decorative": [""], "immersiondeco": [""] },
+	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

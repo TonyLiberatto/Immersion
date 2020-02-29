@@ -1,6 +1,25 @@
 {
 	code: "dryingmat",	
-	enabled: true,	
+	attributes: {
+		"handbook": {
+            "include": true,
+			groupBy: ["dryingmat-*"],
+            "extraSectionsByType": {
+				"*-small-*":[
+					{   "title": "Created by",
+						"text": "Place a <a href=\"handbook://block-sisalrug-small-ground-north\">Small Sisal Rug</a> horizontally. Add 16 fresh fruit (Sneak + RMB) to create the drying mat.  Produces 8 dry fruit."
+					}],
+				"*-medium-*":[
+					{   "title": "Created by",
+						"text": "Place a <a href=\"handbook://block-sisalrug-medium-ground-north\">Medium Sisal Rug</a> horizontally. Add 32 fresh fruit (Sneak + RMB) to create the drying mat.  Produces 16 dry fruit."
+					}],
+				"*-large-*":[
+					{   "title": "Created by",
+						"text": "Place a <a href=\"handbook://block-sisalrug-large-ground-north\">Large Sisal Rug</a> horizontally. Add 64 fresh fruit (Sneak + RMB) to create the drying mat.  Produces 32 dry fruit."
+					}],		
+			}
+		},
+	},	
 	behaviorsByType: {
 		"*-dry-small-*": [ {name: "Harvestable", properties: { 
 			harvestTime: 0.6, 

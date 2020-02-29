@@ -67,27 +67,7 @@
 			{ code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
 			{ code: "health", currenthealth: 10, maxhealth: 10, },
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
-			{ code: "breathe" },
-			{ 
-				code: "multiply",
-				quantityPerDay: 0,
-				spawnEntityCodeByType: {
-					"*-ashgrey": "wolf-pup-ashgrey",
-					"*-black": "wolf-pup-black",
-					"*-brown": "wolf-pup-brown",
-					"*-darkgrey": "wolf-pup-darkgrey",
-					"*-gold": "wolf-pup-gold",
-					"*-grey": "wolf-pup-grey",
-					"*-silver": "wolf-pup-silver",
-					"*-smokegrey": "wolf-pup-smokegrey",
-					"*-white": "wolf-pup-white"
-				},
-				growthCapQuantity: 10,
-				growthCapRange: 15,
-				growthCapEntityCodes: ["wolf-pup-*", "wolf-female-*", "wolf-male-*"],
-				requiresNearbyEntityCode: "wolf-male-*",
-				requiresNearbyEntityRange: 10
-			},
+			{ code: "breathe" },			
 			{ 
 				code: "emotionstates",
 				states: [

@@ -8,7 +8,8 @@
     },
     "Tool": {
         "Code": "game:lantern-copper-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1		
     },
     "Makes": [{
         "Code": "game:sheet-lantern-copper-plain",
@@ -28,7 +29,8 @@
     },
     "Tool": {
         "Code": "game:lantern-brass-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-brass-plain-up",
@@ -48,7 +50,8 @@
     },
     "Tool": {
         "Code": "game:lantern-blackbronze-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-blackbronze-plain",
@@ -68,7 +71,8 @@
     },
     "Tool": {
         "Code": "game:lantern-bismuth-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-bismuth-plain",
@@ -88,7 +92,8 @@
     },
     "Tool": {
         "Code": "game:lantern-tinbronze-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-tinbronze-plain",
@@ -108,7 +113,8 @@
     },
     "Tool": {
         "Code": "game:lantern-bismuthbronze-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-bismuthbronze-plain",
@@ -128,7 +134,8 @@
     },
     "Tool": {
         "Code": "game:lantern-molybdochalkos-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-molybdochalkos-plain",
@@ -148,7 +155,8 @@
     },
     "Tool": {
         "Code": "game:lantern-silver-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-silver-plain",
@@ -168,7 +176,8 @@
     },
     "Tool": {
         "Code": "game:lantern-gold-plain-up",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
         "Code": "game:sheet-lantern-gold-plain",

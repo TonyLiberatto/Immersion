@@ -6,24 +6,24 @@
 	},
 	width: 3,
 	height: 3,
-	output: { type: "block", code: "sisalrug-small-ground-east", quantity: 1  }
+	output: { type: "block", code: "sisalrug-small-ground-north", quantity: 1  }
 },
 {
 	ingredientPattern: "R,R",
 	ingredients: {
-		"R": { type: "block", code: "sisalrug-small-ground-east"  }
+		"R": { type: "block", code: "sisalrug-small-ground-north"  }
 	},
 	width: 1,
 	height: 2,
-	output: { type: "block", code: "sisalrug-medium-ground-east", quantity: 1  }
+	output: { type: "block", code: "sisalrug-medium-ground-north", quantity: 1  }
 },
 {
 	ingredientPattern: "RR,RR",
 	ingredients: {
-		"R": { type: "block", code: "sisalrug-small-ground-east"  }
+		"R": { type: "block", code: "sisalrug-small-ground-north"  }
 	},
 	width: 2,
 	height: 2,
-	output: { type: "block", code: "sisalrug-large-ground-east", quantity: 1  }
+	output: { type: "block", code: "sisalrug-large-ground-north", quantity: 1  }
 },
 ]
