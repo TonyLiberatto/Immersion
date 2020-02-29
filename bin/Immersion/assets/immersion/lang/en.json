@@ -17,7 +17,7 @@
 
   "item-seawaterportion": "Sea Water",
   "incontainer-item-seawaterportion": "Sea Water",
-  "incontainer-item-salt": "Salt"
+  "incontainer-item-salt": "Salt",
   "block-dryingtray-birch": "Birch Drying Tray",
   "block-dryingtray-oak": "Oak Drying Tray",
   "block-dryingtray-maple": "Maple Drying Tray",
@@ -2395,7 +2395,7 @@
   "blockdesc-softroad-gravel-slate-phyllite-*": "Phyllite rock on top of Slate gravel",
   "blockdesc-softroad-gravel-slate-gravelstone-*": "gravelstone rock on top of Slate gravel",
   "blockdesc-softroad-gravel-slate-shale-*": "Shale rock on top of Slate gravel",
-  "blockdesc-softroad-gravel-slate-slate-*": "Slate rock on top of Slate gravel",
+  "blockdesc-softroad-gravel-slate-slate-*": "Slate rock on top of Slate gravel"
 
 
 }
