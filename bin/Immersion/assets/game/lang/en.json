@@ -1,4 +1,5 @@
 {
+
 	"tabname-immersionblocks": "I Blocks",
 	"tabname-immersiondeco": "I Decor",
 	"tabname-immersionfauna": "I Fauna",
@@ -21,16 +22,15 @@
 	"craftinginfo-immersivecrafting-text": "Crafting items, blocks and containers (objects) using this mechanic requires players to assemble the object through the step-wise addition of components on a workspace block. Wherever possible, crafting performed within the player's grid has been changed to the immersive mechanic, and the Vanilla grid recipes do not function. General Crafting Directions:  Placing the first component on a solid block creates a workspace (RMB). Workspaces can be created on any block where a player could knap stones or form clay in vanilla. All subsequent components are added using (Sneak + RMB). Each successful component addition is accompanied by a visual change in the object. When a crafting recipe specifies 'add 4 components', one addition step adds all 4 items from the player's inventory. The player does not need to add each component individually (Sneak + RMB X 4). When the object is complete, breaking the object completes the crafting process. No additional components can be added once the block is broken. Replacing the block or container activates the object for use. Substituting a component that is not specified in the recipe (debarked branch for a barked branch) will result in the creation of a different item than the player intends to build. Changing the order of component addition will also change the item creation. When building an item, if attempting to add a component that is not permitted in the recipe, nothing will happen when using (Sneak + RMB). Check the crafting directions again and make sure the chosen component is allowable. Good Luck and happy crafting!",
 
 	"blockdesc-metalsheet-*": "Use to assemble Glass Lanterns",
-	"block-machine": "Machine",
-	"block-wedger": "Wedger",
 	"block-locust-cage": "Locust (Cage)",
 	"block-angledgears-s": "Angledgears (S)",
 	"item-sail": "Sail",
 	"item-ingot-rawironbloom": "Ingot (Raw Iron bloom)",
 	"item-ingot-refinedironbloom": "Ingot (Refined Iron Bloom)",
 
-	"block-giantreed-arundo-free-normal": "Giant Reed Arundo",
+	"block-giantreed-arundo-free-normal": "Giant Reed-Arundo Donax",
 	"blockdesc-giantreed-arundo-free-normal": "Harvest using any knife to collect 10 reed bundles.",
+	
 	"item-giantreedsroot": "Giant Reeds Root",
 	"itemdesc-giantreedsroot": "Plant the root (RMB) to grow Arundo (Giant Reeds)",
 	"item-cookedgiantreedsroot": "Cooked Giant Reeds Root",
@@ -40,20 +40,23 @@
 	"item-seeds-sisal": "Sisal Seeds",
 	"item-sisal-leaves": "Sisal Leaves",
 	"itemdesc-sisal-leaves": "Harvested from sisal plants using any knife. Crush with any hammer in the grid to obtain sisal fiber. Each leaf provides 16 fiber. These leaves are used to craft all sisal cordage.",
-
-	"block-crop-sisal-1": "Crop Sisal (1)",
-	"block-crop-sisal-2": "Crop Sisal (2)",
-	"block-crop-sisal-3": "Crop Sisal (3)",
-	"block-crop-sisal-4": "Crop Sisal (4)",
-	"block-crop-sisal-5": "Crop Sisal (5)",
-	"block-crop-sisal-6": "Crop Sisal (6)",
-
+	
+	"block-crop-sisal-5": "Mature Sisal",
+	"blockdesc-crop-sisal-5": "Almost Mature Sisal. Use a knife to harvest leaves, this plant will not provide seeds.",
+	"block-crop-sisal-6": "Mature Flowering Sisal",
+	"blockdesc-crop-sisal-6": "Flowering Sisal. Ready to Harvest. Use a knife to harvest many leaves and a few seeds.",
+	"block-crop-sisal-*": "Growing Sisal",
+	"blockdesc-crop-sisal-*": "Immature. Use any knife to harvest one leaf.",
+	
 	"block-pumpkin-fruit-*": "Growing pumpkin",
 	"blockdesc-pumpkin-fruit-*": "Not ready to harvest.",
 	"block-pumpkin-fruit-4": "Mature pumpkin",
 	"blockdesc-pumpkin-fruit-4": "Use a knife to harvest. Breaking will produce 4 slices of pumpkin and 2 seeds.",
 
-	"block-trough-immersion-genericwood-small-ns": "small trough",
+	"block-trough-genericwood-large-head-north": "Large trough",
+	"blockdesc-trough-genericwood-large-head-north": "Add grain (2 per portion) or dry grass (8 per portion) to feed large animals",
+	"block-trough-genericwood-small-ns": "Small trough",
+	"blockdesc-trough-genericwood-small-ns": "Add grain (1 per portion) to feed small animals",
 
 	"block-sapling-bamboogreen": "Sapling (Bamboogreen)",
 	"block-sapling-bamboobrown": "Sapling (Bamboobrown)",
@@ -110,15 +113,16 @@
 	"block-mortarandpestle-pine-east": "Mortarandpestle Pine",
 	"blockdesc-mortarandpestle-*": "A wooden quern, used to grind grains, dried foods, and other resources. Access the block inventory using the mouse on the interior of the block. This block requires a space above the mortar to use.",
 
+	"block-seawater-still-7": "Still Sea Water",
+	"item-seawaterportion": "Sea Water portion",
 	"incontainer-item-seawaterportion": "Sea Water",
-	"item-seawaterportion": "Sea Water Portion",
 	"incontainer-item-salt": "Salt",
-	"block-dryingtray-acacia": "Acacia Drying Tray",
 	"block-dryingtray-birch": "Birch Drying Tray",
-	"block-dryingtray-kapok": "Kapok Drying Tray",
-	"block-dryingtray-maple": "Maple Drying Tray",
 	"block-dryingtray-oak": "Oak Drying Tray",
+	"block-dryingtray-maple": "Maple Drying Tray",
 	"block-dryingtray-pine": "Pine Drying Tray",
+	"block-dryingtray-acacia": "Acacia Drying Tray",
+	"block-dryingtray-kapok": "Kapok Drying Tray",
 	"block-dryingtray-aged": "Aged Drying Tray",
 	"blockdesc-dryingtray-*": "Place in the sun. Use a bucket to add 16 portions of seawater and let evaporate 12 hours to obtain salt.",
 
@@ -300,10 +304,10 @@
 	"block-cruciblefire-raw": "Fire Crucible (Raw)",
 	"block-cruciblered-raw": "Red Crucible (Raw)",
 
-	"block-crucibleblue-burned": "Blue Crucible ",
-	"block-cruciblebrown-burned": "Brown Crucible ",
-	"block-cruciblefire-burned": "Fire Crucible ",
-	"block-cruciblered-burned": "Red Crucible ",
+	"block-crucibleblue-burned": "Blue Crucible",
+	"block-cruciblebrown-burned": "Brown Crucible",
+	"block-cruciblefire-burned": "Fire Crucible",
+	"block-cruciblered-burned": "Red Crucible",
 
 	"block-crucibleblue-smelted": "Blue Crucible (Contains molten metal)",
 	"block-cruciblebrown-smelted": "Brown Crucible (Contains molten metal)",
@@ -755,11 +759,11 @@
 	"blockcraftdesc-claycandlemold-*-raw": "Use to cast a metal Candle Mold.",
 	"blockcraftdesc-bowlstamp-*-raw": "Use to cast a metal Bowl Stamp.",
 	"blockcraftdesc-bowl-*-raw": "Bowls can be combined with fat to create oil lamps or hold foods",
-	"blockcraftdesc-clayplanter-*-raw": "Large container for flowers",
-	"blockcraftdesc-flowerpot-*-raw": "Small container for flowers",
-	"blockcraftdesc-crucible-*-raw": "Used to smelt ores in the firepit",
+	"blockcraftdesc-clayplanter*-raw": "Large container for flowers",
+	"blockcraftdesc-flowerpot*-raw": "Small container for flowers",
+	"blockcraftdesc-crucible*-raw": "Used to smelt ores in the firepit",
 	"blockcraftdesc-ingotmold-*-raw": "Used to cast metal ingots",
-	"blockcraftdesc-claypot-*-raw": "A clay pot used to cook meals",
+	"blockcraftdesc-pot*-raw": "A clay pot used to cook meals",
 	"blockcraftdesc-wateringcan-*-raw": "Used to water dry farmland located away from water sources",
 	"blockcraftdesc-food-bowl-small-*-raw": "Use to mix food ingredients.",
 	"blockcraftdesc-food-bowl-medium-*-raw": "Use to mix food ingredients.",
@@ -1005,6 +1009,36 @@
 	"block-glasslantern-silver-silver": "Silver Glass Lantern (Silver-Lined)",
 	"block-glasslantern-gold-silver": "Gold Glass Lantern (Silver-Lined)",
 	"blockdesc-glasslantern-*": "A stationary light, can be placed but not carried in the left hand.",
+	
+	"block-well-andesite": "Andesite Well",
+	"block-well-chalk": "Chalk Well",
+	"block-well-chert": "Chert Well",
+	"block-well-conglomerate": "Conglomerate Well",
+	"block-well-limestone": "Limestone Well",
+	"block-well-claystone": "Claystone Well",
+	"block-well-granite": "Granite Well",
+	"block-well-sandstone": "Sandstone Well",
+	"block-well-shale": "Shale Well",
+	"block-well-basalt": "Basalt Well",
+	"block-well-peridotite": "Peridotite Well",
+	"block-well-phyllite": "Phyllite Well",
+	"block-well-slate": "Slate Well",
+	"blockdesc-well-*": "Place the well block and use a pickaxe (RMB) with cobble blocks in player inventory to excavate to freshwater acquifer.",
+	
+	"block-wellpipe-andesite": "Andesite Well pipe",
+	"block-wellpipe-chalk": "Chalk Well pipe",
+	"block-wellpipe-chert": "Chert Well pipe",
+	"block-wellpipe-conglomerate": "Conglomerate Well pipe",
+	"block-wellpipe-limestone": "Limestone Well pipe",
+	"block-wellpipe-claystone": "Claystone Well pipe",
+	"block-wellpipe-granite": "Granite Well pipe",
+	"block-wellpipe-sandstone": "Sandstone Well pipe",
+	"block-wellpipe-shale": "Shale Well pipe",
+	"block-wellpipe-basalt": "Basalt Well pipe",
+	"block-wellpipe-peridotite": "Peridotite Well pipe",
+	"block-wellpipe-phyllite": "Phyllite Well pipe",
+	"block-wellpipe-slate": "Slate Well pipe",
+	"blockdesc-wellpipe-*": "Built using cobblestone from in the player's inventory when excavating under a well.",
 
 	"block-stair-side-cobble-andesite-up-north": "Cobblestone Stairs (Andesite)",
 	"block-stair-side-cobble-chalk-up-north": "Cobblestone Stairs (Chalk)",
@@ -1070,7 +1104,7 @@
 	"item-sword-flakes-flint-*": "Flint Sword Flakes",
 	"item-sword-flakes-obsidian-*": "Obsidian Sword Flakes",
 
-	"itemdesc-sword-flakes-*-*": "Flakes are used to make the primitive sword",
+	"itemcraftdesc-sword-flakes-*-*": "Flakes are used to make the primitive sword",
 	"itemcraftdesc-adze-head-*-*": "Used to make a stone-age chisel",
 	"itemcraftdesc-hammer-head-*-*": "Used to make a stone-age hammer",
 	"itemcraftdesc-sickle-head-*-*": "Used to make the stone-age scythe",
@@ -4618,12 +4652,13 @@
 	"block-pestle-pine": "Pine Pestle",
 	"blockdesc-pestle-*": "Not Yet Implemented",
 
-
 	"item-milkportion": "Milk Portion",
 	"inbucket-item-milkportion": "Milk",
 	"item-curdsportion": "Curds Portion",
+	"itemdesc-curds*": "Not Yet Implemented",
 	"inbucket-item-curdsportion": "Curds",
 	"item-wheyportion": "Whey Portion",
+	"itemdesc-whey*": "Not Yet Implemented",
 
 	"block-cheesecloth-white-none": "Cheesecloth White (None)",
 	"block-cheesecloth-brown-none": "Cheesecloth Brown (None)",
@@ -4637,7 +4672,7 @@
 	"block-cheesecloth-white-cheese": "Cheesecloth White (Cheese)",
 	"block-cheesecloth-brown-cheese": "Cheesecloth Brown (Cheese)",
 	"block-cheesecloth-black-cheese": "Cheesecloth Black (Cheese)",
-
+	"block-cheesecloth-*-*": "Not Yet Implemented",
 
 	"item-arrow-fire*": "Fire Arrow crafted from any any arrow, fat and a torch",
 	"itemdesc-arrow-fire*": "Adds +2 damage. Future recipe should include adding linen or other fiber. Could include pitch if liquids like that are added.",
@@ -4645,5 +4680,4 @@
 	"item-arrow-poison*": "Poisoned Arrow crafted from any arrow and mushroom",
 	"itemdesc-arrow-poison*": "Adds +2 damage. Future recipe should include cooking with a herb to get poison.",
 
-	"totemsblock-peltboartrophy-east": "Peltboartrophy"
 }
