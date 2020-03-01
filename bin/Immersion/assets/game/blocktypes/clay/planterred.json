@@ -136,6 +136,10 @@
                 "base": "block/clay/red-raw"
             }
         },
+		"*-empty": {            
+			"sides": { "base": "block/clay/red-burned" },
+			"ceramic": { "base": "block/clay/red-burned" }
+        },
         "*": {
             "soil": {
                 "base": "block/clay/planter/soil"

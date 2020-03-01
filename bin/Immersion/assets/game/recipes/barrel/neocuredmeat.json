@@ -3,7 +3,7 @@
 	sealHours: 480,
 	ingredients: [
 		{ type: "item", code: "salt",  quantity: 2 },
-		{ type: "item", code: "immersion:*-raw", name: "meat", quantity: 1, allowedVariants: ["carnivoremeat", "chicken", "hare", "mutton", "porkchops"] }
+		{ type: "item", code: "immersion:*-raw", name: "meat", quantity: 1, allowedVariants: [ "chicken", "hare", "mutton", "porkchops"] }
 	],
 	output: { type: "item", code: "immersion:{meat}-cured", stackSize: 1 }
 }

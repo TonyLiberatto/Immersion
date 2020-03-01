@@ -119,24 +119,16 @@
     "resistance": 1.5,
     "lightAbsorption": 0,
     "texturesByType": {
-        "*-raw": {
-            "all": {
-                "base": "block/clay/fire-raw"
-            }
-        },
+        "*-raw": { "all": { "base": "block/clay/fire-raw" } },
+		"*-empty": { 
+			"sides": { "base": "block/clay/flowerpot/fire-sides" },
+			"topbottom": { "base": "block/clay/flowerpot/fire-topbottom" },
+		},
         "*": {
-            "-1": {
-                "base": "block/clay/flowerpot/fire-topbottom"
-            },
-            "sides": {
-                "base": "block/clay/flowerpot/fire-sides"
-			},
-			"topbottom": {
-                "base": "block/clay/flowerpot/fire-topbottom"
-            },
-            "flower": {
-                "base": "block/plant/potted/{contents}"
-            }
+            "-1": { "base": "block/clay/flowerpot/fire-topbottom" },
+            "sides": { "base": "block/clay/flowerpot/fire-sides" },
+			"topbottom": { "base": "block/clay/flowerpot/fire-topbottom" },
+            "flower": { "base": "block/plant/potted/{contents}" }
         }
     },
     "sidesolid": {

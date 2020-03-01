@@ -119,24 +119,16 @@
     "resistance": 1.5,
     "lightAbsorption": 0,
     "texturesByType": {
-        "*-raw": {
-            "all": {
-                "base": "block/clay/brown-raw"
-            }
-        },
+        "*-raw": { "all": { "base": "block/clay/brown-raw" } },
+		"*-empty": { 
+			"sides": { "base": "block/clay/flowerpot/brown-sides" },
+			"topbottom": { "base": "block/clay/flowerpot/brown-topbottom" },
+		},
         "*": {
-            "-1": {
-                "base": "block/clay/flowerpot/brown-topbottom"
-            },
-            "sides": {
-                "base": "block/clay/flowerpot/brown-sides"
-			},
-			"topbottom": {
-                "base": "block/clay/flowerpot/brown-topbottom"
-            },
-            "flower": {
-                "base": "block/plant/potted/{contents}"
-            }
+            "-1": { "base": "block/clay/flowerpot/brown-topbottom" },
+            "sides": { "base": "block/clay/flowerpot/brown-sides" },
+			"topbottom": { "base": "block/clay/flowerpot/brown-topbottom" },
+            "flower": { "base": "block/plant/potted/{contents}" }
         }
     },
     "sidesolid": {

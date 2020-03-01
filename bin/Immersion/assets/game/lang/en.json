@@ -112,6 +112,7 @@
 
 	"incontainer-item-seawaterportion": "Sea Water",
 	"item-seawaterportion": "Sea Water Portion",
+	"incontainer-item-salt": "Salt",
 	"block-dryingtray-acacia": "Acacia Drying Tray",
 	"block-dryingtray-birch": "Birch Drying Tray",
 	"block-dryingtray-kapok": "Kapok Drying Tray",
@@ -119,7 +120,7 @@
 	"block-dryingtray-oak": "Oak Drying Tray",
 	"block-dryingtray-pine": "Pine Drying Tray",
 	"block-dryingtray-aged": "Aged Drying Tray",
-	"blockdesc-dryingtray-*": "Use a bucket to add portions of seawater, water will evaporate and produce Salt.",
+	"blockdesc-dryingtray-*": "Place in the sun. Use a bucket to add 16 portions of seawater and let evaporate 12 hours to obtain salt.",
 
 	"block-choppingblock-birch-*": "Birch Chopping Block",
 	"block-choppingblock-oak-*": "Oak Chopping Block",

@@ -90,54 +90,28 @@
         }
     ],
     "shapeByType": {
-        "*-raw": {
-            "base": "block/clay/flowerpot/empty"
-        },
-        "*-empty": {
-            "base": "block/clay/flowerpot/empty"
-        },
-        "flowerpotred-*": {
-            "base": "block/clay/flowerpot/full"
-        }
+        "*-raw": { "base": "block/clay/flowerpot/empty"  },
+        "*-empty": { "base": "block/clay/flowerpot/empty" },
+        "flowerpotred-*": { "base": "block/clay/flowerpot/full"  }
     },
-    "creativeinventory": {
-        "general": [
-            "*-raw",
-            "*-empty"
-        ],
-        "decorative": [
-            "*-raw",
-            "*-empty"
-        ],
-        "immersiondeco": [
-            "*-raw",
-            "*-empty"
-        ]
-    },
+    "creativeinventory": { "general": [ "*-raw", "*-empty" ], "decorative": [ "*-raw",  "*-empty"  ], "immersiondeco": [ "*-raw", "*-empty"  ]  },
     "blockmaterial": "Ceramic",
     "replaceable": 900,
     "resistance": 1.5,
     "lightAbsorption": 0,
     "texturesByType": {
-        "*-raw": {
-            "all": {
-                "base": "block/clay/red-raw"
-            }
-        },
+        "*-raw": { "all": { "base": "block/clay/red-raw" } },
+		"*-empty": { 
+			"sides": { "base": "block/clay/flowerpot/red-sides"	},
+			"topbottom": { "base": "block/clay/flowerpot/red-topbottom" },
+		},
         "*": {
-            "-1": {
-                "base": "block/clay/flowerpot/red-topbottom"
-            },
-            "sides": {
-                "base": "block/clay/flowerpot/red-sides"
+            "-1": { "base": "block/clay/flowerpot/red-topbottom"  },
+            "sides": { "base": "block/clay/flowerpot/red-sides"	},
+			"topbottom": { "base": "block/clay/flowerpot/red-topbottom" },
+            "flower": { "base": "block/plant/potted/{contents}" }
+			}    
 			},
-			"topbottom": {
-                "base": "block/clay/flowerpot/red-topbottom"
-            },
-            "flower": {
-                "base": "block/plant/potted/{contents}"
-            }
-        }    },
     "sidesolid": {
         "all": false
     },

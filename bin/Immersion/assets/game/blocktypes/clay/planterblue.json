@@ -122,24 +122,16 @@
     "resistance": 1.5,
     "lightAbsorption": 0,
     "texturesByType": {
-        "*-raw": {
-            "all": {
-                "base": "block/clay/blue-raw"
-            }
+        "*-raw": { "all": {  "base": "block/clay/blue-raw"}},
+		"*-empty": {            
+			"sides": { "base": "block/clay/blue-burned"	},
+			"ceramic": { "base": "block/clay/blue-burned"  }
         },
         "*": {
-            "soil": {
-                "base": "block/clay/planter/soil"
-			},
-			"flower": {
-                "base": "block/plant/potted/{contents}"
-			},
-			"sides": {
-                "base": "block/clay/blue-burned"
-			},
-			"ceramic": {
-                "base": "block/clay/blue-burned"
-            }
+            "soil": { "base": "block/clay/planter/soil" },
+			"flower": { "base": "block/plant/potted/{contents}" },
+			"sides": { "base": "block/clay/blue-burned"	},
+			"ceramic": { "base": "block/clay/blue-burned"  }
         }
     },
     "sidesolid": {
