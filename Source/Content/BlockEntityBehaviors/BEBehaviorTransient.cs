@@ -27,7 +27,6 @@ namespace Immersion
         string toCode;
         public Block OwnBlock { get => Blockentity.Block; }
         public TransitionConditions conditions;
-        long id;
 
         public BEBehaviorTransient(BlockEntity blockentity) : base(blockentity)
         {
@@ -49,7 +48,7 @@ namespace Immersion
             {
                 if (api.Side.IsServer())
                 {
-                    id = Blockentity.RegisterGameTickListener(CheckTransition, 2000);
+                    Blockentity.RegisterGameTickListener(CheckTransition, 2000);
                 }
             }
             else api.World.BlockAccessor.RemoveBlockEntity(Pos);
@@ -59,7 +58,7 @@ namespace Immersion
         {
             if (transitionAtTotalDays > Api.World.Calendar.TotalDays) return;
             if (Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight) < (conditions?.RequiredSunlight ?? -1)) return;
-            
+
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             Block tblock;
 
@@ -95,18 +94,6 @@ namespace Immersion
             base.ToTreeAttributes(tree);
 
             tree.SetDouble("transitionAtTotalDays", transitionAtTotalDays);
-        }
-
-        public override void OnBlockUnloaded()
-        {
-            Blockentity?.UnregisterGameTickListener(id);
-            base.OnBlockUnloaded();
-        }
-
-        public override void OnBlockRemoved()
-        {
-            Blockentity?.UnregisterGameTickListener(id);
-            base.OnBlockRemoved();
         }
     }
 }

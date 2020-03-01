@@ -246,7 +246,7 @@ namespace Immersion
                     if (recipe.Remove) (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(0, Pos);
                     Block resolvedBlock = make.ResolvedItemstack.Block;
                     (byPlayer as IServerPlayer)?.Entity.World.BlockAccessor.SetBlock(resolvedBlock.BlockId, Pos);
-                    resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, Pos);
+                    //resolvedBlock.OnBlockPlaced(byPlayer.Entity.World, Pos);
                     TakeOrDamage(recipe, slot, byPlayer);
                 }
             }
