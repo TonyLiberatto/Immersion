@@ -17,7 +17,7 @@ using Vintagestory.API.MathTools;
 
 namespace Immersion
 {
-    public partial class Immersion : ModSystem
+    public partial class ImmersionSystem : ModSystem
     {
         ICoreAPI Api;
         ICoreClientAPI capi;

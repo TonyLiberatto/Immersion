@@ -7,7 +7,7 @@ using Vintagestory.GameContent;
 
 namespace Immersion
 {
-    public partial class Immersion
+    public partial class ImmersionSystem
     {
         public void RegisterClasses()
         {
