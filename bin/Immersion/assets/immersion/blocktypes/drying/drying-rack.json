@@ -27,7 +27,7 @@
                 "convertFrom": "drying-rack-*-salt-meat-*",
                 "convertTo": "drying-rack-*-dry-meat-*",
                 "inGameHours": 72,
-				"TransitionConditions": { "RequiredSunlight": 32, }
+				"transitionConditions": { "RequiredSunlight": 32, }
             }
         },
         {

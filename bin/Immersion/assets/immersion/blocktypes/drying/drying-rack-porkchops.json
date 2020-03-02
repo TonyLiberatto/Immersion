@@ -16,7 +16,7 @@
                 "convertFrom": "drying-rack-*-porkchops-salted-*",
                 "convertTo": "drying-rack-*-porkchops-dry-*",
                 "inGameHours": 72,
-				"TransitionConditions": { "RequiredSunlight": 32, }
+				"transitionConditions": { "RequiredSunlight": 32, }
             }
         },
         {
