@@ -21,7 +21,8 @@ namespace Immersion
 
     public class BEBehaviorTransient : BlockEntityBehavior
     {
-        double transitionAtTotalDays = -1;
+        double transitionAtTotalHours = -1;
+        double elapsedTime = 0;
         BlockPos Pos { get => Blockentity.Pos; }
         string fromCode;
         string toCode;
@@ -35,10 +36,10 @@ namespace Immersion
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {
             base.Initialize(api, properties);
-            if (transitionAtTotalDays <= 0)
+            if (transitionAtTotalHours <= 0)
             {
                 float hours = properties["inGameHours"].AsFloat(24);
-                transitionAtTotalDays = api.World.Calendar.TotalDays + hours / 24;
+                transitionAtTotalHours = api.World.Calendar.TotalHours + hours;
             }
             fromCode = properties["convertFrom"].AsString()?.WithDomain(OwnBlock.Code.Domain);
             toCode = properties["convertTo"].AsString()?.WithDomain(OwnBlock.Code.Domain);
@@ -56,8 +57,10 @@ namespace Immersion
 
         public void CheckTransition(float dt)
         {
-            if (transitionAtTotalDays > Api.World.Calendar.TotalDays) return;
-            if (Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight) < (conditions?.RequiredSunlight ?? -1)) return;
+            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight);
+            if (light < (conditions?.RequiredSunlight ?? -1)) return;
+            elapsedTime += dt;
+            if (Api.World.Calendar.TotalHours + elapsedTime < transitionAtTotalHours) return;
 
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             Block tblock;
@@ -86,14 +89,16 @@ namespace Immersion
         {
             base.FromTreeAtributes(tree, worldForResolving);
 
-            transitionAtTotalDays = tree.GetDouble("transitionAtTotalDays");
+            transitionAtTotalHours = tree.GetDouble("transitionAtTotalDays");
+            elapsedTime = tree.GetDouble("elapsedTime");
         }
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);
 
-            tree.SetDouble("transitionAtTotalDays", transitionAtTotalDays);
+            tree.SetDouble("transitionAtTotalDays", transitionAtTotalHours);
+            tree.SetDouble("elapsedTime", elapsedTime);
         }
     }
 }
