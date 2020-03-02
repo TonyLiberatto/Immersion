@@ -90,7 +90,7 @@
 					},
 					{
 						code: "meleeattack",
-						entityCodes: ["player", "chicken-rooster", "chicken-hen", "chicken-baby"],
+						entityCodes: ["player", "chicken-*", "hare-*"],
 						priority: 2,
 						damage: 8,
 						slot: 1,
@@ -129,7 +129,7 @@
                     },					
 					{
 						code: "seekentity",
-						entityCodes: ["player", "chicken-rooster", "chicken-hen", "chicken-baby"],
+						entityCodes: ["player", "chicken-*", "hare-*"],
 						priority: 1.5,
 						movespeed: 0.021,
 						seekingRange: 20,

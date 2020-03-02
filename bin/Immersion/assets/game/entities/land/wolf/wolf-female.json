@@ -140,7 +140,7 @@
                     },					
 					{
 						code: "seekentity",
-						entityCodes: ["player", "chicken-rooster", "chicken-hen", "chicken-baby"],
+						entityCodes: ["player", "chicken-*", "hare-*"],
 						priority: 1.5,
 						movespeed: 0.021,
 						seekingRange: 20,
