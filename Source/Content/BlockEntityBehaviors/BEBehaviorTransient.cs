@@ -38,8 +38,7 @@ namespace Immersion
             base.Initialize(api, properties);
             if (transitionAtTotalHours <= 0)
             {
-                float hours = properties["inGameHours"].AsFloat(24);
-                transitionAtTotalHours = api.World.Calendar.TotalHours + hours;
+                transitionAtTotalHours = properties["inGameHours"].AsFloat(24);
             }
             fromCode = properties["convertFrom"].AsString()?.WithDomain(OwnBlock.Code.Domain);
             toCode = properties["convertTo"].AsString()?.WithDomain(OwnBlock.Code.Domain);
@@ -60,7 +59,7 @@ namespace Immersion
             int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight);
             if (light < (conditions?.RequiredSunlight ?? -1)) return;
             elapsedTime += dt;
-            if (Api.World.Calendar.TotalHours + elapsedTime < transitionAtTotalHours) return;
+            if (elapsedTime < transitionAtTotalHours) return;
 
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             Block tblock;
@@ -89,7 +88,7 @@ namespace Immersion
         {
             base.FromTreeAtributes(tree, worldForResolving);
 
-            transitionAtTotalHours = tree.GetDouble("transitionAtTotalDays");
+            transitionAtTotalHours = tree.GetDouble("transitionAtTotalHours");
             elapsedTime = tree.GetDouble("elapsedTime");
         }
 
@@ -97,7 +96,7 @@ namespace Immersion
         {
             base.ToTreeAttributes(tree);
 
-            tree.SetDouble("transitionAtTotalDays", transitionAtTotalHours);
+            tree.SetDouble("transitionAtTotalHours", transitionAtTotalHours);
             tree.SetDouble("elapsedTime", elapsedTime);
         }
     }
