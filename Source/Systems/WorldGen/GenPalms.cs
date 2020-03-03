@@ -104,8 +104,8 @@ namespace Immersion
             List<int> trunkblocks = new List<int>();
             List<int> frondblocks = new List<int>();
 
-            List<int> nannerblocks = new List<int>();
-            List<int> cocoblocks = new List<int>();
+            List<int> bananablocks = new List<int>();
+            List<int> coconutblocks = new List<int>();
 
             for (int i = 0; i < parts.Length; i++)
             {
@@ -116,11 +116,11 @@ namespace Immersion
             for (int i = 0; i < directions.Length; i++)
             {
                 frondblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfrond-1-grown-" + directions[i])).Id);
-                nannerblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-bananna-" + directions[i])).Id);
-                cocoblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-coconut-" + directions[i])).Id);
+                bananablocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-bananna-" + directions[i])).Id);
+                coconutblocks.Add(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmfruits-coconut-" + directions[i])).Id);
             }
             frond = frondblocks.ToArray();
-            fruits = new int[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
+            fruits = new int[][] { bananablocks.ToArray(), coconutblocks.ToArray(), null };
 
             tip = api.World.BlockAccessor.GetBlock(palmBase.CodeWithPart("tip", 1)).Id;
             int c = api.World.BlockAccessor.GetBlock(new AssetLocation("game:sapling-palmcoconut")).Id;
