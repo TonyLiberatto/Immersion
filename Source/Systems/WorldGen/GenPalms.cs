@@ -16,6 +16,23 @@ using Vintagestory.ServerMods;
 
 namespace Immersion
 {
+    public class PalmTreeGenerator : ITreeGenerator
+    {
+        ICoreServerAPI sapi;
+        GenPalms GenPalms { get => sapi.ModLoader.GetModSystem<GenPalms>(); }
+
+        public PalmTreeGenerator(ICoreServerAPI sapi)
+        {
+            this.sapi = sapi;
+        }
+
+        public void GrowTree(IBlockAccessor blockAccessor, BlockPos pos, float sizeModifier = 1, float vineGrowthChance = 0, float otherblockChance = 1)
+        {
+            if (GenPalms.sNoise == null) GenPalms.SetupPalm(blockAccessor.GetBlock(new AssetLocation("immersion:palmlog-bottom-grown")));
+            GenPalms.GenPalmTree(blockAccessor, pos.Copy());
+        }
+    }
+
     public class GenPalms : ModStdWorldGen
     {
         ICoreServerAPI api;
@@ -25,7 +42,7 @@ namespace Immersion
         public static BlockPos[] offsets;
         public static BlockPos[] cardinaloffsets;
 
-        NormalizedSimplexNoise sNoise;
+        public NormalizedSimplexNoise sNoise;
         NormalizedSimplexNoise sizeNoise;
         NormalizedSimplexNoise frondNoise;
         NormalizedSimplexNoise fruitNoise;
@@ -45,12 +62,14 @@ namespace Immersion
         public int[][] fruits;
 
         int tip;
+        int sapling;
 
         public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
+            api.RegisterTreeGenerator(new AssetLocation("immersion:palmtree"), new PalmTreeGenerator(api));
             api.RegisterCommand("genpalm", "genpalm", "", (p, g, a) =>
             {
                 var pos = p.CurrentBlockSelection?.Position?.AddCopy(0, 1, 0);
@@ -67,7 +86,7 @@ namespace Immersion
             api.Event.GetWorldgenBlockAccessor(c => blockAccessor = c.GetBlockAccessor(true));
         }
 
-        private void SetupPalm(Block palmBase)
+        public void SetupPalm(Block palmBase)
         {
             bottomOffsets = AreaMethods.AreaBelowOffsetList().ToArray();
             offsets = AreaMethods.AreaAroundOffsetList().ToArray();
@@ -99,6 +118,7 @@ namespace Immersion
             fruits = new int[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
 
             tip = api.World.BlockAccessor.GetBlock(palmBase.CodeWithPart("tip", 1)).Id;
+            sapling = api.World.BlockAccessor.GetBlock(new AssetLocation("game:sapling-palm")).Id;
         }
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams)
@@ -158,6 +178,16 @@ namespace Immersion
             double fruitRnd = fruitRnd1 ?? api.World.Rand.NextDouble();
             double frondRnd = frondRnd1 ?? api.World.Rand.NextDouble();
 
+            while (!CanGenPalm(bA, pos.UpCopy(), sizeRnd, fruitRnd1, frondRnd1))
+            {
+                sizeRnd -= 0.01;
+                if (sizeRnd < 0)
+                {
+                    bA.SetBlock(sapling, pos.UpCopy());
+                    return;
+                }
+            }
+
             int[] stretched = trunk.Stretch((int)(sizeRnd * maxTreeSize));
             for (int i = 0; i < stretched.Length; i++)
             {
@@ -180,6 +210,40 @@ namespace Immersion
                 bA.SetBlock(frondID, offset);
                 if (fruits[fruiti] != null) bA.SetBlock(fruits[fruiti][i], offset.Add(0, -1, 0));
             }
+        }
+
+        public bool CanGenPalm(IBlockAccessor bA, BlockPos pos, double? sizeRnd1 = null, double? fruitRnd1 = null, double? frondRnd1 = null)
+        {
+            double sizeRnd = sizeRnd1 ?? api.World.Rand.NextDouble();
+            double fruitRnd = fruitRnd1 ?? api.World.Rand.NextDouble();
+            double frondRnd = frondRnd1 ?? api.World.Rand.NextDouble();
+
+            int[] stretched = trunk.Stretch((int)(sizeRnd * maxTreeSize));
+            Block block = bA.GetBlock(pos);
+
+            for (int i = 0; i < stretched.Length; i++)
+            {
+                block = bA.GetBlock(pos);
+
+                if (block.Id != 0) return false;
+                pos.Y++;
+            }
+            pos.Y--;
+
+            block = bA.GetBlock(pos);
+
+            if (block.Id != 0) return false;
+
+            for (int i = 0; i < cardinaloffsets.Length; i++)
+            {
+                var c = cardinaloffsets[i];
+                BlockPos offset = pos.AddCopy(c.X, c.Y, c.Z);
+                block = bA.GetBlock(offset);
+
+                if (block.Id != 0) return false;
+            }
+
+            return true;
         }
 
     }

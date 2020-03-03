@@ -54,6 +54,13 @@
     },
     "renderPass": "OpaqueNoCull",
     "randomDrawOffset": false,
+    "drops": [
+        {
+			"type": "block",
+			"code": "game:sapling-palm",
+			"quantity": { "avg": 0.75, "var": 0 }
+		}
+    ],
     "shapeByType": {
         "*-north": {
             "base": "block/flora/palm/fronds/frond{amount}",
@@ -88,5 +95,10 @@
     "lightAbsorption": 0,
     "resistance": 1,
     "rainPermeable": false,
-    "materialDensity": 200
+    "materialDensity": 200,
+    "sounds": {
+        "place": "game:block/plant",
+        "break": "game:block/plant",
+        "hit": "game:block/plant"
+    }
 }

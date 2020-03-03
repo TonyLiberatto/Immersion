@@ -184,8 +184,6 @@ namespace Immersion
                     }
                     handled = EnumHandling.PreventDefault;
                 }
-
-
             }
         }
 

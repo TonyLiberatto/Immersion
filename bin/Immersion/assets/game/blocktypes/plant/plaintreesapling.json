@@ -11,12 +11,13 @@
 			"*-acacia": "truemulga",
 			"*-kapok": "kapok",
 			"*-bamboobrown": "bamboo-grown-brown",
-			"*-bamboogreen": "bamboo-grown-green"
+			"*-bamboogreen": "bamboo-grown-green",
+			"*-palm": "immersion:palmtree"
 		},
 		"growthDays": { "avg": 6.5, "var": 1.5 }
 	},
 	"variantgroups": [
-		{ "code": "wood", "states": [ "bamboobrown", "bamboogreen" ], "loadFromProperties": "block/wood"}
+		{ "code": "wood", "states": [ "bamboobrown", "bamboogreen", "palm" ], "loadFromProperties": "block/wood"}
 	],
 	"creativeinventory": { "general": ["*"], "immersionflora": [ "*" ]},
 	"renderpass": "OpaqueNoCull",

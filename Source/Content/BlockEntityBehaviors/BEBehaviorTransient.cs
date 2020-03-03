@@ -38,7 +38,7 @@ namespace Immersion
             base.Initialize(api, properties);
             if (transitionAtTotalHours <= 0)
             {
-                transitionAtTotalHours = properties["inGameHours"].AsFloat(24);
+                transitionAtTotalHours = properties["inGameHours"].AsFloat(24) * 60;
             }
             fromCode = properties["convertFrom"].AsString()?.WithDomain(OwnBlock.Code.Domain);
             toCode = properties["convertTo"].AsString()?.WithDomain(OwnBlock.Code.Domain);
