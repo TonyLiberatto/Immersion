@@ -4664,11 +4664,14 @@
 	"block-cheesecloth-brown-cheese": "Cheesecloth Brown (Cheese)",
 	"block-cheesecloth-black-cheese": "Cheesecloth Black (Cheese)",
 	"block-cheesecloth-*-*": "Not Yet Implemented",
+	"block-sapling-palm": "Palm Sapling (No Fruits)",
+	"block-sapling-palmcoconut": "Palm Sapling (Coconut)",
+	"block-sapling-palmbanana": "Palm Sapling (Banana)",
 
 	"item-arrow-fire*": "Fire Arrow crafted from any any arrow, fat and a torch",
 	"itemdesc-arrow-fire*": "Adds +2 damage. Future recipe should include adding linen or other fiber. Could include pitch if liquids like that are added.",
 
 	"item-arrow-poison*": "Poisoned Arrow crafted from any arrow and mushroom",
 	"itemdesc-arrow-poison*": "Adds +2 damage. Future recipe should include cooking with a herb to get poison.",
-
+	
 }

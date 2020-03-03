@@ -20,16 +20,18 @@ namespace Immersion
     {
         ICoreServerAPI sapi;
         GenPalms GenPalms { get => sapi.ModLoader.GetModSystem<GenPalms>(); }
+        string fruit;
 
-        public PalmTreeGenerator(ICoreServerAPI sapi)
+        public PalmTreeGenerator(ICoreServerAPI sapi, string fruit)
         {
             this.sapi = sapi;
+            this.fruit = fruit;
         }
 
         public void GrowTree(IBlockAccessor blockAccessor, BlockPos pos, float sizeModifier = 1, float vineGrowthChance = 0, float otherblockChance = 1)
         {
             if (GenPalms.sNoise == null) GenPalms.SetupPalm(blockAccessor.GetBlock(new AssetLocation("immersion:palmlog-bottom-grown")));
-            GenPalms.GenPalmTree(blockAccessor, pos.Copy());
+            GenPalms.GenPalmTree(blockAccessor, pos.Copy(), null, null, null, fruit == "palmcoconut" ? 0 : fruit == "palmbanana" ? 1 : 2);
         }
     }
 
@@ -69,7 +71,10 @@ namespace Immersion
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
-            api.RegisterTreeGenerator(new AssetLocation("immersion:palmtree"), new PalmTreeGenerator(api));
+            api.RegisterTreeGenerator(new AssetLocation("immersion:palm"), new PalmTreeGenerator(api, "palm"));
+            api.RegisterTreeGenerator(new AssetLocation("immersion:palmcoconut"), new PalmTreeGenerator(api, "palmcoconut"));
+            api.RegisterTreeGenerator(new AssetLocation("immersion:palmbanana"), new PalmTreeGenerator(api, "palmbanana"));
+
             api.RegisterCommand("genpalm", "genpalm", "", (p, g, a) =>
             {
                 var pos = p.CurrentBlockSelection?.Position?.AddCopy(0, 1, 0);
@@ -172,13 +177,13 @@ namespace Immersion
             }
         }
 
-        public void GenPalmTree(IBlockAccessor bA, BlockPos pos, double? sizeRnd1 = null, double? fruitRnd1 = null, double? frondRnd1 = null)
+        public void GenPalmTree(IBlockAccessor bA, BlockPos pos, double? sizeRnd1 = null, double? fruitRnd1 = null, double? frondRnd1 = null, int? fruitNum = null)
         {
             double sizeRnd = sizeRnd1 ?? api.World.Rand.NextDouble();
             double fruitRnd = fruitRnd1 ?? api.World.Rand.NextDouble();
             double frondRnd = frondRnd1 ?? api.World.Rand.NextDouble();
 
-            while (!CanGenPalm(bA, pos.UpCopy(), sizeRnd, fruitRnd1, frondRnd1))
+            while (!CanGenPalm(bA, pos.UpCopy(), sizeRnd))
             {
                 sizeRnd -= 0.01;
                 if (sizeRnd < 0)
@@ -196,7 +201,7 @@ namespace Immersion
             }
             bA.SetBlock(tip, pos);
 
-            int fruiti = (int)Math.Round(fruitRnd * 2.0);
+            int fruiti = fruitNum ?? (int)Math.Round(fruitRnd * 2.0);
             int frondi = (int)Math.Round(frondRnd * 3.0);
 
             for (int i = 0; i < cardinaloffsets.Length; i++)
@@ -212,11 +217,9 @@ namespace Immersion
             }
         }
 
-        public bool CanGenPalm(IBlockAccessor bA, BlockPos pos, double? sizeRnd1 = null, double? fruitRnd1 = null, double? frondRnd1 = null)
+        public bool CanGenPalm(IBlockAccessor bA, BlockPos pos, double? sizeRnd1 = null)
         {
             double sizeRnd = sizeRnd1 ?? api.World.Rand.NextDouble();
-            double fruitRnd = fruitRnd1 ?? api.World.Rand.NextDouble();
-            double frondRnd = frondRnd1 ?? api.World.Rand.NextDouble();
 
             int[] stretched = trunk.Stretch((int)(sizeRnd * maxTreeSize));
             Block block = bA.GetBlock(pos);
