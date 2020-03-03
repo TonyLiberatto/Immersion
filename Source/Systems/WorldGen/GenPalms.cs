@@ -64,7 +64,7 @@ namespace Immersion
         public int[][] fruits;
 
         int tip;
-        int sapling;
+        int[] saplings;
 
         public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
 
@@ -123,7 +123,11 @@ namespace Immersion
             fruits = new int[][] { nannerblocks.ToArray(), cocoblocks.ToArray(), null };
 
             tip = api.World.BlockAccessor.GetBlock(palmBase.CodeWithPart("tip", 1)).Id;
-            sapling = api.World.BlockAccessor.GetBlock(new AssetLocation("game:sapling-palm")).Id;
+            int c = api.World.BlockAccessor.GetBlock(new AssetLocation("game:sapling-palmcoconut")).Id;
+            int b = api.World.BlockAccessor.GetBlock(new AssetLocation("game:sapling-palmbanana")).Id;
+            int p = api.World.BlockAccessor.GetBlock(new AssetLocation("game:sapling-palm")).Id;
+
+            saplings = new int[] { c, b, p };
         }
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams)
@@ -182,13 +186,14 @@ namespace Immersion
             double sizeRnd = sizeRnd1 ?? api.World.Rand.NextDouble();
             double fruitRnd = fruitRnd1 ?? api.World.Rand.NextDouble();
             double frondRnd = frondRnd1 ?? api.World.Rand.NextDouble();
+            int fruiti = fruitNum ?? (int)Math.Round(fruitRnd * 2.0);
 
             while (!CanGenPalm(bA, pos.UpCopy(), sizeRnd))
             {
                 sizeRnd -= 0.01;
                 if (sizeRnd < 0)
                 {
-                    bA.SetBlock(sapling, pos.UpCopy());
+                    bA.SetBlock(saplings[fruiti], pos.UpCopy());
                     return;
                 }
             }
@@ -200,8 +205,6 @@ namespace Immersion
                 pos.Y++;
             }
             bA.SetBlock(tip, pos);
-
-            int fruiti = fruitNum ?? (int)Math.Round(fruitRnd * 2.0);
             int frondi = (int)Math.Round(frondRnd * 3.0);
 
             for (int i = 0; i < cardinaloffsets.Length; i++)
