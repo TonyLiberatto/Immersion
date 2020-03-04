@@ -319,5 +319,10 @@ namespace Immersion
 
             return outputlist.ToArray();
         }
+
+        public static AssetLocation WithVariant(this AssetLocation location, string variantcode, string variantstate)
+        {
+            return new AssetLocation(location.ToString().Replace("{" + variantcode + "}", variantstate));
+        }
     }
 }
