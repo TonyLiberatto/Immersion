@@ -168,6 +168,7 @@
     <Compile Include="Source\Content\Properties\AnimProps.cs" />
     <Compile Include="Source\Content\Properties\CraftingProp.cs" />
     <Compile Include="Source\Content\Properties\SwapBlocks.cs" />
+    <Compile Include="Source\Content\Renderers\ProgressBarRenderer.cs" />
     <Compile Include="Source\Content\Utility\AreaMethods.cs" />
     <Compile Include="Source\Content\Utility\Extensions.cs" />
     <Compile Include="Source\Content\Utility\HandAnimations.cs" />
@@ -197,6 +198,7 @@
     <Folder Include="bin\Immersion\assets\game\recipes\grid\tool\wood\leatherstrip\" />
     <Folder Include="bin\Immersion\assets\game\recipes\grid\tool\wood\sinew\" />
     <Folder Include="bin\Immersion\assets\game\recipes\grid\tool\wood\sisal\" />
+    <Folder Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\" />
     <Folder Include="bin\Immersion\assets\game\recipes\inworld\resources\cordage\" />
     <Folder Include="bin\Immersion\assets\game\shapes\block\clay\flowerpot\" />
     <Folder Include="bin\Immersion\assets\game\sounds\block\" />
@@ -605,12 +607,6 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\bed.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bonfire.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bowl-fat.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-acacia.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-birch.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-kapok.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-maple.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-oak.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium-pine.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-ns.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-ud.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-we.json" />

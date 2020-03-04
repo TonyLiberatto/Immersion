@@ -28,7 +28,7 @@ namespace Immersion
 
         public static T Prev<T>(this T[] array, ref uint index)
         {
-            index = index > 0 ? index - 1 : (uint)(array.Length-1);
+            index = index > 0 ? index - 1 : (uint)(array.Length - 1);
             return array[index];
         }
 
@@ -176,7 +176,7 @@ namespace Immersion
             return sel.Position.BlockEntity(world);
         }
 
-        public static void InitializeAnimators(this BlockEntityAnimationUtil util, Vec3f rot, params string[] CacheDictKeys )
+        public static void InitializeAnimators(this BlockEntityAnimationUtil util, Vec3f rot, params string[] CacheDictKeys)
         {
             foreach (var val in CacheDictKeys)
             {
@@ -189,7 +189,7 @@ namespace Immersion
             InitializeAnimators(util, rot, CacheDictKeys.ToArray());
         }
 
-        public static void SetUv(this MeshData mesh, TextureAtlasPosition texPos) => mesh.SetUv(new float[] {texPos.x1, texPos.y1, texPos.x2, texPos.y1, texPos.x2, texPos.y2, texPos.x1, texPos.y2 });
+        public static void SetUv(this MeshData mesh, TextureAtlasPosition texPos) => mesh.SetUv(new float[] { texPos.x1, texPos.y1, texPos.x2, texPos.y1, texPos.x2, texPos.y2, texPos.x1, texPos.y2 });
 
         public static bool TryGiveItemstack(this IPlayerInventoryManager manager, ItemStack[] stacks)
         {
@@ -224,11 +224,26 @@ namespace Immersion
             return stacks1.ToArray();
         }
 
-        public static object GetInstanceField<T>(this T instance, string fieldName)
+        public static object GetField<T>(this T instance, string fieldName)
+        {
+            return GetInstanceField(instance.GetType(), instance, fieldName);
+        }
+
+        public static object CallMethod<T>(this T instance, string methodName) => instance?.CallMethod(methodName, null);
+
+        public static object CallMethod<T>(this T instance, string methodName, params object[] parameters)
         {
             BindingFlags bindFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Static;
-            FieldInfo field = instance.GetType().GetField(fieldName, bindFlags);
-            return field?.GetValue(instance);
+            MethodInfo info = instance?.GetType()?.GetMethod(methodName, bindFlags);
+            return info?.Invoke(instance, parameters);
+        }
+
+        public static object GetInstanceField(Type type, object instance, string fieldName)
+        {
+            BindingFlags bindFlags = BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic
+                | BindingFlags.Static;
+            FieldInfo field = type.GetField(fieldName, bindFlags);
+            return field.GetValue(instance);
         }
 
         public static List<AssetLocation> GetMatches(this AssetLocation code, ICoreAPI Api)
@@ -256,7 +271,7 @@ namespace Immersion
             {
                 return asset.GetItem(Api).WildCardMatch(match);
             }
-            else if(itemClass == EnumItemClass.Block)
+            else if (itemClass == EnumItemClass.Block)
             {
                 return asset.GetBlock(Api).WildCardMatch(match);
             }

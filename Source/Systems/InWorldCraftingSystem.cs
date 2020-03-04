@@ -31,9 +31,18 @@ namespace Immersion
         ICoreClientAPI capi;
         IClientNetworkChannel cChannel;
         IServerNetworkChannel sChannel;
+        ModRegistryObjectTypeLoader typeLoader { get => sapi.ModLoader.GetModSystem<ModRegistryObjectTypeLoader>(); }
+
+        Dictionary<AssetLocation, VariantEntry[]> worldPropertiesVariants
+        {
+            get
+            {
+                return typeLoader.GetField("worldPropertiesVariants") as Dictionary<AssetLocation, VariantEntry[]>;
+            }
+        }
 
         public Dictionary<AssetLocation, InWorldCraftingRecipe[]> InWorldCraftingRecipes { get; set; } = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
-        public override double ExecuteOrder() => 1;
+        
 
         public override void StartServerSide(ICoreServerAPI Api)
         {
@@ -141,8 +150,17 @@ namespace Immersion
             sapi.World.Logger.StoryEvent("Immersion crafting...");
         }
 
+        public List<ResolvedVariant> GatherVariants(AssetLocation baseCode, RegistryObjectVariantGroup[] variantgroups, AssetLocation[] allowedVariants = null, AssetLocation[] skipVariants = null)
+        {
+            return typeLoader.CallMethod("GatherVariants", baseCode, variantgroups, baseCode, allowedVariants, skipVariants) as List<ResolvedVariant>;
+        }
+
         public void ParseRecipeVariants(Dictionary<AssetLocation, InWorldCraftingRecipe[]> recipes, out Dictionary<AssetLocation, InWorldCraftingRecipe[]> parsed)
         {
+            typeLoader.CallMethod("LoadWorldProperties");
+
+            var worldProps = worldPropertiesVariants;
+
             parsed = new Dictionary<AssetLocation, InWorldCraftingRecipe[]>();
             foreach (var val in recipes)
             {
@@ -166,37 +184,43 @@ namespace Immersion
                     else
                     {
                         List<InWorldCraftingRecipe> craftingRecipes = new List<InWorldCraftingRecipe>();
-                        foreach (var variant in recipe.VariantGroups)
+                        var resolvedVariants = GatherVariants(new AssetLocation(""), recipe.VariantGroups);
+
+                        foreach (var state in resolvedVariants)
                         {
-                            foreach (var state in variant.States)
+                            recipe = rawRec.Clone();
+                            foreach (var parts in state.CodeParts)
                             {
-                                recipe.CraftingSound = recipe.CraftingSound.WithVariant(variant.Code, state);
-                                recipe.CraftSound = recipe.CraftSound.WithVariant(variant.Code, state);
-                                
+                                recipe.CraftingSound = recipe.CraftingSound.WithVariant(parts.Key, parts.Value);
+                                recipe.CraftSound = recipe.CraftSound.WithVariant(parts.Key, parts.Value);
+
                                 List<JsonCraftingOutput> outputs = new List<JsonCraftingOutput>();
                                 foreach (var makes in recipe.Makes)
                                 {
                                     JsonCraftingOutput makesClone = (JsonCraftingOutput)makes.Clone();
-                                    makesClone.Code = makes.Code.WithVariant(variant.Code, state);
+                                    makesClone.Code = makes.Code.WithVariant(parts.Key, parts.Value);
                                     outputs.Add(makesClone);
                                 }
 
                                 recipe.Makes = outputs.ToArray();
                                 outputs.Clear();
 
-                                foreach (var returns in recipe.Returns)
+                                if ((recipe.Returns?.Count() ?? 0) > 0)
                                 {
-                                    JsonCraftingOutput returnsClone = (JsonCraftingOutput)returns.Clone();
-                                    returnsClone.Code = returns.Code.WithVariant(variant.Code, state);
-                                    outputs.Add(returnsClone);
+                                    foreach (var returns in recipe.Returns)
+                                    {
+                                        JsonCraftingOutput returnsClone = (JsonCraftingOutput)returns.Clone();
+                                        returnsClone.Code = returns.Code.WithVariant(parts.Key, parts.Value);
+                                        outputs.Add(returnsClone);
+                                    }
+                                    recipe.Returns = outputs.ToArray();
                                 }
-                                recipe.Returns = outputs.ToArray();
 
-                                recipe.Takes.Code = recipe.Takes.Code.WithVariant(variant.Code, state);
-                                recipe.Tool.Code = recipe.Tool.Code.WithVariant(variant.Code, state);
+                                recipe.Takes.Code = recipe.Takes.Code.WithVariant(parts.Key, parts.Value);
+                                recipe.Tool.Code = recipe.Tool.Code.WithVariant(parts.Key, parts.Value);
                             }
+                            craftingRecipes.Add(recipe.Clone());
                         }
-                        craftingRecipes.Add(recipe.Clone());
 
                         if (parsed.ContainsKey(val.Key))
                         {
@@ -211,6 +235,7 @@ namespace Immersion
                     }
                 }
             }
+            typeLoader.CallMethod("FreeRam");
         }
 
         public InWorldCraftingRecipe OnPlayerInteractStart(IPlayer byPlayer, BlockSelection blockSel)
@@ -393,6 +418,11 @@ namespace Immersion
 
     public class JsonCraftingOutput : JsonItemStack
     {
+        public new JsonCraftingOutput Clone()
+        {
+            return new JsonCraftingOutput() { Attributes = this.Attributes, Code = this.Code, StackSize = this.StackSize, Type = this.Type };
+        }
+
         public int Count
         {
             get => StackSize;
