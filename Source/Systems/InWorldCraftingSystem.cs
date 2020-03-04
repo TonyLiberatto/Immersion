@@ -184,7 +184,7 @@ namespace Immersion
                     else
                     {
                         List<InWorldCraftingRecipe> craftingRecipes = new List<InWorldCraftingRecipe>();
-                        var resolvedVariants = GatherVariants(new AssetLocation(""), recipe.VariantGroups);
+                        var resolvedVariants = GatherVariants(new AssetLocation(""), recipe.VariantGroups, recipe.AllowedVariants, recipe.SkipVariants);
 
                         foreach (var state in resolvedVariants)
                         {
@@ -375,6 +375,8 @@ namespace Immersion
         public JsonCraftingOutput[] Makes { get; set; }
         public AssetLocation CraftSound { get; set; } = new AssetLocation("sounds/block/planks");
         public AssetLocation CraftingSound { get; set; } = new AssetLocation("sounds/block/wood-tool");
+        public AssetLocation[] AllowedVariants { get; set; }
+        public AssetLocation[] SkipVariants { get; set; }
         public RegistryObjectVariantGroup[] VariantGroups { get; set; }
         public bool IsTool { get; set; } = false;
         public bool Disabled { get; set; } = false;
