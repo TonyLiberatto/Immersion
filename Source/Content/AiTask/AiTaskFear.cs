@@ -17,6 +17,7 @@ namespace Immersion
         IPointOfFear runAwayFrom;
         Vec3d goTo;
         float moveSpeed;
+        long id;
 
         public AiTaskFear(EntityAgent entity) : base(entity)
         {
@@ -33,30 +34,45 @@ namespace Immersion
             base.LoadConfig(taskConfig, aiConfig);
         }
 
+        public override void OnEntitySpawn()
+        {
+            base.OnEntitySpawn();
+            id = entity.World.RegisterGameTickListener(dt =>
+            {
+                runAwayFrom = null;
+                try
+                {
+                    runAwayFrom = poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 1000, (poi) =>
+                    {
+                        if (poi == null) return false;
+                        float? fear = (poi as IPointOfFear)?.FearRadius;
+                        if (fear == null) return false;
+                        return poi.Position.DistanceTo(entity.Pos.XYZ) < fear && poi.Type == "scary";
+                    }) as IPointOfFear;
+
+                    goTo = goTo ?? runAwayFrom.Position.AheadCopy(runAwayFrom.FearRadius + 5, 0, rand.NextDouble() * 360);
+                    while (goTo.AsBlockPos.GetBlock(entity.Api).Id != 0 && goTo.AsBlockPos.Y < world.BlockAccessor.MapSizeY)
+                    {
+                        goTo.Add(0, 1, 0);
+                    }
+                }
+                catch (Exception) { }
+            }, 4000 + rand.Next(0, 1000));
+        }
+
+        public override void OnEntityDespawn(EntityDespawnReason reason)
+        {
+            base.OnEntityDespawn(reason);
+            entity.World.UnregisterGameTickListener(id);
+        }
+
         public override bool ShouldExecute()
         {
-            runAwayFrom = null;
-            try { 
-                runAwayFrom = poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 1000, (poi) => 
-                {
-                    if (poi == null) return false;
-                    float? fear = (poi as IPointOfFear)?.FearRadius;
-                    if (fear == null) return false;
-                    return poi.Position.DistanceTo(entity.Pos.XYZ) < fear && poi.Type == "scary";
-                }) as IPointOfFear;
-            }
-            catch(Exception) { }
-
-            return runAwayFrom != null;
+            return runAwayFrom != null && goTo != null;
         }
 
         public override bool ContinueExecute(float dt)
         {
-            goTo = goTo ?? runAwayFrom.Position.AheadCopy(runAwayFrom.FearRadius + 5, 0, rand.NextDouble() * 360);
-            while (goTo.AsBlockPos.GetBlock(entity.Api).Id != 0 && goTo.AsBlockPos.Y < world.BlockAccessor.MapSizeY)
-            {
-                goTo.Add(0, 1, 0);
-            }
             pathTraverser.NavigateTo(goTo, moveSpeed, OnGoalReached, OnStuck);
             return ShouldExecute();
         }
