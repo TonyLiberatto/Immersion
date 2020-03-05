@@ -1,0 +1,110 @@
+[
+    {
+        "Mode": "Swap",
+        "VariantGroups": [
+            { "Code": "wood", "loadFromProperties": "block/wood" },
+            { "Code": "bark", "states": [ "bark", "debarked" ] }
+        ],
+        "Takes": {
+            "Code": "immersion:branch-medium-{wood}-{bark}-*",
+            "Type": "Block",
+            "Remove": true
+        },
+        "Tool": {
+            "Code": "immersion:animal-leatherstrips",
+            "Type": "Item",
+            "StackSize": 2
+        },
+        "Makes": [
+            {
+                "Code": "immersion:branch-cordage-medium-{wood}-{bark}-leatherstrips-ud",
+                "Type": "Block",
+                "StackSize": 1
+            }
+        ],
+        "IsTool": false,
+        "CraftSound": "sounds/block/planks",
+        "Disabled": false
+    },
+    {
+        "Mode": "Swap",
+        "VariantGroups": [
+            { "Code": "wood", "loadFromProperties": "block/wood" },
+            { "Code": "bark", "states": [ "bark", "debarked" ] }
+        ],
+        "Takes": {
+            "Code": "immersion:branch-medium-{wood}-{bark}-*",
+            "Type": "Block",
+            "Remove": true
+        },
+        "Tool": {
+            "Code": "immersion:byproducts-sinew",
+            "Type": "Item",
+            "StackSize": 2
+        },
+        "Makes": [
+            {
+                "Code": "immersion:branch-cordage-medium-{wood}-{bark}-sinew-ud",
+                "Type": "Block",
+                "StackSize": 1
+            }
+        ],
+        "IsTool": false,
+        "CraftSound": "sounds/block/planks",
+        "Disabled": false
+    },
+    {
+        "Mode": "Swap",
+        "VariantGroups": [
+            { "Code": "wood", "loadFromProperties": "block/wood" },
+            { "Code": "bark", "states": [ "bark", "debarked" ] }
+        ],
+        "Takes": {
+            "Code": "immersion:branch-medium-{wood}-{bark}-*",
+            "Type": "Block",
+            "Remove": true
+        },
+        "Tool": {
+            "Code": "immersion:sisal-twine",
+            "Type": "Item",
+            "StackSize": 2
+        },
+        "Makes": [
+            {
+                "Code": "immersion:branch-cordage-medium-{wood}-{bark}-sisal-ud",
+                "Type": "Block",
+                "StackSize": 1
+            }
+        ],
+        "IsTool": false,
+        "CraftSound": "sounds/block/planks",
+        "Disabled": false
+    },
+    {
+        "Mode": "Swap",
+        "VariantGroups": [
+            { "Code": "wood", "loadFromProperties": "block/wood" },
+            { "Code": "bark", "states": [ "bark", "debarked" ] }
+        ],
+        "Takes": {
+            "Code": "immersion:branch-medium-{wood}-{bark}-*",
+            "Type": "Block",
+            "Remove": true
+        },
+        "Tool": {
+            "Code": "game:reeds",
+            "Type": "Item",
+            "StackSize": 2
+        },
+        "Makes": [
+            {
+                "Code": "immersion:branch-cordage-medium-{wood}-{bark}-reeds-ud",
+                "Type": "Block",
+                "StackSize": 1
+            }
+        ],
+        "IsTool": false,
+        "CraftSound": "sounds/block/planks",
+        "Disabled": false
+    }
+]

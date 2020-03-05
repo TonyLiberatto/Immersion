@@ -8,7 +8,7 @@
                 "properties": {
                     "eventName": "testForDecay"
                 }
-            },
+            }
         ],
         "*": [
             {
@@ -58,7 +58,17 @@
         {
 			"type": "block",
 			"code": "game:sapling-palm",
-			"quantity": { "avg": 0.75, "var": 0 }
+			"quantity": { "avg": 0.25, "var": 0 }
+        },
+        {
+			"type": "block",
+			"code": "game:sapling-palmcoconut",
+			"quantity": { "avg": 0.25, "var": 0 }
+        },
+        {
+			"type": "block",
+			"code": "game:sapling-palmbanana",
+			"quantity": { "avg": 0.25, "var": 0 }
 		}
     ],
     "shapeByType": {

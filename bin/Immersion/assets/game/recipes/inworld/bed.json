@@ -43,4 +43,25 @@
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
+ {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:haybale-*",
+        "Type": "Block",
+        "AllowedVariants": [ "immersion:haybale-normal-*" ]        
+    },
+    "Tool": {
+        "Code": "game:reeds",
+        "Type": "Item",        
+		"StackSize": 4
+    },
+    "Makes": [{
+        "Code": "game:bed-hay-head-north",
+        "Type": "Block",
+        "StackSize": 1
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ }
 ]
