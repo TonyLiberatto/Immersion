@@ -22,7 +22,7 @@
   client: {
     renderer: "Shape",
     shape: { base: "entity/land/chicken-rooster" },
-    textures: {all: { base: "entity/chicken/rooster/{color}" } },
+    texture: {  base: "entity/chicken/rooster/{color}" },
     behaviors: [
       { code: "repulseagents" },
       { code: "featherpluck" },
