@@ -12,7 +12,7 @@
 			"chicken-chick-ashgrey", "chicken-chick-black",	"chicken-chick-brown", "chicken-chick-cream", "chicken-chick-golden", "chicken-chick-savanna", "chicken-chick-white", "chicken-chick-woodland",
 			"drifter-normal", "drifter-deep", "drifter-tainted", "drifter-corrupt",	"drifter-nightmare",
 			"locust-bronze", "locust-corrupt", 
-			"fox-male", "fox-female", "fox-arctic-male", "fox-arctic-female", "fox-baby",
+			"fox-male", "fox-female", "fox-arctic-male", "fox-arctic-female", "fox-pup-forest", "fox-pup-arctic",
 			"hare-male-arctic", "hare-male-ashgrey", "hare-male-darkbrown", "hare-male-desert", "hare-male-gold", "hare-male-lightbrown", "hare-male-lightgrey","hare-male-silver", "hare-male-smokegrey",  
 			"hare-female-arctic", "hare-female-ashgrey", "hare-female-darkbrown", "hare-female-desert", "hare-female-gold", "hare-female-lightbrown", "hare-female-lightgrey", "hare-female-silver","hare-female-smokegrey",
 			"hare-baby",
@@ -44,9 +44,10 @@
 		"*-drifter-nightmare": { "base": "entity/land/drifter/knife" },
 
 		"*-fox-male": {	"base": "entity/land/fox-male" },
-		"*-fox-female": { "base": "entity/land/fox-female"	},
-		"*-fox-arctic-male": { "base": "entity/land/fox-male"	},
-		"*-fox-arctic-female": { "base": "entity/land/fox-female"	},
+		"*-fox-female": { "base": "entity/land/fox-female" },
+		"*-fox-arctic-male": { "base": "entity/land/fox-male" },
+		"*-fox-arctic-female": { "base": "entity/land/fox-female" },
+		"*-fox-pup-*": {	"base": "entity/land/fox-pup" },
 		"*-hare-female-*": { "base": "entity/land/hare-female" },
 		"*-hare-baby": { "base": "entity/land/hare-baby" },
 		"*-hare-male-*": { "base": "entity/land/hare-male" },
@@ -195,12 +196,18 @@
 		"*-fox-arctic-female": {
 			"skin": { "base": "entity/fox/arctic-female" }
 		},
+		"*-fox-pup-forest": {
+			"fox": { "base": "entity/fox/forest-pup" }
+		},
+		"*-fox-pup-arctic": {
+			"fox": { "base": "entity/fox/arctic-pup" }
+		},
 		"*-fox-male": {
 			"skin": { "base": "entity/fox/forest-male" }
 		},
 		"*-fox-female": {
 			"skin": { "base": "entity/fox/forest-female" }
-		},
+		},		
 		"*-hare-baby": {
 			"skin": { "base": "entity/hare/baby-brown" }
 		},
@@ -322,14 +329,14 @@
 		"*-pig-domestic-piglet": {
 			"all": { "base": "entity/pig-domestic/piglet" }
 		},
-		"*-racoon-male": {
-			"raccoon": { "base": "entity/racoon/racoon-male1" }
+		"*-raccoon-male": {
+			"raccoon": { "base": "entity/raccoon/raccoon-male1" }
 		},
-		"*-racoon-female": {
-			"raccoon": { "base": "entity/racoon/racoon-female1"	}
+		"*-raccoon-female": {
+			"raccoon": { "base": "entity/raccoon/raccoon-female1"	}
 		},
-		"*-racoon-pup": {
-			"raccoon": { "base": "entity/racoon/racoon-pup1" }
+		"*-raccoon-pup": {
+			"raccoon": { "base": "entity/raccoon/raccoon-pup1" }
 		},
 		"*-wild-sheep-ram": {
 			"all": { "base": "entity/wild-sheep/ram" }
@@ -487,6 +494,20 @@
 			rotation: { x: 4, y: -59, z: -180 },
 			origin: { x: 0.5, y: 0.4, z: 0.5 },
 			scale: 2
+		},
+		"creature-fox-pup-forest": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.18
+		},
+		"creature-fox-pup-arctic": {
+			rotate: true,
+			translation: { x: 3, y: 0, z: 0 },
+			rotation: { x: -12, y: -48, z: -180 },
+			origin: { x: 0.5, y: 0.3, z: 0.5 },
+			scale: 2.18
 		},
 		"creature-fox-arctic-male": {
 			rotate: true,
@@ -1382,6 +1403,16 @@
 			translation: { x: 0.4, y: 0, z: 0 },
 			rotation: { x: -180, y: -96, z: -180 },
 			scale: 1.16
+		},
+		"creature-fox-pup-forest": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21
+		},
+		"creature-fox-pup-arctic": {
+			translation: { x: 0.4, y: 0.1, z: 0 },
+			rotation: { x: -180, y: -78, z: -180 },
+			scale: 1.21
 		},
 		"creature-fox-arctic-male": {
 			translation: { x: 0.4, y: 0, z: 0 },

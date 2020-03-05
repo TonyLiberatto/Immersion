@@ -65,7 +65,7 @@
 			{ code: "breathe" },
 			{ 
 				hoursToGrow: 336,
-				adultEntityCodes: ["fox-male", "fox-female"],
+				adultEntityCodes: ["fox-male-{type}", "fox-female-{type}"],
 				code: "grow" 
 			},
 			{ 
