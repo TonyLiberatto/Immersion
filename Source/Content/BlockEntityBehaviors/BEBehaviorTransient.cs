@@ -48,10 +48,7 @@ namespace Immersion
 
             if (fromCode != null && toCode != null)
             {
-                if (api.Side.IsServer())
-                {
-                    Blockentity.RegisterGameTickListener(CheckTransition, 2000);
-                }
+                Blockentity.RegisterGameTickListener(CheckTransition, 2000);
             }
             else api.World.BlockAccessor.RemoveBlockEntity(Pos);
         }
@@ -64,31 +61,32 @@ namespace Immersion
             {
                 transitionAtHour += (dt / 60);
             }
-            Blockentity.MarkDirty();
-            
-            if (Api.World.Calendar.TotalHours < transitionAtHour) return;
 
-            Block block = Api.World.BlockAccessor.GetBlock(Pos);
-            Block tblock;
-
-            if (!toCode.Contains("*"))
+            if (Api.Side.IsServer())
             {
-                tblock = Api.World.GetBlock(new AssetLocation(toCode));
+                if (Api.World.Calendar.TotalHours < transitionAtHour) return;
+
+                Block block = Api.World.BlockAccessor.GetBlock(Pos);
+                Block tblock;
+
+                if (!toCode.Contains("*"))
+                {
+                    tblock = Api.World.GetBlock(new AssetLocation(toCode));
+                    if (tblock == null) return;
+
+                    Api.World.BlockAccessor.SetBlock(tblock.BlockId, Pos);
+                    return;
+                }
+
+                AssetLocation blockCode = block.WildCardReplace(
+                    new AssetLocation(fromCode),
+                    new AssetLocation(toCode)
+                );
+
+                tblock = Api.World.GetBlock(blockCode);
                 if (tblock == null) return;
-
                 Api.World.BlockAccessor.SetBlock(tblock.BlockId, Pos);
-                return;
             }
-
-            AssetLocation blockCode = block.WildCardReplace(
-                new AssetLocation(fromCode),
-                new AssetLocation(toCode)
-            );
-
-            tblock = Api.World.GetBlock(blockCode);
-            if (tblock == null) return;
-
-            Api.World.BlockAccessor.SetBlock(tblock.BlockId, Pos);
         }
 
         public override void FromTreeAtributes(ITreeAttribute tree, IWorldAccessor worldForResolving)
@@ -105,22 +103,25 @@ namespace Immersion
             tree.SetDouble("transitionAtHour", transitionAtHour);
         }
 
-        /*
         public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc)
         {
             ICoreClientAPI capi = (Api as ICoreClientAPI);
             GameCalendar cal = (GameCalendar)capi.World.Calendar;
-            int fullHour = (int)(transitionAtHour % (double)cal.HoursPerDay);
+            double hourOfDay = (transitionAtHour % (double)cal.HoursPerDay);
+            int fullHour = (int)(hourOfDay);
             string hour = fullHour < 10 ? "0" + fullHour : "" + fullHour;
-            int m = (int)(60 * (transitionAtHour - fullHour));
+            int m = (int)(60 * (hourOfDay - fullHour));
             string minute = m < 10 ? "0" + m : "" + m;
             string time = hour + ":" + minute;
 
+            double TotalDays = transitionAtHour / cal.HoursPerDay;
+            int DayOfYear = (int)(TotalDays % (double)cal.DaysPerYear);
+            int year = 1386 + (int)(TotalDays / (double)cal.DaysPerYear);
 
-            dsc.AppendLine("Transitions at: " + time + " on ");
+
+            dsc.AppendLine("Transitions at: " + time + " on " + DayOfYear + "/" + cal.DaysPerYear + ", " + year);
             base.GetBlockInfo(forPlayer, dsc);
         }
-        */
 
     }
 }
