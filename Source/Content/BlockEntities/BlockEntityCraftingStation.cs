@@ -66,27 +66,37 @@ namespace Immersion
                     if (action && slot.Itemstack.Item?.Tool == val.tool && inventory?[0]?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) != null && inventory?[0]?.StackSize >= val.input.StackSize)
                     {
                         action = false;
-                        inventory[0].TakeOut(val.input.StackSize);
                         Api.World.RegisterCallback(dt => action = true, val.craftTime);
 
-                        world.SpawnItemEntity(val.output, Pos.MidPoint());
-
-                        slot.Itemstack.Collectible.DamageItem(Api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
-
-                        (byPlayer as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemAttack);
-                        (world as IServerWorldAccessor)?.PlaySoundAt(new AssetLocation(val.craftSound), blockSel.Position);
-                        (world as IServerWorldAccessor)?.SpawnCubeParticles(Pos, Pos.MidPoint(), 1, 32, 0.5f);
-                        MarkDirty();
+                        if (byPlayer is IClientPlayer)
+                        {
+                            ((IClientPlayer)byPlayer).TriggerFpAnimation(EnumHandInteract.HeldItemAttack);
+                        }
+                        else
+                        {
+                            inventory[0].TakeOut(val.input.StackSize);
+                            slot.Itemstack.Collectible.DamageItem(Api.World, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, 1);
+                            world.SpawnItemEntity(val.output, Pos.MidPoint());
+                            world.PlaySoundAt(new AssetLocation(val.craftSound), blockSel.Position);
+                            world.SpawnCubeParticles(Pos, Pos.MidPoint(), 1, 32, 0.5f);
+                            slot.MarkDirty();
+                            inventory[0].MarkDirty();
+                        }
                         break;
                     }
                     else if (slot.Itemstack.Collectible.WildCardMatch(val.input.Code))
                     {
-                        slot.TryPutInto(world, inventory[0]);
+                        if (byPlayer is IServerPlayer)
+                        {
+                            slot.TryPutInto(world, inventory[0]);
+                            inventory[0].MarkDirty();
+                            slot.MarkDirty();
+                        }
                         break;
                     }
                 }
-
             }
+            MarkDirty(true);
         }
 
         public void StopAllAnims()
