@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.Common;
 using Vintagestory.GameContent;
 
 namespace Immersion
@@ -21,8 +23,7 @@ namespace Immersion
 
     public class BEBehaviorTransient : BlockEntityBehavior
     {
-        double transitionAtTotalHours = -1;
-        double elapsedTime = 0;
+        double transitionAtHour = -1;
         BlockPos Pos { get => Blockentity.Pos; }
         string fromCode;
         string toCode;
@@ -36,10 +37,11 @@ namespace Immersion
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {
             base.Initialize(api, properties);
-            if (transitionAtTotalHours <= 0)
+            if (transitionAtHour <= 0)
             {
-                transitionAtTotalHours = properties["inGameHours"].AsFloat(24) * 60;
+                transitionAtHour = api.World.Calendar.TotalHours + properties["inGameHours"].AsFloat(24);
             }
+
             fromCode = properties["convertFrom"].AsString()?.WithDomain(OwnBlock.Code.Domain);
             toCode = properties["convertTo"].AsString()?.WithDomain(OwnBlock.Code.Domain);
             conditions = properties["transitionConditions"]?.AsObject<TransitionConditions>(null);
@@ -56,10 +58,15 @@ namespace Immersion
 
         public void CheckTransition(float dt)
         {
-            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight);
-            if (light < (conditions?.RequiredSunlight ?? -1)) return;
-            elapsedTime += dt;
-            if (elapsedTime < transitionAtTotalHours) return;
+            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.MaxTimeOfDayLight);
+
+            if (light < (conditions?.RequiredSunlight ?? -1))
+            {
+                transitionAtHour += (dt / 60);
+            }
+            Blockentity.MarkDirty();
+            
+            if (Api.World.Calendar.TotalHours < transitionAtHour) return;
 
             Block block = Api.World.BlockAccessor.GetBlock(Pos);
             Block tblock;
@@ -88,16 +95,32 @@ namespace Immersion
         {
             base.FromTreeAtributes(tree, worldForResolving);
 
-            transitionAtTotalHours = tree.GetDouble("transitionAtTotalHours");
-            elapsedTime = tree.GetDouble("elapsedTime");
+            transitionAtHour = tree.GetDouble("transitionAtHour");
         }
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
             base.ToTreeAttributes(tree);
 
-            tree.SetDouble("transitionAtTotalHours", transitionAtTotalHours);
-            tree.SetDouble("elapsedTime", elapsedTime);
+            tree.SetDouble("transitionAtHour", transitionAtHour);
         }
+
+        /*
+        public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc)
+        {
+            ICoreClientAPI capi = (Api as ICoreClientAPI);
+            GameCalendar cal = (GameCalendar)capi.World.Calendar;
+            int fullHour = (int)(transitionAtHour % (double)cal.HoursPerDay);
+            string hour = fullHour < 10 ? "0" + fullHour : "" + fullHour;
+            int m = (int)(60 * (transitionAtHour - fullHour));
+            string minute = m < 10 ? "0" + m : "" + m;
+            string time = hour + ":" + minute;
+
+
+            dsc.AppendLine("Transitions at: " + time + " on ");
+            base.GetBlockInfo(forPlayer, dsc);
+        }
+        */
+
     }
 }
