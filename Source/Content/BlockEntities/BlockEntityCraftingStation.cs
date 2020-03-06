@@ -36,8 +36,7 @@ namespace Immersion
             if (Api.Side.IsClient())
             {
                 util.InitializeAnimators(new Vec3f(block.Shape.rotateX, block.Shape.rotateY, block.Shape.rotateZ), block.animProps.allAnims);
-
-                RegisterGameTickListener(dt =>
+                inventory[0].MarkedDirty += () =>
                 {
                     StopAllAnims();
                     if (!action)
@@ -52,7 +51,10 @@ namespace Immersion
                     {
                         util.StartAnimation(new AnimationMetaData() { Code = block.animProps.idleAnim });
                     }
-                }, 30);
+                    return true;
+                };
+
+                inventory[0].MarkDirty();
             }
         }
 
@@ -66,7 +68,7 @@ namespace Immersion
                     if (action && slot.Itemstack.Item?.Tool == val.tool && inventory?[0]?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) != null && inventory?[0]?.StackSize >= val.input.StackSize)
                     {
                         action = false;
-                        Api.World.RegisterCallback(dt => action = true, val.craftTime);
+                        Api.World.RegisterCallback(dt => { action = true; inventory[0].MarkDirty(); }, val.craftTime);
 
                         if (byPlayer is IClientPlayer)
                         {
@@ -79,9 +81,11 @@ namespace Immersion
                             world.SpawnItemEntity(val.output, Pos.MidPoint());
                             world.PlaySoundAt(new AssetLocation(val.craftSound), blockSel.Position);
                             world.SpawnCubeParticles(Pos, Pos.MidPoint(), 1, 32, 0.5f);
-                            slot.MarkDirty();
-                            inventory[0].MarkDirty();
                         }
+
+                        slot.MarkDirty();
+                        inventory[0].MarkDirty();
+
                         break;
                     }
                     else if (slot.Itemstack.Collectible.WildCardMatch(val.input.Code))
@@ -89,9 +93,10 @@ namespace Immersion
                         if (byPlayer is IServerPlayer)
                         {
                             slot.TryPutInto(world, inventory[0]);
-                            inventory[0].MarkDirty();
-                            slot.MarkDirty();
                         }
+                        inventory[0].MarkDirty();
+                        slot.MarkDirty();
+
                         break;
                     }
                 }
