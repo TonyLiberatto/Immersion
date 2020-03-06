@@ -117,7 +117,7 @@
 		"z2": 1
 	},
 	"collisionbox": null,
-	"materialDensity": 1500,
+	"materialDensity": 750,
 	"guiTransform": {
 		"rotation": {
 			"x": -22.5937,
