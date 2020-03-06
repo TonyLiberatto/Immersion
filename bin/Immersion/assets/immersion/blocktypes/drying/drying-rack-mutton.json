@@ -16,7 +16,7 @@
                 "convertFrom": "drying-rack-*-mutton-salted-*",
                 "convertTo": "drying-rack-*-mutton-dry-*",
                 "inGameHours": 72,
-				"transitionConditions": { "RequiredSunlight": 32, }
+				"transitionConditions": { "RequiredSunlight": 21, }
             }
         },
         {
