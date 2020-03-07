@@ -28,7 +28,6 @@ namespace Immersion
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            base.OnBlockInteractStart(world, byPlayer, blockSel);
             (blockSel.BlockEntity(world) as BlockEntityCraftingStation)?.OnInteract(world, byPlayer, blockSel);
             return true;
         }

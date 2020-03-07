@@ -65,7 +65,7 @@ namespace Immersion
             {
                 foreach (var val in props)
                 {
-                    if (action && slot.Itemstack.Item?.Tool == val.tool && inventory?[0]?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) != null && inventory?[0]?.StackSize >= val.input.StackSize)
+                    if (action && slot.Itemstack.Item?.Tool == val.tool && (bool)(inventory?[0]?.Itemstack?.Collectible?.WildCardMatch(val.input.Code) ?? false) && inventory?[0]?.StackSize >= val.input.StackSize)
                     {
                         action = false;
                         Api.World.RegisterCallback(dt => { action = true; inventory[0].MarkDirty(); }, val.craftTime);
@@ -82,25 +82,20 @@ namespace Immersion
                             world.PlaySoundAt(new AssetLocation(val.craftSound), blockSel.Position);
                             world.SpawnCubeParticles(Pos, Pos.MidPoint(), 1, 32, 0.5f);
                         }
-
                         slot.MarkDirty();
-                        inventory[0].MarkDirty();
 
                         break;
                     }
                     else if (slot.Itemstack.Collectible.WildCardMatch(val.input.Code))
                     {
-                        if (byPlayer is IServerPlayer)
-                        {
-                            slot.TryPutInto(world, inventory[0]);
-                        }
-                        inventory[0].MarkDirty();
+                        slot.TryPutInto(world, inventory[0]);
                         slot.MarkDirty();
 
                         break;
                     }
                 }
             }
+            inventory[0].MarkDirty();
             MarkDirty(true);
         }
 
