@@ -108,7 +108,8 @@
     },
     "Tool": {
         "Code": "immersion:panel-kapok-debarked-down",
-        "Type": "Block",		
+        "Type": "Block",
+		"StackSize": 4		
     },
     "Makes": [{
         "Code": "immersion:chestsides-kapok-east",
