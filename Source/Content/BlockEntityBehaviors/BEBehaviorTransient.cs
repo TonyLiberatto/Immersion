@@ -55,7 +55,7 @@ namespace Immersion
 
         public void CheckTransition(float dt)
         {
-            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.MaxTimeOfDayLight);
+            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight);
 
             if (light < (conditions?.RequiredSunlight ?? -1))
             {
