@@ -11,10 +11,46 @@
 	},
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
-		"*": [{
+		"*-intestines": [{
             "name": "Transient",
             "properties": {
-                "convertFrom": "food-bowl-*",
+                "convertFrom": "food-bowl-*-intestines",
+                "convertTo": "food-bowl-large-{color}-rotten",
+                "inGameHours": 48
+            }
+			},
+			{
+				"name": "Consumable",
+				"properties": {
+					"eatenTo": "food-bowl-large-{color}-burned",
+					"contentConfig": {
+						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+					}
+				}
+			}
+		],
+		"*-cleanintestines": [{
+            "name": "Transient",
+            "properties": {
+                "convertFrom": "food-bowl-*-cleanintestines",
+                "convertTo": "food-bowl-large-{color}-rotten",
+                "inGameHours": 48
+            }
+			},
+			{
+				"name": "Consumable",
+				"properties": {
+					"eatenTo": "food-bowl-large-{color}-burned",
+					"contentConfig": {
+						"foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
+					}
+				}
+			}
+		],
+		"*-casings": [{
+            "name": "Transient",
+            "properties": {
+                "convertFrom": "food-bowl-*-casings",
                 "convertTo": "food-bowl-large-{color}-rotten",
                 "inGameHours": 48
             }

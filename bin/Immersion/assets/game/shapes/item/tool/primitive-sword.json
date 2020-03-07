@@ -6,14 +6,14 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		
 	},
 	"elements": [
 		{
 			"name": "wood1",
-			"from": [ 13.0, 7.5, 7.5 ], 
-			"to": [ 18.0, 8.5, 8.5 ], 
-			"rotationOrigin": [ 13.0, 7.5, 7.5 ],
+			"from": [ 5.5, 0.0, 7.5 ], 
+			"to": [ 10.5, 1.0, 8.5 ], 
+			"rotationOrigin": [ 6.0, 0.5, 7.5 ],
+			"rotationY": 180.0,
 			"faces": {
 				"north": { "texture": "#shaft", "uv": [ 0.0, 0.0, 5.0, 1.0 ] },
 				"east": { "texture": "#shaft", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "enabled": false },
