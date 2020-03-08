@@ -10,7 +10,7 @@
     "variantgroups": [{"code": "metal", "states": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ]}],
     "shape": { "base": "item/tool/toolpin" },
     "texture": { "base": "item/tool/material/{metal}" },
-    "creativeinventory": { "general": ["*"], "items": ["*"], "immersionitems": ["*"]},
+    "creativeinventory": { "tabname-immersionwip": "I WIP", },
     "maxstacksize": 98,
     "materialDensity": 100,
     guiTransform: {

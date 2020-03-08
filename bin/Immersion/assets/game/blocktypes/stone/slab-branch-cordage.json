@@ -13,7 +13,7 @@
 		{ code: "style", states: ["debarked"]},
 		{ code: "cordage", states: ["leatherstrips", "sinew", "rope"] },
 	],
-	creativeinventory: { "general": [""], "terrain": [""], "immersionblocks": ["*"] },
+	creativeinventory: { "tabname-immersionwip": "I WIP", },
 	shape: { base: "block/slab-branch-cross" },
 	blockmaterial: "Stone",
 	textures: {

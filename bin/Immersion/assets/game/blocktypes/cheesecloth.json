@@ -16,7 +16,7 @@
 		"*": { all: false },
 	},
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["*"], "decorative": ["*"] },
+	creativeinventory: { "immersionwip": ["*"] },
 	replaceable: 700,
 	resistance: 1,
 	lightAbsorption: 1,

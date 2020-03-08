@@ -22,7 +22,7 @@
 		burnTemperature: 600,
 		burnDuration: 10,
 	},
-	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	drawtype: "json",
 	lightAbsorption: 0,
 	sidesolid: { all: false },

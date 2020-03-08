@@ -9,9 +9,7 @@
   },
   shape: { base: "item/tool/woodenmallet" },
   creativeinventory: {
-    "general": [ "*" ],
-    "items": [ "*" ],
-    "immersionitems": [ "*" ]
+   "tabname-immersionwip": "I WIP",
   },
   fpHandTransform: {
     translation: {
