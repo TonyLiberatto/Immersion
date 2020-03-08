@@ -44,7 +44,7 @@
 				"properties": {
                 "convertFrom": "dryingmat-fresh-{size}-{fruit}-{side}",
                 "convertTo": "dryingmat-dry-{size}-{fruit}-{side}",
-                "inGameHours": 48,
+                "inGameHours": 24,
 				"transitionConditions": { "RequiredSunlight": 21, }
 				}}],
         "*":[{"name": "Consumable",
