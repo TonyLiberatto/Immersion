@@ -752,7 +752,7 @@
                 }
             },
             {
-                "code": "ore-emerald",
+                "code": "gem-emerald-rough",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
