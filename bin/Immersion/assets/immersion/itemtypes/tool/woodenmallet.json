@@ -8,9 +8,8 @@
     "leather": { base: "game:block/cloth/leather/normal" }
   },
   shape: { base: "item/tool/woodenmallet" },
-  creativeinventory: {
-   "tabname-immersionwip": "I WIP",
-  },
+  creativeinventory: { "immersionwip": ["*"] },
+  
   fpHandTransform: {
     translation: {
       x: 0.1,

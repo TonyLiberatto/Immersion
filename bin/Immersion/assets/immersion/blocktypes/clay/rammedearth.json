@@ -3,7 +3,7 @@
 	shape: { base: "game:block/basic/cube" },
 	drawtype: "Cube",
 	blockmaterial: "Stone",
-    creativeinventory: { "tabname-immersionwip": "I WIP", },
+    creativeinventory: { "tabname-immersionwip": ["*"] },
     variantgroups: [
 		{ code: "type", states: ["light", "medium", "mixed"] }
 	],
