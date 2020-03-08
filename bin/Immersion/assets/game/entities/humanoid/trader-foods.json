@@ -597,7 +597,7 @@
             },
             {
                 "name": "Closed Barrel (Empty)",
-                "code": "barrel-closed-empty",
+                "code": "immersion:barrel-acacia-closed-empty",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
@@ -611,7 +611,7 @@
             },
             {
                 "name": "Open Barrel (Empty)",
-                "code": "barrel-opened-empty",
+                "code": "immersion:barrel-acacia-opened-empty",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {

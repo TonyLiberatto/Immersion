@@ -521,7 +521,7 @@
                 }
             },
             {
-                "code": "barrel",
+                "code": "immersion:barrel-acacia",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {

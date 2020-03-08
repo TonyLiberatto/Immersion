@@ -1,5 +1,5 @@
 {
-	code: "humanoid-trader-furniture",
+	code: "humanoid-trader-commodities",
 	class: "EntityTrader",
 	canClimb: true,
 	hitboxSize: { x: 0.6, y: 1.75 },
@@ -40,82 +40,16 @@
 				money: { avg: 30, var: 10 },
 
 
-
     "selling": {
         "maxItems": 8,
         "list": [
             {
-                "code": "painting-howl-north",
-                "type": "block",
-                "stacksize": 1,
+                "code": "feather",
+                "type": "item",
+                "stacksize": 8,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
                     "avg": 8,
                     "var": 2
-                }
-            },
-            {
-                "code": "painting-elk-north",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "code": "painting-underwater-north",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "code": "painting-prey-north",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "code": "painting-forestdawn-north",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "code": "ironfence-base-ew",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 32,
-                    "var": 8
                 },
                 "price": {
                     "avg": 2,
@@ -123,12 +57,12 @@
                 }
             },
             {
-                "code": "ironfence-top-ew",
-                "type": "block",
-                "stacksize": 1,
+                "code": "candle-wax",
+                "type": "item",
+                "stacksize": 2,
                 "stock": {
-                    "avg": 32,
-                    "var": 8
+                    "avg": 8,
+                    "var": 2
                 },
                 "price": {
                     "avg": 2,
@@ -136,100 +70,87 @@
                 }
             },
             {
-                "code": "lantern-copper-plain-up",
-                "type": "block",
-                "stacksize": 1,
+                "code": "charcoal",
+                "type": "item",
+                "stacksize": 8,
                 "stock": {
                     "avg": 8,
                     "var": 2
                 },
                 "price": {
-                    "avg": 4,
-                    "var": 1
-                },
+                    "avg": 2,
+                    "var": 0.5
+                }
             },
             {
-                "code": "lantern-brass-plain-up",
-                "type": "block",
-                "stacksize": 1,
+                "code": "flaxtwine",
+                "type": "item",
+                "stacksize": 8,
                 "stock": {
                     "avg": 4,
                     "var": 1
                 },
                 "price": {
-                    "avg": 5,
-                    "var": 1.25
-                },
+                    "avg": 2,
+                    "var": 0.5
+                }
             },
             {
-                "code": "lantern-tinbronze-plain-up",
-                "type": "block",
-                "stacksize": 1,
+                "code": "nugget-nativecopper",
+                "type": "item",
+                "stacksize": 16,
                 "stock": {
                     "avg": 4,
                     "var": 1
                 },
                 "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "nugget-cassiterite",
+                "type": "item",
+                "stacksize": 5,
+                "stock": {
                     "avg": 6,
                     "var": 1.5
                 },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
             },
             {
-                "code": "lantern-bismuthbronze-plain-up",
-                "type": "block",
-                "stacksize": 1,
+                "code": "nugget-bismuthinite",
+                "type": "item",
+                "stacksize": 5,
                 "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
                     "avg": 6,
                     "var": 1.5
                 },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
             },
             {
-                "code": "lantern-blackbronze-plain-up",
-                "type": "block",
-                "stacksize": 1,
+                "code": "nugget-sphalerite",
+                "type": "item",
+                "stacksize": 5,
                 "stock": {
-                    "avg": 4,
-                    "var": 1
-                },
-                "price": {
                     "avg": 6,
                     "var": 1.5
                 },
-            },
-            {
-                "code": "bookshelves-ns",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 8,
-                    "var": 2
-                },
                 "price": {
-                    "avg": 8,
-                    "var": 2
+                    "avg": 2,
+                    "var": 0.5
                 }
             },
             {
-                "code": "bed-wood-head-north",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "code": "immersion:chair-acacia",
-                "type": "block",
-                "stacksize": 1,
+                "code": "ore-sulfur",
+                "type": "item",
+                "stacksize": 16,
                 "stock": {
                     "avg": 4,
                     "var": 1
@@ -240,12 +161,12 @@
                 }
             },
             {
-                "code": "immersion:dooracacia-north-down-closed-left",
-                "type": "block",
-                "stacksize": 1,
+                "code": "blastingpowder",
+                "type": "item",
+                "stacksize": 2,
                 "stock": {
-                    "avg": 4,
-                    "var": 1
+                    "avg": 8,
+                    "var": 2
                 },
                 "price": {
                     "avg": 2,
@@ -253,12 +174,12 @@
                 }
             },
             {
-                "code": "immersion:table-acacia",
-                "type": "block",
-                "stacksize": 1,
+                "code": "saltpeter",
+                "type": "item",
+                "stacksize": 8,
                 "stock": {
-                    "avg": 2,
-                    "var": 0.5
+                    "avg": 8,
+                    "var": 2
                 },
                 "price": {
                     "avg": 2,
@@ -266,7 +187,20 @@
                 }
             },
             {
-                "code": "ladder-north",
+                "code": "lime",
+                "type": "item",
+                "stacksize": 16,
+                "stock": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "peatbrick",
                 "type": "block",
                 "stacksize": 16,
                 "stock": {
@@ -279,28 +213,12 @@
                 }
             },
             {
-                "code": "survivalchest-east",
+                "code": "linen-diamond-down",
                 "type": "block",
-                "stacksize": 1,
+                "stacksize": 2,
                 "stock": {
-                    "avg": 16,
-                    "var": 4
-                },
-                "price": {
-                    "avg": 2,
-                    "var": 0.5
-                },
-                "attributes": {
-                    "type": "normal-generic-acacia"
-                }
-            },
-            {
-                "code": "immersion:barrel-acacia",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 8,
-                    "var": 2
+                    "avg": 4,
+                    "var": 1
                 },
                 "price": {
                     "avg": 2,
@@ -308,12 +226,12 @@
                 }
             },
             {
-                "code": "woodencrate-closed",
+                "code": "linen-normal-down",
                 "type": "block",
-                "stacksize": 1,
+                "stacksize": 2,
                 "stock": {
-                    "avg": 8,
-                    "var": 2
+                    "avg": 4,
+                    "var": 1
                 },
                 "price": {
                     "avg": 2,
@@ -321,16 +239,68 @@
                 }
             },
             {
-                "code": "woodencrate-opened",
+                "code": "linen-offset-down",
                 "type": "block",
-                "stacksize": 1,
+                "stacksize": 2,
                 "stock": {
-                    "avg": 8,
-                    "var": 2
+                    "avg": 4,
+                    "var": 1
                 },
                 "price": {
                     "avg": 2,
                     "var": 0.5
+                }
+            },
+            {
+                "code": "linen-square-down",
+                "type": "block",
+                "stacksize": 2,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "metal-parts",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "stone-halite",
+                "type": "item",
+                "stacksize": 16,
+                "stock": {
+                    "avg": 12,
+                    "var": 3
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "potash",
+                "type": "item",
+                "stacksize": 10,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
                 }
             }
         ]
@@ -339,159 +309,29 @@
         "maxItems": 8,
         "list": [
             {
-                "code": "glass-green",
-                "type": "block",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "glass-blue",
-                "type": "block",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "glass-violet",
-                "type": "block",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "glass-red",
-                "type": "block",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "glass-yellow",
-                "type": "block",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "glass-brown",
-                "type": "block",
-                "stacksize": 3,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "glass-plain",
-                "type": "block",
-                "stacksize": 8,
-                "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
-                    "avg": 1,
-                    "var": 0.25
-                }
-            },
-            {
-                "code": "chandelier-candle0",
+                "code": "woodencrate-closed",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 3,
+                    "var": 0.75
                 },
                 "price": {
-                    "avg": 10,
-                    "var": 2.5
+                    "avg": 1,
+                    "var": 0.25
                 }
             },
             {
-                "code": "smallcarpet-blue",
+                "code": "woodencrate-opened",
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 3,
+                    "var": 0.75
                 },
                 "price": {
-                    "avg": 10,
-                    "var": 2.5
-                }
-            },
-            {
-                "code": "smallcarpet-brown",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
                     "avg": 1,
                     "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
-                }
-            },
-            {
-                "code": "smallcarpet-red",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 10,
-                    "var": 2.5
-                }
-            },
-            {
-                "code": "smallcarpet-turqoise",
-                "type": "block",
-                "stacksize": 1,
-                "stock": {
-                    "avg": 1,
-                    "var": 0.25
-                },
-                "price": {
-                    "avg": 8,
-                    "var": 2
                 }
             },
             {
@@ -499,50 +339,128 @@
                 "type": "block",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 3,
+                    "var": 0.75
                 },
                 "price": {
                     "avg": 10,
                     "var": 2.5
                 },
                 "attributes": {
-                    "type": "golden"
+                    "type": "owl"
                 }
             },
             {
-                "code": "clothes-shoulder-artisans-scarf",
-                "type": "item",
+                "code": "lootvessel-seed",
+                "type": "block",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 4,
+                    "var": 1
                 },
                 "price": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 9,
+                    "var": 2.25
                 }
             },
             {
-                "code": "clothes-lowerbody-workmans-gown",
-                "type": "item",
+                "code": "lootvessel-food",
+                "type": "block",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 4,
+                    "var": 1
                 },
                 "price": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 7,
+                    "var": 1.75
                 }
             },
             {
-                "code": "clothes-waist-heavy-tool-belt",
+                "code": "lootvessel-forage",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "lootvessel-ore",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "lootvessel-tool",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "lootvessel-farming",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "beeswax",
+                "type": "item",
+                "stacksize": 2,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "clothes-arm-merchant-bracelet",
                 "type": "item",
                 "stacksize": 1,
                 "stock": {
-                    "avg": 1,
-                    "var": 0.25
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "clothes-foot-merchant-shoes",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
                 },
                 "price": {
                     "avg": 4,
@@ -550,28 +468,79 @@
                 }
             },
             {
-                "code": "linen-normal-down",
-                "type": "block",
-                "stacksize": 3,
+                "code": "clothes-head-merchant-hat",
+                "type": "item",
+                "stacksize": 1,
                 "stock": {
-                    "avg": 5,
-                    "var": 1.25
-                },
-                "price": {
                     "avg": 2,
                     "var": 0.5
+                },
+                "price": {
+                    "avg": 4,
+                    "var": 1
+                }
+            },
+            {
+                "code": "clothes-lowerbody-merchant-pants",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 5,
+                    "var": 1.25
+                }
+            },
+            {
+                "code": "clothes-neck-merchant-amulet",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 4,
+                    "var": 1
+                }
+            },
+            {
+                "code": "clothes-upperbody-merchant-shirt",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 5,
+                    "var": 1.25
+                }
+            },
+            {
+                "code": "clothes-waist-merchant-belt",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 4,
+                    "var": 1
                 }
             }
         ]
     }
-    
-    
-    
+
+
 				
 			}
 		},
 		behaviors: [
-			{ code: "nametag", selectFromRandomName: ["Wilt", "Lin", "Robert", "Ra Bal", "Filipe", "Hosa", "Vlad", "Mouse"] }, 
+			{ code: "nametag", selectFromRandomName: ["Stefan", "Yan", "Leo", "Jasper", "Aram", "Samoset", "Ruslan", "Stretch"] }, 
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.01 }, 
 			{ code: "reviveondeath", minHours: 24, maxHours: 72 },
@@ -608,7 +577,7 @@
 						seekingRange: 20,
 						movespeed: 0.035,
 						animation: "Run",
-						animationSpeed: 3,
+						animationSpeed: 1.75,
 						whenInEmotionState: "aggressiveondamage"
 					},
 					{
@@ -618,7 +587,7 @@
 						movespeed: 0.035,
 						seekingRange: 12,
 						animation: "Run",
-						animationSpeed: 3,
+						animationSpeed: 1.75,
 						whenInEmotionState: "fleeondamage"
 					},
 					{
