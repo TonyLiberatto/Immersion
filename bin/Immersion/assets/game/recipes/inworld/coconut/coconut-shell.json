@@ -1,0 +1,62 @@
+[
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:tropicalfruits-coconutshell-*",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:knife-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:tropicalfruits-coconut-north",
+        "Type": "Block",      
+    }],
+    "IsTool": true,
+	"MakeTime": 4,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+  },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:tropicalfruits-coconut-*",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:hammer-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:tropicalfruits-coconutbroken-north",
+        "Type": "Block",        
+    }],
+    "IsTool": true,
+	"MakeTime": 4,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+  },
+  {
+    "Mode": "Swap",
+    "Takes": {
+		"Code": "immersion:tropicalfruits-coconut-*",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:axe-*",
+        "Type": "Item",		
+    },
+    "Makes": [{
+        "Code": "immersion:tropicalfruits-coconutbroken-north",
+        "Type": "Block",        
+    }],
+    "IsTool": true,
+	"MakeTime": 4,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+  },  
+]
