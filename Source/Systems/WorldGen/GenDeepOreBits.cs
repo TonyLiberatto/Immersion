@@ -9,6 +9,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.API.Util;
 using Vintagestory.Client.NoObf;
 using Vintagestory.GameContent;
 using Vintagestory.ServerMods;
@@ -23,6 +24,7 @@ namespace Immersion
         public override double ExecuteOrder() => 0.9;
         IWorldGenBlockAccessor bA;
         public DepositVariant[] Deposits;
+        public LCGRandom rand;
         Dictionary<int, int> surfaceBlocks = new Dictionary<int, int>();
         DeepOreGenProperties genProperties;
         NormalizedSimplexNoise sNoise;
@@ -80,6 +82,10 @@ namespace Immersion
                     int rockID = chunks[0].MapChunk.TopRockIdMap[z * chunksize + x];
                     string rock = bA.GetBlock(rockID).Variant["rock"];
 
+                    rand.InitPositionSeed(rdx + x, rdz + z);
+
+                    var deposits = Deposits.Shuffle(rand);
+
                     for (int i = 0; i < Deposits.Length; i++)
                     {
                         double dnoise = sNoise.Noise(rdx + x + i + 4987, rdz + z + i + 15654);
@@ -109,6 +115,7 @@ namespace Immersion
             LoadGlobalConfig(Api);
             sNoise = NormalizedSimplexNoise.FromDefaultOctaves(2, 4.0, 1.0, Api.WorldManager.Seed + 1492);
             Deposits = Api.ModLoader.GetModSystem<GenDeposits>().Deposits;
+            rand = new LCGRandom(Api.WorldManager.Seed + 1546);
         }
     }
 

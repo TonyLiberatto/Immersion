@@ -8,6 +8,7 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
+using Vintagestory.API.Server;
 using Vintagestory.Common;
 using Vintagestory.GameContent;
 
@@ -60,6 +61,8 @@ namespace Immersion
         public void CheckTransition(float dt)
         {
             int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.MaxTimeOfDayLight);
+            bool running = (Api.World.Calendar as GameCalendar).IsRunning;
+            if (!running) return;
 
             if (light < (conditions?.RequiredSunlight ?? -1))
             {
@@ -69,7 +72,7 @@ namespace Immersion
             prevTime = Api.World.Calendar.TotalHours;
             if (Api.Side.IsServer())
             {
-                if (Api.World.Calendar.TotalHours < transitionAtHour) return;
+                if (prevTime < transitionAtHour) return;
 
                 Block block = Api.World.BlockAccessor.GetBlock(Pos);
                 Block tblock;
@@ -132,13 +135,19 @@ namespace Immersion
             ICoreClientAPI capi = (Api as ICoreClientAPI);
             int hours = (int)Math.Round(transitionAtHour - prevTime);
             hours = hours < 0 ? 0 : hours;
+
+            if (toCode.Contains("*"))
+            {
+                loc = Blockentity.Block.WildCardReplace(new AssetLocation(fromCode), new AssetLocation(toCode));
+            }
+
             string transition = Lang.GetMatching(loc.Domain + ":block-" + loc.Path);
             string allowed = "aeiouAEIOU";
 
             string a = allowed.Contains(transition[0]) ? "an " : "a ";
 
 
-            dsc.AppendLine("Transitions into " + a + transition + " in " + hours.ToString() + " Hours");
+            dsc.Append("Transitions into " + a + transition + " in " + hours.ToString() + " Hours").AppendLine();
             base.GetBlockInfo(forPlayer, dsc);
         }
 

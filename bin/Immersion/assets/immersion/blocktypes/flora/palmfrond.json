@@ -3,55 +3,22 @@
     "class": "BlockPalmTree",
     "behaviorsByType": {
         "*-grown-*": [
-            {
-                "name": "PushEventOnBlockBroken",
-                "properties": {
-                    "eventName": "testForDecay"
-                }
-            }
+            {  "name": "PushEventOnBlockBroken",   "properties": {  "eventName": "testForDecay"  }  }
         ],
         "*": [
-            {
-                "name": "HorizontalOrientable"
-            }
+            {  "name": "HorizontalOrientable"   }
         ]
     },
     "variantgroups": [
-        {
-            "code": "amount",
-            "states": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ]
-        },
-        {
-            "code": "type",
-            "states": [
-                "grown",
-                "placed"
-            ]
-        },
-        {
-            "loadFromProperties": "abstract/horizontalorientation"
-        }
+        { "code": "amount",   "states": [  "0",  "1", "2", "3" ]  },
+        {  "code": "type",   "states": [  "grown",  "placed"  ]   },
+        { "loadFromProperties": "abstract/horizontalorientation"  }
     ],
     "vertexFlags": {
         "zOffset": 4,
         "leavesWindWave": true
     },
-    "creativeinventory": {
-        "general": [
-            "*"
-        ],
-        "flora": [
-            "*"
-        ],
-        "immersionflora": [
-            "*"
-        ]
-    },
+    "creativeinventory": { "general": [  "*-placed-north"  ],    "immersionflora": [  "*-placed-north"  ] },
     "renderPass": "OpaqueNoCull",
     "randomDrawOffset": false,
     "drops": [
