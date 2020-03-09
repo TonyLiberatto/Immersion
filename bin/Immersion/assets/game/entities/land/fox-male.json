@@ -229,7 +229,7 @@
 				minForestOrShrubs: 0.25,
 				maxForest: 0.75,
 				maxShrubs: 0.75,
-				companions: ["fox-female", "fox-baby"]
+				companions: ["fox-female", "fox-pup-forest"]
 			},
 			runtime: {
 				group: "neutral",
@@ -247,7 +247,7 @@
 				minForestOrShrubs: 0.25,
 				maxForest: 0.75,
 				maxShrubs: 0.75,
-				companions: ["fox-female", "fox-baby"]
+				companions: ["fox-female", "fox-pup-forest"]
 			}
 		}
 	},

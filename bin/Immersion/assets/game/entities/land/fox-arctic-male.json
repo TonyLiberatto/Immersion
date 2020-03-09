@@ -228,7 +228,7 @@
 				maxTemp: -10,
 				minRain: 0.25,
 				minForest: 0.5,
-				companions: ["fox-arctic-female"]
+				companions: ["fox-arctic-female", "fox-pup-arctic"]
 			},
 			runtime: {
 				group: "neutral",
@@ -242,7 +242,7 @@
 				maxTemp: -10,
 				minRain: 0.25,
 				minForest: 0.5,
-				companions: ["fox-arctic-female"]
+				companions: ["fox-arctic-female", "fox-pup-arctic"]
 			}
 		}
 	},

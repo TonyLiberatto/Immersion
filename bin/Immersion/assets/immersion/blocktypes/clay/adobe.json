@@ -6,7 +6,7 @@
   creativeinventory: {
     "general": [ "*" ],
     "construction": [ "*" ],
-    "immersiondeco": [ "*" ]
+    "immersionblocks": [ "*" ]
   },
   replaceable: 400,
   resistance: 1.5,

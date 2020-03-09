@@ -38,5 +38,16 @@
       "stackSize": 1
     },
     "file": "config/general.json"
+  },
+    {
+    "op": "add",
+    "path": "/startStacks/4",
+    "value": {
+      "type": "item",
+      "code": "game:bread-spelt",
+      "stackSize": 8
+    },
+    "file": "config/general.json"
   }
+  
 ]

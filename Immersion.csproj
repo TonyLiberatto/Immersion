@@ -590,6 +590,8 @@
     <None Include="bin\Immersion\assets\game\recipes\grid\stonepathstairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\tool\axe.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\tool\bone-primitive-arrowhead.json" />
+    <None Include="bin\Immersion\assets\game\recipes\grid\tool\hammer.json" />
+    <None Include="bin\Immersion\assets\game\recipes\grid\tool\hoe.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\tool\knife.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\tool\shovel.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\tool\spear.json" />

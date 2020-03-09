@@ -656,8 +656,8 @@
             },
             {
                 "name": "Backpack",
-                "code": "backpack",
-                "type": "item",
+                "code": "immersion:backpack",
+                "type": "block",
                 "stacksize": 2,
                 "stock": {
                     "avg": 5,

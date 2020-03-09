@@ -1,5 +1,5 @@
 [
-{
+ {
 	ingredientPattern: "LLL	L_L	LLL",
 	ingredients: {
 		"L": { type: "item", code: "reeds", quantity: 3 }
@@ -8,8 +8,8 @@
 	width: 3,
 	height: 3,
 	output: { type: "block", code: "stationarybasket-east", attributes: { type: "reed" }  }
-},
-{
+ },
+ {
 	ingredientPattern: "LLL	L_L	LLL",
 	ingredients: {
 		"L": { type: "item", code: "cattailtops", quantity: 3 }
@@ -18,6 +18,15 @@
 	width: 3,
 	height: 3,
 	output: { type: "block", code: "stationarybasket-east", attributes: { type: "reed" }  }
-},
-
+ },
+ {
+	ingredientPattern: "LLL	L_L	LLL",
+	ingredients: {
+		"L": { type: "block", code: "wildvine-*", quantity: 3 }
+	},
+	name: "basket",
+	width: 3,
+	height: 3,
+	output: { type: "block", code: "stationarybasket-east", attributes: { type: "vine" }  }
+ },
 ]

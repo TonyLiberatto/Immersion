@@ -3,10 +3,10 @@
 	behaviors: [{name: "UnstableFalling"}, { name: "RightClickPickup"}, { name: "SneakPlacing"} ],
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
-		"*": [{
+		"*-pemmican*": [{
             "name": "Transient",
             "properties": {
-                "convertFrom": "food-bowl-*",
+                "convertFrom": "food-bowl-*-pemmican*",
                 "convertTo": "food-bowl-large-{color}-rotten",
                 "inGameHours": 48
             }

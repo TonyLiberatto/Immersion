@@ -21,7 +21,7 @@
 		"rock": { base: "game:block/stone/rock/andesite1" },
 		"flaxbread": { base: "game:item/food/grain/flaxbread" }
 	},
-	creativeinventory: { general: ["firepit-*"], decorative: ["firepit-*"] },
+	creativeinventory: { "immersionwip": ["*"] },
 	blockmaterial: "Wood",
 	lightAbsorption: 0,
 	lightHsvByType: {

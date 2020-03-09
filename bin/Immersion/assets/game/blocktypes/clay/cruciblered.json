@@ -57,7 +57,7 @@
 	},
 	shape: { base: "block/clay/crucible" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*-raw", "*-burned"], "decorative": ["*-raw", "*-burned"], "immersionblocks": ["*-raw", "*-burned"], "immersiondeco": ["*-raw", "*-burned"] },
+	creativeinventory: { "general": ["*-raw", "*-burned"], "immersionblocks": ["*-raw", "*-burned"], },
 	replaceable: 300,
 	resistance: 2,
 	maxStackSize: 1,

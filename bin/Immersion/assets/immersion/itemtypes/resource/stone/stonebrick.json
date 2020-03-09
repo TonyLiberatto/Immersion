@@ -6,7 +6,7 @@
     ],
     shape: { base: "item/resource/stonebrick" },
 	texture: { base: "game:block/stone/rock/{rock}*" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersiondeco": ["*"] },
+	creativeinventory: { "immersionwip": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0, y: 0.4, z: 0 },
 		rotation: { x: 0, y: 0, z: 5 }
