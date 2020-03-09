@@ -5,6 +5,7 @@ using System.Text;
 using Vintagestory.API;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
+using Vintagestory.API.Config;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.Common;
@@ -37,6 +38,7 @@ namespace Immersion
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {
             base.Initialize(api, properties);
+            prevTime = Api.World.Calendar.TotalHours;
             if (transitionAtHour <= 0)
             {
                 transitionAtHour = api.World.Calendar.TotalHours + properties["inGameHours"].AsFloat(24);
@@ -48,20 +50,23 @@ namespace Immersion
 
             if (fromCode != null && toCode != null)
             {
-                Blockentity.RegisterGameTickListener(CheckTransition, 2000);
+                Blockentity.RegisterGameTickListener(CheckTransition, api.Side.IsClient() ? 30 : 2000);
             }
             else api.World.BlockAccessor.RemoveBlockEntity(Pos);
         }
 
+        double prevTime;
+
         public void CheckTransition(float dt)
         {
-            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.OnlySunLight);
+            int light = Api.World.BlockAccessor.GetLightLevel(this.Blockentity.Pos, EnumLightLevelType.MaxTimeOfDayLight);
 
             if (light < (conditions?.RequiredSunlight ?? -1))
             {
-                transitionAtHour += (dt / 60);
+                transitionAtHour += (Api.World.Calendar.TotalHours - prevTime);
             }
 
+            prevTime = Api.World.Calendar.TotalHours;
             if (Api.Side.IsServer())
             {
                 if (Api.World.Calendar.TotalHours < transitionAtHour) return;
@@ -105,6 +110,7 @@ namespace Immersion
 
         public override void GetBlockInfo(IPlayer forPlayer, StringBuilder dsc)
         {
+            /*
             ICoreClientAPI capi = (Api as ICoreClientAPI);
             GameCalendar cal = (GameCalendar)capi.World.Calendar;
             double hourOfDay = (transitionAtHour % (double)cal.HoursPerDay);
@@ -120,6 +126,19 @@ namespace Immersion
 
 
             dsc.AppendLine("Transitions at: " + time + " on " + DayOfYear + "/" + cal.DaysPerYear + ", " + year);
+            */
+            AssetLocation loc = new AssetLocation(toCode);
+
+            ICoreClientAPI capi = (Api as ICoreClientAPI);
+            int hours = (int)Math.Round(transitionAtHour - prevTime);
+            hours = hours < 0 ? 0 : hours;
+            string transition = Lang.GetMatching(loc.Domain + ":block-" + loc.Path);
+            string allowed = "aeiouAEIOU";
+
+            string a = allowed.Contains(transition[0]) ? "an " : "a ";
+
+
+            dsc.AppendLine("Transitions into " + a + transition + " in " + hours.ToString() + " Hours");
             base.GetBlockInfo(forPlayer, dsc);
         }
 
