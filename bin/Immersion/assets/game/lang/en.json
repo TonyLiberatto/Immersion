@@ -37,7 +37,7 @@
 	"block-polishedrockslab-bauxite-down": "Bauxite polished slab",
 	"block-looseores-sylvite-*": "Sylvite bits",
 	"block-looseores-olivine-*": "Olivine bits",
-
+	
 	"block-giantreed-arundo-free-normal": "Giant Reed (Arundo Donax)",
 	"blockdesc-giantreed-arundo-free-normal": "Harvest using any knife to collect 10 reed bundles.",
 
@@ -52,9 +52,9 @@
 	"item-seeds-sisal": "Sisal Seeds",
 	"item-sisal-leaves": "Sisal Leaves",
 	"itemdesc-sisal-leaves": "Harvested from sisal plants using any knife.",
-	"item-handbooktitle-sisal-leaves": "Used for",
+    "item-handbooktitle-sisal-leaves": "Used for",
 	"item-handbooktext-sisal-leaves": "Crush with any hammer to obtain sisal fiber (grid). Each leaf provides 16 fiber. These leaves are used to craft all sisal cordage.",
-
+	
 	"block-crop-sisal-5": "Mature Sisal",
 	"blockdesc-crop-sisal-5": "Almost Mature Sisal. Use a knife to harvest leaves, this plant will not provide seeds.",
 	"block-crop-sisal-6": "Mature Flowering Sisal",
@@ -131,7 +131,7 @@
 	"blockdesc-mortarandpestle-*": "A stone-age quern",
 	"block-handbooktitle-mortarandpestle-*": "Used for",
 	"block-handbooktext-mortarandpestle-*": "Milling grains, dried foods, and other resources. This block requires a space above the mortar to use and cannot be automated using a windmill.",
-
+	
 	"block-seawater-still-7": "Still Sea Water",
 	"item-seawaterportion": "Sea Water portion",
 	"incontainer-item-seawaterportion": "Sea Water",
@@ -144,9 +144,9 @@
 	"block-dryingtray-kapok": "Kapok Drying Tray",
 	"block-dryingtray-aged": "Aged Drying Tray",
 	"blockdesc-dryingtray-*": "Place in the sun and use a bucket to add portions of seawater. Produces salt after evaporation.",
-	"block-handbooktitle-dryingtray-*": "Used for",
+    "block-handbooktitle-dryingtray-*": "Used for",
 	"block-handbooktext-dryingtray-*": "Obtaining salt from seawater. Place the tray in the sun. Use a bucket to add up to 16 portions of seawater. After the water evaporates, salt can be harvested from the tray (RMB)",
-
+	
 	"block-choppingblock-birch-*": "Birch Chopping Block",
 	"block-choppingblock-oak-*": "Oak Chopping Block",
 	"block-choppingblock-maple-*": "Maple Chopping Block",
@@ -155,9 +155,9 @@
 	"block-choppingblock-kapok-*": "Kapok Chopping Block",
 	"block-choppingblock-aged-*": "Aged Chopping Block",
 	"blockdesc-choppingblock-*": "Place a log or branch of any wood type (RMB). Convert the log or branch to firewood using an axe (Sneak + RMB).",
-	"block-handbooktitle-choppingblock-*": "Used for",
+    "block-handbooktitle-choppingblock-*": "Used for",
 	"block-handbooktext-choppingblock-*": "Obtaining firewood from logs and branches. Firewood yield is 8 (log) and 6 (thick), 4 (medium) or 2 (thin).",
-
+	
 	"block-bonfire-extinct": "Bonfire (Extinct)",
 	"block-bonfire-lit": "Bonfire (Lit)",
 	"block-bonfire-cold": "Bonfire (Cold)",
@@ -260,7 +260,7 @@
 	"block-food-bowl-large-fire-casings": "Large Fire Mixing Bowl with Casings",
 	"block-food-bowl-large-red-casings": "Large Red Mixing Bowl with Casings",
 	"blockdesc-food-bowl-large-*-casings": "Hold RMB to harvest Casings.",
-
+	
 	"block-food-bowl-small-blue-meat-flour": "Small Blue Mixing Bowl with Dried Meat Flour",
 	"block-food-bowl-medium-blue-meat-flour": "Medium Blue Mixing Bowl with Dried Meat Flour",
 	"block-food-bowl-large-blue-meat-flour": "Large Blue Mixing Bowl with Dried Meat Flour",
@@ -274,7 +274,7 @@
 	"block-food-bowl-medium-red-meat-flour": "Medium Red Mixing Bowl with Dried Meat Flour",
 	"block-food-bowl-large-red-meat-flour": "Large Red Mixing Bowl with Dried Meat Flour",
 	"blockdesc-food-bowl-*-meat-flour": "Add Dried Fruit Flour (Sneak + RMB) to continue creating Pemmican",
-
+    
 	"block-food-bowl-small-blue-meat-fruit": "Small Blue Mixing Bowl with Dried Meat & Fruit Flour",
 	"block-food-bowl-medium-blue-meat-fruit": "Medium Blue Mixing Bowl with Dried Meat & Fruit Flour",
 	"block-food-bowl-large-blue-meat-fruit": "Large Blue Mixing Bowl with Dried Meat & Fruit Flour",
@@ -288,7 +288,7 @@
 	"block-food-bowl-medium-red-meat-fruit": "Medium Red Mixing Bowl with Dried Meat & Fruit Flour",
 	"block-food-bowl-large-red-meat-fruit": "Large Red Mixing Bowl with Dried Meat & Fruit Flour",
 	"blockdesc-food-bowl-*-meat-fruit": "Add Fat (Sneak + RMB) to continue creating Pemmican",
-
+	
 	"block-food-bowl-small-blue-meat-fat": "Small Blue Mixing Bowl with Dried Meat, Dried Fruit & Fat",
 	"block-food-bowl-medium-blue-meat-fat": "Medium Blue Mixing Bowl with Dried Meat, Dried Fruit & Fat",
 	"block-food-bowl-large-blue-meat-fat": "Large Blue Mixing Bowl with Dried Meat, Dried Fruit & Fat",
@@ -302,7 +302,7 @@
 	"block-food-bowl-medium-red-meat-fat": "Medium Red Mixing Bowl with Dried Meat, Dried Fruit & Fat",
 	"block-food-bowl-large-red-meat-fat": "Large Red Mixing Bowl with Dried Meat, Dried Fruit & Fat",
 	"blockdesc-food-bowl-*-meat-fat": " Add Bowls of Honey (Sneak + RMB) to complete Pemmican",
-
+	
 	"block-food-bowl-small-blue-pemmican*": "Small Blue Mixing Bowl with Pemmican",
 	"block-food-bowl-medium-blue-pemmican*": "Medium Blue Mixing Bowl with Pemmican",
 	"block-food-bowl-large-blue-pemmican*": "Large Blue Mixing Bowl with Pemmican",
@@ -753,9 +753,9 @@
 	"blockdesc-food-bowl-small-*-burned": "Holds 4 portions.",
 	"blockdesc-food-bowl-medium-*-burned": "Holds 8 portions.",
 	"blockdesc-food-bowl-large-*-burned": "Holds 16 portions.",
-	"block-handbooktitle-food-bowl-*": "Used",
+    "block-handbooktitle-food-bowl-*": "Used",
 	"block-handbooktext-food-bowl-*-burned": "in Immersion cooking to mix food ingredients for pemmican and prepare salted meats for drying.",
-
+	
 
 	"block-glasslanternframemold-blue-raw": "Blue Glass Lantern Frame Mold (Raw)",
 	"block-glasslanternframemold-fire-raw": "Fire Glass Lantern Frame Mold (Raw)",
@@ -1302,7 +1302,6 @@
 	"item-handbooktitle-axe-*": "Used for",
 	"item-handbooktext-axe-*": "Creating Immersion additions: Half Log, Chopping Block",
 
-
 	"item-hammer-andesite-*": "Primitive Andesite Hammer",
 	"item-hammer-basalt-*": " Primitive Basalt Hammer",
 	"item-hammer-obsidian-*": "Primitive Obsidian Hammer",
@@ -1599,6 +1598,7 @@
 	"itemdesc-sword-*-maple-leatherstrips": "with Maple Shaft and Leather Strip Binding",
 	"itemdesc-sword-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-sword-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
+
 
 	"block-adze-head-granite-*": "Granite Adze Head",
 	"block-adze-head-andesite-*": "Andesite Adze Head",
