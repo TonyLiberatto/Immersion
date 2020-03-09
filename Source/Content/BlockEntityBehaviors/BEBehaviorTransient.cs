@@ -141,13 +141,20 @@ namespace Immersion
                 loc = Blockentity.Block.WildCardReplace(new AssetLocation(fromCode), new AssetLocation(toCode));
             }
 
-            string transition = Lang.GetMatching(loc.Domain + ":block-" + loc.Path);
-            string allowed = "aeiouAEIOU";
+            string transition = null;
+            string a = null;
 
-            string a = allowed.Contains(transition[0]) ? "an " : "a ";
+            if (loc != null)
+            {
+                transition = Lang.GetMatching(loc.Domain + ":block-" + loc.Path);
+                string allowed = "aeiouAEIOU";
 
+                a = allowed.Contains(transition[0]) ? "an " : "a ";
+            }
 
-            dsc.Append("Transitions into " + a + transition + " in " + hours.ToString() + " Hours").AppendLine();
+            string transitionsinto = transition == null || a == null ? "Transitions in " : "Transitions into " + a + transition + " in ";
+
+            dsc.Append(transitionsinto + hours.ToString() + " Hours.").AppendLine();
             base.GetBlockInfo(forPlayer, dsc);
         }
 
