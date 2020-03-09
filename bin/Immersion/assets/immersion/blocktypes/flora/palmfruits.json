@@ -41,28 +41,10 @@
       "*": [ { "name": "HorizontalOrientable" } ]
     },
     "variantgroups": [
-        {
-            "code": "type",
-            "states": [
-                "bananna",
-                "coconut"
-            ]
-        },
-        {
-            "loadFromProperties": "abstract/horizontalorientation"
-        }
-    ],
-    "creativeinventory": {
-        "general": [
-            "*-north"
-        ],
-        "flora": [
-            "*-north"
-        ],
-        "immersionflora": [
-            "*-north"
-        ]
-    },
+        {  "code": "type",  "states": [ "bananna", "coconut"  ] },
+        {  "loadFromProperties": "abstract/horizontalorientation"  }   
+	],
+    "creativeinventory": { "general": [ "*-north" ], "immersionflora": [ "*-north" ] },
     "drops": [],
     "randomDrawOffset": false,
     "shapeByType": {
