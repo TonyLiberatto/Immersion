@@ -11,6 +11,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.API.Util;
+using Vintagestory.Common;
 using Vintagestory.GameContent;
 
 namespace Immersion
@@ -338,6 +339,26 @@ namespace Immersion
         public static AssetLocation WithVariant(this AssetLocation location, string variantcode, string variantstate)
         {
             return new AssetLocation(location.ToString().Replace("{" + variantcode + "}", variantstate));
+        }
+
+        public static int GetSunlight(this IBlockAccessor blockAcessor, BlockPos pos) => GetSunlight(blockAcessor, pos.X, pos.Y, pos.Z);
+
+        public static int GetSunlight(this IBlockAccessor blockAcessor, int posX, int posY, int posZ)
+        {
+            IWorldAccessor world = (blockAcessor as BlockAccessorBase).GetField("worldAccessor") as IWorldAccessor;
+            WorldMap worldMap = (blockAcessor as BlockAccessorBase).GetField("worldmap") as WorldMap;
+
+            IWorldChunk chunkAtBlockPos = blockAcessor.GetChunkAtBlockPos(posX, posY, posZ);
+            if (chunkAtBlockPos == null || !worldMap.IsValidPos(posX, posY, posZ))
+                return world.SunBrightness;
+            chunkAtBlockPos.Unpack();
+            int chunkSize = blockAcessor.ChunkSize;
+            int index = (posY % chunkSize * chunkSize + posZ % chunkSize) * chunkSize + posX % chunkSize;
+            int num = (int)chunkAtBlockPos.Light[index];
+            int val2 = num >> 5 & 31;
+            int val1 = num & 31;
+
+            return (int)Math.Round((double)val1 * (double)world.Calendar.DayLightStrength);
         }
     }
 }
