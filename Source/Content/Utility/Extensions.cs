@@ -225,6 +225,11 @@ namespace Immersion
             return stacks1.ToArray();
         }
 
+        public static K GetField<T, K>(this T instance, string fieldName)
+        {
+            return (K)instance.GetField(fieldName);
+        }
+
         public static object GetField<T>(this T instance, string fieldName)
         {
             return GetInstanceField(instance.GetType(), instance, fieldName);
@@ -345,8 +350,8 @@ namespace Immersion
 
         public static int GetSunlight(this IBlockAccessor blockAcessor, int posX, int posY, int posZ)
         {
-            IWorldAccessor world = (blockAcessor as BlockAccessorBase).GetField("worldAccessor") as IWorldAccessor;
-            WorldMap worldMap = (blockAcessor as BlockAccessorBase).GetField("worldmap") as WorldMap;
+            IWorldAccessor world = (blockAcessor as BlockAccessorBase).GetField<BlockAccessorBase, IWorldAccessor>("worldAccessor");
+            WorldMap worldMap = (blockAcessor as BlockAccessorBase).GetField<BlockAccessorBase, WorldMap>("worldmap");
 
             IWorldChunk chunkAtBlockPos = blockAcessor.GetChunkAtBlockPos(posX, posY, posZ);
             if (chunkAtBlockPos == null || !worldMap.IsValidPos(posX, posY, posZ))

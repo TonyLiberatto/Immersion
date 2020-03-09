@@ -12,6 +12,7 @@
 			"name": "Cube1",
 			"from": [ 0.0, 0.0, 0.0 ], 
 			"to": [ 16.0, 0.2, 16.0 ], 
+			"renderPass": 1,
 			"faces": {
 				"north": { "texture": "#north", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
 				"east": { "texture": "#east", "uv": [ 0.0, 0.0, 16.0, 0.5 ], "enabled": false },
