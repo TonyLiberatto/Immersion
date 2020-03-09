@@ -57,7 +57,7 @@
 		"knife-hand-obsidian": 1.50,
 		"knife-hand-flint": 1,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.2, z: 0.4 },
 		rotation: { x: -20, y: -93, z: -75 },

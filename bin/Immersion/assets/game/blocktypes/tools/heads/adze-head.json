@@ -47,9 +47,7 @@
 		"cordage": { base: "block/transparent" },
 	},
 	creativeinventory: {
-		"general": [ "*-north" ],
-		"items": [ "*-north" ],
-		"tools": [ "*" ],
+		"general": [ "*-north" ],		
 		"immersionitems": [ "*-north" ]
 	},
 	collisionselectionbox: {

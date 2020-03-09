@@ -48,8 +48,6 @@
 	},
 	creativeinventory: {
 		"general": [ "*-north" ],
-		"items": [ "*-north" ],
-		"tools": [ "*" ],
 		"immersionitems": [ "*-north" ]
 	},
 	collisionselectionbox: {

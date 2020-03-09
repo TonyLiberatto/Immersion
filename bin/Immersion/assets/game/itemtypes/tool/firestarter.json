@@ -15,7 +15,7 @@
 	shape: { base: "item/tool/firestarter" },
 	heldTpHitAnimation: "breaktool",
 	durability: 20,
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	guiTransform: {
 		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: -42, y: -8, z: -180 },

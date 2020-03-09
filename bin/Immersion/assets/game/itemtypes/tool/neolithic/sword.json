@@ -47,7 +47,7 @@
 		"sword-flint-*": 100,
 		"sword-obsidian-*": 150,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"],"immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0.1, z: 0 },
 		rotation: { x: 170, y: -25, z: 90 },
