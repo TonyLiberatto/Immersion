@@ -55,7 +55,7 @@
 		"*-obsidian-*": 90,
 		"*-flint-*": 70,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"]  },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.3, z: 0 },
 		rotation: { x: -85, y: 0, z: 75 },

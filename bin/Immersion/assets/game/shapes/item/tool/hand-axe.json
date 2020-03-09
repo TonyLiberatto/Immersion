@@ -6,13 +6,12 @@
 	"textureWidth": 16,
 	"textureHeight": 8,
 	"textures": {
-		"stone": "item/tool/material/granite"
 	},
 	"elements": [
 		{
 			"name": "Cube12",
-			"from": [ 6.0, 7.5, 6.5 ], 
-			"to": [ 7.6, 8.5, 8.5 ], 
+			"from": [ 6.0, 0.0, 6.5 ], 
+			"to": [ 7.6, 1.0, 8.5 ], 
 			"rotationOrigin": [ 6.0, 7.0, 7.0 ],
 			"faces": {
 				"north": { "texture": "#stone", "uv": [ 0.0, 0.0, 1.5, 1.0 ] },

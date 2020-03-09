@@ -21,7 +21,7 @@
 		]
 	},
 	tool: "bow",
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },	
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },	
 	attributes: {
 		damageByType: {
 			"*-simple": 3,
