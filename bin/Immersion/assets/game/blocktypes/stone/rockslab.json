@@ -20,7 +20,7 @@
 		}
 	},
 	replaceable: 150,
-	creativeinventory: { "tabname-immersionwip": "I WIP", },
+	creativeinventory: { "immersionwip": ["*"] },
 	drops: [{ code: "rockslab-{rock}-down" }],
 	shape: { base: "block/basic/slab-{rot}"},
 	sidesolidByType: {

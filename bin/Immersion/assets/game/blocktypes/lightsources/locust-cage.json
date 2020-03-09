@@ -9,7 +9,7 @@
 
 		},
 	},
-	creativeinventory: { "tabname-immersionwip": "I WIP", },
+	creativeinventory: { "tabname-immersionwip": ["*"] },
 	blockmaterial: "Metal",
 	lightAbsorption: 0,
 	lightHsv: [8, 2, 12],

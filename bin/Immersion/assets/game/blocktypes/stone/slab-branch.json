@@ -12,7 +12,7 @@
 		{ loadFromProperties: "block/wood" },
 		{ code: "style", states: ["debarked"]}		
 	],
-	creativeinventory: { "general": [""], "terrain": [""], "immersionblocks": ["*"] },
+	creativeinventory:  { "immersionwip": ["*"] },
 	shape: { base: "block/slab-branch-cross" },
 	blockmaterial: "Stone",
 	textures: {
