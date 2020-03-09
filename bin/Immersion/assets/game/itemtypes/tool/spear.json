@@ -1,0 +1,91 @@
+{
+	code: "spear",
+	class: "ItemSpear",
+	damagedby: ["attacking"],
+	tool: "spear",
+	variantgroups: [
+		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ] },
+	],
+	shapeByType: {		
+		
+		"spear-copper": { base: "item/tool/spear-copper" },
+		
+		"spear-tinbronze": { base: "item/tool/spear-bronze" },
+		"spear-bismuthbronze": { base: "item/tool/spear-bronze" },
+		"spear-blackbronze": { base: "item/tool/spear-bronze" },
+		"spear-gold": { base: "item/tool/spear-bronze" },
+		"spear-silver": { base: "item/tool/spear-bronze" },
+	},
+	heldTpHitAnimation: "spearhit",
+	texturesByType: {
+		
+		"*": {
+			"material": { base: "item/tool/material/{material}" },
+		}
+	},
+	attackRange: 3.5,
+	attackpowerbytype: {
+		
+		"spear-copper": 2.75,
+		"spear-gold": 3,
+		"spear-silver": 3,
+		"spear-bismuthbronze": 3.25,
+		"spear-tinbronze": 3.75,
+		"spear-blackbronze": 4,
+	},
+	"__comment": "Thrown damage",
+	attributes: {
+		damageByType: {
+			
+			"*-copper": 5.75,
+			"*-gold": 6,
+			"*-silver": 6,
+			"*-bismuthbronze": 6.5,
+			"*-tinbronze": 7.5,
+			"*-blackbronze": 8,
+		},
+		spearEntityCode: "spear-{material}",
+		handbook: {
+			groupBy: ["spear-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.35, y: 0.5 },
+			scale: 1
+		}
+	},
+	durabilitybytype: {
+		
+		"spear-copper": 100,
+		"spear-gold": 90,
+		"spear-silver": 90,
+		"spear-tinbronze": 200,
+		"spear-bismuthbronze": 180,
+		"spear-blackbronze": 220
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	guiTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -77, y: 53, z: 25 },
+		origin: { x: 0.4, y: 0, z: 0.4 },
+		scale: 1.17
+	},
+	fpHandTransform: {
+		translation: { x: 0.3, y: 0.5, z: 0.16 },
+		rotation: { x: -82, y: 0, z: 85 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.4
+	},
+	tpHandTransform: {
+		translation: { x: -1.24, y: -0.01, z: -0.56 },
+		rotation: { x: -81, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
+	}
+}
