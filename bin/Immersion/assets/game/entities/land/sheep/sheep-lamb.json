@@ -56,7 +56,7 @@
 			{ code: "breathe" }, 
 			{ 
 				code: "portiongrow",
-				hoursToGrow: 336,
+				hoursToGrow: 240,
 				portionsEatenForGrow: 10,
 				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
 			},
