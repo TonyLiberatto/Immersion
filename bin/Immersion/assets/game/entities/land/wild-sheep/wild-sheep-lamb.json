@@ -85,8 +85,9 @@
 					{ code: "alarmherdondamage", chance: 1, slot: 1, priority: 1, accumType: "max" }
 				],
 			},
-			{ code: "grow",
+			{ code: "portiongrow",
 				hoursToGrow: 336,
+				portionsEatenForGrow: 10,
 				adultEntityCodes: ["wild-sheep-ram", "wild-sheep-ewe"],
 			},
 			{ code: "taskai",
@@ -108,6 +109,18 @@
 						animation: "Walk",
 						animationSpeed: 4
 					},
+					{
+						code: "seekfoodandeat",
+						movespeed: 0.004,
+						priority: 1.25,
+						eatSound: "player/eat",
+						eatTime: 1.5,
+						animationSpeed: 1.4,
+						animation: "Walk",
+						eatAnimation: "Eat",
+						mincooldownHours: 1,
+						maxcooldownHours: 4,
+					},					
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,

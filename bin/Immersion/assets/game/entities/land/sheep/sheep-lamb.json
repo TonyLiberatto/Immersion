@@ -57,6 +57,7 @@
 			{ 
 				code: "portiongrow",
 				hoursToGrow: 336,
+				portionsEatenForGrow: 10,
 				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
 			},
 			{ 
@@ -77,6 +78,18 @@
 						isnocturnal: false,
 						cancelOnHurt: true,
 						animationSpeed: 0.20,
+					},
+					{
+						code: "seekfoodandeat",
+						movespeed: 0.004,
+						priority: 1.25,
+						eatSound: "player/eat",
+						eatTime: 1.5,
+						animationSpeed: 1.4,
+						animation: "Walk",
+						eatAnimation: "Eat",
+						mincooldownHours: 1,
+						maxcooldownHours: 4,
 					},
 					{
 						code: "stayclosetoentity",
