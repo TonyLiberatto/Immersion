@@ -33,7 +33,7 @@
 		spearEntityCode: "spear-javelin"
 	},	
 	durability: 8,
-	creativeinventory: { "general": ["*"], "immersiontools": },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"]},
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.3, z: 0 },
 		rotation: { x: -85, y: 0, z: 75 },

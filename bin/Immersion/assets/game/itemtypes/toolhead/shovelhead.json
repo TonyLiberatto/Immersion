@@ -1,0 +1,35 @@
+{
+	code: "shovelhead",
+	variantgroups: [
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+	],
+	shape: { base: "item/tool/shovel" },
+	textures: {
+		"metal": { base: "item/tool/material/{material}" },
+		"wood": { base: "block/transparent" }
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.3468, y: -0.4, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 2, y: -1, z: 120 },
+		rotation: { x: -45, y: -134, z: -180 },
+		origin: { x: 0.65, y: 0.68, z: 0.4 },
+		scale: 3.4
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.8, y: 0.47, z: 0.5 },
+		scale: 3.6
+	},
+	tpHandTransform: {
+		translation: { x: -0.5, y: -0.5, z: -0.5 },
+		rotation: { x: -36, y: -51, z: -21 },
+		scale: 0.85
+	}
+}

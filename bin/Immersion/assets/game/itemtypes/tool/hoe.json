@@ -1,0 +1,113 @@
+{
+	code: "hoe",
+	class: "ItemHoe",
+	heldTpUseAnimation: "hoe",
+	attributes: {
+		handbook: {
+			groupBy: ["hoe-*"]
+		},
+		toolrackTransform: {
+			rotation: { y: 1, z: -1 },
+			translation: { x: -0.35 },
+			scale: 1.25,
+		}
+	},
+	variantgroups: [
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+	],
+	damagedby: ["blockbreaking", "attacking"],
+	shape: { base: "item/tool/hoe" },
+	heldTpHitAnimation: "breaktool",
+	textures: {
+		"material": { base: "item/tool/material/{material}" },
+		"wood": { base: "item/tool/material/wood" } 
+	},
+	tool: "hoe",
+	miningspeedbytype: {
+		"hoe-stone": {
+			"soil": 2.2
+		},
+		"hoe-copper": {
+			"soil": 2.6
+		},
+		"hoe-bismuthbronze": {
+			"soil": 3.2
+		},
+		"hoe-tinbronze": {
+			"soil": 3.6
+		},
+		"hoe-gold": {
+			"soil": 3.6
+		},
+		"hoe-silver": {
+			"soil": 3.6
+		},
+		"hoe-blackbronze": {
+			"soil": 3.6
+		},
+		"hoe-iron": {
+			"soil": 4
+		},
+		"hoe-steel": {
+			"soil": 4.4
+		},
+	},
+	durabilitybytype: {
+		"hoe-granite": 30,
+		"hoe-andesite": 30,
+		"hoe-basalt": 35,
+		"hoe-obsidian": 50,
+		"hoe-peridotite": 30,
+		"hoe-flint": 40,
+		
+		"hoe-gold": 90,
+		"hoe-silver": 90,
+		"hoe-copper": 200,
+		"hoe-tinbronze": 280,
+		"hoe-bismuthbronze": 300,
+		"hoe-blackbronze": 330,
+		"hoe-iron": 500,
+		"hoe-steel": 900,
+	},
+	attackpowerbytype: {
+		"hoe-granite": 1,
+		"hoe-andesite": 1,
+		"hoe-basalt": 1,
+		"hoe-obsidian": 1,
+		"hoe-peridotite": 1,
+		"hoe-flint": 1,
+		
+		"hoe-copper": 1.25,
+		"hoe-gold": 1.5,
+		"hoe-silver": 1.5,
+		"hoe-bismuthbronze": 1.5,
+		"hoe-tinbronze": 1.75,
+		"hoe-blackbronze": 2,
+		"hoe-iron": 2.25,
+		"hoe-steel": 2.5,
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.046875, y: 0, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 0, y: 2, z: 0 },
+		rotation: { x: -133, y: -157, z: 132 },
+		scale: 2.02,
+		origin: { x: 0.5, y: 0.5, z: 0.5 }
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.45, z: 0.5 },
+		scale: 3.6
+	},
+	tpHandTransform: {
+		translation: { x: -0.76, y: -0.5, z: -0.53 },
+		rotation: { x: 90, y: 0, z: -10 },
+		scale: 1
+	}
+}

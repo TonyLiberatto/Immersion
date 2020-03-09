@@ -1,0 +1,35 @@
+{
+	code: "hoehead",
+	variantgroups: [
+		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+	],
+	shape: { base: "item/tool/hoe" },
+	textures: {
+		"material": { base: "item/tool/material/{material}" },
+		"wood": { base: "block/transparent" },
+	},
+	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	fpHandTransform: {
+		translation: { x: 0.4, y: -0.6, z: 0 },
+		rotation: { x: 15, y: 15, z: 90 },
+		scale: 2.5
+	},
+	guiTransform: {
+		rotate: false,
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -52, y: -131, z: -180 },
+		origin: { x: 1, y: 0.35, z: 0.5 },
+		scale: 3.5
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: 0, z: 90 },
+		origin: { x: 0.9, y: 0.43, z: 0.37 },
+		scale: 4
+	},
+	tpHandTransform: {
+		translation: { x: -0.2, y: -0.7, z: -0.2 },
+		rotation: { x: 79, y: -28, z: -44 },
+		scale: 1
+	}
+}
