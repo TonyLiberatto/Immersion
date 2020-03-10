@@ -1,69 +1,143 @@
 ﻿{
-  code: "3droad",
-  class: "BlockImmersionRoads",
-  entityClass: "ImmersionRoads",
-  variantgroups: [
-    { 
-      code: "rock",
-      states: [ "andesite", "basalt", "bauxite", "suevite", "redmarble", "greenmarble", "obsidian", "kimberlite", "scoria", "whitemarble", "halite", "tuff", "chalk", "chert", "claystone", "conglomerate", "granite", "limestone", "peridotite", "phyllite", "sandstone", "shale", "slate"],
+    "code": "3droad",
+    "class": "BlockImmersionRoads",
+    "entityClass": "ImmersionRoads",
+    "variantgroups": [
+        {
+            "code": "rock",
+            "states": [
+                "andesite",
+                "basalt",
+                "bauxite",
+                "suevite",
+                "redmarble",
+                "greenmarble",
+                "obsidian",
+                "kimberlite",
+                "scoria",
+                "whitemarble",
+                "halite",
+                "tuff",
+                "chalk",
+                "chert",
+                "claystone",
+                "conglomerate",
+                "granite",
+                "limestone",
+                "peridotite",
+                "phyllite",
+                "sandstone",
+                "shale",
+                "slate"
+            ]
+        },
+        {
+            "code": "pattern",
+            "states": [
+                "bricks",
+                "circle",
+                "cobble",
+                "fish",
+                "squares",
+                "stepping1",
+                "stepping2",
+                "stepping3",
+                "stepping4",
+                "tightbricks",
+                "tightsquares",
+                "largesquare",
+                "flat"
+            ]
+        }
+    ],
+    "drawtype": "json",
+    "shapeInventory": { "base": "block/road/road-{pattern}" },
+    "creativeinventory": {
+        "general": [
+            "*"
+        ],
+        "immersiondeco": [
+            "*"
+        ]
     },
-    {
-      code: "pattern",
-      states: [ "bricks", "circle", "cobble", "fish", "squares", "stepping1", "stepping2", "stepping3", "stepping4", "tightbricks", "tightsquares", "largesquare", "flat" ],
+    "lod0Shape": {
+        "base": "block/road/road-{pattern}"
     },
-  ],
-  drawtype: "json",
-  creativeinventory: {
-    "general": [ "*" ],
-    "immersiondeco": [ "*" ]
-  },
-  lod0Shape: { base: "block/road/road-{pattern}" },
-  shapeByType: {
-    "*": { base: "block/road/road-lod" },
-  },
-  blockmaterial: "Stone",
-  replaceable: 900,
-  lightAbsorption: 99,
-  behaviors: [ { name: "Unstable" } ],
-  attributes: {
-		handbook: {
-			groupBy: ["3droad-*"],
-			extraSectionsByType: {
-				"3droad-*-stepping*":[
-					{ title: "handbook-item-sources", text: "Place the small stone on any full block (as in knapping) and use RMB with the tamper in the active hand to convert the small stone to one of four stepping stones. The pattern is selected based on surrounding blocks and cannot be adjusted or changed using a tamper tool mode." }
-					],
-				"3droad-*": [
-					{ title: "handbook-item-sources", text: "Use the setting hammer (RMB) on stone pathway blocks created using the tamper to change the shape of the block. Each use of the hammer will cycle through the following nine road shapes: Fish, Cobble, Bricks, Tight Bricks, Squares, Tight Square, Large Square, Flat, Circle. There is no way to change the tool mode to specify the shape of the stepping stones. " }
-					],
-				}
-		},
-	},
-  sounds: {
-    walk: "game:walk/stone",
-    place: "game:block/rock-hit-pickaxe",
-    break: "game:block/rock-break-pickaxe",
-  },
-  texturesByType: {
-    "*": {
-      stone: {
-        base: "game:block/stone/rock/{rock}*",
-      },
-      moss: {
-        base: "game:block/stone/base/moss",
-      },
+    "shapeByType": {
+        "*-stepping*": { "base": "game:block/basic/nothing" },
+        "*": {
+            "base": "block/road/road-lod"
+        }
     },
-  },
-	dropsByType: {
-		"*": [  { type: "item", code: "game:stone-{rock}", quantity: { avg: 1 } } ],
-	},
-  resistance: 3,
-  lightAbsorption: 0,
-  walkspeedmultiplier: 1.25,
-  sideopaque: {
-    all: false
-  },
-  sidesolid: {
-    all: false
-  },
-	collisionSelectionBox: { x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.0625, z2: 1 },
+    "blockmaterial": "Stone",
+    "replaceable": 900,
+    "lightAbsorption": 0,
+    "behaviors": [
+        {
+            "name": "Unstable"
+        }
+    ],
+    "attributes": {
+        "handbook": {
+            "groupBy": [
+                "3droad-*"
+            ],
+            "extraSectionsByType": {
+                "3droad-*-stepping*": [
+                    {
+                        "title": "handbook-item-sources",
+                        "text": "Place the small stone on any full block (as in knapping) and use RMB with the tamper in the active hand to convert the small stone to one of four stepping stones. The pattern is selected based on surrounding blocks and cannot be adjusted or changed using a tamper tool mode."
+                    }
+                ],
+                "3droad-*": [
+                    {
+                        "title": "handbook-item-sources",
+                        "text": "Use the setting hammer (RMB) on stone pathway blocks created using the tamper to change the shape of the block. Each use of the hammer will cycle through the following nine road shapes: Fish, Cobble, Bricks, Tight Bricks, Squares, Tight Square, Large Square, Flat, Circle. There is no way to change the tool mode to specify the shape of the stepping stones. "
+                    }
+                ]
+            }
+        }
+    },
+    "sounds": {
+        "walk": "game:walk/stone",
+        "place": "game:block/rock-hit-pickaxe",
+        "break": "game:block/rock-break-pickaxe"
+    },
+    "texturesByType": {
+        "*": {
+            "stone": {
+                "base": "game:block/stone/rock/{rock}*"
+            },
+            "moss": {
+                "base": "game:block/stone/base/moss"
+            }
+        }
+    },
+    "dropsByType": {
+        "*": [
+            {
+                "type": "item",
+                "code": "game:stone-{rock}",
+                "quantity": {
+                    "avg": 1
+                }
+            }
+        ]
+    },
+    "resistance": 3,
+    "walkspeedmultiplier": 1.25,
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "collisionSelectionBox": {
+        "x1": 0,
+        "y1": 0,
+        "z1": 0,
+        "x2": 1,
+        "y2": 0.0625,
+        "z2": 1
+    }
 }

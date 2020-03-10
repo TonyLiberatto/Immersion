@@ -55,8 +55,7 @@
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" }, 
 			{ 
-				code: "portiongrow",
-				hoursToGrow: 168,
+				code: "grow",
 				portionsEatenForGrow: 10.0,
 			},
 			{ 
