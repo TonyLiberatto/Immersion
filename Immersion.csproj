@@ -436,6 +436,9 @@
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-treasurehunter.json" />
     <None Include="bin\Immersion\assets\game\entities\land\armadillo\armadillo-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\armadillo\armadillo-male.json" />
+    <None Include="bin\Immersion\assets\game\entities\land\chicken-chick.json" />
+    <None Include="bin\Immersion\assets\game\entities\land\chicken-hen.json" />
+    <None Include="bin\Immersion\assets\game\entities\land\chicken-rooster.json" />
     <None Include="bin\Immersion\assets\game\entities\land\chicken\chicken-chick.json" />
     <None Include="bin\Immersion\assets\game\entities\land\chicken\chicken-hen.json" />
     <None Include="bin\Immersion\assets\game\entities\land\chicken\chicken-rooster.json" />
@@ -443,10 +446,12 @@
     <None Include="bin\Immersion\assets\game\entities\land\fox-arctic-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox-male.json" />
+    <None Include="bin\Immersion\assets\game\entities\land\fox-pup.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-red-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-red-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-snow-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox\fox-snow-male.json" />
+    <None Include="bin\Immersion\assets\game\entities\land\hare-baby.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare\hare-baby.json" />
@@ -1834,9 +1839,6 @@
     <None Include="bin\Immersion\assets\immersion\patches\bucket.json" />
     <None Include="bin\Immersion\assets\immersion\patches\items.json" />
     <None Include="bin\Immersion\assets\immersion\patches\modifystonepath.json" />
-    <None Include="bin\Immersion\assets\immersion\patches\recipes4.json" />
-    <None Include="bin\Immersion\assets\immersion\patches\recipes3.json" />
-    <None Include="bin\Immersion\assets\immersion\patches\recipes2.json" />
     <None Include="bin\Immersion\assets\immersion\patches\recipes.json" />
     <None Include="bin\Immersion\assets\immersion\patches\worldgen.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\adobe.json" />
@@ -1874,11 +1876,6 @@
     <None Include="bin\Immersion\assets\immersion\recipes\grid\crackblocks\crackedbrick.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\crackblocks\crackedpolished.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\crackblocks\crackedrock.json" />
-    <None Include="bin\Immersion\assets\immersion\recipes\grid\firewood-medium-branch.json" />
-    <None Include="bin\Immersion\assets\immersion\recipes\grid\firewood-thick-branch.json" />
-    <None Include="bin\Immersion\assets\immersion\recipes\grid\firewood-thin-branch.json" />
-    <None Include="bin\Immersion\assets\immersion\recipes\grid\firewood-very-thin-branch.json" />
-    <None Include="bin\Immersion\assets\immersion\recipes\grid\firewood.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\furniture\chair-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\furniture\chair.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\furniture\table-bamboo.json" />

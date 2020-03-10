@@ -1,6 +1,0 @@
-[		
-	{ file: "game:recipes/grid/backpack", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/basket", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/basket-deconstruct", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/firestarter", op: "add", path: "/enabled",  value: "false" }
-] 

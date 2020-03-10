@@ -7,5 +7,21 @@
 	{ file: "game:recipes/grid/lantern", op: "add", path: "/4/enabled",  value: "false" },
 	{ file: "game:recipes/grid/lantern", op: "add", path: "/5/enabled",  value: "false" },
 	{ file: "game:recipes/grid/lantern", op: "add", path: "/6/enabled",  value: "false" },
-	{ file: "game:recipes/grid/lantern", op: "add", path: "/7/enabled",  value: "false" }	
+	{ file: "game:recipes/grid/lantern", op: "add", path: "/7/enabled",  value: "false" },
+	{ file: "game:recipes/grid/lantern", op: "add", path: "/8/enabled",  value: "false" },
+	{ file: "game:recipes/grid/lantern", op: "add", path: "/9/enabled",  value: "false" },
+	{ file: "game:recipes/grid/lantern", op: "add", path: "/10/enabled",  value: "false" },
+	{ file: "game:recipes/grid/lantern", op: "add", path: "/11/enabled",  value: "false" },
+	{ file: "game:recipes/grid/stackedbamboo", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/chest", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/chest-labeled", op: "add", path: "/enabled",  value: "false" },
+    { file: "game:recipes/grid/door", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/chair", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/firewood", op: "add", path: "/0/enabled",  value: "false" },
+	{ file: "game:recipes/grid/firewood", op: "add", path: "/1/enabled",  value: "false" },
+	{ file: "game:recipes/grid/backpack", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/basket", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/basket-deconstruct", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/firestarter", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/candle", op: "add", path: "/enabled",  value: "false" }
 ] 
