@@ -17,13 +17,11 @@
 	{ file: "game:recipes/grid/chest-labeled", op: "add", path: "/enabled",  value: "false" },
     { file: "game:recipes/grid/door", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/chair", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/table", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/firewood", op: "add", path: "/0/enabled",  value: "false" },
 	{ file: "game:recipes/grid/firewood", op: "add", path: "/1/enabled",  value: "false" },
-	{ file: "game:recipes/grid/candle", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/tool/hoe", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/backpack", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/basket", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/basket-deconstruct", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/firestarter", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/candle", op: "add", path: "/enabled",  value: "false" }
 ] 

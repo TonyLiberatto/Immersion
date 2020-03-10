@@ -1,0 +1,15 @@
+{
+		ingredient: { type: "item", code: "stone-*", name: "rock", allowedVariants: ["granite", "andesite", "basalt", "obsidian", "peridotite"] },
+		pattern: [[
+			"##########",
+			"_########_",
+			"_########_",
+			"__######__",
+			"__######__",
+			"__######__",
+			"___####___",
+			"____##____"			
+		]],
+		name: "slaughtering Axe Head ",
+		output: { type: "block", code: "slaughteringaxe-head-{rock}-north"  }
+}

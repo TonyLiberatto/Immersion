@@ -1,0 +1,652 @@
+{
+	code: "humanoid-trader-artisan",
+	class: "EntityTrader",
+	canClimb: true,
+	hitboxSize: { x: 0.6, y: 1.75 },
+	deadHitboxSize: { x: 0.75, y: 0.5 },
+	client: {
+		renderer: "Shape",
+		shape: { base: "entity/humanoid/trader" },
+		texture: { base: "entity/humanoid/trader" },
+		behaviors: [
+			{ code: "nametag", "showtagonlywhentargeted": true }, 
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.01 }, 
+			{ code: "interpolateposition" }
+		],
+		animations: [
+			{
+				code: "die",
+				animation: "die", 
+				animationSpeed: 1.75,
+				weight: 10,
+				blendMode: "AddAverage"
+			},
+			{
+				code: "hurt",
+				animation: "hurt", 
+				animationSpeed: 2,
+				blendMode: "AddAverage" 
+			}
+		]
+	},
+	server: {
+		attributes: {
+			pathfinder: {
+				minTurnAnglePerSec: 720,
+				maxTurnAnglePerSec: 1440
+			},
+			tradeProps: {
+				money: { avg: 30, var: 10 },
+
+
+
+    "selling": {
+        "maxItems": 8,
+        "list": [
+            {
+                "code": "storagevessel-blue-burned",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "price": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "attributes": {
+                    "type": "normal"
+                }
+            },
+            {
+                "code": "storagevessel-copper",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                },
+                "attributes": {
+                    "type": "normal"
+                }
+            },
+            {
+                "code": "storagevessel-earthen",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                },
+                "attributes": {
+                    "type": "normal"
+                }
+            },
+            {
+                "code": "storagevessel-ashforest",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "attributes": {
+                    "type": "normal"
+                }
+            },
+            {
+                "code": "storagevessel-rain",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "attributes": {
+                    "type": "normal"
+                }
+            },
+            {
+                "code": "crock-blue-burned-east",
+                "type": "block",
+                "stacksize": 4,
+                "stock": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "price": {
+                    "avg": 10,
+                    "var": 2.5
+                }
+            },
+            {
+                "code": "crock-red-burned-east",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "flowerpot-burnt-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 10,
+                    "var": 2.5
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "flowerpot-amber-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "price": {
+                    "avg": 4,
+                    "var": 1
+                }
+            },
+            {
+                "code": "flowerpot-boneash-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 5,
+                    "var": 1.25
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "flowerpot-celadon-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "price": {
+                    "avg": 3,
+                    "var": 0.75
+                }
+            },
+            {
+                "code": "flowerpot-copper-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "flowerpot-earthern-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "flowerpot-moss-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 7,
+                    "var": 1.75
+                },
+                "price": {
+                    "avg": 5,
+                    "var": 1.25
+                }
+            },
+            {
+                "code": "flowerpot-ochre-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 7,
+                    "var": 1.75
+                },
+                "price": {
+                    "avg": 5,
+                    "var": 1.25
+                }
+            },
+            {
+                "code": "flowerpot-rutile-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 5,
+                    "var": 1.25
+                },
+                "price": {
+                    "avg": 5,
+                    "var": 1.25
+                }
+            },
+            {
+                "code": "flowerpot-seasalt-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 7,
+                    "var": 1.75
+                }
+            },
+            {
+                "code": "flowerpot-tenmoku-empty",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 5,
+                    "var": 1.25
+                },
+                "price": {
+                    "avg": 5,
+                    "var": 1.25
+                }
+            }
+        ]
+    },
+    "buying": {
+        "maxItems": 8,
+        "list": [
+            {
+                "code": "clay-blue",
+                "type": "item",
+                "stacksize": 64,
+                "stock": {
+                    "avg": 3,
+                    "var": 0.75
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "clay-fire",
+                "type": "item",
+                "stacksize": 64,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "fat",
+                "type": "item",
+                "stacksize": 8,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "beeswax",
+                "type": "item",
+                "stacksize": 6,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "ore-lapislazuli",
+                "type": "item",
+                "stacksize": 10,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "peatbrick",
+                "type": "block",
+                "stacksize": 12,
+                "stock": {
+                    "avg": 2,
+                    "var": 0.5
+                },
+                "price": {
+                    "avg": 1,
+                    "var": 0.25
+                }
+            },
+            {
+                "code": "charcoal",
+                "type": "item",
+                "stacksize": 12,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 2,
+                    "var": 0.5
+                }
+            },
+            {
+                "code": "storagevessel-chthonic",
+                "type": "block",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "type": "normal"
+                }
+            },
+            {
+                "code": "gem-emerald-rough",
+                "type": "item",
+                "stacksize": 2,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "high"
+                }
+            },
+            {
+                "code": "gem-emerald-rough",
+                "type": "item",
+                "stacksize": 2,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 6,
+                    "var": 1.5
+                },
+                "attributes": {
+                    "potential": "medium"
+                }
+            },
+            {
+                "code": "gem-emerald-rough",
+                "type": "item",
+                "stacksize": 2,
+                "stock": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "price": {
+                    "avg": 4,
+                    "var": 1
+                },
+                "attributes": {
+                    "potential": "low"
+                }
+            },
+            {
+                "code": "gem-diamond-rough",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "high"
+                }
+            },
+            {
+                "code": "gem-diamond-rough",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "medium"
+                }
+            },
+            {
+                "code": "gem-diamond-rough",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "low"
+                }
+            },
+            {
+                "code": "gem-olivine_peridot-rough",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "high"
+                }
+            },
+            {
+                "code": "gem-olivine_peridot-rough",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "medium"
+                }
+            },
+            {
+                "code": "gem-olivine_peridot-rough",
+                "type": "item",
+                "stacksize": 1,
+                "stock": {
+                    "avg": 1,
+                    "var": 0.25
+                },
+                "price": {
+                    "avg": 8,
+                    "var": 2
+                },
+                "attributes": {
+                    "potential": "low"
+                }
+            }
+        ]
+    }
+    
+
+	
+	
+				
+			}
+		},
+		behaviors: [
+			{ code: "nametag", selectFromRandomName: ["Aphid", "Erik", "Adachi", "Farhad", "Pegalesharro", "Floyd", "Temper", "En Repos"] }, 
+			{ code: "repulseagents" }, 
+			{ code: "controlledphysics", stepHeight: 1.01 }, 
+			{ code: "reviveondeath", minHours: 24, maxHours: 72 },
+			{ code: "health", currenthealth: 25, maxhealth: 25 },
+			{ 
+				code: "emotionstates",
+				states: [
+					{ code: "aggressiveondamage", duration: 6, chance: 0.9, slot: 0, prority: 2, accumType: "noaccum" },
+					{ code: "fleeondamage", duration: 10, chance: 1, slot: 0, prority: 1, accumType: "max" }
+				],
+			},
+			{ 
+				code: "taskai",
+				aitasks: [
+					{
+						code: "meleeattack",
+						entityCodes: ["player"],
+						priority: 2,
+						damage: 5,
+						mincooldown: 2500, 
+						maxcooldown: 3500, 
+						attackDurationMs: 900,
+						damagePlayerAtMs: 300,
+						animation: "Attack",
+						animationSpeed: 2,
+						whenInEmotionState: "aggressiveondamage",
+					},
+					{
+						code: "seekentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						mincooldown: 1000, 
+						maxcooldown: 1500, 
+						seekingRange: 20,
+						movespeed: 0.035,
+						animation: "Run",
+						animationSpeed: 1.75,
+						whenInEmotionState: "aggressiveondamage"
+					},
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
+						priority: 1.5,
+						movespeed: 0.035,
+						seekingRange: 12,
+						animation: "Run",
+						animationSpeed: 1.75,
+						whenInEmotionState: "fleeondamage"
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 2000,
+						maxcooldown: 10000,
+						animation: "laugh"
+					},
+					{
+						code: "idle",
+						priority: 1.2,
+						minduration: 2500,
+						maxduration: 2500,
+						mincooldown: 5000,
+						maxcooldown: 30000,
+						animation: "idle2"
+					},
+					{
+						code: "wander", 
+						priority: 1.0, 
+						movespeed: 0.01,
+						animation: "Walk",
+						wanderChance: 0.005,
+						maxDistanceToSpawn: 4,
+						wanderRangeMin: 1,
+						wanderRangeMax: 3,
+						teleportWhenOutOfRange: true,
+						teleportInGameHours: 1
+					}, 
+					{ 
+						code: "lookaround", 
+						priority: 0.5
+					}
+				]
+			}
+		],
+	},
+	sounds: {
+	}
+}
