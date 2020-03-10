@@ -1,0 +1,6 @@
+[	
+	{ file: "game:recipes/grid/firewood", op: "add", path: "/0/enabled",  value: "false" },
+	{ file: "game:recipes/grid/firewood", op: "add", path: "/1/enabled",  value: "false" },
+	{ file: "game:recipes/grid/candle", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/grid/tool/hoe", op: "add", path: "/enabled",  value: "false" }	
+] 

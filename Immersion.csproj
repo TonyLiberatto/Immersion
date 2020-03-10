@@ -426,7 +426,9 @@
     <None Include="bin\Immersion\assets\game\crucible-color.json" />
     <None Include="bin\Immersion\assets\game\entities\air\butterfly.json" />
     <None Include="bin\Immersion\assets\game\entities\arrow-primitive.json" />
+    <None Include="bin\Immersion\assets\game\entities\humanoid\trader-artisan.json" />
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-buildmaterials.json" />
+    <None Include="bin\Immersion\assets\game\entities\humanoid\trader-commodities.json" />
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-foods.json" />
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-furniture.json" />
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-luxuries.json" />
@@ -1310,6 +1312,8 @@
     <None Include="bin\Immersion\assets\game\recipes\knapping\stone-knife.json" />
     <None Include="bin\Immersion\assets\game\recipes\knapping\stone-shovel.json" />
     <None Include="bin\Immersion\assets\game\recipes\knapping\stone-sickle.json" />
+    <None Include="bin\Immersion\assets\game\recipes\knapping\flint-slaughtering-axe.json" />
+    <None Include="bin\Immersion\assets\game\recipes\knapping\stone-slaughtering-axe.json" />
     <None Include="bin\Immersion\assets\game\recipes\knapping\stone-spear.json" />
     <None Include="bin\Immersion\assets\game\recipes\smithing\spear.json" />
     <None Include="bin\Immersion\assets\game\shaders\progressbar.fsh" />
@@ -1830,6 +1834,9 @@
     <None Include="bin\Immersion\assets\immersion\patches\bucket.json" />
     <None Include="bin\Immersion\assets\immersion\patches\items.json" />
     <None Include="bin\Immersion\assets\immersion\patches\modifystonepath.json" />
+    <None Include="bin\Immersion\assets\immersion\patches\recipes4.json" />
+    <None Include="bin\Immersion\assets\immersion\patches\recipes3.json" />
+    <None Include="bin\Immersion\assets\immersion\patches\recipes2.json" />
     <None Include="bin\Immersion\assets\immersion\patches\recipes.json" />
     <None Include="bin\Immersion\assets\immersion\patches\worldgen.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\adobe.json" />
