@@ -9,7 +9,7 @@
 		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },		
 		{ code: "rotation", states: ["ud", "ns", "we"] },
 	],
-	creativeinventory: { "general": ["*-ud"], "flora": ["*-ud"], "construction": ["*-ud"], "immersionflora": ["*-ud"] },
+	creativeinventory: { "general": ["*-ud"], "immersionflora": ["*-ud"] },
 	drawtype: "json",
 	lightabsorption: 0,
 	sidesolid: {

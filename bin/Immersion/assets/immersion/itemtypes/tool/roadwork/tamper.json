@@ -21,8 +21,8 @@
   shape: { base: "item/tool/roadwork/tamper" },
   creativeinventory: {
     "general": [ "*" ],
-    "items": [ "*" ],
-    "immersionitems": [ "*" ]
+    
+    "immersiontools": [ "*" ]
   },
 	fpHandTransform: {
 		translation: { x: 0.1, y: 0.2, z: 0 },

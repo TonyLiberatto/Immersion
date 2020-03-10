@@ -19,7 +19,7 @@
 		"meat": {base: "item/food/meat/carnivoremeat-{type}" },
 	},
 	shape: { base: "item/food/meat/carnivoremeat" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"carnivoremeat-cooked": { saturation: 90, health: -1, foodcategory: "Protein" },		
 	},

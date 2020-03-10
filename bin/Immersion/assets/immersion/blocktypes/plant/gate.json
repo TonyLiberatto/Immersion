@@ -4,7 +4,7 @@
     variantgroups: [
 		{ code: "type", states: ["n", "w"] }
     ],
-    creativeinventory: { "general": ["gate-gap-n"], "construction": ["gate-gap-n"], "immersiondeco": ["gate-gap-n"] },
+    creativeinventory: { "general": ["gate-gap-n"], "immersiondeco": ["gate-gap-n"] },
 	sidesolidByType: {	
 		"*-n": { all:false, east: true , west: true },
 		"*-w": { all:false, north:true, south: true }

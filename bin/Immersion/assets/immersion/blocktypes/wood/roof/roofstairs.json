@@ -11,7 +11,7 @@
 			]
 		},
 	},
-	creativeinventory: { "general": ["roofstairs-slope-*-*-north"], "construction": ["roofstairs-slope-*-*-north"], "immersionblocks": ["roofstairs-slope-*-*-north"] },
+	creativeinventory: { "general": ["roofstairs-slope-*-*-north"], "immersionblocks": ["roofstairs-slope-*-*-north"] },
 		variantgroups: [
 		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},
 		{ code: "wood", loadFromProperties: "block/wood" },

@@ -1,7 +1,7 @@
 {
 	code: "mudwall",
 	behaviors: [ {name: "HorizontalOrientable", properties: {  dropBlockFace: "east" } }],
-	creativeinventory: { "general": ["*-east"], "construction": ["*-east"], "immersionblocks": ["*-east"] },
+	creativeinventory: { "general": ["*-east"], "immersionblocks": ["*-east"] },
 		variantgroups: [
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],

@@ -44,7 +44,7 @@
 		},
 	},
 	shape: { base: "item/food/meat/porkchops" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"porkchops-cooked": { saturation: 300, health: 0, foodcategory: "Protein" },
 		"porkchops-cured": { saturation: 300, health: 0, foodcategory: "Protein" },

@@ -23,7 +23,7 @@
 		{ code: "state", states: ["closed", "opened"] },
 		{ code: "knobOrientation", states: ["left", "right"] }		
 	],
-	creativeinventory: { "general": ["greendoor-east-down-closed-left"], "decorative": ["greendoor-east-down-closed-left"] },
+	creativeinventory: { "general": ["greendoor-east-down-closed-left"], "immersiondeco": ["greendoor-east-down-closed-left"] },
 	shapeinventory: { base: "block/wood/door/inventory" },
 	textures: {
 		bottom_left: { base: "block/wood/doors/bamboo-green/bottom_left" },

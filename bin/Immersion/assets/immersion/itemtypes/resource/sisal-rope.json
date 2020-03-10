@@ -3,7 +3,7 @@
   texture: { base: "item/resource/sisal-rope" },
   creativeinventory: {
     "general": [ "*" ],
-    "items": [ "*" ],
+    
     "immersionitems": [ "*" ]
   },
   maxstacksize: 64,

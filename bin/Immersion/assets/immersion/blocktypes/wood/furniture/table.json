@@ -9,7 +9,7 @@
 		{ code: "wood", states: ["acacia", "birch", "kapok", "maple", "oak", "pine", "bamboo-brown", "bamboo-green"] },
 	],
 	shape: { base: "block/wood/furniture/table" },
-	creativeinventory: { "general": ["table-{wood}"], "decorative": ["table-{wood}"], "immersiondeco": ["table-{wood}"] },
+	creativeinventory: { "general": ["table-{wood}"], "immersiondeco": ["table-{wood}"] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

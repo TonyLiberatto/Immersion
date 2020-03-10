@@ -9,7 +9,7 @@
 	},
 	maxstacksize: 64,	
 	texture:  {base: "item/food/sausage/cookedsausage" },	
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },	
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },	
 	materialDensity: 600,
 	guiTransform: {
 		translation: { x: 2, y: 0, z: 0 },

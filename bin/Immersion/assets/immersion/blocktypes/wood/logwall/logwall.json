@@ -21,7 +21,7 @@
 					]
 		},
 	},
-	creativeinventory: { "general": ["*-up-north"], "construction": ["*-up-north"], "immersionblocks": ["*-up-north"] },
+	creativeinventory: { "general": ["*-up-north"], "immersionblocks": ["*-up-north"] },
 		variantgroups: [
 		{ code: "type", states: ["wall", "corner", "jut"]},
 		{ code: "wood", loadFromProperties: "block/wood" },

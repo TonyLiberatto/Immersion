@@ -1,7 +1,7 @@
 {
 	code: "hyenaheadtrophy",
 	class: "BlockSign",
-	creativeinventory: { "general": ["*-ground-north"], "decorative": ["*-ground-north"], "immersiondeco": ["*-ground-north"] },
+	creativeinventory: { "general": ["*-ground-north"], "immersiondeco": ["*-ground-north"] },
 	variantgroups: [
 		{ code: "type", states: ["wild-male", "wild-female-tan", "wild-female-brown"]},
 		{ code:"attachment", states: ["ground", "wall"] },

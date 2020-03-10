@@ -1770,7 +1770,6 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\branch-cordage.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\branch-cross.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\branch.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chest.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestcomplete-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestcomplete.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestframe.json" />
@@ -1778,7 +1777,6 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestlatched.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestsides-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\chestsides.json" />
-    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\labeledchest.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\labeledchestcomplete-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\chest\labeledchestcomplete.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\doors\browndoor.json" />

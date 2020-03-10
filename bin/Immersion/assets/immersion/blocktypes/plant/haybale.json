@@ -7,7 +7,7 @@
         { code: "type", states: ["normal", "bamboo"] },
         { code: "rotation", states: ["ud", "ns", "we"] },
 	],
-	creativeinventory: { "general": ["*-ud"], "construction": ["*-ud"], "flora": ["*-ud"], "decorative": ["*-ud"], "immersiondeco": ["*-ud"] },
+	creativeinventory: { "general": ["*-ud"], "immersiondeco": ["*-ud"] },
 	blockmaterial: "Plant",
 	replaceable: 900,
 	lightAbsorption: 99,

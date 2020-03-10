@@ -44,7 +44,7 @@
 		},
 	},
 	shape: { base: "item/food/meat/mutton" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"mutton-cooked": { saturation: 300, health: 0, foodcategory: "Protein" },
 		"mutton-cured": { saturation: 300, health: 0, foodcategory: "Protein" },

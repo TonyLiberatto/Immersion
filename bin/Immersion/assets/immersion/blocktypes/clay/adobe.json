@@ -5,7 +5,7 @@
   blockmaterial: "Soil",
   creativeinventory: {
     "general": [ "*" ],
-    "construction": [ "*" ],
+    
     "immersionblocks": [ "*" ]
   },
   replaceable: 400,

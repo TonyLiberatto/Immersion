@@ -26,7 +26,7 @@
 		"*-west": { base: "game:block/wood/chest/normal-labeled", rotateY: 90 },		
 	},
 	drops: [{ code: "game:survivallabeledchest-east" }],
-	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
+	creativeinventory: { "general": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

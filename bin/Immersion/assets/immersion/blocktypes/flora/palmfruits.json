@@ -44,7 +44,7 @@
         {  "code": "type",  "states": [ "bananna", "coconut"  ] },
         {  "loadFromProperties": "abstract/horizontalorientation"  }   
 	],
-    "creativeinventory": { "general": [ "*-north" ], "immersionflora": [ "*-north" ] },
+    creativeinventory: { "general": [ "*-north" ], "immersiondeco": [ "*-north" ] },
     "drops": [],
     "randomDrawOffset": false,
     "shapeByType": {

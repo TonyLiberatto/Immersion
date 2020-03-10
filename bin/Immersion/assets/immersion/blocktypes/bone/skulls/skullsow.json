@@ -1,7 +1,7 @@
 {
 	code: "skullsow",
 	class: "BlockSign",
-	creativeinventory: { "general": ["skullsow-ground-north"], "decorative": ["skullsow-ground-north"], "immersiondeco": ["skullsow-ground-north"] },
+	creativeinventory: { "general": ["skullsow-ground-north"], "immersiondeco": ["skullsow-ground-north"] },
 	variantgroups: [
 		{ code:"attachment", states: ["ground", "wall"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
