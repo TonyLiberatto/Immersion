@@ -55,9 +55,9 @@
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" }, 
 			{ 
-				code: "grow",
+				code: "portiongrow",
 				hoursToGrow: 168,
-				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
+				portionsEatenForGrow: 10.0,
 			},
 			{ 
 				code: "taskai",

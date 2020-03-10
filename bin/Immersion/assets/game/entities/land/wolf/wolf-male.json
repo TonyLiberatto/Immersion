@@ -80,6 +80,7 @@
 			{ 
 				code: "taskai",
 				aitasks: [
+					
 					{
 						code: "fear",
 						priority: 2.1,
@@ -90,7 +91,7 @@
 					},
 					{
 						code: "meleeattack",
-						entityCodes: ["player", "chicken-*", "hare-*"],
+						entityCodes: ["player", "chicken-*", "hare-*", ],
 						priority: 2,
 						damage: 8,
 						slot: 1,
@@ -101,10 +102,20 @@
 						animation: "Attack",
 						animationSpeed: 2.5,
 						sound: "creature/wolf/attack"
+					},					
+					{
+						code: "fleeentity",
+						entityCodes: ["player"],
+						priority: 1.6,
+						movespeed: 0.04,
+						seekingRange: 20,
+						animation: "Run",
+						animationSpeed: 1.75,
+						whenInEmotionState: "fleeondamage"
 					},
 					{
 						code: "seekentity",
-						entityCodes: ["player"],
+						entityCodes: ["player", "chicken-*", "hare-*"],
 						priority: 1.9,
 						movespeed: 0.021,
 						seekingRange: 5,
@@ -152,7 +163,7 @@
 					},
 					{
 						code: "idle",
-						priority: 1.45,
+						priority: 1.55,
 						priorityForCancel: 1.55,
 						minduration: 200000,
 						maxduration: 800000,
@@ -160,16 +171,26 @@
 						maxcooldown: 30000,
 						animation: "Sleep",
 						whenNotInEmotionState: "aggressiveondamage",
-						duringDayTimeFrames: [ { fromHour: 10, toHour: 18 }, { fromHour: 1, toHour: 3 } ],
+						duringDayTimeFrames: [ { fromHour: 6, toHour: 18 }, ],
 						stopOnNearbyEntityCodes: ["player"],
 						stopRange: 6
-					},
+					},	
 					{
 						code: "getoutofwater",
 						priority: 1.4,
 						movespeed: 0.015,
 						animation: "Walk",
 						animationSpeed: 2.2
+					},
+					{
+						code: "stayclosetoentity",
+						priority: 1.35,
+						entityCode: "wolf-male",
+						movespeed: 0.02,
+						maxDistance: 10,
+						searchRange: 25,
+						animationSpeed: 1.5,
+						animation: "Run"
 					},
 					{
 						code: "idle",
@@ -198,7 +219,7 @@
 					{
 						code: "wander", 
 						priority: 1.0, 
-						priorityForCancel: 1.35,
+						priorityForCancel: 1.3,
 						movespeed: 0.006,
 						animation: "Walk",
 						preferredLightLevel: 20

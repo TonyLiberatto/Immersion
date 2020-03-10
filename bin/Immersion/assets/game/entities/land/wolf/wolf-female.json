@@ -171,7 +171,7 @@
 						maxcooldown: 30000,
 						animation: "Sleep",
 						whenNotInEmotionState: "aggressiveondamage",
-						duringDayTimeFrames: [ { fromHour: 10, toHour: 18 }, { fromHour: 1, toHour: 3 } ],
+						duringDayTimeFrames: [ { fromHour: 6, toHour: 18 }, ],
 						stopOnNearbyEntityCodes: ["player"],
 						stopRange: 6
 					},	
