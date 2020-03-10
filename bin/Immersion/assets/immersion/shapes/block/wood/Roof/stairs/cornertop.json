@@ -17,10 +17,10 @@
 			"rotationOrigin": [ 0.0, 0.0, 0.0 ],
 			"rotationZ": 90.0,
 			"faces": {
-				"north": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
-				"east": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
-				"south": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
-				"west": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
+				"north": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
 				"up": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false },
 				"down": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false }
 			}
@@ -33,10 +33,10 @@
 			"rotationY": 90.0,
 			"rotationZ": 90.0,
 			"faces": {
-				"north": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"east": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"south": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"west": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"north": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
 				"up": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false },
 				"down": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false }
 			}
@@ -49,10 +49,10 @@
 			"rotationY": 90.0,
 			"rotationZ": 90.0,
 			"faces": {
-				"north": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
-				"east": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
-				"south": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
-				"west": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 12.0 ] },
+				"north": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 4.0, 12.0, 0.0, 0.0 ] },
 				"up": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false },
 				"down": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false }
 			}
@@ -64,10 +64,10 @@
 			"rotationOrigin": [ 0.0, 0.0, 0.0 ],
 			"rotationZ": 90.0,
 			"faces": {
-				"north": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"east": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"south": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"west": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"north": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 4.0, 4.0, 0.0, 0.0 ] },
 				"up": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false },
 				"down": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false }
 			}
@@ -80,10 +80,10 @@
 			"rotationY": 90.0,
 			"rotationZ": 90.0,
 			"faces": {
-				"north": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"east": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"south": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
-				"west": { "texture": "#acacia", "uv": [ 0.0, 0.0, 4.0, 4.0 ] },
+				"north": { "texture": "#acacia", "uv": [ 0.0, 4.0, 4.0, 0.0 ] },
+				"east": { "texture": "#acacia", "uv": [ 0.0, 4.0, 4.0, 0.0 ] },
+				"south": { "texture": "#acacia", "uv": [ 0.0, 4.0, 4.0, 0.0 ] },
+				"west": { "texture": "#acacia", "uv": [ 0.0, 4.0, 4.0, 0.0 ] },
 				"up": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false },
 				"down": { "texture": "#acaciatop", "uv": [ 8.0, 0.0, 12.0, 4.0 ], "autoUv": false }
 			}
