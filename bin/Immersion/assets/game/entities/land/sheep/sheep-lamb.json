@@ -56,7 +56,8 @@
 			{ code: "breathe" }, 
 			{ 
 				code: "grow",
-				portionsEatenForGrow: 10.0,
+				hoursToGrow: 168,
+				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
 			},
 			{ 
 				code: "taskai",
