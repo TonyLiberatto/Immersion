@@ -51,6 +51,7 @@
         }
     ],
     "drawtype": "json",
+    "shapeInventory": { "base": "block/road/road-{pattern}" },
     "creativeinventory": {
         "general": [
             "*"
