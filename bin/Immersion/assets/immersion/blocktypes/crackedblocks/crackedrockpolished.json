@@ -5,7 +5,7 @@
 	],
 	drawtype: "Cube",
 	blockmaterial: "Stone",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	replaceable: 400,
 	resistance: 1.5,
 	lightAbsorption: 99,

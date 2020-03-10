@@ -20,8 +20,8 @@
   shape: { base: "item/tool/roadwork/settinghammer" },
   creativeinventory: {
     "general": [ "*" ],
-    "items": [ "*" ],
-    "immersionitems": [ "*" ]
+    
+    "immersiontools": [ "*" ]
   },
 	fpHandTransform: {
 		translation: { x: 0.1, y: 0.2, z: 0 },

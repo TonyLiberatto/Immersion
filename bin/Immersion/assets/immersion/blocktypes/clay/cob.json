@@ -3,7 +3,7 @@
 	shape: { base: "game:block/basic/cube" },
 	drawtype: "Cube",
 	blockmaterial: "Soil",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	replaceable: 400,
 	resistance: 1.5,
 	textures: {

@@ -21,7 +21,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	blockmaterial: "Cloth",
-	creativeinventory: { "general": ["*-ground-east"], "decorative": ["*-ground-east"], "immersiondeco": ["*-ground-east"] },
+	creativeinventory: { "general": ["*-ground-east"], "immersiondeco": ["*-ground-east"] },
 	replaceable: 4000,
 	resistance: 0.5,
 	lightAbsorption: 0,

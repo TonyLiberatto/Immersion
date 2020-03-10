@@ -9,7 +9,7 @@
 		},
 	},
 	shape: { base: "block/wood/furniture/chair" },
-	creativeinventory: { "general": ["chair-{wood}"], "decorative": ["chair-{wood}"], "immersiondeco": ["chair-{wood}"] },
+	creativeinventory: { "general": ["chair-{wood}"], "immersiondeco": ["chair-{wood}"] },
 	blockmaterial: "Wood",
 	replaceable: 900,
 	resistance: 1.5,

@@ -23,7 +23,7 @@
     },
     "variantgroups": [ { "code": "type",  "states": [ "bananna", "coconut", "coconutbroken", "coconutshell", "coconutslice"  ] },
         { "loadFromProperties": "abstract/horizontalorientation"  }  ],
-    "creativeinventory": {  "general": [ "*-north" ], "flora": [ "*-north" ] },
+    "creativeinventory": {  "general": [ "*-north" ], "immersionflora": [ "*-north" ] },
     "nutritionPropsByType": {
 		"*-coconutslice-*": { "saturation": 160, "foodcategory": "Fruit" },
         "*-bananna-*": { "saturation": 160,  "foodcategory": "Fruit"  }   },

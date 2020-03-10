@@ -11,7 +11,7 @@
 					]
 		}
 	},
-	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	shape: { base: "game:block/basic/cube" },
 	blockmaterial: "Wood",
 	drawtype: "cube",

@@ -1,6 +1,6 @@
 {
 	code: "base",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "immersiondeco": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiondeco": ["*"] },
 	shape: { base: "block/post/base2" },
 	sidesolid: {all: false},
 	sideopaque: {all: false},

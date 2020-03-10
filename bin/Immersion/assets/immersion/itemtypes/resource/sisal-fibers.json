@@ -1,7 +1,7 @@
 {
 	code: "sisal-fibers",
 	texture: { base: "item/resource/sisal-fibers" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	maxstacksize: 64,
 	materialDensity: 10
 }

@@ -81,9 +81,7 @@
     "creativeinventory": {
         "general": [
             "*-down"
-        ],
-        "decorative": [
-            "*-down"
+        
         ],
         "immersiondeco": [
             "*-down"

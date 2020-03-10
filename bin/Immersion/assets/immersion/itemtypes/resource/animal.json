@@ -8,5 +8,5 @@
 		{ code: "type", states: ["tendon", "horn", "leatherstrips", "small-bones", "intestines", "cleanintestines", "casings" ] },
 	],
 	texture: { base: "item/resource/animal/{type}" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 }

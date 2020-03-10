@@ -18,7 +18,7 @@
 		}
 	},
 	storageFlags: 2,
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	drawtype: "json",
 	lightAbsorption: 0,
 	sidesolid: { all: false },
