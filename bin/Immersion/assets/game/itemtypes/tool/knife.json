@@ -15,7 +15,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "material", states: ["flint", "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "material", states: ["copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	shape: { base: "item/tool/knife" },
 	heldTpHitAnimation: "breaktool",

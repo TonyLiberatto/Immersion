@@ -10,9 +10,9 @@
 	"elements": [
 		{
 			"name": "Cube12",
-			"from": [ 6.0, 0.0, 6.5 ], 
-			"to": [ 7.6, 1.0, 8.5 ], 
-			"rotationOrigin": [ 6.0, 7.0, 7.0 ],
+			"from": [ 8.0, 7.0, 6.5 ], 
+			"to": [ 9.6, 8.0, 8.5 ], 
+			"rotationOrigin": [ 8.0, 14.0, 7.0 ],
 			"faces": {
 				"north": { "texture": "#stone", "uv": [ 0.0, 0.0, 1.5, 1.0 ] },
 				"east": { "texture": "#stone", "uv": [ 0.0, 0.0, 2.0, 1.0 ] },

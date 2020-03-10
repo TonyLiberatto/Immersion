@@ -4,7 +4,7 @@
 		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	shapeByType: {		
-		"spearhead-copper": { base: "item/tool/spearhead-copper" },
+		"spearhead-copper": { base: "game:item/tool/spearhead-copper" },
 		
 		"spearhead-tinbronze": { base: "item/tool/spear-bronze" },
 		"spearhead-bismuthbronze": { base: "item/tool/spear-bronze" },
@@ -14,7 +14,7 @@
 		"spearhead-iron": { base: "item/tool/spear-bronze" },
 	},
 	textures: {
-		"metal": { base: "item/tool/material/{material}" },
+		"metal": { base: "game:item/tool/material/{material}" },
 		"string": { base: "block/transparent" },
 		"handle": { base: "block/transparent" },
 	},

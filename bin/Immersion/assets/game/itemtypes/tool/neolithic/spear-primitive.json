@@ -56,25 +56,28 @@
 		"*-flint-*": 70,
 	},
 	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
-	fpHandTransform: {
-		translation: { x: -0.1, y: 0.3, z: 0 },
-		rotation: { x: -85, y: 0, z: 75 },
-		scale: 2.5
-	},
 	guiTransform: {
-		translation: { x: 0, y: 3, z: 0 },
-		rotation: { x: 90, y: -45, z: -35 },
-		origin: { x: 0.6, y: -0.8, z: 0.55 },
-		scale: 1.4299
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: -77, y: 53, z: 25 },
+		origin: { x: 0.4, y: 0, z: 0.4 },
+		scale: 1.17
+	},
+	fpHandTransform: {
+		translation: { x: 0.3, y: 0.5, z: 0.16 },
+		rotation: { x: -82, y: 0, z: 85 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.45
 	},
 	groundTransform: {
-		translation: { x: 0.046875, y: 0, z: 0 },
+		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: 0, y: 0, z: 0 },
-		scale: 2.5
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 3.4
 	},
 	tpHandTransform: {
-		translation: { x: -1.7, y: -0.7, z: -0.5 },
-		rotation: { x: 0, y: 0, z: -10 },
-		scale: 1
+		translation: { x: -1.24, y: -0.01, z: -0.56 },
+		rotation: { x: -81, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 0.8
 	}
 }

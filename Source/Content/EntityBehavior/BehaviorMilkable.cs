@@ -65,6 +65,7 @@ namespace Immersion
 
         public override void GetInfoText(StringBuilder infotext)
         {
+            entity.WatchedAttributes.GetOrAddTreeAttribute("multiply");
             base.GetInfoText(infotext);
             infotext.AppendLine("Liters Of Milk Remaining: " + RemainingLiters / milkProps.ItemsPerLitre);
         }

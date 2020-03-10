@@ -1,7 +1,7 @@
 {
 	code: "arrowhead",
 	variantgroups: [
-		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
+		{ code: "material", states: [ "flint","copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	maxstacksize: 64,
 	texture: { base: "item/tool/arrowhead/{material}" },

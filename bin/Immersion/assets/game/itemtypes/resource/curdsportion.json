@@ -6,7 +6,7 @@
 		waterTightContainerProps: {
 			containable: true,
 			itemsPerLitre: 4,
-			blockTextureSource: "woodbucket",
+			texture: { base: "block/liquid/curds" },
 			allowSpill: false,
 			whenSpilled: { 
 				action: "DropContents",
