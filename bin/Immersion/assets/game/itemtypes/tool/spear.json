@@ -8,19 +8,21 @@
 	],
 	shapeByType: {		
 		
-		"spear-copper": { base: "item/tool/spear-copper" },
+		"spear-copper": { base: "game:item/tool/spear-copper" },
 		
-		"spear-tinbronze": { base: "item/tool/spear-bronze" },
-		"spear-bismuthbronze": { base: "item/tool/spear-bronze" },
-		"spear-blackbronze": { base: "item/tool/spear-bronze" },
-		"spear-gold": { base: "item/tool/spear-bronze" },
-		"spear-silver": { base: "item/tool/spear-bronze" },
+		"spear-tinbronze": { base: "game:item/tool/spear-bronze" },
+		"spear-bismuthbronze": { base: "game:item/tool/spear-bronze" },
+		"spear-blackbronze": { base: "game:item/tool/spear-bronze" },
+		"spear-gold": { base: "game:item/tool/spear-bronze" },
+		"spear-silver": { base: "game:item/tool/spear-bronze" },
 	},
 	heldTpHitAnimation: "spearhit",
 	texturesByType: {
 		
 		"*": {
-			"material": { base: "item/tool/material/{material}" },
+			"metal": { base: "game:item/tool/material/{material}" },
+			"string": { base: "game:item/tool/material/string" },
+			"handle": { base: "game:item/tool/material/handle" },
 		}
 	},
 	attackRange: 3.5,

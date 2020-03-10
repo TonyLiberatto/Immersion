@@ -447,16 +447,9 @@
     <None Include="bin\Immersion\assets\game\entities\land\fox-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\fox-pup.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox\fox-red-female.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox\fox-red-male.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox\fox-snow-female.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\fox\fox-snow-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare-baby.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare-female.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hare-male.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\hare\hare-baby.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\hare\hare-female.json" />
-    <None Include="bin\Immersion\assets\game\entities\land\hare\hare-male.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hyena\hyena-wild-female-brown.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hyena\hyena-wild-female-tan.json" />
     <None Include="bin\Immersion\assets\game\entities\land\hyena\hyena-wild-male.json" />
@@ -518,6 +511,7 @@
     <None Include="bin\Immersion\assets\game\itemtypes\resource\shingle.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\sisal-leaves.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\wheyportion.json" />
+    <None Include="bin\Immersion\assets\game\itemtypes\toolhead\arrowhead.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\toolhead\axehead.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\toolhead\bonearrowhead.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\toolhead\hoehead.json" />
@@ -532,7 +526,6 @@
     <None Include="bin\Immersion\assets\game\itemtypes\tool\knife.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\adze.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\arrow-primitive.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\axe.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\hammer.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\hand-axe.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\hand-hammer.json" />
@@ -1480,9 +1473,10 @@
     <None Include="bin\Immersion\assets\game\shapes\entity\primitive-spear.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\bamboostakes.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\hinges.json" />
-    <None Include="bin\Immersion\assets\game\shapes\item\ironbloom.json" />
-    <None Include="bin\Immersion\assets\game\shapes\item\rawironbloom.json" />
-    <None Include="bin\Immersion\assets\game\shapes\item\refinedironbloom.json" />
+    <None Include="bin\Immersion\assets\game\shapes\item\tool\spear-bronze.json" />
+    <None Include="WIPAssets\Novocain\shapes\tool\ironbloom.json" />
+    <None Include="WIPAssets\Novocain\shapes\tool\rawironbloom.json" />
+    <None Include="WIPAssets\Novocain\shapes\tool\refinedironbloom.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-adze.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-axe.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-hammer.json" />
@@ -1836,7 +1830,6 @@
     <None Include="bin\Immersion\assets\immersion\itemtypes\tool\woodenmallet.json" />
     <None Include="bin\Immersion\assets\immersion\lang\en.json" />
     <None Include="bin\Immersion\assets\immersion\patches\blocks.json" />
-    <None Include="bin\Immersion\assets\immersion\patches\bucket.json" />
     <None Include="bin\Immersion\assets\immersion\patches\items.json" />
     <None Include="bin\Immersion\assets\immersion\patches\modifystonepath.json" />
     <None Include="bin\Immersion\assets\immersion\patches\recipes.json" />

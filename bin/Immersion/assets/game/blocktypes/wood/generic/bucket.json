@@ -50,7 +50,19 @@
 			},
 			"honeyportion": {
 				"base": "block/liquid/honey"
-			}
+			},
+			"milkportion": {
+				 "base": "block/liquid/milk"
+			},
+			"curdsportion": {
+				 "base": "block/liquid/curds"
+			},
+			"wheyportion": {
+				 "base": "block/liquid/whey"
+			},
+			"seawaterportion": {
+				 "base": "block/liquid/seawater"
+			},
 		},
 		"*": {
 			"sides": {

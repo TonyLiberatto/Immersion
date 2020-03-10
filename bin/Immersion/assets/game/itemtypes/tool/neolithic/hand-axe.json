@@ -82,11 +82,11 @@
 		origin: { x: 0.7, y: 0.5, z: 0.5},
 		scale: 2.5
 	},
-		guiTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: -56, y: -127, z: -180 },
-		origin: { x: 0.5, y: 0.4, z: 0.5 },
-		scale: 4
+	guiTransform: {
+		translation: { x: 0, y: 5, z: 0 },
+		rotation: { x: -77, y: -135, z: 160 },
+		origin: { x: 0.54, y: 0.5, z: 0.48 },
+		scale: 2.6
 	},
 	groundTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
@@ -94,8 +94,8 @@
 		scale: 2.5
 	},
 	tpHandTransform: {
-		translation: { x: -0.75, y: -0.5, z: -0.55 },
-		rotation: { x: 90, y: 0, z: -10 },
+		translation: { x: -0.75, y: -0.48, z: -0.52 },
+		rotation: { x: 90, y: 1, z: 0 },
 		origin: { x: 0.6, y: 0.5, z: 0.5},
 		scale: 1
 	}

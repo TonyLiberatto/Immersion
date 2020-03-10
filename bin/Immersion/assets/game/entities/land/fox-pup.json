@@ -65,7 +65,7 @@
 			{ code: "breathe" },
 			{ 
 				hoursToGrow: 336,
-				adultEntityCodes: ["fox-male-{type}", "fox-female-{type}"],
+				adultEntityCodes: ["fox-{type}-male", "fox-{type}-female"],
 				code: "grow" 
 			},
 			{ 
@@ -90,7 +90,7 @@
 					{
 						code: "stayclosetoentity",
 						priority: 1.4,
-						entityCode: "fox-female",
+						entityCode: "fox-{type}-female",
 						movespeed: 0.02,
 						animationSpeed: 3,
 						maxDistance: 5,
