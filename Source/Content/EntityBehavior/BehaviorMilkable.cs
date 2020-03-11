@@ -23,7 +23,7 @@ namespace Immersion
 
         public int RemainingLiters
         {
-            get { return tree.GetInt("remainingliters"); }
+            get { return entity.GetBehavior<EntityBehaviorMultiply>().IsPregnant ? 0 : tree.GetInt("remainingliters"); }
             set { tree.SetInt("remainingliters", value); entity.WatchedAttributes.MarkPathDirty("remainingliters"); }
         }
 
@@ -83,8 +83,9 @@ namespace Immersion
                 if ((contents == null || contents.Item == milk) && RemainingLiters > 0)
                 {
                     if (contents?.StackSize != null && contents.StackSize / milkProps.ItemsPerLitre >= bucket.CapacityLitres) return;
+                    DummySlot slot = new DummySlot(itemslot.TakeOut(1));
 
-                    int taken = bucket.TryPutContent(byEntity.World, itemslot.Itemstack, milkstack, 1);
+                    int taken = bucket.TryPutContent(byEntity.World, slot.Itemstack, milkstack, 1);
                     if (taken > 0)
                     {
                         RemainingLiters -= taken;
@@ -100,6 +101,7 @@ namespace Immersion
                             }
                             id = entity.World.RegisterGameTickListener(MilkListener, 1000);
                         }
+                        byEntity.TryGiveItemStack(slot.Itemstack);
                         itemslot.MarkDirty();
                     }
                 }
