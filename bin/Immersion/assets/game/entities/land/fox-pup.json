@@ -63,9 +63,11 @@
 			{ code: "health", currenthealth: 3, maxhealth: 3 },			
 			{ code: "floatupwhenstuck", onlyWhenDead: true },			
 			{ code: "breathe" },
-			{ 
-				hoursToGrow: 336,
-				adultEntityCodes: ["fox-{type}-male", "fox-{type}-female"],
+			{ 	hoursToGrow: 336,
+				adultEntityCodesByType: {
+					"fox-pup-forest": ["fox-male", "fox-female"],
+					"fox-pup-arctic": ["fox-arctic-male", "fox-arctic-female"]
+					},
 				code: "grow" 
 			},
 			{ 

@@ -1468,6 +1468,7 @@
     <None Include="bin\Immersion\assets\game\shapes\item\bamboostakes.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\hinges.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\spear-bronze.json" />
+    <None Include="bin\Immersion\assets\immersion\blocktypes\carcass\dead-racoon.json" />
     <None Include="WIPAssets\Novocain\shapes\tool\ironbloom.json" />
     <None Include="WIPAssets\Novocain\shapes\tool\rawironbloom.json" />
     <None Include="WIPAssets\Novocain\shapes\tool\refinedironbloom.json" />

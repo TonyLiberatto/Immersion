@@ -24,7 +24,7 @@
 		shelvable: true
 	},
 	variantgroups: [
-		{ code: "metal", states: ["wax", "tallow", "rawironbloom", "refinedironbloom" ], loadFromProperties: "block/metal" },
+		{ code: "metal", states: ["wax", "tallow" ], loadFromProperties: "block/metal" },
 	],
 	attributesByType: {
 		"ingot-lead": {
@@ -37,10 +37,7 @@
 		"*ironbloom": { base: "item/{metal}" },
 		"*": { base: "item/ingot" }
 	},
-	texturesByType: {
-		"*ironbloom": {
-			"all": { base: "game:block/metal/ingot/ironbloom" },
-		},
+	texturesByType: {		
 		"*":{
 			"metal": { base: "game:block/metal/ingot/{metal}" },
 		}

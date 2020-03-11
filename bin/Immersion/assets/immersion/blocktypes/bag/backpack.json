@@ -1,6 +1,6 @@
 {
 	code: "backpack",
-	maxstacksize: 1,
+	maxstacksize: 64,
 	shapeinventory: { base: "game:item/bag/backpack" },
 	shape: { base: "immersion:block/bag/backpack" },
 	textures: {
