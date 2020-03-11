@@ -5,7 +5,7 @@
 	],
 	maxstacksize: 64,
 	texture: { base: "item/tool/arrowhead/{material}" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "tools": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0, y: -0.1, z: 0 },
 		rotation: { x: 99, y: 90, z: -30 }

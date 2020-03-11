@@ -69,10 +69,7 @@
         "general": [
             "*-empty",
             "*-raw"
-        ],
-        "decorative": [
-            "*-empty",
-            "*-raw"
+        
         ],
         "immersiondeco": [
             "*-empty",

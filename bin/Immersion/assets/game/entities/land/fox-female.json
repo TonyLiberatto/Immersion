@@ -60,7 +60,7 @@
 			{ code: "breathe" },
 			{ 
 				code: "multiply",
-				spawnEntityCode: "fox-baby",
+				spawnEntityCode: "fox-pup-forest",
 				requiresNearbyEntityCode: "fox-male",
 				requiresNearbyEntityRange: 10,
 				spawnQuantityMin: 1,

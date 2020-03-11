@@ -3,9 +3,9 @@
 	texture: { base: "item/resource/reeds" },
   creativeinventory: {
     "general": ["*"],
-    "items": ["*"],
-    "immersionitems": ["*"],
-    "immersionflora": ["*"]
+    
+    "immersionitems": ["*"]
+    
   },
 	maxstacksize: 64,
 	combustibleProps: {

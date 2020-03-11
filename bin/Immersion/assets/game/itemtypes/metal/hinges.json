@@ -10,7 +10,7 @@
     "variantgroups": [{"code": "metal", "states": [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ]}],
     "shape": { "base": "item/hinges" },
     "texture": { "base": "item/tool/material/{metal}" },
-    "creativeinventory": { "general": ["*"], "items": ["*"], "immersionitems": ["*"]},
+    "creativeinventory": { "general": ["*"], "immersionitems": ["*"]},
     "maxstacksize": 64,
     "materialDensity": 100,
     "guiTransform": { 

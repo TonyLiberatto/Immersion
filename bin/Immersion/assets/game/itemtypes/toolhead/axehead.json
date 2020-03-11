@@ -8,7 +8,7 @@
 		"metal": { base: "item/tool/material/{material}" },
 		"wood": { base: "block/transparent" }
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	creativeinventory: { "general": ["*"], "tools": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.4, y: -0.4, z: 0 },
 		rotation: { x: 25, y: 0, z: 86 },

@@ -40,7 +40,7 @@
 		"ashes": { base: "block/wood/bonfire/ground" },
 		"fire": { base: "block/wood/bonfire/fire" },
 	},
-	creativeinventory: { general: ["bonfire-cold"], decorative: ["bonfire-cold"] },
+	creativeinventory: { general: ["bonfire-cold"], immersiondeco: ["bonfire-cold"] },
 	blockmaterial: "Wood",
 	lightAbsorption: 0,
 	lightHsvByType: {

@@ -5,7 +5,7 @@
 		{ code: "type", states: ["blue", "fire", "red", "brown" ] },
 	],
 	texture: { base: "item/resource/brick/raw/{type}" },
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	combustibleProps: {
 		meltingPoint: 1100,
 		meltingDuration: 15,

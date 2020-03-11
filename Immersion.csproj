@@ -283,7 +283,6 @@
     <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\glasslanternframemold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\hingesmold.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\ingotmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\ingotstampmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\lanternbasetopmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\lanternsidesmold.json" />
@@ -305,7 +304,6 @@
     <None Include="bin\Immersion\assets\game\blocktypes\clay\shinglestairs.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\shinglestairscorner.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\storagevessel.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\clay\toolmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\toolpinmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\wateringcan.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\cloth\linen.json" />
@@ -330,7 +328,6 @@
     <None Include="bin\Immersion\assets\game\blocktypes\metal\lantern-top.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\lantern.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\sheet.json" />
-    <None Include="bin\Immersion\assets\game\blocktypes\paperlantern.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\plant\bamboo.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\plant\bambooleaves.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\plant\giantreed-free.json" />
@@ -478,13 +475,10 @@
     <None Include="bin\Immersion\assets\game\itemtypes\food\cookedgiantreedsroot.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\dryfruit.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\egg.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\food\fish.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\flour.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\fruit.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\grain.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\legume.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\food\pickledlegume.json" />
-    <None Include="bin\Immersion\assets\game\itemtypes\food\pickledvegetable.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\poultry.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\redmeat.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\food\vegetable.json" />
@@ -1474,6 +1468,7 @@
     <None Include="bin\Immersion\assets\game\shapes\item\bamboostakes.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\hinges.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\spear-bronze.json" />
+    <None Include="bin\Immersion\assets\immersion\blocktypes\carcass\dead-racoon.json" />
     <None Include="WIPAssets\Novocain\shapes\tool\ironbloom.json" />
     <None Include="WIPAssets\Novocain\shapes\tool\rawironbloom.json" />
     <None Include="WIPAssets\Novocain\shapes\tool\refinedironbloom.json" />

@@ -67,7 +67,7 @@
 		{ code: "part", states: ["large-head", "large-feet"] },
 		{ code:"side", loadFromProperties: "abstract/horizontalorientation" }
 	],
-	creativeinventory: { "general": ["*-head-north"], "decorative": ["*-head-north"], "immersionblocks": ["*-head-north"] },
+	creativeinventory: { "general": ["*-head-north"], "decorative": ["*-head-north"]},
 	shapeinventory: { base: "game:block/wood/trough/large/inventory" },
 	shapebytype: {
 		"*-head-north": { base: "game:block/wood/trough/large/empty", rotateY: 90 },

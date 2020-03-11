@@ -1,7 +1,7 @@
 {
 	code: "sisal-leaves",
 	texture: { base: "item/resource/leaves/sisal" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionflora": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	maxstacksize: 64,
 	materialDensity: 10
 }

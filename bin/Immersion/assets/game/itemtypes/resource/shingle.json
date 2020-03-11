@@ -14,7 +14,7 @@
 			"material": { base: "block/clay/shingles/{type}" },
 		}
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	combustibleProps: {
 		meltingPoint: 600,
 		meltingDuration: 15,

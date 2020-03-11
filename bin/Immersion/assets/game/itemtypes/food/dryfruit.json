@@ -21,7 +21,7 @@
 		}
 	},
 	texture: { base: "immersion:item/food/dryfruit/{type}" },
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"*-saguaro": { satiety: 120, foodcategory: "Fruit" },
 		"*-cranberry": { satiety: 120, foodcategory: "Fruit" },

@@ -24,7 +24,7 @@
 	},
 	entityClass: "IngotMold",
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	replaceable: 700,
 	resistance: 2,
 	maxStackSize: 8,

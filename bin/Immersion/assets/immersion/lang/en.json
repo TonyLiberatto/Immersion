@@ -116,7 +116,7 @@
   "block-tropicalfruits-coconut-*": "Shelled Coconut",
   "blockdesc-tropicalfruits-coconut-*": "Place on a solid surface and use and axe (Sneak + RMB) to cut into slices.",
   "block-tropicalfruits-coconutbroken-*": "Broken Coconut",
-  "blockdesc-tropicalfruits-coconutbroken-*": "A pile of Coconut Slices, use a knife to collect.",
+  "blockdesc-tropicalfruits-coconutbroken-*": "A pile of Coconut Slices, use RMB with an empty hand or any tool to collect.",
   "block-tropicalfruits-coconutslice-*": "Coconut slice",
   "blockdesc-tropicalfruits-coconutslice-*": "Cannot be used in cooking, but can be eaten raw.",
 
@@ -1047,8 +1047,6 @@
   "block-dead-hare-female-silver": "Dead Silver Female Hare",
   "block-dead-hare-female-smokegrey": "Dead Smoke Grey Female Hare",
 
-  "block-dead-sheep-ewe": "Dead Ewe",
-  "block-dead-sheep-ram": "Dead Ram",
   "block-dead-sheep-domestic-ewe": "Dead Domestic Ewe",
   "block-dead-sheep-domestic-ram": "Dead Domestic Ram",
   "block-dead-wild-sheep-ewe": "Dead Wild Ewe",
@@ -1113,8 +1111,10 @@
   "blockdesc-dead-armadillo-*": "Butcher using any knife to harvest red meat.",
   "blockdesc-dead-raccoon-*": "Butcher using any knife to harvest carnivore meat, small bones and raw hide.",
   "blockdesc-dead-fox-*": "Butcher using any knife to harvest carnivore meat, and sometimes a pelt or hide.",
-  "blockdesc-dead-sheep-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest mutton, tendons, fat, bones and intestines. Rams may also provide horns. Use an axe, saw, or sword before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
+  "blockdesc-dead-wild-sheep-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest mutton, tendons, fat, bones and intestines. Rams may also provide horns. Use an axe, saw, or sword before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
+  "blockdesc-dead-sheep-domestic-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest mutton, tendons, fat, bones and intestines. Rams may also provide horns. Headless animals sometimes provide pelts instead of hides.",
   "blockdesc-dead-pig-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest pork chops, tendons, fat, bones and intestines. Use an axe, saw, or sword before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
+  "blockdesc-dead-pig-domestic-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest pork chops, tendons, fat, bones and intestines.",
   "blockdesc-dead-wolf-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest carnivore meat, tendons, fat, bones. Use an axe, saw, or sword before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
   "blockdesc-dead-hyena-*": "Skin the animal using any knife to harvest raw hides. Butcher to harvest carnivore meat, tendons, fat, bones. Use an axe, saw, or sword before skinning to try to collect a Head Trophy. Headless animals sometimes provide pelts instead of hides.",
 

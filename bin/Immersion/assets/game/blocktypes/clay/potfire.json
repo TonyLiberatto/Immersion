@@ -89,7 +89,7 @@
 	},
 	shape: { base: "block/clay/pot-opened-empty" },
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["potfire-raw", "potfire-burned"], "decorative": ["potfire-raw", "potfire-burned"] },
+	creativeinventory: { "general": ["potfire-raw", "potfire-burned"], "immersiondeco": ["potfire-raw", "potfire-burned"] },
 	replaceable: 400,
 	resistance: 1.5,
 	maxStackSize: 1,
