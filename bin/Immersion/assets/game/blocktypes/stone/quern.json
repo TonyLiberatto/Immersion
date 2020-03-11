@@ -15,7 +15,7 @@
 	variantgroups: [
 		{ code:"rock", states: ["granite", "andesite", "basalt", "peridotite"] },
 	],
-	creativeinventory: { "general": ["*"], "decotative": ["*"] },
+	creativeinventory: { "general": ["*"], "decortative": ["*"] },
 	shape: { base: "block/stone/quern/complete" },
 	blockmaterial: "Stone",
 	textures: {
