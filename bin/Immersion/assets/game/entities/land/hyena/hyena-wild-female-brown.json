@@ -106,7 +106,7 @@
 					},
 					{
 						code: "meleeattack",
-						entityCodes: ["player"],
+						entityCodes: ["player", "hare-*"],
 						priority: 2,
 						damage: 6,
 						slot: 1,
@@ -128,7 +128,7 @@
 						priorityForCancel: 1.6,
 						animation: "Sleep",
 						whenNotInEmotionState: "aggressiveondamage",
-						duringDayTimeFrames: [ { fromHour: 20, toHour: 24 }, { fromHour: 0, toHour: 7 } ],
+						duringDayTimeFrames: [ { fromHour: 6, toHour: 18 } ],
 						stopOnNearbyEntityCodes: ["player"],
 						stopRange: 6
 					},
@@ -149,7 +149,7 @@
 					
 					{
 						code: "seekentity",
-						entityCodes: ["player"],
+						entityCodes: ["player", "hare-*"],
 						priority: 1.5,
 						movespeed: 0.022,
 						seekingRange: 10,
