@@ -36,7 +36,7 @@
 	lightAbsorption: 0,
 	guiTransform: {
 		rotation: { x: -82, y: -30, z: 0 },
-		origin: { x: 0.4, y: 0, z: 0.4 },
+		origin: { x: 0.8, y: 0, z: 0.5 },
 		scale: 2.09
 	},
 	sidesolid: {
