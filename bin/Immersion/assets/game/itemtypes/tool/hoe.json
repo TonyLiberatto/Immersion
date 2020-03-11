@@ -86,7 +86,7 @@
 		"hoe-iron": 2.25,
 		"hoe-steel": 2.5,
 	},
-	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
+	creativeinventory: { "general": ["*"], "tools": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

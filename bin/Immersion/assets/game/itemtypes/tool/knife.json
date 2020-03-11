@@ -102,7 +102,7 @@
 		"knife-iron": 3.5,
 		"knife-steel": 4,
 	},
-	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
+	creativeinventory: { "general": ["*"], "tools": ["*"] },
 	fpHandTransform: {
 		translation: { x: -0.1, y: 0.2, z: 0.4 },
 		rotation: { x: -20, y: -93, z: -75 },

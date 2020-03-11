@@ -55,7 +55,7 @@
 		{ code: "part", states: ["small"] },
 		{ code:"side", states: ["ns", "we"]}
 	],
-	creativeinventory: { "general": ["*-ns"],  "blocks": ["*-ns"] },
+	creativeinventory: { "general": ["*-ns"],  "decorative": ["*-ns"] },
 	
 	shape: { base: "game:block/wood/trough/small/empty" },
 	shapebytype: {
