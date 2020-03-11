@@ -76,14 +76,18 @@ namespace Immersion
             if (itemslot.Itemstack.Block is BlockBucket)
             {
                 handled = EnumHandling.PreventDefault;
-                ItemStack milkstack = new ItemStack(milk);
+                ItemStack milkstack = new ItemStack(milk, RemainingLiters);
+
                 BlockBucket bucket = itemslot.Itemstack.Block as BlockBucket;
                 ItemStack contents = bucket.GetContent(byEntity.World, itemslot.Itemstack);
                 if ((contents == null || contents.Item == milk) && RemainingLiters > 0)
                 {
-                    if (bucket.TryPutContent(byEntity.World, itemslot.Itemstack, milkstack, 1) > 0)
+                    if (contents?.StackSize != null && contents.StackSize / milkProps.ItemsPerLitre >= bucket.CapacityLitres) return;
+
+                    int taken = bucket.TryPutContent(byEntity.World, itemslot.Itemstack, milkstack, 1);
+                    if (taken > 0)
                     {
-                        RemainingLiters -= 1;
+                        RemainingLiters -= taken;
                         if (byEntity.World.Side == EnumAppSide.Client)
                         {
                             byEntity.World.SpawnCubeParticles(entity.Pos.XYZ + new Vec3d(0, 0.5, 0), milkstack, 0.3f, 4, 0.5f, (byEntity as EntityPlayer)?.Player);
