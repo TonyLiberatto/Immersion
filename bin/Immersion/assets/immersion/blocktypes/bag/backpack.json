@@ -23,12 +23,11 @@
 	lightAbsorption: 0,
 	sidesolid: { all: false },
 	sideopaque: { all: false },
-	guiTransform: {
-		translation: { x: 0, y: 0, z: 0 },
-		rotation: { x: -20, y: 21, z: 180 },
+		guiTransform: {
+		translation: { x: 0, y: -3, z: 0 },
+		rotation: { x: 15, y: -180, z: 180 },
 		origin: { x: 0.5299, y: 0.22, z: 0.5 },
-		scale: 3.3,
-		rotate: true
+		scale: 1.9
 	},
 	fpHandTransform: {
 		translation: { x: 0, y: 0, z: 0.2 },
