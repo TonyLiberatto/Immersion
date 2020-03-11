@@ -2,7 +2,7 @@
 	code: "cookedgiantreedsroot",
 	maxstacksize: 64,
 	texture: { base: "item/food/cookedgiantreedsroot" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionitems": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	nutritionPropsByType: {
 		"*": { satiety: 120, health: 1.5, foodcategory: "Vegetable" },
 	},

@@ -18,7 +18,7 @@
 		"string": { base: "block/transparent" },
 		"handle": { base: "block/transparent" },
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	guiTransformByType: {
 		"*-copper": {
 			translation: { x: 0, y: 0, z: 0 },

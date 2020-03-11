@@ -104,10 +104,7 @@
         "general": [
             "*-raw",
             "*-empty"
-        ],
-        "decorative": [
-            "*-raw",
-            "*-empty"
+        
         ],
         "immersiondeco": [
             "*-raw",

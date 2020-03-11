@@ -48,7 +48,7 @@
     "textures": {
         "all": { "base": "game:block/wood/choppingblock/{wood}" }
     },
-    "creativeinventory": { "general": ["*-north"] },
+    "creativeinventory": { "general": ["*-north"], "immersionblocks": ["*-north"] },
     "sideopaque": { "all": false },
     "sidesolid": { "all": false },
     "lightAbsorption": 0,

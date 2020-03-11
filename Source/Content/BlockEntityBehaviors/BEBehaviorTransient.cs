@@ -60,7 +60,7 @@ namespace Immersion
 
         public void CheckTransition(float dt)
         {
-            int light = Api.World.BlockAccessor.GetSunlight(this.Blockentity.Pos);
+            int light = Api.World.BlockAccessor.GetLightLevel(Blockentity.Pos, EnumLightLevelType.TimeOfDaySunLight);
             bool running = (Api.World.Calendar as GameCalendar).IsRunning;
             if (!running) return;
 

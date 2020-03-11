@@ -8,7 +8,7 @@
 		"metal": { base: "item/tool/material/{material}" },
 		"wood": { base: "block/transparent" }
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	creativeinventory: { "general": ["*"], "immesiontools": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.3468, y: -0.4, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

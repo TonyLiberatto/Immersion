@@ -68,7 +68,7 @@
 		{ code:"materialtype", states: [ "porkchops-raw", "porkchops-salted",] },
 	],	
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "immersionblocks": [""] },
+	creativeinventory: { "general": [""], "immersionblocks": [""] },
 	replaceable: 1200,
 	resistance: 1.5,
 	maxStackSize: 1,

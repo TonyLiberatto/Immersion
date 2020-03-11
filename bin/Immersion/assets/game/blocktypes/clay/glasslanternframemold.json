@@ -73,7 +73,7 @@
 		},
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*"], "construction": ["*"], "immersionblocks": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	replaceable: 700,
 	resistance: 1.5,
 	maxStackSize: 8,

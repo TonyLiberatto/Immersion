@@ -6,7 +6,7 @@
 		{ code: "color", states: [ "brown", "green" ] },
 		{ code: "part", states: [ "segment1", "segment2", "segment3" ] },
 	],
-  creativeinventory: { "general": [ "bamboo-placed-*" ], "flora": [ "bamboo-placed-*" ], "immersionflora": [ "bamboo-placed-*" ] },
+  creativeinventory: { "general": [ "bamboo-placed-*" ], "immersionflora": [ "bamboo-placed-*" ] },
   attributesByType: {
     "bamboo-*-grown-*": { preventsDecay: true }
 	},

@@ -142,7 +142,7 @@
 		"shovel-iron": 1200,
 		"shovel-steel": 1600,
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"], "tools": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	fpHandTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
 		rotation: { x: 15, y: 15, z: 90 },

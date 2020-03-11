@@ -46,7 +46,7 @@
 		"*-south": { all: false, south: true },
 	},
 	blockmaterial: "Metal",
-	creativeinventory: { "general": ["*-down"], "decorative": ["*-down"] },
+	creativeinventory: { "general": ["*-down"], "immersiondeco": ["*-down"] },
 	replaceable: 300,
 	resistance: 2,
 	lightAbsorption: 1,

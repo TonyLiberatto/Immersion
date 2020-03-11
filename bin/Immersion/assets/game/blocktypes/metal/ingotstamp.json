@@ -19,7 +19,7 @@
   resistance: 0.75,
   creativeinventory: {
     "general": [ "*" ],
-    "items": [ "*" ]
+    "immersionblocks": [ "*" ]
   },
   maxStackSize: 8,
   drawtype: "json",

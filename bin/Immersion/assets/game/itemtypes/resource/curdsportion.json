@@ -15,7 +15,7 @@
 		}
 	},
 	texture: { base: "item/resource/curdsportion" },
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "immersionwip": ["*"],  },
 	maxstacksize: 16,
 	materialDensity: 200
 }

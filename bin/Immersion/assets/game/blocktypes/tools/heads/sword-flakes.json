@@ -28,7 +28,7 @@
 		"*-south": { base: "block/placedtool/primitive-sword-placed", rotateY: 180 },
 		"*-west": { base: "block/placedtool/primitive-sword-placed", rotateY: 90 },
 		},
-	creativeinventory: { "general": ["*-north"], "immersionitems": ["*-north"]  },
+	creativeinventory: { "general": ["*-north"], "immersiontools": ["*-north"]  },
 	collisionselectionbox:{ x1: 0, y1: 0, z1: 0, x2: 1, y2: 0.1, z2: 1 },
 	blockmaterial: "Stone",
 	replaceable: 900,
