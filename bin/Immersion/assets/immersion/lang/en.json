@@ -1122,8 +1122,10 @@
   "block-dead-rotten-large": "Large Carrion",
   "blockdesc-dead-rotten-*": "Carrion cannot be destroyed and will decay into a skeleton.",
 
-  "block-skeleton-small": "Small Animal Skeleton",
-  "block-skeleton-large": "Large Animal Skeleton",
+  "block-skeleton-small-eaten": "Small Animal Skeleton (Fresh)",
+  "block-skeleton-large-eaten": "Large Animal Skeleton (Fresh)",
+  "block-skeleton-small-placed": "Small Animal Skeleton",
+  "block-skeleton-large-placed": "Large Animal Skeleton",
   "blockdesc-skeleton-small": "Break to collect",
   "blockdesc-skeleton-large": "Use any axe to harvest 4 large bones and 2 piles of small bones",
 

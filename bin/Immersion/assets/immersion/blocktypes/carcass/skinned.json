@@ -14,7 +14,7 @@
 		},
 		{	"name": "Consumable",
 			"properties": {
-				"eatenTo": "dead-rotten-large",
+				"eatenTo": "skeleton-large-eaten",
 				"contentConfig": {
 					"foodFor": ["game:wolf-*",	"game:fox-*","game:hyena-*"	]
 				}

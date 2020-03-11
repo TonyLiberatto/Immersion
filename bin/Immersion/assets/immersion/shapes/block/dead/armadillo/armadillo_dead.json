@@ -6,8 +6,6 @@
 	"textureWidth": 16,
 	"textureHeight": 16,
 	"textures": {
-		"armadillo_tail": "E:/Games/VintageStory/ModDev/Immersion/bin/Immersion/assets/game/textures/entity/armadillo/armadillo_tail",
-		"armadillo": "E:/Games/VintageStory/ModDev/Immersion/bin/Immersion/assets/game/textures/entity/armadillo/armadillo"
 	},
 	"elements": [
 		{

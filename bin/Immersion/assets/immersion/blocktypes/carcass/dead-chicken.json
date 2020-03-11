@@ -15,7 +15,7 @@
         {
             "name": "Consumable",
             "properties": {
-                "eatenTo": "dead-rotten-small",
+                "eatenTo": "skeleton-small-eaten",
                 "contentConfig": {
                     "foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
                 }
