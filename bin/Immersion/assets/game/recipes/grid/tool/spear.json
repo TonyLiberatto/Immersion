@@ -1,7 +1,7 @@
 {
 	ingredientPattern: "T	S",
 	ingredients: {
-		"T": { type: "item", code: "spearhead-*", allowedVariants: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ],  name: "metal" },
+		"T": { type: "item", code: "spearhead-*", allowedVariants: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ],  name: "metal" },
 		"S": {type: "block", code: "immersion:branch-very-thin-*-debarked-ud" },
 	},
 	width: 1,
