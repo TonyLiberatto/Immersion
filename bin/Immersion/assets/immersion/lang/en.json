@@ -1123,9 +1123,13 @@
   "blockdesc-dead-rotten-*": "Carrion cannot be destroyed and will decay into a skeleton.",
 
   "block-skeleton-small": "Small Animal Skeleton",
-  "block-skeleton-large": "Large Animal Skeleton",
   "blockdesc-skeleton-small": "Use RMB to pick up, or use any axe to harvest small bones",
+  "block-skeleton-small-eaten": "Small consumed carrion",
+  "blockdesc-skeleton-small": "Hungry wolves were here",
+  "block-skeleton-large": "Large Animal Skeleton",
   "blockdesc-skeleton-large": "Use RMB to pick up, or use any axe to harvest 4 large bones",
+  "block-skeleton-large-eaten": "Large consumed carrion",
+  "blockdesc-skeleton-large": "Really hungry wolves were here",
 
   "block-headless-sheep-ewe": "Headless Ewe",
   "block-headless-sheep-ram": "Headless Ram",

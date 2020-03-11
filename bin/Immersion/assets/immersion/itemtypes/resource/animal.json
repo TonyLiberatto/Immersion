@@ -6,7 +6,7 @@
 	],
 	grindingPropsByType: {
 		"*-small-bones":{
-		grindedStack: { type: "item", code: "bonemeal" }
+		grindedStack: { type: "item", code: "game:bonemeal" }
 		}
 	},
 	texture: { base: "item/resource/animal/{type}" },

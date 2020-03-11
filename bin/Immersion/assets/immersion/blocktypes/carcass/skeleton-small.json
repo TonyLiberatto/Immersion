@@ -46,12 +46,12 @@
 			"quantity": {
 				"avg": 1,
 				"var": 0.3
-			}
+			},
 			"tool": "axe"
 		}
 	],
 	grindingProps: {
-		grindedStack: { type: "item", code: "bonemeal" }
+		grindedStack: { type: "item", code: "game:bonemeal" }
 	},
 	"variantgroups": [
 		{ "code": "state", "states": ["eaten", "placed" ] }
