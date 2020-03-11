@@ -69,7 +69,7 @@
 	creativeinventoryStacksByType: {
 		"*-east": [
 			{
-				tabs: [ "general", "decorative", "immersiondeco" ],
+				tabs: [ "general", "immersiondeco" ],
 				stacks: [
 					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-acacia" } },
 					{ type: "block", code: "survivallabeledchest-east", attributes: { type: "normal-aged" } },

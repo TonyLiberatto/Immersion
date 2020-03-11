@@ -3,7 +3,7 @@
 	variantgroups: [
 		{ code:"metal", states: ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos", "silver", "gold"] },
 	],
-	creativeinventory: { "general": [""], "construction": [""] },
+	creativeinventory: { "general": [""], "immersiondeco": [""] },
 	shape: { base: "block/metal/lantern/lantern-base-candle" },
 	blockmaterial: "metal",
 	drawtype: "json",

@@ -5,7 +5,7 @@
     "variantgroups": [
         { "loadFromProperties": "block/rock" }
     ],
-    "creativeInventory": { "general": ["*"] },
+    "creativeInventory": { "general": ["*"], "immersionblocks": ["*"] },
     "textures": {
         "andesite1": {
             "base": "block/stone/cobblestone/{rock}*"

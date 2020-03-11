@@ -12,7 +12,7 @@
 		all: { base: "block/plant/bamboo/stem-{color}" },
 	},
 	shape: { base: "block/plant/bamboostakes" },
-	creativeinventory: { "general": ["*"], "items": ["*"], "immersionflora": ["*"] },
+	creativeinventory: { "general": ["*"],  "immersionitems": ["*"] },
 	collisionselectionbox:{ x1: 0, y1: 0, z1: 0.3125, x2: 1, y2: 0.4375, z2: 0.71875 },
 	lightabsorption: 0,
 	sideopaque: {

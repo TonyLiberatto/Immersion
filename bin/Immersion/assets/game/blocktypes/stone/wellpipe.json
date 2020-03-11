@@ -1,7 +1,7 @@
 {
     "code": "wellpipe",
     "class": "BlockWellPipe",
-    "creativeInventory": { "general": ["*"] },
+    "creativeInventory": { "general": ["*"], "immersionblocks": ["*"]},
     "variantgroups": [
         { "loadFromProperties": "block/rock" }
     ],

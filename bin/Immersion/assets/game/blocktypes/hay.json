@@ -12,7 +12,7 @@
 	variantgroups: [
 		{ code: "type", states: ["normal", "bamboo"] },
 	],
-	creativeinventory: { "general": ["*"], "construction": ["*"], "flora": ["*"], "decorative": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
 	blockmaterial: "Plant",
 	replaceable: 900,
 	lightAbsorption: 99,

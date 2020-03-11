@@ -46,7 +46,7 @@
 	creativeinventoryStacksByType: {
 		"*-east": [
 			{
-				tabs: [ "general", "decorative" ],
+				tabs: [ "general", "immersiondeco" ],
 				stacks: [
 					{ type: "block", code: "stationarybasket-east", attributes: { type: "reed" } },
 					{ type: "block", code: "stationarybasket-east", attributes: { type: "vine" } },

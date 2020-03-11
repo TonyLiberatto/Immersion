@@ -44,7 +44,7 @@
 		"*-south": { base: "block/clay/crock/base", rotateY: 180 },
 	},
 	blockmaterial: "Ceramic",
-	creativeinventory: { "general": ["*-raw-east", "*-burned-east"], "decorative": ["*-raw-east", "*-burned-east"] },
+	creativeinventory: { "general": ["*-raw-east", "*-burned-east"], "immersiondeco": ["*-raw-east", "*-burned-east"] },
 	replaceable: 400,
 	resistance: 1.5,
 	maxStackSize: 1,

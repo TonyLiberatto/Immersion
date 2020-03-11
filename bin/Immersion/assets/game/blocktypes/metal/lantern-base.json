@@ -10,7 +10,7 @@
 			]
 		},
 	},
-	creativeinventory: { "general": ["*"], "construction": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiondeco": ["*"] },
 	shape: { base: "block/metal/lantern/lantern-base" },
 	blockmaterial: "metal",
 	drawtype: "json",

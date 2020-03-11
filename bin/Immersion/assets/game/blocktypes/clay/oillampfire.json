@@ -29,7 +29,7 @@
 	sideopaque: {
 		all: false
 	},
-	creativeinventory: { "general": ["*-up"], "decorative": ["*-up"], "immersiondeco": [] },
+	creativeinventory: { "general": ["*-up"], "immersiondeco": [] },
 	replaceable: 5001,
 	resistance: 0,
 	maxStackSize: 8,

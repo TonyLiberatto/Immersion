@@ -55,7 +55,7 @@
 	creativeinventoryStacksByType: {
 		"*-east": [
 			{
-				tabs: [ "general", "decorative", "immersiondeco" ],
+				tabs: [ "general", "immersiondeco" ],
 				stacks: [					
 					{ type: "block", code: "bamboolabeledchest-east", attributes: { type: "normal-bamboo-green" } },
 					{ type: "block", code: "bamboolabeledchest-east", attributes: { type: "normal-bamboo-brown" } },

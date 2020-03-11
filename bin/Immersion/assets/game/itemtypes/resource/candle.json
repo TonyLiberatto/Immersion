@@ -39,7 +39,7 @@
 		"candle-wax": { base: "block/wax/candle3" },
 		"candle-tallow": { base: "block/lightsources/tallow/tallowcandle3" },
 	},
-	creativeinventory: { "general": ["*"], "items": ["*"] },
+	creativeinventory: { "general": ["*"], "immersionitems": ["*"] },
 	combustibleProps: {
 		burnTemperature: 700,
 		burnDuration: 8,

@@ -51,7 +51,7 @@
 	},
   replaceable: 300,
   resistance: 0.75,
-  creativeinventory: {   "general": [ "*" ],  },
+  creativeinventory: {   "general": [ "*" ], "immersionblocks": ["*"]  },
   maxStackSize: 8,
   drawtype: "json",
   shapeByType: {

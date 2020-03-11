@@ -13,7 +13,7 @@
 
 		},
 	},
-	creativeinventory: { "general": ["*"], "decorative": ["*"], "immersiondeco": ["*"] },
+	creativeinventory: { "general": ["*"], "immersiondeco": ["*"] },
 	blockmaterial: "Metal",
 	lightAbsorption: 0,
 	lightHsv: [8, 2, 31],
