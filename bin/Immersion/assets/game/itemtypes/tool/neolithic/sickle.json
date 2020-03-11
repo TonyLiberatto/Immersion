@@ -55,10 +55,10 @@
 	},
 	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
 	guiTransform: {
-		translation: { x: 0, y: 0, z: 0 },
+		translation: { x: -9, y: 7, z: 0 },
 		rotation: { x: -89, y: 41, z: 33 },
 		origin: { x: 0.48, y: 0, z: 0.38 },
-		scale: 1.85
+		scale: 1.6
 	},
 	fpHandTransform: {
 		translation: { x: -0.24, y: 0, z: 0.1 },

@@ -65,9 +65,10 @@
 		place: "game:block/cloth",
 		walk: "game:walk/cloth"
 	},
-	guiTransform: {
-		translation: { x: 0, y: 3, z: 0 },
-		origin: { x: 0.5, y: 0.0625, z: 0.5 }
-},
+		guiTransform: {
+		translation: { x: -14, y: 2, z: 0 },
+		origin: { x: 0.5, y: 0.0625, z: 0.5 },
+		scale: 0.71
+	},
 	materialDensity: 200
 }

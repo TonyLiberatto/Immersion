@@ -60,11 +60,11 @@
 		rotation: { x: 15, y: 15, z: 90 },
 		scale: 2.5
 	},
-	guiTransform: {
-		translation: { x: 0, y: 5, z: 0 },
+		guiTransform: {
+		translation: { x: 1, y: 2, z: 0 },
 		rotation: { x: -77, y: -135, z: 160 },
 		origin: { x: 0.54, y: 0.5, z: 0.48 },
-		scale: 2.6
+		scale: 1.88
 	},
 	groundTransform: {
 		translation: { x: 0.046875, y: 0, z: 0 },
