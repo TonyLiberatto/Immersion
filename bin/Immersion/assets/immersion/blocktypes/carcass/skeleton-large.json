@@ -2,14 +2,7 @@
     "code": "skeleton-large",
     "maxStackSize": 16,
     "resistance": 3,
-    "creativeinventory": {
-        "general": [
-            "*"
-        ],
-        "immersionfauna": [
-            "*"
-        ]
-	},
+    "creativeinventory": { "general": [  "*" ], "immersionfauna": [  "*"  ]},
 	"variantgroups": [
 		{ "code": "state", "states": ["eaten", "placed" ] }
 	],
@@ -24,8 +17,10 @@
 					"inGameHours": 24
 				}
 			},
+			{name: "UnstableFalling"}, {name: "RightClickPickup" },
 			{ "name": "Scary", "properties": { "fearRadius": 8 } }
-		]
+		],
+		"*":[{name: "UnstableFalling"}, {name: "RightClickPickup" }],
 	},
     "texturesByType": {
 		"*-eaten": { "all": { "base": "block/skeleton/bonesfresh" } },
@@ -93,7 +88,16 @@
                 "code": "game:bone",
                 "quantity": {
                     "avg": 4,
-                    "var": 0
+                    "var": 0.3
+                },
+                "tool": "axe"
+            },
+			{
+                "type": "item",
+                "code": "animal-small-bones",
+                "quantity": {
+                    "avg": 4,
+                    "var": 0.3
                 },
                 "tool": "axe"
             }
