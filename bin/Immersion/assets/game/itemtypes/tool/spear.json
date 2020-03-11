@@ -4,7 +4,7 @@
 	damagedby: ["attacking"],
 	tool: "spear",
 	variantgroups: [
-		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver" ] },
+		{ code: "material", states: [ "copper", "tinbronze", "bismuthbronze", "blackbronze", "gold", "silver", "iron" ] },
 	],
 	shapeByType: {		
 		

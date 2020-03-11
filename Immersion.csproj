@@ -668,6 +668,7 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\choppingblock.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\clay-stamps\bowl-raw.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\clay-stamps\ingot-raw.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\coconut\coconut-shell.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\door\door-assemble.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\door\door-full.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\dryingtray.json" />

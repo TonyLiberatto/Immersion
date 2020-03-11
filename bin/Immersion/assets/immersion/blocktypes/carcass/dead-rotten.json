@@ -8,14 +8,14 @@
             "name": "Transient",
             "properties": {
                 "convertFrom": "dead-rotten-*",
-                "convertTo": "skeleton-{type}",
+                "convertTo": "skeleton-{type}-placed",
                 "inGameHours": 72
             }
         },
         {
             "name": "Consumable",
             "properties": {
-                "eatenTo": "skeleton-{type}",
+                "eatenTo": "skeleton-{type}-eaten",
                 "contentConfig": {
                     "foodFor": ["game:wolf-*", "game:fox-*", "game:hyena-*"]
                 }

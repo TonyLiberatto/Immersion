@@ -11,14 +11,7 @@
 	},
 	"entityClass": "Generic",
     "entityBehaviorsByType": {
-		"*-intestines": [{
-            "name": "Transient",
-            "properties": {
-                "convertFrom": "food-bowl-*-intestines",
-                "convertTo": "food-bowl-large-{color}-rotten",
-                "inGameHours": 48
-            }
-			},
+		"*-intestines": [
 			{
 				"name": "Consumable",
 				"properties": {
@@ -29,14 +22,7 @@
 				}
 			}
 		],
-		"*-cleanintestines": [{
-            "name": "Transient",
-            "properties": {
-                "convertFrom": "food-bowl-*-cleanintestines",
-                "convertTo": "food-bowl-large-{color}-rotten",
-                "inGameHours": 48
-            }
-			},
+		"*-cleanintestines": [
 			{
 				"name": "Consumable",
 				"properties": {
@@ -47,14 +33,7 @@
 				}
 			}
 		],
-		"*-casings": [{
-            "name": "Transient",
-            "properties": {
-                "convertFrom": "food-bowl-*-casings",
-                "convertTo": "food-bowl-large-{color}-rotten",
-                "inGameHours": 48
-            }
-			},
+		"*-casings": [
 			{
 				"name": "Consumable",
 				"properties": {
