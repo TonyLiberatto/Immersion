@@ -2,63 +2,98 @@
     "code": "skeleton-small",
     "maxStackSize": 16,
     "resistance": 3,
-	"entityClass": "Generic",
-	"entityBehaviorsByType":{
-		"*-eaten": [
-			{
-				"name": "Transient",
-				"properties": {
-					"convertFrom": "skeleton-small-*",
-					"convertTo": "skeleton-small-placed",
-					"inGameHours": 12
-				}
-			},
-			{name: "UnstableFalling"}, {name: "RightClickPickup" },
-			{ "name": "Scary", "properties": { "fearRadius": 8 } }
-		],
-		"*-placed": [
-			{
-				"name": "Transient",
-				"properties": {
-					"convertFrom": "skeleton-small-*",
-					"convertTo": "game:tallgrass-short",
-					"inGameHours": 12
-				}
-			},
-			{name: "UnstableFalling"}, {name: "RightClickPickup" }
-		],
-		"*": [{
-			"name": "Transient",
-			"properties": {
-				"convertFrom": "skeleton-small-*",
-				"convertTo": "game:tallgrass-short",
-				"inGameHours": 24
-			}
-		},
-		{name: "UnstableFalling"}, {name: "RightClickPickup" }
-		]
-	},
-    "creativeinventory": { "general": [ "*" ],"immersionfauna": [ "*" ]	},
-	"drops": [
-		{
-			"type": "item",
-			"code": "animal-small-bones",
-			"quantity": {
-				"avg": 1,
-				"var": 0.3
-			},
-			"tool": "axe"
-		}
-	],
-	grindingProps: {
-		grindedStack: { type: "item", code: "game:bonemeal" }
-	},
-	"variantgroups": [
-		{ "code": "state", "states": ["eaten", "placed" ] }
-	],
+    "entityClass": "Generic",
+    "behaviors": [
+        {
+            "name": "UnstableFalling"
+        },
+        {
+            "name": "RightClickPickup"
+        }
+    ],
+    "entityBehaviorsByType": {
+        "*-eaten": [
+            {
+                "name": "Transient",
+                "properties": {
+                    "convertFrom": "skeleton-small-*",
+                    "convertTo": "skeleton-small-placed",
+                    "inGameHours": 12
+                }
+            },
+            {
+                "name": "Scary",
+                "properties": {
+                    "fearRadius": 8
+                }
+            }
+        ],
+        "*-placed": [
+            {
+                "name": "Transient",
+                "properties": {
+                    "convertFrom": "skeleton-small-*",
+                    "convertTo": "game:tallgrass-short",
+                    "inGameHours": 12
+                }
+            }
+        ],
+        "*": [
+            {
+                "name": "Transient",
+                "properties": {
+                    "convertFrom": "skeleton-small-*",
+                    "convertTo": "game:tallgrass-short",
+                    "inGameHours": 24
+                }
+            }
+        ]
+    },
+    "creativeinventory": {
+        "general": [
+            "*"
+        ],
+        "immersionfauna": [
+            "*"
+        ]
+    },
+    "drops": [
+        {
+            "type": "item",
+            "code": "animal-small-bones",
+            "quantity": {
+                "avg": 1,
+                "var": 0.3
+            },
+            "tool": "axe"
+        }
+    ],
+    "grindingProps": {
+        "grindedStack": {
+            "type": "item",
+            "code": "game:bonemeal"
+        }
+    },
+    "variantgroups": [
+        {
+            "code": "state",
+            "states": [
+                "eaten",
+                "placed"
+            ]
+        }
+    ],
     "texturesByType": {
-		"*-eaten": { "all": { "base": "block/skeleton/bonesfresh" } },
-		"*": { "all": { "base": "block/skeleton/bones" } }
+        "*-eaten": {
+            "all": {
+                "base": "block/skeleton/bonesfresh"
+            }
+        },
+        "*": {
+            "all": {
+                "base": "block/skeleton/bones"
+            }
+        }
     },
     "shapeByType": {
         "*": {

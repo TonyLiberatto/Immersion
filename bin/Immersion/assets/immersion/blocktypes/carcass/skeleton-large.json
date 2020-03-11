@@ -2,29 +2,61 @@
     "code": "skeleton-large",
     "maxStackSize": 16,
     "resistance": 3,
-    "creativeinventory": { "general": [  "*" ], "immersionfauna": [  "*"  ]},
-	"variantgroups": [
-		{ "code": "state", "states": ["eaten", "placed" ] }
-	],
-	"entityClass": "Generic",
-	"entityBehaviorsByType":{
-		"*-eaten": [
-			{
-				"name": "Transient",
-				"properties": {
-					"convertFrom": "skeleton-large-*",
-					"convertTo": "skeleton-large-placed",
-					"inGameHours": 24
-				}
-			},
-			{name: "UnstableFalling"}, {name: "RightClickPickup" },
-			{ "name": "Scary", "properties": { "fearRadius": 8 } }
-		],
-		"*":[{name: "UnstableFalling"}, {name: "RightClickPickup" }],
-	},
+    "creativeinventory": {
+        "general": [
+            "*"
+        ],
+        "immersionfauna": [
+            "*"
+        ]
+    },
+    "variantgroups": [
+        {
+            "code": "state",
+            "states": [
+                "eaten",
+                "placed"
+            ]
+        }
+    ],
+    "entityClass": "Generic",
+    "behaviors": [
+        {
+            "name": "UnstableFalling"
+        },
+        {
+            "name": "RightClickPickup"
+        }
+    ],
+    "entityBehaviorsByType": {
+        "*-eaten": [
+            {
+                "name": "Transient",
+                "properties": {
+                    "convertFrom": "skeleton-large-*",
+                    "convertTo": "skeleton-large-placed",
+                    "inGameHours": 24
+                }
+            },
+            {
+                "name": "Scary",
+                "properties": {
+                    "fearRadius": 8
+                }
+            }
+        ]
+    },
     "texturesByType": {
-		"*-eaten": { "all": { "base": "block/skeleton/bonesfresh" } },
-		"*": { "all": { "base": "block/skeleton/bones" } }
+        "*-eaten": {
+            "all": {
+                "base": "block/skeleton/bonesfresh"
+            }
+        },
+        "*": {
+            "all": {
+                "base": "block/skeleton/bones"
+            }
+        }
     },
     "shapeByType": {
         "*": {
@@ -92,7 +124,7 @@
                 },
                 "tool": "axe"
             },
-			{
+            {
                 "type": "item",
                 "code": "animal-small-bones",
                 "quantity": {
