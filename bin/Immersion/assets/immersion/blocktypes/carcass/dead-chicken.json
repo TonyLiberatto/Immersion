@@ -41,7 +41,7 @@
 		{ "code": "type", "states": [ "rooster", "hen" ] },
 		{ "code": "color", "states": [ "ashgrey", "black", "brown", "cream", "golden", "savanna", "white", "woodland" ] }
 	],
-	"textures": { "all": { "base": "entity/chicken/{type}/{color}" } },
+	"textures": { "all": { "base": "game:entity/chicken/{type}/{color}" } },
 	"shapeByType": {
 		"*": { "base": "block/dead/chicken/{type}",	"alternates": [
 				{ "base": "block/dead/chicken/{type}", "rotateY": 45 },
