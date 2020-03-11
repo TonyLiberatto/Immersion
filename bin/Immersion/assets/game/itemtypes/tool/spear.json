@@ -65,7 +65,7 @@
 		"spear-bismuthbronze": 180,
 		"spear-blackbronze": 220
 	},
-	creativeinventory: { "general": ["*"], "immersiontools": ["*"] },
+	creativeinventory: { "general": ["*"], "tools": ["*"] },
 	guiTransform: {
 		translation: { x: 0, y: 0, z: 0 },
 		rotation: { x: -77, y: 53, z: 25 },

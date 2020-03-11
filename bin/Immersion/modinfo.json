@@ -9,6 +9,6 @@
 	"version": "1.1.25",
 	"dependencies": {
 		"carrycapacity": "0.4.7-rc.1",
-		"game": "1.12.6"
+		"game": "1.12.8"
 	}
 }
