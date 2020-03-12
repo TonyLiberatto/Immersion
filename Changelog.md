@@ -1,9 +1,9 @@
-Changed Small skeleton to drop small bones when harvested
-Added recipe: Small bones > Quern/Mortar > Bonemeal
-Updated IRON Spear crafting recipe
-Fix Carrion to Skeleton transition (Add Freshly eaten skeleton)
-Fixed Fox Forest Pup growth to Forest Fox Male and Female
-Fixed Fox Forest textures
+1.Changed Small skeleton to drop small bones when harvested.
+2.Added recipe: Small bones > Quern/Mortar > Bonemeal.
+3.Updated IRON Spear crafting recipe.
+4.Fix Carrion to Skeleton transition (Add Freshly eaten skeleton).
+5.Fixed Fox Forest Pup growth to Forest Fox Male and Female.
+6.Fixed Fox Forest textures.
 Corrected Tools, hand tools and toolheads offset in GUI; metal chisel blade, stone spear head; sickle head, axe head, sword blade
 Correction to Milk (Stackable in Buckets)
 Corrected mismatch between live/dead Rooster textures
