@@ -1,6 +1,6 @@
 # Immersion
 
-[![Wiki](http://wiki.immersioncraft.com/index.php?title=Main_Page)
+http://wiki.immersioncraft.com/index.php?title=Main_Page
 
 [![Downloads](https://img.shields.io/github/downloads/TonyLiberatto/Immersion/total?style=for-the-badge)](https://github.com/TonyLiberatto/Immersion/releases)
 
