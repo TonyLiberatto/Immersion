@@ -60,7 +60,7 @@ This mod is a work in progress, with new features and concepts planned and added
 This mod were developed by a team of talented and creative volunteers including
 
 Immersion Authors: Tony Liberatto, Novocain, Balduranne, BunnyViking, jhendrix61978, Dulakaba & Ereketh.
-Carry Capacity Authors Copygirl
+Carry Capacity Authors: Copygirl
 Immersion Contributors: Tyron, Milo, Stroam, Elwood, MarcAFK, Demmon1.
 Without their efforts, this mod would not exist.
 
