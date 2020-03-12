@@ -4,8 +4,7 @@
 [![WIKI](https://imgur.com/xIuKGdQ)](http://wiki.immersioncraft.com/index.php?title=Main_Page)
 
 <a href="http://wiki.immersioncraft.com/index.php?title=Main_Page">
-         <img alt="Qries" src="https://imgur.com/xIuKGdQ"
-         width=150" height="70">
+         <img alt="WIKI" src="https://imgur.com/xIuKGdQ">
       </a>
 
 Help<a href="https://osm7bmw.oneskyapp.com/collaboration/project?id=167440">Translate</a> with One Sky.
