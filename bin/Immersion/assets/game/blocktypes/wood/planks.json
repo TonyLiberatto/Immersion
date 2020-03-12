@@ -1,6 +1,6 @@
 {
     "code": "planks",
-    "variantgroups": [ { "code": "wood", "states": [ "aged" ], "loadFromProperties": "block/wood" } ],
+    "variantgroups": [ { "code": "wood", "states": [ "aged", "palm" ], "loadFromProperties": "block/wood" } ],
     "creativeinventory": { "general": [  "*" ], "construction": ["*"] },
     "shape": {
         "base": "block/basic/cube"
