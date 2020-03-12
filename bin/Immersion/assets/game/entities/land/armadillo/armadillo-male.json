@@ -47,33 +47,7 @@
 			},
 			{ 
 				code: "taskai",
-				aitasks: [
-					{
-						code: "meleeattack",
-						entityCodes: ["player"],
-						priority: 2,
-						damage: 5,
-						mincooldown: 2500, 
-						maxcooldown: 3500, 
-						attackDurationMs: 900,
-						damagePlayerAtMs: 300,
-						animation: "Attack",
-						animationSpeed: 2,
-						whenInEmotionState: "aggressiveondamage",
-						sound: "creature/pig/pig-attack",
-					},
-					{
-						code: "seekentity",
-						entityCodes: ["player"],
-						priority: 1.5,
-						mincooldown: 1000, 
-						maxcooldown: 1500, 
-						seekingRange: 20,
-						movespeed: 0.025,
-						animation: "Run",
-						animationSpeed: 4,
-						whenInEmotionState: "aggressiveondamage"
-					},
+				aitasks: [					
 					{
 						code: "fleeentity",
 						entityCodes: ["player"],

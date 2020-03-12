@@ -43,9 +43,10 @@
 		rotation: { x: 0, y: -134, z: 0 },
 		scale: 1.56
 	},
-	guiTransform: {
+		guiTransform: {
+		translation: { x: 0, y: -4, z: 0 },
 		origin: { x: 0.5, y: 0.35, z: 0.5 },
-		scale: 1.87
+		scale: 1.7
 	},
 	tpHandTransform: {
 		translation: { x: -0.97, y: -0.71, z: -0.71 },

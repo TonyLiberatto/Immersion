@@ -26,7 +26,8 @@
 	},
 	collisionbox: null,
 	materialDensity: 3000,
-	guiTransform: {
+		guiTransform: {
+		translation: { x: 1, y: 7, z: 0 },
 		rotation: { x: -22.5937, y: 132, z: 0 },
 		origin: { x: 0.7, y: 0.5, z: 0.5 },
 		scale: 1.22

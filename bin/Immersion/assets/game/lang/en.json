@@ -23,7 +23,6 @@
 	"craftinginfo-immersivecrafting-text": "<strong>In World Crafting</strong><br><br>Crafting items, blocks and containers (objects) using this mechanic requires players to assemble the object through the step-wise addition of components on a workspace block. Wherever possible, crafting performed within the player's grid has been changed to the immersive mechanic, and the Vanilla grid recipes do not function. General Crafting Directions:  Placing the first component on a solid block creates a workspace (RMB). Workspaces can be created on any block where a player could knap stones or form clay in vanilla. All subsequent components are added using (Sneak + RMB). Each successful component addition is accompanied by a visual change in the object. When a crafting recipe specifies 'add 4 components', one addition step adds all 4 items from the player's inventory. The player does not need to add each component individually (Sneak + RMB X 4). When the object is complete, breaking the object completes the crafting process. No additional components can be added once the block is broken. Replacing the block or container activates the object for use. Substituting a component that is not specified in the recipe (debarked branch for a barked branch) will result in the creation of a different item than the player intends to build. Changing the order of component addition will also change the item creation. When building an item, if attempting to add a component that is not permitted in the recipe, nothing will happen when using (Sneak + RMB). Check the crafting directions again and make sure the chosen component is allowable. Good Luck and happy crafting!",
 
 	"blockdesc-metalsheet-*": "Use to assemble Glass Lanterns",
-	"block-locust-cage": "Locust Cage",
 	"block-angledgears-s": "Angled Gears",
 	"item-sail": "Sail",
 	"item-ingot-rawironbloom": "Ingot (Raw Iron Bloom)",
@@ -46,13 +45,13 @@
 	"item-cookedgiantreedsroot": "Cooked Giant Reeds Root",
 	"item-reeds": "Reeds",
 	"itemdesc-reeds": "Immersion Cattail tops",
-	"item-handbooktitle-reeds": "Used for",
+	"item-handbooktitle-reeds": "Used",
 	"item-handbooktext-reeds": "An immersion addition that can substitute for crafting recipes requiring vanilla cattails",
 
 	"item-seeds-sisal": "Sisal Seeds",
 	"item-sisal-leaves": "Sisal Leaves",
 	"itemdesc-sisal-leaves": "Harvested from sisal plants using any knife.",
-    "item-handbooktitle-sisal-leaves": "Used for",
+    "item-handbooktitle-sisal-leaves": "Used",
 	"item-handbooktext-sisal-leaves": "Crush with any hammer to obtain sisal fiber (grid). Each leaf provides 16 fiber. These leaves are used to craft all sisal cordage.",
 	
 	"block-crop-sisal-5": "Mature Sisal",
@@ -129,7 +128,7 @@
 	"block-mortarandpestle-oak-east": "Oak Mortar and Pestle",
 	"block-mortarandpestle-pine-east": "Pine Mortar and Pestle",
 	"blockdesc-mortarandpestle-*": "A stone-age quern",
-	"block-handbooktitle-mortarandpestle-*": "Used for",
+	"block-handbooktitle-mortarandpestle-*": "Used",
 	"block-handbooktext-mortarandpestle-*": "Milling grains, dried foods, and other resources. This block requires a space above the mortar to use and cannot be automated using a windmill.",
 	
 	"block-seawater-still-7": "Still Sea Water",
@@ -144,7 +143,7 @@
 	"block-dryingtray-kapok": "Kapok Drying Tray",
 	"block-dryingtray-aged": "Aged Drying Tray",
 	"blockdesc-dryingtray-*": "Place in the sun and use a bucket to add portions of seawater. Produces salt after evaporation.",
-    "block-handbooktitle-dryingtray-*": "Used for",
+    "block-handbooktitle-dryingtray-*": "Used",
 	"block-handbooktext-dryingtray-*": "Obtaining salt from seawater. Place the tray in the sun. Use a bucket to add up to 16 portions of seawater. After the water evaporates, salt can be harvested from the tray (RMB)",
 	
 	"block-choppingblock-birch-*": "Birch Chopping Block",
@@ -155,14 +154,16 @@
 	"block-choppingblock-kapok-*": "Kapok Chopping Block",
 	"block-choppingblock-aged-*": "Aged Chopping Block",
 	"blockdesc-choppingblock-*": "Place a log or branch of any wood type (RMB). Convert the log or branch to firewood using an axe (RMB).",
-    "block-handbooktitle-choppingblock-*": "Used for",
+    "block-handbooktitle-choppingblock-*": "Used",
 	"block-handbooktext-choppingblock-*": "Obtaining firewood from logs and branches. Firewood yield is 8 (log) and 6 (thick), 4 (medium) or 2 (thin).",
 	
 	"block-bonfire-extinct": "Bonfire (Extinct)",
-	"block-bonfire-lit": "Bonfire (Lit)",
-	"block-bonfire-cold": "Bonfire (Cold)",
-	"blockdesc-bonfire-*": "A defensive pyre that provides light and safety during the long, dark nights.",
-	"block-handbooktitle-bonfire-*": "Used for",
+	"blockdesc-bonfire-extinct": "Only ashes and dust remain",
+	"block-bonfire-lit": "Lit Bonfire",
+	"blockdesc-bonfire-lit": "Burn Baby, Burn",
+	"block-bonfire-cold": "Cold Bonfire",
+	"blockdesc-bonfire-cold": "Light to create a defensive pyre",
+	"block-handbooktitle-bonfire-*": "Used",
 	"block-handbooktext-bonfire-*": "Driving away predators within a range of 48 blocks. The bonfire lasts for 24 hours, and cannot be refueled once extinguished. The bonfire cannot be used as a firepit.",
 
 	"block-food-bowl-small-blue-porkchops-raw": "Small Blue Mixing Bowl with Pork Chops (Raw)",
@@ -316,6 +317,20 @@
 	"block-food-bowl-medium-red-pemmican*": "Medium Red Mixing Bowl with Pemmican",
 	"block-food-bowl-large-red-pemmican*": "Large Red Mixing Bowl with Pemmican",
 	"blockdesc-food-bowl-*-pemmican*": "(Sneak + RMB) with casings to package Pemmican",
+	
+	"block-food-bowl-small-blue-rotten": "Small Blue Mixing Bowl with Rotten Food",
+	"block-food-bowl-medium-blue-rotten": "Medium Blue Mixing Bowl with with Rotten Food",
+	"block-food-bowl-large-blue-rotten": "Large Blue Mixing Bowl with Rotten Food",
+	"block-food-bowl-small-brown-rotten": "Small Brown Mixing Bowl with Rotten Food",
+	"block-food-bowl-medium-brown-rotten": "Medium Brown Mixing Bowl with Rotten Food",
+	"block-food-bowl-large-brown-rotten": "Large Brown Mixing Bowl with Rotten Food",
+	"block-food-bowl-small-fire-rotten": "Small Fire Mixing Bowl with Rotten Food",
+	"block-food-bowl-medium-fire-rotten": "Medium Fire Mixing Bowl with Rotten Food",
+	"block-food-bowl-large-fire-rotten": "Large Fire Mixing Bowl with Rotten Food",
+	"block-food-bowl-small-red-rotten": "Small Red Mixing Bowl with Rotten Food",
+	"block-food-bowl-medium-red-rotten": "Medium Red Mixing Bowl with Rotten Food",
+	"block-food-bowl-large-red-rotten": "Large Red Mixing Bowl with Rotten Food",
+	"blockdesc-food-bowl-*-rotten": "(Sneak + RMB) with any knife to remove rotten food",
 
 	"item-flour-dryfruit": "Dried Fruit Flour",
 	"item-flour-meat-dry": "Dried Meat Flour",
@@ -376,7 +391,7 @@
 	"block-bowl-brown-milk": "Brown Bowl (Milk)",
 	"block-bowl-fire-milk": "Fire Bowl (Milk)",
 	"block-bowl-red-milk": "Red Bowl (Milk)",
-	"blockdesc-bowl-*-milk": "Milk is not yet implemented",
+	"blockdesc-bowl-*-milk": "Not fully implemented",
 
 	"block-bowlstampmold-blue-raw": "Blue Bowl Stamp Mold (Raw)",
 	"block-bowlstampmold-brown-raw": "Brown Bowl Stamp Mold (Raw)",
@@ -892,6 +907,7 @@
 	"blockdesc-bowlstamp-*": "Place the metal bowl stamp on a solid surface. Target the stamp with the crosshairs. With clay in the active hand, each action (Sneak + RMB) creates a clay bowl.",
 
 	"item-ingot-wax": "Wax Ingot",
+	"itemdesc-ingot-wax": "Smells like a whole ingot of Christmas",
 	"item-ingot-tallow": "Tallow Ingot",
 	"item-candle-wax": "Wax Candle",
 	"item-candle-tallow": "Tallow Candle",
@@ -903,6 +919,7 @@
 	"item-toolpin-blackbronze": "Black Bronze Tool Pin",
 	"item-toolpin-gold": "Gold Tool Pin",
 	"item-toolpin-silver": "Silver Tool Pin",
+	"itemdesc-toolpin-*": "Not Yet Implemented",
 
 	"item-hinges-copper": "Copper Hinges",
 	"item-hinges-tinbronze": "Tin Bronze Hinges",
@@ -910,6 +927,7 @@
 	"item-hinges-blackbronze": "Black Bronze Hinges",
 	"item-hinges-gold": "Gold Hinges",
 	"item-hinges-silver": "Silver Hinges",
+	"itemdesc-hinges-*": "Immersion Crafting Addition",
 
 	"block-lantern-copper-plain-*": "Plain Copper Lantern",
 	"block-lantern-brass-plain-*": "Plain Brass Lantern",
@@ -1122,8 +1140,10 @@
 	"block-well-peridotite": "Peridotite Well",
 	"block-well-phyllite": "Phyllite Well",
 	"block-well-slate": "Slate Well",
-	"blockdesc-well-*": "Place the well block and use a pickaxe (RMB) with cobble blocks in player inventory to excavate to freshwater acquifer.",
-
+	"blockdesc-well-*": "Place the block and use a pickaxe (RMB) with cobble blocks in player inventory to excavate a well shaft.",
+    "block-handbooktitle-well-*": "Used",
+	"block-handbooktext-well-*": "to excavate tunnels that can reach freshwater aquifers. Once the well shaft reaches an acquifer, buckets can be filled.",
+	
 	"block-wellpipe-andesite": "Andesite Well Pipe",
 	"block-wellpipe-bauxite": "Bauxite Well Pipe",
 	"block-wellpipe-chalk": "Chalk Well Pipe",
@@ -1138,7 +1158,10 @@
 	"block-wellpipe-peridotite": "Peridotite Well Pipe",
 	"block-wellpipe-phyllite": "Phyllite Well Pipe",
 	"block-wellpipe-slate": "Slate Well Pipe",
-	"blockdesc-wellpipe-*": "Built using cobblestone in the player's hotbar when excavating under a well.",
+	"blockdesc-wellpipe-*": "When excavating under a well, these blocks are created from cobblestone in the player's hotbar.",
+	"block-handbooktitle-wellpipe-*": "Used",
+	"block-handbooktext-wellpipe-*": "with wells. These line well shafts that can reach freshwater aquifers. Once the well shaft reaches an acquifer, buckets can be filled.",
+	
 
 	"block-stair-side-cobble-andesite-up-north": " Andesite Cobblestone Stairs",
 	"block-stair-side-cobble-bauxite-up-north": " Bauxite Cobblestone Stairs",
@@ -1193,16 +1216,24 @@
 
 	"item-bow-simple": "Simple Bow",
 	"itemdesc-bow-simple": "A few flimsy sticks combined with twine.",
+	"item-handbooktitle-bow-simple": "Used",
+	"item-handbooktext-bow-simple": "as a ranged weapon, and cannot be upgraded to craft other bows.",
 
 	"item-bow-carved": "Carved Bow",
-	"itemdesc-bow-carved": "A little better than a flimsy stick.  Made by combining a carved limb with a bowstring. Replace bowstring before it breaks and destroys the bow.",
-
+	"itemdesc-bow-carved": "A little better than a flimsy stick. Replace bowstring to repair the bow.",
+    "item-handbooktitle-bow-carved": "Used",
+	"item-handbooktext-bow-carved": "as a ranged weapon, Made by combining a carved limb with a bowstring. Reclaim the limb and upgrade by removing the bowstring.",
+	
 	"item-bow-composite": "Composite Bow",
-	"itemdesc-bow-composite": "A real bow with good stopping power. Craft using a carved limb, glue, horn slab, and sinew. Combine with bowstring to create a composite bow. Replace bowstring before it breaks and destroys the bow.",
-
+	"itemdesc-bow-composite": "A real bow with good stopping power. Replace bowstring to repair the bow.",
+    "item-handbooktitle-bow-composite": "Used",
+	"item-handbooktext-bow-composite": "as a ranged weapon, Made by combining a composite limb with a bowstring. Reclaim the limb and upgrade by removing the bowstring.",
+	
 	"item-bow-recurve": "Recurve Bow",
-	"itemdesc-bow-recurve": "Well worth the time and effort to create. Craft using a composite limb, glue, horn slab, sinew and raw hide. Combine with bowstring to create a recurve bow. Replace bowstring before it breaks and destroys the bow. ",
-
+	"itemdesc-bow-recurve": "Well worth the time and effort to create. Replace bowstring to repair the bow.",
+    "item-handbooktitle-bow-recurve": "Used",
+	"item-handbooktext-bow-recurve": "as a ranged weapon, Made by combining a recurve limb with a bowstring. Reclaim the limb by removing the bowstring.",
+	
 	"item-sword-flakes-flint-*": "Flint Sword Flakes",
 	"item-sword-flakes-obsidian-*": "Obsidian Sword Flakes",
 
@@ -1269,7 +1300,7 @@
 	"itemdesc-adze-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-adze-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-adze-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-adze-*": "Used for",
+	"item-handbooktitle-adze-*": "Used",
 	"item-handbooktext-adze-*": "Carving wood blocks before metal tools are available. Voxels can be removed but not replaced. Press (F) to change the tool mode.",
 
 	"item-axe-andesite-*": "Andesite Primitive Axe",
@@ -1299,7 +1330,7 @@
 	"itemdesc-axe-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-axe-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-axe-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-axe-*": "Used for",
+	"item-handbooktitle-axe-*": "Used",
 	"item-handbooktext-axe-*": "Creating Immersion additions: Half Log, Chopping Block",
 
 	"item-hammer-andesite-*": "Andesite Primitive Hammer",
@@ -1329,7 +1360,7 @@
 	"itemdesc-hammer-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-hammer-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-hammer-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-hammer-*": "Used for",
+	"item-handbooktitle-hammer-*": "Used",
 	"item-handbooktext-hammer-*": "An immersion addition used to rotate and change the shape of log walls and roofs.",
 
 	"item-hoe-andesite-*": "Andesite Primitive Hoe",
@@ -1367,7 +1398,7 @@
 	"itemdesc-spear-javelin-bamboo-brown-sinew": "with Brown Bamboo Shaft and Sinew Binding",
 	"itemdesc-spear-javelin-bamboo-green-leatherstrips": "with Green Bamboo Shaft and Leather Strip Binding",
 	"itemdesc-spear-javelin-bamboo-brown-leatherstrips": "with Brown Bamboo Shaft and Leather Strip Binding",
-	"item-handbooktitle-javelin-*": "Used for",
+	"item-handbooktitle-javelin-*": "Used",
 	"item-handbooktext-javelin-*": "An immersion addition, used as a thrown spear.",
 
 	"item-knife-andesite-*": "Andesite Primitive Knife",
@@ -1453,7 +1484,7 @@
 	"itemdesc-sickle-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-sickle-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-sickle-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-sickle-*": "Used for",
+	"item-handbooktitle-sickle-*": "Used",
 	"item-handbooktext-sickle-*": "An immersion addition that is used to harvest 3 blocks of grass or crops.",
 
 	"item-slaughteringaxe-peridotite-*": "Peridotite Primitive Slaughtering Axe",
@@ -1548,7 +1579,7 @@
 	"itemdesc-slaughteringaxe-lead-*": "Not Yet Implemented",
 	"itemdesc-slaughteringaxe-silver-*": "Not Yet Implemented",
 	"itemdesc-slaughteringaxe-tinbronze-*": "Not Yet Implemented",
-	"item-handbooktitle-slaughteringaxe-*": "Used for",
+	"item-handbooktitle-slaughteringaxe-*": "Used",
 	"item-handbooktext-slaughteringaxe-*": "An immersion addition that is used to kill domesticated animals.",
 
 	"item-spear-primitive-peridotite-*": "Peridotite Primitive Spear",
@@ -3490,9 +3521,11 @@
 	"block-sword-obsidian-pine-leatherstrips-*": "Obsidian Sword with Pine Shaft and Leather Strip Binding",
 	"block-sword-flint-pine-leatherstrips-*": "Flint Sword with Pine Shaft and Leather Strip Binding",
 
-
-	"item-creature-armadillo-male": "Armadillo Male",
-	"item-creature-armadillo-female": "Armadillo Female",
+	"prefixandcreature-armadillo-female": "Female Armadillo",
+	"prefixandcreature-armadillo-male": "Male Armadillo",
+	
+	"item-creature-armadillo-male": "Male Armadillo",
+	"item-creature-armadillo-female": "Female Armadillo",
 
 	"item-creature-butterfly-bloodredglider": "Blood Red Glider Butterfly",
 
@@ -3649,16 +3682,21 @@
 	"item-creature-wolf-pup-smokegrey": "Smoke Grey Wolf Puppy",
 	"item-creature-wolf-pup-white": "White Wolf Puppy",
 
+	"prefixandcreature-hyenawildfemaletan": "Tan Female Hyena",
+	"prefixandcreature-hyenawildfemalebrown": "Brown Female Hyena",
+	"prefixandcreature-hyenawildmale": "Male Hyena",
+	"prefixandcreature-hyenawildpup": "Hyena Pup",
+	
 	"item-creature-hyena-wild-female-tan": "Tan Female Hyena",
 	"item-creature-hyena-wild-female-brown": "Brown Female Hyena",
 	"item-creature-hyena-wild-male": "Male Hyena",
 	"item-creature-hyena-wild-pup": "Hyena Pup",
 
-	"prefixandcreature-hyenawildfemaletan": "Tan Female Hyena",
-	"prefixandcreature-hyenawildfemalebrown": "Brown Female Hyena",
-	"prefixandcreature-hyenawildmale": "Male Hyena",
-	"prefixandcreature-hyenawildpup": "Hyena Pup",
-
+	"prefixandcreature-fox-red-male": "Red Male Fox",
+	"prefixandcreature-fox-red-female": "Red Female Fox",
+	"prefixandcreature-fox-snow-male": "Snow Male Fox",
+	"prefixandcreature-fox-snow-female": "Snow Female Fox",
+	
 	"item-creature-fox-red-male": "Red Male Fox",
 	"item-creature-fox-red-female": "Red Female Fox",
 	"item-creature-fox-snow-male": "Snow Male Fox",
@@ -3804,6 +3842,7 @@
 	"blockdesc-pestle-*": "Not Yet Implemented",
 
 	"item-milkportion": "Milk Portion",
+	"itemdesc-milkportion": "Not Yet Implemented",
 	"inbucket-item-milkportion": "Milk",
 	"item-curdsportion": "Curds Portion",
 	"itemdesc-curds*": "Not Yet Implemented",
@@ -3824,6 +3863,9 @@
 	"block-cheesecloth-brown-cheese": "Cheese in Brown Cheesecloth",
 	"block-cheesecloth-black-cheese": "Cheese in Black Cheesecloth",
 	"block-cheesecloth-*-*": "Not Yet Implemented",
+	
+    "block-locust-cage": "Locust Cage",
+	"blockdesc-locust-cage": "Not Yet Implemented",
 
 	"item-arrow-fire*": "Fire Arrow crafted from any any arrow, fat and a torch",
 	"itemdesc-arrow-fire*": "Adds +2 damage. Future recipe should include adding linen or other fiber. Could include pitch if liquids like that are added.",
