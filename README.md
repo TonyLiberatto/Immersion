@@ -1,10 +1,7 @@
 # Immersion
 
-
-[![WIKI](https://imgur.com/xIuKGdQ)](http://wiki.immersioncraft.com/index.php?title=Main_Page)
-
 <a href="http://wiki.immersioncraft.com/index.php?title=Main_Page">
-         <img alt="WIKI" src="https://github.com/TonyLiberatto/Immersion/blob/master/WIPAssets/GitAssets/wiki-logo.png"></a>
+         <img alt="WIKI" src="https://github.com/TonyLiberatto/Immersion/blob/master/WIPAssets/GitAssets/wiki-logo.png">![WIKI]</a>
 
 Help<a href="https://osm7bmw.oneskyapp.com/collaboration/project?id=167440">Translate</a> with One Sky.
 
