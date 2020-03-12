@@ -2,7 +2,8 @@
 
 http://wiki.immersioncraft.com/index.php?title=Main_Page
 
-https://osm7bmw.oneskyapp.com/collaboration/project?id=167440
+Help<a href="https://osm7bmw.oneskyapp.com/collaboration/project?id=167440">Translate</a> with One Sky.
+
 
 [![Downloads](https://img.shields.io/github/downloads/TonyLiberatto/Immersion/total?style=for-the-badge)](https://github.com/TonyLiberatto/Immersion/releases)
 
