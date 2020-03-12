@@ -1,7 +1,9 @@
 # Immersion
 
 <a href="http://wiki.immersioncraft.com/index.php?title=Main_Page" target="_blank">
-         <img alt="WIKI" src="https://github.com/TonyLiberatto/Immersion/blob/master/WIPAssets/GitAssets/wiki-logo.png">[Click Here to see our Wiki]</a>         
+         <img alt="WIKI" src="https://github.com/TonyLiberatto/Immersion/blob/master/WIPAssets/GitAssets/wiki-logo.png">
+         Click Here to see our Wiki</a>  
+         
          
 
 Help<a href="https://osm7bmw.oneskyapp.com/collaboration/project?id=167440">Translate</a> with One Sky.
