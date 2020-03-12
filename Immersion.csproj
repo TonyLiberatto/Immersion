@@ -249,7 +249,6 @@
     <Folder Include="bin\Immersion\assets\immersion\textures\block\stone\roads\stones\" />
     <Folder Include="bin\Totems\assets\totems\recipes\clayforming\" />
     <Folder Include="Source\Content\Entity\" />
-    <Folder Include="WIPAssets\GitAssets\" />
     <Folder Include="WIPAssets\Tony\game\worldgen\deposits\" />
     <Folder Include="WIPAssets\Tony\neolithicmaterials\materials\assets\bunnyviking\shapes\materials\" />
     <Folder Include="WIPAssets\Tony\neolithicmaterials\materials\assets\bunnyviking\textures\" />
@@ -1464,6 +1463,7 @@
     <None Include="bin\Immersion\assets\game\shapes\item\hinges.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\spear-bronze.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\carcass\dead-racoon.json" />
+    <None Include="Changelog.md" />
     <None Include="WIPAssets\Balduranne\Pottery\furn-jar01.json" />
     <None Include="WIPAssets\Balduranne\Pottery\furn-jar02.json" />
     <None Include="WIPAssets\Balduranne\Pottery\furn-jar03.json" />
@@ -3548,6 +3548,7 @@
     <Content Include="WIPAssets\Balduranne\Sisal_rugs\sisalrug-medium.png" />
     <Content Include="WIPAssets\Balduranne\Sisal_rugs\sisalrug-small.png" />
     <Content Include="WIPAssets\Balduranne\textures\textures.txt" />
+    <Content Include="WIPAssets\GitAssets\wiki-logo.png" />
     <Content Include="WIPAssets\Novocain\cheeseblock.png" />
     <Content Include="WIPAssets\Novocain\pigs\pig-domestic-female.png" />
     <Content Include="WIPAssets\Novocain\pigs\pig-domestic-male.png" />
