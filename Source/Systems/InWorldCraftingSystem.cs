@@ -138,8 +138,10 @@ namespace Immersion
                                 capi.Event.UnregisterGameTickListener(id);
                                 id = 0;
                                 firstAction = true;
+                                progress = 0;
+                                return;
                             }
-                            progress = secondsUsed / (recipe.MakeTime != 0 ? recipe.MakeTime : 1.0f);
+                            progress = recipe.MakeTime != 0 ? secondsUsed / recipe.MakeTime : 0;
                         }, 30);
                         handled = EnumHandling.PreventDefault;
                     }
