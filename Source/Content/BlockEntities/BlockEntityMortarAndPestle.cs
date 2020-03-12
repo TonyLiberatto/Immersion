@@ -459,7 +459,6 @@ namespace Immersion
             if (renderer != null)
             {
                 renderer.Unregister();
-                renderer.Dispose();
                 renderer = null;
             }
         }
@@ -625,7 +624,6 @@ namespace Immersion
             base.OnBlockUnloaded();
 
             renderer?.Unregister();
-            renderer?.Dispose();
         }
     }
 }

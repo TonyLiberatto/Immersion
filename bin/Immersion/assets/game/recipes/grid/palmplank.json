@@ -1,0 +1,47 @@
+[
+    {
+        "ingredientPattern": "SL",
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "saw-*",
+                "isTool": true
+            },
+            "L": {
+                "type": "block",
+                "code": "immersion:palmlog-*",
+                "name": "wood"
+            }
+        },
+        "width": 2,
+        "height": 1,
+        "shapeless": true,
+        "output": {
+            "type": "item",
+            "code": "plank-palm",
+            "quantity": 16
+        }
+    },
+    {
+        "ingredientPattern": "SL",
+        "ingredients": {
+            "S": {
+                "type": "item",
+                "code": "saw-*",
+                "isTool": true
+            },
+            "L": {
+                "type": "block",
+                "code": "planks-palm",
+            }
+        },
+        "width": 2,
+        "height": 1,
+        "shapeless": true,
+        "output": {
+            "type": "item",
+            "code": "plank-palm",
+            "quantity": 4
+        }
+    }
+]

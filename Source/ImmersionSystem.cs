@@ -8,6 +8,8 @@ using System.IO;
 using Vintagestory.API.Server;
 using System.Collections.Generic;
 using Vintagestory.API.MathTools;
+using Vintagestory.Server;
+using System.Linq;
 
 [assembly: ModInfo("Immersion",
     Description  = "This mod Requires New World Creation. Adds more Animals, Plants, blocks and tools",
@@ -26,6 +28,29 @@ namespace Immersion
         public override void StartServerSide(ICoreServerAPI Api)
         {
             sapi = Api;
+            sapi.Event.PlayerJoin += (player) =>
+            {
+                ServerMain server = (sapi.World as ServerMain);
+                var PlayerGroups = server.GetField<ServerMain, ServerSystem[]>("Systems").OfType<ServerySystemPlayerGroups>().Single();
+                var serverAdmin = (object)(new ServerPlayer(server, ServerWorldPlayerData.CreateNew("!!!ImmersionAdmin", "!!!ImmersionAdmin")));
+                if (!PlayerGroups.PlayerGroupsByUid.Any(g => g.Value.Name == "suplayer"))
+                {
+                    PlayerGroups.CallMethod("CmdCreategroup", (object)(serverAdmin), (object)0, new CmdArgs("suplayer"));
+                }
+                var group = PlayerGroups.PlayerGroupsByUid.Where(t => t.Value.Name == "suplayer").Single().Value;
+                if (player.Privileges.Contains(Privilege.ban))
+                {
+                    server.PlayerDataManager.PlayerDataByUid[player.PlayerUID].JoinGroup(group, EnumPlayerGroupMemberShip.Op);
+                }
+                else
+                {
+                    server.PlayerDataManager.PlayerDataByUid[player.PlayerUID].JoinGroup(group, EnumPlayerGroupMemberShip.Member);
+                }
+
+                server.PlayerDataManager.playerDataDirty = true;
+                server.PlayerDataManager.playerGroupsDirty = true;
+            };
+
             sapi.RegisterCommand("setmaterial", "Set the material of currently looked at chiseled block", "[block code]", (player, groupId, args) =>
             {
                 BlockPos pos = player.CurrentBlockSelection.Position;

@@ -3,7 +3,7 @@
 	"class": "BlockBarrel",
 	"entityClass": "Barrel",
 	"variantgroups": [
-		{ "code": "wood", "states": ["aged", "bamboo-brown", "bamboo-green"], "loadFromProperties": "block/wood" }
+		{ "code": "wood", "states": ["aged", "bamboo-brown", "bamboo-green", "palm"], "loadFromProperties": "block/wood" }
 	],
 	"behaviors": [{
 		"name": "UnstableFalling"

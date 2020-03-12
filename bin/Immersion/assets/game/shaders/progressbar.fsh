@@ -41,12 +41,13 @@ void main()
 	uv2 -= .5;
 	uv2.x *= iResolution.x / iResolution.y;
 	vec4 c = vec4(1, 1, 1, 0);
-	
-	if (iProgressBar > 0) {
-		for (float i = 0.0; i < iProgressBar; i += 0.05){
+	float p = min(iProgressBar, 1.1);
+
+	if (p > 0) {
+		for (float i = 0.0; i < p; i += 0.05){
 			c.a += Circle(uv2, Rotate(i*6,i*6,0.03), 0.005, 0.001);
 		}
-		c.a *= iProgressBar;
+		c.a *= p;
 	}
 	outColor = c;
 }

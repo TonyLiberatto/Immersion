@@ -17,6 +17,7 @@ namespace Immersion
         private ICoreClientAPI Api;
 
         public BlockPos Pos { get; private set; }
+        public AssetLocation CrushSound;
 
         MeshRef meshref;
         public Matrixf ModelMat = new Matrixf();
@@ -34,6 +35,7 @@ namespace Immersion
             this.Pos = Pos;
             if (mesh == null) return;
             meshref = coreClientAPI.Render.UploadMesh(mesh);
+            CrushSound = Api.World.BlockAccessor.GetBlock(new AssetLocation("game:gravel-andesite")).Sounds.Break;
         }
 
         public double RenderOrder
@@ -83,9 +85,10 @@ namespace Immersion
 
             if (ShouldRotate)
             {
+                float jl = (int)Api.World.Rand.NextDouble();
+
                 if (yb && yf <= 0.5f)
                 {
-                    float jl = Convert.ToSingle(Api.World.Rand.NextDouble());
                     xf += deltaTime * 0.02f;
                     yf += deltaTime * jl * 5.0f;
                     zf += deltaTime * 0.02f;
@@ -94,13 +97,12 @@ namespace Immersion
                 {
                     yb = false;
                     if (dO && Api.Side == EnumAppSide.Client) {
-                        Api.World.PlaySoundAt(Api.World.BlockAccessor.GetBlock(new AssetLocation("game:gravel-andesite")).Sounds.Break, Pos.X, Pos.Y, Pos.Z);
+                        Api.World.PlaySoundAt(CrushSound, Pos.X, Pos.Y, Pos.Z);
                         dO = false;
                     }
                 }
                 if (!yb && yf >= -0.2f)
                 {
-                    float jl = Convert.ToSingle(Api.World.Rand.NextDouble());
                     xf -= deltaTime * 0.04f;
                     yf -= deltaTime * jl * 10.0f;
                     zf -= deltaTime * 0.04f;
@@ -114,7 +116,7 @@ namespace Immersion
                 xf = 0.0f;
                 yf = 0.0f;
                 zf = 0.0f;
-                Angle = 0.0f * GameMath.DEG2RAD;
+                Angle = 0.0f;
             }
         }
 
@@ -122,6 +124,7 @@ namespace Immersion
         internal void Unregister()
         {
             Api.Event.UnregisterRenderer(this, EnumRenderStage.Opaque);
+            Dispose();
         }
 
         public void Dispose()
