@@ -14,7 +14,7 @@
 		"partialAttachable": true,
         "inventoryClassName": "chest",
         "defaultType": "normal-aged",
-        "types": [ "normal-aged", "normal-acacia", "normal-birch", "normal-kapok", "normal-maple", "normal-oak", "normal-pine", ],
+        "types": [ "normal-aged", "normal-acacia", "normal-birch", "normal-kapok", "normal-maple", "normal-oak", "normal-pine", "normal-palm"],
         "rotatatableInterval": {
             "normal-*": "22.5degnot45deg"
         },
@@ -26,6 +26,7 @@
 			"normal-maple": true,
 			"normal-oak": true,
 			"normal-pine": true,			
+			"normal-palm": true,			
 		},
 		quantitySlots: {
 			"normal-acacia": 32,
@@ -35,6 +36,7 @@
 			"normal-maple": 32,
 			"normal-oak": 32,
 			"normal-pine": 32,			
+			"normal-palm": 32,			
 			
 		},
         "dialogTitleLangCode": {
@@ -54,6 +56,7 @@
 			"normal-maple": "game:block/wood/chest/normal",
 			"normal-oak": "game:block/wood/chest/normal",
 			"normal-pine": "game:block/wood/chest/normal",			
+			"normal-palm": "game:block/wood/chest/normal",		
 		},
         "variantByGroup": "side",
         "variantByGroupInventory": null
@@ -78,7 +81,8 @@
 					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-kapok" } },
 					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-maple" } },
 					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-oak" } },
-					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-pine" } },					
+					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-pine" } },			
+					{ type: "block", code: "survivalchest-east", attributes: { type: "normal-palm" } },			
 				]
 			}
 		]
@@ -130,6 +134,11 @@
 		"normal-pine-lid": { "base": "block/wood/smallplanks/pine"	},
 		"normal-pine-floor": { "base": "block/wood/smallplanks/pine"},
 		"normal-pine-accessories": { "base": "block/wood/smallplanks/pine", "overlays": ["block/wood/overlays/chest/accessories"]},
+
+		"normal-palm-sides2": { "base": "block/wood/smallplanks/palm",	"overlays": ["block/wood/overlays/chest/sides"]	},
+		"normal-palm-lid": { "base": "block/wood/smallplanks/palm"	},
+		"normal-palm-floor": { "base": "block/wood/smallplanks/palm"},
+		"normal-palm-accessories": { "base": "block/wood/smallplanks/palm", "overlays": ["block/wood/overlays/chest/accessories"]},
 	
     },
     "blockmaterial": "Wood",
