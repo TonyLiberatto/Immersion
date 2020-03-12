@@ -45,13 +45,13 @@
 	"item-cookedgiantreedsroot": "Cooked Giant Reeds Root",
 	"item-reeds": "Reeds",
 	"itemdesc-reeds": "Immersion Cattail tops",
-	"item-handbooktitle-reeds": "Used for",
+	"item-handbooktitle-reeds": "Used",
 	"item-handbooktext-reeds": "An immersion addition that can substitute for crafting recipes requiring vanilla cattails",
 
 	"item-seeds-sisal": "Sisal Seeds",
 	"item-sisal-leaves": "Sisal Leaves",
 	"itemdesc-sisal-leaves": "Harvested from sisal plants using any knife.",
-    "item-handbooktitle-sisal-leaves": "Used for",
+    "item-handbooktitle-sisal-leaves": "Used",
 	"item-handbooktext-sisal-leaves": "Crush with any hammer to obtain sisal fiber (grid). Each leaf provides 16 fiber. These leaves are used to craft all sisal cordage.",
 	
 	"block-crop-sisal-5": "Mature Sisal",
@@ -128,7 +128,7 @@
 	"block-mortarandpestle-oak-east": "Oak Mortar and Pestle",
 	"block-mortarandpestle-pine-east": "Pine Mortar and Pestle",
 	"blockdesc-mortarandpestle-*": "A stone-age quern",
-	"block-handbooktitle-mortarandpestle-*": "Used for",
+	"block-handbooktitle-mortarandpestle-*": "Used",
 	"block-handbooktext-mortarandpestle-*": "Milling grains, dried foods, and other resources. This block requires a space above the mortar to use and cannot be automated using a windmill.",
 	
 	"block-seawater-still-7": "Still Sea Water",
@@ -143,7 +143,7 @@
 	"block-dryingtray-kapok": "Kapok Drying Tray",
 	"block-dryingtray-aged": "Aged Drying Tray",
 	"blockdesc-dryingtray-*": "Place in the sun and use a bucket to add portions of seawater. Produces salt after evaporation.",
-    "block-handbooktitle-dryingtray-*": "Used for",
+    "block-handbooktitle-dryingtray-*": "Used",
 	"block-handbooktext-dryingtray-*": "Obtaining salt from seawater. Place the tray in the sun. Use a bucket to add up to 16 portions of seawater. After the water evaporates, salt can be harvested from the tray (RMB)",
 	
 	"block-choppingblock-birch-*": "Birch Chopping Block",
@@ -154,7 +154,7 @@
 	"block-choppingblock-kapok-*": "Kapok Chopping Block",
 	"block-choppingblock-aged-*": "Aged Chopping Block",
 	"blockdesc-choppingblock-*": "Place a log or branch of any wood type (RMB). Convert the log or branch to firewood using an axe (RMB).",
-    "block-handbooktitle-choppingblock-*": "Used for",
+    "block-handbooktitle-choppingblock-*": "Used",
 	"block-handbooktext-choppingblock-*": "Obtaining firewood from logs and branches. Firewood yield is 8 (log) and 6 (thick), 4 (medium) or 2 (thin).",
 	
 	"block-bonfire-extinct": "Bonfire (Extinct)",
@@ -163,7 +163,7 @@
 	"blockdesc-bonfire-lit": "Burn Baby, Burn",
 	"block-bonfire-cold": "Cold Bonfire",
 	"blockdesc-bonfire-cold": "Light to create a defensive pyre",
-	"block-handbooktitle-bonfire-*": "Used for",
+	"block-handbooktitle-bonfire-*": "Used",
 	"block-handbooktext-bonfire-*": "Driving away predators within a range of 48 blocks. The bonfire lasts for 24 hours, and cannot be refueled once extinguished. The bonfire cannot be used as a firepit.",
 
 	"block-food-bowl-small-blue-porkchops-raw": "Small Blue Mixing Bowl with Pork Chops (Raw)",
@@ -1231,7 +1231,7 @@
 	
 	"item-bow-recurve": "Recurve Bow",
 	"itemdesc-bow-recurve": "Well worth the time and effort to create. Replace bowstring to repair the bow.",
-  "item-handbooktitle-bow-recurve": "Used",
+    "item-handbooktitle-bow-recurve": "Used",
 	"item-handbooktext-bow-recurve": "as a ranged weapon, Made by combining a recurve limb with a bowstring. Reclaim the limb by removing the bowstring.",
 	
 	"item-sword-flakes-flint-*": "Flint Sword Flakes",
@@ -1300,7 +1300,7 @@
 	"itemdesc-adze-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-adze-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-adze-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-adze-*": "Used for",
+	"item-handbooktitle-adze-*": "Used",
 	"item-handbooktext-adze-*": "Carving wood blocks before metal tools are available. Voxels can be removed but not replaced. Press (F) to change the tool mode.",
 
 	"item-axe-andesite-*": "Andesite Primitive Axe",
@@ -1330,7 +1330,7 @@
 	"itemdesc-axe-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-axe-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-axe-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-axe-*": "Used for",
+	"item-handbooktitle-axe-*": "Used",
 	"item-handbooktext-axe-*": "Creating Immersion additions: Half Log, Chopping Block",
 
 	"item-hammer-andesite-*": "Andesite Primitive Hammer",
@@ -1360,7 +1360,7 @@
 	"itemdesc-hammer-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-hammer-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-hammer-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-hammer-*": "Used for",
+	"item-handbooktitle-hammer-*": "Used",
 	"item-handbooktext-hammer-*": "An immersion addition used to rotate and change the shape of log walls and roofs.",
 
 	"item-hoe-andesite-*": "Andesite Primitive Hoe",
@@ -1398,7 +1398,7 @@
 	"itemdesc-spear-javelin-bamboo-brown-sinew": "with Brown Bamboo Shaft and Sinew Binding",
 	"itemdesc-spear-javelin-bamboo-green-leatherstrips": "with Green Bamboo Shaft and Leather Strip Binding",
 	"itemdesc-spear-javelin-bamboo-brown-leatherstrips": "with Brown Bamboo Shaft and Leather Strip Binding",
-	"item-handbooktitle-javelin-*": "Used for",
+	"item-handbooktitle-javelin-*": "Used",
 	"item-handbooktext-javelin-*": "An immersion addition, used as a thrown spear.",
 
 	"item-knife-andesite-*": "Andesite Primitive Knife",
@@ -1484,7 +1484,7 @@
 	"itemdesc-sickle-*-oak-leatherstrips": "with Oak Shaft and Leather Strip Binding",
 	"itemdesc-sickle-*-pine-leatherstrips": "with Pine Shaft and Leather Strip Binding",
 	"itemdesc-sickle-*-bone-leatherstrips": "with Bone Shaft and Leather Strip Binding",
-	"item-handbooktitle-sickle-*": "Used for",
+	"item-handbooktitle-sickle-*": "Used",
 	"item-handbooktext-sickle-*": "An immersion addition that is used to harvest 3 blocks of grass or crops.",
 
 	"item-slaughteringaxe-peridotite-*": "Peridotite Primitive Slaughtering Axe",
@@ -1579,7 +1579,7 @@
 	"itemdesc-slaughteringaxe-lead-*": "Not Yet Implemented",
 	"itemdesc-slaughteringaxe-silver-*": "Not Yet Implemented",
 	"itemdesc-slaughteringaxe-tinbronze-*": "Not Yet Implemented",
-	"item-handbooktitle-slaughteringaxe-*": "Used for",
+	"item-handbooktitle-slaughteringaxe-*": "Used",
 	"item-handbooktext-slaughteringaxe-*": "An immersion addition that is used to kill domesticated animals.",
 
 	"item-spear-primitive-peridotite-*": "Peridotite Primitive Spear",

@@ -248,6 +248,7 @@
     <Folder Include="bin\Immersion\assets\immersion\textures\block\stone\roads\stones\" />
     <Folder Include="bin\Totems\assets\totems\recipes\clayforming\" />
     <Folder Include="Source\Content\Entity\" />
+    <Folder Include="WIPAssets\GitAssets\" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitattributes" />
