@@ -1,7 +1,7 @@
-#Changes from version 1.0.7 to 1.2.0
-1. Changed Small skeleton to drop small bones when harvested.
-2. Added recipe: Small bones > Quern/Mortar > Bonemeal.
-3. Updated IRON Spear crafting recipe.
+**Changes from version 1.0.7 to 1.2.0**
+* Changed Small skeleton to drop small bones when harvested.
+* Added recipe: Small bones > Quern/Mortar > Bonemeal.
+* Updated IRON Spear crafting recipe.
 4. Fix Carrion to Skeleton transition (Add Freshly eaten skeleton).
 5. Fixed Fox Forest Pup growth to Forest Fox Male and Female.
 6. Fixed Fox Forest textures.
