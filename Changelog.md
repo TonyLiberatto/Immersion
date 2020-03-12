@@ -55,3 +55,4 @@ Added handbook entries for 100+ items/blocks including crafting directions, uses
 Name intermediate blocks in cooking/crafting recipes
 Added recipe for creation of Vines Basket
 Made bonfire ignite using a firestarter
+changed armadillo behavior
