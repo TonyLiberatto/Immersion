@@ -56,6 +56,7 @@
 		origin: { x: 0.5, y: 1, z: 0.5 }
 	},
 	sounds: {
+		hit: "game:block/plant",
 		place: "game:block/plant",
 		break: "game:block/plant",
 		inside: "game:walk/water"

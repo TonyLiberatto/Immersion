@@ -105,24 +105,28 @@ namespace Immersion
 
         public float progress { get; private set; }
         public float secondsUsed { get; private set; }
+        bool firstAction = true;
 
         private void SendBlockAction(EnumEntityAction action, ref EnumHandling handled)
         {
-            var controls = capi.World.Player.Entity.Controls;
-            if (action == EnumEntityAction.RightMouseDown && controls.Sneak)
+            if (id == 0 && firstAction)
             {
-                var recipe = OnPlayerInteractStart(capi.World.Player, capi.World.Player.CurrentBlockSelection);
-                if (recipe != null)
+                var controls = capi.World.Player.Entity.Controls;
+                if (action == EnumEntityAction.RightMouseDown && controls.Sneak)
                 {
-                    if (id == 0)
+                    firstAction = false;
+                    var recipe = OnPlayerInteractStart(capi.World.Player, capi.World.Player.CurrentBlockSelection);
+                    if (recipe != null)
                     {
                         var originalSel = capi.World.Player.CurrentBlockSelection?.Clone();
+                        string originalCode = originalSel?.Position?.GetBlock(capi)?.Code?.ToString();
 
                         id = capi.Event.RegisterGameTickListener(dt =>
                         {
                             var currentSel = capi.World.Player.CurrentBlockSelection;
+                            string currentCode = originalSel?.Position?.GetBlock(capi)?.Code?.ToString();
 
-                            if (currentSel != null && originalSel.Position == currentSel.Position && capi.Input.MouseButton.Right && controls.Sneak && OnPlayerInteractStep(recipe, capi.World.Player, secondsUsed))
+                            if (originalCode == currentCode && currentSel != null && originalSel.Position == currentSel.Position && capi.Input.MouseButton.Right && controls.Sneak && OnPlayerInteractStep(recipe, capi.World.Player, secondsUsed))
                             {
                                 secondsUsed += dt;
                             }
@@ -133,11 +137,16 @@ namespace Immersion
                                 capi.World.Player.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
                                 capi.Event.UnregisterGameTickListener(id);
                                 id = 0;
+                                firstAction = true;
                             }
-                            progress = recipe.MakeTime * secondsUsed;
+                            progress = secondsUsed / (recipe.MakeTime != 0 ? recipe.MakeTime : 1.0f);
                         }, 30);
+                        handled = EnumHandling.PreventDefault;
                     }
-                    handled = EnumHandling.PreventDefault;
+                    else
+                    {
+                        capi.Event.RegisterCallback(dt => firstAction = true, 1000);
+                    }
                 }
             }
         }

@@ -45,6 +45,7 @@
 		rotation: { x: 0, y: 0, z: 0 }
 	},
 	sounds: {
+		hit: "game:block/plant",
 		place: "block/plant",
 		break: "block/plant"
 	},
