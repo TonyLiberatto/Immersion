@@ -1,3 +1,4 @@
+#Changes from version 1.0.7 to 1.2.0
 1. Changed Small skeleton to drop small bones when harvested.
 2. Added recipe: Small bones > Quern/Mortar > Bonemeal.
 3. Updated IRON Spear crafting recipe.
