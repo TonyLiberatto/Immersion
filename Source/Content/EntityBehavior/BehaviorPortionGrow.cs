@@ -18,6 +18,8 @@ namespace Immersion
     public class BehaviorPortionGrow : EntityBehavior
     {
         ITreeAttribute growTree;
+        ITreeAttribute hungerTree;
+
         JsonObject typeAttributes;
         long callbackId;
 
@@ -42,6 +44,12 @@ namespace Immersion
             set { growTree.SetDouble("timeSpawned", value); }
         }
 
+        internal float Saturation
+        {
+            get { return hungerTree.GetFloat("saturation"); }
+            set { hungerTree.SetFloat("saturation", value); }
+        }
+
         public BehaviorPortionGrow(Entity entity) : base(entity)
         {
         }
@@ -49,10 +57,10 @@ namespace Immersion
         public override void Initialize(EntityProperties properties, JsonObject typeAttributes)
         {
             base.Initialize(properties, typeAttributes);
-
             this.typeAttributes = typeAttributes;
 
             growTree = entity.WatchedAttributes.GetTreeAttribute("grow");
+            hungerTree = entity.WatchedAttributes.GetOrAddTreeAttribute("hunger");
 
             if (growTree == null)
             {
@@ -60,14 +68,13 @@ namespace Immersion
                 TimeSpawned = entity.World.Calendar.TotalHours;
             }
 
-            callbackId = entity.World.RegisterCallback(CheckGrowth, 3000);
+            if (entity.World.Side.IsServer()) callbackId = entity.World.RegisterCallback(CheckGrowth, 3000);
         }
 
 
         private void CheckGrowth(float dt)
         {
             if (!entity.Alive) return;
-            ITreeAttribute hungerTree = entity.WatchedAttributes.GetOrAddTreeAttribute("hunger");
 
             if (entity.World.Calendar.TotalHours >= TimeSpawned + HoursToGrow && hungerTree.GetFloat("saturation", 0) >= SatietyToGrow)
             {
@@ -110,6 +117,11 @@ namespace Immersion
             entity.World.FrameProfiler.Mark("entity-checkgrowth");
         }
 
+        public override void GetInfoText(StringBuilder infotext)
+        {
+            infotext.Append("Saturation: " + Math.Round(Saturation) + "/" + Math.Round(SatietyToGrow)).AppendLine();
+            base.GetInfoText(infotext);
+        }
 
         public override void OnEntityDespawn(EntityDespawnReason despawn)
         {

@@ -16,6 +16,7 @@
 		shape: { base: "entity/land/sheep-bighorn-lamb" },
 		texture: { base: "entity/sheep/sheep-bighorn-lamb" },
 		behaviors: [
+			{ code: "portiongrow", portionsEatenForGrow: 15.0 },
 			{ code: "repulseagents" }, 
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
@@ -86,8 +87,8 @@
 				],
 			},
 			{ code: "portiongrow",
-				hoursToGrow: 336,
-				portionsEatenForGrow: 10,
+				hoursToGrow: 0,
+				portionsEatenForGrow: 15,
 				adultEntityCodes: ["wild-sheep-ram", "wild-sheep-ewe"],
 			},
 			{ code: "taskai",

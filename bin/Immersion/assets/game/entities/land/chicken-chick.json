@@ -12,6 +12,7 @@
     shape: { base: "entity/land/chicken-baby" },
     textures: { all: { base: "entity/chicken/chick/{color}" } },
     behaviors: [
+      { code: "portiongrow", portionsEatenForGrow: 5.0 },
       { code: "controlledphysics", stepHeight: 1.0001 },
       { code: "floatupwhenstuck", onlyWhenDead: true  },
       { code: "interpolateposition" },     
@@ -67,8 +68,9 @@
       { code: "controlledphysics", stepHeight: 1.0001 },
       { code: "despawn", minPlayerDistance: 8, belowLightLevel: 8, minSeconds: 300 },
       { code: "health", currenthealth: 1.5, maxhealth: 1.5, },      
-      { code: "grow",
-        hoursToGrow: 168,
+      { code: "portiongrow",
+        hoursToGrow: 0,
+        portionsEatenForGrow: 5.0,
         adultEntityCodesByType: {
           "chicken-chick-ashgrey": [ "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-hen-ashgrey", "chicken-rooster-ashgrey" ],
           "chicken-chick-black": [ "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-hen-black", "chicken-rooster-black" ],
@@ -116,6 +118,16 @@
             searchRange: 12,
             animation: "Run"
           },
+          {
+            code: "seekfoodandeat",
+            priority: 1.35,
+            eatSound: "player/eat",
+            eatTime: 1.5,
+            movespeed: 0.0025,
+            animation: "Walk",
+            mincooldownHours: 1,
+            maxcooldownHours: 4,
+					},
           {
             code: "idle",
             priority: 1.2,

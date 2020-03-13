@@ -16,8 +16,9 @@
 		shape: { base: "entity/land/sheep/lamb" },
 		texture: { base: "entity/sheep/lamb" },
 		behaviors: [
+			{ code: "portiongrow", portionsEatenForGrow: 15.0 },
 			{ code: "repulseagents" }, 
-      { code: "slaughterable" },
+      		{ code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "interpolateposition" },
@@ -55,8 +56,9 @@
 			{ code: "floatupwhenstuck", onlyWhenDead: true },
 			{ code: "breathe" }, 
 			{ 
-				code: "grow",
-				hoursToGrow: 168,
+				code: "portiongrow",
+				hoursToGrow: 0,
+				portionsEatenForGrow: 15.0,
 				adultEntityCodes: ["sheep-ram", "sheep-ewe"],
 			},
 			{ 
