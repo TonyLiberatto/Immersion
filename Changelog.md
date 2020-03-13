@@ -1,3 +1,7 @@
+* fixed rooster textures 
+* fix the lag and incorrectness with the progressbar 
+
+
 **Changes from version 1.0.7 to 1.2.0**
 * Changed Small skeleton to drop small bones when harvested.
 * Added recipe: Small bones > Quern/Mortar > Bonemeal.
