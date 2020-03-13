@@ -1,3 +1,9 @@
+* fix the lag and incorrectness with the progressbar 
+* added palmwood creation for Buckets, barrels, chests, plank, planks
+* added auto group creation suplayer to mod group creation allows for land clamining permissions to be set to use for that group 
+
+
+
 **Changes from version 1.0.7 to 1.2.0**
 * Changed Small skeleton to drop small bones when harvested.
 * Added recipe: Small bones > Quern/Mortar > Bonemeal.
