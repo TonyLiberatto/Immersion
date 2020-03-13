@@ -15,6 +15,7 @@
 		shape: { base: "entity/land/pig-domestic/piglet" },
 		texture: { base: "entity/pig-domestic/piglet" },
 		behaviors: [
+			{ code: "portiongrow", portionsEatenForGrow: 10.0 },
 			{ code: "repulseagents" },
 			{ code: "slaughterable" },
 			{ code: "controlledphysics", stepHeight: 1.0001 }, 
@@ -39,8 +40,8 @@
 			{ code: "breathe" }, 
 			{ 
 				code: "portiongrow",
-				hoursToGrow: 168,
-				portionsEatenForGrow: 30.0,
+				hoursToGrow: 0,
+				portionsEatenForGrow: 10.0,
 				adultEntityCodes: [ "pig-domestic-sow", "pig-domestic-boar" ],
 			},
 			{ 
