@@ -42,13 +42,14 @@ namespace Immersion
                 runAwayFrom = null;
                 try
                 {
-                    runAwayFrom = poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 1000, (poi) =>
+                    runAwayFrom = poiRegistry.GetNearestPoi(entity.ServerPos.XYZ, 100, (poi) =>
                     {
                         if (poi == null) return false;
                         float? fear = (poi as IPointOfFear)?.FearRadius;
                         if (fear == null) return false;
                         return poi.Position.DistanceTo(entity.Pos.XYZ) < fear && poi.Type == "scary";
                     }) as IPointOfFear;
+                    if (runAwayFrom == null) return;
 
                     goTo = goTo ?? runAwayFrom.Position.AheadCopy(runAwayFrom.FearRadius + 5, 0, rand.NextDouble() * 360);
                     while (goTo.AsBlockPos.GetBlock(entity.Api).Id != 0 && goTo.AsBlockPos.Y < world.BlockAccessor.MapSizeY)
