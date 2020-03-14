@@ -4,7 +4,7 @@
 * added auto group creation suplayer to mod group creation allows for land clamining permissions to be set to use for that group 
 * display portions in portion grow, add portion grow to chicks
 * removed Flee behavior from domestic pigs 
-
+* change wolf entity seek behavior
 
 **Changes from version 1.0.7 to 1.2.0**
 * Changed Small skeleton to drop small bones when harvested.
