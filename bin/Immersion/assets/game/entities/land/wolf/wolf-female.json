@@ -85,6 +85,7 @@
 						code: "fear",
 						priority: 3.9,
 						movespeed: 0.021,
+						seekingRange: 48,
 						animation: "Run",
 						animationSpeed: 1.5
 					},
