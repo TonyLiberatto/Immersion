@@ -47,17 +47,7 @@
 			{ 
 				code: "taskai",
 				aitasks: [
-					{
-						code: "fleeentity",
-						entityCodes: ["player"],
-						priority: 1.5,
-						movespeed: 0.015,
-						seekingRange: 9,
-						animationSpeed: 7,
-						animation: "Run",
-						sound: "creature/pig/piglet-hurt"
-					},
- 					{
+					{ 					
 						code: "sleep",
 						priority: 1.8,
 						priorityForCancel: 1.35,

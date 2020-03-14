@@ -18,7 +18,7 @@
         {
             "code": "wood",
             "states": [
-                "aged"
+                "aged", "palm"
             ],
             "loadFromProperties": "block/wood"
         },

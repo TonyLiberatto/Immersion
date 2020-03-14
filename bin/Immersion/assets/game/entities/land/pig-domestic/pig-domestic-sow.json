@@ -99,18 +99,7 @@
 						animationSpeed: 4,
 						whenInEmotionState: "aggressiveondamage"
 					},
-					{
-						code: "fleeentity",
-						entityCodes: ["player"],
-						priority: 1.5,
-						movespeed: 0.02,
-						seekingRange: 12,
-						animation: "Run",
-						animationSpeed: 4,
-						sound: "creature/pig/hurt",
-						whenInEmotionState: "fleeondamage"
-					},
-					{
+					{					
 						code: "stayclosetoentity",
 						priority: 1.3,
 						entityCode: "pig-domestic-boar",
