@@ -9,6 +9,7 @@
 * change wolf entity seek behavior
 * added missing textures for palms
 * change wolf fear of bonfire
+* change barrel textures to include metal bands for wood and leather strips for bamboo
 
 **Changes from version 1.0.7 to 1.2.0**
 
