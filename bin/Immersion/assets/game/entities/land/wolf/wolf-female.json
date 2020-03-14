@@ -104,16 +104,6 @@
 						sound: "creature/wolf/attack"
 					},					
 					{
-						code: "fleeentity",
-						entityCodes: ["player"],
-						priority: 1.6,
-						movespeed: 0.04,
-						seekingRange: 20,
-						animation: "Run",
-						animationSpeed: 1.75,
-						whenInEmotionState: "fleeondamage"
-					},
-					{
 						code: "seekentity",
 						entityCodes: ["player", "chicken-*", "hare-*"],
 						priority: 1.9,
@@ -137,30 +127,18 @@
                         mincooldownHours: 1,
                         maxcooldownHours: 4,
                         doConsumePortion: true
-                    },					
-					{
-						code: "seekentity",
-						entityCodes: ["player", "chicken-*", "hare-*"],
-						priority: 1.5,
-						movespeed: 0.021,
-						seekingRange: 20,
-						animation: "Run",
-						animationSpeed: 1.5,
-						sound: "creature/wolf/growl",
 						whenNotInEmotionState: "saturated"
-					},
-					
+                    },
 					{
-						code: "seekentity",
+						code: "fleeentity",
 						entityCodes: ["player"],
-						priority: 1.49,
-						movespeed: 0.021,
+						priority: 1.6,
+						movespeed: 0.04,
 						seekingRange: 20,
 						animation: "Run",
-						animationSpeed: 1.5,
-						sound: "creature/wolf/growl",
-						whenInEmotionState: "aggressiveondamage"
-					},
+						animationSpeed: 1.75,
+						whenInEmotionState: "fleeondamage"
+					},					
 					{
 						code: "idle",
 						priority: 1.55,
@@ -174,7 +152,40 @@
 						duringDayTimeFrames: [ { fromHour: 6, toHour: 18 }, ],
 						stopOnNearbyEntityCodes: ["player"],
 						stopRange: 6
-					},	
+					},
+					{
+						code: "seekentity",
+						entityCodes: ["player", "chicken-*", "hare-*"],
+						priority: 1.5,
+						movespeed: 0.021,
+						seekingRange: 20,
+						animation: "Run",
+						animationSpeed: 1.5,
+						sound: "creature/wolf/growl",
+						whenNotInEmotionState: "saturated"
+					},
+					{
+						code: "seekentity",
+						entityCodes: ["chicken-*", "hare-*"],
+						priority: 1.5,
+						movespeed: 0.021,
+						seekingRange: 10,
+						animation: "Run",
+						animationSpeed: 1.5,
+						sound: "creature/wolf/growl",
+						whenNotInEmotionState: "saturated"
+					},
+					{
+						code: "seekentity",
+						entityCodes: ["player"],
+						priority: 1.49,
+						movespeed: 0.021,
+						seekingRange: 20,
+						animation: "Run",
+						animationSpeed: 1.5,
+						sound: "creature/wolf/growl",
+						whenInEmotionState: "aggressiveondamage"
+					},
 					{
 						code: "getoutofwater",
 						priority: 1.4,

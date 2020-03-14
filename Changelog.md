@@ -1,12 +1,17 @@
 **Changes from 1.2.0 to 1.2.x**
+
+
 * fix the lag and incorrectness with the progressbar 
 * added palmwood creation for Buckets, barrels, chests, plank, planks
 * added auto group creation suplayer to mod group creation allows for land clamining permissions to be set to use for that group 
 * display portions in portion grow, add portion grow to chicks
 * removed Flee behavior from domestic pigs 
-
+* change wolf entity seek behavior
+* added missing textures for palms
 
 **Changes from version 1.0.7 to 1.2.0**
+
+
 * Changed Small skeleton to drop small bones when harvested.
 * Added recipe: Small bones > Quern/Mortar > Bonemeal.
 * Updated IRON Spear crafting recipe.
