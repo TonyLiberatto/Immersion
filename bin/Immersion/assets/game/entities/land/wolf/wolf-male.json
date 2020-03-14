@@ -126,7 +126,7 @@
                         eatanimationspeed: 1.0,
                         mincooldownHours: 1,
                         maxcooldownHours: 4,
-                        doConsumePortion: true
+                        doConsumePortion: true,
 						whenNotInEmotionState: "saturated"
                     },
 					{
