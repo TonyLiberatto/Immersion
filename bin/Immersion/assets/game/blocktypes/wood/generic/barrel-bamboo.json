@@ -1,10 +1,9 @@
 {
-	"code": "barrel",
+	"code": "barrel-bamboo",
 	"class": "BlockBarrel",
 	"entityClass": "Barrel",
 	"variantgroups": [
-		{ "code": "wood", "states": ["aged",  "palm"], "loadFromProperties": "block/wood" },
-		{ "code": "metal", "states": ["copper", "tinbronze", "bismuthbronze", "blackbronze"] }
+		{ "code": "wood", "states": [ "brown", "green"] },		
 	],
 	"behaviors": [{
 		"name": "UnstableFalling"
@@ -26,23 +25,23 @@
 	"maxStackSize": 1,
 	"lightAbsorption": 1,
 	"texturesByType": {
-		"*": {
+		"*-bamboo-*": {
 			"lid": {
-				"base": "block/wood/smallplanks/{wood}"
+				"base": "block/wood/planks/bamboo-{wood}-side"
 			},
 			"sides": {
-				"base": "block/wood/smallplanks/{wood}"				
+				"base": "block/wood/planks/bamboo-{wood}-side"				
 			},
 			"inside": {
-				"base": "block/wood/smallplanks/{wood}"
+				"base": "block/wood/planks/bamboo-{wood}-side"
 			},
 			"top-empty": {
-				"base": "block/wood/smallplanks/{wood}"
+				"base": "block/wood/planks/bamboo-{wood}-side"
 			},
 			"metal": {
-				"base": "game:block/metal/sheet/{metal}1"
+				"base": "game:block/leather"
 			},
-		}
+		},
 	},
 	"attributes": {
 		"partialAttachable": true

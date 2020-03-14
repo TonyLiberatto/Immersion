@@ -281,6 +281,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-saltedmeat.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl-saltedpork.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\food-bowl.json" />
+    <None Include="bin\Immersion\assets\game\blocktypes\clay\mold\barrelbandmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\glasslanternframemold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\hingesmold.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\clay\ingotstampmold.json" />
@@ -319,6 +320,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\metal\glasslanternframe.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\ingotpile.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\ingotstamp.json" />
+    <None Include="bin\Immersion\assets\game\blocktypes\metal\barrelband.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\lantern-base-candle-sides-glass-layer.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\lantern-base-candle-sides-glass.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\metal\lantern-base-candle-sides.json" />
@@ -396,6 +398,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\wood\dryingtraysides.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bamboochest-labeled.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bamboochest.json" />
+    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\barrel-bamboo.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\barrel.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bed.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bonfire.json" />
@@ -1351,6 +1354,7 @@
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\ingotstampmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\lanternbasetopmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\lanternsidesmold.json" />
+    <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\barrelbandmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\metalsheetmold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\slaughteringaxemold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\clay\mold\toolpinmold.json" />
@@ -1368,6 +1372,7 @@
     <None Include="bin\Immersion\assets\game\shapes\block\meal\meaty-stew.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\candlemold.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\candlemoldwick.json" />
+    <None Include="bin\Immersion\assets\game\shapes\block\metal\barrelband.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\glasslanternframe.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\ingotpile.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\metal\ironbloompile.json" />
@@ -1425,6 +1430,7 @@
     <None Include="bin\Immersion\assets\game\shapes\block\staircorners\stairs-lowered-cornerinside.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\stone\well.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\stone\wellpipe.json" />
+    <None Include="bin\Immersion\assets\game\shapes\block\wood\barrel\empty.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\wood\bonfire\extinct.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\wood\bonfire\lit-2.json" />
     <None Include="bin\Immersion\assets\game\shapes\block\wood\bonfire\lit.json" />

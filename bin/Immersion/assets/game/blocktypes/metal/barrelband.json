@@ -1,0 +1,31 @@
+{
+	code: "barrelband",
+	variantgroups: [
+		{ code:"metal", states: ["copper", "blackbronze", "tinbronze", "bismuthbronze", ] },
+	],
+	attributes: {
+		handbook: {			
+			extraSections: [
+				{ title: "handbook-item-sources", text: "Obtained by <a href=\"handbook://craftinginfo-smelting\">Smelting</a>" }
+			]
+		},
+	},
+	creativeinventory: { "general": ["*"], "immersionblocks": ["*"] },
+	shape: { base: "block/metal/barrelband" },
+	blockmaterial: "metal",
+	drawtype: "json",
+	"textures": {
+		"all": { "base": "game:block/metal/sheet/{metal}1" }
+    },
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	collisionSelectionBox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.875, y2: 0.0625, z2: 0.875 },	
+	resistance: 3.5,
+	maxStackSize: 32,
+	materialDensity: 600,
+
+}
