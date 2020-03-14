@@ -1,3 +1,4 @@
+**Changes from 1.2.0 to 1.2.x**
 * fix the lag and incorrectness with the progressbar 
 * added palmwood creation for Buckets, barrels, chests, plank, planks
 * added auto group creation suplayer to mod group creation allows for land clamining permissions to be set to use for that group 
