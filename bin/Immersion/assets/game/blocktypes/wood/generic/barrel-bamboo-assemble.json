@@ -1,0 +1,103 @@
+{
+	"code": "barrel-bamboo-assemble",
+	"class": "BlockBarrel",
+	"entityClass": "Barrel",
+	"variantgroups": [
+		{ "code": "wood", "states": [ "brown", "green"] },		
+	],
+	"behaviors": [{
+		"name": "UnstableFalling"
+	}],
+	"shape": {
+		"base": "block/wood/barrel/empty"
+	},
+	"creativeinventory": {
+		"general": [
+			"*"
+		],
+		"immersiondeco": [
+			"*"
+		]
+	},
+	"blockmaterial": "Wood",
+	"replaceable": 900,
+	"resistance": 1.5,
+	"maxStackSize": 1,
+	"lightAbsorption": 1,
+	"texturesByType": {
+		"*-bamboo-*": {
+			"lid": {
+				"base": "block/wood/planks/bamboo-{wood}-side"
+			},
+			"sides": {
+				"base": "block/wood/planks/bamboo-{wood}-side"				
+			},
+			"inside": {
+				"base": "block/wood/planks/bamboo-{wood}-side"
+			},
+			"top-empty": {
+				"base": "block/wood/planks/bamboo-{wood}-side"
+			},
+			"metal": {
+				base: "block/transparent"
+			},
+		},
+	},
+	"attributes": {
+		"partialAttachable": true
+	},
+	"sideao": {
+		"all": false
+	},
+	"sidesolid": {
+		"all": false
+	},
+	"emitsideao": {
+		"all": false
+	},
+	"sideopaque": {
+		"all": false
+	},
+	"collisionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.9375,
+		"z2": 1
+	},
+	"selectionbox": {
+		"x1": 0,
+		"y1": 0,
+		"z1": 0,
+		"x2": 1,
+		"y2": 0.9375,
+		"z2": 1
+	},
+	"combustibleProps": {
+		"burnTemperature": 600,
+		"burnDuration": 20
+	},
+	"sounds": {
+		"place": "block/planks",
+		"hit": "block/planks",
+		"break": "block/planks",
+		"walk": "walk/wood"
+	},
+	"materialDensity": 600,
+	"heldTpIdleAnimation": "holdbothhandslarge",
+	"heldTpUseAnimation": "twohandplaceblock",
+	"tpHandTransform": {
+		"translation": {
+			"x": -1.2,
+			"y": -1.1,
+			"z": -0.8
+		},
+		"rotation": {
+			"x": -2,
+			"y": 25,
+			"z": -78
+		},
+		"scale": 0.37
+	}
+}

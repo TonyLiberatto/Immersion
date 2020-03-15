@@ -42,8 +42,9 @@
 	},
 	textures: {			
 			"lid": { "base": "game:block/wood/planks/{wood}-side" },
-			"sides2": { "base": "game:block/wood/planks/{wood}-side"},		
+			"sides2": { "base": "game:block/wood/planks/{wood}-side", "overlays": ["block/wood/overlays/chest/sides"]},		
 			"label": { "base": "game:block/wood/chest/label" },
+			"accessories": { "base": "game:block/wood/planks/{wood}-side",	"overlays": ["block/wood/overlays/chest/accessories"]},
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },

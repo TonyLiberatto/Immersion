@@ -2,7 +2,7 @@
 	code: "plank",
 	class: "ItemPlank",
 	variantgroups: [
-		{ code: "wood", states: ["aged", "palm"], loadFromProperties: "block/wood" }
+		{ code: "wood", states: ["aged", "palm", "bamboo-green", "bamboo-brown"], loadFromProperties: "block/wood" }
 	],
 	maxstacksize: 64,
 	shape: { base: "item/plank" },

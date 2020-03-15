@@ -11,10 +11,10 @@
 		},
 	},
 	shapeByType: {
-		"*-north": { base: "game:block/wood/chest/normal", rotateY: 0 },
-		"*-east": { base: "game:block/wood/chest/normal", rotateY: 270 },
-		"*-south": { base: "game:block/wood/chest/normal", rotateY: 180 },
-		"*-west": { base: "game:block/wood/chest/normal", rotateY: 90 },		
+		"*-north": { base: "block/wood/chest/normal", rotateY: 0 },
+		"*-east": { base: "block/wood/chest/normal", rotateY: 270 },
+		"*-south": { base: "block/wood/chest/normal", rotateY: 180 },
+		"*-west": { base: "block/wood/chest/normal", rotateY: 90 },		
 	},
 	creativeinventory: { "general": [""], "decorative": [""], "immersiondeco": [""] },
 	blockmaterial: "Wood",
@@ -36,9 +36,10 @@
 		"walk": "walk/wood"
 	},
 	textures: {					
-			"sides2": { base: "block/wood/chest/{wood}/sides"},
+			"sides2": { base: "game:block/wood/planks/{wood}-side", "overlays": ["block/wood/overlays/chest/sides"]},
 			"lid": { base: "game:block/transparent" },
 			"accessories": { base: "game:block/transparent" },
+			"floor": { base: "game:block/wood/planks/{wood}-side"},
 	},
 	materialDensity: 400,
 	selectionbox: { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.8125, z2: 0.9375 },

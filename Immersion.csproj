@@ -398,6 +398,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\wood\dryingtraysides.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bamboochest-labeled.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bamboochest.json" />
+    <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\barrel-bamboo-assemble.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\barrel-bamboo.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\barrel.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\generic\bed.json" />
@@ -413,6 +414,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\wood\mortarandpestle\mortar.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\mortarandpestle\mortarandpestle.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\mortarandpestle\pestle.json" />
+    <None Include="bin\Immersion\assets\game\blocktypes\wood\plankpile.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\planks.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\plankstairs.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\plankstairscorner.json" />
@@ -496,6 +498,7 @@
     <None Include="bin\Immersion\assets\game\itemtypes\resource\giantreedsroot.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\ingot.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\milkportion.json" />
+    <None Include="bin\Immersion\assets\game\itemtypes\resource\plank.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\rawbrick.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\reeds.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\resource\seawaterportion.json" />
@@ -577,12 +580,12 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\wateringcan.json" />
     <None Include="bin\Immersion\assets\game\recipes\cooking\meatystew.json" />
     <None Include="bin\Immersion\assets\game\recipes\cooking\soup.json" />
-    <None Include="bin\Immersion\assets\game\recipes\grid\barrel.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\beenade.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\claybrickstairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\clayshinglestairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\cobblestairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\dough.json" />
+    <None Include="bin\Immersion\assets\game\recipes\grid\palmplank.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\plankstairs.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\poultice.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\sealedcrock.json" />
@@ -1463,6 +1466,9 @@
     <None Include="bin\Immersion\assets\game\shapes\item\hinges.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\spear-bronze.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\carcass\dead-racoon.json" />
+    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\barrel\barrel-sides-bamboo.json" />
+    <None Include="bin\Immersion\assets\immersion\blocktypes\wood\barrel\barrel-sides.json" />
+    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\normal.json" />
     <None Include="Changelog.md" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-adze.json" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-axe.json" />
@@ -2072,7 +2078,6 @@
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\branch8-cordage.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\chest-assemble.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\chest-assemble1.json" />
-    <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\normal.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\cordage.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\door-assemble.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\door\down_closed_left.json" />
@@ -2421,6 +2426,7 @@
     <Content Include="bin\Immersion\assets\game\textures\block\stone\roads\stones\shale_stones_3.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\stone\roads\stones\shale_stones_4.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\tallow\tallowcandle.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\transparent.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\acacia-i.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\aged-i.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\bark\birch-i.png" />
@@ -2439,6 +2445,7 @@
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\maple.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\oak.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\pine.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\debarked\palm.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\acacia2.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\kapok2.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\pine2.png" />
@@ -2448,8 +2455,14 @@
     <Content Include="bin\Immersion\assets\game\textures\block\wood\overlays\chest\sides.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-brown-side.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-brown-top.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-brown1.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-green-side.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-green-top.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\bamboo-green1.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\palm1.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\palm2.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\palm3.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\planks\palm4.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\acacia.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\aged.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\smallplanks\birch.png" />

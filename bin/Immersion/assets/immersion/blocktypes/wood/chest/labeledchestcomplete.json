@@ -46,9 +46,9 @@
 		"walk": "walk/wood"
 	},
 	textures: {
-			"accessories": { "base": "game:block/wood/trunk/accessories"},
+			"accessories": { "base": "game:block/wood/trunk/accessories", "overlays": ["block/wood/overlays/chest/accessories"]},
 			"lid": { "base": "game:block/wood/smallplanks/{wood}"	},
-			"sides2": { "base": "game:block/wood/smallplanks/{wood}"},
+			"sides2": { "base": "game:block/wood/smallplanks/{wood}",	"overlays": ["block/wood/overlays/chest/sides"]},
 			"floor": { "base": "game:block/wood/smallplanks/{wood}"},
 			"label": { base: "game:block/wood/chest/label"},
 	},

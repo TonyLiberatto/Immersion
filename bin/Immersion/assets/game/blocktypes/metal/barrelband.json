@@ -17,6 +17,7 @@
 	"textures": {
 		"all": { "base": "game:block/metal/sheet/{metal}1" }
     },
+	lightAbsorption: 0,
 	sideopaque: {
 		all: false
 	},
