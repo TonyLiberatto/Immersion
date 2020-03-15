@@ -15,14 +15,8 @@
         }
     },
     "variantgroups": [
-        {
-            "code": "wood",
-            "states": [
-                "aged", "palm"
-            ],
-            "loadFromProperties": "block/wood"
-        },
-        {
+        { "code": "wood","states": [ "aged" ], "loadFromProperties": "block/wood"  },
+		{
             "code": "style",
             "states": [
                 "bark",

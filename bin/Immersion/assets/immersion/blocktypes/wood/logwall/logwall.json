@@ -24,11 +24,11 @@
 	creativeinventory: { "general": ["*-up-north"], "immersionblocks": ["*-up-north"] },
 		variantgroups: [
 		{ code: "type", states: ["wall", "corner", "jut"]},
-		{ code: "wood", loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code: "vertical", states: ["up", "left", "down", "right"] },
 		{ code: "horizontal", loadFromProperties: "abstract/horizontalorientation" }
-	],
+	],	
 	shapebytype: {
 		"*-up-north": { base: "block/wood/logwall/{type}", rotateY: 0, rotateZ: 0 },
 		"*-up-west": { base: "block/wood/logwall/{type}", rotateY: 90, rotateX: 0 },		

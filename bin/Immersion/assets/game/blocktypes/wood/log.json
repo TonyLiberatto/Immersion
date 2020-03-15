@@ -14,7 +14,7 @@
 	},
 	variantgroups: [
 		{ code: "type", states: ["grown", "placed"] },
-		{ code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["aged", "birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "rotation", states: ["ud", "ns", "we"] },
 	],
 	creativeinventory: { "general": ["log-placed-*-ud"], "flora": ["log-placed-*-ud"], "construction": ["log-placed-*-ud"] },

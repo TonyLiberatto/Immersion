@@ -12,7 +12,7 @@
 		},
 	},
 	variantgroups: [
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "type", states: ["n", "w"] },
 		{ code: "state", states: ["opened", "closed"]},
 		{ code: "knobOrientation", states: ["left", "right"] },

@@ -11,7 +11,7 @@
 	},
 	variantgroups: [
 		{ code: "type", states: ["grown", "placed"] },
-		{ loadFromProperties: "block/wood" }
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 	],
 	creativeinventory: { "general": ["leavesbranchy-placed-*"], "flora": ["leavesbranchy-placed-*"] },
 	shape: { base: "block/basic/leavesbranchy" },

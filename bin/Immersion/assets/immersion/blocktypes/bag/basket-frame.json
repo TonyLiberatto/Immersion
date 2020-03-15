@@ -1,7 +1,7 @@
 {
 	code: "basket-frame",
 	variantgroups: [		
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code: "cordage", states: [ "reeds"]},
 	],	

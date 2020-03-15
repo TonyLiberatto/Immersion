@@ -3,7 +3,7 @@
 	behaviors: [{name: "Pillar"}],
 	variantgroups: [
 		{ code: "size", states: ["very-thin", "thin", "medium"] },
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code: "cordage", states: [ "leatherstrips", "reeds","sinew", "sisal"]},
 		{ code: "rotation", states: ["ud", "ns", "we"] },

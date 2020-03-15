@@ -45,6 +45,9 @@
         { code: "wood", states: ["aged"], loadFromProperties: "block/wood" },
         { "code": "rotation", "loadFromProperties": "abstract/horizontalorientation" }
     ],
+	skipVariants: [
+	"*-palm-*"
+	],
     "textures": {
         "all": { "base": "game:block/wood/choppingblock/{wood}" }
     },

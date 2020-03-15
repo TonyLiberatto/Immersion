@@ -16,7 +16,7 @@
 	},
 	variantgroups: [
 		{ code: "type", states: ["support", "midsection"]},
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code:"orientation", states: ["ns", "we"] },
 	],
 	creativeinventory: { "general": ["primitivefence-*-we"], "immersiondeco": ["primitivefence-*-we"] },	

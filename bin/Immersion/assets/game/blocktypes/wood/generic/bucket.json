@@ -16,7 +16,7 @@
 		]
 	},
 	"variantgroups": [
-		{ "code": "wood", "states": ["aged", "bamboo-green", "bamboo-brown", "palm"], "loadFromProperties": "block/wood" }
+		{ "code": "wood", "states": ["aged", "bamboo-green", "bamboo-brown"], "loadFromProperties": "block/wood" }
 	],
 	"creativeinventory": {
 		"general": [

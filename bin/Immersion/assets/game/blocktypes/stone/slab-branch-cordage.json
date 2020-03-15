@@ -9,7 +9,7 @@
 	},
 	variantgroups: [
 		{ code:"rock", states: ["granite", "andesite", "basalt", "peridotite"] },
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["debarked"]},
 		{ code: "cordage", states: ["leatherstrips", "sinew", "rope"] },
 	],

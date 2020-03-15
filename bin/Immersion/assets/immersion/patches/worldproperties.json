@@ -1,0 +1,3 @@
+[
+  { "op": "add", "path": "/variants/6", "value": { "Code": "palm" }, "file": "game:worldproperties/block/wood.json" }
+]

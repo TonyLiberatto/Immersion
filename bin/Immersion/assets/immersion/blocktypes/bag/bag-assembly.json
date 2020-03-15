@@ -1,10 +1,10 @@
 {
 	code: "bag-assembly",
 	variantgroups: [		
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code: "cordage", states: ["leatherstrips", "reeds", "sinew", "sisal", ]},
-	],	
+	],		
 	maxstacksize: 1,
 	drawtype: "json",
 	shape: { base: "block/bag/bag-assembly" },

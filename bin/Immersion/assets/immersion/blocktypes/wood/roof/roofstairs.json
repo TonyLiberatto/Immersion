@@ -14,7 +14,7 @@
 	creativeinventory: { "general": ["roofstairs-slope-*-*-north"], "immersionblocks": ["roofstairs-slope-*-*-north"] },
 		variantgroups: [
 		{ code: "type", states: [ "corner","cornerin", "cornertop","slope", "slopewall", "top", "topwall", "topend" ]},
-		{ code: "wood", loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["bark", "debarked"]},
 		{ code: "horizontal", loadFromProperties: "abstract/horizontalorientation" },
 	],

@@ -1,7 +1,7 @@
 {
 	code: "pestle",
 	variantgroups: [
-		{ loadFromProperties: "block/wood" }
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 	],
 	creativeinventory: { "general": [""], "immersionblocks": [""] },
 	shape: { base: "immersion:block/wood/mortarandpestle/top" },

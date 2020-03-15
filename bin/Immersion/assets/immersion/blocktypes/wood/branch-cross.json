@@ -2,7 +2,7 @@
 	code: "branch-cross",
 	variantgroups: [
 		{ code: "size", states: ["very-thin"] },
-		{ loadFromProperties: "block/wood" },
+		{ code: "wood", states: ["birch", "oak", "maple", "pine", "acacia", "kapok" ]},
 		{ code: "style", states: ["bark", "debarked"]},
 	],
 	creativeinventory: { "general": [""],  "construction": [""], "immersiondeco": [""] },

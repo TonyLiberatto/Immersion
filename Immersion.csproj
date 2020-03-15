@@ -393,6 +393,7 @@
     <None Include="bin\Immersion\assets\game\blocktypes\tools\spear.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\tools\sword.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wax\bunchocandles.json" />
+    <None Include="bin\Immersion\assets\game\blocktypes\wax\wildbeehive-inlog.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\choppingblock.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\dryingtray.json" />
     <None Include="bin\Immersion\assets\game\blocktypes\wood\dryingtraysides.json" />
@@ -424,7 +425,6 @@
     <None Include="bin\Immersion\assets\game\config\immersionproperties\customingots.json" />
     <None Include="bin\Immersion\assets\game\config\orthoshaderlist.json" />
     <None Include="bin\Immersion\assets\game\config\vesseldrops.json" />
-    <None Include="bin\Immersion\assets\game\crucible-color.json" />
     <None Include="bin\Immersion\assets\game\entities\air\butterfly.json" />
     <None Include="bin\Immersion\assets\game\entities\arrow-primitive.json" />
     <None Include="bin\Immersion\assets\game\entities\humanoid\trader-artisan.json" />
@@ -1468,6 +1468,7 @@
     <None Include="bin\Immersion\assets\immersion\blocktypes\carcass\dead-racoon.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\barrel\barrel-sides-bamboo.json" />
     <None Include="bin\Immersion\assets\immersion\blocktypes\wood\barrel\barrel-sides.json" />
+    <None Include="bin\Immersion\assets\immersion\patches\worldproperties.json" />
     <None Include="bin\Immersion\assets\immersion\shapes\block\wood\chest\normal.json" />
     <None Include="Changelog.md" />
     <None Include="bin\Immersion\assets\game\shapes\item\tool\bone-adze.json" />
@@ -2446,6 +2447,8 @@
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\oak.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\choppingblock\pine.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\debarked\palm.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\fence\palm\horizontal.png" />
+    <Content Include="bin\Immersion\assets\game\textures\block\wood\fence\palm\vertical.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\acacia2.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\kapok2.png" />
     <Content Include="bin\Immersion\assets\game\textures\block\wood\leaves\pine2.png" />
@@ -2880,6 +2883,8 @@
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\maple.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\oak-h.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\oak.png" />
+    <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\palm-h.png" />
+    <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\palm.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\pine-h.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\bark\pine.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\chest\acacia\Corners.png" />
@@ -2932,6 +2937,7 @@
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\debarked\kapok.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\debarked\maple.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\debarked\oak.png" />
+    <Content Include="bin\Immersion\assets\immersion\textures\block\wood\debarked\palm.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\debarked\pine.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\doors\acacia\bottom_left.png" />
     <Content Include="bin\Immersion\assets\immersion\textures\block\wood\doors\acacia\bottom_right.png" />
