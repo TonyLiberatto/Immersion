@@ -3871,6 +3871,8 @@
 	"itemdesc-arrow-fire*": "Adds +2 damage. Future recipe should include adding linen or other fiber. Could include pitch if liquids like that are added.",
 
 	"item-arrow-poison*": "Poisoned Arrow crafted from any arrow and mushroom",
-	"itemdesc-arrow-poison*": "Adds +2 damage. Future recipe should include cooking with a herb to get poison."
+	"itemdesc-arrow-poison*": "Adds +2 damage. Future recipe should include cooking with a herb to get poison.",
+	
+	"item-plank-palm": "Board (Palm)",
 
 }

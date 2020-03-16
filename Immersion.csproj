@@ -198,7 +198,6 @@
     <Folder Include="bin\Immersion\assets\game\recipes\grid\tool\wood\leatherstrip\" />
     <Folder Include="bin\Immersion\assets\game\recipes\grid\tool\wood\sinew\" />
     <Folder Include="bin\Immersion\assets\game\recipes\grid\tool\wood\sisal\" />
-    <Folder Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\" />
     <Folder Include="bin\Immersion\assets\game\recipes\inworld\resources\cordage\" />
     <Folder Include="bin\Immersion\assets\game\shapes\block\clay\flowerpot\" />
     <Folder Include="bin\Immersion\assets\game\sounds\block\" />
@@ -610,9 +609,12 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\basket-frame.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\basket.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\barrel\barrel.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\barrel\barrel-sides.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bed.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bonfire.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bowl-fat.json" />
+    <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\medium\branch-medium.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-ns.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-ud.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\branch-cordage\thin\branch-thin-acacia-we.json" />

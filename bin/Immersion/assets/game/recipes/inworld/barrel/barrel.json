@@ -1,0 +1,26 @@
+[  
+ {
+    "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["aged"], "loadFromProperties": "block/wood" },
+			{ "Code": "metal", "states": ["copper", "blackbronze", "tinbronze", "bismuthbronze", ] },            
+        ],
+    "Takes": {
+		"Code": "immersion:barrel-sides-{wood}",
+        "Type": "Block",		
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "game:barrelband-{metal}",
+        "Type": "item",
+		"StackSize": 2
+    },
+    "Makes": [{
+        "Code": "game:barrel-{wood}-{metal}",
+        "Type": "Block",        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },  
+]
