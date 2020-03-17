@@ -1,6 +1,6 @@
 **Changes from 1.2.0 to 1.2.x**
 
-
+* fixed chest intermediate textures
 * fix the lag and incorrectness with the progressbar 
 * added palmwood creation for Buckets, barrels, chests, plank, planks
 * added auto group creation suplayer to mod group creation allows for land clamining permissions to be set to use for that group 
@@ -10,6 +10,10 @@
 * added missing textures for palms
 * change wolf fear of bonfire
 * change barrel textures to include metal bands for wood and leather strips for bamboo
+* added palm to world properties wood
+* created in world recipes for barrels
+* added handbook entrys for barrel creation 
+* added block names for barrels and barrel rings 
 
 **Changes from version 1.0.7 to 1.2.0**
 
