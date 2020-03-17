@@ -13,7 +13,8 @@
 * added palm to world properties wood
 * created in world recipes for barrels
 * added handbook entrys for barrel creation 
-* added block names for barrels and barrel rings 
+* added block names for barrels and barrel band
+* added block names for barrel band molds
 
 **Changes from version 1.0.7 to 1.2.0**
 

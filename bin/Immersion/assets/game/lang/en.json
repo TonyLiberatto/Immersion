@@ -120,7 +120,8 @@
 	"block-barrelband-copper": "Copper barrel band",
 	"block-barrelband-blackbronze": "Blackbronze barrel band",
 	
-	
+	"block-handbooktitle-barrelband-*": " Used",
+	"block-handbooktext-barrelband-*": "In Immersive barrel crafting",
 	"blockdesc-barrel-*": "Barrel",
 	"block-handbooktitle-barrel-*": "Created by",
 	"block-handbooktext-barrel-*": "Place a plank pannel (sneak+RMB), add 12 boards, (sneak+RMB) add two barrel rings." ,
@@ -467,6 +468,16 @@
 	"block-potbrown-burned-cooked": "Brown Cooking Pot with Meal",
 	"block-potfire-burned-cooked": "Fire Cooking Pot with Meal",
 	"block-potred-burned-cooked": "Red Cooking Pot with Meal",
+	
+	"block-barrelbandmold-red-raw": "Red Barrel Band Mold (raw) ",
+	"block-barrelbandmold-blue-raw": "Blue Barrel Band Mold (raw) ",
+	"block-barrelbandmold-brown-raw": "Brown Barrel Band Mold (raw) ",
+	"block-barrelbandmold-fire-raw": "Fire Barrel Band Mold (raw) ",
+	"block-barrelbandmold-red-burned": "Red Barrel Band Mold ",
+	"block-barrelbandmold-blue-burned": "Fire Barrel Band Mold ",
+	"block-barrelbandmold-fire-burned": "Blue Barrel Band Mold ",
+	"block-barrelbandmold-brown-burned": "Brown Barrel Band Mold ",
+	"blockdesc-barrelbandmold-*-burned": "Barrel Band Mold ",
 
 	"block-flowerpotblue-raw": "Blue Flowerpot (Raw)",
 	"block-flowerpotblue-empty": "Blue Flowerpot (Empty)",
