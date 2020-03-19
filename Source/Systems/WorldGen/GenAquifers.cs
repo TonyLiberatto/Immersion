@@ -55,7 +55,6 @@ namespace Immersion
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
             IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["rivermap"]);
-            //ushort[] heightMap = chunks[0].MapChunk.RainHeightMap;
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
             int rdx = chunkX % regionChunkSize;
@@ -99,13 +98,15 @@ namespace Immersion
 
                     while (dY >= minY)
                     {
-                        if (chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] == 0)
+                        int chunkIndex = dY / chunksize2, blockIndex = (chunksize2 * (dY % chunksize2) + z) * chunksize2 + x;
+
+                        if (chunks[chunkIndex].Blocks[blockIndex] == 0)
                         {
-                            chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = rockID;
+                            chunks[chunkIndex].Blocks[blockIndex] = rockID;
                         }
                         if (riverRel < 0.45)
                         {
-                            chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = config.LakeWaterBlockId;
+                            chunks[chunkIndex].Blocks[blockIndex] = config.LakeWaterBlockId;
                         }
 
                         dY--;

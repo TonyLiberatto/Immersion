@@ -15,6 +15,7 @@
 	blockmaterial: "liquid",
 	liquidCode: "seawater",
 	randomizeAxes: "xz",
+	randomizeRotations: true,
 	textures: {
 		weed: { base: "block/plant/seaweed/{part}*" },
 		north: { base: "block/liquid/seawater" },
