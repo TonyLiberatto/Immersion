@@ -66,7 +66,7 @@ namespace Immersion
             string ore = "";
             if (pos.GetBlock(api).BlockMaterial == EnumBlockMaterial.Ore)
             {
-                ore = pos.GetBlock(api).Variant["type"];
+                ore = Lang.Get(pos.GetBlock(api).Variant["type"]);
                 ore = char.ToUpper(ore[0]) + ore.Substring(1);
 
                 return Lang.Get("immersion:propick-found", ore);
@@ -83,11 +83,10 @@ namespace Immersion
 
             int most = Ores.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).First();
 
-            Ores.Any(o =>
+            foreach (var o in Ores)
             {
                 if (o == most) occurance++;
-                return false;
-            });
+            }
 
             ore = Lang.Get(api.World.GetBlock(most).Variant["type"]);
             ore = char.ToUpper(ore[0]) + ore.Substring(1);
