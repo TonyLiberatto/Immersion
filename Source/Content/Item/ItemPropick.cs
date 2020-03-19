@@ -99,7 +99,7 @@ namespace Immersion
             {
                 amount = "a medium sample";
             }
-            else if (occurance < 40)
+            else if (occurance < 80)
             {
                 amount = "a large sample";
             }
