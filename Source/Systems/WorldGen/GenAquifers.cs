@@ -99,7 +99,15 @@ namespace Immersion
 
                     while (dY >= minY)
                     {
-                        chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = config.LakeWaterBlockId;
+                        if (chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] == 0)
+                        {
+                            chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = rockID;
+                        }
+                        if (riverRel < 0.45)
+                        {
+                            chunks[dY / chunksize2].Blocks[(chunksize2 * (dY % chunksize2) + z) * chunksize2 + x] = config.LakeWaterBlockId;
+                        }
+
                         dY--;
                     }
                 }
