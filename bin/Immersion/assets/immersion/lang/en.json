@@ -1877,6 +1877,12 @@
   "block-jar-medium-red-burned": "Medium Red Jar (Fired)",
   "block-jar-large-red-burned": "Large Red Jar (Fired)",
   "block-jar-largest-red-burned": "Largest Red Jar (Fired)",
-  "blockdesc-jar-*": "These are decorative ONLY. Storage function is not yet implemented."
-
+  "blockdesc-jar-*": "These are decorative ONLY. Storage function is not yet implemented.",
+  "immersion:propick-nothing": "Found nothing of interest.",
+  "immersion:propick-found": "Found {0}.",
+  "immersion:propick-traces": "Found traces of {0}.",
+  "immersion:propick-small": "Found a small sample of {0}.",
+  "immersion:propick-medium": "Found a medium sample of {0}.",
+  "immersion:propick-large": "Found a large sample of {0}.",
+  "immersion:propick-verylarge": "Found a very large sample of {0}."
 }

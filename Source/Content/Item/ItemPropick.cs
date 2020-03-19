@@ -61,13 +61,15 @@ namespace Immersion
         public string GetHighestOre(BlockPos pos)
         {
             List<int> Ores = new List<int>();
-            string amount = "a very large sample";
+            string amount;
             int occurance = 0;
             string ore = "";
             if (pos.GetBlock(api).BlockMaterial == EnumBlockMaterial.Ore)
             {
                 ore = pos.GetBlock(api).Variant["type"];
-                return "Found " + char.ToUpper(ore[0]) + ore.Substring(1) + ".";
+                ore = char.ToUpper(ore[0]) + ore.Substring(1);
+
+                return Lang.Get("immersion:propick-found", ore);
             }
 
             api.World.BlockAccessor.WalkBlocks(pos.AddCopy(12, 12, 12), pos.AddCopy(-12, -12, -12), (b, bp) =>
@@ -77,7 +79,7 @@ namespace Immersion
                     Ores.Add(b.Id);
                 }
             });
-            if (Ores.Count() == 0) return "Found nothing of interest.";
+            if (Ores.Count() == 0) return Lang.Get("immersion:propick-nothing");
 
             int most = Ores.GroupBy(i => i).OrderByDescending(grp => grp.Count()).Select(grp => grp.Key).First();
 
@@ -87,25 +89,31 @@ namespace Immersion
                 return false;
             });
 
+            ore = Lang.Get(api.World.GetBlock(most).Variant["type"]);
+            ore = char.ToUpper(ore[0]) + ore.Substring(1);
+
             if (occurance < 10)
             {
-                amount = "traces";
+                amount = Lang.Get("immersion:propick-traces", ore);
             }
             else if (occurance < 20)
             {
-                amount = "a small sample";
+                amount = Lang.Get("immersion:propick-small", ore);
             }
             else if (occurance < 40)
             {
-                amount = "a medium sample";
+                amount = Lang.Get("immersion:propick-medium", ore);
             }
             else if (occurance < 80)
             {
-                amount = "a large sample";
+                amount = Lang.Get("immersion:propick-large", ore);
             }
-
-            ore = api.World.GetBlock(most).Variant["type"];
-            return string.Format("Found {0} of " + char.ToUpper(ore[0]) + ore.Substring(1) + ".", amount);
+            else
+            {
+                amount = Lang.Get("immersion:propick-verylarge", ore);
+            }
+            
+            return amount;
         }
     }
 }
