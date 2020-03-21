@@ -161,7 +161,6 @@
     <Compile Include="Source\Content\Item\ItemAdze.cs" />
     <Compile Include="Source\Content\Item\ItemGiantReedsRoot.cs" />
     <Compile Include="Source\Content\Item\ItemMultiPropFood.cs" />
-    <Compile Include="Source\Content\Item\ItemPropick.cs" />
     <Compile Include="Source\Content\Item\ItemSickle.cs" />
     <Compile Include="Source\Content\Item\ItemSlaughteringAxe.cs" />
     <Compile Include="Source\Content\Item\ItemSwapBlocks.cs" />

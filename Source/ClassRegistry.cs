@@ -61,7 +61,6 @@ namespace Immersion
             Api.RegisterItemClass("ItemAdze", typeof(ItemAdze));
             Api.RegisterItemClass("ItemSlaughteringAxe", typeof(ItemSlaughteringAxe));
             Api.RegisterItemClass("ItemFoodMultiProp", typeof(ItemMultiPropFood));
-            Api.RegisterItemClass("ItemProspectingPick", typeof(ItemPropick));
             Api.RegisterItemClass("ItemIngot", typeof(ItemIngotOverride));
         }
 
