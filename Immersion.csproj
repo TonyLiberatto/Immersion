@@ -173,6 +173,7 @@
     <Compile Include="Source\Content\Utility\HandAnimations.cs" />
     <Compile Include="Source\Content\Utility\LevenshteinDistance.cs" />
     <Compile Include="Source\Content\Utility\Missing.cs" />
+    <Compile Include="Source\Systems\WorldGen\GenRivers.cs" />
     <Compile Include="Source\Systems\WorldGen\GenDeepOreBits.cs" />
     <Compile Include="Source\Systems\WorldGen\GenAquifers.cs" />
     <Compile Include="Source\Systems\WorldGen\ModifyLakes.cs" />
