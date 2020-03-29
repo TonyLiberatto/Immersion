@@ -1,4 +1,4 @@
-**Changes from 1.2.0 to 1.2.x**
+**Changes from 1.2.0 to 1.2.1**
 
 * fixed chest intermediate textures
 * fix the lag and incorrectness with the progressbar 
@@ -15,6 +15,12 @@
 * added handbook entrys for barrel creation 
 * added block names for barrels and barrel band
 * added block names for barrel band molds
+* randomized seaweed rotation 
+* fixed aquifer edgees that intersect with air
+* remove propick override (now a vanilla feature)
+* fixed the chests recipes, some broken blocks in the schematics
+* fixing the burden basket recipe
+* added change to handbook for burden basket and backpack  
 
 **Changes from version 1.0.7 to 1.2.0**
 
