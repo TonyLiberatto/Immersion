@@ -10,7 +10,7 @@
 	attributes: {
 		handbook: {
 			extraSections: [
-				{ title: "handbook-item-sources", text: "Place a Very-thin debarked branch down, right click with leather strips, right click again with 4 of the same very thin debarked branch to make the structure. Now right click with 4 hides to make the Backpack." }
+				{ title: "handbook-item-sources", text: "Place a Very-thin debarked branch down, right click with leather strips, right click again with 4 of the same very thin debarked branch to make the structure. Now right click with 4 medium raw hides to make the Backpack." }
 			]
 		},
 		backpack: {

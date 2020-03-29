@@ -603,8 +603,6 @@
     <None Include="bin\Immersion\assets\game\recipes\grid\well.json" />
     <None Include="bin\Immersion\assets\game\recipes\grid\woodbucket.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\backpack-burdenbasket.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly-leatherstrips.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly-sisal.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\bag-assembly.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\basket-frame.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\bags\basket.json" />

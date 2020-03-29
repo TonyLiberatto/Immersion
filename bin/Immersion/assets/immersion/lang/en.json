@@ -228,16 +228,16 @@
   "block-branch-cordage-kapok-debarked-*": "Kapok Debarked Very Thin Branch with Cordage",
   "block-branch-cordage-maple-debarked-*": "Maple Debarked Very Thin Branch with Cordage",
   
-  "blockdesc-branch-cordage-*-bark-leatherstrips": "(Sneak + RMB) with 4 Very Thin Branches of the same type to make a Bag Assembly",
-  "blockdesc-branch-cordage-*-bark-sisal": "(Sneak + RMB) with 4 Very Thin Branches (of the same type) to make a Bag Assembly",
-  "blockdesc-branch-cordage-*-bark-reeds": "(Sneak + RMB) with 4 Very Thin Branches (of the same type) to make a Basket Frame",
+  "blockdesc-branch-cordage-*-debarked-leatherstrips": "(Sneak + RMB) with 4 Very Thin Branches of the same type to make a Bag Assembly",
+  "blockdesc-branch-cordage-*-debarked-sisal": "(Sneak + RMB) with 4 Very Thin Branches (of the same type) to make a Bag Assembly",
+  "blockdesc-branch-cordage-*-debarked-reeds": "(Sneak + RMB) with 4 Very Thin Branches (of the same type) to make a Basket Frame",
   
   "block-basket-frame-*": "Basket frame",
   "blockdesc-basket-frame-*": "(Sneak + RMB) with 4 Reeds to make a Basket",
 
   "block-bag-assembly-*": "Bag frame",
-  "blockdesc-bag-assembly-*-bark-leatherstrips": "(Sneak + RMB) with 4 hides to make a Backpack",
-  "blockdesc-bag-assembly-*-bark-sisal": "(Sneak + RMB) with a Large Sisal Rug to make a Burden Basket",
+  "blockdesc-bag-assembly-*-debarked-leatherstrips": "(Sneak + RMB) with 4 medium raw hides to make a Backpack",
+  "blockdesc-bag-assembly-*-debarked-sisal": "(Sneak + RMB) with a Large Sisal Rug to make a Burden Basket",
   
   "block-burdenbasket": "Burden Basket",
   "blockdesc-burdenbasket": "Immersion portable storage, provides 10 inventory slots when equipped.",

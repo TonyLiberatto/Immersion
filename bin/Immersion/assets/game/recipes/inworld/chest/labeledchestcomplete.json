@@ -1,8 +1,11 @@
 [ 
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["bamboo-green", "bamboo-brown"]  },            
+        ],
     "Takes": {
-		"Code": "immersion:chestcomplete-bamboo-brown-east",
+		"Code": "immersion:chestcomplete-{wood}-east",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -12,28 +15,7 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:labeledchestcomplete-bamboo-brown-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },  
-  {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-bamboo-green-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "Block",
-		"StackSize": 1
-    },
-    "Makes": [{
-        "Code": "immersion:labeledchestcomplete-bamboo-green-east",
+        "Code": "immersion:labeledchestcomplete-{wood}-east",
         "Type": "Block",		
         "StackSize": 1
     }],
@@ -43,8 +25,11 @@
  },
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["aged", "acacia", "birch", "kapok", "maple", "oak", "pine"]}       
+        ],
     "Takes": {
-		"Code": "immersion:chestcomplete-aged-east",
+		"Code": "immersion:chestcomplete-{wood}-east",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -54,138 +39,12 @@
 		"StackSize": 1
     },
     "Makes": [{
-        "Code": "immersion:labeledchestcomplete-aged-east",
+        "Code": "immersion:labeledchestcomplete-{wood}-east",
         "Type": "Block",		
         "StackSize": 1
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
- },  
-  {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-acacia-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "Block",
-		"StackSize": 1
-    },
-    "Makes": [{
-        "Code": "immersion:labeledchestcomplete-acacia-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-birch-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "Block",
-		"StackSize": 1
-    },
-    "Makes": [{
-        "Code": "immersion:labeledchestcomplete-birch-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
-{
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-kapok-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "Block",
-		"StackSize": 1
-    },
-    "Makes": [{
-        "Code": "immersion:labeledchestcomplete-kapok-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-maple-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "Block",
-		"StackSize": 1
-    },
-    "Makes": [{
-        "Code": "immersion:labeledchestcomplete-maple-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-oaks-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "block",
-		"StackSize": 1
-    },
-    "Makes": [{
-       "Code": "immersion:labeledchestcomplete-oaks-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:chestcomplete-pine-east",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:sisalrug-small-ground-north",
-        "Type": "Block",
-		"StackSize": 1
-    },
-    "Makes": [{
-        "Code": "immersion:labeledchestcomplete-pine-east",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- }, 
+ },   
 ]

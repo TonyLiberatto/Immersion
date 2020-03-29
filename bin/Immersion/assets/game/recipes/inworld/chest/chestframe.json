@@ -1,8 +1,11 @@
 [ 
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["bamboo-green", "bamboo-brown"]  },            
+        ],
     "Takes": {
-		"Code": "immersion:panel-bamboo-brown-*",
+		"Code": "immersion:panel-{wood}-*",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -12,7 +15,7 @@
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:chestframe-bamboo-brown-east",
+        "Code": "immersion:chestframe-{wood}-east",
         "Type": "Block",        
     }],
     "IsTool": false,
@@ -21,8 +24,11 @@
  },
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["aged", "acacia", "birch", "kapok", "maple", "oak", "pine"]}      
+        ],
     "Takes": {
-		"Code": "immersion:panel-bamboo-green-*",
+		"Code": "immersion:panel-{wood}-debarked-*",
         "Type": "Block",		
 		"Remove": true	
     },
@@ -32,151 +38,11 @@
 		"StackSize": 4
     },
     "Makes": [{
-        "Code": "immersion:chestframe-bamboo-green-east",
+        "Code": "immersion:chestframe-{wood}-east",
         "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-aged-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "Block",
-		"StackSize": 4
-    },
-    "Makes": [{
-        "Code": "immersion:chestframe-aged-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },  
-  {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-acacia-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "Block",
-		"StackSize": 4
-    },
-    "Makes": [{
-        "Code": "immersion:chestframe-acacia-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-birch-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "Block",
-		"StackSize": 4
-    },
-    "Makes": [{
-        "Code": "immersion:chestframe-birch-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
-{
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-kapok-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "Block",
-		"StackSize": 4
-    },
-    "Makes": [{
-        "Code": "immersion:chestframe-kapok-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-maple-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "Block",
-		"StackSize": 4
-    },
-    "Makes": [{
-        "Code": "immersion:chestframe-maple-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-oaks-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "block",
-		"StackSize": 4
-    },
-    "Makes": [{
-       "Code": "immersion:chestframe-oaks-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "immersion:panel-pine-debarked-*",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "immersion:branch-very-thin-*",
-        "Type": "Block",
-		"StackSize": 4
-    },
-    "Makes": [{
-        "Code": "immersion:chestframe-pine-east",
-        "Type": "Block",        
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- }, 
+ }  
 ]

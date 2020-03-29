@@ -19,8 +19,7 @@
 	sidesolid: { all: false },
 	sideopaque: { all: false },
 	lightAbsorption: 0,
-	collisionbox: { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 0.5, z2: 0.65 },
-	selectionbox: { x1: 0.35, y1: 0, z1: 0.35, x2: 0.65, y2: 0.5, z2: 0.65 },
+	collisionSelectionbox: { x1: 0.25, y1: 0, z1: 0.35, x2: 0.75, y2: 0.75, z2: 0.65 },	
 	guiTransform: {
 		translation: { x: -1, y: 3, z: 0 },
 		rotation: { x: -14, y: 145, z: 1 },

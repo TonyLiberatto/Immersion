@@ -28,7 +28,7 @@
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:sisalrug-large-ground-east",
+        "Code": "immersion:sisalrug-large-ground-*",
         "Type": "Block",
 		"StackSize": 1		
     },

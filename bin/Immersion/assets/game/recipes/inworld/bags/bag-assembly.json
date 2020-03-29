@@ -1,20 +1,45 @@
-[
+[  
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["aged", "acacia", "birch", "kapok", "maple", "oak", "pine"]}       
+        ],
     "Takes": {
-		"Code": "immersion:bag-assembly-bark-leatherstrips",
+		"Code": "immersion:branch-cordage-very-thin-{wood}-debarked-leatherstrips-ud",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:hide-raw-medium",
+        "Code": "immersion:branch-very-thin-{wood}-debarked-*",
         "Type": "Block",
 		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:backpack",
+        "Code": "immersion:bag-assembly-{wood}-debarked-leatherstrips",
+        "Type": "Block",        
+    }],
+    "IsTool": false,
+    "CraftSound": "sounds/block/planks",
+    "Disabled": false
+ },
+  {
+    "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["aged", "acacia", "birch", "kapok", "maple", "oak", "pine"]}       
+        ],
+    "Takes": {
+		"Code": "immersion:branch-cordage-very-thin-{wood}-debarked-sisal-ud",
+        "Type": "Block",        
+		"Remove": true	
+    },
+    "Tool": {
+        "Code": "immersion:branch-very-thin-{wood}-debarked-*",
         "Type": "Block",
-        "StackSize": 1
+		"StackSize": 4		
+    },
+    "Makes": [{
+        "Code": "immersion:bag-assembly-{wood}-debarked-sisal",
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -22,20 +47,22 @@
  },
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "wood", "states": ["aged", "acacia", "birch", "kapok", "maple", "oak", "pine"]}       
+        ],
     "Takes": {
-		"Code": "immersion:bag-assembly-bark-sisal",
+		"Code": "immersion:branch-cordage-very-thin-{wood}-debarked-sinew-ud",
         "Type": "Block",        
 		"Remove": true	
     },
     "Tool": {
-        "Code": "immersion:sisalrug-large-ground-east",
+        "Code": "immersion:branch-very-thin-{wood}-debarked-*",
         "Type": "Block",
-		"StackSize": 1		
+		"StackSize": 4		
     },
     "Makes": [{
-        "Code": "immersion:burdenbasket",
-        "Type": "Block",
-        "StackSize": 1
+        "Code": "immersion:bag-assembly-{wood}-debarked-sinew",
+        "Type": "Block",        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
