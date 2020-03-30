@@ -88,26 +88,34 @@ namespace Immersion
                     int dy;
                     int chunkIndex, blockIndex;
                     int rockBlockId = chunks[0].MapChunk.TopRockIdMap[z * chunksize + x];
-                    int erosionIntensity = (y - TerraGenConfig.seaLevel) + 1 + (int)(4 * n);
+                    int distanceFromSeaLevel = (y - TerraGenConfig.seaLevel);
+                    int erosionIntensity = distanceFromSeaLevel + 1 + (int)(4 * n);
                     int lakeBed = lakebedLayerConfig.BlockCodeByMin[0].GetBlockForMotherRock(rockBlockId);
 
-                    if (riverRel < 0.55 || riverRel > 0.6)
+                    float riverMin = 0.55f, riverMax = 0.6f;
+                    float shoreMin = 0.54f, shoreMax = 0.61f;
+
+                    if (riverRel < riverMin || riverRel > riverMax)
                     {
-                        if (riverRel > 0.54 && riverRel < 0.61)
+                        /*
+                        if (riverRel > shoreMin && riverRel < shoreMax)
                         {
+                            float shore = ((riverRel - shoreMin) / (shoreMax - shoreMin));
+                            //shore = shore < 0.5f ? shore : 1.0f - shore;
+
                             //should be a less sharp U shape
-                            for (dy = y - erosionIntensity; dy <= y + 1; dy++)
+                            for (dy = TerraGenConfig.seaLevel - 1; dy <= y + 1; dy++)
                             {
                                 chunkIndex = dy / chunksize;
                                 blockIndex = (chunksize * (dy % chunksize) + z) * chunksize + x;
                                 if (chunks[chunkIndex].Blocks[blockIndex] == config.waterBlockId && dy < TerraGenConfig.seaLevel) continue;
 
                                 chunks[chunkIndex].Blocks[blockIndex] = 
-                                    dy >= TerraGenConfig.seaLevel ? 0 :
-                                    dy < TerraGenConfig.seaLevel - (int)(4 * n) ? rockBlockId :
+                                    dy >= (TerraGenConfig.seaLevel - 1) + (distanceFromSeaLevel * shore) ? 0 :
                                     lakeBed;
                             }
                         }
+                        */
                         continue;
                     }
 

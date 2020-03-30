@@ -279,7 +279,7 @@
 			runtime: {
 				group: "hostile",
 				tryOnlySurface: true,
-				chance: 0.003,
+				chance: 0.0006,
 				maxQuantity: 4,
 				"__comment": "Make them spawn away from artifical light so they don't spawn inside farmland",
 				maxLightLevel: 8,

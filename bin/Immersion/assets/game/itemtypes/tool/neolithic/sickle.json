@@ -9,7 +9,7 @@
 		{ code: "cordage", states: ["rope", "sinew", "leatherstrips", ] },
 	],
 	attributes: {
-		codePrefixes: ["crop", "tallgrass", "frostedtallgrass"],
+		codePrefixes: ["crop", "tallgrass", "frostedtallgrass", "reeds", "giantreed", "flower", "herb", "lichen", "tallfern", "waterlilly", "wildvine", "mushroom", "tallplant"],
 		handbook: { 
 			groupBy: ["sicle-*"],
 			extraSections: [
