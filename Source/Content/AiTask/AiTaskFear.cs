@@ -74,7 +74,7 @@ namespace Immersion
 
         public override bool ContinueExecute(float dt)
         {
-            pathTraverser.NavigateTo(goTo, moveSpeed, OnGoalReached, OnStuck);
+            pathTraverser.NavigateTo(goTo ?? entity.Pos.XYZ, moveSpeed, OnGoalReached, OnStuck);
             return ShouldExecute();
         }
 

@@ -19,27 +19,36 @@ namespace Immersion
         int noiseSizeRiver;
         public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<ModifyLakes>().config; }
         NormalizedSimplexNoise noise;
+        BlockLayer soilLayer;
         LakeBedLayerProperties lakebedLayerConfig;
         ImmersionGlobalConfig immersionConfig;
+        BlockLayerConfig blockLayerConfig;
 
         public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
         public override double ExecuteOrder() => 0.45;
 
-        public override bool ShouldLoad(EnumAppSide forSide) => false;// forSide == EnumAppSide.Server;
+        public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
 
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
             api.Event.MapRegionGeneration(OnMapRegionGen, "standard");
             api.Event.InitWorldGenerator(InitWorldGen, "standard");
-            api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
+            api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.Terrain, "standard");
         }
 
         private void OnMapRegionGen(IMapRegion mapRegion, int regionX, int regionZ)
         {
+            var data = riverGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1);
+            /*
+            for (int i = 0; i < data.Length; i++)
+            {
+                data[i] = GameMath.Clamp(data[i] / 2, 0, 255);
+            }
+            */
             mapRegion.ModData["rivermap"] = JsonUtil.ToBytes(
                 new IntMap() { 
-                    Data = riverGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1),
+                    Data = data,
                     BottomRightPadding = 1,
                     Size = noiseSizeRiver + 1
                 });
@@ -54,7 +63,10 @@ namespace Immersion
 
             noiseSizeRiver = api.WorldManager.RegionSize / 32;
             noise = NormalizedSimplexNoise.FromDefaultOctaves(2, 0.1, 1.0, api.WorldManager.Seed + 465814);
-            lakebedLayerConfig = api.ModLoader.GetModSystem<GenPonds>().GetField<GenPonds, LakeBedLayerProperties>("lakebedLayerConfig");
+            blockLayerConfig = BlockLayerConfig.GetInstance(api);
+            lakebedLayerConfig = blockLayerConfig.LakeBedLayer;
+            soilLayer = blockLayerConfig.Blocklayers.OrderByDescending(a => a.ID == "l1soilwithgrass").First();
+
             immersionConfig = api.ModLoader.GetModSystem<ModifyLakes>().config;
         }
 
@@ -94,30 +106,37 @@ namespace Immersion
 
                     float riverMin = 0.55f, riverMax = 0.6f;
                     float shoreMin = 0.54f, shoreMax = 0.61f;
+                    //if (riverRel < 0.5) continue;
+                    bool left = riverRel < riverMin, right = riverRel > riverMax;
 
-                    if (riverRel < riverMin || riverRel > riverMax)
+                    if (left || right)
                     {
-                        /*
                         if (riverRel > shoreMin && riverRel < shoreMax)
                         {
                             float shore = ((riverRel - shoreMin) / (shoreMax - shoreMin));
-                            //shore = shore < 0.5f ? shore : 1.0f - shore;
+                            shore = left ? 1.0f - shore : right ? shore : 0;
+                            bool closeToRiver = shore < 0.95;
 
-                            //should be a less sharp U shape
-                            for (dy = TerraGenConfig.seaLevel - 1; dy <= y + 1; dy++)
+                            int height = closeToRiver ? 0 : (int)(distanceFromSeaLevel * shore);
+
+                            int shoreHeight = (TerraGenConfig.seaLevel - 1) + height;
+
+                            for (dy = y - erosionIntensity - 1; dy <= y + 1; dy++)
                             {
                                 chunkIndex = dy / chunksize;
                                 blockIndex = (chunksize * (dy % chunksize) + z) * chunksize + x;
-                                if (chunks[chunkIndex].Blocks[blockIndex] == config.waterBlockId && dy < TerraGenConfig.seaLevel) continue;
+                                int replacing = chunks[chunkIndex].Blocks[blockIndex];
+                                if (replacing == config.waterBlockId) continue;
+                                if (dy < shoreHeight && replacing != 0) continue;
 
-                                chunks[chunkIndex].Blocks[blockIndex] = 
-                                    dy >= (TerraGenConfig.seaLevel - 1) + (distanceFromSeaLevel * shore) ? 0 :
-                                    lakeBed;
+                                chunks[chunkIndex].Blocks[blockIndex] = dy < TerraGenConfig.seaLevel && replacing == 0 ? rockBlockId : dy == shoreHeight ? lakeBed : 0;
+                                chunks[chunkIndex].MarkModified();
                             }
+                            heightMap[z * chunksize + x] = (ushort)shoreHeight;
                         }
-                        */
                         continue;
                     }
+                    
 
                     for (dy = y - erosionIntensity; dy <= y + 1; dy++)
                     {
@@ -127,7 +146,9 @@ namespace Immersion
                         if (chunks[chunkIndex].Blocks[blockIndex] == config.waterBlockId && dy < TerraGenConfig.seaLevel) continue;
 
                         chunks[chunkIndex].Blocks[blockIndex] = dy == y - erosionIntensity ? lakeBed : dy < TerraGenConfig.seaLevel ? immersionConfig.LakeWaterBlockId : 0;
+                        chunks[chunkIndex].MarkModified();
                     }
+                    heightMap[z * chunksize + x] = (ushort)(TerraGenConfig.seaLevel - 1);
                 }
             }
         }
