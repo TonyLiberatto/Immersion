@@ -295,7 +295,7 @@ namespace Immersion
         }
         public static double DistanceTo(this Vec3d start, Vec3d end) => Math.Sqrt(start.SquareDistanceTo(end));
 
-        public static Vec3i ToClimateVec(this IntMap climateMap, int chunkX, int chunkZ, int regionsize, int chunksize)
+        public static Vec3i ToClimateVec(this IntMap climateMap, int chunkX, int chunkZ, int regionsize, int chunksize, float lx = 0.5f, float ly = 0.5f)
         {
             int regionChunkSize = regionsize / chunksize;
             float fac = (float)climateMap.InnerSize / regionChunkSize;
@@ -307,7 +307,7 @@ namespace Immersion
             int climateBotLeft = climateMap.GetUnpaddedInt((int)(rlX * fac), (int)(rlZ * fac + fac));
             int climateBotRight = climateMap.GetUnpaddedInt((int)(rlX * fac + fac), (int)(rlZ * fac + fac));
 
-            int climateMid = GameMath.BiLerpRgbColor(0.5f, 0.5f, climateUpLeft, climateUpRight, climateBotLeft, climateBotRight);
+            int climateMid = GameMath.BiLerpRgbColor(lx, ly, climateUpLeft, climateUpRight, climateBotLeft, climateBotRight);
 
             int rain = (climateMid >> 8) & 0xff;
             int humidity = climateMid & 0xff;

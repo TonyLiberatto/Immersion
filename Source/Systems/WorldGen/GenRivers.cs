@@ -40,12 +40,6 @@ namespace Immersion
         private void OnMapRegionGen(IMapRegion mapRegion, int regionX, int regionZ)
         {
             var data = riverGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1);
-            /*
-            for (int i = 0; i < data.Length; i++)
-            {
-                data[i] = GameMath.Clamp(data[i] / 2, 0, 255);
-            }
-            */
             mapRegion.ModData["rivermap"] = JsonUtil.ToBytes(
                 new IntMap() { 
                     Data = data,
@@ -77,6 +71,7 @@ namespace Immersion
             IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["rivermap"]);
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
+
             int rdx = chunkX % regionChunkSize;
             int rdz = chunkZ % regionChunkSize;
 
@@ -101,12 +96,12 @@ namespace Immersion
                     int chunkIndex, blockIndex;
                     int rockBlockId = chunks[0].MapChunk.TopRockIdMap[z * chunksize + x];
                     int distanceFromSeaLevel = (y - TerraGenConfig.seaLevel);
+
                     int erosionIntensity = distanceFromSeaLevel + 1 + (int)(4 * n);
                     int lakeBed = lakebedLayerConfig.BlockCodeByMin[0].GetBlockForMotherRock(rockBlockId);
 
                     float riverMin = 0.55f, riverMax = 0.6f;
                     float shoreMin = 0.54f, shoreMax = 0.61f;
-                    //if (riverRel < 0.5) continue;
                     bool left = riverRel < riverMin, right = riverRel > riverMax;
 
                     if (left || right)
@@ -136,7 +131,8 @@ namespace Immersion
                         }
                         continue;
                     }
-                    
+
+                    Vec3i climate = chunks[0].MapChunk.MapRegion.ClimateMap.ToClimateVec(chunkX, chunkZ, api.WorldManager.RegionSize, chunksize, (float)x / chunksize, (float)z / chunksize);
 
                     for (dy = y - erosionIntensity; dy <= y + 1; dy++)
                     {
@@ -145,7 +141,12 @@ namespace Immersion
                         blockIndex = (chunksize * (dy % chunksize) + z) * chunksize + x;
                         if (chunks[chunkIndex].Blocks[blockIndex] == config.waterBlockId && dy < TerraGenConfig.seaLevel) continue;
 
-                        chunks[chunkIndex].Blocks[blockIndex] = dy == y - erosionIntensity ? lakeBed : dy < TerraGenConfig.seaLevel ? immersionConfig.LakeWaterBlockId : 0;
+                        float temp = TerraGenConfig.GetScaledAdjustedTemperatureFloat(climate.Z, dy - TerraGenConfig.seaLevel);
+
+                        int waterOrIce = temp < -5 ? immersionConfig.LakeIceBlockId : immersionConfig.LakeWaterBlockId;
+
+
+                        chunks[chunkIndex].Blocks[blockIndex] = dy == y - erosionIntensity ? lakeBed : dy < TerraGenConfig.seaLevel ? waterOrIce : 0;
                         chunks[chunkIndex].MarkModified();
                     }
                     heightMap[z * chunksize + x] = (ushort)(TerraGenConfig.seaLevel - 1);
