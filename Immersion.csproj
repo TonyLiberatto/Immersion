@@ -547,6 +547,7 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\clayplanter.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\claypot.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\crock.json" />
+    <None Include="bin\Immersion\assets\game\recipes\clayforming\crucible-color.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\flowerpot.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-large.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\food-bowl-medium.json" />
@@ -566,6 +567,7 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\lamellaemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\lanternbasetopmold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\lanternsidesmold.json" />
+    <None Include="bin\Immersion\assets\game\recipes\clayforming\barrelbandmold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\metal-sheet-mold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\pickaxemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\propickmold.json" />
