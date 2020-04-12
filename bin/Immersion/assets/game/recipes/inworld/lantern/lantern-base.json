@@ -1,39 +1,45 @@
 [ 
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "metal", "states": ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos","silver", "gold"  ] },            
+        ],
     "Takes": {
-		"Code": "game:lantern-base-copper",
+		"Code": "game:lantern-base-{metal}",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
         "Code": "game:candle-wax",
-        "Type": "Item",		
+        "Type": "Item",
+		"StackSize": 1
     },
     "Makes": [{
-        "Code": "game:lantern-base-candle-copper",
-        "Type": "Block",		
-        "StackSize": 1
+        "Code": "game:lantern-base-candle-{metal}",
+        "Type": "Block"        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },  
- {
+  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "metal", "states": ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos","silver", "gold"  ] },            
+        ],
     "Takes": {
-		"Code": "game:lantern-base-brass",
+		"Code": "game:lantern-base-candle-{metal}",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
+        "Code": "game:lantern-sides-{metal}",
+        "Type": "block",
+		"StackSize": 4
     },
     "Makes": [{
-        "Code": "game:lantern-base-candle-brass",
-        "Type": "Block",		
-        "StackSize": 1
+        "Code": "game:lantern-base-candle-sides-{metal}",
+        "Type": "Block"        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -41,19 +47,23 @@
  },
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "metal", "states": ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos","silver", "gold"  ] },
+            { "Code": "glass", "states": ["glass-plain", "clearquartz" ] }
+        ],
     "Takes": {
-		"Code": "game:lantern-base-blackbronze",
+		"Code": "game:lantern-base-candle-sides-{metal}",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
+        "Code": "game:{glass}",
+        "Type": "Block",
+		"StackSize": 1
     },
     "Makes": [{
-        "Code": "game:lantern-base-candle-blackbronze",
-        "Type": "Block",		
-        "StackSize": 1
+        "Code": "game:lantern-base-candle-sides-glass-{metal}",
+        "Type": "Block",
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
@@ -61,122 +71,73 @@
  },
  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "metal", "states": ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos","silver", "gold"  ] },            
+        ],
     "Takes": {
-		"Code": "game:lantern-base-bismuth",
+		"Code": "game:lantern-base-candle-sides-glass-{metal}",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
+        "Code": "game:lantern-top-{metal}",
+        "Type": "Block",
+		"StackSize": 1		
     },
     "Makes": [{
-        "Code": "game:lantern-base-candle-bismuth",
-        "Type": "Block",		
-        "StackSize": 1
+        "Code": "game:lantern-{metal}-plain-up",
+        "Type": "Block"        
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
- {
+  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "metal", "states": ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos","silver", "gold"  ] },
+			{ "Code": "layer", "states": ["silver", "gold" ] }, 	
+        ],
     "Takes": {
-		"Code": "game:lantern-base-tinbronze",
+		"Code": "game:lantern-base-candle-sides-glass-{metal}",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
+        "Code": "game:metalplate-{layer}",
+        "Type": "Block",
+		"StackSize": 1
     },
     "Makes": [{
-        "Code": "game:lantern-base-candle-tinbronze",
-        "Type": "Block",		
-        "StackSize": 1
+        "Code": "game:lantern-base-candle-sides-glass-layer-{metal}-{layer}",
+        "Type": "Block"
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
- {
+  {
     "Mode": "Swap",
+	"VariantGroups": [
+            { "Code": "metal", "states": ["copper", "brass", "blackbronze", "bismuth", "tinbronze", "bismuthbronze", "molybdochalkos","silver", "gold"  ] },
+			{ "Code": "layer", "states": ["silver", "gold" ] }, 	
+        ],
     "Takes": {
-		"Code": "game:lantern-base-bismuthbronze",
+		"Code": "game:lantern-base-candle-sides-glass-layer-{metal}-{layer}",
         "Type": "Block",		
 		"Remove": true	
     },
     "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
+        "Code": "game:lantern-top-{metal}",
+        "Type": "Block",
+		"StackSize": 1
     },
     "Makes": [{
-        "Code": "game:lantern-base-candle-bismuthbronze",
-        "Type": "Block",		
-        "StackSize": 1
+        "Code": "game:lantern-{metal}-{layer}-up",
+        "Type": "Block"
     }],
     "IsTool": false,
     "CraftSound": "sounds/block/planks",
     "Disabled": false
  },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "game:lantern-base-molybdochalkos",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
-    },
-    "Makes": [{
-        "Code": "game:lantern-base-candle-molybdochalkos",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "game:lantern-base-silver",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
-    },
-    "Makes": [{
-        "Code": "game:lantern-base-candle-silver",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- },
- {
-    "Mode": "Swap",
-    "Takes": {
-		"Code": "game:lantern-base-gold",
-        "Type": "Block",		
-		"Remove": true	
-    },
-    "Tool": {
-        "Code": "game:candle-wax",
-        "Type": "Item",		
-    },
-    "Makes": [{
-        "Code": "game:lantern-base-candle-gold",
-        "Type": "Block",		
-        "StackSize": 1
-    }],
-    "IsTool": false,
-    "CraftSound": "sounds/block/planks",
-    "Disabled": false
- }, 
 ]

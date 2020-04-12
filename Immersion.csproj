@@ -558,7 +558,7 @@
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourbowls.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourclapots.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourcrock.json" />
-    <None Include="bin\Immersion\assets\game\recipes\clayforming\fourcrucible.json" />
+    <None Include="bin\Immersion\assets\game\recipes\clayforming\fourcrucible-color.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\fourflowerpot.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\glasslanternframemold.json" />
     <None Include="bin\Immersion\assets\game\recipes\clayforming\hammermold.json" />
@@ -689,14 +689,6 @@
     <None Include="bin\Immersion\assets\game\recipes\inworld\glasslantern\glasslantern-sheet-silver.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\glasslantern\glasslantern-silver.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\halflog.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides-glass-gold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides-glass-layer-gold.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides-glass-layer-silver.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides-glass-silver.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides-glass.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides-quartz.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle-sides.json" />
-    <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base-candle.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\lantern\lantern-base.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\logwall\logwall-down-north.json" />
     <None Include="bin\Immersion\assets\game\recipes\inworld\logwall\logwall-down-norths.json" />
