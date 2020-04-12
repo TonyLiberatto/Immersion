@@ -35,13 +35,12 @@ namespace Immersion
 
         private void OnMapRegionGen(IMapRegion mapRegion, int regionX, int regionZ)
         {
-            mapRegion.ModData["rivermap"] = JsonUtil.ToBytes(
+            mapRegion.ModData["aquifermap"] = JsonUtil.ToBytes(
                 new IntMap() { 
                     Data = aquiferGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1),
                     BottomRightPadding = 1,
                     Size = noiseSizeRiver + 1
-                }
-                );
+                });
         }
 
         public void InitWorldGen()
@@ -54,18 +53,18 @@ namespace Immersion
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
-            IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["rivermap"]);
+            IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["aquifermap"]);
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
             int rdx = chunkX % regionChunkSize;
             int rdz = chunkZ % regionChunkSize;
 
-            float riverStep = (float)riverMap.InnerSize / regionChunkSize;
+            float aquiferStep = (float)riverMap.InnerSize / regionChunkSize;
 
-            int riverUpLeft = riverMap.GetUnpaddedInt((int)(rdx * riverStep), (int)(rdz * riverStep));
-            int riverUpRight = riverMap.GetUnpaddedInt((int)(rdx * riverStep + riverStep), (int)(rdz * riverStep));
-            int riverBotLeft = riverMap.GetUnpaddedInt((int)(rdx * riverStep), (int)(rdz * riverStep + riverStep));
-            int riverBotRight = riverMap.GetUnpaddedInt((int)(rdx * riverStep + riverStep), (int)(rdz * riverStep + riverStep));
+            int aquiferUpLeft = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep), (int)(rdz * aquiferStep));
+            int aquiferUpRight = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep + aquiferStep), (int)(rdz * aquiferStep));
+            int aquiferBotLeft = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep), (int)(rdz * aquiferStep + aquiferStep));
+            int aquiferBotRight = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep + aquiferStep), (int)(rdz * aquiferStep + aquiferStep));
 
             for (int x = 0; x < chunksize2; x++)
             {
@@ -73,10 +72,10 @@ namespace Immersion
                 {
                     double n = noise.Noise(rdx + x, rdx + z);
 
-                    float riverRel = 1.0f - (GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f);
-                    if (riverRel > 0.5) continue;
+                    float aquiferRel = 1.0f - (GameMath.BiLerp(aquiferUpLeft, aquiferUpRight, aquiferBotLeft, aquiferBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f);
+                    if (aquiferRel > 0.5) continue;
 
-                    int sub = (int)Math.Round(riverRel * 8);
+                    int sub = (int)Math.Round(aquiferRel * 8);
                     
                     int maxY = TerraGenConfig.seaLevel - 20 - (int)Math.Round(n * 2);
                     int minY = maxY - sub;
@@ -104,7 +103,7 @@ namespace Immersion
                         {
                             chunks[chunkIndex].Blocks[blockIndex] = rockID;
                         }
-                        if (riverRel < 0.45)
+                        if (aquiferRel < 0.45)
                         {
                             chunks[chunkIndex].Blocks[blockIndex] = config.LakeWaterBlockId;
                         }

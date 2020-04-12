@@ -65,7 +65,7 @@ namespace Immersion
             {
                 for (int z = 0; z < chunksize; z++)
                 {
-                    double noise = sNoise.Noise(rdx + x, rdz + z);
+                    double noise = sNoise.Noise(chunkX * chunksize + x, chunkZ * chunksize + z);
 
                     int y = heightMap[z * chunksize + x];
                     int chunkY = y / chunksize;
