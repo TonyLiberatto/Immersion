@@ -535,6 +535,7 @@
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\slaughteringaxe.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\spear-primitive.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\neolithic\sword.json" />
+    <None Include="bin\Immersion\assets\game\itemtypes\tool\scythe.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\shovel.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\slaughteringaxe.json" />
     <None Include="bin\Immersion\assets\game\itemtypes\tool\spear.json" />

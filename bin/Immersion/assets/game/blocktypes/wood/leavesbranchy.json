@@ -45,8 +45,9 @@
 			type: "block",
 			code: "sapling-{wood}",
 			quantityByType: {
-				"*-acacia": { avg: 0.1, var: 0 },
-				"*": { avg: 0.05, var: 0 }
+				"*-pine": {	"avg": 0.12,	"var": 0	},
+				"*-acacia": {	"avg": 0.12, "var": 0	},
+				"*": {	"avg": 0.05,	"var": 0	}
 			}
 		},
 		{

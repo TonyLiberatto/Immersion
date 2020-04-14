@@ -81,9 +81,10 @@
 		"axe-flint-bone-*": 220,
 		"axe-granite-*": 150,
 		"axe-andesite-*": 150,
+		"axe-peridotite-*": 150,
 		"axe-basalt-*": 150,
 		"axe-obsidian-*": 200,
-		"axe-flint-*": 180,
+		"axe-flint-*": 180
 	},
 	attackpowerbytype: {
 		"axe-granite-*": 0.75,
