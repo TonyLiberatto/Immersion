@@ -24,5 +24,6 @@
 	{ file: "game:recipes/grid/basket-deconstruct", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/firestarter", op: "add", path: "/enabled",  value: "false" },
 	{ file: "game:recipes/grid/candle", op: "add", path: "/enabled",  value: "false" },
-	{ file: "game:recipes/grid/barrel", op: "add", path: "/enabled",  value: "false" }
+	{ file: "game:recipes/grid/barrel", op: "add", path: "/enabled",  value: "false" },
+	{ file: "game:recipes/clayforming/crucible", op: "add", path: "/enabled",  value: "false" }
 ] 
