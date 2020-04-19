@@ -1819,7 +1819,6 @@
     <None Include="bin\Immersion\assets\immersion\lang\en.json" />
     <None Include="bin\Immersion\assets\immersion\patches\blocks.json" />
     <None Include="bin\Immersion\assets\immersion\patches\items.json" />
-    <None Include="bin\Immersion\assets\immersion\patches\modifystonepath.json" />
     <None Include="bin\Immersion\assets\immersion\patches\recipes.json" />
     <None Include="bin\Immersion\assets\immersion\patches\worldgen.json" />
     <None Include="bin\Immersion\assets\immersion\recipes\grid\adobe.json" />

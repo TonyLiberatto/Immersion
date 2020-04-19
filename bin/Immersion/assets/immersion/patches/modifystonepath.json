@@ -1,7 +1,0 @@
-[
-    { file: "game:blocktypes/stone/generic/stonepath", op: "replace", path: "/shape/base", value: "block/basic/cube" },
-    { file: "game:blocktypes/stone/generic/stonepath", op: "replace", path: "/sideopaque/all", value: true },
-    { file: "game:blocktypes/stone/generic/stonepath", op: "replace", path: "/sidesolid/all", value: true },
-    { file: "game:blocktypes/stone/generic/stonepath", op: "replace", path: "/selectionbox/y2", value: 1 },
-    { file: "game:blocktypes/stone/generic/stonepath", op: "replace", path: "/collisionbox/y2", value: 1 }
-]
