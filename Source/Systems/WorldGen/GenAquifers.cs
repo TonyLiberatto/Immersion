@@ -54,18 +54,21 @@ namespace Immersion
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
-            IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["aquifermap"]);
+            byte[] aquiferMapData = chunks[0].MapChunk.MapRegion.ModData["aquifermap"];
+            if (aquiferMapData == null) return;
+
+            IntMap aquiferMap = JsonUtil.FromBytes<IntMap>(aquiferMapData);
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
             int rdx = chunkX % regionChunkSize;
             int rdz = chunkZ % regionChunkSize;
 
-            float aquiferStep = (float)riverMap.InnerSize / regionChunkSize;
+            float aquiferStep = (float)aquiferMap.InnerSize / regionChunkSize;
 
-            int aquiferUpLeft = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep), (int)(rdz * aquiferStep));
-            int aquiferUpRight = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep + aquiferStep), (int)(rdz * aquiferStep));
-            int aquiferBotLeft = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep), (int)(rdz * aquiferStep + aquiferStep));
-            int aquiferBotRight = riverMap.GetUnpaddedInt((int)(rdx * aquiferStep + aquiferStep), (int)(rdz * aquiferStep + aquiferStep));
+            int aquiferUpLeft = aquiferMap.GetUnpaddedInt((int)(rdx * aquiferStep), (int)(rdz * aquiferStep));
+            int aquiferUpRight = aquiferMap.GetUnpaddedInt((int)(rdx * aquiferStep + aquiferStep), (int)(rdz * aquiferStep));
+            int aquiferBotLeft = aquiferMap.GetUnpaddedInt((int)(rdx * aquiferStep), (int)(rdz * aquiferStep + aquiferStep));
+            int aquiferBotRight = aquiferMap.GetUnpaddedInt((int)(rdx * aquiferStep + aquiferStep), (int)(rdz * aquiferStep + aquiferStep));
 
             for (int x = 0; x < chunksize2; x++)
             {

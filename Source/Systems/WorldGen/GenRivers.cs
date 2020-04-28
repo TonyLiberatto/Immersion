@@ -68,8 +68,9 @@ namespace Immersion
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
             ushort[] heightMap = chunks[0].MapChunk.RainHeightMap;
-
-            IntMap riverMap = JsonUtil.FromBytes<IntMap>(chunks[0].MapChunk.MapRegion.ModData["rivermap"]);
+            byte[] riverMapData = chunks[0].MapChunk.MapRegion.ModData["rivermap"];
+            if (riverMapData == null) return;
+            IntMap riverMap = JsonUtil.FromBytes<IntMap>(riverMapData);
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
 
