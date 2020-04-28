@@ -189,6 +189,7 @@
     <Compile Include="Source\ImmersionSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Systems\WorldGen\RidgedNoise.cs" />
+    <Compile Include="Source\Systems\WorldGen\WorldgenConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Immersion\assets\game\blocktypes\testing\" />

@@ -32,6 +32,8 @@ namespace Immersion
         public override void StartServerSide(ICoreServerAPI Api)
         {
             this.Api = Api;
+            if (!ImmersionWorldgenConfig.GenDeepOreBits) return;
+
             if (DoDecorationPass)
             {
                 foreach (var block in Api.World.Blocks)

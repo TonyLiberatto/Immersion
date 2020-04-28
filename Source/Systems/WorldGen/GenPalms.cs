@@ -85,6 +85,7 @@ namespace Immersion
                 }
             }, Privilege.ban);
 
+            if (!ImmersionWorldgenConfig.GenPalms) return;
             chunksize = api.WorldManager.ChunkSize;
             api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.Vegetation, "standard");
             api.Event.InitWorldGenerator(() => SetupPalm(api.World.BlockAccessor.GetBlock(new AssetLocation("immersion:palmlog-bottom-grown"))), "standard");

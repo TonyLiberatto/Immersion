@@ -28,6 +28,7 @@ namespace Immersion
         public override void StartServerSide(ICoreServerAPI api)
         {
             this.api = api;
+            if (!ImmersionWorldgenConfig.GenAquifers) return;
             api.Event.MapRegionGeneration(OnMapRegionGen, "standard");
             api.Event.InitWorldGenerator(InitWorldGen, "standard");
             api.Event.ChunkColumnGeneration(OnChunkColumnGen, EnumWorldGenPass.TerrainFeatures, "standard");
