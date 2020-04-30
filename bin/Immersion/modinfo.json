@@ -10,5 +10,13 @@
 	"dependencies": {
 		"carrycapacity": "0.4.9",
 		"game": "1.12.14"
+	},
+	"worldconfig": {
+		"worldConfigAttributes": [
+			{ "code": "genAquifers", "dataType": "bool", "default": "true" },
+			{ "code": "genRivers", "dataType": "bool", "default": "true" },
+			{ "code": "genPalms", "dataType": "bool", "default": "true" },
+			{ "code": "genDeepOreBits", "dataType": "bool", "default": "true" }
+		]
 	}
 }
