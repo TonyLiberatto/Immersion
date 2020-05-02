@@ -45,19 +45,19 @@ namespace Immersion
                 switch (word)
                 {
                     case "aquifers":
-                        GenAquifers = genAquifers = state ?? !GenAquifers;
+                        sapi.World.Config.SetBool("genAquifers", GenAquifers = genAquifers = state ?? !GenAquifers);
                         player.SendMessage(0, string.Format("Worldgen parameter {0} set to {1}", word, GenAquifers), EnumChatType.OwnMessage);
                         break;
                     case "rivers":
-                        GenRivers = genRivers = state ?? !GenRivers;
+                        sapi.World.Config.SetBool("genRivers", GenRivers = genRivers = state ?? !GenRivers);
                         player.SendMessage(0, string.Format("Worldgen parameter {0} set to {1}", word, GenRivers), EnumChatType.OwnMessage);
                         break;
                     case "palms":
-                        GenPalms = genPalms = state ?? !GenPalms;
+                        sapi.World.Config.SetBool("genPalms", GenPalms = genPalms = state ?? !GenPalms);
                         player.SendMessage(0, string.Format("Worldgen parameter {0} set to {1}", word, GenPalms), EnumChatType.OwnMessage);
                         break;
                     case "deeporebits":
-                        GenDeepOreBits = genDeepOreBits = state ?? !GenDeepOreBits;
+                        sapi.World.Config.SetBool("genDeepOreBits", GenDeepOreBits = genDeepOreBits = state ?? !GenDeepOreBits);
                         player.SendMessage(0, string.Format("Worldgen parameter {0} set to {1}", word, GenDeepOreBits), EnumChatType.OwnMessage);
                         break;
                     default:
@@ -78,31 +78,26 @@ namespace Immersion
             ImmersionWorldgenConfig storedConfig = null;
             if (configBytes != null) storedConfig = JsonUtil.FromBytes<ImmersionWorldgenConfig>(configBytes);
 
-            if (storedConfig != null)
+            string wPath = Path.Combine("immersion", "worldgen.json");
+            try
             {
-                GenAquifers = genAquifers = storedConfig.genAquifers;
-                GenRivers = genRivers = storedConfig.genRivers;
-                GenPalms = genPalms = storedConfig.genPalms;
-                GenDeepOreBits = genDeepOreBits = storedConfig.genDeepOreBits;
+                ImmersionWorldgenConfig config = sapi.LoadModConfig<ImmersionWorldgenConfig>(wPath);
+
+                GenAquifers = genAquifers = config?.genAquifers ?? true;
+                GenRivers = genRivers = config?.genRivers ?? true;
+                GenPalms = genPalms = config?.genPalms ?? true;
+                GenDeepOreBits = genDeepOreBits = config?.genDeepOreBits ?? true;
             }
-            else
+            catch (Exception)
             {
-                string wPath = Path.Combine("immersion", "worldgen.json");
-                try
-                {
-                    ImmersionWorldgenConfig config = sapi.LoadModConfig<ImmersionWorldgenConfig>(wPath);
-
-                    GenAquifers = genAquifers = config?.genAquifers ?? true;
-                    GenRivers = genRivers = config?.genRivers ?? true;
-                    GenPalms = genPalms = config?.genPalms ?? true;
-                    GenDeepOreBits = genDeepOreBits = config?.genDeepOreBits ?? true;
-                }
-                catch (Exception)
-                {
-                }
-
-                sapi.StoreModConfig(this, wPath);
             }
+
+            sapi.StoreModConfig(this, wPath);
+
+            GenAquifers = genAquifers = sapi.World.Config.TryGetBool("genAquifers") ?? storedConfig?.genAquifers ?? true;
+            GenRivers = genRivers = sapi.World.Config.TryGetBool("genRivers") ?? storedConfig?.genRivers ?? true;
+            GenPalms = genPalms = sapi.World.Config.TryGetBool("genPalms") ?? storedConfig?.genPalms ?? true;
+            GenDeepOreBits = genDeepOreBits = sapi.World.Config.TryGetBool("genDeepOreBits") ?? storedConfig?.genDeepOreBits ?? true;
 
             SaveWorldConfig();
         }

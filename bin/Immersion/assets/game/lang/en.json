@@ -3918,6 +3918,14 @@
 	"item-arrow-poison*": "Poisoned Arrow crafted from any arrow and mushroom",
 	"itemdesc-arrow-poison*": "Adds +2 damage. Future recipe should include cooking with a herb to get poison.",
 	
-	"item-plank-palm": "Board (Palm)"
+	"item-plank-palm": "Board (Palm)",
 
+	"worldattribute-genAquifers": "Immersion: Aquifer Generation",
+	"worldattribute-genAquifers-desc": "Enables or disables the generation of aquifers.",
+	"worldattribute-genRivers": "Immersion: River Generation",
+	"worldattribute-genRivers-desc": "Enables or disables the generation of rivers.",
+	"worldattribute-genPalms": "Immersion: Palm Tree Generation",
+	"worldattribute-genPalms-desc": "Enables or disables the generation of palm trees.",
+	"worldattribute-genDeepOreBits": "Immersion: Deep Ore Bit Generation",
+    "worldattribute-genDeepOreBits-desc": "Enables or disables the generation of ore bits based on deeper deposits."
 }

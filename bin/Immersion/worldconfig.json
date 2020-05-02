@@ -1,0 +1,8 @@
+{
+	"worldConfigAttributes": [
+		{ "code": "genAquifers", "dataType": "bool", "default": "true" },
+		{ "code": "genRivers", "dataType": "bool", "default": "true" },
+		{ "code": "genPalms", "dataType": "bool", "default": "true" },
+		{ "code": "genDeepOreBits", "dataType": "bool", "default": "true" }
+	]
+}

@@ -54,7 +54,8 @@ namespace Immersion
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
         {
-            byte[] aquiferMapData = chunks[0].MapChunk.MapRegion.ModData["aquifermap"];
+            var modData = chunks[0].MapChunk.MapRegion.ModData;
+            byte[] aquiferMapData = modData.ContainsKey("aquifermap") ? modData["aquifermap"] : null;
             if (aquiferMapData == null) return;
 
             IntMap aquiferMap = JsonUtil.FromBytes<IntMap>(aquiferMapData);
