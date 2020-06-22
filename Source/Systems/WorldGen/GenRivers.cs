@@ -22,6 +22,7 @@ namespace Immersion
         LakeBedLayerProperties lakebedLayerConfig;
         ImmersionGlobalConfig immersionConfig;
         BlockLayerConfig blockLayerConfig;
+        NormalizedSimplexNoise noise;
 
         public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
         public override double ExecuteOrder() => 0.45;
@@ -54,7 +55,8 @@ namespace Immersion
             LoadGlobalConfig(api);
             long seed = api.WorldManager.Seed;
             riverGen = new MapLayerRidged(seed + 46841, 1, 1.0f, 4, 255, new double[] { 0.02f, 0.02f, 0.02f, 0.02f, 0.02f, 0.02f });
-            
+            noise = NormalizedSimplexNoise.FromDefaultOctaves(1, 0.125, 1.0, seed + 54987);
+
             noiseSizeRiver = api.WorldManager.RegionSize / 32;
             blockLayerConfig = BlockLayerConfig.GetInstance(api);
             lakebedLayerConfig = blockLayerConfig.LakeBedLayer;
@@ -89,7 +91,6 @@ namespace Immersion
                 {
                     float riverRel = GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f;
 
-                    //controls inverse of river width
                     float minRel = 0.8f;
 
                     if (riverRel < minRel) continue;
@@ -102,11 +103,12 @@ namespace Immersion
 
                     int chunkIndex = y / chunksize;
                     int blockIndex = (chunksize * (y % chunksize) + z) * chunksize + x;
-                    int minY = (int)(y - riverRel * 20);
+                    int minY = (int)(y - riverRel * 64);
+                    double n = (noise.Noise(chunkX * chunksize + x, chunkZ * chunksize + z) * 4);
 
                     for (int dy = y; dy > minY; dy--)
                     {
-                        if (dy > api.WorldManager.MapSizeY) continue;
+                        if (dy > api.WorldManager.MapSizeY || dy < TerraGenConfig.seaLevel - 8 + n) continue;
 
                         chunkIndex = dy / chunksize;
                         blockIndex = (chunksize * (dy % chunksize) + z) * chunksize + x;
