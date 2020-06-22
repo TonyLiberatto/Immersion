@@ -15,7 +15,7 @@ namespace Immersion
     public class GenRivers : ModStdWorldGen
     {
         ICoreServerAPI api;
-        MapLayerBase riverGen;
+        MapLayerRidged riverGen;
         int noiseSizeRiver;
         public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<ModifyLakes>().config; }
         BlockLayer soilLayer;
@@ -24,7 +24,7 @@ namespace Immersion
         BlockLayerConfig blockLayerConfig;
 
         public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
-        public override double ExecuteOrder() => 0.11;
+        public override double ExecuteOrder() => 0.45;
 
         public override bool ShouldLoad(EnumAppSide forSide) => forSide == EnumAppSide.Server;
 
@@ -88,25 +88,35 @@ namespace Immersion
                 for (int z = 0; z < chunksize2; z++)
                 {
                     float riverRel = GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f;
-                    riverRel += 1;
 
-                    int y = heightMap[z * chunksize + x];
-                    int distanceFromSeaLevel = (y - TerraGenConfig.seaLevel);
-                    int erosionIntensity = distanceFromSeaLevel + 1 + (int)(4 * riverRel);
+                    //controls inverse of river width
+                    float minRel = 0.8f;
+
+                    if (riverRel < minRel) continue;
+                    float invRel = 1.0f - minRel;
+
+                    riverRel -= minRel;
+                    riverRel *= 1.0f / invRel;
+
+                    int y = heightMap[z * chunksize + x] + 1;
 
                     int chunkIndex = y / chunksize;
                     int blockIndex = (chunksize * (y % chunksize) + z) * chunksize + x;
+                    int minY = (int)(y - riverRel * 20);
 
-                    for (int dy = y; dy > y - erosionIntensity; dy--)
+                    for (int dy = y; dy > minY; dy--)
                     {
                         if (dy > api.WorldManager.MapSizeY) continue;
 
                         chunkIndex = dy / chunksize;
                         blockIndex = (chunksize * (dy % chunksize) + z) * chunksize + x;
-                        chunks[chunkIndex].Blocks[blockIndex] = 0;
+                        int replacing = chunks[chunkIndex].Blocks[blockIndex];
+                        if (replacing == config.waterBlockId) continue;
+
+                        chunks[chunkIndex].Blocks[blockIndex] = dy > TerraGenConfig.seaLevel - 1 ? 0 : config.LakeWaterBlockId;
                     }
 
-                    heightMap[z * chunksize + x] = (ushort)(y - erosionIntensity);
+                    heightMap[z * chunksize + x] = (ushort)(minY > TerraGenConfig.seaLevel - 1 ? minY : TerraGenConfig.seaLevel - 1);
                 }
             }
         }
