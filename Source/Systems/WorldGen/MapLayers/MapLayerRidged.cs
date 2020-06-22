@@ -10,20 +10,20 @@ namespace Immersion
 {
     public class MapLayerRidged : MapLayerBase
     {
-        RidgedNoise noisegen;
+        RidgedSimplexNoise noisegen;
 
         float multiplier;
         double[] thresholds;
 
         public MapLayerRidged(long seed, int octaves, float persistence, int scale, int multiplier) : base(seed)
         {
-            noisegen = RidgedNoise.FromDefaultOctaves(octaves, 1f / scale, persistence, seed + 12321);
+            noisegen = RidgedSimplexNoise.FromDefaultOctaves(octaves, 1f / scale, persistence, seed + 12321);
             this.multiplier = multiplier;
         }
 
         public MapLayerRidged(long seed, int octaves, float persistence, int scale, int multiplier, double[] thresholds) : base(seed)
         {
-            noisegen = RidgedNoise.FromDefaultOctaves(octaves, 1f / scale, persistence, seed + 12321);
+            noisegen = RidgedSimplexNoise.FromDefaultOctaves(octaves, 1f / scale, persistence, seed + 12321);
             this.multiplier = multiplier;
             this.thresholds = thresholds;
         }
@@ -39,7 +39,7 @@ namespace Immersion
                 {
                     for (int x = 0; x < sizeX; ++x)
                     {
-                        outData[z * sizeX + x] = (int)GameMath.Clamp(multiplier * noisegen.Noise(xCoord + x, zCoord + z, thresholds), 0, 255);
+                        outData[z * sizeX + x] = (int)GameMath.Clamp(multiplier * noisegen.InvNoise(xCoord + x, zCoord + z, thresholds), 0, 255);
                     }
                 }
             }
@@ -49,7 +49,7 @@ namespace Immersion
                 {
                     for (int x = 0; x < sizeX; ++x)
                     {
-                        outData[z * sizeX + x] = (int)GameMath.Clamp(multiplier * noisegen.Noise(xCoord + x, zCoord + z), 0, 255);
+                        outData[z * sizeX + x] = (int)GameMath.Clamp(multiplier * noisegen.InvNoise(xCoord + x, zCoord + z), 0, 255);
                     }
                 }
             }
@@ -67,7 +67,7 @@ namespace Immersion
             {
                 for (int x = 0; x < sizeX; ++x)
                 {
-                    outData[z * sizeX + x] = (int)GameMath.Clamp(multiplier * noisegen.Noise(xCoord + x, zCoord + z, thresholds), 0, 255);
+                    outData[z * sizeX + x] = (int)GameMath.Clamp(multiplier * noisegen.InvNoise(xCoord + x, zCoord + z, thresholds), 0, 255);
                 }
             }
 
