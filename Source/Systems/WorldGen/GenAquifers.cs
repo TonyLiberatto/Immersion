@@ -17,7 +17,7 @@ namespace Immersion
         ICoreServerAPI api;
         MapLayerBase aquiferGen;
         int noiseSizeRiver;
-        public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<ModifyLakes>().config; }
+        public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<WorldgenConfigSet>().config; }
         NormalizedSimplexNoise noise;
 
         public int chunksize2 { get => chunksize > 0 ? chunksize : 32; }
@@ -37,7 +37,7 @@ namespace Immersion
         private void OnMapRegionGen(IMapRegion mapRegion, int regionX, int regionZ)
         {
             mapRegion.ModData["aquifermap"] = JsonUtil.ToBytes(
-                new IntMap() { 
+                new IntDataMap2D() { 
                     Data = aquiferGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1),
                     BottomRightPadding = 1,
                     Size = noiseSizeRiver + 1
@@ -58,7 +58,7 @@ namespace Immersion
             byte[] aquiferMapData = modData.ContainsKey("aquifermap") ? modData["aquifermap"] : null;
             if (aquiferMapData == null) return;
 
-            IntMap aquiferMap = JsonUtil.FromBytes<IntMap>(aquiferMapData);
+            IntDataMap2D aquiferMap = JsonUtil.FromBytes<IntDataMap2D>(aquiferMapData);
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
             int rdx = chunkX % regionChunkSize;

@@ -107,7 +107,7 @@ namespace Immersion
         public float secondsUsed { get; private set; }
         bool firstAction = true;
 
-        private void SendBlockAction(EnumEntityAction action, ref EnumHandling handled)
+        private void SendBlockAction(EnumEntityAction action, bool on, ref EnumHandling handled)
         {
             if (id == 0 && firstAction)
             {
@@ -339,7 +339,7 @@ namespace Immersion
                     {
                         if (!byPlayer.InventoryManager.TryGiveItemstack(val.ResolvedItemstack))
                         {
-                            byPlayer.Entity.World.SpawnItemEntity(val.ResolvedItemstack, byPlayer.Entity.LocalPos.XYZ);
+                            byPlayer.Entity.World.SpawnItemEntity(val.ResolvedItemstack, byPlayer.Entity.SidedPos.XYZ);
                         }
                     }
                 }

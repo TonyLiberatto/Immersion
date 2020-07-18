@@ -32,7 +32,7 @@ namespace Immersion
 			west = new AssetLocation("stair-side-" + type + "-" + material + "-" + updown + "-west").GetBlock(Api);
 		}
 
-		public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos Pos, BlockPos neibpos)
+		public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
         {
             Block nBlock = neibpos.GetBlock(world);
             if (!(nBlock is BlockFixedStairs)) return;
@@ -41,11 +41,11 @@ namespace Immersion
             {
                 if (Side)
                 {
-                    StairsCheck(world, Pos);
+                    StairsCheck(world, pos);
                 }
                 else if (Corner)
                 {
-                    CornersCheck(world, Pos);
+                    CornersCheck(world, pos);
                 }
             }
         }

@@ -17,43 +17,23 @@ using Vintagestory.ServerMods.NoObf;
 
 namespace Immersion
 {
-    public class ModifyLakes : ModSystem
+    public class WorldgenConfigSet : ModSystem
     {
         ICoreServerAPI Api;
         public override double ExecuteOrder() => 0;
         public override bool ShouldLoad(EnumAppSide forSide) => forSide.IsServer();
-        long[] ids = new long[2];
         public ImmersionGlobalConfig config;
 
         public override void StartServerSide(ICoreServerAPI Api)
         {
             this.Api = Api;
-            
-            Api.Event.ServerRunPhase(EnumServerRunPhase.LoadGamePre, ChangeLakeWater);
+            SetConfig();
         }
 
-        public void ChangeLakeWater()
+        public void SetConfig()
         {
-            config = Api.Assets.Get("worldgen/global.json").ToObject<ImmersionGlobalConfig>();
+            config = Api.Assets.Get("worldgen/immersionglobal.json").ToObject<ImmersionGlobalConfig>();
             config.SetApi(Api);
-            ids[0] = Api.Event.RegisterGameTickListener(dt => 
-            {
-                if (Api.ModLoader.GetModSystem<GenPonds>().GlobalConfig != null)
-                {
-                    Api.ModLoader.GetModSystem<GenPonds>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
-                    Api.ModLoader.GetModSystem<GenPonds>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
-                    Api.Event.UnregisterGameTickListener(ids[0]);
-                }
-            }, 30);
-            ids[1] = Api.Event.RegisterGameTickListener(dt =>
-            {
-                if (Api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig != null)
-                {
-                    Api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockCode = config.lakeWaterBlockCode;
-                    Api.ModLoader.GetModSystem<GenRivulets>().GlobalConfig.waterBlockId = config.LakeWaterBlockId;
-                    Api.Event.UnregisterGameTickListener(ids[1]);
-                }
-            }, 30);
         }
     }
 

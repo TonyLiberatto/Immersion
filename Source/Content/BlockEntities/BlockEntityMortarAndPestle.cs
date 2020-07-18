@@ -512,14 +512,14 @@ namespace Immersion
 
                     if (clientDialog == null || !clientDialog.IsOpened())
                     {
-                        clientDialog = new GuiDialogBlockEntityQuern(dialogTitle, Inventory, Pos, dtree, Api as ICoreClientAPI);
+                        clientDialog = new GuiDialogBlockEntityQuern(dialogTitle, Inventory, Pos, Api as ICoreClientAPI);
                         clientDialog.TryOpen();
                         clientDialog.OnClosed += () => clientDialog = null;
                     }
                 }
             }
 
-            if (packetid == (int)EnumBlockContainerPacketId.CloseInventory)
+            if (packetid == (int)EnumBlockEntityPacketId.Close)
             {
                 IClientWorldAccessor clientWorld = (IClientWorldAccessor)Api.World;
                 clientWorld.Player.InventoryManager.CloseInventory(Inventory);

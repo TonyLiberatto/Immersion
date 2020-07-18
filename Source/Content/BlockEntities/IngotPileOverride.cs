@@ -69,7 +69,7 @@ namespace Immersion
 
                 for (int j = 0; j <= 64; j++)
                 {
-                    mesher.TesselateShape("ingotPile", shape, out meshes[j], this, null, 0, 0, j);
+                    mesher.TesselateShape("ingotPile", shape, out meshes[j], this, null, 0, 0, 0, j);
                 }
 
                 meshesByType[tmpMetal] = meshes;
@@ -216,10 +216,10 @@ namespace Immersion
                 GetCollisionBoxes(world.BlockAccessor, pos)[0],
                 pos.X, pos.Y, pos.Z,
                 player.Entity.CollisionBox,
-                player.Entity.LocalPos.XYZ
+                player.Entity.SidedPos.XYZ
             ))
             {
-                player.Entity.LocalPos.Y += GetCollisionBoxes(world.BlockAccessor, pos)[0].Y2;
+                player.Entity.SidedPos.Y += GetCollisionBoxes(world.BlockAccessor, pos)[0].Y2;
             }
 
             (player as IClientPlayer)?.TriggerFpAnimation(EnumHandInteract.HeldItemInteract);
@@ -239,7 +239,7 @@ namespace Immersion
         }
 
 
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
         {
             Block belowBlock = world.BlockAccessor.GetBlock(pos.DownCopy());
             if (!belowBlock.SideSolid[BlockFacing.UP.Index] && (belowBlock != this || FillLevel(world.BlockAccessor, pos.DownCopy()) < 8))

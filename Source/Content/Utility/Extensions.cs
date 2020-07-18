@@ -295,7 +295,7 @@ namespace Immersion
         }
         public static double DistanceTo(this Vec3d start, Vec3d end) => Math.Sqrt(start.SquareDistanceTo(end));
 
-        public static Vec3i ToClimateVec(this IntMap climateMap, int chunkX, int chunkZ, int regionsize, int chunksize, float lx = 0.5f, float ly = 0.5f)
+        public static Vec3i ToClimateVec(this IntDataMap2D climateMap, int chunkX, int chunkZ, int regionsize, int chunksize, float lx = 0.5f, float ly = 0.5f)
         {
             int regionChunkSize = regionsize / chunksize;
             float fac = (float)climateMap.InnerSize / regionChunkSize;
@@ -363,7 +363,7 @@ namespace Immersion
             int val2 = num >> 5 & 31;
             int val1 = num & 31;
 
-            return (int)Math.Round((double)val1 * (double)world.Calendar.DayLightStrength);
+            return (int)Math.Round((double)val1 * (double)world.Calendar.GetDayLightStrength(posX, posZ));
         }
     }
 }

@@ -17,7 +17,7 @@ namespace Immersion
         ICoreServerAPI api;
         MapLayerRidged riverGen;
         int noiseSizeRiver;
-        public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<ModifyLakes>().config; }
+        public ImmersionGlobalConfig config { get => api.ModLoader.GetModSystem<WorldgenConfigSet>().config; }
         BlockLayer soilLayer;
         LakeBedLayerProperties lakebedLayerConfig;
         ImmersionGlobalConfig immersionConfig;
@@ -43,7 +43,7 @@ namespace Immersion
         {
             var data = riverGen.GenLayer(regionX * noiseSizeRiver, regionZ * noiseSizeRiver, noiseSizeRiver + 1, noiseSizeRiver + 1);
             mapRegion.ModData["rivermap"] = JsonUtil.ToBytes(
-                new IntMap() { 
+                new IntDataMap2D() { 
                     Data = data,
                     BottomRightPadding = 1,
                     Size = noiseSizeRiver + 1
@@ -54,7 +54,7 @@ namespace Immersion
         {
             LoadGlobalConfig(api);
             long seed = api.WorldManager.Seed;
-            riverGen = new MapLayerRidged(seed + 46841, 1, 1.0f, 4, 255, new double[] { 0.02f, 0.02f, 0.02f, 0.02f, 0.02f, 0.02f });
+            riverGen = new MapLayerRidged(seed + 46841, 1, 1.0f, 4, 255, new double[] { 0.02f, 0.04f, 0.06f, 0.08f, 0.06f, 0.04f });
             noise = NormalizedSimplexNoise.FromDefaultOctaves(1, 0.125, 1.0, seed + 54987);
 
             noiseSizeRiver = api.WorldManager.RegionSize / 32;
@@ -62,7 +62,7 @@ namespace Immersion
             lakebedLayerConfig = blockLayerConfig.LakeBedLayer;
             soilLayer = blockLayerConfig.Blocklayers.OrderByDescending(a => a.ID == "l1soilwithgrass").First();
 
-            immersionConfig = api.ModLoader.GetModSystem<ModifyLakes>().config;
+            immersionConfig = api.ModLoader.GetModSystem<WorldgenConfigSet>().config;
         }
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams = null)
@@ -71,7 +71,7 @@ namespace Immersion
             var modData = chunks[0].MapChunk.MapRegion.ModData;
             byte[] riverMapData = modData.ContainsKey("rivermap") ? modData["rivermap"] : null;
             if (riverMapData == null) return;
-            IntMap riverMap = JsonUtil.FromBytes<IntMap>(riverMapData);
+            IntDataMap2D riverMap = JsonUtil.FromBytes<IntDataMap2D>(riverMapData);
 
             int regionChunkSize = api.WorldManager.RegionSize / chunksize2;
 
@@ -91,7 +91,7 @@ namespace Immersion
                 {
                     float riverRel = GameMath.BiLerp(riverUpLeft, riverUpRight, riverBotLeft, riverBotRight, (float)x / chunksize2, (float)z / chunksize2) / 255f;
 
-                    float minRel = 0.8f;
+                    float minRel = 0.6f;
 
                     if (riverRel < minRel) continue;
                     float invRel = 1.0f - minRel;
@@ -103,12 +103,13 @@ namespace Immersion
 
                     int chunkIndex = y / chunksize;
                     int blockIndex = (chunksize * (y % chunksize) + z) * chunksize + x;
-                    int minY = (int)(y - riverRel * 64);
+                    int minY = (int)(y - riverRel * 8);
                     double n = (noise.Noise(chunkX * chunksize + x, chunkZ * chunksize + z) * 4);
+                    int noised = (int)(TerraGenConfig.seaLevel - 8 + n);
 
                     for (int dy = y; dy > minY; dy--)
                     {
-                        if (dy > api.WorldManager.MapSizeY || dy < TerraGenConfig.seaLevel - 8 + n) continue;
+                        if (dy >= api.WorldManager.MapSizeY || dy < 0 || dy < noised) continue;
 
                         chunkIndex = dy / chunksize;
                         blockIndex = (chunksize * (dy % chunksize) + z) * chunksize + x;

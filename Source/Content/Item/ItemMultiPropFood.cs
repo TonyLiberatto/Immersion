@@ -58,7 +58,7 @@ namespace Immersion
 
                     if (player == null || !player.InventoryManager.TryGiveItemstack(prop.EatenStack.ResolvedItemstack.Clone(), true))
                     {
-                        byEntity.World.SpawnItemEntity(prop.EatenStack.ResolvedItemstack.Clone(), byEntity.LocalPos.XYZ);
+                        byEntity.World.SpawnItemEntity(prop.EatenStack.ResolvedItemstack.Clone(), byEntity.SidedPos.XYZ);
                     }
                 }
 

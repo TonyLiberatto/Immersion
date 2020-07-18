@@ -51,9 +51,9 @@ namespace Immersion
             }
         }
 
-        public override void OnNeighourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
+        public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
         {
-            base.OnNeighourBlockChange(world, pos, neibpos);
+            base.OnNeighbourBlockChange(world, pos, neibpos);
             if (this.FirstCodePart() == "palmlog") return;
 
             foreach (var offset in AreaMethods.Cardinals)
@@ -72,13 +72,13 @@ namespace Immersion
             Dictionary<string, CompositeTexture> textures = this.Textures;
             BakedCompositeTexture compositeTexture = textures != null ? textures.First<KeyValuePair<string, CompositeTexture>>().Value?.Baked : (BakedCompositeTexture)null;
             int randomColor = capi.BlockTextureAtlas.GetRandomColor(compositeTexture.TextureSubId);
-            return this.FirstCodePart() == "palmfrond" ? capi.ApplyColorTintOnRgba(1, randomColor, pos.X, pos.Y, pos.Z, true) : randomColor;
+            return this.FirstCodePart() == "palmfrond" ? capi.World.ApplyColorMapOnRgba(ClimateColorMap, SeasonColorMap, 1, pos.X, pos.Y, pos.Z, true) : randomColor;
         }
 
         public override int GetColor(ICoreClientAPI capi, BlockPos pos)
         {
             int gray = ColorUtil.ColorFromRgba(127, 127, 127, 255);
-            return this.FirstCodePart() == "palmfrond" ? capi.ApplyColorTintOnRgba(1, gray, pos.X, pos.Y, pos.Z, false) : GetColorWithoutTint(capi, pos);
+            return this.FirstCodePart() == "palmfrond" ? capi.World.ApplyColorMapOnRgba(ClimateColorMap, SeasonColorMap, 1, pos.X, pos.Y, pos.Z, true) : GetColorWithoutTint(capi, pos);
         }
     }
 }

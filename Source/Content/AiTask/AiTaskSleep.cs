@@ -27,7 +27,7 @@ namespace Immersion
 
         public override bool ShouldExecute()
         {
-			return (isNocturnal && entity.World.Calendar.DayLightStrength > 0.50f || !isNocturnal && entity.World.Calendar.DayLightStrength < 0.50f);
+			return (isNocturnal && entity.World.Calendar.GetDayLightStrength(entity.Pos.AsBlockPos) > 0.50f || !isNocturnal && entity.World.Calendar.GetDayLightStrength(entity.Pos.AsBlockPos) < 0.50f);
         }
 
         public override bool ContinueExecute(float dt)

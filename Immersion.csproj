@@ -179,7 +179,7 @@
     <Compile Include="Source\Systems\WorldGen\GenDeepOreBits.cs" />
     <Compile Include="Source\Systems\WorldGen\GenAquifers.cs" />
     <Compile Include="Source\Systems\WorldGen\MapLayers\MapLayerRidged.cs" />
-    <Compile Include="Source\Systems\WorldGen\ModifyLakes.cs" />
+    <Compile Include="Source\Systems\WorldGen\Seawater.cs" />
     <Compile Include="Source\Debugging\RedirectLogs.cs" />
     <Compile Include="Source\Content\BlockEntities\BEPalmTree.cs" />
     <Compile Include="Source\Content\Block\BlockPalmTree.cs" />

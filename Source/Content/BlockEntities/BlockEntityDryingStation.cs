@@ -104,7 +104,7 @@ namespace Immersion
                     MeshData fillPlane = null;
                     JsonObject itemAttribute = inventory[0]?.Itemstack?.ItemAttributes?["inContainerTexture"];
 
-                    if (inContainerProps?.TintIndex > 0)
+                    if (inContainerProps?.ClimateColorMap != null)
                     {
                         shape = capi.Assets.TryGet("shapes/block/basic/liquid.json").ToObject<Shape>();
                     }
@@ -121,10 +121,10 @@ namespace Immersion
                     {
                         fillPlane.Scale(new Vec3f(0.5f, 0.5f, 0.5f), 0.9f, 1, 0.9f).Translate(0, y, 0);
 
-                        if (inContainerProps != null && inContainerProps.TintIndex > 0)
+                        if (inContainerProps != null && inContainerProps.ClimateColorMap != null)
                         {
-                            int color = capi.ApplyColorTintOnRgba(inContainerProps.TintIndex, ColorUtil.WhiteArgb, 196, 128, false);
-                            if (Pos != null) color = capi.ApplyColorTintOnRgba(inContainerProps.TintIndex, ColorUtil.WhiteArgb, Pos.X, Pos.Y, Pos.Z, false);
+                            int color = capi.World.ApplyColorMapOnRgba(inContainerProps.ClimateColorMap, null, ColorUtil.WhiteArgb, 196, 128, false);
+                            if (Pos != null) color = capi.World.ApplyColorMapOnRgba(inContainerProps.ClimateColorMap, null, ColorUtil.WhiteArgb, Pos.X, Pos.Y, Pos.Z, false);
                             byte[] bgraBytes = ColorUtil.ToBGRABytes(color);
 
                             for (int index = 0; index < fillPlane.Rgba.Length; ++index)

@@ -133,7 +133,7 @@ namespace Immersion
 
         private void OnChunkColumnGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams)
         {
-            IntMap beachMap = chunks[0].MapChunk.MapRegion.BeachMap;
+            IntDataMap2D beachMap = chunks[0].MapChunk.MapRegion.BeachMap;
             Vec3i climate = chunks[0].MapChunk.MapRegion.ClimateMap.ToClimateVec(chunkX, chunkZ, api.WorldManager.RegionSize, chunksize);
             BlockPos pos = new BlockPos();
 
